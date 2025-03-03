@@ -1,0 +1,57 @@
+scripted_gui = {
+	GRU_Pax_Super_Event_Window = {
+		context_type = player_context
+		window_name = "GRU_Super_Event_Window"
+
+		visible = {
+			has_global_flag  = GRU_Super_Event_Visible
+		}
+
+		triggers = {
+			GRU_Super_Event_Image_ger_civl_visible = {
+				has_global_flag = ger_civl
+			}
+		}
+		triggers = {
+			GRU_Super_Event_Image_greater_germanic_state_goebbels_visible = {
+				has_global_flag = greater_germanic_state_goebbels
+			}
+		}
+		triggers = {
+			GRU_Super_Event_Image_endsieg_goebbels_visible = {
+				has_global_flag = endsieg_goebbels
+			}
+		}
+		###	
+		
+		properties = {
+			GRU_Super_Event_Image_Default = {
+				image = "[get_my_superevent_texture]"
+			}
+		}
+
+		effects = {
+			GRU_Super_Event_Close_click = {
+				clr_global_flag = GRU_Super_Event_Visible
+				if = {
+					limit = {	
+						has_global_flag = ger_civl
+					}
+					clr_global_flag  = ger_civl
+				}
+				if = {
+					limit = {	
+						has_global_flag = greater_germanic_state_goebbels
+					}
+					clr_global_flag  = greater_germanic_state_goebbels
+				}
+				if = {
+					limit = {	
+						has_global_flag = endsieg_goebbels
+					}
+					clr_global_flag  = endsieg_goebbels
+				}
+			}
+		}
+	}
+}

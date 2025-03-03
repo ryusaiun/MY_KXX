@@ -1,0 +1,269 @@
+﻿l_simp_chinese:
+ ##欧洲君主##
+ #英格兰
+ BRG_elect_Edward_Fitzherbert:0 "选择爱德华·斯塔福德的后裔，斯塔福德男爵爱德华·菲茨赫伯特"
+ #爱尔兰（
+ BRG_elect_mick2:0 "选择爱尔兰奥尼尔家族乌戈·若泽·若热·奥尼尔（洛伊盖尔一世）的儿子若热·马里亚·奥尼尔"
+ BRG_elect_Donnell:0 "选择爱尔兰奥唐奈家族的莱奥波尔多·奥唐奈·瓦尔加斯"
+ BRG_elect_Poer:0 "选择爱尔兰兰卡蒂伯爵威廉·布林斯利·勒波尔·特伦奇"
+ BRG_elect_Donough_OBrien:0 "选择爱尔兰至高王布赖恩·博鲁的直系后裔，多诺·奥布赖恩"
+ BRG_elect_Moulton_OBrien:0 "选择爱尔兰的"托蒙德公爵"，雷蒙德·莫尔顿·奥布莱恩"
+ #意大利
+ BRG_elect_pasta1:0 "选择意大利的费迪南多国王"
+ BRG_elect_pasta2:0 "选择意大利萨伏伊家族的维托里奥·埃马努埃莱·费迪南多·马里亚·热纳罗·迪·萨伏伊"
+ BRG_elect_pasta3:0 "选择意大利萨伏伊家族的路易吉·阿梅迪奥"
+ BRG_elect_pasta4:0 "选择埃马努埃莱三世的继承人翁贝托"
+ #伦巴第（
+ BRG_elect_pasta5:0 "选择意大利伦巴第的马尔切洛·维斯孔蒂·迪·莫德罗内公爵"
+ BRG_elect_pasta6:0 "选择马尔切洛·维斯孔蒂·迪·莫德罗内公爵的远亲阿德里亚诺"
+ #托斯卡纳（
+ BRG_elect_pasta7:0 "选择意大利哈布斯堡家族的托斯卡纳大公朱塞佩·费迪南多"
+ BRG_elect_pasta8:0 "选择朱塞佩·费迪南多一世的继承人彼得罗·费迪南多"
+ #摩德纳&帕尔马（
+ BRG_elect_RobertoI:0 "选择埃斯特家族，摩德纳公爵罗贝尔托·德·奥地利·埃斯特"
+ BRG_elect_EliasI:0 "选择波旁-帕尔马家族，帕尔马与皮亚琴察公爵埃利亚斯·迪·波旁·帕尔马"
+ #圣座（
+ BRG_elect_Pius_XII:0 "选择枢机主教欧金尼奥·帕切利"
+ BRG_elect_State_John:0 "选择枢机主教埃利亚·达拉·斯科塔"
+ BRG_elect_State_Leo:0 "选择枢机主教阿希尔·利埃纳尔"
+ BRG_elect_State_Benedict:0 "选择枢机主教乔治·芒德莱恩"
+ BRG_elect_State_Adrian:0 "选择枢机主教特奥尼尔·因尼策"
+ BRG_elect_State_Julius:0 "选择枢机主教阿尔弗雷多·舒斯特"
+ BRG_elect_Marcel_Lefebvre:0 "选择枢机主教马塞尔·勒菲弗"
+ BRG_elect_Michel_Collin:0 "选择枢机主教米歇尔·科林"
+ BRG_elect_Charles_Ginisty:0 "选择枢机主教夏尔·马里·安德烈·吉尼斯蒂"
+ BRG_elect_Luigi_Barlassina:0 "选择耶路撒冷的牧首路易吉·巴拉西纳"
+ BRG_elect_Sergius_Stragorodsky:0 "选择俄罗斯的东正教牧首塞尔吉乌斯"
+ BRG_elect_Peter_Arida:0 "选择黎巴嫩的马龙派牧首安托万·彼得·阿里达"   
+ BRG_elect_Leontios_Second:0 "选择塞浦路斯大主教安东尼奥斯·莱昂蒂乌"   
+ #马耳他（
+ BRG_elect_Cheikh_Antonios:0 "选择加萨尼王族的后裔，谢安·安东尼奥斯"
+
+ #德国相关（包含部分比利时，立陶宛，白鲁塞尼亚，阿尔巴尼亚，波兰，芬兰国王）
+ BRG_elect_Duke_of_Bavaria:0 "选择鲁普雷希特的次子阿尔布雷希特"     
+ BRG_elect_HeinrichI:0 "选择鲁普雷希特的四儿子海因里希"
+ BRG_elect_Eitel_Friedrich:0 "选择德皇的次子，普鲁士的埃特尔·弗里德里希亲王"       #新增
+ BRG_elect_AdalbertI:0 "选择德皇的第三子，弗莱芒与瓦隆人的国王阿达尔贝特·费迪南德·贝伦加尔·维克托"
+ BRG_elect_August_Wilhelm:0 "选择德皇的第四子奥古斯特·威廉·海因里希·金特·维克托"   
+ BRG_elect_OskarI:0 "选择德皇的第五子，普鲁士王子奥斯卡·卡尔·古斯塔夫·阿道夫王子"
+ BRG_elect_JoachimI:0 "选择德皇第六子，约阿希姆·弗朗茨·洪贝特王子"
+ BRG_elect_Victoria:0 "选择威廉二世的掌上明珠,维多利亚·露易丝公主"
+ BRG_elect_Wilhelm_IV:0 "选择威廉皇储的长子,普鲁士的威廉王子"    
+ BRG_elect_Louis_Ferdinand:0 "选择威廉皇储的次子，路易斯·费迪南德·冯·普鲁士亲王"
+ BRG_elect_Wilhelm_V:0 "选择霍亨索伦家族候选人（威廉五世）"      
+ BRG_elect_Friedrich_Wilhelm:0 "选择普鲁士的腓特烈·威廉王子"    
+ BRG_elect_FrancoisIII:0 "选择不伦瑞克公爵的世子，恩斯特·奥古斯特·格奥尔格·威廉"
+ BRG_elect_Wied:0 "选择威廉家族，阿尔巴尼亚国王威廉·弗里德里希·海因里希·楚·维德"
+ BRG_elect_Friedrich_Viktor:0 "选择霍亨索伦-锡格马林根家族的弗雷德里克亲王"     
+ BRG_elect_Franz_Joseph:0 "选择霍亨索伦-锡格马林根家族弗雷德里克亲王的弟弟，弗朗茨·约瑟夫（霍亨索伦·埃姆登）"    
+ BRG_elect_MindaugasIII:0 "选择乌拉赫家族的卡尔·格罗·冯·乌拉赫"
+ BRG_elect_Mindaugas4:0 "选择乌拉赫家族的埃伯哈德·格罗·冯·乌拉赫"
+ BRG_elect_Uladzimir:0 "选择德皇的外甥，弗拉基米尔·冯·霍亨索伦"
+ BRG_elect_Zyhimont:0 "选择德皇的外甥，西吉斯蒙德·冯·霍亨索伦"
+ BRG_elect_Fredrik_KaarleI:0 "选择德皇的姐夫，弗里德里希·卡尔·路德维希·康斯坦丁·冯·黑森-卡塞尔"
+ BRG_elect_Fredrik_VainoI:0 "选择弗里德里希·卡尔的儿子，沃尔夫冈·莫里茨亲王"
+ #德国-萨克森（
+ BRG_elect_Fryderyk:0 "选择萨克森国王弗里德里克·克里斯蒂安·萨斯基"
+ BRG_elect_SAX_George:0 "选择萨克森国王继承人格奥尔格"     
+ #布列塔尼（
+ BRG_elect_Gabriel_I:0 "选择法国布列塔尼的加布里埃尔家族"    #仅有图片未找到上台 查不到现实资料 
+ #欧西塔尼亚（
+ BRG_elect_Bertran_II:0 "选择法国欧西塔尼亚的伯特兰家族"    #仅有图片未找到上台 查不到现实资料 
+ #比利时（
+ BRG_elect_Albert:0 "选择比利时国王阿尔贝一世"
+ BRG_elect_LeopoldIII:0 "选择比利时国王阿尔贝一世的世子利奥波德"    #此人只有代码 未实装
+ #奥地利
+ BRG_elect_Olbracht:0 "选择哈布斯堡洛林家族的卡尔·阿尔布雷希特"
+ BRG_elect_Vasyl:0 "选择哈布斯堡洛林家族的威廉·弗朗茨·约瑟夫"
+ BRG_elect_Leo_Stefan:0 "选择威廉·弗朗茨·约瑟夫的儿子莱奥·斯特凡"    #重制后无法上台只存在图片
+ #波希米亚（
+ BRG_elect_Lobkowicz:0 "选择波希米亚洛布科维奇家族的马克西米利安·冯·洛布科维奇"
+ BRG_elect_Schwarzenberg:0 "选择波希米亚施瓦岑贝格家族的阿道夫·冯·施瓦岑贝格"
+ #丹麦
+ BRG_elect_Frederick:0 "选择丹麦国王克里斯蒂安十世的儿子，克里斯蒂安·弗雷德里克"
+ #挪威（
+ BRG_elect_Haakon_VII:0 "选择挪威国王克里斯蒂安·弗雷德里克·卡尔·乔治·瓦尔德马尔·阿克塞尔"
+ #瑞典
+ BRG_elect_swede2:0 "选择瑞典国王古斯塔夫五世的儿子，奥斯卡·弗雷德里克·威廉·奥拉夫·古斯塔夫·阿道夫"
+ BRG_elect_swede3:0 "选择瑞典王室西约特兰公爵，奥斯卡·卡尔·威廉亲王"     #此人只有代码 未实装
+ #西班牙 
+ BRG_elect_Juan_III:0 "选择西班牙国王阿方索十三世的儿子胡安亲王"
+ BRG_elect_Jaime_I:0 "选择西班牙国王阿方索十三世的儿子海梅亲王"
+ #西班牙卡洛斯派
+ BRG_elect_Javier_I:0 "选择西班牙卡洛斯派的哈维尔公爵"
+ #俄罗斯
+ BRG_elect_Dmitri_Romanov:0 "选择罗曼诺夫王朝的德米特里·帕夫洛维奇大公"
+ BRG_elect_Pavel_Romanov:0 "选择德米特里·帕夫洛维奇大公的儿子帕维尔"
+ BRG_elect_VsevolodI:0 "选择罗曼诺夫王朝的弗谢沃伊德·约安诺维奇王子"
+ BRG_elect_RomanI:0 "选择罗曼诺夫王朝的罗曼·彼得诺维奇亲王"
+ BRG_elect_Andrei_Romanov:0 "选择罗曼诺夫王朝的安德烈·亚历山德罗维奇亲王"
+ BRG_elect_BorisI:0 "选择基里尔·弗拉基米罗维奇的弟弟鲍里斯"
+ BRG_elect_MikhailII:0 "选择末代沙皇尼古拉二世的兄弟米哈伊尔·亚历山德罗维奇的私生子格奥尔基"
+ BRG_elect_NicholasII:0 "选择假死隐居的俄罗斯末代沙皇尼古拉二世"
+ BRG_elect_Alexi_Romanov:0 "选择尼古拉二世的儿子阿列克谢"
+ BRG_elect_Anastasia:0 "选择尼古拉二世的女儿阿纳斯塔西娅"
+ BRG_elect_Pyotr_Wrangel:0 "选择俄罗斯"黑男爵"彼得·弗兰格尔"
+ BRG_elect_Pyotr_P_Wrangel:0 "选择彼得·弗兰格尔的儿子"
+ BRG_elect_Felix_Yusupov_Drip:0 "选择俄国尤苏波夫家族的费利克斯·尤苏波夫"      
+ BRG_elect_Nikolay_Aleksandrovich_Kulikovski:0 "选择尼古拉二世妹妹的丈夫，尼古拉·亚历山德罗维奇·库利科夫斯基"    #小黄路线的乌拉尔沙皇国君主，和小黄一起删除。
+ #乌克兰（
+ BRG_elect_Pavlo_Skoropadskyi:0 "选择乌克兰斯科罗帕茨基家族的帕夫洛·斯科罗帕茨基"
+ BRG_elect_Danylo_Skoropadsky:0 "选择帕夫洛·斯科罗帕茨基的儿子达尼洛·斯科罗帕茨基"
+ #克里米亚（新增
+ BRG_elect_Kadyr_Giray:0 "选择克里米亚汗国的后裔卡德尔·格莱伊"
+ BRG_elect_Seraya_Shapshal:0 "选择克里米亚卡拉伊姆派犹太教的宗教领袖塞拉亚·沙普沙尔"
+ #葡萄牙
+ BRG_elect_Adelaide:0 "选择费迪南德一世的女儿，多娜·玛丽亚·阿德莱德公主"
+ BRG_elect_Maria_Ana:0 "选择费迪南德一世的孙女，玛丽亚·安娜公主"
+ #罗马尼亚
+ BRG_elect_romanian_NicolaeI:0 "选择霍亨索伦-西格马林根的尼古拉亲王"
+ BRG_elect_romanian_Mihail2:0 "选择罗马尼亚的米哈伊尔·斯图尔扎亲王"
+ BRG_elect_romanian_Cantacuzino:0 "选择坎塔库济诺王朝的后裔，绿衫亲王亚历山德鲁·坎塔库齐诺"
+ #希腊
+ BRG_elect_AlexanderI:0 "选择希腊国王亚历山大一世"
+ BRG_elect_GeorgeII:0 "选择希腊国王乔治二世"
+ #卢森堡
+ BRG_elect_Charlotte:0 "选择卢森堡女大公的姐妹，夏洛特·阿尔德冈德·伊丽莎白"
+ #保加利亚
+ BRG_elect_Prince_Kyril:0 "选择保加利亚国王鲍里斯三世的弟弟，普雷斯拉夫的基里尔亲王"
+ #塞尔维亚
+ BRG_elect_PeterII:0 "选择塞尔维亚国王的儿子彼得·卡拉乔尔杰维奇"
+ BRG_elect_GeorgeI:0 "选择塞尔维亚的乔治王子"
+ #黑山（
+ BRG_elect_michael1:0 "选择黑山的格拉霍沃大公和泽塔大公米哈伊洛·彼得罗维奇-涅戈什"
+ #拿破仑相关 
+ BRG_elect_Antoine_Colonna_Walewski:0 "选择瓦莱夫斯基家族的后裔安托万·科隆纳·瓦莱夫斯基"
+ BRG_elect_Louis_Bonaparte:0 "选择波拿巴家族继承人（路易一世）"
+ BRG_elect_Joachim_Napoleon:0 "选择波拿巴家族继承人约阿希姆·拿破仑（拿破仑七世）"
+ #中东
+ #奥斯曼（
+ BRG_elect_Abdulmecid_II:0 "选择奥斯曼苏丹哈里发阿卜杜勒迈吉德二世"
+ BRG_elect_Ahmed_IV:0 "选择奥斯曼苏丹穆拉德五世的孙子谢扎德·艾哈迈德"
+ BRG_elect_Osman_Fuad:0 "选择奥斯曼苏丹穆拉德五世的孙子奥斯曼·福阿德"
+ BRG_elect_Omer_Faruk:0 "选择奥斯曼阿卜杜勒迈吉德二世的独子厄梅尔·法鲁克"
+ #杰拜勒舍迈尔&内志（
+ BRG_elect_Aziz_Emir:0 "选择杰拜勒舍迈尔的埃米尔沙特·本·阿卜杜勒·阿齐兹·拉希德"
+ BRG_elect_Talal_al_Rashid:0 "选择杰拜勒舍迈尔的埃米尔表兄阿卜杜拉·本·塔拉勒·拉希德"
+ BRG_elect_Abd_al_Aziz:0 "选择杰拜勒舍迈尔第六任埃米尔的儿子阿卜杜拉·本·米塔卜·本·阿卜杜勒·阿齐兹"
+ BRG_elect_Muhammad_ibn_Talil:0 "选择杰拜勒舍迈尔拉希德家族的穆罕默德·本·塔拉勒·拉希德"
+ BRG_elect_Subhan:0 "选择杰拜勒舍迈尔苏布罕家族的萨乌德·苏布罕"
+ BRG_elect_Abdulaziz_Ibn_Saud:0"选择内志沙特家族阿卜杜拉阿齐兹·伊本·沙特"
+ BRG_elect_Abdulaziz_Al_Saud:0"选择内志沙特家族的沙特·本·阿卜杜拉阿齐兹·阿勒沙特"
+ #汉志（
+ BRG_elect_bin_al_Hussein:0"选择汉志哈希姆家族的阿卜杜拉·本·侯赛因"
+ #亚述（
+ BRG_elect_Shimun_XXI_Eshai:0"选择亚述的大公长牧首马尔·西满二十一世·以赛亚"
+ #也门（
+ BRG_elect_imam_yaha:0"选择也门的伊玛目叶海亚·哈米德"
+ BRG_elect_Ahmad_bin_Yahya:0"选择也门伊玛目的儿子艾哈迈德·哈米德"
+ #阿曼（
+ BRG_elect_Ibn_Taimur:0"选择马斯喀特苏丹赛义德·伊本·泰穆尔"
+ #伊拉克（
+ BRG_elect_Yusuf_Saadun:0"选择伊拉克萨阿敦家族的优素福贝伊"
+ #埃及（
+ BRG_elect_Egypt_Farouk:0"选择埃及的法鲁克·本·福阿德"
+ BRG_elect_Abbas_II:0"选择埃及赫迪夫阿巴斯·哈尔米·帕沙"
+ BRG_elect_SYR_Moneim:0"选择埃及赫迪夫阿巴斯·哈尔米·帕沙的儿子穆罕默德·阿卜杜勒·莫奈姆·贝耶芬迪亲王"
+ #埃塞俄比亚（
+ BRG_elect_Haile_Selassie:0"选择埃塞俄比亚国王海尔·塞拉西"
+ #索马里（
+ BRG_elect_Ali_Shire:0"选择索马里国王马哈茂德·阿里·希雷"
+ #利比亚（
+ BRG_elect_Idris:0"选择利比亚国王马伊德里斯一世"
+ #波斯
+ BRG_elect_bosi:0 "选择波斯卡扎尔家族的哈桑·米尔扎·卡扎尔"
+ BRG_elect_bosi2:0 "选择卡扎尔一世的继承人哈米德·米尔扎·卡扎尔"
+ BRG_bosi:0 "不列颠王国"
+ BRG_bosi_ADJ:0 "不列颠王国"
+ BRG_bosi_DEF:0 "不列颠王国"
+ #高加索
+ #卡尔梅克（
+ BRG_elect_Danzan_Tundutov:0 "选择阿斯特拉罕的丹赞·通杜托夫伯爵"
+ #山地（
+ BRG_elect_Nadjmudin_Gotskynsky:0 "选择大高加索的伊玛目纳吉穆丁·戈辛斯基"
+ #格鲁吉亚（
+ BRG_elect_Bagriaton_Mukhraneli:0 "选择格鲁吉亚巴格拉季昂-穆赫拉尼家族的巴格拉季昂王子"
+ #阿布哈兹（
+ BRG_elect_Aleksandr_Chachba:0 "选择阿布哈兹王国沙奇巴家族的后裔亚历山大·舍尔瓦希泽·沙奇巴"
+ #中亚
+ #希瓦汗国
+ BRG_elect_Sayid_Abdulla:0"选择希瓦汗国的国王赛义德·阿卜杜拉"
+ #缅甸
+ BRG_elect_Paya:0 "选择缅甸女王阿信·赫泰克·苏巴娅·密巴娅拉"
+ BRG_Paya:0 "不列颠王国"
+ BRG_Paya_ADJ:0 "不列颠王国"
+ BRG_Paya_DEF:0 "不列颠王国"
+ #大清
+ BRG_elect_aisin_gioro:0"选取“中华大清国”皇帝-爱新觉罗·溥仪"
+ BRG_elect_aisin_gioro_desc:0"我们大英君主需要第二个帝位么？（疑问）"
+ BRG_elect_aisin_gioro2:0"选取“中华大清国”醇亲王世子-爱新觉罗·溥杰"
+ BRG_elect_aisin_gioro3:0"选取“中华大清国”和硕肃亲王十四女，日本间谍-爱新觉罗·显玗"
+ BRG_elect_bogd_khan:0"选取大蒙古国的名义君主-博克多汗"
+ BRG_elect_demchugdongrub:0"选取内蒙古多罗杜棱郡王-德穆楚克栋鲁普"
+ BRG_elect_fng_elder:0"选取曾任中华帝国子爵的满洲首领-张作霖"
+ BRG_elect_fng_young:0"选取曾任中华帝国子爵的满洲首领之子-张学良"
+ BRG_elect_fng_doge:0"选取中国的狗肉皇帝-张宗昌"
+ BRG_elect_fng_doge_desc:0"他妈了个巴子的，你是什么英国国王，你狗屁国王！"
+ BRG_elect_yuanshen:0"选取中华帝国皇太子-袁克定"
+ BRG_elect_yuanshen_desc:0"虽然洪宪帝袁世凯只在位了83天，但他无疑是现在北京政权的打造者。皇太子袁克定依旧觊觎着中国帝位，并且在蒙古也有势力，或许值得我们拉拢。"
+ BRG_elect_yun_tang:0"选取“大唐帝国皇帝”-唐继尧"
+ BRG_elect_yun_tang_desc:0"不是？霍巴特将军和一众政客也吸大烟吸嗨了？" 
+ BRG_elect_luuchuu_sho:0"选取琉球末代国王之孙-日本的尚裕侯爵"
+ BRG_elect_korea_yiun:0"选取前大韩帝国皇太子-日本的昌德宫李王李垠"
+ BRG_elect_korea_yigang:0"选取前大韩帝国义亲王-日本的李堈公"
+ BRG_elect_taishanghuang:0"选取KX部分国家微调创始人-本居小鈴"
+ BRG_elect_taishanghuang_desc:0"2023年12月29日，一位大佬在广东画了一个圈，于是霍巴特选王人选恢复了……§R等等，你怎么看见的？开控制台了吧！§!"
+ brg.1840.t:0"中华帝国的冠冕诱惑"
+ brg.1840.d:0"在霍巴特发动的不列颠反革命后，曾经的中国贵族，即现在的国王[Root.GetLeader]戴上了不列颠的王冠。由于印度帝位的空缺，两国宫廷都有提议将中国皇帝头衔与英国国王头衔进行合并，打造一个真正的世界霸权。"
+ brg.1840.a:0"两国合并！成立不列颠-中华帝国"
+ brg.1840.b:0"还是放弃这无趣的沙文主义倾向吧！"
+ brg.1841.t:0"……与普天王土的理念"
+ brg.1841.d:0"中国道普天之下，莫非王土，而不列颠生来统治世界。在迎温莎的伊丽莎白公主后，有越来越多人提倡一个疯狂的理念。不列颠是罗马的继承人，爱新觉罗家族统治着中国的天命，这两个古老的文化古国是时候终结东西方的分裂局面了……"
+ brg.1841.a:0"我们需要真正的帝国联邦！"
+ brg.1841.b:0"还是放弃这无趣的沙文主义倾向吧！"
+ brg.1227.t:0"成吉思汗的回响"
+ brg.1227.d:0"成吉思汗帝国和曾经的不列颠殖民帝国，可以说是人类历史上领土排行第二和第一的超级大国。如今我们的国王[Root.GetLeader]就流着黄金家族的血……一个不切实际的想法在右翼团体里面蔓延开来……"
+ brg.1227.a:0"两国合并！征服直至帖古思客勒（最西边）！"
+ brg.1227.b:0"还是放弃这无趣的沙文主义倾向吧！"
+ brg.1879.t:0"索要冲绳"
+ brg.1879.d:0"随着我们邀请前琉球君主登上英国王位，索要冲绳被提上了日程，国王希望他的祖地能够从日本分离出来。将军和政客们分析了这种情况的可能性，提出和日本结盟以换取领土的想法。日本方面目前确实紧缺盟友，他们对这个提议也很感兴趣……"
+ brg.1879.a:0"那就直接来吧！"
+ brg.1879.b:0"没必要跑那么远。"
+ brg.1910.t:0"索要朝鲜"
+ brg.1910.d:0"随着我们邀请前朝鲜君主登上英国王位，索要朝鲜被提上了日程，国王希望他的祖地能够从日本分离出来。将军和政客们分析了这种情况的可能性，提出和日本结盟以换取领土的想法。日本方面目前确实紧缺盟友，他们对这个提议也很感兴趣……"
+ brg.1910.a:0"那就直接来吧！"
+ brg.1910.b:0"没必要跑那么远。"
+ BRG_aisingioro:0"不列颠帝国"
+ BRG_aisingioro_ADJ:0 "大英-中华"
+ BRG_aisingioro_DEF:0 "不列颠帝国" 
+ BRG_aisingioro2:0"大不列颠及中华帝国"
+ BRG_aisingioro2_ADJ:0 "大英-中华"
+ BRG_aisingioro2_DEF:0 "大不列颠及中华帝国" 
+ BRG_kingdom_yuan:0"不列颠帝国"
+ BRG_kingdom_yuan_ADJ:0 "大英-中华"
+ BRG_kingdom_yuan_DEF:0 "不列颠帝国" 
+ BRG_EOC_HONGXIAN:0"大不列颠尼亚及中华帝国"
+ BRG_EOC_HONGXIAN_ADJ:0"大不列颠-中华"
+ BRG_EOC_HONGXIAN_DEF:0"大不列颠尼亚及中华帝国"
+ BRG_putianwangtu:0"帝国联邦"
+ BRG_putianwangtu_ADJ:0 "罗马-中华"
+ BRG_putianwangtu_DEF:0 "罗马及中华的继承者帝国联邦" 
+ BRG_korea:0"不列颠帝国"
+ BRG_korea2:0"大不列颠及大韩联合帝国"
+ BRG_korea_ADJ:0"英韩"
+ BRG_korea2_ADJ:0"英韩"
+ BRG_korea_DEF:0"大不列颠-大韩"
+ BRG_korea2_DEF:0"大不列颠-大韩"
+ BRG_niluu:0"不列颠王国"
+ BRG_niluu2:0"大不列颠及琉球联合王国"
+ BRG_niluu_ADJ:0"英琉"
+ BRG_niluu2_ADJ:0"英琉"
+ BRG_niluu_DEF:0"大不列颠-琉球"
+ BRG_niluu2_DEF:0"大不列颠-琉球"
+ BRG_mongol:0"不列颠王国"
+ BRG_mongol2:0"帖古思客勒联邦"
+ BRG_mongol_ADJ:0"英蒙"
+ BRG_mongol2_ADJ:0"远西"
+ BRG_mongol_DEF:0"不列颠-蒙古"
+ BRG_mongol2_DEF:0"帖古思客勒兀鲁斯"
+

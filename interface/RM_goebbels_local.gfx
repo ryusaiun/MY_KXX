@@ -1,0 +1,371 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ideology_germanic_socialism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/germanic_socialism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_germanic_socialism_lensch_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/germanic_socialism_lensch_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_strasserism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/strasserism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_natpop_goebbels2_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/goebb_ideology_burg.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_natpop_goebbels3_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/goebbels_ideology_group3.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_national_socialism_spartanism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/national_socialism_spartanism_subtype.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_despotism_vanguard_anarchism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/despotism_vanguard_anarchism_subtype.dds"
+	}
+	spriteType = {
+		name = "GFX_reinland_icon"
+		texturefile = "gfx/interface/map_modifier/reinland_icon.png"
+	}
+	spriteType = {
+		name = "GFX_VS_coup_l"
+		texturefile = "gfx/interface/gui/VS_coup_l.png"
+	}
+	spriteType = {
+		name = "GFX_VS_coup_r"
+		texturefile = "gfx/interface/gui/VS_coup_r.png"
+	}
+
+	###
+	spriteType = {
+		name = "GFX_VS_cp_bl_1"
+		texturefile = "gfx/interface/gui/regions/VS_cp_bl_1.png"
+	}
+	spriteType = {
+		name = "GFX_VS_cp_bl_2"
+		texturefile = "gfx/interface/gui/regions/VS_cp_bl_2.png"
+	}
+	spriteType = {
+		name = "GFX_VS_cp_bl_3"
+		texturefile = "gfx/interface/gui/regions/VS_cp_bl_3.png"
+	}
+	spriteType = {
+		name = "GFX_VS_cp_bl_4"
+		texturefile = "gfx/interface/gui/regions/VS_cp_bl_4.png"
+	}
+	spriteType = {
+		name = "GFX_VS_cp_bl_5"
+		texturefile = "gfx/interface/gui/regions/VS_cp_bl_5.png"
+	}
+	spriteType = {
+		name = "GFX_VS_cp_bl_6"
+		texturefile = "gfx/interface/gui/regions/VS_cp_bl_6.png"
+	}
+	spriteType = {
+		name = "GFX_VS_cp_bl_7"
+		texturefile = "gfx/interface/gui/regions/VS_cp_bl_7.png"
+	}
+	spriteType = {
+		name = "GFX_VS_cp_bl_8"
+		texturefile = "gfx/interface/gui/regions/VS_cp_bl_8.png"
+	}
+	spriteType = {
+		name = "GFX_VS_cp_bl_9"
+		texturefile = "gfx/interface/gui/regions/VS_cp_bl_9.png"
+	}
+	spriteType = {
+		name = "GFX_VS_cp_bl_10"
+		texturefile = "gfx/interface/gui/regions/VS_cp_bl_10.png"
+	}
+	spriteType = {
+		name = "GFX_VS_cp_bl_11"
+		texturefile = "gfx/interface/gui/regions/VS_cp_bl_11.png"
+	}
+	spriteType = {
+		name = "GFX_VS_cp_bl_12"
+		texturefile = "gfx/interface/gui/regions/VS_cp_bl_12.png"
+	}
+	spriteType = {
+		name = "GFX_VS_cp_bl_13"
+		texturefile = "gfx/interface/gui/regions/VS_cp_bl_13.png"
+	}
+	spriteType = {
+		name = "GFX_VS_cp_bl_14"
+		texturefile = "gfx/interface/gui/regions/VS_cp_bl_14.png"
+	}
+	spriteType = {
+		name = "GFX_VS_cp_bl_15"
+		texturefile = "gfx/interface/gui/regions/VS_cp_bl_15.png"
+	}
+	spriteType = {
+		name = "GFX_VS_cp_bl_16"
+		texturefile = "gfx/interface/gui/regions/VS_cp_bl_16.png"
+	}
+	spriteType = {
+		name = "GFX_VS_cp_bl_17"
+		texturefile = "gfx/interface/gui/regions/VS_cp_bl_17.png"
+	}
+	spriteType = {
+		name = "GFX_VS_cp_bl_18"
+		texturefile = "gfx/interface/gui/regions/VS_cp_bl_18.png"
+	}
+	spriteType = {
+		name = "GFX_VS_cp_bl_19"
+		texturefile = "gfx/interface/gui/regions/VS_cp_bl_19.png"
+	}
+	spriteType = {
+		name = "GFX_VS_cp_bl_20"
+		texturefile = "gfx/interface/gui/regions/VS_cp_bl_20.png"
+	}
+	spriteType = {
+		name = "GFX_VS_cp_bl_21"
+		texturefile = "gfx/interface/gui/regions/VS_cp_bl_21.png"
+	}
+
+	###
+	spriteType = {
+		name = "GFX_VS_cp_gb_1"
+		texturefile = "gfx/interface/gui/regions/VS_cp_gb_5.png"
+	}
+	spriteType = {
+		name = "GFX_VS_cp_gb_2"
+		texturefile = "gfx/interface/gui/regions/VS_cp_gb_2.png"
+	}
+	spriteType = {
+		name = "GFX_VS_cp_gb_4"
+		texturefile = "gfx/interface/gui/regions/VS_cp_gb_4.png"
+	}
+
+	spriteType = {
+		name = "GFX_VS_map_reg_50"
+		texturefile = "gfx/interface/gui/regions/VS_reg_50.png"
+		noofframes = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_VS_map_reg_52"
+		texturefile = "gfx/interface/gui/regions/VS_reg_52.png"
+		noofframes = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_VS_map_reg_53"
+		texturefile = "gfx/interface/gui/regions/VS_reg_53.png"
+		noofframes = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_VS_map_reg_780"
+		texturefile = "gfx/interface/gui/regions/VS_reg_780.png"
+		noofframes = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_VS_map_reg_54"
+		texturefile = "gfx/interface/gui/regions/VS_reg_54.png"
+		noofframes = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_VS_map_reg_65"
+		texturefile = "gfx/interface/gui/regions/VS_reg_65.png"
+		noofframes = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_VS_map_reg_66"
+		texturefile = "gfx/interface/gui/regions/VS_reg_66.png"
+		noofframes = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_VS_map_reg_68"
+		texturefile = "gfx/interface/gui/regions/VS_reg_68.png"
+		noofframes = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_VS_map_reg_63"
+		texturefile = "gfx/interface/gui/regions/VS_reg_63.png"
+		noofframes = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_VS_map_reg_64"
+		texturefile = "gfx/interface/gui/regions/VS_reg_64.png"
+		noofframes = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_VS_map_reg_60"
+		texturefile = "gfx/interface/gui/regions/VS_reg_60.png"
+		noofframes = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_VS_map_reg_62"
+		texturefile = "gfx/interface/gui/regions/VS_reg_62.png"
+		noofframes = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_VS_map_reg_61"
+		texturefile = "gfx/interface/gui/regions/VS_reg_61.png"
+		noofframes = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_VS_map_reg_58"
+		texturefile = "gfx/interface/gui/regions/VS_reg_58.png"
+		noofframes = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_VS_map_reg_59"
+		texturefile = "gfx/interface/gui/regions/VS_reg_59.png"
+		noofframes = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_VS_map_reg_56"
+		texturefile = "gfx/interface/gui/regions/VS_reg_56.png"
+		noofframes = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_VS_map_reg_57"
+		texturefile = "gfx/interface/gui/regions/VS_reg_57.png"
+		noofframes = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_VS_map_reg_55"
+		texturefile = "gfx/interface/gui/regions/VS_reg_55.png"
+		noofframes = 2
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_VS_cp_gb_6"
+		texturefile = "gfx/interface/gui/regions/VS_cp_gb_6.png"
+	}
+	spriteType = {
+		name = "GFX_VS_cp_gb_7"
+		texturefile = "gfx/interface/gui/regions/VS_cp_gb_7.png"
+	}
+	spriteType = {
+		name = "GFX_VS_cp_gb_8"
+		texturefile = "gfx/interface/gui/regions/VS_cp_gb_8.png"
+	}
+	spriteType = {
+		name = "GFX_VS_cp_gb_9"
+		texturefile = "gfx/interface/gui/regions/VS_cp_gb_9.png"
+	}
+	spriteType = {
+		name = "GFX_VS_cp_gb_10"
+		texturefile = "gfx/interface/gui/regions/VS_cp_gb_10.png"
+	}
+	spriteType = {
+		name = "GFX_VS_cp_gb_11"
+		texturefile = "gfx/interface/gui/regions/VS_cp_gb_11.png"
+	}
+	spriteType = {
+		name = "GFX_VS_cp_gb_12"
+		texturefile = "gfx/interface/gui/regions/VS_cp_gb_12.png"
+	}
+	spriteType = {
+		name = "GFX_VS_cp_gb_13"
+		texturefile = "gfx/interface/gui/regions/VS_cp_gb_13.png"
+	}
+	spriteType = {
+		name = "GFX_VS_cp_gb_14"
+		texturefile = "gfx/interface/gui/regions/VS_cp_gb_14.png"
+	}
+	spriteType = {
+		name = "GFX_VS_cp_gb_15"
+		texturefile = "gfx/interface/gui/regions/VS_cp_gb_15.png"
+	}
+	spriteType = {
+		name = "GFX_VS_cp_gb_16"
+		texturefile = "gfx/interface/gui/regions/VS_cp_gb_16.png"
+	}
+	spriteType = {
+		name = "GFX_VS_cp_gb_17"
+		texturefile = "gfx/interface/gui/regions/VS_cp_gb_17.png"
+	}
+	spriteType = {
+		name = "GFX_VS_cp_gb_18"
+		texturefile = "gfx/interface/gui/regions/VS_cp_gb_18.png"
+	}
+	spriteType = {
+		name = "GFX_VS_cp_gb_19"
+		texturefile = "gfx/interface/gui/regions/VS_cp_gb_19.png"
+	}
+	spriteType = {
+		name = "GFX_VS_cp_gb_20"
+		texturefile = "gfx/interface/gui/regions/VS_cp_gb_20.png"
+	}
+	spriteType = {
+		name = "GFX_VS_cp_gb_21"
+		texturefile = "gfx/interface/gui/regions/VS_cp_gb_21.png"
+	}
+	###
+
+	spriteType = {
+		name = "GFX_VS_cp_1"
+		texturefile = "gfx/interface/gui/1.png"
+	}
+	spriteType = {
+		name = "GFX_VS_cp_2"
+		texturefile = "gfx/interface/gui/2.png"
+	}
+	spriteType = {
+		name = "GFX_VS_cp_3"
+		texturefile = "gfx/interface/gui/3.png"
+	}
+	spriteType = {
+		name = "GFX_VS_coup_gui_background"
+		texturefile = "gfx/interface/gui/VS_coup_gui_background.png"
+	}
+	spriteType = {
+		name = "GFX_VS_coup_progressbar_background"
+		textureFile = "gfx/interface/gui/VS_coup_progressbar_background.dds"
+	}
+	spriteType = {
+		name = "GFX_VS_coup_progressbar_frame"
+		textureFile = "gfx/interface/gui/VS_coup_progressbar_frame.dds"
+	}
+	progressbartype = {
+		name = "GFX_VS_coup_progressbar"
+		textureFile1 = "gfx/interface/gui/VS_coup_progressbar.dds"
+		textureFile2 = "gfx/interface/gui/VS_coup_progressbar_background.dds"
+		size = { x = 385 y = 20 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	spriteType = {
+		name = "GFX_VS_coup_phases_icons"
+		textureFile = "gfx/interface/gui/VS_coup_phases_icons.png"
+		noOfFrames = 6
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_VS_coup_percentage_indicator"
+		textureFile = "gfx/interface/gui/VS_coup_percentage_indicator.dds"
+		transparencecheck = yes
+	}
+	progressbartype = {
+		name = "GFX_VS_coup_p_bar"
+		textureFile1 = "gfx/interface/gui/VS_p_bar_ldrs_l_r_full.png"
+		textureFile2 = "gfx/interface/gui/VS_p_bar_ldrs_l_r.png"
+		size = {
+			x = 14
+			y = 140
+		}
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = no
+	}
+}

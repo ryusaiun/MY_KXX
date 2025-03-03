@@ -1,0 +1,33 @@
+###########################################
+# Constitutional American Republic
+# Decisions by Matthew
+# SIKE THEY AINT - kalmus
+###########################################
+EGY_panarabist_power_balance_decisions = {
+	EGY_give_naguib_power = {
+		allowed = {
+			tag = EGY 
+		}
+		cost = 100
+		priority = 10
+		complete_effect = {
+			add_power_balance_value = {
+				id = EGY_panarabist_bop
+				value = -0.25
+			}
+		}
+	}
+	EGY_give_nasser_power = {
+		allowed = {
+			tag = EGY 
+		}
+		cost = 100
+		priority = 10
+		complete_effect = {
+			add_power_balance_value = {
+				id = EGY_panarabist_bop
+				value = 0.25
+			}
+		}
+	}
+}

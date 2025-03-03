@@ -1,0 +1,20 @@
+spriteTypes = {	
+	
+	corneredTileSpriteType = {
+		name = "GFX_NR_tiled_plain_bg"
+		size= { x=192 y=192 }
+		textureFile = "gfx//interface//NR_tiled_plain_bg1.dds"
+		borderSize = { x=64 y=64 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	spriteType = {
+		name = "GFX_Ledesma"
+		textureFile = "gfx/leaders/CNT/SPA_Portrait_Ledesma_RF2.png"
+	}
+	spriteType = {
+		name = "GFX_redondo"
+		textureFile = "gfx/leaders/CNT/CNT_onesimo_redondo2.png"
+	}
+	
+}

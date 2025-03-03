@@ -1,0 +1,58 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_decision_header_GRU_1"
+		texturefile = "gfx/interface/decision_headers/decision_header_GRU_1.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_decision_header_GRU_2"
+		texturefile = "gfx/interface/decision_headers/decision_header_GRU_2.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_decision_header_GRU_4"
+		texturefile = "gfx/interface/decision_headers/decision_header_GRU_4.png"
+		legacy_lazy_load = no
+	}
+	###
+	spriteType = {
+		name = "GFX_goebb_grosdhl"
+		texturefile = "gfx/interface/decision_headers/goebb_grosdhl.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_goebb_bldun"
+		texturefile = "gfx/interface/decision_headers/goebb_bldun.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_goebb_breitspurbahn"
+		texturefile = "gfx/interface/decision_headers/goebb_breitspurbahn.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_goebb_volks"
+		texturefile = "gfx/interface/decision_headers/goebb_volks.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_germania_stadt"
+		texturefile = "gfx/interface/decision_headers/germania_stadt.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_goebb_volk"
+		texturefile = "gfx/interface/decision_headers/goebb_volk.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_goebb_stahlpakt"
+		texturefile = "gfx/interface/decision_headers/goebb_stahlpakt.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_goebb_new_order"
+		texturefile = "gfx/interface/decision_headers/goebb_new_order.png "
+		legacy_lazy_load = no
+	}
+}

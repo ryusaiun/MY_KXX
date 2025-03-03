@@ -1,0 +1,32 @@
+spriteTypes = {	
+
+	SpriteType = {
+	name = "GFX_idea_KXX_JYBD_hog_tot"
+	texturefile = "gfx/interface/ministers/KXX/KXX_JYBD.png"			
+	}
+	SpriteType = {
+	name = "GFX_idea_KXX_JYBD_eco_tot"
+	texturefile = "gfx/interface/ministers/KXX/KXX_JYBD.png"			
+	}
+	SpriteType = {
+	name = "GFX_idea_KXX_JYBD_for_npo"
+	texturefile = "gfx/interface/ministers/KXX/KXX_JYBD.png"			
+	}
+	SpriteType = {
+	name = "GFX_idea_KXX_JYBD_sec_npo"
+	texturefile = "gfx/interface/ministers/KXX/KXX_JYBD.png"			
+	}
+	SpriteType = {
+	name = "GFX_idea_KXX_Motoori_Kosuzu_eco_ade"
+	texturefile = "gfx/interface/ministers/KXX/KXX_Motoori_Kosuzu.png"			
+	}
+	SpriteType = {
+	name = "GFX_idea_KXX_GRJCD_for_sil"
+	texturefile = "gfx/interface/ministers/KXX/KXX_GRJCD.png"			
+	}
+	SpriteType = {
+	name = "GFX_idea_KXX_Komeiji_Koishi_sec_sde"
+	texturefile = "gfx/interface/ministers/KXX/KXX_Komeiji_Koishi.png"			
+	}
+
+}

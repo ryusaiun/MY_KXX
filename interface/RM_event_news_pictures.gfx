@@ -1,0 +1,50 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_news_event_goebb_gongress_win"
+		texturefile = "gfx/event_pictures/GRU_NEWS/goebb_gongress_win.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_goebb_demilitarization"
+		texturefile = "gfx/event_pictures/GRU_NEWS/goebb_demilitarization.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_goebb_remilitarization"
+		texturefile = "gfx/event_pictures/GRU_NEWS/goebb_remilitarization.png"
+	}
+	spriteType = {
+		name = "GFX_news_Night_of_the_Long_Knives"
+		texturefile = "gfx/event_pictures/GRU_NEWS/goebb_night_of_the_long_knives.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_goebb_attk_gr"
+		texturefile = "gfx/event_pictures/GRU_NEWS/goebb_attk_gr.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_goebb_reichstag"
+		texturefile = "gfx/event_pictures/GRU_NEWS/goebb_reichstag.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_goebb_in_parish"
+		texturefile = "gfx/event_pictures/GRU_NEWS/goebb_in_parish.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_goebb_austria"
+		texturefile = "gfx/event_pictures/GRU_NEWS/goebb_austria.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_goebb_kaiser_soso"
+		texturefile = "gfx/event_pictures/GRU_NEWS/goebb_kaiser_soso.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_goebb_rmfallgoebb_3"
+		texturefile = "gfx/event_pictures/GRU_NEWS/goebb_rmfallgoebb_3.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_goebb_kristallnacht"
+		texturefile = "gfx/event_pictures/GRU_NEWS/goebb_kristallnacht.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_goebb_rebblt_prussia"
+		texturefile = "gfx/event_pictures/GRU_NEWS/goebb_rebblt_prussia.png"
+	}
+}

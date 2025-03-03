@@ -1,0 +1,355 @@
+##################
+#### CONSTANTS ###
+##################
+# Used for the Merge Plant traits for easier maintenance
+
+### TANKS
+#POSITION
+@tank_1_X = 9
+@tank_1_Y = 2
+@tank_2_X = 9
+@tank_2_Y = 3
+@tank_3_X = 9
+@tank_3_Y = 4
+#BONUSES
+@tank_max_speed = 0.05
+@tank_production_capacity_factor = 0.05
+@tank_soft_attack = 0.05
+
+
+### SHIPS
+#POISTION
+@ship_1_X = 9
+@ship_1_Y = 3
+@ship_2_X = 9
+@ship_2_Y = 4
+@ship_3_X = 8
+@ship_3_Y = 4
+#BONUSES
+@ship_cruiser_production_cost_factor = -0.1
+@ship_destroyer_production_cost_factor = -0.1
+@ship_submarine_production_cost_factor = -0.1
+@ship_production_capacity_factor = -0.05
+@ship_mines_sweeping = 0.1
+@ship_mines_planting = 0.1
+
+### AIRCRAFT
+#POSITION
+@aircraft_1_X = 9
+@aircraft_1_Y = 2
+@aircraft_2_X = 9
+@aircraft_2_Y = 3
+@aircraft_3_X = 9
+@aircraft_3_Y = 4
+#BONUSES
+@aircraft_production_cost_factor = -0.05
+@aircraft_air_agility = 0.05
+@aircraft_air_defence = 0.1
+@aircraft_surface_detection = 0.15
+@aircraft_sub_detection = 0.15
+
+### MATERIEL
+#POSITION
+@materiel_1_X = 9
+@materiel_1_Y = 2
+@materiel_2_X = 9
+@materiel_2_Y = 3
+@materiel_3_X = 9
+@materiel_3_Y = 4
+#BONUSES
+@artillery_production_cost_factor = -0.1
+@infantry_equipment_production_cost_factor = -0.1
+@motorized_production_cost_factor = -0.1
+@materiel_production_efficiency_cap_factor = 0.1
+@materiel_production_capacity_factor = 0.1
+
+###################
+### Armour MIOs ###
+###################
+GRU_adler_organisation = {
+	include = generic_heavy_tank_organization
+	name = GRU_adler
+	icon = GFX_idea_adler
+	allowed = {
+		tag = GRU
+	}
+}
+GRU_daimler_organisation = {
+	include = generic_medium_tank_organization
+	name = GRU_daimler
+	icon = GFX_idea_daimler
+	allowed = {
+		tag = GRU
+	}
+}
+GRU_benz_organisation = {
+	include = generic_tank_organization
+	name = GRU_benz
+	icon = GFX_idea_benz
+	allowed = {
+		tag = GRU
+	}
+
+	#Daimler-Benz traits from vanilla
+	tree_header_text = {
+		text = mio_header_tank_construction
+		x = 3
+	}
+
+	tree_header_text = {
+		text = mio_header_equipment_and_specialization
+		x = 7
+	}
+
+	tree_header_text = {
+		text = mio_header_armor
+		x = 9
+	}
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+	}
+
+	add_trait = {
+		token = GRU_mio_trait_hotrolled_armor
+		name = GRU_mio_trait_hotrolled_armor
+		icon = GFX_generic_mio_department_icon_tank_general_technology
+		special_trait_background = yes
+
+		limit_to_equipment_type = { light_tank_chassis medium_tank_chassis }
+		production_bonus = {
+			production_efficiency_cap_factor = 0.05
+			production_efficiency_gain_factor = 0.05
+		}
+
+		position = { x=9 y=0 }
+	}
+
+	add_trait = {
+		token = GRU_mio_trait_multilayer_armour
+		name = GRU_mio_trait_multilayer_armour
+		icon = GFX_generic_mio_trait_icon_armor_value
+		special_trait_background = yes
+
+		any_parent = { GRU_mio_trait_hotrolled_armor }
+		limit_to_equipment_type = { light_tank_chassis medium_tank_chassis }
+		equipment_bonus = {
+			armor_value = 0.1
+		}
+
+		position = { x=9 y=2 }
+	}
+}
+GRU_henschel_organisation = {
+	include = generic_mobile_tank_organization
+	name = GRU_henschel
+	icon = GFX_idea_henschel
+	allowed = {
+		tag = GRU
+	}
+}
+GRU_krupp_tank_organisation = {
+	include = generic_infantry_tank_organization
+	name = GRU_krupp
+	icon = GFX_idea_krupp
+	allowed = {
+		tag = GRU
+	}
+}
+
+##################
+### Naval MIOs ###
+##################
+GRU_germaniawerft_organisation = {
+	include = generic_raider_ship_organization
+	name = GRU_germaniawerft
+	icon = GFX_idea_germaniawerft
+	allowed = {
+		tag = GRU
+	}
+}
+GRU_blohm_voss_organisation = {
+	include = generic_escort_ship_organization
+	name = GRU_blohm_voss
+	icon = GFX_idea_GRU_blohm_voss
+	allowed = {
+		tag = GRU
+	}
+}
+GRU_schichau_werke_organisation = {
+	include = generic_submarine_organization
+	name = GRU_schichau_werke
+	icon = GFX_idea_schichau_werke
+	allowed = {
+		tag = GRU
+	}
+}
+
+#####################
+### Airplane MIOs ###
+#####################
+GRU_bfw_organisation = { #a.k.a. Messerschmitt
+	include = generic_light_aircraft_organization
+	name = GRU_bfw
+	icon = GFX_idea_gru_Messerschmitt
+	allowed = {
+		tag = GRU
+	}
+
+	add_trait = {
+		token = GRU_mio_trait_maintenance_first_design
+		name = GRU_mio_trait_maintenance_first_design
+
+		icon = GFX_generic_mio_department_icon_plane_fighter_line_efficiency
+		special_trait_background = yes
+
+		position = { x=-2 y=1 }
+		relative_position_id = generic_mio_trait_expanded_production_facilities
+
+		all_parents = { generic_mio_trait_expanded_production_facilities }
+
+		equipment_bonus = {
+			reliability = 0.05
+		}
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.05
+		}
+	}
+
+	add_trait = {
+		token = GRU_mio_trait_fuselage_based_weapons
+		name = GRU_mio_trait_fuselage_based_weapons
+
+		icon = GFX_generic_mio_trait_icon_anti_air_attack
+		special_trait_background = yes
+
+		position = { x=1 y=1 }
+		relative_position_id = generic_mio_trait_gun_pods
+
+		any_parent = { generic_mio_trait_heavier_airframe generic_mio_trait_maximum_wing_loads generic_mio_trait_gun_pods }
+
+		equipment_bonus = {
+			air_attack = 0.05
+			air_agility = 0.05
+		}
+	}
+}
+GRU_focke_wulf_organisation = {
+	include = generic_high_agility_fighter_aircraft_organization
+	name = GRU_focke_wulf
+	icon = GFX_idea_GRU_focke_wulf
+	allowed = {
+		tag = GRU
+	}
+}
+GRU_siemens_schuckert_organisation = {
+	include = generic_multi_role_aircraft_organization
+	name = GRU_siemens_schuckert
+	icon = GFX_idea_GRU_Siemens_Halske
+	allowed = {
+		tag = GRU
+	}
+}
+GRU_friedrichshafen_organisation = {
+	include = generic_naval_aircraft_organization
+	name = GRU_friedrichshafen
+	icon = GFX_idea_friedrichshafen
+	allowed = {
+		tag = GRU
+	}
+}
+GRU_junkers_organisation = {
+	include = generic_cas_aircraft_organization
+	name = GRU_junkers
+	icon = GFX_idea_junkers
+	allowed = {
+		tag = GRU
+	}
+
+	add_trait = {
+		token = GRU_mio_trait_psychological_warfare
+		name = GRU_mio_trait_psychological_warfare
+
+		icon = GFX_generic_mio_trait_icon_fuel_consumption
+		special_trait_background = yes
+
+		position = { x=2 y=0 }
+		relative_position_id = generic_mio_trait_reinforced_wings
+
+		equipment_bonus = {
+			fuel_consumption = -0.05
+		}
+	}
+}
+GRU_kr_dornier_organisation = {
+	include = generic_medium_aircraft_organization
+	name = GRU_kr_dornier
+	icon = GFX_idea_dornier
+	allowed = {
+		tag = GRU
+	}
+}
+GRU_gothaer_waggonfabrik_organisation = {
+	include = generic_heavy_aircraft_organization
+	name = GRU_gothaer_waggonfabrik
+	icon = GFX_idea_GRU_gothaer_waggonfabrik
+	allowed = {
+		tag = GRU
+	}
+}
+
+#####################
+### Materiel MIOs ###
+#####################
+GRU_mauser_organisation = {
+	include = generic_infantry_equipment_organization #TODO: make custom one
+	name = GRU_mauser
+	icon = GFX_idea_mauser
+	allowed = {
+		tag = GRU
+	}
+}
+GRU_walther_organisation = {
+	include = generic_infantry_equipment_organization
+	name = GRU_walther
+	icon = GFX_idea_walther
+	allowed = {
+		tag = GRU
+	}
+}
+GRU_rheinmetall_organisation = {
+	include = generic_artillery_organization
+	name = GRU_rheinmetall
+	icon = GFX_idea_rheinmetall
+	allowed = {
+		tag = GRU
+	}
+}
+GRU_dwm_organisation = {
+	include = generic_support_equipment_organization
+	name = GRU_dwm
+	icon = GFX_idea_dwm
+	allowed = {
+		tag = GRU
+	}
+}
+GRU_hanomag_organisation = {
+	include = generic_armored_car_organization
+	name = GRU_hanomag
+	icon = GFX_idea_hanomag
+	allowed = {
+		tag = GRU
+		has_dlc_lar = yes
+	}
+}
+GRU_opel_organisation = {
+	include = generic_motorized_mechanized_organization
+	name = GRU_opel
+	icon = GFX_idea_opel
+	allowed = {
+		tag = GRU
+	}
+}

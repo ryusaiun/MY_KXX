@@ -1,0 +1,56 @@
+spriteTypes = {	
+
+	SpriteType = {
+	name = "GFX_ideology_classical_progressivism"
+	texturefile = "gfx/interface/ideologies/classical_progressivism.png"
+	}
+	SpriteType = {
+	name = "GFX_ideology_tot_jiayibingdingism"
+	texturefile = "gfx/interface/ideologies/tot_jiayibingdingism.png"
+	}
+	SpriteType = {
+	name = "GFX_ideology_npo_jiayibingdingism"
+	texturefile = "gfx/interface/ideologies/npo_jiayibingdingism.png"
+	}
+	SpriteType = {
+	name = "GFX_ideology_spanish_syndicalism"
+	texturefile = "gfx/interface/ideologies/spanish_syndicalism.png"
+	}
+	SpriteType = {
+	name = "GFX_ideology_falangism"
+	texturefile = "gfx/interface/ideologies/falangism_group.dds"			
+	}
+	SpriteType = {
+	name = "GFX_ideology_ukrainian_social_nationalism"
+	texturefile = "gfx/interface/ideologies/ukrainian_social_nationalism.png"			
+	}
+	SpriteType = {
+	name = "GFX_ideology_ukrainian_social_nationalism_tot"
+	texturefile = "gfx/interface/ideologies/ukrainian_social_nationalism.png"			
+	}
+	SpriteType = {
+	name = "GFX_ideology_popular_legionism"
+	texturefile = "gfx/interface/ideologies/popular_legionism.png"			
+	}
+	SpriteType = {
+	name = "GFX_ideology_revolutionary_chetnikism"
+	texturefile = "gfx/interface/ideologies/revolutionary_chetnikism.png"			
+	}
+	SpriteType = {
+	name = "GFX_ideology_syrian_social_nationalism"
+	texturefile = "gfx/interface/ideologies/syrian_social_nationalism.png"			
+	}
+	SpriteType = {
+	name = "GFX_ideology_syrian_social_nationalism"
+	texturefile = "gfx/interface/ideologies/syrian_social_nationalism.png"			
+	}
+	spriteType = {
+	name = "GFX_ideology_syn_anarcho_communism_subtype"
+	texturefile = "gfx/interface/ideologies/subideologies/tot_anarcho_communism_group.png"
+	}
+	spriteType = {
+	name = "GFX_ideology_ustase_subtype"
+	texturefile = "gfx/interface/ideologies//ustase_subtype.png"
+	}
+	
+}

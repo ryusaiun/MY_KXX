@@ -1,0 +1,47 @@
+spriteTypes = {	
+	spriteType = {
+		name = "GFX_GRU_Pax_Super_Event_Window"
+		texturefile = "gfx/Pax_Super_Event_Window.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_GRU_Super_Event_Quote_Background"
+		texturefile = "gfx/Super_Event_Quote_Background.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_SPEVNT_civl_gru"
+		texturefile = "gfx/super_events/SPEVNT_civl_gru.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_SPEVNT_greater_germanic_state_goebbels"
+		texturefile = "gfx/super_events/SPEVNT_greater_germanic_state_goebbels.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_SPEVNT_endsieg_goebbels"
+		texturefile = "gfx/super_events/SPEVNT_endsieg_goebbels.png"
+		legacy_lazy_load = no
+	}
+	
+	
+	spriteType = {
+		name = "GFX_REMARK"
+		texturefile = "gfx/Super_Event_Remark_Button.png"
+		legacy_lazy_load = no
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tiled_window_thin_border"
+		size= { x=192 y=192 }
+		textureFile = "gfx//interface//tiles//tiled_window_thin_border.png"
+		borderSize = { x=64 y=64 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+}

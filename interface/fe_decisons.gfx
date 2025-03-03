@@ -1,0 +1,23 @@
+spriteTypes = {
+
+
+	
+	spriteType = {
+		name = "GFX_decision_cat_join_fra"
+		texturefile = "gfx/interface/decisions/decision_cat_join_fra.png"
+	}
+	spriteType = {
+		name = "GFX_decision_join_fra"
+		texturefile = "gfx/interface/decisions/decision_join_fra.png"
+	}
+	spriteType = {
+		name = "GFX_decision_cat_picture_build_titans"
+		texturefile = "gfx/interface/decisions/decision_cat_picture_build_titans.png"
+	}
+	
+	
+	
+	
+	
+}
+	

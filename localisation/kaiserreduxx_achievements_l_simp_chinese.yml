@@ -1,0 +1,21 @@
+﻿l_simp_chinese:
+ 
+ #Achievements
+ kaiserreduxxflavourachievements_1936: "指挥官们英勇的证明"
+ XXX_NAME: "成就名"
+ XXX_DESC: "成就简介"
+ ACHV_ENG_lltk_NAME:0 "新王万岁"
+ ACHV_ENG_lltk_DESC:0 "作为不列颠联盟，霍巴特政变后选择任意一位非温莎君主。\n\n§V国王已经归来，百万英雄不得瞑目……§!\n新瓶装旧酒是常态。"
+ ACHV_CNT_roncesvalles_NAME:0 "龙塞斯瓦耶斯隘口的“骑士”"
+ ACHV_CNT_roncesvalles_DESC:0 "作为莱德斯马领导下的西班牙人民工团国，完全占领法国。\n\n§V太阳帝国的“骑行”§!\n——不可思议的事情发生了！"
+ ACHV_KOG_dictator_death_NAME:0 "拒绝死亡的独夫"
+ KOG_death_of_salazar:0 "§G安东尼奥·萨拉查§!已被刚果人处决，中非爆发§V同类相食§!"
+ ACHV_KOG_dictator_death_DESC:0 "作为刚果，进入§G葡萄牙热带主义§!路线后选取萨拉查作为首相，触发萨拉查被处刑事件。\n\n他从生活中睡去……"
+ ACHV_COMFRA_LON_NAME:0 "新秩序"
+ ACHV_COMFRA_LON_DESC:0 "作为拉加代尔，肢解德国，并且伊比利亚半岛、低地全部为盟友或自己所控制。\n\n至此，迎来了新秩序的一缕暮色……"
+ ACHV_COMFRA_Gamelin_NAME:0 "没有大元帅，就没有新法国"
+ ACHV_COMFRA_Gamelin_DESC:0 "作为甘末林，在延续临时政府后选择转向军事独裁。\n\n我们的工团主义祖国（哽咽）……会变成……什么样子……"
+ ACHV_SRI_Imperator_Mussolini_NAME:0 "地中海永恒的舵手"
+ ACHV_SRI_Imperator_Mussolini_DESC:0 "作为墨索里尼意大利，成立罗马革命人民国，并让巴黎和柏林置于自己或属国的控制下。\n\n罗马将再次领导世界！"
+ ACHV_FLN_dublin_to_voladivostok_NAME:0 "从爱尔兰到契丹？"
+ ACHV_FLN_dublin_to_voladivostok_DESC:0 "作为蒂里亚特的§Y佛兰德斯§!，建立起横跨欧亚大陆的§V欧罗巴-苏维埃帝国§!。\n\n从都柏林到符拉迪沃斯托克！"

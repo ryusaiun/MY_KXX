@@ -1,0 +1,71 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_NR_pm_button"
+		texturefile = "gfx/interface/GRU_pm_button.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Ledesma"
+		texturefile = "gfx/leaders/CNT/SPA_Portrait_Ledesma_RF.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Oleksander_Shumsky"
+		texturefile = "gfx/leaders/WSU/Portrait_UKR_Oleksander_Shumsky.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Stepan_Bandera2"
+		texturefile = "gfx/leaders/WSU/Portrait_Stepan_Bandera2.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Stepan_Bandera"
+		texturefile = "gfx/leaders/WSU/Portrait_Stepan_Bandera3.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Shukevich"
+		texturefile = "gfx/leaders/WSU/Portrait_Shukevich.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_UKR_Dmitri_Dontsov"
+		texturefile = "gfx/leaders/WSU/Portrait_UKR_Dmitri_Dontsov.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Vasyl_Kuk"
+		texturefile = "gfx/leaders/WSU/Portrait_Vasyl_Kuk.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Mihai_Strescu"
+		texturefile = "gfx/leaders/ROM/Mihai_Strescu.jpg"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Gheorghe_Clime"
+		texturefile = "gfx/leaders/ROM/Gheorghe_Clime.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Hans_Erhard"
+		texturefile = "gfx/leaders/BAY/Portrait_Bavaria_Hans_Erhard.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Fritz_Gerlich"
+		texturefile = "gfx/leaders/BAY/Portrait_Bavaria_Fritz_Gerlich.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_SER_Draza_Mihailovic"
+		texturefile = "gfx/leaders/MNT/Portrait_SER_Draza_Mihailovic.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Bavaria_Paul_Nikolaus_Cossmann"
+		texturefile = "gfx/leaders/BAY/Portrait_Bavaria_Paul_Nikolaus_Cossmann.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_SPA_Jose_Antonio_RF"
+		texturefile = "gfx/leaders/CAR/Portrait_SPA_Jose_Antonio_RF.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Javier_I"
+		texturefile = "gfx/leaders/CAR/Portrait_Javier_I.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Juan_Laguia_Lliteras"
+		texturefile = "gfx/leaders/CAR/CNT_Juan_Laguia_Lliteras.png"
+	}
+
+}

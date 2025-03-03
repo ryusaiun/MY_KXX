@@ -1,0 +1,65 @@
+on_actions = {
+	on_monthly_MAG = { 
+		effect = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = MAG_heydrich_fired }
+					NOT = {
+						has_completed_focus = MAG_Concealed_supervision
+					}
+				}
+				subtract_from_variable = { MAG_GER_Power = 1 }
+			}
+			else_if = {
+				limit = {
+					NOT = { has_country_flag = MAG_heydrich_fired }
+					has_completed_focus = MAG_Concealed_supervision
+				}	
+				subtract_from_variable = { MAG_GER_Power = 0.5 }		
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = MAG_heydrich_fired }
+				}
+				random_list = { 
+					33 = { 
+						add_to_variable = { MAG_French_Power = MAG_anti_Power_monthly}
+						custom_effect_tooltip = french_power_increase_tt
+					} 
+					33 = { 
+						add_to_variable = { MAG_Local_Power = MAG_anti_Power_monthly5}
+						custom_effect_tooltip = local_power_increase_tt
+					} 
+					33 = { 
+						add_to_variable = { MAG_Jewish_Power = MAG_anti_Power_monthly}
+						custom_effect_tooltip = jew_power_increase_tt
+					}
+					1 = { 
+						custom_effect_tooltip = nothing_happens_tt
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					check_variable = { MAG_Heydrich_Power > 65 }
+				}
+				add_to_variable = { MAG_Heydrich_Power = -3 }
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_completed_focus = MAG_Suppress_resistance
+				}
+				add_to_variable = { MAG_French_Power = -1 }
+				add_to_variable = { MAG_Local_Power = -1}
+				add_to_variable = { MAG_Jewish_Power = -1}
+			}
+		}
+    }
+}
+

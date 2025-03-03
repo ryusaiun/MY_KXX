@@ -1,0 +1,2936 @@
+add_namespace = fe_jons
+add_namespace = jons
+add_namespace = fe
+add_namespace = SPRguides
+add_namespace = visigothic
+add_namespace = SPRtest
+add_namespace = SPRelection
+
+#Events affecting other countries are under 'Foreign Policy'
+
+
+#FE de las JONS event
+
+country_event = {
+	id = SPRelection.1
+    title = SPRelection.1.t
+    desc = SPRelection.1.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = SPRelection.1.a
+		clr_country_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = KXX_LEADER_GUI_VISIBLE
+		add_popularity = { ideology = social_democrat popularity = 0.45 }
+		set_politics = {
+			ruling_party = social_democrat
+			elections_allowed = no
+			name = CNT_SPR_Partido_Socialista_de_los_Trabajadores
+			long_name = CNT_SPR_Partido_Socialista_de_los_Trabajadores_long
+		}
+		create_country_leader = {
+			name = "朱利安·贝斯特罗·费尔南德斯"
+			desc = "POLITICS_NOMORE_DESC"
+			picture = "gfx/leaders/CNT/CNT_Julian_Besteiro_Fernandez.png"
+			expire = "1.1.1"
+			ideology = social_democrat_subtype
+		}
+	}
+	option = { 
+		name = SPRelection.1.b
+		clr_country_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = KXX_LEADER_GUI_VISIBLE
+		add_popularity = { ideology = totalist popularity = 0.45 }
+		set_politics = {
+			ruling_party = totalist
+			elections_allowed = no
+			name = CNT_SPR_Sindicato_Nacional_de_Trabajadores_Calificados
+			long_name = CNT_SPR_Sindicato_Nacional_de_Trabajadores_Calificados_long
+		}
+		create_country_leader = {
+			name = "尼卡西奥·阿尔瓦雷斯·德·索托马约尔"
+			desc = "POLITICS_NOMORE_DESC"
+			picture = "gfx/leaders/CNT/CNT_Nicasio_Alvarez_de_Sotomayor.png"
+			expire = "1.1.1"
+			ideology = technocracy_subtype
+		}
+	}
+	option = { 
+		name = SPRelection.1.c
+		clr_country_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = KXX_LEADER_GUI_VISIBLE
+		add_popularity = { ideology = social_democrat popularity = 0.45 }
+		set_politics = {
+			ruling_party = social_democrat
+			elections_allowed = no
+			name = CNT_SPR_Partido_Socialista_de_los_Trabajadores
+			long_name = CNT_SPR_Partido_Socialista_de_los_Trabajadores_long
+		}
+		create_country_leader = {
+			name = "胡安·内格林·洛佩兹"
+			desc = "POLITICS_NOMORE_DESC"
+			picture = "gfx/leaders/CNT/CNT_Juan_Negrin_Lopez.png"
+			expire = "1.1.1"
+			ideology = syndie_social_democrat_subtype
+		}
+	}
+	option = { 
+		name = SPRelection.1.e
+		add_stability = 0.05
+	}
+}
+country_event = {
+	id = SPRelection.2
+    title = SPRelection.2.t
+    desc = SPRelection.2.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = SPRelection.2.a
+		clr_country_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = KXX_LEADER_GUI_VISIBLE
+		add_popularity = { ideology = syndicalist popularity = 0.45 }
+		set_politics = {
+			ruling_party = syndicalist
+			elections_allowed = no
+			name = CNT_SPR_CNT_FAI
+			long_name = CNT_SPR_CNT_FAI_long
+		}
+		remove_ideas_with_trait = head_of_government
+		add_ideas = CNT_Jose_Buenaventura_Durruti_Dumange_hog_syn
+		complete_national_focus = TCNT_30
+		create_country_leader = {
+			name = "布维那文图拉·杜鲁蒂"
+			desc = "POLITICS_NOMORE_DESC"
+			picture = "gfx/leaders/CNT/Portrait_CNT_Durruti_Dumange.png"
+			expire = "1.1.1"
+			ideology = anarcho_syndicalist_subtype
+		}
+	}
+	option = { 
+		name = SPRelection.2.b
+		clr_country_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = KXX_LEADER_GUI_VISIBLE
+		add_popularity = { ideology = syndicalist popularity = 0.45 }
+		set_politics = {
+			ruling_party = syndicalist
+			elections_allowed = no
+			name = CNT_SPR_CNT2
+			long_name = CNT_SPR_CNT2_long
+		}
+		remove_ideas_with_trait = head_of_government
+		add_ideas = CNT_Juan_Lopez_Sanchez_hog_syn
+		complete_national_focus = TCNT_30
+		create_country_leader = {
+			name = "胡安·洛佩兹·桑切斯"
+			desc = "POLITICS_NOMORE_DESC"
+			picture = "gfx/leaders/CNT/CNT_Juan_Lopez_Sanchez.png"
+			expire = "1.1.1"
+			ideology = democratic_syndicalism_subtype
+		}
+	}
+	option = { 
+		name = SPRelection.2.c
+		clr_country_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = KXX_LEADER_GUI_VISIBLE
+		add_popularity = { ideology = social_democrat popularity = 0.45 }
+		set_politics = {
+			ruling_party = social_democrat
+			elections_allowed = no
+			name = CNT_SPR_CNT3
+			long_name = CNT_SPR_CNT3_long
+		}
+		set_cosmetic_tag = CNT_social_democrat_state
+		remove_ideas_with_trait = head_of_government
+		add_ideas = CNT_miguel_jimenez_igualada_hog_sde
+		complete_national_focus = TCNT_1
+		create_country_leader = {
+			name = "米格尔·吉梅内斯·伊瓜拉达"
+			desc = "POLITICS_NOMORE_DESC"
+			picture = "gfx/leaders/CNT/CNT_Miguel_Jimenez_Igualada.png"
+			expire = "1.1.1"
+			ideology = individualist_anarchism
+		}
+	}
+	option = { 
+		name = SPRelection.2.e
+		clr_country_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = KXX_LEADER_GUI_VISIBLE
+		add_popularity = { ideology = radical_socialist popularity = 0.45 }
+		set_politics = {
+			ruling_party = radical_socialist
+			elections_allowed = no
+			name = CNT_SPR_FAI
+			long_name = CNT_SPR_FAI_long
+		}
+		remove_ideas_with_trait = head_of_government
+		add_ideas = CNT_isaac_puente_amestoy_hog_rso
+		complete_national_focus = TCNT_1
+		create_country_leader = {
+			name = "艾萨克·普恩特·阿梅斯泰"
+			desc = "POLITICS_NOMORE_DESC"
+			picture = "gfx/leaders/CNT/CNT_Isaac_Puente_Amestoy.png"
+			expire = "1.1.1"
+			ideology = eco_anarchism_subtype
+		}
+	}
+	option = { 
+		name = SPRelection.2.f
+		country_event = SPRelection.3
+	}
+}
+country_event = {
+	id = SPRelection.3
+    title = SPRelection.3.t
+    desc = SPRelection.3.d
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = SPRelection.3.a
+		clr_country_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = KXX_LEADER_GUI_VISIBLE
+		add_popularity = { ideology = radical_socialist popularity = 0.45 }
+		set_politics = {
+			ruling_party = radical_socialist
+			elections_allowed = no
+			name = CNT_SPR_CNT_FAI
+			long_name = CNT_SPR_CNT_FAI_long
+		}
+		remove_ideas_with_trait = head_of_government
+		add_ideas = CNT_Federica_Monsteny_Mane_hog_rso
+		complete_national_focus = TCNT_30
+		create_country_leader = {
+			name = "费德里卡·蒙塞尼"
+			desc = "POLITICS_NOMORE_DESC"
+			picture = "gfx/leaders/CNT/CNT_Frederica_Montseny.png"
+			expire = "1.1.1"
+			ideology = radsoc_socialist_feminism_subtype
+		}
+	}
+	option = { 
+		name = SPRelection.3.b
+		clr_country_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = KXX_LEADER_GUI_VISIBLE
+		add_popularity = { ideology = syndicalist popularity = 0.45 }
+		set_politics = {
+			ruling_party = syndicalist
+			elections_allowed = no
+			name = FEJONS_totalist_party
+			long_name = FEJONS_totalist_party
+		}
+		remove_ideas_with_trait = head_of_government
+		add_ideas = CNT_Francisco_Guillen_Salaya_hog_syn
+		complete_national_focus = TCNT_30
+		create_country_leader = {
+			name = "弗朗西斯科·吉伦·萨拉亚"
+			desc = "POLITICS_NOMORE_DESC"
+			picture = "gfx/leaders/CNT/CNT_Francisco_Guillen_Salaya.png"
+			expire = "1.1.1"
+			ideology = reformed_natsynd_subtype
+		}
+	}
+	option = { 
+		name = SPRelection.3.c
+		clr_country_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = KXX_LEADER_GUI_VISIBLE
+		add_popularity = { ideology = radical_socialist popularity = 0.45 }
+		remove_ideas_with_trait = head_of_government
+		add_ideas = CNT_felipe_emilo_sandoval_cabrerizo_hog_rso
+		complete_national_focus = TCNT_1
+		set_politics = {
+			ruling_party = radical_socialist
+			elections_allowed = no
+			name = CNT_SPR_FAI2
+			long_name = CNT_SPR_FAI2_long
+		}
+		remove_ideas_with_trait = head_of_government
+		add_ideas = CNT_Abraham_Guillen_hog_rso
+		complete_national_focus = TCNT_30
+		create_country_leader = {
+			name = "费利佩·埃米利奥·桑多瓦·卡布里佐"
+			desc = "POLITICS_NOMORE_DESC"
+			picture = "gfx/leaders/CNT/CNT_felipe_emilo_sandoval_cabrerizo.png"
+			expire = "1.1.1"
+			ideology = military_anarchism
+		}
+	}
+	option = { 
+		name = SPRelection.3.e
+		clr_country_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = KXX_LEADER_GUI_VISIBLE
+		add_popularity = { ideology = radical_socialist popularity = 0.45 }
+		set_politics = {
+			ruling_party = radical_socialist
+			elections_allowed = no
+			name = CNT_SPR_FAI
+			long_name = CNT_SPR_FAI_long
+		}
+		create_country_leader = {
+			name = "亚伯拉罕·吉伦"
+			desc = "POLITICS_NOMORE_DESC"
+			picture = "gfx/leaders/CNT/CNT_Abraham_Guillen.png"
+			expire = "1.1.1"
+			ideology = anarcho_market_socialism
+		}
+	}
+	option = { 
+		name = SPRelection.3.f
+		clr_country_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = KXX_LEADER_GUI_VISIBLE
+		add_popularity = { ideology = radical_socialist popularity = 0.45 }
+		set_politics = {
+			ruling_party = radical_socialist
+			elections_allowed = no
+			name = CNT_SPR_FAI
+			long_name = CNT_SPR_FAI_long
+		}
+		remove_ideas_with_trait = head_of_government
+		add_ideas = CNT_antonio_de_hoyos_y_vinent_hog_rso
+		complete_national_focus = TCNT_1
+		create_country_leader = {
+			name = "安东尼奥·德·霍约斯·维南特"
+			desc = "POLITICS_NOMORE_DESC"
+			picture = "gfx/leaders/CNT/CNT_Antonio_de_Hoyos_y_Vinent.png"
+			expire = "1.1.1"
+			ideology = radsoc_social_anarchism
+		}
+	}
+	option = { 
+		name = SPRelection.3.g
+		country_event = SPRelection.2
+	}
+}
+country_event = {
+	id = SPRelection.4
+    title = SPRelection.4.t
+    desc = SPRelection.4.d
+	
+    is_triggered_only = yes
+	
+	option = { 
+		name = SPRelection.4.a
+		clr_country_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = KXX_LEADER_GUI_VISIBLE
+		add_popularity = { ideology = totalist popularity = 0.45 }
+		set_politics = {
+			ruling_party = totalist
+			elections_allowed = no
+			name = CNT_SPR_COM_PAT
+			long_name = CNT_SPR_COM_PAT_long
+		}
+		remove_ideas_with_trait = head_of_government
+		add_ideas = CNT_Jose_Diaz_Ramos_hog_tot
+		set_cosmetic_tag = CNT_totalist_state
+		complete_national_focus = PCE_0
+		create_country_leader = {
+			name = "何塞·迪亚斯·拉莫斯"
+			desc = "POLITICS_NOMORE_DESC"
+			picture = "gfx/leaders/CNT/Portrait_SPR_Jose_Diaz_Ramos.png"
+			expire = "1.1.1"
+			ideology = authcom_subtype
+		}
+	}
+	option = { 
+		name = SPRelection.4.b
+		clr_country_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = KXX_LEADER_GUI_VISIBLE
+		add_popularity = { ideology = radical_socialist popularity = 0.45 }
+		remove_ideas_with_trait = head_of_government
+		add_ideas = CNT_Joaquin_Maurin_Julia_hog_tot
+		complete_national_focus = PCE_0
+		set_politics = {
+			ruling_party = radical_socialist
+			elections_allowed = no
+			name = CNT_SPR_COM_PAT2
+			long_name = CNT_SPR_COM_PAT2_long
+		}
+		set_cosmetic_tag = CNT_totalist_state
+		create_country_leader = {
+			name = "华金·毛林"
+			desc = "POLITICS_NOMORE_DESC"
+			picture = "gfx/leaders/CNT/CNT_Joaquin_Maurin_Julia.png"
+			expire = "1.1.1"
+			ideology = bukharinist_subtype
+		}
+	}
+	option = { 
+		name = SPRelection.4.c
+		clr_country_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = KXX_LEADER_GUI_VISIBLE
+		add_popularity = { ideology = totalist popularity = 0.45 }
+		remove_ideas_with_trait = head_of_government
+		add_ideas = CNT_andreu_nin_perez_hog_tot
+		complete_national_focus = PCE_0
+		set_politics = {
+			ruling_party = totalist
+			elections_allowed = no
+			name = CNT_SPR_COM_PAT3
+			long_name = CNT_SPR_COM_PAT3_long
+		}
+		set_cosmetic_tag = CNT_totalist_state
+		create_country_leader = {
+			name = "安德烈斯·宁"
+			desc = "POLITICS_NOMORE_DESC"
+			picture = "gfx/leaders/CNT/CNT_Andreu_Nin_Perez.png"
+			expire = "1.1.1"
+			ideology = internationalism_subtype
+		}
+	}
+	option = { 
+		name = SPRelection.4.e
+		clr_country_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = KXX_LEADER_GUI_VISIBLE
+		add_popularity = { ideology = totalist popularity = 0.45 }
+		remove_ideas_with_trait = head_of_government
+		add_ideas = CNT_Dolores_Ibaurri_Gomez_hog_tot
+		complete_national_focus = PCE_0
+		set_politics = {
+			ruling_party = totalist
+			elections_allowed = no
+			name = CNT_SPR_COM_PAT
+			long_name = CNT_SPR_COM_PAT_long
+		}
+		set_cosmetic_tag = CNT_totalist_state
+		create_country_leader = {
+			name = "伊巴露丽·戈麦斯"
+			desc = "POLITICS_NOMORE_DESC"
+			picture = "gfx/leaders/CNT/Portrait_CNT_Dolores_Ibarruri_Gomez.png"
+			expire = "1.1.1"
+			ideology = popcom_subtype
+		}
+	}
+	option = { 
+		name = SPRelection.4.f
+		clr_country_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = KXX_LEADER_GUI_VISIBLE
+		add_popularity = { ideology = radical_socialist popularity = 0.45 }
+		remove_ideas_with_trait = head_of_government
+		add_ideas = CNT_Francisco_Largo_Caballero_hog_rso
+		complete_national_focus = PCE_0
+		set_politics = {
+			ruling_party = radical_socialist
+			elections_allowed = no
+			name = CNT_SPR_COM_PAT4
+			long_name = CNT_SPR_COM_PAT4_long
+		}
+		set_cosmetic_tag = CNT_totalist_state
+		create_country_leader = {
+			name = "弗朗西斯科·拉尔戈·卡瓦列罗"
+			desc = "POLITICS_NOMORE_DESC"
+			picture = "gfx/leaders/CNT/Portrait_CNT_Francisco_Largo_Caballero.png"
+			expire = "1.1.1"
+			ideology = radsoc_communism_subtype
+		}
+	}
+	option = { 
+		name = SPRelection.4.g
+		clr_country_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = KXX_LEADER_GUI_VISIBLE
+		add_popularity = { ideology = totalist popularity = 0.45 }
+		remove_ideas_with_trait = head_of_government
+		add_ideas = CNT_Helios_Gomez_Rodriguez_hog_tot
+		complete_national_focus = PCE_0
+		set_politics = {
+			ruling_party = totalist
+			elections_allowed = no
+			name = CNT_SPR_COM_PAT5
+			long_name = CNT_SPR_COM_PAT5_long
+		}
+		set_cosmetic_tag = CNT_totalist_state
+		create_country_leader = {
+			name = "赫利奥斯·戈麦斯·罗德里格斯"
+			desc = "POLITICS_NOMORE_DESC"
+			picture = "gfx/leaders/CNT/CNT_Helios_Gomez_Rodriguez.png"
+			expire = "1.1.1"
+			ideology = tot_anarcho_communism_subtype
+		}
+	}
+}
+
+country_event = {
+	id = SPRtest.1
+    title = SPRtest.1.t
+    desc = SPRtest.1.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = SPRtest.1.a
+		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = KXX_LEADER_GUI_VISIBLE
+		add_popularity = { ideology = national_populist popularity = 0.45 }
+		set_politics = {
+			ruling_party = national_populist
+			elections_allowed = no
+		}
+		create_country_leader = {
+			name = "朱里奥·马丁内斯·圣奥拉拉"
+			desc = "POLITICS_Julio_Martinez_DESC"
+			picture = "gfx/leaders/CAR/CNT_julio_Martinez_santa_olalla.png"
+			expire = "1.1.1"
+			ideology = ariosophy_subtype
+		}
+	}
+	option = { 
+		name = SPRtest.1.b
+		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = KXX_LEADER_GUI_VISIBLE
+		add_popularity = { ideology = national_populist popularity = 0.45 }
+		set_politics = {
+			ruling_party = national_populist
+			elections_allowed = no
+		}
+		create_country_leader = {
+			name = "胡安·安东尼奥·安萨尔多"
+			desc = ""
+			picture = "gfx/leaders/CAR/CNT_Juan_Antonio_Ansaldo.png"
+			expire = "1.1.1"
+			ideology = legionarism_subtype
+		}
+	}
+	option = { 
+		name = SPRtest.1.c
+		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = KXX_LEADER_GUI_VISIBLE
+		add_popularity = { ideology = totalist popularity = 0.45 }
+		set_politics = {
+			ruling_party = totalist
+			elections_allowed = no
+		}
+		create_country_leader = {
+			name = "迪奥尼西奥·里德鲁霍"
+			desc = ""
+			picture = "gfx/leaders/CAR/CNT_Dionisio_Ridruejo.png"
+			expire = "1.1.1"
+			ideology = natsynd_subtype
+		}
+	}
+	option = { 
+		name = SPRtest.1.e
+		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = KXX_LEADER_GUI_VISIBLE
+		add_popularity = { ideology = radical_socialist popularity = 0.45 }
+		set_politics = {
+			ruling_party = radical_socialist
+			elections_allowed = no
+		}
+		create_country_leader = {
+			name = "马西亚诺·佩德罗·杜鲁蒂"
+			desc = ""
+			picture = "gfx/leaders/CAR/CNT_Marciano_Pedro_Durruti.png"
+			expire = "1.1.1"
+			ideology = christian_anarchism_subtype
+		}
+	}
+	option = { 
+		name = SPRtest.1.f
+		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = KXX_LEADER_GUI_VISIBLE
+		add_popularity = { ideology = paternal_autocrat popularity = 0.45 }
+		set_politics = {
+			ruling_party = paternal_autocrat
+			elections_allowed = no
+		}
+		create_country_leader = {
+			name = "弗朗西斯科·佛朗哥"
+			desc = ""
+			picture = "gfx/leaders/CAR/Portrait_SPR_Franco_Bahamonde.png"
+			expire = "1.1.1"
+			ideology = junta_subtype
+		}
+	}
+	option = { 
+		name = SPRtest.1.g
+		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = KXX_LEADER_GUI_VISIBLE
+		add_popularity = { ideology = paternal_autocrat popularity = 0.45 }
+		set_politics = {
+			ruling_party = paternal_autocrat
+			elections_allowed = no
+		}
+		create_country_leader = {
+			name = "拉斐尔·桑切斯·马萨斯"
+			desc = ""
+			picture = "gfx/leaders/CAR/CNT_Rafael_Sanchez_Mazas.png"
+			expire = "1.1.1"
+			ideology = pau_falangism
+		}
+	}
+}
+country_event = {
+	id = SPRtest.2
+    title = SPRtest.2.t
+    desc = SPRtest.2.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = SPRtest.2.a
+		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = KXX_LEADER_GUI_VISIBLE
+		add_popularity = { ideology = national_populist popularity = 0.45 }
+		set_politics = {
+			ruling_party = national_populist
+			elections_allowed = no
+		}
+		create_country_leader = {
+			name = "何塞·安东尼奥"
+			desc = ""
+			picture = "gfx/leaders/CAR/Portrait_SPA_Jose_Antonio_RF.png"
+			expire = "1.1.1"
+			ideology = falangism
+		}
+	}
+	option = { 
+		name = SPRtest.2.b
+		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = KXX_LEADER_GUI_VISIBLE
+		add_popularity = { ideology = paternal_autocrat popularity = 0.45 }
+		set_politics = {
+			ruling_party = paternal_autocrat
+			elections_allowed = no
+		}
+		create_country_leader = {
+			name = "何塞·安东尼奥"
+			desc = ""
+			picture = "gfx/leaders/CAR/Portrait_SPA_Jose_Antonio_RF.png"
+			expire = "1.1.1"
+			ideology = pau_falangism
+		}
+	}
+	option = { 
+		name = SPRtest.2.c
+		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = KXX_LEADER_GUI_VISIBLE
+		add_popularity = { ideology = national_populist popularity = 0.45 }
+		set_politics = {
+			ruling_party = national_populist
+			elections_allowed = no
+		}
+		create_country_leader = {
+			name = "奥古斯丁·德·福克萨"
+			desc = ""
+			picture = "gfx/leaders/CAR/CNT_Agustin_de_Foxa_y_Torroba.png"
+			expire = "1.1.1"
+			ideology = falangism
+		}
+	}
+	option = { 
+		name = SPRtest.2.e
+		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = KXX_LEADER_GUI_VISIBLE
+		add_popularity = { ideology = paternal_autocrat popularity = 0.45 }
+		set_politics = {
+			ruling_party = paternal_autocrat
+			elections_allowed = no
+		}
+		create_country_leader = {
+			name = "奥古斯丁·德·福克萨"
+			desc = ""
+			picture = "gfx/leaders/CAR/CNT_Agustin_de_Foxa_y_Torroba.png"
+			expire = "1.1.1"
+			ideology = pau_falangism
+		}
+	}
+	option = { 
+		name = SPRtest.2.f
+		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = KXX_LEADER_GUI_VISIBLE
+		add_popularity = { ideology = national_populist popularity = 0.45 }
+		set_politics = {
+			ruling_party = national_populist
+			elections_allowed = no
+		}
+		create_country_leader = {
+			name = "尤金尼奥·蒙特斯"
+			desc = ""
+			picture = "gfx/leaders/CAR/CNT_Eugenio_Montes.png"
+			expire = "1.1.1"
+			ideology = maurrassism_subtype
+		}
+	}
+	option = { 
+		name = SPRtest.2.g
+		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = KXX_LEADER_GUI_VISIBLE
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.45 }
+		set_politics = {
+			ruling_party = authoritarian_democrat
+			elections_allowed = no
+		}
+		create_country_leader = {
+			name = "何塞·米兰·阿斯特雷"
+			desc = ""
+			picture = "gfx/leaders/CAR/CNT_jose_millan_astray.png"
+			expire = "1.1.1"
+			ideology = authdem_junta_subtype
+		}
+	}
+}
+country_event = {
+	id = SPRtest.3
+    title = SPRtest.3.t
+    desc = SPRtest.3.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = SPRtest.3.a
+		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = KXX_LEADER_GUI_VISIBLE
+		add_popularity = { ideology = national_populist popularity = 0.45 }
+		set_politics = {
+			ruling_party = national_populist
+			elections_allowed = no
+		}
+		create_country_leader = {
+			name = "哈维尔一世"
+			desc = ""
+			picture = "gfx/leaders/CAR/Portrait_Javier_I.png"
+			expire = "1.1.1"
+			ideology = natpop_carlism_subtype
+		}
+	}
+	option = { 
+		name = SPRtest.3.b
+		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = KXX_LEADER_GUI_VISIBLE
+		add_popularity = { ideology = totalist popularity = 0.45 }
+		set_politics = {
+			ruling_party = totalist
+			elections_allowed = no
+		}
+		create_country_leader = {
+			name = "哈维尔一世"
+			desc = ""
+			picture = "gfx/leaders/CAR/Portrait_Javier_I.png"
+			expire = "1.1.1"
+			ideology = tot_market_socialist_subtype
+		}
+	}
+	option = { 
+		name = SPRtest.3.c
+		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = KXX_LEADER_GUI_VISIBLE
+		add_popularity = { ideology = paternal_autocrat popularity = 0.45 }
+		set_politics = {
+			ruling_party = paternal_autocrat
+			elections_allowed = no
+		}
+		create_country_leader = {
+			name = "穆罕默德·本·米齐安"
+			desc = ""
+			picture = "gfx/leaders/CAR/CNT_Mohamed_ben_Mizzian.png"
+			expire = "1.1.1"
+			ideology = pataut_islamism_subtype
+		}
+	}
+}
+country_event = {
+	id = visigothic.1
+    picture = GFX_Julio_Martinez_Santa_Olalla
+    title = visigothic.1.t
+    desc = visigothic.1.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = visigothic.1.a
+		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = KXX_LEADER_GUI_VISIBLE
+		remove_ideas_with_trait = head_of_government
+		add_ideas = CAR_Julio_Martinez_Santa_Olalla_hog_npo
+		set_country_flag = FE_visigothic_WIN
+		complete_national_focus =  TFE_11
+		set_cosmetic_tag = CAR_Visigoths
+		add_popularity = { ideology = national_populist popularity = 0.45 }
+		set_politics = {
+			ruling_party = national_populist
+			elections_allowed = no
+			name = CAR_visigothic_party
+			long_name = CAR_visigothic_party_long
+		}
+		create_country_leader = {
+			name = "朱里奥·马丁内斯·圣奥拉拉"
+			desc = "POLITICS_Julio_Martinez_DESC"
+			picture = "gfx/leaders/CAR/CNT_julio_Martinez_santa_olalla.png"
+			expire = "1.1.1"
+			ideology = ariosophy_subtype
+		}
+	}
+}
+
+country_event = {
+	id = fe.1
+    picture = GFX_germany_ss_move
+    title = fe.1.t
+    desc = fe.1.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = fe.1.a
+		ai_chance = {
+			factor = 95
+		}
+		set_country_flag = Falangist_Win
+		set_cosmetic_tag = FE_Provisional_Government
+		clr_countrt_flag = LEADER_GUI_VISIBLE
+		set_country_flag = KXX_LEADER_GUI_VISIBLE
+		remove_ideas_with_trait = head_of_government
+		add_ideas = CAR_Jose_Antonio_Primo_de_Rivera_hog_pau
+		set_politics = {
+			ruling_party = paternal_autocrat
+			elections_allowed = no
+			name = CAR_falangist_party
+			long_name = CAR_falangist_party_long
+		}
+		set_party_name = {
+			ideology = national_populist
+			long_name = CAR_falangist_party_long
+			name = CAR_falangist_party
+		}
+		create_country_leader = {
+			name = "哈维尔一世"
+			desc = "POLITICS_JAVIER_CARLIST_DESC"
+			picture = "gfx/leaders/CAR/Portrait_Javier_I.png"
+			expire = "1.1.1"
+			ideology = pau_falangism
+		}
+	}
+	option = { 
+		name = fe.1.b
+		ai_chance = {
+			factor = 5
+		}
+	}
+}
+country_event = {
+	id = fe.2
+    title = fe.2.t
+    desc = fe.2.d
+	
+    
+	trigger = {
+		tag = CAR
+		has_war_with = SPR
+		SPR = {
+			surrender_progress > 0.5
+		}
+		has_country_flag = Falangist_Win
+	}
+	immediate = {
+		SPR = {
+			every_unit_leader = {
+				limit = {
+					OR = {
+						has_id = 301 #Franco
+						has_id = 303 #Cabanillas
+					}
+				}
+				set_nationality = CAR
+			}
+		}
+	}
+	fire_only_once = yes
+
+	option = { 
+		name = fe.2.a
+		division_template = {
+			name = "西班牙军团"
+			division_names_group = FE_NRARMY_02
+			regiments = {
+			infantry = { x = 0 y = 0 }
+			infantry = { x = 0 y = 1 }
+			infantry = { x = 0 y = 2 }
+			infantry = { x = 1 y = 0 }
+			infantry = { x = 1 y = 1 }
+			infantry = { x = 1 y = 2 }
+			infantry = { x = 2 y = 0 }
+			infantry = { x = 2 y = 1 }
+			infantry = { x = 2 y = 2 }
+			artillery_brigade = { x = 3 y = 0 }
+			artillery_brigade = { x = 3 y = 1 }
+			artillery_brigade = { x = 3 y = 2 }
+			}
+			support = {
+				artillery = { x = 0 y = 0 }
+				engineer = { x = 0 y = 1 }
+			}
+			}
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"西班牙军团\" division_template = \"西班牙军团\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = CAR
+				}
+				create_unit = {
+					division = "name = \"西班牙军团\" division_template = \"西班牙军团\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = CAR
+				}
+				create_unit = {
+					division = "name = \"西班牙军团\" division_template = \"西班牙军团\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = CAR
+				}
+			}
+		}
+	}
+country_event = {
+	id = fe.3
+    picture = GFX_Madrid_Street
+    title = fe.3.t
+    desc = fe.3.d
+	
+    is_triggered_only = yes
+	
+	immediate = {
+		set_variable = {
+			var = SPR_Jose_Antonio_power
+			value = 0
+		}
+		set_variable = {
+			var = SPR_Francisco_Franco_power
+			value = 0
+		}
+	}
+
+	option = { 
+		name = fe.3.a
+		hidden_effect = {
+			add_to_variable = {
+				var = SPR_Francisco_Franco_power
+				value = 1
+			}
+			country_event = {
+				id = fe.4
+				days = 2
+			}
+			country_event = {
+				id = fe.6
+				days = 4
+			}
+		}
+	}
+	option = { 
+		name = fe.3.b
+		hidden_effect = {
+			add_to_variable = {
+				var = SPR_Jose_Antonio_power
+				value = 1
+			}
+			country_event = {
+				id = fe.5
+				days = 2
+			}
+			country_event = {
+				id = fe.6
+				days = 4
+			}
+		}
+	}
+}
+country_event = {
+	id = fe.4
+    title = fe.4.t
+    desc = fe.4.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = fe.4.a
+	}
+	option = { 
+		name = fe.4.b
+		remove_ideas = CAR_Jose_Antonio_Primo_de_Rivera_hog_pau
+		add_ideas = CAR_Agustin_de_Foxa_y_Torroba_hog_npo
+		set_country_flag = CAR_Jose_Antonio_die
+		create_country_leader = {
+			name = "奥古斯丁·德·福克萨"
+			desc = ""
+			picture = "gfx/leaders/CAR/CNT_Agustin_de_Foxa_y_Torroba.png"
+			expire = "1.1.1"
+			ideology = falangism
+		}
+	}
+}
+country_event = {
+	id = fe.5
+    title = fe.5.t
+    desc = fe.5.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = fe.5.a
+		set_country_flag = CAR_totalist_come
+		add_political_power = 100
+		add_manpower = 7000
+	}
+	option = { 
+		name = fe.5.b
+		add_political_power = 200
+		add_stability = 0.02
+	}
+}
+country_event = {
+	id = fe.6
+	picture = GFX_Madrid_Police_Department
+    title = fe.6.t
+    desc = fe.6.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = fe.6.a
+		hidden_effect = {
+			add_to_variable = {
+				var = SPR_Francisco_Franco_power
+				value = 1
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = CAR_totalist_come
+					}
+				}
+				country_event = {
+					id = fe.7
+					days = 2
+				}
+			}
+			country_event = {
+				id = fe.8
+				days = 4
+			}
+		}
+	}
+	option = { 
+		name = fe.6.b
+		hidden_effect = {
+			add_to_variable = {
+				var = SPR_Jose_Antonio_power
+				value = 1
+			}
+			country_event = {
+				id = fe.8
+				days = 4
+			}
+		}
+	}
+}
+country_event = {
+	id = fe.7
+    title = fe.7.t
+    desc = fe.7.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = fe.7.a
+		set_country_flag = CAR_anarchism_come
+		add_political_power = 100
+		add_manpower = 7000
+	}
+	option = { 
+		name = fe.7.b
+		add_political_power = 200
+		add_stability = 0.02
+	}
+}
+country_event = {
+	id = fe.8
+	picture = GFX_Madrid_Government_Building
+    title = fe.8.t
+    desc = fe.8.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = fe.8.a
+		hidden_effect = {
+			add_to_variable = {
+				var = SPR_Francisco_Franco_power
+				value = 1
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = CAR_totalist_come
+						has_country_flag = CAR_anarchism_come
+					}
+				}
+				country_event = {
+					id = fe.9
+					days = 2
+				}
+			}
+			if = {
+				limit = {
+					check_variable = { SPR_Francisco_Franco_power > SPR_Jose_Antonio_power }
+				}
+				country_event = {
+					id = fe.10
+					days = 4
+				}
+			}
+			if = {
+				limit = {
+					check_variable = { SPR_Francisco_Franco_power < SPR_Jose_Antonio_power }
+				}
+				country_event = {
+					id = fe.11
+					days = 4
+				}
+			}
+		}
+	}
+	option = { 
+		name = fe.8.b
+		hidden_effect = {
+			add_to_variable = {
+				var = SPR_Jose_Antonio_power
+				value = 1
+			}
+			if = {
+				limit = {
+					check_variable = { SPR_Francisco_Franco_power > SPR_Jose_Antonio_power }
+				}
+				country_event = {
+					id = fe.10
+					days = 2
+				}
+			}
+			if = {
+				limit = {
+					check_variable = { SPR_Francisco_Franco_power < SPR_Jose_Antonio_power }
+				}
+				country_event = {
+					id = fe.11
+					days = 2
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = fe.9
+    title = fe.9.t
+    desc = fe.9.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = fe.9.a
+		add_political_power = 100
+		add_manpower = 7000
+		set_country_flag = CAR_legionarism_come
+	}
+	option = { 
+		name = fe.9.b
+		add_political_power = 200
+		add_stability = 0.02
+	}
+}
+country_event = {
+	id = fe.10
+    title = fe.10.t
+    desc = fe.10.d
+	
+    is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			random_unit_leader = {
+				limit = { has_id = 301 }			
+				remove_unit_leader = yes
+			}
+		}
+	}
+
+	option = { 
+		name = fe.10.a
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = CAR_Jose_Antonio_die
+				}
+			}
+			set_cosmetic_tag = CAR_Francisco_Franco_state
+			set_country_flag = CAR_The_Francisco_Franco_Win
+			set_country_flag = KXX_LEADER_GUI_VISIBLE
+			complete_national_focus = NFE_52
+			remove_ideas_with_trait = head_of_government
+			add_ideas = CAR_Francisco_Franco_Bahamonde_hog_ade
+			remove_ideas_with_trait = economy_minister
+			add_ideas = CAR_German_Gil_y_Yuste_eco_pau
+			remove_ideas_with_trait = foreign_minister
+			add_ideas = CAR_Jose_Luis_Arrese_Magra_for_pau
+			remove_ideas_with_trait = security_minister
+			add_ideas = CAR_Tomas_Conde_de_Redezno_sec_pau
+			add_popularity = { ideology = authoritarian_democrat popularity = 1 }
+			set_politics = {
+				ruling_party = authoritarian_democrat
+				elections_allowed = no
+			}
+			create_country_leader = {
+				name = "弗朗西斯科·佛朗哥"
+				desc = "POLITICS_Francisco_Franco_DESC"
+				picture = "gfx/leaders/CAR/Portrait_SPR_Franco_Bahamonde.png"
+				expire = "1.1.1"
+				ideology = authdem_junta_subtype
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = CAR_Jose_Antonio_die
+			}
+			country_event = fe.102
+			set_cosmetic_tag = CAR_Francisco_Franco_state
+			set_country_flag = CAR_The_Francisco_Franco_Win
+			set_country_flag = KXX_LEADER_GUI_VISIBLE
+			complete_national_focus = NFE_52
+			remove_ideas_with_trait = head_of_government
+			add_ideas = CAR_Francisco_Franco_Bahamonde_hog_ade
+			remove_ideas_with_trait = economy_minister
+			add_ideas = CAR_German_Gil_y_Yuste_eco_pau
+			remove_ideas_with_trait = foreign_minister
+			add_ideas = CAR_Jose_Luis_Arrese_Magra_for_pau
+			remove_ideas_with_trait = security_minister
+			add_ideas = CAR_Tomas_Conde_de_Redezno_sec_pau
+			add_popularity = { ideology = authoritarian_democrat popularity = 1 }
+			set_politics = {
+				ruling_party = authoritarian_democrat
+				elections_allowed = no
+			}
+			create_country_leader = {
+				name = "弗朗西斯科·佛朗哥"
+				desc = "POLITICS_Francisco_Franco_DESC"
+				picture = "gfx/leaders/CAR/Portrait_SPR_Franco_Bahamonde.png"
+				expire = "1.1.1"
+				ideology = authdem_junta_subtype
+			}
+		}
+	}
+}
+country_event = {
+	id = fe.102
+    title = fe.102.t
+    desc = fe.102.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = fe.102.a
+		add_manpower = -12000
+		add_stability = -0.05
+		add_political_power = 50
+	}
+	option = { 
+		name = fe.102.b
+		hidden_effect = {
+			country_event = fe.102
+		}
+	}
+}
+country_event = {
+	id = fe.101
+    title = fe.101.t
+    desc = fe.101.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = fe.101.a
+		set_cosmetic_tag = CAR_Morathism_state
+		set_country_flag = CAR_Morathism_Win
+		set_country_flag = KXX_LEADER_GUI_VISIBLE
+		complete_national_focus = NFE_52
+		remove_ideas_with_trait = head_of_government
+		add_ideas = CAR_Eugenio_Montes_hog_npo
+		remove_ideas_with_trait = economy_minister
+		add_ideas = CAR_Rafael_Sanchez_Mazas_eco_npo
+		remove_ideas_with_trait = foreign_minister
+		add_ideas = CAR_Pedro_Lain_Entralgo_for_npo
+		remove_ideas_with_trait = security_minister
+		add_ideas = CAR_Jose_Maria_Peman_sec_npo
+		add_popularity = { ideology = national_populist popularity = 0.45 }
+		set_politics = {
+			ruling_party = national_populist
+			elections_allowed = no
+			name = CAR_falangist_maurrassism_party
+			long_name = CAR_falangist_maurrassism_party_long
+		}
+		create_country_leader = {
+			name = "尤金尼奥·蒙特斯"
+			desc = "POLITICS_Eugenio_Montes_DESC"
+			picture = "gfx/leaders/CAR/CNT_Eugenio_Montes.png"
+			expire = "1.1.1"
+			ideology = maurrassism_subtype
+		}
+	}
+}
+country_event = {
+	id = fe.11
+    title = fe.11.t
+    desc = fe.11.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = fe.11.a
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = CAR_totalist_come
+					has_country_flag = CAR_anarchism_come
+					has_country_flag = CAR_legionarism_come
+				}
+			}
+			set_country_flag = CAR_falangist_win2
+			remove_ideas_with_trait = economy_minister
+			add_ideas = CAR_Rafael_Sanchez_Mazas_eco_npo
+			remove_ideas_with_trait = foreign_minister
+			complete_national_focus = NFE_52
+			add_ideas = CAR_Pedro_Lain_Entralgo_for_npo
+			remove_ideas_with_trait = security_minister
+			add_ideas = CAR_Jose_Maria_Peman_sec_npo
+		}
+		if = {
+			limit = {
+				has_country_flag = CAR_totalist_come
+			}
+			country_event = fe.111
+		}
+		if = {
+			limit = {
+				has_country_flag = CAR_anarchism_come
+			}
+			country_event = fe.112
+		}
+		if = {
+			limit = {
+				has_country_flag = CAR_legionarism_come
+			}
+			country_event = fe.113
+		}
+	}
+}
+country_event = {
+	id = fe.111
+    title = fe.111.t
+    desc = fe.111.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = fe.111.a
+		set_country_flag = CAR_totalist_come2
+		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = KXX_LEADER_GUI_VISIBLE
+		set_cosmetic_tag = CAR_falangism_totalist_state
+		add_popularity = { ideology = totalist popularity = 0.45 }
+		remove_ideas_with_trait = head_of_government
+		add_ideas = CAR_Dionisio_Ridruejo_hog_tot
+		remove_ideas_with_trait = economy_minister
+		add_ideas = CAR_Rafael_Sanchez_Mazas_eco_npo
+		remove_ideas_with_trait = foreign_minister
+		add_ideas = CAR_Pedro_Lain_Entralgo_for_npo
+		remove_ideas_with_trait = security_minister
+		add_ideas = CAR_Jose_Maria_Peman_sec_npo
+		set_politics = {
+			ruling_party = totalist
+			elections_allowed = no
+			name = CAR_falangist_party
+			long_name = CAR_falangist_party_long
+		}
+		complete_national_focus = NFE_24
+		create_country_leader = {
+			name = "迪奥尼西奥·里德鲁霍"
+			desc = ""
+			picture = "gfx/leaders/CAR/CNT_Dionisio_Ridruejo.png"
+			expire = "1.1.1"
+			ideology = natsynd_subtype
+		}
+	}
+}
+country_event = {
+	id = fe.112
+    title = fe.112.t
+    desc = fe.112.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = fe.112.a
+		set_country_flag = CAR_anarchism_come2
+		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = KXX_LEADER_GUI_VISIBLE
+		set_cosmetic_tag = CAR_falangism_anarchism_state
+		add_popularity = { ideology = radical_socialist popularity = 0.45 }
+		remove_ideas_with_trait = head_of_government
+		add_ideas = CAR_Marciano_Pedro_Durruti_hog_rso
+		remove_ideas_with_trait = economy_minister
+		add_ideas = CAR_Rafael_Sanchez_Mazas_eco_npo
+		remove_ideas_with_trait = foreign_minister
+		add_ideas = CAR_Pedro_Lain_Entralgo_for_npo
+		remove_ideas_with_trait = security_minister
+		add_ideas = CAR_Jose_Maria_Peman_sec_npo
+		set_politics = {
+			ruling_party = radical_socialist
+			elections_allowed = no
+			name = CAR_falangist_party
+			long_name = CAR_falangist_party_long
+		}
+		complete_national_focus = NFE_24
+		create_country_leader = {
+			name = "马西亚诺·佩德罗·杜鲁蒂"
+			desc = ""
+			picture = "gfx/leaders/CAR/CNT_Marciano_Pedro_Durruti.png"
+			expire = "1.1.1"
+			ideology = christian_anarchism_subtype
+		}
+	}
+}
+country_event = {
+	id = fe.113
+    title = fe.113.t
+    desc = fe.113.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = fe.113.a
+		set_country_flag = CAR_legionarism_come2
+		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = KXX_LEADER_GUI_VISIBLE
+		set_cosmetic_tag = CAR_falangism_legionarism_state
+		add_popularity = { ideology = national_populist popularity = 0.45 }
+		remove_ideas_with_trait = head_of_government
+		add_ideas = CAR_Juan_Antonio_Ansaldo_hog_npo
+		remove_ideas_with_trait = economy_minister
+		add_ideas = CAR_Rafael_Sanchez_Mazas_eco_npo
+		remove_ideas_with_trait = foreign_minister
+		add_ideas = CAR_Pedro_Lain_Entralgo_for_npo
+		remove_ideas_with_trait = security_minister
+		add_ideas = CAR_Jose_Maria_Peman_sec_npo
+		set_politics = {
+			ruling_party = national_populist
+			elections_allowed = no
+			name = CAR_falangist_party
+			long_name = CAR_falangist_party_long
+		}
+		complete_national_focus = NFE_24
+		create_country_leader = {
+			name = "胡安·安东尼奥·安萨尔多"
+			desc = ""
+			picture = "gfx/leaders/CAR/CNT_Juan_Antonio_Ansaldo.png"
+			expire = "1.1.1"
+			ideology = legionarism_subtype
+		}
+	}
+}
+country_event = {
+	id = fe.12
+    title = fe.12.t
+    desc = fe.12.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = fe.12.a
+		add_political_power = 100
+		add_stability = 0.03
+		complete_national_focus = NFE_52
+		set_country_flag = CAR_falangist_win2
+	}
+	option = { 
+		name = fe.12.b
+		add_popularity = { ideology = national_populist popularity = 0.45 }
+		set_politics = {
+			ruling_party = national_populist
+			elections_allowed = no
+		}
+		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = KXX_LEADER_GUI_VISIBLE
+		create_country_leader = {
+			name = "何塞·安东尼奥·德里维拉"
+			desc = "POLITICS_Jose_Antonio_DESC"
+			picture = "gfx/leaders/CAR/Portrait_SPA_Jose_Antonio_RF.png"
+			expire = "1.1.1"
+			ideology = falangism
+		}
+		custom_effect_tooltip = CAR_Francisco_Franco_action
+		hidden_effect = {
+			country_event = {
+				id = fe.3
+				days = 15
+			}
+		}
+	}
+}
+country_event = {
+	id = fe.13
+    title = fe.13.t
+    desc = fe.13.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = fe.13.a
+		ai_chance = {
+			factor = 5
+		}
+		declare_war_on = { target = CAR type = take_state }
+	}
+	option = { 
+		name = fe.13.b
+		ai_chance = {
+			factor = 95
+		}
+		CAR = {
+			POR = {
+				get_current_government_type = yes
+			}
+			CAR = {
+				puppet = POR
+			}
+			POR = {
+				restore_previous_government_type = yes
+			}
+		}
+	}
+}
+country_event = {
+	id = fe.14
+	picture = GFX_The_Jose_Antonio_think
+    title = fe.14.t
+    desc = fe.14.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = fe.14.a
+		add_manpower= -7000
+		add_political_power = 150
+		add_stability = 0.02
+	}
+	option = { 
+		name = fe.14.b
+		add_manpower= -10000
+		add_political_power = 100
+		set_cosmetic_tag = CAR_falangism_revolution_state
+		add_popularity = { ideology = totalist popularity = 1 }
+		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = KXX_LEADER_GUI_VISIBLE
+		set_politics = {
+			ruling_party = totalist
+			elections_allowed = no
+			name = CAR_falangist_party
+			long_name = CAR_falangist_party_long
+		}
+		create_country_leader = {
+			name = "何塞·安东尼奥·德里维拉"
+			desc = "POLITICS_Jose_Antonio_DESC"
+			picture = "gfx/leaders/CAR/Portrait_SPA_Jose_Antonio_RF.png"
+			expire = "1.1.1"
+			ideology = revolution_falangism
+		}
+	}
+}
+country_event = {
+	id = fe.15
+    title = fe.15.t
+    desc = fe.15.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = fe.15.a
+		add_manpower = -10000
+		add_stability = -0.02
+		add_political_power = 50
+	}
+	option = { 
+		name = fe.15.b
+		country_event = {
+			id = fe.16
+			days = 5
+		}
+	}
+}
+country_event = {
+	id = fe.16
+    title = fe.16.t
+    desc = fe.16.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = fe.16.a
+		clr_countrt_flag = KXX_LEADER_GUI_VISIBLE
+		clr_countrt_flag = LEADER_GUI_VISIBLE
+		add_popularity = { ideology = paternal_autocrat popularity = 1 }
+		set_cosmetic_tag = CAR_arms_state
+		set_country_flag = CAR_Tercio_de_Extranjeros_Win
+		complete_national_focus = NFE_52
+		set_politics = {
+			ruling_party = paternal_autocrat
+			elections_allowed = no
+			name = CAR_arms_party
+			long_name = CAR_arms_party_long
+		}
+		create_country_leader = {
+			name = "何塞·米兰·阿斯特雷"
+			desc = "POLITICS_Jose_Millan_Astray_DESC"
+			picture = "gfx/leaders/CAR/CNT_jose_millan_astray.png"
+			expire = "1.1.1"
+			ideology = junta_subtype
+		}
+		remove_ideas_with_trait = head_of_government
+		add_ideas = CAR_Jose_Millan_Astray_hog_pau
+	}
+}
+country_event = {
+	id = fe.17
+    title = fe.17.t
+    desc = fe.17.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = fe.17.a
+		ai_chance = {
+			factor = 0
+		}
+		clr_countrt_flag = KXX_LEADER_GUI_VISIBLE
+		clr_countrt_flag = LEADER_GUI_VISIBLE
+		set_country_flag = KXX_LEADER_GUI_NOT_VISIBLE
+		add_popularity = { ideology = paternal_autocrat popularity = 1 }
+		set_cosmetic_tag = CAR_javier_national_populist_state
+		set_country_flag = CAR_javier_Rome
+		complete_national_focus =  TFE_11
+		set_politics = {
+			ruling_party = national_populist
+			elections_allowed = no
+		}
+		set_party_name = {
+			ideology = national_populist
+			long_name = CAR_javier_national_populist_party_long
+			name = CAR_javier_national_populist_party
+		}
+		create_country_leader = {
+			name = "哈维尔一世"
+			desc = "POLITICS_JAVIER_CARLIST_DESC"
+			picture = "gfx/leaders/CAR/Portrait_Javier_I.png"
+			expire = "1.1.1"
+			ideology = natpop_carlism_subtype
+		}
+		remove_ideas_with_trait = head_of_government
+		add_ideas = CAR_Javier_I_hog_npo
+	}
+	option = { 
+		name = fe.17.b
+		ai_chance = {
+			factor = 0
+		}
+		clr_countrt_flag = KXX_LEADER_GUI_VISIBLE
+		clr_countrt_flag = LEADER_GUI_VISIBLE
+		set_country_flag = KXX_LEADER_GUI_NOT_VISIBLE
+		add_popularity = { ideology = paternal_autocrat popularity = 1 }
+		set_cosmetic_tag = CAR_javier_totalist_state
+		set_country_flag = CAR_javier_totalist
+		complete_national_focus =  TFE_11
+		name = fe.17.a
+		set_politics = {
+			ruling_party = totalist
+			elections_allowed = no
+		}
+		set_party_name = {
+			ideology = totalist
+			long_name = CAR_javier_totalist_party_long
+			name = CAR_javier_totalist_party
+		}
+		create_country_leader = {
+			name = "哈维尔一世"
+			desc = "POLITICS_JAVIER_CARLIST_DESC"
+			picture = "gfx/leaders/CAR/Portrait_Javier_I.png"
+			expire = "1.1.1"
+			ideology = tot_market_socialist_subtype
+		}
+		remove_ideas_with_trait = head_of_government
+		add_ideas = CAR_Don_Javier_hog_tot
+	}
+	option = { 
+		name = fe.17.c
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+country_event = {
+	id = fe.18
+    title = fe.18.t
+    desc = fe.18.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = fe.18.a
+		ai_chance = {
+			factor = 0
+		}
+		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = KXX_LEADER_GUI_VISIBLE
+		add_popularity = { ideology = paternal_autocrat popularity = 0.45 }
+		remove_ideas_with_trait = head_of_government
+		add_ideas = CAR_Mohamed_ben_Mizzian_hog_pau
+		complete_national_focus =  TFE_11
+		set_cosmetic_tag = CAR_mohamed_paternal_autocrat_state
+		set_country_flag = CAR_mohamed_paternal_autocrat
+		set_politics = {
+			ruling_party = paternal_autocrat
+			elections_allowed = no
+			long_name = CAR_mohamed_paternal_autocrat_party_long
+			name = CAR_mohamed_paternal_autocrat_party
+		}
+		create_country_leader = {
+			name = "穆罕默德·本·米齐安"
+			desc = ""
+			picture = "gfx/leaders/CAR/CNT_Mohamed_ben_Mizzian.png"
+			expire = "1.1.1"
+			ideology = pataut_islamism_subtype
+		}
+	}
+	option = { 
+		name = fe.18.b
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+country_event = {
+	id = fe.19
+    title = fe.19.t
+    desc = fe.19.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = fe.19.a
+		ai_chance = {
+			factor = 0
+		}
+		hidden_effect = {
+			country_event = {
+				id = visigothic.1
+				days = 5
+			}
+		}
+	}
+	option = { 
+		name = fe.19.b
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+country_event = {
+	id = fe.20
+    title = fe.20.t
+    desc = fe.20.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = fe.20.a
+		hidden_effect = {
+			country_event = {
+				id = fe.21
+				days = 10
+			}
+		}
+	}
+	option = { 
+		name = fe.20.b
+		add_manpower = -12000
+		add_stability = 0.05
+		add_political_power = 50
+	}
+}
+country_event = {
+	id = fe.21
+    title = fe.21.t
+    desc = fe.21.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = fe.21.a
+		clr_countrt_flag = LEADER_GUI_VISIBLE
+		set_country_flag = KXX_LEADER_GUI_VISIBLE
+		add_popularity = { ideology = syndicalist popularity = 0.45 }
+		remove_ideas_with_trait = head_of_government
+		add_ideas = CAR_Juan_Laguia_Lliteras_hog_syn
+		set_cosmetic_tag = CAR_Francisco_Franco_state
+		set_country_flag = FE_yellow_syndicalist_win
+		set_politics = {
+			ruling_party = syndicalist
+			elections_allowed = no
+			long_name = CAR_Neo_syndicalist_party_long
+			name = CAR_Neo_syndicalist_party
+		}
+		create_country_leader = {
+			name = "哈维尔一世"
+			desc = "POLITICS_JAVIER_CARLIST_DESC"
+			picture = "gfx/leaders/CAR/Portrait_Javier_I.png"
+			expire = "1.1.1"
+			ideology = yellow_syndicalism_subtype
+		}
+	}
+}
+
+
+#FE de las JONS event
+country_event = {
+	id = jons.1
+    picture = GFX_germany_ss_move
+    title = jons.1.t
+    desc = jons.1.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = jons.1.a
+		ai_chance = {
+			factor = 20
+		}
+	}
+	option = { 
+		name = jons.1.b
+		ai_chance = {
+			factor = 80
+		}
+		set_country_flag = JONS_WIN
+		set_cosmetic_tag = JONS_Provisional_Government
+		hidden_effect = {
+		set_politics = {
+			ruling_party = paternal_autocrat
+			elections_allowed = no
+			name = JONS_socialist_party
+			long_name = JONS_socialist_party_long
+		}
+		add_popularity = { ideology = paternal_autocrat popularity = 0.45 }
+		create_country_leader = {
+			name = "临时执政委员会"
+			desc = ""
+			picture = "gfx/leaders/CNT/CNT_Revolutionary_Goverment.png"
+			expire = "1965.1.1"
+			ideology = red_tinted_autocracy_subtype
+			traits = {
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = jons.2
+    picture = GFX_The_santiago_montero_diaz
+    title = jons.2.t
+    desc = jons.2.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = jons.2.a
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = jons.3
+    picture = GFX_The_Ruins_of_Spain
+    title = jons.3.t
+    desc = jons.3.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = jons.3.a
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}
+country_event = {
+	id = jons.4
+    picture = GFX_germany_ss_move
+    title = jons.4.t
+    desc = jons.4.d
+	
+    is_triggered_only = yes
+	fire_only_once = yes
+	
+	immediate = {
+		set_variable = {
+			var = JONS_ledesma_power
+			value = 0
+		}
+		set_variable = {
+			var = JONS_redondo_power
+			value = 0
+		}
+	}
+
+	option = { 
+		name = jons.4.a
+		ai_will_do = {
+			factor = 0
+		}
+		set_cosmetic_tag = CNT_JONS
+		set_politics = {
+			ruling_party = totalist
+			elections_allowed = no
+			name = FEJONS_totalist_party
+			long_name = FEJONS_totalist_party_long
+		}
+		add_popularity = { ideology = totalist popularity = 0.45 }
+		create_country_leader = {
+			name = "拉米罗·莱德斯马·拉莫斯"
+			desc = "POLITICS_ARTHUR_SEYSS_INQUART_DESC"
+			picture = "gfx/leaders/CNT/SPA_Portrait_Ledesma_RF.png"
+			expire = "1965.1.1"
+			ideology = spanish_syndicalism
+			traits = {
+				}
+			}
+		set_country_flag =	NSPRCNT_natsyn 
+		remove_ideas_with_trait = head_of_government
+		add_ideas = CNT_Ramiro_Ledesma_Ramos_hog_tot
+		remove_ideas_with_trait = economy_minister
+		add_ideas = CNT_Onesimo_Redondo_Ortega_eco_tot
+		remove_ideas_with_trait = foreign_minister
+		add_ideas = CNT_Ernesto_Gimenez_Caballero_for_tot
+		remove_ideas_with_trait = security_minister
+		add_ideas = CNT_Santiago_Montero_Dias_sec_tot
+		set_country_flag = CNT_JONSSTZZ
+		set_country_flag = JONS_LEADERQW_yes
+	}
+}
+country_event = {
+	id = jons.5
+    picture = GFX_germany_ss_move
+    title = jons.5.t
+    desc = jons.5.d
+	
+    trigger = {
+		tag = CNT
+		has_country_flag = JONS_WIN
+		NOT = { country_exists = CAR }
+		NOT = { country_exists = SPR }
+	}
+	fire_only_once = yes
+
+	option = { 
+		name = jons.5.a
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 100
+				FRA = {
+					NOT = {
+						has_government = totalist
+					}
+				}
+			}
+		}
+		country_event = jons.6
+	}
+	option = { 
+		name = jons.5.b
+		ai_chance = {
+			factor = 60
+			modifier = {
+				factor = 100
+				FRA = {
+					has_government = totalist
+				}
+			}
+		}
+		country_event = jons.4
+	}
+}
+country_event = {
+	id = jons.6
+    picture = GFX_decision_Democratic_Assembly
+    title = jons.6.t
+    desc = jons.6.d
+	
+    is_triggered_only = yes
+	immediate = { 
+		set_party_name = {
+			ideology = radical_socialist
+			long_name = CNT_new_radical_socialist_party_long
+			name = CNT_new_radical_socialist_party
+		}
+		set_party_name = {
+			ideology = syndicalist
+			long_name = CNT_new_syndicalist_party_long
+			name = CNT_new_syndicalist_party
+		}
+		set_party_name = {
+			ideology = totalist
+			long_name = FEJONS_totalist_party_long
+			name = FEJONS_totalist_party
+		}
+		create_country_leader = {
+			name = "拉米罗·莱德斯马·拉莫斯"
+			desc = "POLITICS_ARTHUR_SEYSS_INQUART_DESC"
+			picture = "gfx/leaders/CNT/SPA_Portrait_Ledesma_RF.png"
+			expire = "1965.1.1"
+			ideology = spanish_syndicalism
+			traits = {
+			}
+		}
+	}
+	option = { 
+		name = jons.6.a
+		ai_chance = {
+			factor = 30
+		}
+		set_politics = {
+			ruling_party = radical_socialist
+			elections_allowed = no
+			name = CNT_new_radical_socialist_party
+			long_name = CNT_new_radical_socialist_party_long
+		}
+		set_cosmetic_tag = CNT_New_Socialist_state
+		add_popularity = { ideology = radical_socialist popularity = 0.45 }
+		create_country_leader = {
+			name = "布维那文图拉·杜鲁蒂"
+			picture = "gfx/leaders/CNT/Portrait_CNT_Durruti_Dumange.png"
+			expire = "1965.1.1"
+			ideology = anarchism_subtype
+			traits = {
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = jons.14
+				days = 7
+			}
+		}
+		set_country_flag = NSPRCNT_anarch
+	}
+	option = { 
+		name = jons.6.b
+		ai_chance = {
+			factor = 30
+		}
+		set_politics = {
+			ruling_party = syndicalist
+			elections_allowed = no
+			name = CNT_new_syndicalist_party
+			long_name = CNT_new_syndicalist_party_long
+		}
+		set_cosmetic_tag = CNT_New_Socialist_state
+		add_popularity = { ideology = syndicalist popularity = 0.45 }
+		create_country_leader = {
+			name = "弗雷德里卡·蒙塞尼"
+			picture = "gfx/leaders/CNT/CNT_Frederica_Montseny.png"
+			expire = "1965.1.1"
+			ideology = anarcho_syndicalist_subtype
+			traits = {
+			}
+		}
+		remove_ideas_with_trait = head_of_government
+		add_ideas = CNT_Antonio_Pinto_Quartim_hog_syn
+		remove_ideas_with_trait = economy_minister
+		add_ideas = CNT_Federica_Monsteny_Mane_eco_syn
+		remove_ideas_with_trait = foreign_minister
+		add_ideas = CNT_Andreu_Nin_i_Perez_for_syn
+		remove_ideas_with_trait = security_minister
+		add_ideas = CNT_Juan_Garcia_Oliver_sec_syn
+		set_country_flag = NSPRCNT_syndica
+	}
+	option = { 
+		name = jons.6.c
+		ai_chance = {
+			factor = 30
+		}
+		set_politics = {
+			ruling_party = totalist
+			elections_allowed = no
+			name = CNT_new_totalist_party
+			long_name = CNT_new_totalist_party_long
+		}
+		set_cosmetic_tag = CNT_New_Socialist_state
+		add_popularity = { ideology = totalist popularity = 0.45 }
+		create_country_leader = {
+			name = "何塞·迪亚斯·拉莫斯"
+			picture = "gfx/leaders/CNT/Portrait_SPR_Jose_Diaz_Ramos.png"
+			expire = "1965.1.1"
+			ideology = authcom_subtype
+			traits = {
+			}
+		}
+		set_country_flag = NSPRCNT_communist
+		hidden_effect = {
+			country_event = {
+				id = jons.13
+				days = 7
+			}
+		}
+		remove_ideas_with_trait = head_of_government
+		add_ideas = CNT_Jose_Diaz_Ramos_hog_tot
+		remove_ideas_with_trait = economy_minister
+		add_ideas = CNT_Jesus_Hernandez_y_Tomas_eco_tot
+		remove_ideas_with_trait = foreign_minister
+		add_ideas = CNT_Santiago_Carrillo_Solares_for_tot
+		remove_ideas_with_trait = security_minister
+		add_ideas = CNT_Jose_Diaz_Ramos_sec_tot
+	}
+	option = { 
+		name = jons.6.e
+		ai_chance = {
+			factor = 10
+		}
+		set_politics = {
+			ruling_party = radical_socialist
+			elections_allowed = no
+			name = CNT_Art_radical_socialist_party
+			long_name = CNT_Art_radical_socialist_party_long
+		}
+		set_cosmetic_tag = CNT_Art_state
+		add_popularity = { ideology = radical_socialist popularity = 0.45 }
+		create_country_leader = {
+			name = "埃内斯托·卡瓦列罗"
+			picture = "gfx/leaders/CNT/Portrait_CNT_Ernesto_Gimenez_Caballero.png"
+			expire = "1965.1.1"
+			ideology = regenerationism
+			traits = {
+			}
+		}
+		set_country_flag = NSPRCNT_art
+		hidden_effect = {
+			country_event = {
+				id = jons.15
+				days = 7
+			}
+		}
+	}
+}
+country_event = {
+	id = jons.7
+    title = jons.7.t
+    desc = jons.7.d
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = jons.7.a
+	}
+}
+country_event = {
+	id = jons.8
+    title = jons.8.t
+    desc = jons.8.d
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = jons.8.a
+	}
+}
+country_event = {
+	id = jons.9
+    title = jons.9.t
+    desc = jons.9.d
+	
+	trigger = {
+		tag = SPR
+		date > 1936.5.10
+	}
+	fire_only_once = yes
+
+	option = { 
+		name = jons.9.a
+	}
+}
+country_event = {
+	id = jons.10
+    title = jons.10.t
+    desc = jons.10.d
+	
+	trigger = {
+		tag = SPR
+		date > 1937.2.14
+	}
+	fire_only_once = yes
+
+	option = { 
+		name = jons.10.a
+	}
+}
+country_event = {
+	id = jons.11
+    title = jons.11.t
+    desc = jons.11.d
+	
+	trigger = {
+		tag = CNT
+		has_country_flag = JONS_WIN
+		NOT = { country_exists = CAR }
+		NOT = { country_exists = SPR }
+	}
+	fire_only_once = yes
+
+	option = { 
+		name = jons.11.a
+	}
+}
+country_event = {
+	id = jons.12
+    title = jons.12.t
+    desc = jons.12.d
+	
+	trigger = {
+		tag = CNT
+		date > 1937.12.14
+	}
+	fire_only_once = yes
+
+	option = { 
+		name = jons.12.a
+	}
+}
+country_event = {
+	id = jons.13
+    title = jons.13.t
+    desc = jons.13.d
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = jons.13.a
+	}
+}
+country_event = {
+	id = jons.14
+    title = jons.14.t
+    desc = jons.14.d
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = jons.14.a
+	}
+}
+country_event = {
+	id = jons.15
+    title = jons.15.t
+    desc = jons.15.d
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = jons.15.a
+	}
+}
+country_event = {
+	id = jons.16
+    title = jons.16.t
+    desc = jons.16.d
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = jons.16.a
+	}
+}
+country_event = {
+	id = jons.17
+    title = jons.17.t
+    desc = jons.17.d
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = jons.17.a
+		create_country_leader = {
+			name = "拉米罗·莱德斯马·拉莫斯"
+			desc = "POLITICS_ARTHUR_SEYSS_INQUART_DESC"
+			picture = "gfx/leaders/CNT/SPA_Portrait_Ledesma_RF.png"
+			expire = "1965.1.1"
+			ideology = spanish_syndicalism
+			traits = {
+			}
+		}
+	}
+	option = { 
+		name = jons.17.b
+		create_country_leader = {
+			name = "奥内西莫·雷东多·奥尔特加"
+			desc = "POLITICS_ARTHUR_SEYSS_INQUART_DESC"
+			picture = "gfx/leaders/CNT/CNT_onesimo_redondo.png"
+			expire = "1965.1.1"
+			ideology = spanish_syndicalism
+			traits = {
+			}
+		}
+	}
+	option = { 
+		name = jons.17.c
+		create_country_leader = {
+			name = "圣地亚哥·蒙特罗·迪亚兹"
+			desc = "POLITICS_ARTHUR_SEYSS_INQUART_DESC"
+			picture = "gfx/leaders/CNT/CNT_Santiago_Montero_Diaz.png"
+			expire = "1965.1.1"
+			ideology = spanish_syndicalism
+			traits = {
+			}
+		}
+	}
+}
+country_event = {
+	id = jons.18
+    title = jons.18.t
+    desc = jons.18.d
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = jons.18.a
+	}
+}
+country_event = {
+	id = jons.19
+    title = jons.19.t
+    desc = jons.19.d
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = jons.19.a
+	}
+}
+country_event = {
+	id = jons.20
+    title = jons.20.t
+    desc = jons.20.d
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = jons.20.a
+	}
+}
+country_event = {
+	id = jons.21
+    title = jons.21.t
+    desc = jons.21.d
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = jons.21.a
+	}
+}
+country_event = {
+	id = jons.22
+    title = jons.22.t
+    desc = jons.22.d
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = jons.22.a
+	}
+}
+country_event = {
+	id = jons.23
+    title = jons.23.t
+    desc = jons.23.d
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = jons.23.a
+	}
+	option = { 
+		name = jons.23.b
+	}
+	option = { 
+		name = jons.23.c
+	}
+}
+country_event = {
+	id = jons.24
+    title = jons.24.t
+    desc = jons.24.d
+	picture = GFX_germany_ss_move
+	
+	trigger = {
+		tag = CNT
+		OR = {
+			CNT = { check_variable = { JONS_ledesma_power > 10 } }
+			CNT = { check_variable = { JONS_ledesma_power = 10 } }
+		}
+	}
+	fire_only_once = yes
+
+	option = { 
+		name = jons.24.a
+		remove_ideas = CNT_Onesimo_Redondo_Ortega_eco_tot
+		add_ideas = CNT_Juan_Aparicio_Lopez_eco_tot
+		complete_national_focus = CNTJONS_1
+		set_country_flag = ledesma_win
+		clr_country_flag = redondo_win
+		clr_country_flag = JONS_LEADERQW_yes
+	}
+}
+country_event = {
+	id = jons.25
+    title = jons.25.t
+    desc = jons.25.d
+	picture = GFX_germany_ss_move
+	
+	trigger = {
+		tag = CNT
+		OR = {
+		  CNT = { check_variable = { JONS_redondo_power > 10 } }
+		  CNT = { check_variable = { JONS_redondo_power = 10 } }
+		}
+	}
+	fire_only_once = yes
+
+	option = { 
+		name = jons.25.a
+		remove_ideas_with_trait = head_of_government
+		add_ideas = CNT_Onesimo_Redondo_Ortega_hog_npo
+		remove_ideas_with_trait = economy_minister
+		add_ideas = CNT_Ramiro_de_Maeztu_eco_npo
+		remove_ideas_with_trait = foreign_minister
+		add_ideas = CNT_Jose_Luis_Arrese_for_npo
+		remove_ideas_with_trait = security_minister
+		add_ideas = CNT_Juan_Bautista_Perez_de_Cabo_sec_npo
+		complete_national_focus = CNTJONS_1
+		set_country_flag = redondo_win
+		clr_country_flag = ledesma_win
+		clr_country_flag = JONS_LEADERQW_yes
+		add_popularity = { ideology = national_populist popularity = 0.6 }
+		set_politics = { 
+			ruling_party = national_populist
+			elections_allowed = no
+		}
+		create_country_leader = {
+			name = "奥内西莫·雷东多·奥尔特加"
+			desc = "POLITICS_ARTHUR_SEYSS_INQUART_DESC"
+			picture = "gfx/leaders/CNT/CNT_onesimo_redondo.png"
+			expire = "1965.1.1"
+			ideology = right_syndicalism_subtype
+			traits = {
+			}
+		}
+	}
+}
+country_event = {
+	id = fe_jons.1
+    picture = GFX_germany_ss_move
+    title = fe_jons.1.t
+    desc = fe_jons.1.d
+	
+    is_triggered_only = yes
+	
+	trigger = {
+		is_ai = no
+	}
+
+	option = { 
+		name = fe_jons.1.a
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	option = { 
+		name = fe_jons.1.b
+		ai_will_do = {
+			factor = 0
+		}
+		set_cosmetic_tag = CNT_FE_JONS
+		hidden_effect = {
+		set_politics = {
+			ruling_party = radical_socialist
+			elections_allowed = no
+			name = FEJONS_radical_socialist_party
+			long_name = FEJONS_radical_socialist_party_long
+		}
+		create_country_leader = {
+			name = "国家工团主义者与长枪党全国大会"
+			desc = "POLITICS_ARTHUR_SEYSS_INQUART_DESC"
+			picture = "gfx/leaders/CNT/FE_de_las_JONS.png"
+			expire = "1965.1.1"
+			ideology = christian_socialism_subtype
+			traits = {
+				}
+			}
+		set_popularities = {
+			radical_socialist = 100
+			}
+		}
+	}
+}
+
+country_event = {
+	id = fe_jons.2
+    picture = GFX_germany_ss_move
+    title = fe_jons.2.t
+    desc = fe_jons.2.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = fe_jons.2.a
+	}
+	option = { 
+		name = fe_jons.2.b
+		set_cosmetic_tag = CNT_FE
+		hidden_effect = {
+		set_politics = {
+			ruling_party = national_populist
+			elections_allowed = no
+			name = FEJONS_national_populist_party
+			long_name = FEJONS_national_populist_party_long
+		}
+		create_country_leader = {
+			name = "何塞·安东尼奥·德里维拉"
+			desc = "POLITICS_ARTHUR_SEYSS_INQUART_DESC"
+			picture = "gfx/leaders/CNT/Portrait_SPA_Jose_Antonio_RF.png"
+			expire = "1965.1.1"
+			ideology = falangism
+			traits = {
+				}
+			}
+		set_popularities = {
+			national_populist = 65
+			radical_socialist = 35
+			}
+		}
+	}
+}
+country_event = {
+	id = fe_jons.3
+    picture = GFX_germany_ss_move
+    title = fe_jons.3.t
+    desc = fe_jons.3.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = fe_jons.3.a
+	}
+	option = { 
+		name = fe_jons.3.b
+		set_cosmetic_tag = CNT_JONS
+		hidden_effect = {
+		set_politics = {
+			ruling_party = totalist
+			elections_allowed = no
+			name = FEJONS_totalist_party
+			long_name = FEJONS_totalist_party_long
+		}
+		create_country_leader = {
+			name = "拉米罗·莱德斯马·拉莫斯"
+			desc = "POLITICS_ARTHUR_SEYSS_INQUART_DESC"
+			picture = "gfx/leaders/CNT/SPA_Portrait_Ledesma_RF.png"
+			expire = "1965.1.1"
+			ideology = spanish_syndicalism
+			traits = {
+				}
+			}
+		set_popularities = {
+			national_populist = 35
+			totalist = 65
+			}
+		}
+	}
+}
+country_event = {
+	id = fe_jons.4
+    picture = GFX_trial_de_rivera
+    title = fe_jons.4.t
+    desc = fe_jons.4.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = fe_jons.4.a
+		create_country_leader = {
+			name = "“缺席者”"
+			desc = "POLITICS_ARTHUR_SEYSS_INQUART_DESC"
+			picture = "gfx/leaders/CNT/no_leader.png"
+			expire = "1965.1.1"
+			ideology = falangism
+			traits = {
+				}
+			}
+	}
+}
+
+country_event = {
+	id = fe_jons.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event fe_jons.5" }
+	title = fe_jons.5.t
+	desc = fe_jons.5.d
+	picture = GFX_report_event_GER_remove_france
+
+	is_triggered_only = yes
+
+	option = {
+		name = fe_jons.5.a
+		ai_chance = {
+			factor = 100
+		}
+		add_to_faction = CNT
+		hidden_effect = {
+		}
+	}
+}
+
+country_event = {
+	id = fe_jons.6
+    picture = GFX_CNT_FE
+    title = fe_jons.6.t
+    desc = fe_jons.6.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = fe_jons.6.a
+	}
+}
+
+country_event = {
+	id = fe_jons.7
+    picture = GFX_the_FE_JONS_Meeting
+    title = fe_jons.7.t
+    desc = fe_jons.7.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = fe_jons.7.a
+		remove_ideas_with_trait = head_of_government
+		add_ideas = CNT_Ramiro_Ledesma_Ramos_hog_tot
+		remove_ideas_with_trait = economy_minister
+		add_ideas = CNT_Onesimo_Redondo_Ortega_eco_tot
+		remove_ideas_with_trait = foreign_minister
+		add_ideas = CNT_Ernesto_Gimenez_Caballero_for_tot
+		remove_ideas_with_trait = security_minister
+		add_ideas = CNT_Santiago_Montero_Dias_sec_tot
+	}
+}
+
+country_event = {
+	id = fe_jons.8
+    picture = GFX_the_FE_JONS_Meeting
+    title = fe_jons.8.t
+    desc = fe_jons.8.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = fe_jons.8.a
+	}
+}
+
+country_event = {
+	id = fe_jons.9
+    picture = GFX_the_FE_JONS_Meeting
+    title = fe_jons.9.t
+    desc = fe_jons.9.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = fe_jons.9.a
+	}
+}
+
+country_event = {
+	id = fe_jons.10
+    picture = GFX_the_FE_JONS_Meeting
+    title = fe_jons.10.t
+    desc = fe_jons.10.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = fe_jons.10.a
+	}
+}
+country_event = {
+	id = fe_jons.11
+    picture = GFX_the_FE_JONS_Meeting
+    title = fe_jons.11.t
+    desc = fe_jons.11.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = fe_jons.11.a
+	}
+}
+country_event = {
+	id = fe_jons.12
+	immediate = { log = "[GetDateText]: [Root.GetName]: event fe_jons.5" }
+	title = fe_jons.12.t
+	desc = fe_jons.12.d
+	picture = GFX_report_event_GER_remove_france
+
+	is_triggered_only = yes
+
+	option = {
+		name = fe_jons.12.a
+		ai_chance = {
+			factor = 100
+		}
+		add_to_faction = CNT
+		hidden_effect = {
+		}
+	}
+}
+country_event = {
+	id = fe_jons.14
+    picture = GFX_germany_ss_move
+    title = fe_jons.14.t
+    desc = fe_jons.14.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = fe_jons.14.a
+		set_cosmetic_tag = CNT_FE
+		hidden_effect = {
+		set_politics = {
+			ruling_party = national_populist
+			elections_allowed = no
+			name = FEJONS_national_populist_party
+			long_name = FEJONS_national_populist_party_long
+		}
+		create_country_leader = {
+			name = "何塞·安东尼奥·德里维拉"
+			desc = "POLITICS_ARTHUR_SEYSS_INQUART_DESC"
+			picture = "gfx/leaders/CNT/Portrait_SPA_Jose_Antonio_RF.png"
+			expire = "1965.1.1"
+			ideology = falangism
+			traits = {
+				}
+			}
+		set_popularities = {
+			national_populist = 65
+			radical_socialist = 35
+			}
+		}
+	}
+}
+country_event = {
+	id = fe_jons.13
+    picture = GFX_germany_ss_move
+    title = fe_jons.13.t
+    desc = fe_jons.13.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = fe_jons.13.a
+		set_cosmetic_tag = CNT_JONS
+		hidden_effect = {
+		set_politics = {
+			ruling_party = totalist
+			elections_allowed = no
+			name = FEJONS_totalist_party
+			long_name = FEJONS_totalist_party_long
+		}
+		create_country_leader = {
+			name = "拉米罗·莱德斯马·拉莫斯"
+			desc = "POLITICS_ARTHUR_SEYSS_INQUART_DESC"
+			picture = "gfx/leaders/CNT/SPA_Portrait_Ledesma_RF.png"
+			expire = "1965.1.1"
+			ideology = spanish_syndicalism
+			traits = {
+				}
+			}
+		set_popularities = {
+			national_populist = 35
+			totalist = 65
+			}
+		}
+	}
+}
+country_event = {
+	id = fe_jons.12
+	immediate = { log = "[GetDateText]: [Root.GetName]: event fe_jons.5" }
+	title = fe_jons.12.t
+	desc = fe_jons.12.d
+	picture = GFX_report_event_GER_remove_france
+
+	is_triggered_only = yes
+
+	option = {
+		name = fe_jons.12.a
+		ai_chance = {
+			factor = 100
+		}
+		add_to_faction = CNT
+		hidden_effect = {
+		}
+	}
+}
+country_event = {
+	id = fe_jons.15
+	title = fe_jons.15.t
+	desc = fe_jons.15.d
+	picture = GFX_the_fe_jons_union
+
+	is_triggered_only = yes
+
+	option = {
+		name = fe_jons.15.a
+		hidden_effect = {
+		}
+	}
+}
+country_event = {
+	id = fe_jons.16
+	title = fe_jons.16.t
+	desc = fe_jons.16.d
+	picture = GFX_the_fe_jons_union
+
+	is_triggered_only = yes
+
+	option = {
+		name = fe_jons.16.a
+		hidden_effect = {
+		}
+	}
+}
+
+country_event = {
+	id = fe_jons.17
+	title = fe_jons.17.t
+	desc = fe_jons.17.d
+	picture = GFX_the_fe_jons_union
+
+	is_triggered_only = yes
+
+	option = {
+		name = fe_jons.17.a
+		hidden_effect = {
+		remove_ideas=SPR_social_breakdown
+		remove_ideas=CNT_monarchist_resistance
+		}
+	}
+}
+country_event = {
+	id = fe_jons.18
+	title = fe_jons.18.t
+	desc = fe_jons.18.d
+	picture = GFX_the_fe_jons_union
+
+	is_triggered_only = yes
+
+	option = {
+		name = fe_jons.18.a
+		hidden_effect = {
+		}
+	}
+}
+country_event = {
+	id = fe_jons.19
+	title = fe_jons.19.t
+	desc = fe_jons.19.d
+	picture = GFX_the_fe_jons_union
+
+	is_triggered_only = yes
+
+	option = {
+		name = fe_jons.19.a
+		hidden_effect = {
+		}
+	}
+}
+country_event = {
+	id = fe_jons.20
+    picture = GFX_trial_ledesma
+    title = fe_jons.20.t
+    desc = fe_jons.20.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = fe_jons.20.a
+		create_country_leader = {
+			name = "“离席者”"
+			desc = "POLITICS_ARTHUR_SEYSS_INQUART_DESC"
+			picture = "gfx/leaders/CNT/no_leader.png"
+			expire = "1965.1.1"
+			ideology = spanish_syndicalism
+			traits = {
+				}
+			}
+	}
+}
+country_event = {
+	id = fe_jons.21
+	title = fe_jons.21.t
+	desc = fe_jons.21.d
+	picture = GFX_the_FE_JONS_Meeting
+
+	is_triggered_only = yes
+
+	option = {
+		name = fe_jons.21.a
+		hidden_effect = {
+		}
+	}
+}
+country_event = {
+	id = fe_jons.22
+    picture = GFX_the_FE_JONS_Meeting
+    title = fe_jons.22.t
+    desc = fe_jons.22.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = fe_jons.22.a
+		remove_ideas_with_trait = head_of_government
+		add_ideas = CNT_Jose_Antonio_Primo_de_Rivera_hog_npo
+		remove_ideas_with_trait = economy_minister
+		add_ideas = CNT_Rafael_Sanchez_Mazas_eco_npo
+		remove_ideas_with_trait = foreign_minister
+		add_ideas = CNT_Pedro_Lain_Entralgo_for_npo
+		remove_ideas_with_trait = security_minister
+		add_ideas = CNT_Jose_Maria_Peman_sec_npo
+	}
+}

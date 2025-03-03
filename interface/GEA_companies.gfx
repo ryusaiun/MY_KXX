@@ -1,0 +1,6 @@
+spriteTypes = {	
+	spriteType = {
+		name = "GFX_idea_Deutsche_East_Asia_Railway"
+		texturefile = "gfx/interface/ideas/gea/Deutsche_East_Asia_Railway.png"
+	}	
+}

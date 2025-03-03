@@ -1,0 +1,472 @@
+spriteTypes = {
+
+	### Headers ###
+
+	spriteType = {
+		name = "GFX_playthrough_stats_bg_AUS"
+		texturefile = "gfx/interface/career_profile/playthrough_stats_bg_AUS.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+		
+	spriteType = {
+		name = "GFX_playthrough_stats_bg_CAN"
+		texturefile = "gfx/interface/career_profile/playthrough_stats_bg_CAN.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+    spriteType = {
+		name = "GFX_playthrough_stats_bg_FRA"
+		texturefile = "gfx/interface/career_profile/playthrough_stats_bg_FRA.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+
+    spriteType = {
+		name = "GFX_playthrough_stats_bg_RUS"
+		texturefile = "gfx/interface/career_profile/playthrough_stats_bg_RUS.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+     
+    spriteType = {
+		name = "GFX_playthrough_stats_bg_NFA"
+		texturefile = "gfx/interface/career_profile/playthrough_stats_bg_NFA.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+
+    spriteType = {
+		name = "GFX_playthrough_stats_bg_TEX"
+		texturefile = "gfx/interface/career_profile/playthrough_stats_bg_TEX.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+
+    spriteType = {
+		name = "GFX_playthrough_stats_bg_CSA"
+		texturefile = "gfx/interface/career_profile/playthrough_stats_bg_CSA.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+
+    spriteType = {
+		name = "GFX_playthrough_stats_bg_PSA"
+		texturefile = "gfx/interface/career_profile/playthrough_stats_bg_PSA.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+
+    spriteType = {
+		name = "GFX_playthrough_stats_bg_ITA"
+		texturefile = "gfx/interface/career_profile/playthrough_stats_bg_ITA.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+
+    spriteType = {
+		name = "GFX_playthrough_stats_bg_SRI"
+		texturefile = "gfx/interface/career_profile/playthrough_stats_bg_SRI.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	
+    spriteType = {
+		name = "GFX_playthrough_stats_bg_SIC"
+		texturefile = "gfx/interface/career_profile/playthrough_stats_bg_SIC.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	
+    spriteType = {
+		name = "GFX_playthrough_stats_bg_PAP"
+		texturefile = "gfx/interface/career_profile/playthrough_stats_bg_PAP.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	
+	spriteType = {
+		name = "GFX_playthrough_stats_bg_TUR"
+		texturefile = "gfx/interface/career_profile/playthrough_stats_bg_TUR.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	
+	spriteType = {
+		name = "GFX_playthrough_stats_bg_ROM"
+		texturefile = "gfx/interface/career_profile/playthrough_stats_bg_ROM.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	
+	spriteType = {
+		name = "GFX_playthrough_stats_bg_BUL"
+		texturefile = "gfx/interface/career_profile/playthrough_stats_bg_BUL.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	
+	spriteType = {
+		name = "GFX_playthrough_stats_bg_QIE"
+		texturefile = "gfx/interface/career_profile/playthrough_stats_bg_QIE.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	
+	spriteType = {
+		name = "GFX_playthrough_stats_bg_FNG"
+		texturefile = "gfx/interface/career_profile/playthrough_stats_bg_FNG.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	
+	spriteType = {
+		name = "GFX_playthrough_stats_bg_SQI"
+		texturefile = "gfx/interface/career_profile/playthrough_stats_bg_SQI.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	
+	spriteType = {
+		name = "GFX_playthrough_stats_bg_SHX"
+		texturefile = "gfx/interface/career_profile/playthrough_stats_bg_SHX.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	
+	spriteType = {
+		name = "GFX_playthrough_stats_bg_LEP"
+		texturefile = "gfx/interface/career_profile/playthrough_stats_bg_LEP.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	
+	spriteType = {
+		name = "GFX_playthrough_stats_bg_HNN"
+		texturefile = "gfx/interface/career_profile/playthrough_stats_bg_HNN.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	
+	spriteType = {
+		name = "GFX_playthrough_stats_bg_GXC"
+		texturefile = "gfx/interface/career_profile/playthrough_stats_bg_GXC.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	
+	spriteType = {
+		name = "GFX_playthrough_stats_bg_YUN"
+		texturefile = "gfx/interface/career_profile/playthrough_stats_bg_YUN.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	
+	spriteType = {
+		name = "GFX_playthrough_stats_bg_SZC"
+		texturefile = "gfx/interface/career_profile/playthrough_stats_bg_SZC.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	
+	spriteType = {
+		name = "GFX_playthrough_stats_bg_XSM"
+		texturefile = "gfx/interface/career_profile/playthrough_stats_bg_XSM.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	
+	spriteType = {
+		name = "GFX_playthrough_stats_bg_CHI"
+		texturefile = "gfx/interface/career_profile/playthrough_stats_bg_CHI.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	
+	spriteType = {
+		name = "GFX_playthrough_stats_bg_ANQ"
+		texturefile = "gfx/interface/career_profile/playthrough_stats_bg_ANQ.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	spriteType = {
+		name = "GFX_playthrough_stats_bg_SWE"
+		texturefile = "gfx/interface/career_profile/playthrough_stats_bg_SWE.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	spriteType = {
+		name = "GFX_playthrough_stats_bg_FIN"
+		texturefile = "gfx/interface/career_profile/playthrough_stats_bg_FIN.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	spriteType = {
+		name = "GFX_playthrough_stats_bg_DEN"
+		texturefile = "gfx/interface/career_profile/playthrough_stats_bg_DEN.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	spriteType = {
+		name = "GFX_playthrough_stats_bg_NOR"
+		texturefile = "gfx/interface/career_profile/playthrough_stats_bg_NOR.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	spriteType = {
+		name = "GFX_playthrough_stats_bg_BAT"
+		texturefile = "gfx/interface/career_profile/playthrough_stats_bg_BAT.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	spriteType = {
+		name = "GFX_playthrough_stats_bg_ETS"
+		texturefile = "gfx/interface/career_profile/playthrough_stats_bg_ETS.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	spriteType = {
+		name = "GFX_playthrough_stats_bg_SIK"
+		texturefile = "gfx/interface/career_profile/playthrough_stats_bg_SIK.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	spriteType = {
+		name = "GFX_playthrough_stats_bg_KUM"
+		texturefile = "gfx/interface/career_profile/playthrough_stats_bg_KUM.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	spriteType = {
+		name = "GFX_playthrough_stats_bg_TIB"
+		texturefile = "gfx/interface/career_profile/playthrough_stats_bg_TIB.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	spriteType = {
+		name = "GFX_playthrough_stats_bg_MON"
+		texturefile = "gfx/interface/career_profile/playthrough_stats_bg_MON.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	spriteType = {
+		name = "GFX_playthrough_stats_bg_SER"
+		texturefile = "gfx/interface/career_profile/playthrough_stats_bg_SER.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	spriteType = {
+		name = "GFX_playthrough_stats_bg_GRE"
+		texturefile = "gfx/interface/career_profile/playthrough_stats_bg_GRE.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	spriteType = {
+		name = "GFX_playthrough_stats_bg_UKR"
+		texturefile = "gfx/interface/career_profile/playthrough_stats_bg_UKR.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	
+	spriteType = {
+		name = "GFX_playthrough_stats_bg_NEE"
+		texturefile = "gfx/interface/career_profile/playthrough_stats_bg_NEE.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+
+
+	### More Headers ###
+	
+	spriteType = {
+		name = "GFX_career_profile_bg_AUS"
+		texturefile = "gfx/interface/career_profile/career_profile_bg_AUS.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+		
+	spriteType = {
+		name = "GFX_career_profile_bg_CAN"
+		texturefile = "gfx/interface/career_profile/career_profile_bg_CAN.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+    spriteType = {
+		name = "GFX_career_profile_bg_FRA"
+		texturefile = "gfx/interface/career_profile/career_profile_bg_FRA.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+
+    spriteType = {
+		name = "GFX_career_profile_bg_RUS"
+		texturefile = "gfx/interface/career_profile/career_profile_bg_RUS.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+     
+    spriteType = {
+		name = "GFX_career_profile_bg_NFA"
+		texturefile = "gfx/interface/career_profile/career_profile_bg_NFA.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+
+    spriteType = {
+		name = "GFX_career_profile_bg_TEX"
+		texturefile = "gfx/interface/career_profile/career_profile_bg_TEX.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+
+    spriteType = {
+		name = "GFX_career_profile_bg_CSA"
+		texturefile = "gfx/interface/career_profile/career_profile_bg_CSA.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+
+    spriteType = {
+		name = "GFX_career_profile_bg_PSA"
+		texturefile = "gfx/interface/career_profile/career_profile_bg_PSA.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+
+    spriteType = {
+		name = "GFX_career_profile_bg_ITA"
+		texturefile = "gfx/interface/career_profile/career_profile_bg_ITA.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+
+    spriteType = {
+		name = "GFX_career_profile_bg_SRI"
+		texturefile = "gfx/interface/career_profile/career_profile_bg_SRI.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	
+    spriteType = {
+		name = "GFX_career_profile_bg_SIC"
+		texturefile = "gfx/interface/career_profile/career_profile_bg_SIC.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	
+    spriteType = {
+		name = "GFX_career_profile_bg_PAP"
+		texturefile = "gfx/interface/career_profile/career_profile_bg_PAP.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	
+	spriteType = {
+		name = "GFX_career_profile_bg_TUR"
+		texturefile = "gfx/interface/career_profile/career_profile_bg_TUR.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	
+	spriteType = {
+		name = "GFX_career_profile_bg_ROM"
+		texturefile = "gfx/interface/career_profile/career_profile_bg_ROM.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	
+	spriteType = {
+		name = "GFX_career_profile_bg_BUL"
+		texturefile = "gfx/interface/career_profile/career_profile_bg_BUL.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	
+	spriteType = {
+		name = "GFX_career_profile_bg_QIE"
+		texturefile = "gfx/interface/career_profile/career_profile_bg_QIE.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	
+	spriteType = {
+		name = "GFX_career_profile_bg_FNG"
+		texturefile = "gfx/interface/career_profile/career_profile_bg_FNG.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	
+	spriteType = {
+		name = "GFX_career_profile_bg_SQI"
+		texturefile = "gfx/interface/career_profile/career_profile_bg_SQI.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	
+	spriteType = {
+		name = "GFX_career_profile_bg_SHX"
+		texturefile = "gfx/interface/career_profile/career_profile_bg_SHX.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	
+	spriteType = {
+		name = "GFX_career_profile_bg_LEP"
+		texturefile = "gfx/interface/career_profile/career_profile_bg_LEP.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	
+	spriteType = {
+		name = "GFX_career_profile_bg_HNN"
+		texturefile = "gfx/interface/career_profile/career_profile_bg_HNN.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	
+	spriteType = {
+		name = "GFX_career_profile_bg_GXC"
+		texturefile = "gfx/interface/career_profile/career_profile_bg_GXC.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	
+	spriteType = {
+		name = "GFX_career_profile_bg_YUN"
+		texturefile = "gfx/interface/career_profile/career_profile_bg_YUN.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	
+	spriteType = {
+		name = "GFX_career_profile_bg_SZC"
+		texturefile = "gfx/interface/career_profile/career_profile_bg_SZC.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	
+	spriteType = {
+		name = "GFX_career_profile_bg_XSM"
+		texturefile = "gfx/interface/career_profile/career_profile_bg_XSM.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	
+	spriteType = {
+		name = "GFX_career_profile_bg_CHI"
+		texturefile = "gfx/interface/career_profile/career_profile_bg_CHI.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	
+	spriteType = {
+		name = "GFX_career_profile_bg_ANQ"
+		texturefile = "gfx/interface/career_profile/career_profile_bg_ANQ.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	spriteType = {
+		name = "GFX_career_profile_bg_SWE"
+		texturefile = "gfx/interface/career_profile/career_profile_bg_SWE.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	spriteType = {
+		name = "GFX_career_profile_bg_FIN"
+		texturefile = "gfx/interface/career_profile/career_profile_bg_FIN.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	spriteType = {
+		name = "GFX_career_profile_bg_DEN"
+		texturefile = "gfx/interface/career_profile/career_profile_bg_DEN.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	spriteType = {
+		name = "GFX_career_profile_bg_NOR"
+		texturefile = "gfx/interface/career_profile/career_profile_bg_NOR.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	spriteType = {
+		name = "GFX_career_profile_bg_BAT"
+		texturefile = "gfx/interface/career_profile/career_profile_bg_BAT.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	spriteType = {
+		name = "GFX_career_profile_bg_ETS"
+		texturefile = "gfx/interface/career_profile/career_profile_bg_ETS.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	spriteType = {
+		name = "GFX_career_profile_bg_SIK"
+		texturefile = "gfx/interface/career_profile/career_profile_bg_SIK.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	spriteType = {
+		name = "GFX_career_profile_bg_KUM"
+		texturefile = "gfx/interface/career_profile/career_profile_bg_KUM.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	spriteType = {
+		name = "GFX_career_profile_bg_TIB"
+		texturefile = "gfx/interface/career_profile/career_profile_bg_TIB.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	spriteType = {
+		name = "GFX_career_profile_bg_MON"
+		texturefile = "gfx/interface/career_profile/career_profile_bg_MON.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	spriteType = {
+		name = "GFX_career_profile_bg_SER"
+		texturefile = "gfx/interface/career_profile/career_profile_bg_SER.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	spriteType = {
+		name = "GFX_career_profile_bg_GRE"
+		texturefile = "gfx/interface/career_profile/career_profile_bg_GRE.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	spriteType = {
+		name = "GFX_career_profile_bg_UKR"
+		texturefile = "gfx/interface/career_profile/career_profile_bg_UKR.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+	spriteType = {
+		name = "GFX_career_profile_bg_NEE"
+		texturefile = "gfx/interface/career_profile/career_profile_bg_NEE.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+}

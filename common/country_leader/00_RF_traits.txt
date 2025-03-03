@@ -1,0 +1,615 @@
+leader_traits = {
+
+	ATU_multi_trait = {
+		random = no
+		political_power_factor = 0.1
+		stability_weekly = 0.001
+		drift_defence_factor = 0.2
+	}
+
+	ATU_any_trait = {
+		random = no
+		right_authoritarianism_drift = 0.1
+		justify_war_goal_time = -0.1
+		war_support_factor = 0.1
+	}
+
+	GER_volksfuhrer = {
+		random = no
+		political_power_factor = 0.05
+		justify_war_goal_time = -0.15
+		drift_defence_factor = 0.15
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	TUR_Disgraced_Hero = {
+		random = no
+		political_power_factor = -0.1
+		stability_factor = -0.05
+		drift_defence_factor = -0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	TUR_Hero_of_Gallipoli = {
+		random = no
+		political_power_factor = 0.2
+		War_support_factor = 0.2
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	TUR_Miralay = {
+		random = no
+		War_support_factor = 0.2
+		political_power_factor = 0.05
+		justify_war_goal_time = -0.15
+		experience_gain_army_factor = 0.05
+		army_attack_factor = 0.05
+		army_morale_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	TUR_Old_friend = {
+		random = no
+		political_power_factor = 0.1
+		stability_factor = 0.1
+		drift_defence_factor = -0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	ASY_the_good_patriarch = {
+		random = no
+		army_morale_factor = 0.05
+		political_power_factor = 0.10
+	}
+
+	ASY_second_ashurbanipal = {
+		random = no
+		experience_gain_army_factor = 0.05
+		army_attack_factor = 0.05
+		drift_defence_factor = 0.15
+	}
+
+	ASY_the_liberator = {
+		random = no
+		stability_factor = 0.10
+		conscription = 0.015
+	}
+
+
+	UPI_brutal_colonizer = {
+		random = no
+		political_power_gain = -0.1
+		production_speed_buildings_factor = 0.25
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+	TUA_amenukal = {
+		random = no
+		war_support_factor = 0.10
+		political_power_factor = 0.10
+	}
+	TUA_democratic_dictator = {
+		random = no
+		stability_factor = 0.10
+		political_power_factor = 0.10
+	}
+	TUA_man_from_the_future = {
+		random = no
+		research_speed_factor = 0.1
+	}
+
+	ALT_despotic_loyalist = {
+		random = no
+		encryption_factor = 0.05
+		stability_factor = 0.05
+	}
+	ALT_yukat_explorer = {
+		random = no
+		research_speed_factor = 0.1
+	}
+	ALT_altaic_mystic = {
+		random = no
+		research_speed_factor = -0.05
+		war_support_factor = 0.2
+	}
+	ZHR_exile_kerensky = {
+		random = no
+		political_power_factor = -0.02
+		stability_factor = 0.02
+		surrender_limit = 0.05
+	}
+	ZHR_comrade_trotsky = {
+		random = no
+		political_power_factor = 0.05
+		drift_defence_factor = 0.3
+		war_support_factor = 0.25
+	}
+	ZHR_chapayev_trait = {
+		random = no
+		political_power_factor = -0.1
+		war_support_factor = 0.06
+		conscription = 0.05
+	}
+	ZHR_chapayev_brotherly_leader = {
+		random = no
+		political_power_factor = 0.3
+		stability_factor = 0.1
+	}
+	ZHR_chapayev_revolutions_guide = {
+		random = no
+		compliance_gain = 0.1
+		drift_defence_factor = 0.1
+	}
+	ZHR_chapayev_masses_rifle = {
+		random = no
+		army_org_factor = 0.05
+		army_attack_factor = 0.05
+		army_defence_factor = 0.05
+	}
+	ZHR_dictator_boldyrev = {
+		random = no
+		political_power_factor = -0.1
+		stability_factor = 0.1
+		experience_gain_army_factor = 0.05
+		army_attack_factor = 0.02
+		army_defence_factor = 0.02
+	}
+	ZHR_ayn_rand = {
+		random = no
+		war_support_factor = -0.2
+		production_factory_efficiency_gain_factor = 0.05
+		license_purchase_cost = -0.1
+	}
+	ZHR_gastev = {
+		random = no
+		industrial_capacity_factory = 0.1
+		planning_speed = 0.1
+		army_org_factor = 0.1
+	}
+	#Sternberg
+	TAN_roman = {
+		random = no
+		#resistance_tick = -0.5
+		root_out_resistance_effectiveness_factor = 0.25
+		offensive_war_stability_factor = 0.10
+	}
+	#Persia
+	PER_mo_pahlavi = {
+		random = no
+		research_speed_factor = 0.02
+		army_core_defence_factor = 0.05
+		despotism_drift = 0.01
+	}
+	PER_mo_pahlavi_cyrus = {
+		random = no
+		research_speed_factor = 0.05
+		army_core_defence_factor = 0.07
+		despotism_drift = 0.02
+	}
+	RPR_kochik_khan = {
+		random = no
+		vanguard_socialism_drift = 0.01
+		army_morale_factor = 0.05
+	}
+	#ISR
+	ISR_dayan_trait = {
+		random = no
+		army_org_factor = 0.1
+	}
+	ISR_stern_leader = {
+		random = no
+		political_power_factor = 0.2
+		War_support_factor = 0.2
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ISR_einstein_leader = {
+		random = no
+		compliance_gain = 0.05
+		research_speed_factor = 0.05
+	}
+	ISR_jabo_leader = {
+		random = no
+		army_core_defence_factor = 0.05
+		right_authoritarianism_drift = 0.03
+		opinion_gain_monthly_factor = 0.5
+	}
+	ISR_ben_gurion_leader = {
+		random = no
+		stability_factor = 0.05
+	}
+	#END ISR#
+	LIB_the_intellectual = {
+		random = no
+		research_speed_factor = 0.03
+	}
+	LIB_the_liberator = {
+		random = no
+		war_support_weekly = 0.01
+	}
+	LIB_the_white_man = {
+		random = no
+		production_factory_efficiency_gain_factor = 0.05
+	}
+	FIN_paallikko = {
+		random = no
+		stability_factor = 0.07
+		root_out_resistance_effectiveness_factor = 0.10
+		army_org_factor = 0.12
+	}
+	FIN_pharaoh = {
+		random = no
+		war_support_factor = 0.15
+		accelerationism_drift = 0.03
+	}
+
+	# Brazil #
+	BRR_eternalleader = {
+		random = no
+		political_power_factor = 0.1
+		drift_defence_factor = 0.15
+		army_org_factor = 0.05
+	}
+
+	# Kavkaz #
+	KAV_demigod_of_poetry = {
+		random = no
+		political_power_factor = 0.15
+		trade_opinion_factor = 0.1
+	}
+	KAV_demigod_of_poetry_1 = {
+		random = no
+		political_power_factor = 0.15
+		trade_opinion_factor = 0.1
+		army_speed_factor = 0.1
+		production_speed_buildings_factor = 0.1
+	}
+	KAV_the_red_count = {
+		random = no
+		political_power_factor = 0.15
+		consumer_goods_expected_value = -0.03
+	}
+	KAV_the_idealist = {
+		random = no
+		political_power_factor = 0.15
+		training_time_factor = -0.075
+	}
+	KAV_stalin_trait = {
+		random = no
+		political_power_gain = 0.1
+		army_morale_factor = 0.075
+	}
+
+	DKB_missing = {
+		random = no
+		political_power_factor = -0.9
+	}
+
+	LAT_dragonslayer = {
+		random = no
+		conscription_factor = 0.3
+	}
+	LAT_negotiator = {
+		random = no
+		trade_opinion_factor = 0.15
+	}
+
+	EST_sole_ruler_of_estonians = {
+		random = no
+		political_power_factor = 0.05
+		right_authoritarianism_drift = 0.05
+	}
+	EST_protector_of_estonian_freedom = {
+		random = no
+		trade_opinion_factor = 0.3
+		progressivism_drift = 0.05
+	}
+
+	RUS_the_great = {
+		random = no
+		political_power_factor = 0.05
+		conscription_factor = -0.1
+		compliance_gain = 0.1
+	}
+	RUS_the_terrible = {
+		random = no
+		political_power_factor = -0.05
+		conscription_factor = 0.1
+		resistance_target = -0.1
+	}
+	UKR_antonych = {
+		random = no
+		political_power_gain = 0.1
+		consumer_goods_expected_value = -0.1
+		stability_weekly = 0.03
+	}
+	UKR_vynny = {
+		random = no
+		army_leader_start_defense_level = 2
+		revisionist_socialism_drift = 0.005
+		popular_socialism_drift = 0.005
+		winter_attrition_factor = 0.2
+		experience_gain_army_factor = 0.1
+	}
+	UKR_iron_lazar = {
+		random = no
+		army_leader_start_logistics_level = 2
+		army_leader_start_attack_level =2
+		max_planning_factor = 0.15
+		training_time_factor = 0.15
+		targeted_modifier = {
+			tag = SRU
+			attack_bonus_against = 0.10
+			defense_bonus_against = 0.10
+		}
+		targeted_modifier = {
+			tag = RUS
+			attack_bonus_against = 0.10
+			defense_bonus_against = 0.10
+		}
+	}
+	UKR_iron_lazar1 = {
+		random = no
+		army_leader_start_logistics_level = 2
+		army_leader_start_attack_level =2
+		max_planning_factor = 0.15
+		training_time_factor = 0.15
+		resistance_growth_on_our_occupied_states = -0.10
+		compliance_growth_on_our_occupied_states = 0.10
+		local_resources = 0.15
+		targeted_modifier = {
+			tag = SRU
+			attack_bonus_against = 0.10
+			defense_bonus_against = 0.10
+		}
+		targeted_modifier = {
+			tag = RUS
+			attack_bonus_against = 0.10
+			defense_bonus_against = 0.10
+		}
+	}
+
+	###HAR Custom Traits###
+	#Anarchy
+	HAR_chaos = {
+		random = no
+		consumer_goods_expected_value = 0.75
+		stability_weekly = -0.01
+	}
+
+	#Zaborovsky (Bishop Of Harbin)
+	HAR_bishop_of_harbin = {
+		random = no
+		conscription_factor = 0.15
+		political_power_gain = 0.10
+	}
+
+	#Milyukov Caused Collapse (Distrusted Record)
+	HAR_distrusted_record = {
+		random = no
+		stability_factor = -0.10
+		political_power_cost = 0.1
+	}
+
+	#Milyukov Didnt Collapse (Second Chance)
+	HAR_second_chance = {
+		random = no
+		stability_factor = 0.15
+		political_power_cost = -0.2
+	}
+
+	#Myakotin (Socialist Redeemer)
+	HAR_social_redeemer = {
+		random = no
+		consumer_goods_expected_value = 0.07
+		stability_weekly = 0.04
+	}
+
+	#Fajda (OUN Bomb)
+	Har_bomb = {
+		random = no
+		army_attack_factor = 0.08
+		army_morale_factor = 0.08
+		political_power_gain = -0.05
+	}
+	
+	###AUSTRIA CUSTOM TRAITS###
+	AUS_karl_paragon = {
+		drift_defence_factor = 0.2
+		training_time_factor = -0.1
+	}
+	AUS_mises_great_economist = {
+		trade_opinion_factor = 0.2
+		research_speed_factor = 0.05
+		stability_factor = 0.05
+	}
+	AUS_blessed_karl_fakeout = {
+		random = no
+		stability_factor = 0.1
+		army_org_factor = 0.1
+		army_morale_factor  = 0.1
+	}
+
+	#TWO STEPS FORWARD GERMAN CUSTOM TRAITS
+	GER_levi_tsf = {
+		random = no
+		political_power_factor = -0.50
+		war_support_factor = -0.15
+	}
+	GER_popper_tsf = {
+		random = no
+		drift_defence_factor = -0.1
+		stability_factor = 0.05
+	}
+	GER_brecht_tsf = {
+		random = no
+		stability_factor = -0.10
+		production_speed_buildings_factor = 0.05
+	}
+	GER_meyer_tsf = {
+		random = no
+		political_power_factor = 0.05
+		stability_factor = 0.05
+	}
+	GER_seghers_tsf = {
+		random = no
+		army_core_defence_factor = 0.05
+	}
+	GER_frahm_tsf = {
+		random = no
+		send_volunteer_factor = 0.75
+		agency_upgrade_time = -0.15
+	}
+	GER_radek_tsf = {
+		random = no
+		consumer_goods_expected_value = -0.05
+		local_non_core_manpower = 0.05
+	}
+	GER_goebbels_tsf = {
+		random = no
+		surrender_limit = 0.1
+		conscription_factor = 0.05
+	}
+	GER_reventlow_tsf = {
+		random = no
+		stability_factor = -0.05
+		war_stability_factor = 0.05
+		offensive_war_stability_factor = 0.05
+	}
+	PSL_boldyrev = {
+		random = no
+		consumer_goods_expected_value = -0.05
+		stability_factor = 0.05
+		drift_defence_factor = 0.1
+	}
+
+	BUL_founder_of_republic = {
+		random = no
+		political_power_factor = 0.1
+		revisionist_socialism_drift = 0.05
+		consumer_goods_expected_value = -0.05
+	}
+
+### POL
+
+POL_pilsudski_ubermensch = {
+	random = no
+	political_power_factor = 0.15
+	stability_factor = 0.25
+	production_factory_max_efficiency_factor = 0.1
+	production_speed_buildings_factor = 0.1
+	hidden_modifier = {
+		justify_war_goal_time = 2137
+	}
+}
+
+POL_pilsudski_demiurge = {
+	random = no
+	production_speed_bunker_factor = 0.1
+	targeted_modifier = {
+		tag = RUS
+		attack_bonus_against = 0.1 
+		defense_bonus_against = 0.1
+	}
+	hidden_modifier = {
+		justify_war_goal_time = 2137
+	}
+}
+
+POL_pilsudski_44 = {
+	random = no
+	army_morale_factor = 0.1
+	war_support_factor = 0.25
+	army_core_attack_factor = 0.1
+	army_core_defence_factor = 0.1
+	hidden_modifier = {
+		justify_war_goal_time = 2137
+	}
+}
+
+POL_pilsudski_titan = {
+	random = no
+	global_building_slots_factor = 0.1
+	research_speed_factor = 0.1
+	accelerationism_drift = 0.1
+	hidden_modifier = {
+		justify_war_goal_time = 2137
+	}
+}
+
+POL_pilsudski_goobermensch = {
+	random = no
+	political_power_factor = 0.05
+	stability_factor = 0.025
+	production_factory_max_efficiency_factor = 0.01
+	production_speed_buildings_factor = 0.01
+	hidden_modifier = {
+		justify_war_goal_time = 2137
+	}
+}
+
+POL_pilsudski_demisludge = {
+	random = no
+	production_speed_bunker_factor = 0.02
+	targeted_modifier = {
+		tag = RUS
+		attack_bonus_against = 0.025
+		defense_bonus_against = 0.025
+	}
+	hidden_modifier = {
+		justify_war_goal_time = 2137
+	}
+}
+
+POL_pilsudski_404 = {
+	random = no
+	army_morale_factor = 0.01
+	war_support_factor = 0.05
+	army_core_attack_factor = 0.01
+	army_core_defence_factor = 0.01
+	hidden_modifier = {
+		justify_war_goal_time = 2137
+	}
+}
+
+POL_pilsudski_tritan = {
+	random = no
+	global_building_slots_factor = 0.02
+	research_speed_factor = 0.01
+	accelerationism_drift = 0.01
+	hidden_modifier = {
+		justify_war_goal_time = 2137
+	}
+}
+
+#Failstate#
+	complete_anarchy = {
+	random = no
+	political_power_gain = -2
+	conscription = -1
+		army_attack_factor = -1
+		army_morale_factor = -1
+		army_org = -1
+	}
+}

@@ -1,0 +1,99 @@
+SpriteTypes = {
+##罗素的红色社会信用体系##
+SpriteType = {
+	name = "GFX_goal_ENG_Ally_Russell"
+	texturefile = "gfx/interface/goals/Russell_UOB/Ally_Russell.png"
+}
+SpriteType = {
+	name = "GFX_goal_ENG_Appoint_Russell"
+	texturefile = "gfx/interface/goals/Russell_UOB/Appoint_Russell.png"
+}
+SpriteType = {
+	name = "GFX_goal_ENG_Begin_Reforms"
+	texturefile = "gfx/interface/goals/Russell_UOB/Begin_Reforms.png"
+}
+SpriteType = {
+	name = "GFX_goal_ENG_Russell_Plans"
+	texturefile = "gfx/interface/goals/Russell_UOB/Russell_Plans.png"
+}
+SpriteType = {
+	name = "GFX_goal_ENG_Mosley_Plans"
+	texturefile = "gfx/interface/goals/Russell_UOB/Mosley_Plans.png"
+}
+SpriteType = {
+	name = "GFX_goal_ENG_Undermine_Opposition"
+	texturefile = "gfx/interface/goals/Russell_UOB/Undermine_Opposition.png"
+}
+SpriteType = {
+	name = "GFX_goal_ENG_War_Soccred"
+	texturefile = "gfx/interface/goals/Russell_UOB/War_Soccred_Img.png"
+}
+SpriteType = {
+	name = "GFX_goal_ENG_Civillian_Soccred"
+	texturefile = "gfx/interface/goals/Russell_UOB/Civillian_Soccred_Img.png"
+}
+SpriteType = {
+	name = "GFX_goal_ENG_Finalise_Reform"
+	texturefile = "gfx/interface/goals/Russell_UOB/Finalise_Reform.png"
+}
+SpriteType = {
+	name = "GFX_goal_ENG_Issue_Dividens"
+	texturefile = "gfx/interface/goals/Russell_UOB/Issue_Dividens.png"
+}
+SpriteType = {
+	name = "GFX_goal_ENG_Curtail_Russell"
+	texturefile = "gfx/interface/goals/Russell_UOB/Curtail_Russell.png"
+}
+SpriteType = {
+	name = "GFX_goal_ENG_Contact_Bill"
+	texturefile = "gfx/interface/goals/Russell_UOB/Contact_Bill.png"
+}
+SpriteType = {
+	name = "GFX_goal_ENG_Soccred_Boom"
+	texturefile = "gfx/interface/goals/Russell_UOB/Soccred_Boom.png"
+}
+##russell
+SpriteType = {
+	name = "GFX_goal_ENG_Undermine_Chairman"
+	texturefile = "gfx/interface/goals/Russell_UOB/Undermine_Chairman.png"
+}
+SpriteType = {
+	name = "GFX_goal_ENG_Puppet_Mosley"
+	texturefile = "gfx/interface/goals/Russell_UOB/Puppet_Mosley.png"
+}
+SpriteType = {
+	name = "GFX_goal_ENG_Take_Power"
+	texturefile = "gfx/interface/goals/Russell_UOB/Take_Power.png"
+}
+SpriteType = {
+	name = "GFX_goal_ENG_Finish_Mosley"
+	texturefile = "gfx/interface/goals/Russell_UOB/Finish_Mosley.png"
+}
+SpriteType = {
+	name = "GFX_goal_ENG_Civilian_Soccred"
+	texturefile = "gfx/interface/goals/Russell_UOB/Civillian_Soccred.png"
+}
+SpriteType = {
+	name = "GFX_goal_ENG_Ministry_Information"
+	texturefile = "gfx/interface/goals/Russell_UOB/Ministry_Information.png"
+}
+##mosley
+SpriteType = {
+	name = "GFX_goal_ENG_Reinforce_Chairman"
+	texturefile = "gfx/interface/goals/Russell_UOB/Reinforce_Chairman.png"
+}
+SpriteType = {
+	name = "GFX_goal_ENG_Finish_Hastings"
+	texturefile = "gfx/interface/goals/Russell_UOB/Finish_Hastings.png"
+}
+SpriteType = {
+	name = "GFX_goal_ENG_Total_War_Soccred"
+	texturefile = "gfx/interface/goals/Russell_UOB/Total_War_Soccred.png"
+}
+SpriteType = {
+	name = "GFX_goal_ENG_Fusion_Soccred"
+	texturefile = "gfx/interface/goals/Russell_UOB/Fusion_Soccred.png"
+}
+
+}
+

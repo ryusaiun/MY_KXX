@@ -1,0 +1,252 @@
+###########################
+# Super Events
+###########################
+# By Spyeter
+###########################
+
+add_namespace = nmdvpsuper
+
+country_event = { #GOEBBELS GREATER GERMANIC NATIONAL WORKERS STATE
+	id = nmdvpsuper.1
+	title = nmdvpsuper.1.t
+	desc = nmdvpsuper.1.d
+	picture = GFX_report_event_diplomatic_message
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	hidden = yes
+
+	option = {
+		name = nmdvpsuper.1.a
+		add_named_threat = { threat = 5 name = GRU_named_threat_3 }
+		GER = {
+			declare_war_on = {
+				target = GRU
+				type = civil_war
+			}
+			add_ai_strategy = {
+		    	type = prepare_for_war
+		    	id = GRU
+		    	value = 1000
+		    }
+			add_ai_strategy = {
+		    	type = conquer
+		    	id = GRU
+		    	value = 1000
+		    }
+			add_ai_strategy = {
+		    	type = antagonize
+		    	id = GRU
+		    	value = 1000
+		    }
+			country_lock_all_division_template = no
+		}
+		MAF = {
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = GER
+				value = 1000
+			}
+			add_ai_strategy = {
+				type = send_lend_lease_desire
+				id = GER
+				value = 800
+			}
+			add_ai_strategy = {
+				type = support
+				id = GER
+				value = 800
+			}
+		}
+		COG = {
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = GER
+				value = 500
+			}
+			add_ai_strategy = {
+				type = send_lend_lease_desire
+				id = GER
+				value = 500
+			}
+			add_ai_strategy = {
+				type = support
+				id = GER
+				value = 500
+			}
+		}
+		GEA = {
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = GER
+				value = -1000
+			}
+			add_ai_strategy = {
+				type = send_lend_lease_desire
+				id = GER
+				value = 500
+			}
+			add_ai_strategy = {
+				type = support
+				id = GER
+				value = 500
+			}
+		}
+		CAN = {
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = GER
+				value = 500
+			}
+			add_ai_strategy = {
+				type = send_lend_lease_desire
+				id = GER
+				value = 400
+			}
+			add_ai_strategy = {
+				type = support
+				id = GER
+				value = 400
+			}
+		}
+		NFA = {
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = GER
+				value = 500
+			}
+			add_ai_strategy = {
+				type = send_lend_lease_desire
+				id = GER
+				value = 400
+			}
+			add_ai_strategy = {
+				type = support
+				id = GER
+				value = 400
+			}
+		}
+
+		GRU = {
+			add_ai_strategy = {
+		    	type = prepare_for_war
+		    	id = GER
+		    	value = 1000
+		    }
+			add_ai_strategy = {
+		    	type = conquer
+		    	id = GER
+		    	value = 1000
+		    }
+			add_ai_strategy = {
+		    	type = antagonize
+		    	id = GER
+		    	value = 1000
+		    }
+		}
+		FRA = {
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = GRU
+				value = 1000
+			}
+			add_ai_strategy = {
+				type = send_lend_lease_desire
+				id = GRU
+				value = 1000
+			}
+			add_ai_strategy = {
+				type = support
+				id = GRU
+				value = 1000
+			}
+		}
+		ENG = {
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = GRU
+				value = 1000
+			}
+			add_ai_strategy = {
+				type = send_lend_lease_desire
+				id = GRU
+				value = 1000
+			}
+			add_ai_strategy = {
+				type = support
+				id = GRU
+				value = 1000
+			}
+		}
+		set_global_flag = GRU_Super_Event_Visible
+		set_global_flag = ger_civl
+		every_country = {
+			limit = {
+				NOT = {
+					is_ai = yes
+					has_country_flag = KX_superevent_sounds_off
+				}
+			}
+			scoped_sound_effect = "ger_civl_sound"
+		}
+	}
+}
+
+country_event = { #GOEBBELS GREATER GERMANIC NATIONAL WORKERS STATE
+	id = nmdvpsuper.2
+	title = nmdvpsuper.2.t
+	desc = nmdvpsuper.2.d
+	picture = GFX_report_event_diplomatic_message
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	hidden = yes
+
+	option = {
+		name = nmdvpsuper.2.a
+
+		set_global_flag = GRU_Super_Event_Visible
+		set_global_flag = greater_germanic_state_goebbels
+		every_country = {
+			limit = {
+				NOT = {
+					is_ai = yes
+					has_country_flag = KX_superevent_sounds_off
+				}
+			}
+			scoped_sound_effect = "superev_greater_germanic_state_goebbels"
+		}
+	}
+}
+
+country_event = {		#GOEBBELS ENDSIEG
+	id = nmdvpsuper.3
+	title = nmdvpsuper.3.t
+	desc = nmdvpsuper.3.d
+	picture = GFX_report_event_diplomatic_message
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	hidden = yes
+
+	option = {
+		name = nmdvpsuper.3.a
+
+		set_global_flag = GRU_Super_Event_Visible
+		set_global_flag = endsieg_goebbels
+		every_country = {
+			limit = {
+				NOT = {
+					is_ai = yes
+					has_country_flag = KX_superevent_sounds_off
+				}
+			}
+			scoped_sound_effect = "superev_endsieg_goebbels"
+		}
+	}
+}

@@ -1,0 +1,65 @@
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_GRU_STASI
+	names = { GRU_agency_stasi }
+
+	default = {
+		tag = GRU
+		has_country_leader = { character = GRU_Joseph_Goebbels ruling_only = yes }
+	}
+	available = {
+		tag = GRU
+		has_country_leader = { character = GRU_Joseph_Goebbels ruling_only = yes }
+	}
+}
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_RM_GRU_THREE
+	names = { GRU_agency_gestapo }
+
+	default = {
+		tag = GRU
+		has_country_leader = { character = GRU_Ernst_Thalmann ruling_only = yes }
+	}
+	available = {
+		tag = GRU
+		has_country_leader = { character = GRU_Ernst_Thalmann ruling_only = yes }
+	}
+}
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_RM_GRU_TWO
+	names = { GRU_agency_red_guard }
+
+	default = {
+		tag = GRU
+		has_country_leader = { character = GRU_Wilhelm_Pieck ruling_only = yes }
+	}
+	available = {
+		tag = GRU
+		has_country_leader = { character = GRU_Wilhelm_Pieck ruling_only = yes }
+	}
+}
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_RM_GRU_FOUR
+	names = { GRU_agency_dad }
+
+	default = {
+		tag = GRU
+		has_country_leader = { character = GRU_Karl_Liebknecht ruling_only = yes }
+	}
+	available = {
+		tag = GRU
+		has_country_leader = { character = GRU_Karl_Liebknecht ruling_only = yes }
+	}
+}
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_RM_GRU_FIVE
+	names = { GRU_agency_inlandsabteilung }
+
+	default = {
+		tag = GRU
+		has_country_leader = { character = GRU_Paul_Lensch ruling_only = yes }
+	}
+	available = {
+		tag = GRU
+		has_country_leader = { character = GRU_Paul_Lensch ruling_only = yes }
+	}
+}

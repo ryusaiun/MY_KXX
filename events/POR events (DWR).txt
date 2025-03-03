@@ -1,0 +1,2398 @@
+﻿###########################
+# DWR Portugal Events
+# By Border Man
+# Expanded by Mr. Miu
+###########################
+
+add_namespace = por
+
+#TODO: renumber all the events and use a new namespace for them
+
+### National Spirits
+
+country_event = {
+	id = por.150
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.150" }
+	title = por.150.t
+	desc = por.150.d
+
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = POR
+		118 = {
+			is_owned_by = POR
+			is_fully_controlled_by = POR
+			is_core_of = POR
+		}
+		545 = {
+			is_owned_by = POR
+			is_fully_controlled_by = POR
+		}
+	}
+	mean_time_to_happen = {
+		days = 30
+	}
+
+
+	option = { 
+		name = por.150.a
+		add_political_power = 25
+		add_ideas = POR_anglos
+	}
+}
+
+country_event = {
+	id = por.151
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.151" }
+	title = por.151.t
+	desc = por.151.d
+
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = POR
+		753 = {
+			is_owned_by = POR
+			is_fully_controlled_by = POR
+		}
+	}
+	mean_time_to_happen = {
+		days = 60
+	}
+
+
+	option = { 
+		name = por.151.a
+		add_political_power = 25
+		add_ideas = POR_sueznossa
+	}
+}
+
+country_event = {
+	id = por.152
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.152" }
+	title = por.152.t
+	desc = por.152.d
+
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = POR
+		928 = {
+			is_owned_by = POR
+			is_fully_controlled_by = POR
+		}
+		964 = {
+			is_owned_by = POR
+			is_fully_controlled_by = POR
+		}
+		899 = {
+			is_owned_by = POR
+			is_fully_controlled_by = POR
+		}
+		813 = {
+			is_owned_by = POR
+			is_fully_controlled_by = POR
+		}
+		NOT = { country_exists = MAF }
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+
+
+	option = { 
+		name = por.152.a
+		add_political_power = 100
+		add_ideas = POR_africanossa
+	}
+}
+
+### scripted peace deals ###
+
+### Guinea ###
+
+# Portugal controls Sierra Leone, Guinea, and the Ivory Coast
+
+country_event = {
+	id = por.400
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.400" }
+	title = por.400.t
+	desc = por.400.d
+
+	picture = GFX_report_event_NFAGenericArmy
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = POR
+		has_war = yes
+		controls_state = 700
+		controls_state = 806
+		controls_state = 807
+		NOT = {
+			owns_state = 700
+			owns_state = 806
+			owns_state = 807
+		}
+		surrender_progress < 0.1
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = por.400.a
+		every_country = {
+			limit = {
+				OR = {
+					owns_state = 700
+					owns_state = 806
+					owns_state = 807
+				}
+				NOT = { tag = POR }
+			}
+			country_event = por.401 
+		}
+	}
+	
+	option = {
+		name = por.400.b 
+		trigger = { is_ai = no }
+		add_political_power = -50
+	}
+}
+
+# Owner(s) of Guinea, Sierra Leone, and Ivory Coast decides whether to accept the Portugese peace offer
+
+country_event = {
+	id = por.401
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.401" }
+	title = por.401.t
+	desc = {
+		text = por.401.d.a
+		trigger = { tag = NFA }
+	}
+	desc = por.401.d.b
+	picture = GFX_report_event_NFAGenericArmy
+
+	is_triggered_only = yes
+
+	option = {
+		name = por.401.a
+		trigger = {
+			tag = NFA
+		}
+		add_political_power = -100
+		if = {
+			limit = { owns_state = 700 }
+			POR = { transfer_state = 700 }
+		}
+		if = {
+			limit = { owns_state = 806 }
+			POR = { transfer_state = 806 }
+		}
+		if = {
+			limit = { owns_state = 807 }
+			POR = { transfer_state = 807 }
+		}
+		POR = { white_peace_with_ROOT = yes }
+	}
+
+	option = {
+		name = por.401.b 
+		trigger = {
+			is_ai = no
+		}
+		add_political_power = 25
+		POR = {
+			country_event = {
+				id = por.402
+				days = 1
+			}
+		}
+	}
+	
+	option = {
+		name = por.401.c
+		trigger = {
+			NOT = { tag = NFA }
+		}
+		add_political_power = -100
+		if = {
+			limit = { owns_state = 700 }
+			POR = { transfer_state = 700 }
+		}
+		if = {
+			limit = { owns_state = 806 }
+			POR = { transfer_state = 806 }
+		}
+		if = {
+			limit = { owns_state = 807 }
+			POR = { transfer_state = 807 }
+		}
+		POR = { white_peace_with_ROOT = yes }
+	}
+}
+
+# They refuse the peace deal
+
+country_event = {
+	id = por.402
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.402" }
+	title = por.402.t
+	desc = por.402.d
+	picture = GFX_report_event_NFAGenericArmy
+
+	is_triggered_only = yes
+
+	option = {
+		name = por.402.a
+	}
+}
+
+
+### Big Goa ###
+
+# Portugal controls Kolhapur during war with India
+
+country_event = {
+	id = por.405
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.405" }
+	title = por.405.t
+	desc = por.405.d
+	picture = GFX_report_event_PRF_osman
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = POR
+		controls_state = 868
+		NOT = {
+			owns_state = 868
+		}
+		is_valid_peace_target = yes
+		surrender_progress < 0.05
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = por.405.a 
+		868 = { 
+			owner = {
+				country_event = por.406 
+			}
+		}
+	}
+	option = {
+		name = por.405.b 
+		trigger = { is_ai = no }
+		add_political_power = -50
+	}
+}
+
+# Princes decide whether to accept the Portugese peace offer
+
+country_event = {
+	id = por.406
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.406" }
+	title = por.406.t
+	desc = por.406.d
+	picture = GFX_report_event_PRF_osman
+
+	is_triggered_only = yes
+
+	option = {
+		name = por.406.a 
+		add_political_power = -50
+		POR = {
+			transfer_state = 868
+			white_peace_with_ROOT = yes
+		}
+	}
+
+	option = {
+		name = por.406.b 
+		trigger = {
+			is_ai = no
+		}
+		add_political_power = 25
+		POR = {
+			country_event = {
+				id = por.407
+				days = 1
+			}
+		}
+	}
+}
+
+# India has refused the peace deal
+
+country_event = {
+	id = por.407
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.407" }
+	title = por.407.t
+	desc = por.407.d
+	picture = GFX_report_event_PRF_osman
+
+	is_triggered_only = yes
+
+	option = {
+		name = por.407.a
+	}
+}
+
+### Gold Coast Event removed now that NFA starts with it instead of MAF###
+
+### Galicia ###
+
+country_event = {
+	id = por.415
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.415" }
+	title = por.415.t
+	desc = {
+		text = por.415.d.b
+		trigger = {
+			171 = { 
+				owner = {
+					OR = {
+						has_government = totalist
+						has_government = syndicalist
+						has_government = radical_socialist
+					}
+				}
+			}
+		}
+	}
+	desc = por.415.d.a
+	picture = GFX_report_event_SPA_alfonso_xiii
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = POR
+		controls_state = 171
+		NOT = {
+			owns_state = 171
+		}
+		is_valid_peace_target = yes
+		surrender_progress < 0.1
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = por.415.a
+		171 = { 
+			owner = {
+				country_event = por.416 
+			}
+		}
+	}
+	option = {
+		name = por.415.b 
+		trigger = { is_ai = no }
+		add_political_power = -50
+		if = {
+			limit = {
+				171 = { 
+					owner = {
+						NOT = {
+							OR = {
+								has_government = totalist
+								has_government = syndicalist
+								has_government = radical_socialist
+							}
+						}
+					}
+				}
+			}
+			add_stability = -0.02
+			add_war_support = -0.15
+		}
+	}
+}
+
+# SPA decides whether to accept the Portugese peace offer
+
+country_event = {
+	id = por.416
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.416" }
+	title = por.416.t
+	desc = por.416.d
+	picture = GFX_report_event_SPA_alfonso_xiii
+
+	is_triggered_only = yes
+
+	option = {
+		name = por.416.a #CNT-FAI
+		trigger = {
+			171 = { 
+				owner = {
+					OR = {
+						has_government = totalist
+						has_government = syndicalist
+						has_government = radical_socialist
+					}
+					original_tag = SPA
+				}
+			}
+		}
+		add_political_power = -100
+		POR = {
+			transfer_state = 171
+			white_peace_with_ROOT = yes
+		}
+	}
+	
+	option = {
+		name = por.416.c #Other Spanish factions
+		trigger = {
+			171 = { 
+				owner = {
+					NOT = {
+						OR = {
+							has_government = totalist
+							has_government = syndicalist
+							has_government = radical_socialist
+						}
+					}
+					original_tag = SPA
+				}
+			}
+		}
+		add_political_power = -100
+		POR = {
+			transfer_state = 171
+			white_peace_with_ROOT = yes
+		}
+	}
+	
+	option = {
+		name = por.416.e #Other
+		trigger = {
+			171 = { 
+				owner = {
+					NOT = { original_tag = SPA }
+				}
+			}
+		}
+		add_political_power = -50
+		POR = {
+			transfer_state = 171
+			white_peace_with_ROOT = yes
+		}
+	}
+	
+
+	option = {
+		name = por.416.b 
+		trigger = {
+			is_ai = no
+		}
+		add_political_power = 25
+		POR = {
+			country_event = {
+				id = por.417
+				days = 1
+			}
+		}
+	}
+}
+
+# SPA has refused the peace deal
+
+country_event = {
+	id = por.417
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.417" }
+	title = por.417.t
+	desc = por.417.d
+	picture = GFX_report_event_SPA_alfonso_xiii
+
+	is_triggered_only = yes
+
+	option = {
+		name = por.417.a
+	}
+}
+
+### Events 420-429 were removed as they were duplicate in their function to 415-419 ###
+
+### Panama ###
+
+# Portugal controls Panama
+
+country_event = {
+	id = por.430
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.430" }
+	title = por.430.t
+	desc = por.430.d
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = POR
+		controls_state = 685
+		NOT = { owns_state = 685 }
+		is_valid_peace_target = yes
+		surrender_progress < 0.1
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = por.430.a 
+		685 = { 
+			owner = {
+				country_event = por.431 
+			}
+		}
+	}
+	option = {
+		name = por.430.b 
+		trigger = { is_ai = no }
+		add_political_power = -10
+	}
+}
+
+# USA decides whether to accept the Portugese peace offer
+
+country_event = {
+	id = por.431
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.431" }
+	title = por.431.t
+	desc = por.431.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = por.431.a 
+		add_political_power = -100
+		POR = {
+			transfer_state = 685
+			white_peace_with_ROOT = yes
+		}
+	}
+	
+	option = {
+		name = por.431.c 
+		trigger = {
+			is_ai = no
+			original_tag = CAN
+		}
+		add_political_power = 25
+		POR = {
+			country_event = {
+				id = por.432
+				days = 1
+			}
+		}
+	}
+
+	option = {
+		name = por.431.b 
+		trigger = {
+			is_ai = no
+			NOT = { original_tag = CAN }
+		}
+		add_political_power = 25
+		POR = {
+			country_event = {
+				id = por.432
+				days = 1
+			}
+		}
+	}
+}
+
+# USA has refused the peace deal
+
+country_event = {
+	id = por.432
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.432" }
+	title = por.432.t
+	desc = {
+		text = por.432.d.b
+		trigger = {
+			685 = { 
+				owner = {
+					original_tag = CAN
+				}
+			}
+		}
+	}
+	desc = por.432.d.a
+
+	is_triggered_only = yes
+
+	option = {
+		name = por.432.a
+	}
+}
+
+
+### events 435-439 removed for being duplicate in nature to 430-434 ###
+
+### CON OTT ###
+
+# Portugal controls Constantinople
+
+country_event = {
+	id = por.440
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.440" }
+	title = por.440.t
+	desc = por.440.d
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = POR
+		controls_state = 340
+		controls_state = 773
+		controls_state = 341
+		NOT = {
+			owns_state = 340
+			owns_state = 773
+			owns_state = 341
+		}
+		is_valid_peace_target = yes
+		surrender_progress < 0.1
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = por.440.a 
+		every_country = {
+			limit = {
+				OR = {
+					owns_state = 340
+					owns_state = 773
+					owns_state = 341
+				}
+				NOT = { tag = POR }
+			}
+			country_event = por.441 
+		}
+	}
+	option = {
+		name = por.440.b 
+		trigger = { is_ai = no }
+		add_political_power = -300
+	}
+}
+
+# OTT decides whether to accept the Portugese peace offer
+
+country_event = {
+	id = por.441
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.441" }
+	title = por.441.t
+	desc = por.441.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = por.441.a 
+		add_political_power = -200
+		if = {
+			limit = { owns_state = 340 }
+			POR = { transfer_state = 340 }
+		}
+		if = {
+			limit = { owns_state = 341 }
+			POR = { transfer_state = 341 }
+		}
+		if = {
+			limit = { owns_state = 773 }
+			POR = { transfer_state = 773 }
+		}
+		POR = { white_peace_with_ROOT = yes }
+	}
+
+	option = {
+		name = por.441.b 
+		trigger = {
+			is_ai = no
+		}
+		add_political_power = 25
+		POR = {
+			country_event = {
+				id = por.442
+				days = 1
+			}
+		}
+	}
+}
+
+# OTT has refused the peace deal
+
+country_event = {
+	id = por.442
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.442" }
+	title = por.442.t
+	desc = por.442.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = por.442.a
+	}
+}
+
+### events 445-449 removed for being duplicate in nature to 440-444 ###
+
+### Suez ###
+
+country_event = {
+	id = por.450
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.450" }
+	title = por.450.t
+	desc = por.450.d
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = POR
+		has_war_with = EGY
+		controls_state = 753
+		NOT = { owns_state = 753 }
+		is_valid_peace_target = yes
+		surrender_progress < 0.1
+}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = por.450.a 
+		753 = { 
+			owner = {
+				country_event = por.451 
+			}
+		}
+	}
+	option = {
+		name = por.450.b 
+		trigger = { is_ai = no }
+		add_political_power = -150
+	}
+}
+
+# EGY decides whether to accept the Portugese peace offer
+
+country_event = {
+	id = por.451
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.451" }
+	title = por.451.t
+	desc = por.451.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = por.451.a 
+		add_political_power = -50
+		POR = {
+			transfer_state = 753
+			white_peace_with_ROOT = yes
+		}
+	}
+
+	option = {
+		name = por.451.b 
+		trigger = {
+			is_ai = no
+		}
+		add_political_power = 25
+		POR = {
+			country_event = {
+				id = por.452
+				days = 1
+			}
+		}
+	}
+}
+
+# EGY has refused the peace deal
+
+country_event = {
+	id = por.452
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.452" }
+	title = por.452.t
+	desc = por.452.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = por.452.a
+	}
+}
+
+
+### events 455-464 removed for being duplicate in nature to 450-454 ###
+
+### indo DEI ###
+
+# Portugal controls required provs
+
+country_event = {
+	id = por.470
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.470" }
+	title = por.470.t
+	desc = por.470.d
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = POR
+		controls_state = 672
+		controls_state = 1020
+		controls_state = 1018
+		controls_state = 1017
+		controls_state = 667
+		NOT = {
+			owns_state = 672
+			owns_state = 1020
+			owns_state = 1018
+			owns_state = 1017
+			owns_state = 667
+		}
+		is_valid_peace_target = yes
+		surrender_progress < 0.1
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = por.470.a 
+		every_country = {
+			limit = {
+				OR = {
+					owns_state = 672
+					owns_state = 1020
+					owns_state = 1018
+					owns_state = 1017
+					owns_state = 667
+				}
+				NOT = { tag = POR }
+			}
+			country_event = por.471 
+		}
+	}
+	option = {
+		name = por.470.b 
+		trigger = { is_ai = no }
+		add_political_power = -50
+	}
+}
+
+# dei decides whether to accept the Portugese peace offer
+
+country_event = {
+	id = por.471
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.471" }
+	title = por.471.t
+	desc = por.471.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = por.471.a 
+		add_political_power = -100
+		POR = {
+			transfer_state = 672
+			transfer_state = 667
+			transfer_state = 1018
+			transfer_state = 1017
+			transfer_state = 1020
+			white_peace_with_ROOT = yes
+		}
+	}
+
+	option = {
+		name = por.471.b 
+		trigger = {
+			is_ai = no
+		}
+		add_political_power = 25
+		POR = {
+			country_event = {
+				id = por.472
+				days = 1
+			}
+		}
+	}
+}
+
+# DEI has refused the peace deal
+
+country_event = {
+	id = por.472
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.472" }
+	title = por.472.t
+	desc = {
+		text = por.472.d.b
+		trigger = {
+			1020 = { 
+				owner = {
+					original_tag = INS
+				}
+			}
+		}
+	}
+	desc = por.472.d.a
+
+	is_triggered_only = yes
+
+	option = {
+		name = por.472.a
+	}
+}
+
+### events 475-479 removed for being duplicate in nature to 470-474 ###
+
+### Singapore ###
+
+# Portugal controls Singapore
+
+country_event = {
+	id = por.480
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.480" }
+	title = por.480.t
+	desc = por.480.d
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = POR
+		controls_state = 336
+		NOT = { owns_state = 336 }
+		is_valid_peace_target = yes
+		surrender_progress < 0.1
+}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = por.480.a 
+		336 = { 
+			owner = {
+				country_event = por.481 
+			}
+		}
+	}
+	option = {
+		name = por.480.b 
+		trigger = { is_ai = no }
+		add_political_power = 10
+	}
+}
+
+# GEA decides whether to accept the Portugese peace offer
+
+country_event = {
+	id = por.481
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.481" }
+	title = por.481.t
+	desc = por.481.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = por.481.a 
+		add_political_power = -150
+		POR = {
+			transfer_state = 336
+			white_peace_with_ROOT = yes
+		}
+	}
+
+	option = {
+		name = por.481.b 
+		trigger = {
+			is_ai = no
+		}
+		add_political_power = 25
+		POR = {
+			country_event = {
+				id = por.482
+				days = 1
+			}
+		}
+	}
+}
+
+# GEA has refused the peace deal
+
+country_event = {
+	id = por.482
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.482" }
+	title = por.482.t
+	desc = por.482.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = por.482.a
+	}
+}
+
+### Djibouti GER ###
+
+# Portugal controls Djibouti
+
+country_event = {
+	id = por.485
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.485" }
+	title = por.485.t
+	desc = {
+		text = por.485.d.b
+		trigger = {
+			268 = { 
+				owner = {
+					tag = SOM
+				}
+			}
+		}
+	}
+	desc = por.485.d.a
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = POR
+		controls_state = 268
+		NOT = { owns_state = 268 }
+		is_valid_peace_target = yes
+		surrender_progress < 0.1
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = por.485.a 
+		268 = { 
+			owner = {
+				country_event = por.486 
+			}
+		}
+	}
+	option = {
+		name = por.485.b 
+		trigger = { is_ai = no }
+		add_political_power = -50
+	}
+}
+
+# GER decides whether to accept the Portugese peace offer
+
+country_event = {
+	id = por.486
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.486" }
+	title = por.486.t
+	desc = por.486.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = por.486.a 
+		add_political_power = -150
+		POR = {
+			transfer_state = 268
+			white_peace_with_ROOT = yes
+		}
+	}
+
+	option = {
+		name = por.486.b 
+		trigger = {
+			is_ai = no
+			tag = GER
+		}
+		add_political_power = 25
+		POR = {
+			country_event = {
+				id = por.487
+				days = 1
+			}
+		}
+	}
+	option = {
+		name = por.486.c
+		trigger = {
+			is_ai = no
+			NOT = { tag = GER }
+		}
+		add_political_power = 25
+		POR = {
+			country_event = {
+				id = por.487
+				days = 1
+			}
+		}
+	}
+}
+
+# GER has refused the peace deal
+
+country_event = {
+	id = por.487
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.487" }
+	title = por.487.t
+	desc = por.487.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = por.487.a
+	}
+}
+
+### events 490-494 removed for being duplicate in nature to 485-489 ###
+
+### Yemeni War ###
+
+# Portugal controls Aden
+
+country_event = {
+	id = por.495
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.495" }
+	title = por.495.t
+	desc = por.495.d
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = POR
+		controls_state = 659
+		NOT = { owns_state = 659 }
+		is_valid_peace_target = yes
+		surrender_progress < 0.1
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = por.495.a 
+		659 = { 
+			owner = {
+				country_event = por.496 
+			}
+		}
+	}
+	option = {
+		name = por.495.b 
+		trigger = { is_ai = no }
+		add_political_power = -25
+	}
+}
+
+# YEM decides whether to accept the Portugese peace offer
+
+country_event = {
+	id = por.496
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.496" }
+	title = por.496.t
+	desc = por.496.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = por.496.a 
+		add_political_power = -100
+		POR = {
+			transfer_state = 659
+			white_peace_with_ROOT = yes
+		}
+	}
+
+	option = {
+		name = por.496.b 
+		trigger = {
+			is_ai = no
+		}
+		add_political_power = 25
+		POR = {
+			country_event = {
+				id = por.497
+				days = 1
+			}
+		}
+	}
+}
+
+# yem has refused the peace deal
+
+country_event = {
+	id = por.497
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.497" }
+	title = por.497.t
+	desc = por.497.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = por.497.a
+	}
+}
+
+
+### Ceylon War GER ###
+
+# Portugal controls Ceylon
+
+country_event = {
+	id = por.500
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.500" }
+	title = por.500.t
+	desc = por.500.d
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = POR
+		controls_state = 422
+		NOT = { owns_state = 422 }
+		is_valid_peace_target = yes
+		surrender_progress < 0.1
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = por.500.a 
+		422 = { 
+			owner = {
+				country_event = por.501
+			}
+		}
+	}
+	option = {
+		name = por.500.b 
+		trigger = { is_ai = no }
+		add_political_power = -10
+	}
+}
+
+# GER decides whether to accept the Portugese peace offer
+
+country_event = {
+	id = por.501
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.501" }
+	title = por.501.t
+	desc = por.501.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = por.501.a 
+		trigger = {
+			NOT = { tag = PRF }
+		}
+		add_political_power = -100
+		POR = {
+			transfer_state = 422
+			white_peace_with_ROOT = yes
+			if = {
+				limit = {
+					controls_state = 281 
+					ROOT = { owns_state = 281 }
+				}
+				transfer_state = 281
+			}
+		}
+	}
+	
+	option = {
+		name = por.501.c
+		trigger = {
+			tag = PRF
+		}
+		add_political_power = -100
+		POR = {
+			transfer_state = 422
+			white_peace_with_ROOT = yes
+			if = {
+				limit = {
+					controls_state = 281 
+					ROOT = { owns_state = 281 }
+				}
+				transfer_state = 281
+			}
+		}
+	}
+
+	option = {
+		name = por.501.b 
+		trigger = {
+			is_ai = no
+		}
+		add_political_power = 25
+		POR = {
+			country_event = {
+				id = por.502
+				days = 1
+			}
+		}
+	}
+}
+
+# GER has refused the peace deal
+
+country_event = {
+	id = por.502
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.502" }
+	title = por.502.t
+	desc = por.502.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = por.502.a
+	}
+}
+
+
+### events 505-509 removed for being duplicate in nature to 500-504 ###
+
+### Rhodesia ###
+
+# Portugal controls RHO
+
+country_event = {
+	id = por.510
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.510" }
+	title = por.510.t
+	desc = {
+		text = por.510.d.a
+		trigger = {
+			545 = { 
+				owner = {
+					OR = {
+						tag = RHO
+						tag = SAF
+					}
+				}
+			}
+		}
+	}
+	desc = por.510.d.b
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = POR
+		controls_state = 545
+		NOT = { owns_state = 545 }
+		is_valid_peace_target = yes
+		surrender_progress < 0.1
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = por.510.a 
+		545 = { 
+			owner = {
+				country_event = por.511 
+			}
+		}
+	}
+	option = {
+		name = por.510.b 
+		trigger = { is_ai = no }
+		add_political_power = -25
+	}
+}
+
+# SAF decides whether to accept the Portugese peace offer
+
+country_event = {
+	id = por.511
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.511" }
+	title = por.511.t
+	desc = por.511.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = por.511.a 
+		add_political_power = -100
+		POR = {
+			white_peace_with_ROOT = yes
+			transfer_state = 545
+		}
+	}
+
+	option = {
+		name = por.511.b 
+		trigger = {
+			is_ai = no
+		}
+		add_political_power = 25
+		POR = {
+			country_event = {
+				id = por.512
+				days = 1
+			}
+		}
+	}
+}
+
+# saf has refused the peace deal
+
+country_event = {
+	id = por.512
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.512" }
+	title = por.512.t
+	desc = por.512.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = por.512.a
+	}
+}
+
+### Iraq War OTT ###
+
+# Portugal controls Iraq
+
+country_event = {
+	id = por.515
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.515" }
+	title = por.515.t
+	desc = {
+		text = por.515.d.a
+		trigger = {
+			676 = {
+				owner = {
+					original_tag = OTT
+				}
+			}
+		}
+	}
+	desc = por.515.d.b
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = POR
+		controls_state = 812
+		controls_state = 291
+		controls_state = 349
+		controls_state = 676
+		NOT = {
+			owns_state = 812
+			owns_state = 291
+			owns_state = 349
+			owns_state = 676
+		}
+		is_valid_peace_target = yes
+		surrender_progress < 0.1
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = por.515.a 
+		every_country = {
+			limit = {
+				OR = {
+					owns_state = 291
+					owns_state = 812
+					owns_state = 349
+					owns_state = 676
+				}
+				NOT = { tag = POR }
+			}
+			country_event = por.516 
+		}
+	}
+	option = {
+		name = por.515.b 
+		trigger = { is_ai = no }
+		add_political_power = -10
+	}
+}
+
+# OTT decides whether to accept the Portugese peace offer
+
+country_event = {
+	id = por.516
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.516" }
+	title = por.516.t
+	desc = por.516.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = por.516.a 
+		add_political_power = -100
+		if = {
+			limit = { owns_state = 291 }
+			POR = { transfer_state = 291 }
+		}
+		if = {
+			limit = { owns_state = 812 }
+			POR = { transfer_state = 812 }
+		}
+		if = {
+			limit = { owns_state = 349 }
+			POR = { transfer_state = 349 }
+		}
+		if = {
+			limit = { owns_state = 676 }
+			POR = { transfer_state = 676 }
+		}
+		if = {
+			limit = { owns_state = 413 }
+			POR = { transfer_state = 413 }
+		}
+		POR = { white_peace_with_ROOT = yes }
+	}
+
+	option = {
+		name = por.516.b 
+		trigger = {
+			is_ai = no
+		}
+		add_political_power = 25
+		POR = {
+			country_event = {
+				id = por.517
+				days = 1
+			}
+		}
+	}
+}
+
+# OTT has refused the peace deal
+
+country_event = {
+	id = por.517
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.517" }
+	title = por.517.t
+	desc = por.517.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = por.517.a
+	}
+}
+
+### KHUZ ###
+
+# Portugal controls Iraq
+
+country_event = {
+	id = por.520
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.520" }
+	title = por.520.t
+	desc = por.520.d
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = POR
+		controls_state = 413
+		NOT = { owns_state = 413 }
+		is_valid_peace_target = yes
+		surrender_progress < 0.1
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = por.520.a 
+		413 = { 
+			owner = {
+				country_event = por.521 
+			}
+		}
+	}
+	option = {
+		name = por.520.b 
+		trigger = { is_ai = no }
+		add_political_power = -10
+	}
+}
+
+# per decides whether to accept the Portugese peace offer
+
+country_event = {
+	id = por.521
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.521" }
+	title = por.521.t
+	desc = por.521.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = por.521.a 
+		add_political_power = -100
+		POR = {
+			transfer_state = 413
+			white_peace_with_ROOT = yes
+		}
+	}
+
+	option = {
+		name = por.521.b 
+		trigger = {
+			is_ai = no
+		}
+		add_political_power = 25
+		POR = {
+			country_event = {
+				id = por.522
+				days = 1
+			}
+		}
+	}
+}
+
+# per has refused the peace deal
+
+country_event = {
+	id = por.522
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.522" }
+	title = por.522.t
+	desc = por.522.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = por.522.a
+	}
+}
+
+
+### MAF ###
+
+#Portugal controls BORDER REGIONS
+
+country_event = {
+	id = por.525
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.525" }
+	title = por.525.t
+	desc = por.525.d
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = POR
+		controls_state = 879
+		controls_state = 295
+		controls_state = 881
+		controls_state = 928
+		controls_state = 899
+		controls_state = 964
+		NOT = {
+			owns_state = 879
+			owns_state = 295
+			owns_state = 881
+			owns_state = 928
+			owns_state = 899
+			owns_state = 964
+		}
+		is_valid_peace_target = yes
+		surrender_progress < 0.1
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = por.525.a 
+		every_country = {
+			limit = {
+				OR = {
+					owns_state = 879
+					owns_state = 295
+					owns_state = 881
+					owns_state = 928
+					owns_state = 899
+					owns_state = 964
+					owns_state = 541
+					owns_state = 1097
+				}
+				NOT = { tag = POR }
+			}
+			country_event = por.526 
+		}
+	}
+	option = {
+		name = por.525.b 
+		trigger = { is_ai = no }
+		add_political_power = -100
+		add_war_support = -0.10
+	}
+}
+
+# MAF decides whether to accept the Portugese peace offer
+
+country_event = {
+	id = por.526
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.526" }
+	title = por.526.t
+	desc = por.526.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = por.526.a 
+		add_political_power = -250
+		add_stability = -0.10
+		add_war_support = -0.10
+		if = {
+			limit = { tag = MAF }
+			add_ideas = MAF_Lost_Bushwar_Debuff
+		}
+		if = {
+			limit = { owns_state = 879 }
+			POR = { transfer_state = 879 }
+		}
+		if = {
+			limit = { owns_state = 295 }
+			POR = { transfer_state = 295 }
+		}
+		if = {
+			limit = { owns_state = 881 }
+			POR = { transfer_state = 881 }
+		}
+		if = {
+			limit = { owns_state = 928 }
+			POR = { transfer_state = 928 }
+		}
+		if = {
+			limit = { owns_state = 899 }
+			POR = { transfer_state = 899 }
+		}
+		if = {
+			limit = { owns_state = 964 }
+			POR = { transfer_state = 964 }
+		}
+		if = {
+			limit = { owns_state = 541 }
+			POR = { transfer_state = 541 }
+		}
+		if = {
+			limit = { owns_state = 1097 }
+			POR = { transfer_state = 1097 }
+		}
+		POR = {
+			white_peace_with_ROOT = yes
+		}
+	}
+
+	option = {
+		name = por.526.b 
+		trigger = {
+			is_ai = no
+		}
+		add_political_power = -500
+		add_stability = -0.75
+		add_war_support = -0.75
+		POR = {
+			country_event = {
+				id = por.527
+				days = 1
+			}
+		}
+	}
+}
+
+# maf has refused the peace deal
+
+
+country_event = {
+	id = por.527
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.527" }
+	title = por.527.t
+	desc = por.527.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = por.527.a
+	}
+}
+
+### GEA ###
+
+#Portugal controls GEA
+
+country_event = {
+	id = por.530
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.530" }
+	title = por.530.t
+	desc = por.530.d
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = POR
+		controls_state = 846
+		controls_state = 333
+		controls_state = 757
+		is_valid_peace_target = yes
+		surrender_progress < 0.1
+		GEA = { has_capitulated = yes }
+	}
+
+	mean_time_to_happen = {
+		days = 90
+	}
+
+	option = {
+		name = por.530.a 
+		GER = { country_event = por.531 }
+	}
+	option = {
+		name = por.530.b 
+		trigger = { is_ai = no }
+		add_political_power = -100
+		add_war_support = -0.05
+	}
+}
+
+# GER decides whether to accept the Portugese peace offer
+
+country_event = {
+	id = por.531
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.531" }
+	title = por.531.t
+	desc = por.531.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = por.531.a 
+		POR = {
+			white_peace_with_ROOT = yes
+		annex_country = { target = GEA transfer_troops = no }
+		}
+	}
+
+	option = {
+		name = por.531.b 
+		trigger = {
+			is_ai = no
+		}
+		add_political_power = -100
+		add_stability = -0.05
+		add_war_support = -0.25
+		POR = {
+			country_event = {
+				id = por.532
+				days = 1
+			}
+		}
+	}
+}
+
+# gea has refused the peace deal
+
+
+country_event = {
+	id = por.532
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.532" }
+	title = por.532.t
+	desc = por.532.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = por.532.a
+	}
+}
+
+
+### MOR ###
+
+#Portugal controls MOR
+
+country_event = {
+	id = por.535
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.535" }
+	title = por.535.t
+	desc = por.535.d
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = POR
+		controls_state = 462
+		controls_state = 461
+		NOT = {
+			owns_state = 462
+			owns_state = 461
+		}
+
+		is_valid_peace_target = yes
+		surrender_progress < 0.1
+	}
+
+	mean_time_to_happen = {
+		days = 40
+	}
+
+	option = {
+		name = por.535.a 
+		MOR = {
+			faction_leader = {
+				country_event = por.536
+			}
+		}
+	}
+	option = {
+		name = por.530.b 
+		trigger = { is_ai = no }
+		add_political_power = -10
+		add_war_support = -0.05
+	}
+}
+
+# GER decides whether to accept the Portugese peace offer
+
+country_event = {
+	id = por.536
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.536" }
+	title = por.536.t
+	desc = por.536.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = por.536.a 
+		POR = {
+			white_peace_with_ROOT = yes
+		annex_country = { target = MOR transfer_troops = no }
+		}
+	}
+
+	option = {
+		name = por.536.b 
+		trigger = {
+			is_ai = no
+		}
+		add_political_power = -100
+		add_stability = -0.05
+		add_war_support = -0.25
+		POR = {
+			country_event = {
+				id = por.537
+				days = 1
+			}
+		}
+	}
+}
+
+# ger has refused the peace deal
+
+
+country_event = {
+	id = por.537
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.537" }
+	title = por.537.t
+	desc = por.537.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = por.537.a
+	}
+}
+
+### Gibraltar Kingdom ###
+
+# Portugal controls Gibraltar during war with Kingdom
+
+country_event = {
+	id = por.540
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.540" }
+	title = por.540.t
+	desc = {
+		text = por.540.d.b
+		trigger = {
+			118 = { 
+				owner = {
+					OR = {
+						has_government = totalist
+						has_government = syndicalist
+						has_government = radical_socialist
+					}
+				}
+			}
+		}
+	}
+	desc = por.540.d.a
+	picture = GFX_report_event_SPA_alfonso_xiii
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = POR
+		controls_state = 118
+		NOT = {
+			owns_state = 118
+		}
+		is_valid_peace_target = yes
+		surrender_progress < 0.1
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = por.540.a
+		118 = { 
+			owner = {
+				country_event = por.541
+			}
+		}
+	}
+	option = {
+		name = por.540.b 
+		trigger = { is_ai = no }
+		add_political_power = -50
+		if = {
+			limit = {
+				118 = { 
+					owner = {
+						NOT = {
+							OR = {
+								has_government = totalist
+								has_government = syndicalist
+								has_government = radical_socialist
+							}
+						}
+					}
+				}
+			}
+			add_stability = -0.02
+			add_war_support = -0.15
+		}
+	}
+}
+
+# SPA decides whether to accept the Portugese peace offer
+
+country_event = {
+	id = por.541
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.541" }
+	title = por.416.t
+	desc = por.416.d
+	picture = GFX_report_event_SPA_alfonso_xiii
+
+	is_triggered_only = yes
+
+	option = {
+		name = por.541.a #CNT-FAI
+		trigger = {
+			118 = { 
+				owner = {
+					OR = {
+						has_government = totalist
+						has_government = syndicalist
+						has_government = radical_socialist
+					}
+					original_tag = SPA
+				}
+			}
+		}
+		add_political_power = -100
+		POR = {
+			transfer_state = 118
+			white_peace_with_ROOT = yes
+		}
+	}
+	
+	option = {
+		name = por.541.c #Other Spanish factions
+		trigger = {
+			118 = { 
+				owner = {
+					NOT = {
+						OR = {
+							has_government = totalist
+							has_government = syndicalist
+							has_government = radical_socialist
+						}
+					}
+					original_tag = SPA
+				}
+			}
+		}
+		add_political_power = -100
+		POR = {
+			transfer_state = 118
+			white_peace_with_ROOT = yes
+		}
+	}
+	
+	option = {
+		name = por.541.e #Other
+		trigger = {
+			118 = { 
+				owner = {
+					NOT = { original_tag = SPA }
+				}
+			}
+		}
+		add_political_power = -50
+		POR = {
+			transfer_state = 118
+			white_peace_with_ROOT = yes
+		}
+	}
+	
+
+	option = {
+		name = por.541.b 
+		trigger = {
+			is_ai = no
+		}
+		add_political_power = 25
+		POR = {
+			country_event = {
+				id = por.417
+				days = 1
+			}
+		}
+	}
+}
+
+# SPA has refused the peace deal
+
+country_event = {
+	id = por.542
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.542" }
+	title = por.542.t
+	desc = por.542.d
+	picture = GFX_report_event_SPA_alfonso_xiii
+
+	is_triggered_only = yes
+
+	option = {
+		name = por.542.a
+	}
+}
+
+#events 545-554 removed for being same in nature to 540-544, & 555-559 removed for being similar to 515-19
+
+
+
+country_event = { #Fate of Spain
+	id = por.560
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.560 FROM = [From.GetName]" }
+	title = annexation_SPA_CONQ
+	desc = annexation_SPA_CONQ_desc
+	picture = GFX_report_event_generic_conference2
+	
+	trigger = {
+		tag = POR
+		POR = {
+			owns_state = 118
+			owns_state = 169
+			owns_state = 173
+			owns_state = 795
+			owns_state = 170
+			owns_state = 175
+			owns_state = 1316
+			owns_state = 167
+			owns_state = 168
+			owns_state = 951
+			owns_state = 41
+			owns_state = 165
+			owns_state = 166
+			owns_state = 940
+			owns_state = 1313
+			owns_state = 172
+			owns_state = 176
+			owns_state = 174
+			owns_state = 171
+			owns_state = 793
+		}
+	}
+	
+	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = {
+			add_to_temp_array = { core_removal_array = SWF }
+			add_to_temp_array = { core_removal_array = SPA }
+			add_to_temp_array = { core_removal_array = SPR }
+			remove_all_cores_and_claims_of_tags = yes
+		}
+	}
+
+	option = { #Destroy
+		name = por.560.a
+		trigger = {
+			has_socialist_government = no
+			tag = POR
+		}
+		ai_chance = {
+			base = 100
+		}
+		ESP = { 
+			transfer_state = 165
+			transfer_state = 940
+			transfer_state = 166
+			transfer_state = 167
+			transfer_state = 168
+			transfer_state = 177
+			transfer_state = 1313
+
+			add_state_core = 165
+			add_state_core = 940
+			add_state_core = 166
+			add_state_core = 167
+			add_state_core = 168
+			add_state_core = 177
+			add_state_core = 1313
+			set_cosmetic_tag = ESP
+		}
+		NSP = { 
+			transfer_state = 172
+			transfer_state = 174
+			transfer_state = 176
+			transfer_state = 793
+			transfer_state = 951
+			transfer_state = 1081
+
+			add_state_core = 172
+			add_state_core = 174
+			add_state_core = 176
+			add_state_core = 793
+			add_state_core = 951
+			add_state_core = 1081
+			set_cosmetic_tag = NSP
+		}
+		SSP = { 
+			transfer_state = 169
+			transfer_state = 170
+			transfer_state = 173
+			transfer_state = 795
+			transfer_state = 1316
+
+
+			add_state_core = 169
+			add_state_core = 170
+			add_state_core = 173
+			add_state_core = 795
+			add_state_core = 1316
+			set_cosmetic_tag = SSP
+		}
+		CSP = { 
+			transfer_state = 41
+			transfer_state = 175
+			transfer_state = 1082
+
+			add_state_core = 41
+			add_state_core = 175
+			add_state_core = 1082
+			set_cosmetic_tag = CSP
+		}
+		POR = { puppet = ESP }
+		POR = { puppet = CSP }
+		POR = { puppet = NSP }
+		POR = { puppet = SSP }
+	}
+}
+
+country_event = { 
+	id = por.561
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.561 FROM = [From.GetName]" }
+	title = por.561.t
+	desc = por.561.d
+	picture = GFX_report_event_generic_conference
+
+	is_triggered_only = yes
+
+	option = {
+		name = por.561.a
+		ai_chance = { base = 100 }
+		
+		POR = { 
+			add_to_faction = BRA
+			country_event = {
+				id = por.562
+				days = 1
+			}
+		}
+	}
+	option = {
+		name = por.561.b
+		ai_chance = { base = 0 }
+		
+		POR = { 
+			country_event = {
+				id = por.563
+				days = 1
+			}
+		}
+	}
+}
+country_event = { 
+	id = por.562
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.562 FROM = [From.GetName]" }
+	title = por.562.t
+	desc = por.562.d
+	picture = GFX_report_event_generic_conference
+
+	is_triggered_only = yes
+
+	option = {
+		name = por.562.a
+	}
+}
+country_event = { 
+	id = por.563
+	immediate = { log = "[GetDateText]: [Root.GetName]: event por.563 FROM = [From.GetName]" }
+	title = por.563.t
+	desc = por.563.d
+	picture = GFX_report_event_generic_conference
+
+	is_triggered_only = yes
+
+	option = {
+		name = por.563.a
+	}
+}

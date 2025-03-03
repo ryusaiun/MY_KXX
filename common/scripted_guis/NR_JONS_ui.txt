@@ -1,0 +1,92 @@
+scripted_gui = {
+	
+	GFX_JONS_BATTAL_GUI1 = {
+		context_type = player_context
+		window_name = "GFX_JONS_BATTAL_GUI1"
+		
+		triggers = {
+		}
+		visible = {
+			tag = CNT
+			has_country_leader = {
+				name = "拉米罗·莱德斯马·拉莫斯"
+				ruling_only = yes
+			}
+			has_country_flag = CNT_JONSSTZZ
+		}
+		effects = {
+			GFX_JONS_BATTAL_GUI_BUTTON1_1_click = {
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = GFX_JONS_BATTAL_GUI_vis
+						}
+					}
+					set_country_flag = GFX_JONS_BATTAL_GUI_vis
+				}
+				
+				else_if = {
+					limit = {
+						has_country_flag = GFX_JONS_BATTAL_GUI_vis
+					}
+					clr_country_flag = GFX_JONS_BATTAL_GUI_vis
+				}
+			}
+		}
+	}
+	GFX_JONS_BATTAL_GUI = {
+		context_type = player_context
+		window_name = "GFX_JONS_BATTAL_GUI"
+		
+		triggers = {
+		}
+		visible = {
+			tag = CNT
+			has_country_flag = GFX_JONS_BATTAL_GUI_vis
+		}
+		effects = {
+		GFX_JONS_LEADERQW_button_click = {
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = JONS_LEADERQW_button_desc
+						}
+					}
+					set_country_flag = JONS_LEADERQW_button_desc
+				}
+				
+				else_if = {
+					limit = {
+						has_country_flag = JONS_LEADERQW_button_desc
+					}
+					clr_country_flag = JONS_LEADERQW_button_desc
+				}
+			}
+		GFX_JONS_LEADERQW2_button_click = {
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = JONS_LEADERQW2_button_desc
+						}
+					}
+					set_country_flag = JONS_LEADERQW2_button_desc
+				}
+				
+				else_if = {
+					limit = {
+						has_country_flag = JONS_LEADERQW2_button_desc
+					}
+					clr_country_flag = JONS_LEADERQW2_button_desc
+				}
+			}
+		GFX_JONS_LEADERQW_button_close_click = {
+				if = {
+					limit = {
+						has_country_flag = GFX_JONS_BATTAL_GUI_vis
+					}
+					clr_country_flag = GFX_JONS_BATTAL_GUI_vis
+				}
+			}
+		}
+	}
+}

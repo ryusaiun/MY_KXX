@@ -1,0 +1,969 @@
+focus_tree = {
+	id = gru_VKR
+	continuous_focus_position = { x = 2700 y = 300 }
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = RUT
+		}
+	}
+	focus = {
+		id = VK_FOCUS_RUTHENIA_START_COLONIZING
+		icon = VKR_COLONIZE
+		relative_position_id = VK_FOCUS_SHARED_ESTABLISH_VK
+		x = 0
+		y = 3
+		cost = 2
+		allow_branch = {
+			has_country_flag = IS_RUT 
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_RUTHENIA_START_COLONIZING"
+			202 = {
+				add_core_of = RUT
+			}
+			set_province_name = { id = 525 name = GRU_name_province_525 }
+			202 = { set_state_name = GRU_name_state_202 }
+			set_province_name = { id = 3686 name = GRU_name_province_3686 }
+			1221 = { set_state_name = GRU_name_state_1221 }
+			set_province_name = { id = 6724 name = GRU_name_province_6724 }
+			137 = { set_state_name = GRU_name_state_137 }
+			set_province_name = { id = 6474 name = GRU_name_province_6474 }
+			227 = { set_state_name = GRU_name_state_227 }
+			set_province_name = { id = 568 name = GRU_name_province_568 }
+			196 = { set_state_name = GRU_name_state_196 }
+			set_province_name = { id = 6596 name = GRU_name_province_6596 }
+			set_province_name = { id = 11561 name = GRU_name_province_11561 }
+			226 = { set_state_name = GRU_name_state_226 }
+			set_province_name = { id = 11561 name = GRU_name_province_11561 }
+			226 = { set_state_name = GRU_name_state_226 }
+			set_province_name = { id = 11437 name = GRU_name_state_226 }
+			set_province_name = { id = 3452 name = GRU_name_province_3452 }
+			1233 = { set_state_name = GRU_name_state_1233 }
+			set_province_name = { id = 6420 name = GRU_name_province_6420 }
+			228 = { set_state_name = GRU_name_state_228 }
+			set_province_name = { id = 9461 name = GRU_name_province_9461 }
+			1284 = { set_state_name = GRU_name_state_1284 }
+			set_province_name = { id = 3508 name = GRU_name_province_3508 }
+			set_province_name = { id = 9680 name = GRU_name_province_9680 }
+
+			swap_ideas = {
+				remove_idea = VK_COLONY_ONE
+				add_idea = VK_COLONY_TWO
+			}
+		}
+		prerequisite = { focus = VK_FOCUS_SHARED_MORE_SETTLERS  }
+		prerequisite = { focus = VK_FOCUS_SHARED_OUR_OWN_RR  }
+		prerequisite = { focus = VK_FOCUS_SHARED_ENSLAVE_NATIVES  }
+	}
+	
+	focus = {
+		id = VK_FOCUS_RUTHENIA_COLONIZE_ONE
+		icon = VKR_COLONIZE_ONE
+		relative_position_id = VK_FOCUS_RUTHENIA_START_COLONIZING
+		x = -3
+		y = 1
+		available = {
+			RUT = {
+				OR = {
+			    	RUT = {
+			    		controls_state = 1240
+			    	}
+			    	any_other_country = {
+			    		is_subject_of = RUT
+			    		controls_state = 1240
+			    	}
+					any_other_country = {
+						is_in_faction_with = RUT
+						controls_state = 1240
+					}
+			    }
+			    OR = {
+			    	RUT = {
+			    		controls_state = 1244
+			    	}
+			    	any_other_country = {
+			    		is_subject_of = RUT
+			    		controls_state = 1244
+			    	}
+					any_other_country = {
+						is_in_faction_with = RUT
+						controls_state = 1244
+					}
+			    }
+			    OR = {
+			    	RUT = {
+			    		controls_state = 201
+			    	}
+			    	any_other_country = {
+			    		is_subject_of = RUT
+			    		controls_state = 201
+			    	}
+					any_other_country = {
+						is_in_faction_with = RUT
+						controls_state = 201
+					}
+			    }
+			    OR = {
+			    	RUT = {
+			    		controls_state = 198
+			    	}
+			    	any_other_country = {
+			    		is_subject_of = RUT
+			    		controls_state = 198
+			    	}
+					any_other_country = {
+						is_in_faction_with = RUT
+						controls_state = 198
+					}
+			    }
+				OR = {
+					RUT = {
+						controls_state = 194
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 194
+					}
+					any_other_country = {
+						is_in_faction_with = RUT
+						controls_state = 194
+					}
+				}
+				OR = {
+					RUT = {
+						controls_state = 1228
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 1228
+					}
+					any_other_country = {
+						is_in_faction_with = RUT
+						controls_state = 1228
+					}
+				}
+				OR = {
+					RUT = {
+						controls_state = 199
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 199
+					}
+					any_other_country = {
+						is_in_faction_with = RUT
+						controls_state = 199
+					}
+				}
+				OR = {
+					RUT = {
+						controls_state = 1245
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 1245
+					}
+					any_other_country = {
+						is_in_faction_with = RUT
+						controls_state = 1245
+					}
+				}
+				OR = {
+					RUT = {
+						controls_state = 792
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 792
+					}
+					any_other_country = {
+						is_in_faction_with = RUT
+						controls_state = 792
+					}
+				}
+				OR = {
+					RUT = {
+						controls_state = 95
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 95
+					}
+					any_other_country = {
+						is_in_faction_with = RUT
+						controls_state = 95
+					}
+				}
+				OR = {
+					RUT = {
+						controls_state = 997
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 997
+					}
+					any_other_country = {
+						is_in_faction_with = RUT
+						controls_state = 997
+					}
+				}
+				OR = {
+					RUT = {
+						controls_state = 93
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 93
+					}
+					any_other_country = {
+						is_in_faction_with = RUT
+						controls_state = 93
+					}
+				}
+				OR = {
+					RUT = {
+						controls_state = 791
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 791
+					}
+					any_other_country = {
+						is_in_faction_with = RUT
+						controls_state = 791
+					}
+				}
+				OR = {
+					RUT = {
+						controls_state = 192
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 192
+					}
+					any_other_country = {
+						is_in_faction_with = RUT
+						controls_state = 192
+					}
+				}
+				OR = {
+					RUT = {
+						controls_state = 1232
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 1232
+					}
+					any_other_country = {
+						is_in_faction_with = RUT
+						controls_state = 1232
+					}
+				}
+				OR = {
+					RUT = {
+						controls_state = 197
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 197
+					}
+					any_other_country = {
+						is_in_faction_with = RUT
+						controls_state = 197
+					}
+				}
+				OR = {
+					RUT = {
+						controls_state = 226
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 226
+					}
+					any_other_country = {
+						is_in_faction_with = RUT
+						controls_state = 226
+					}
+				}
+				OR = {
+					RUT = {
+						controls_state = 1233
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 1233
+					}
+					any_other_country = {
+						is_in_faction_with = RUT
+						controls_state = 1233
+					}
+				}
+				OR = {
+					RUT = {
+						controls_state = 203
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 203
+					}
+					any_other_country = {
+						is_in_faction_with = RUT
+						controls_state = 203
+					}
+				}
+				OR = {
+					RUT = {
+						controls_state = 1241
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 1241
+					}
+					any_other_country = {
+						is_in_faction_with = RUT
+						controls_state = 1241
+					}
+				}
+			}
+		}
+		cost = 6
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_RUTHENIA_COLONIZE_ONE"
+
+			every_state = {
+				limit = {
+					OR = {
+						state = 202
+				        state = 1240
+				        state = 1244
+				        state = 201
+				        state = 198
+				        state = 194
+				        state = 1228
+				        state = 199
+				        state = 1245
+				        state = 792
+				        state = 95
+				        state = 997
+				        state = 93
+				        state = 791
+				        state = 192
+				        state = 1232
+				        state = 197
+				        state = 226
+				        state = 1233
+				        state = 203
+				        state = 1241
+					}
+				}
+				RUT = {
+					add_state_core = PREV
+					transfer_state = PREV
+				}
+			}
+		}
+		prerequisite = { focus = VK_FOCUS_RUTHENIA_START_COLONIZING  }
+	}
+	
+	focus = {
+		id = VK_FOCUS_RUTHENIA_COLONIZE_TWO
+		icon = VKR_COLONIZE_TWO
+		relative_position_id = VK_FOCUS_RUTHENIA_START_COLONIZING
+		x = -1
+		y = 1
+		available = {
+			RUT = {
+				OR = {
+					RUT = {
+						controls_state = 196
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 196
+					}
+					any_other_country = {
+				    	is_in_faction_with = RUT
+				    	controls_state = 196
+				    }
+				}
+				OR = {
+					RUT = {
+						controls_state = 1234
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 1234
+					}
+					any_other_country = {
+				    	is_in_faction_with = RUT
+				    	controls_state = 1234
+				    }
+				}
+				OR = {
+					RUT = {
+						controls_state = 200
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 200
+					}
+					any_other_country = {
+				    	is_in_faction_with = RUT
+				    	controls_state = 200
+				    }
+				}
+				OR = {
+					RUT = {
+						controls_state = 1286
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 1286
+					}
+					any_other_country = {
+				    	is_in_faction_with = RUT
+				    	controls_state = 1286
+				    }
+				}
+				OR = {
+					RUT = {
+						controls_state = 228
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 228
+					}
+					any_other_country = {
+				    	is_in_faction_with = RUT
+				    	controls_state = 228
+				    }
+				}
+				OR = {
+					RUT = {
+						controls_state = 1238
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 1238
+					}
+					any_other_country = {
+				    	is_in_faction_with = RUT
+				    	controls_state = 1238
+				    }
+				}
+				OR = {
+					RUT = {
+						controls_state = 259
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 259
+					}
+					any_other_country = {
+				    	is_in_faction_with = RUT
+				    	controls_state = 259
+				    }
+				}
+				OR = {
+					RUT = {
+						controls_state = 1243
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 1243
+					}
+					any_other_country = {
+				    	is_in_faction_with = RUT
+				    	controls_state = 1243
+				    }
+				}
+				OR = {
+					RUT = {
+						controls_state = 1237
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 1237
+					}
+					any_other_country = {
+				    	is_in_faction_with = RUT
+				    	controls_state = 1237
+				    }
+				}
+				OR = {
+					RUT = {
+						controls_state = 193
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 193
+					}
+					any_other_country = {
+				    	is_in_faction_with = RUT
+				    	controls_state = 193
+				    }
+				}
+				OR = {
+					RUT = {
+						controls_state = 241
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 241
+					}
+					any_other_country = {
+				    	is_in_faction_with = RUT
+				    	controls_state = 241
+				    }
+				}
+				OR = {
+					RUT = {
+						controls_state = 1230
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 1230
+					}
+					any_other_country = {
+				    	is_in_faction_with = RUT
+				    	controls_state = 1230
+				    }
+				}
+				OR = {
+					RUT = {
+						controls_state = 1242
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 1242
+					}
+					any_other_country = {
+				    	is_in_faction_with = RUT
+				    	controls_state = 1242
+				    }
+				}
+				OR = {
+					RUT = {
+						controls_state = 225
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 225
+					}
+					any_other_country = {
+				    	is_in_faction_with = RUT
+				    	controls_state = 225
+				    }
+				}
+				OR = {
+					RUT = {
+						controls_state = 1239
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 1239
+					}
+					any_other_country = {
+				    	is_in_faction_with = RUT
+				    	controls_state = 1239
+				    }
+				}
+				OR = {
+					RUT = {
+						controls_state = 221
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 221
+					}
+					any_other_country = {
+				    	is_in_faction_with = RUT
+				    	controls_state = 221
+				    }
+				}
+				OR = {
+					RUT = {
+						controls_state = 1285
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 1285
+					}
+					any_other_country = {
+				    	is_in_faction_with = RUT
+				    	controls_state = 1285
+				    }
+				}
+				OR = {
+					RUT = {
+						controls_state = 1282
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 1282
+					}
+					any_other_country = {
+				    	is_in_faction_with = RUT
+				    	controls_state = 1282
+				    }
+				}
+				OR = {
+					RUT = {
+						controls_state = 1283
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 1283
+					}
+					any_other_country = {
+				    	is_in_faction_with = RUT
+				    	controls_state = 1283
+				    }
+				}
+				OR = {
+					RUT = {
+						controls_state = 227
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 227
+					}
+					any_other_country = {
+				    	is_in_faction_with = RUT
+				    	controls_state = 227
+				    }
+				}
+				OR = {
+					RUT = {
+						controls_state = 1284
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 1284
+					}
+					any_other_country = {
+				    	is_in_faction_with = RUT
+				    	controls_state = 1284
+				    }
+				}
+				OR = {
+					RUT = {
+						controls_state = 1231
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 1231
+					}
+					any_other_country = {
+				    	is_in_faction_with = RUT
+				    	controls_state = 1231
+				    }
+				}
+				OR = {
+					RUT = {
+						controls_state = 1220
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 1220
+					}
+					any_other_country = {
+				    	is_in_faction_with = RUT
+				    	controls_state = 1220
+				    }
+				}
+				OR = {
+					RUT = {
+						controls_state = 137
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 137
+					}
+					any_other_country = {
+				    	is_in_faction_with = RUT
+				    	controls_state = 137
+				    }
+				}
+				OR = {
+					RUT = {
+						controls_state = 1221
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 1221
+					}
+					any_other_country = {
+				    	is_in_faction_with = RUT
+				    	controls_state = 1221
+				    }
+				}
+			}
+		}
+		cost = 6
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_RUTHENIA_COLONIZE_TWO"
+			
+			every_state = {
+				limit = {
+					OR = {
+						state = 196
+				        state = 1234
+				        state = 200
+				        state = 1286
+				        state = 228
+				        state = 241
+				        state = 1238
+				        state = 259
+				        state = 1243
+				        state = 1237
+				        state = 193
+				        state = 241
+				        state = 1230
+				        state = 1242
+				        state = 225
+				        state = 1239
+				        state = 221
+				        state = 1285
+				        state = 1282
+				        state = 1283
+				        state = 227
+				        state = 1284
+				        state = 1231
+				        state = 1220
+				        state = 137
+				        state = 1221
+					}
+				}
+				RUT = {
+					add_state_core = PREV
+					transfer_state = PREV
+				}
+			}
+		}
+		prerequisite = { focus = VK_FOCUS_RUTHENIA_START_COLONIZING  }
+	}
+	
+	focus = {
+		id = VK_FOCUS_RUTHENIA_COLONIZE_THREE
+		icon = VKR_COLONIZE_THREE
+		relative_position_id = VK_FOCUS_RUTHENIA_START_COLONIZING
+		x = 1
+		y = 1
+		available = {
+			RUT = {
+				OR = {
+					RUT = {
+						controls_state = 1222
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 1222
+					}
+					any_other_country = {
+				    	is_in_faction_with = RUT
+				    	controls_state = 1222
+				    }
+				}
+				OR = {
+					RUT = {
+						controls_state = 78
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 78
+					}
+					any_other_country = {
+				    	is_in_faction_with = RUT
+				    	controls_state = 78
+				    }
+				}
+				OR = {
+					RUT = {
+						controls_state = 1320
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 1320
+					}
+					any_other_country = {
+				    	is_in_faction_with = RUT
+				    	controls_state = 1320
+				    }
+				}
+				OR = {
+					RUT = {
+						controls_state = 1140
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 1140
+					}
+					any_other_country = {
+				    	is_in_faction_with = RUT
+				    	controls_state = 1140
+				    }
+				}
+				OR = {
+					RUT = {
+						controls_state = 89
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 89
+					}
+					any_other_country = {
+				    	is_in_faction_with = RUT
+				    	controls_state = 89
+				    }
+				}
+				OR = {
+					RUT = {
+						controls_state = 80
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 80
+					}
+					any_other_country = {
+				    	is_in_faction_with = RUT
+				    	controls_state = 80
+				    }
+				}
+			}
+		}
+		cost = 6
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_RUTHENIA_COLONIZE_THREE"
+
+			every_state = {
+				limit = {
+					OR = {
+						state = 1222
+				        state = 78
+				        state = 1320
+				        state = 1140
+				        state = 89
+				        state = 80
+					}
+				}
+				RUT = {
+					add_state_core = PREV
+					transfer_state = PREV
+				}
+			}
+		}
+		prerequisite = { focus = VK_FOCUS_RUTHENIA_COLONIZE_ONE }
+		prerequisite = { focus = VK_FOCUS_RUTHENIA_COLONIZE_TWO  }
+	}
+	
+	focus = {
+		id = VK_FOCUS_RUTHENIA_COLONIZE_FOUR
+		icon = VKR_COLONIZE_FOUR
+		relative_position_id = VK_FOCUS_RUTHENIA_START_COLONIZING
+		x = 3
+		y = 1
+		available = {
+			RUT = {
+				OR = {
+					RUT = {
+						controls_state = 240
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 240
+					}
+					any_other_country = {
+				    	is_in_faction_with = RUT
+				    	controls_state = 240
+				    }
+				}
+				OR = {
+					RUT = {
+						controls_state = 821
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 821
+					}
+					any_other_country = {
+				    	is_in_faction_with = RUT
+				    	controls_state = 821
+				    }
+				}
+				OR = {
+					RUT = {
+						controls_state = 220
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 220
+					}
+					any_other_country = {
+				    	is_in_faction_with = RUT
+				    	controls_state = 220
+				    }
+				}
+				OR = {
+					RUT = {
+						controls_state = 1229
+					}
+					any_other_country = {
+						is_subject_of = RUT
+						controls_state = 1229
+					}
+					any_other_country = {
+				    	is_in_faction_with = RUT
+				    	controls_state = 1229
+				    }
+				}
+			}
+		}
+		cost = 6
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_RUTHENIA_COLONIZE_FOUR"
+			
+			every_state = {
+				limit = {
+					OR = {
+						state = 240
+				        state = 821
+				        state = 220
+				        state = 1229
+					}
+				}
+				RUT = {
+					add_state_core = PREV
+					transfer_state = PREV
+				}
+			}
+		}
+		prerequisite = { focus = VK_FOCUS_RUTHENIA_COLONIZE_ONE }
+		prerequisite = { focus = VK_FOCUS_RUTHENIA_COLONIZE_TWO  }
+	}
+	
+	focus = {
+		id = VK_FOCUS_RUTHENIA_COLONIZED
+		icon = VKR_COLONIZED
+		relative_position_id = VK_FOCUS_BALTENLAND_START_COLONIZING
+		x = 0
+		y = 2
+		available = {
+		}
+		cost = 5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_RUTHENIA_COLONIZED"
+			swap_ideas = {
+			remove_idea = VK_COLONY_TWO
+			add_idea = VK_COLONY_THREE
+						}
+			set_country_flag = Germanized_VKR
+		}
+		prerequisite = { focus = VK_FOCUS_RUTHENIA_COLONIZE_THREE }
+		prerequisite = { focus = VK_FOCUS_RUTHENIA_COLONIZE_FOUR  }
+	}
+	shared_focus = VK_FOCUS_SHARED_ESTABLISH_VK
+	#shared_focus = GRU_formation_of_the_nva
+}

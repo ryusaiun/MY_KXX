@@ -1,0 +1,15 @@
+﻿###OOB File for GEA.txt
+units = {
+	fleet = {
+		name = "Unfähige flotte"
+		naval_base = 12299 ###Change to proper province number
+		task_force = {
+			name = "Unfähige flotte"
+			location = 12299 ###Change to proper province number
+            ship = { name = "SMS Aachen" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = GEA version_name = "Aachen Class" } } }
+            ship = { name = "SMS Chemnitz" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = GEA version_name = "Aachen Class" } } }
+            ship = { name = "SMS Braunschweig" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = GEA version_name = "Aachen Class" } } }
+			ship = { name = "SMS Wien" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = GEA version_name = "Aachen Class" } } }
+		}
+	}
+}

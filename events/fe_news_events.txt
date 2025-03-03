@@ -1,0 +1,38 @@
+﻿
+add_namespace = fe_news
+
+### Opening Helsinki Pyramids
+news_event = {
+	id = fe_news.1 
+	immediate = {log = "[Root.GetName]: event fe_news.1"}
+	title = fe_news.1.t
+	desc = fe_news.1.d
+	picture = GFX_news_fin_pyramids
+	is_triggered_only = yes
+
+	option = {
+		name = fe_news.1.a
+		trigger = {
+			NOT = {
+				tag = FIN
+			}
+		}
+		add_manpower = -100
+		FIN = {
+			add_manpower = 100
+		}
+	}
+	option = {
+		name = fe_news.1.b
+		trigger = {
+			tag = FIN
+		}
+		add_political_power = 5
+	}
+	
+}
+
+
+
+
+

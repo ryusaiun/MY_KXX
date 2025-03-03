@@ -1,0 +1,78 @@
+ideas = {
+	country = {
+		gru_geming={
+			visible = {
+				always = yes
+			}
+			modifier = {
+				war_support_factor = 0.3
+				war_support_weekly = 0.01
+				request_lease_tension = 0.1
+				surrender_limit = 0.25
+				army_morale_factor = 0.15
+				totalist_acceptance = 100
+				syndicalist_acceptance = 100
+				radical_socialist_acceptance = 100
+			}
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+			}
+			picture = communal_democracy
+		}
+		gru_zhanshipeijizhi=  {
+			visible = {
+				always = yes
+			}
+			modifier = {
+				production_factory_max_efficiency_factor = 0.15
+				industrial_capacity_factory = 0.15
+				consumer_goods_factor = -0.15
+			}
+			picture = agricultural_revolution
+		}
+		gru_pingfan={
+			visible = {
+				always = yes
+			}
+			modifier = {
+				monthly_population = 0.05
+				weekly_manpower = 250
+				army_attack_factor = 0.15
+				army_org_factor = 0.15
+			}
+			picture = coop_clubs
+		}
+		gru_beishuiyizhan=  {
+			visible = {
+				always = yes
+			}
+			modifier = {
+				cas_damage_reduction = 0.05
+				army_org_regain = 0.05
+				recon_factor = 0.05
+				command_power_gain = 0.15
+				no_supply_grace = 24
+				political_power_gain = 0.1
+			}
+			picture = generic_purge_idea
+		}
+		gru_diguodehuimie=  {
+			visible = {
+				always = yes
+			}
+			modifier = {
+				production_factory_max_efficiency_factor = -0.8
+				industrial_capacity_factory = -0.8
+				army_morale_factor = -0.2
+			}
+			targeted_modifier = {
+				tag = GRU
+				attack_bonus_against = -0.35
+				defense_bonus_against = -0.35
+			}
+			picture = generic_purge_idea
+		}
+	}
+}

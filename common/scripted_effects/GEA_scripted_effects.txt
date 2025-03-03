@@ -1,0 +1,234 @@
+Burma_ger_click_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = Burma_ger_OPEN
+			}
+		}
+		set_country_flag = Burma_ger_OPEN
+	}
+	
+	else_if = {
+		limit = {
+			has_country_flag = Burma_ger_OPEN
+		}
+		clr_country_flag = Burma_ger_OPEN
+	}
+}
+
+DEI_ger_click_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = DEI_ger_OPEN
+			}
+		}
+		set_country_flag = DEI_ger_OPEN
+	}
+	
+	else_if = {
+		limit = {
+			has_country_flag = DEI_ger_OPEN
+		}
+		clr_country_flag = DEI_ger_OPEN
+	}
+}
+
+GER_Guinea_click_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = Guinea_OPEN
+			}
+		}
+		set_country_flag = Guinea_OPEN
+	}
+	
+	else_if = {
+		limit = {
+			has_country_flag = Guinea_OPEN
+		}
+		clr_country_flag = Guinea_OPEN
+	}
+}
+
+Guinea_click_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = Guinea_OPEN
+			}
+		}
+		set_country_flag = Guinea_OPEN
+	}
+	
+	else_if = {
+		limit = {
+			has_country_flag = Guinea_OPEN
+		}
+		clr_country_flag = Guinea_OPEN
+	}
+}
+
+Indochina_click_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = Indochina_OPEN
+			}
+		}
+		set_country_flag = Indochina_OPEN
+	}
+	
+	else_if = {
+		limit = {
+			has_country_flag = Indochina_OPEN
+		}
+		clr_country_flag = Indochina_OPEN
+	}
+}
+
+Indochina_schorner_click_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = Indochina_schorner_OPEN
+			}
+		}
+		set_country_flag = Indochina_schorner_OPEN
+	}
+	
+	else_if = {
+		limit = {
+			has_country_flag = Indochina_schorner_OPEN
+		}
+		clr_country_flag = Indochina_schorner_OPEN
+	}
+}
+
+Indochina_vin_click_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = Indochina_vin_OPEN
+			}
+		}
+		set_country_flag = Indochina_vin_OPEN
+	}
+	
+	else_if = {
+		limit = {
+			has_country_flag = Indochina_vin_OPEN
+		}
+		clr_country_flag = Indochina_vin_OPEN
+	}
+}
+
+Malaya_click_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = Malaya_OPEN
+			}
+		}
+		set_country_flag = Malaya_OPEN
+	}
+	
+	else_if = {
+		limit = {
+			has_country_flag = Malaya_OPEN
+		}
+		clr_country_flag = Malaya_OPEN
+	}
+}
+
+North_Borneo_click_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = North_Borneo_OPEN
+			}
+		}
+		set_country_flag = North_Borneo_OPEN
+	}
+	
+	else_if = {
+		limit = {
+			has_country_flag = North_Borneo_OPEN
+		}
+		clr_country_flag = North_Borneo_OPEN
+	}
+}
+
+Philippines_ger_click_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = Philippines_ger_OPEN
+			}
+		}
+		set_country_flag = Philippines_ger_OPEN
+	}
+	
+	else_if = {
+		limit = {
+			has_country_flag = Philippines_ger_OPEN
+		}
+		clr_country_flag = Philippines_ger_OPEN
+	}
+}
+
+Borneo_click_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = Borneo_OPEN
+			}
+		}
+		set_country_flag = Borneo_OPEN
+	}
+	
+	else_if = {
+		limit = {
+			has_country_flag = Borneo_OPEN
+		}
+		clr_country_flag = Borneo_OPEN
+	}
+}
+
+Thailand_ger_click_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = Thailand_ger_OPEN
+			}
+		}
+		set_country_flag = Thailand_ger_OPEN
+	}
+	
+	else_if = {
+		limit = {
+			has_country_flag = Thailand_ger_OPEN
+		}
+		clr_country_flag = Thailand_ger_OPEN
+	}
+}
+
+Hawaii_ger_click_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = Hawaii_ger_OPEN
+			}
+		}
+		set_country_flag = Hawaii_ger_OPEN
+	}
+	
+	else_if = {
+		limit = {
+			has_country_flag = Hawaii_ger_OPEN
+		}
+		clr_country_flag = Hawaii_ger_OPEN
+	}
+}
+

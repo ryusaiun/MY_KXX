@@ -1,0 +1,702 @@
+defined_text = { #定义标题
+	name = KXX_get_super_event_title
+	#KXX
+	text = { 
+        trigger = {
+            has_global_flag = ger_civl
+        }
+        localization_key = "SPEVNT_ger_civl"
+    }
+
+    text = { 
+        trigger = {
+            has_global_flag = greater_germanic_state_goebbels
+        }
+        localization_key = "GFX_SPEVNT_greater_germanic_state_goebbels"
+    }
+
+    text = { 
+        trigger = {
+            has_global_flag = endsieg_goebbels
+        }
+        localization_key = "GFX_SPEVNT_endsieg_goebbels"
+    }
+
+	text = { 
+		trigger = {
+			has_global_flag = FLN_EUROPE_UNIFICATION_thirart
+		}
+		localization_key = "GFX_SPEVNT_EUROPE_UNIFICATION_thirart"
+	}
+
+	#KX
+	text = { 
+        trigger = {
+            has_global_flag = FRA_valoi_dead
+        }
+        localization_key = "GFX_SPEVNT_Valoi_Dead"
+    }
+
+	text = { 
+        trigger = {
+            has_global_flag = FRA_anarchist_takeover
+        }
+        localization_key = "GFX_SPEVNT_Anarchist_Frances"
+    }
+
+	text = { 
+        trigger = {
+            has_global_flag = GEO_chaos_in_caucasus
+        }
+        localization_key = "GFX_SPEVNT_Caucasus_Chao"
+    }
+
+	text = { 
+        trigger = {
+            has_global_flag = BAN_took_homeland
+        }
+        localization_key = "GFX_SPEVNT_Romania_Restoration"
+    }
+
+	text = { 
+        trigger = {
+            has_global_flag = ENG_secession_occurred
+        }
+        localization_key = "GFX_SPEVNT_Collapse_Britains"
+    }
+
+	text = {
+		trigger = {
+			has_global_flag = SOV_gastev_technocracy
+		}
+		localization_key = "GFX_SPEVNT_Gastev_Technocracys"
+	}
+
+	###民族与革命
+	text = { 
+		trigger = {
+			has_global_flag = WGR_sco_unit_germany
+		}
+		localization_key = "GFX_SPEVNT_WGR_sco_unit_germany"
+	}
+
+	text = { 
+		trigger = {
+			has_global_flag = CNT_cnt_fai_vitory
+		}
+		localization_key = "GFX_SPEVNT_CNT_cnt_fai_vitory"
+	}
+
+	text = { 
+		trigger = {
+			has_global_flag = WGR_syn_unit_germany
+		}
+		localization_key = "GFX_SPEVNT_WGR_syn_unit_germany"
+	}
+
+	text = { 
+		trigger = {
+			has_global_flag = DDR_the_pop_po_war
+		}
+		localization_key = "GFX_DDR_the_pop_po_war"
+	}
+
+	text = { 
+		trigger = {
+			has_global_flag = DDR_Prussia_Collapsed
+		}
+		localization_key = "GFX_DDR_Prussia_Collapsed"
+	}
+
+	###红龙
+    text = {
+		trigger = {
+			has_global_flag = JAPAN_CW_superev
+		}
+		localization_key = "GFX_SPEVNT_JAPAN_CW"
+	}
+
+	text = {
+		trigger = {
+			has_global_flag = JAPAN_CW_Socialist_win_superev
+		}
+		localization_key = "GFX_SPEVNT_JAPAN_CW_Socialist_win"
+	}
+	
+	text = {
+		trigger = {
+			has_global_flag = JAPAN_CW_military_win_superev
+		}
+		localization_key = "GFX_SPEVNT_JAPAN_CW_military_win"
+	}
+	
+	text = {
+		trigger = {
+			has_global_flag = TIBET_UNITE_CHINA_ZHANG_GUOHUA
+		}
+		localization_key = "GFX_SPEVNT_UNITE_CHINA_ZHANG_GUOHUA"
+	}
+	
+	text = {
+		trigger = {
+			has_global_flag = TIBET_UNITE_CHINA_YUEXE
+		}
+		localization_key = "GFX_SPEVNT_TIBET_UNITE_CHINA_YUEXE"
+	}
+	
+	text = {
+		trigger = {
+			has_global_flag = TIBET_UNITE_CHINA_JIGME
+		}
+		localization_key = "GFX_SPEVNT_TIBET_UNITE_CHINA_JIGME"
+	}
+	
+	text = {
+		trigger = {
+			has_global_flag = TAIWAN_XIONGZHENG_UNITE_CHINA
+		}
+		localization_key = "GFX_SPEVNT_TAIWAN_XIONGZHENG_UNITE_CHINA"
+	}
+	
+	text = {
+		trigger = {
+			has_global_flag = TAIWAN_TPP_UNITE_CHINA
+		}
+		localization_key = "GFX_SPEVNT_TAIWAN_TPP_UNITE_CHINA"
+	}
+
+	text = {
+		trigger = {
+			has_global_flag = TAIWAN_COMMIE_UNITE_CHINA
+		}
+		localization_key = "GFX_SPEVNT_TAIWAN_COMMIE_UNITE_CHINA"
+	}
+}
+
+defined_text = { #定义格言
+	name = KXX_get_superevent_quote
+	###KXX
+	text = { 
+        trigger = {
+            has_global_flag = ger_civl
+        }
+        localization_key = "SPEVNT_ger_civl_TEXT"
+    }
+
+    text = { 
+        trigger = {
+            has_global_flag = greater_germanic_state_goebbels
+        }
+        localization_key = "GFX_SPEVNT_greater_germanic_state_goebbels_TEXT"
+    }
+
+    text = { 
+        trigger = {
+            has_global_flag = endsieg_goebbels
+        }
+        localization_key = "GFX_SPEVNT_endsieg_goebbels_TEXT"
+    }
+
+	text = { 
+		trigger = {
+			has_global_flag = FLN_EUROPE_UNIFICATION_thirart
+		}
+		localization_key = "GFX_SPEVNT_EUROPE_UNIFICATION_thirart_TEXT"
+	}
+
+	###KX
+	text = { 
+        trigger = {
+            has_global_flag = FRA_valoi_dead
+        }
+        localization_key = "GFX_SPEVNT_Valoi_Dead_TEXT"
+    }
+
+	text = { 
+        trigger = {
+            has_global_flag = FRA_anarchist_takeover
+        }
+        localization_key = "GFX_SPEVNT_Anarchist_Frances_TEXT"
+    }
+
+	text = { 
+        trigger = {
+            has_global_flag = GEO_chaos_in_caucasus
+        }
+        localization_key = "GFX_SPEVNT_Caucasus_Chao_TEXT"
+    }
+
+	text = { 
+        trigger = {
+            has_global_flag = BAN_took_homeland
+        }
+        localization_key = "GFX_SPEVNT_Romania_Restoration_TEXT"
+    }
+
+	text = { 
+        trigger = {
+            has_global_flag = ENG_secession_occurred
+        }
+        localization_key = "GFX_SPEVNT_Collapse_Britains_TEXT"
+    }
+
+	text = {
+		trigger = {
+			has_global_flag = SOV_gastev_technocracy
+		}
+		localization_key = "GFX_SPEVNT_Gastev_Technocracys_TEXT"
+	}
+
+	###民族与革命
+	text = { 
+		trigger = {
+			has_global_flag = CNT_cnt_fai_vitory
+		}
+		localization_key = "GFX_SPEVNT_CNT_cnt_fai_vitory_TEXT"
+	}
+
+	text = { 
+		trigger = {
+			has_global_flag = WGR_sco_unit_germany
+		}
+		localization_key = "GFX_SPEVNT_WGR_sco_unit_germany_TEXT"
+	}
+
+	text = { 
+		trigger = {
+			has_global_flag = WGR_syn_unit_germany
+		}
+		localization_key = "GFX_SPEVNT_WGR_syn_unit_germany_TEXT"
+	}
+
+	text = { 
+		trigger = {
+			has_global_flag = DDR_the_pop_po_war
+		}
+		localization_key = "GFX_DDR_the_pop_po_war_TEXT"
+	}
+
+	text = { 
+		trigger = {
+			has_global_flag = DDR_Prussia_Collapsed
+		}
+		localization_key = "GFX_DDR_Prussia_Collapsed_TEXT"
+	}
+
+	###红龙
+	text = {
+		trigger = {
+			has_global_flag = JAPAN_CW_superev
+		}
+		localization_key = "GFX_SPEVNT_JAPAN_CW_TEXT"
+	}
+
+	text = {
+		trigger = {
+			has_global_flag = JAPAN_CW_Socialist_win_superev
+		}
+		localization_key = "GFX_SPEVNT_JAPAN_CW_Socialist_win_TEXT"
+	}
+
+	text = {
+		trigger = {
+			has_global_flag = JAPAN_CW_military_win_superev
+		}
+		localization_key = "GFX_SPEVNT_JAPAN_CW_military_win_TEXT"
+	}
+	
+	text = {
+		trigger = {
+			has_global_flag = TIBET_UNITE_CHINA_ZHANG_GUOHUA
+		}
+		localization_key = "GFX_SPEVNT_TIBET_UNITE_CHINA_ZHANG_GUOHUA_TEXT"
+	}
+	
+	text = {
+		trigger = {
+			has_global_flag = TIBET_UNITE_CHINA_YUEXE
+		}
+		localization_key = "GFX_SPEVNT_TIBET_UNITE_CHINA_YUEXE_TEXT"
+	}
+	
+	text = {
+		trigger = {
+			has_global_flag = TIBET_UNITE_CHINA_JIGME
+		}
+		localization_key = "GFX_SPEVNT_TIBET_UNITE_CHINA_JIGME_TEXT"
+	}
+	
+	
+	
+	text = {
+		trigger = {
+			has_global_flag = TAIWAN_XIONGZHENG_UNITE_CHINA
+		}
+		localization_key = "GFX_SPEVNT_TAIWAN_XIONGZHENG_UNITE_CHINA_TEXT"
+	}
+	
+	text = {
+		trigger = {
+			has_global_flag = TAIWAN_TPP_UNITE_CHINA
+		}
+		localization_key = "GFX_SPEVNT_TAIWAN_TPP_UNITE_CHINA_TEXT"
+	}
+	
+	text = {
+		trigger = {
+			has_global_flag = TAIWAN_COMMIE_UNITE_CHINA
+		}
+		localization_key = "GFX_SPEVNT_TAIWAN_COMMIE_UNITE_CHINA_TEXT"
+	}
+}
+
+defined_text = { #定义选项
+	name = KXX_get_superevent_remark
+	#KXX
+	text = { 
+        trigger = {
+            has_global_flag = ger_civl
+        }
+        localization_key = "SPEVNT_ger_civl_REMARK"
+    }
+
+    text = { 
+        trigger = {
+            has_global_flag = greater_germanic_state_goebbels
+        }
+        localization_key = "GFX_SPEVNT_greater_germanic_state_goebbels_REMARK"
+    }
+
+    text = { 
+        trigger = {
+            has_global_flag = endsieg_goebbels
+        }
+        localization_key = "GFX_SPEVNT_endsieg_goebbels_REMARK"
+    }
+
+	text = { 
+		trigger = {
+			has_global_flag = FLN_EUROPE_UNIFICATION_thirart
+		}
+		localization_key = "GFX_SPEVNT_EUROPE_UNIFICATION_thirart_REMARK"
+	}
+
+	#KX
+	text = { 
+        trigger = {
+            has_global_flag = FRA_valoi_dead
+        }
+        localization_key = "GFX_SPEVNT_Valoi_Dead_REMARK"
+    }
+
+	text = { 
+        trigger = {
+            has_global_flag = FRA_anarchist_takeover
+        }
+        localization_key = "GFX_SPEVNT_Anarchist_Frances_REMARK"
+    }
+
+	text = { 
+        trigger = {
+            has_global_flag = GEO_chaos_in_caucasus
+        }
+        localization_key = "GFX_SPEVNT_Caucasus_Chao_REMARK"
+    }
+
+	text = { 
+        trigger = {
+            has_global_flag = BAN_took_homeland
+        }
+        localization_key = "GFX_SPEVNT_Romania_Restoration_REMARK"
+    }
+
+	text = { 
+        trigger = {
+            has_global_flag = ENG_secession_occurred
+        }
+        localization_key = "GFX_SPEVNT_Collapse_Britains_REMARK"
+    }
+
+	text = {
+		trigger = {
+			has_global_flag = SOV_gastev_technocracy
+		}
+		localization_key = "GFX_SPEVNT_Gastev_Technocracys_REMARK"
+	}
+
+	###民族与革命
+	text = { 
+		trigger = {
+			has_global_flag = CNT_cnt_fai_vitory
+		}
+		localization_key = "GFX_SPEVNT_CNT_cnt_fai_vitory_REMARK"
+	}
+
+	text = { 
+		trigger = {
+			has_global_flag = WGR_sco_unit_germany
+		}
+		localization_key = "GFX_SPEVNT_WGR_sco_unit_germany_REMARK"
+	}
+
+	text = { 
+		trigger = {
+			has_global_flag = WGR_syn_unit_germany
+		}
+		localization_key = "GFX_SPEVNT_WGR_syn_unit_germany_REMARK"
+	}
+
+	text = { 
+		trigger = {
+			has_global_flag = DDR_the_pop_po_war
+		}
+		localization_key = "GFX_DDR_the_pop_po_war_REMARK"
+	}
+
+	text = { 
+		trigger = {
+			has_global_flag = DDR_Prussia_Collapsed
+		}
+		localization_key = "GFX_DDR_Prussia_Collapsed_REMARK"
+	}
+
+
+	###红龙
+   	text = {
+		trigger = {
+			has_global_flag = JAPAN_CW_superev
+		}
+		localization_key = "GFX_SPEVNT_JAPAN_CW_REMARK"
+	}
+
+	text = {
+		trigger = {
+			has_global_flag = JAPAN_CW_Socialist_win_superev
+		}
+		localization_key = "GFX_SPEVNT_JAPAN_CW_Socialist_win_REMARK"
+	}
+
+	text = {
+		trigger = {
+			has_global_flag = JAPAN_CW_military_win_superev
+		}
+		localization_key = "GFX_SPEVNT_JAPAN_CW_military_win_REMARK"
+	}
+	
+	text = {
+		trigger = {
+			has_global_flag = TIBET_UNITE_CHINA_ZHANG_GUOHUA
+		}
+		localization_key = "GFX_SPEVNT_TIBET_UNITE_CHINA_ZHANG_GUOHUA_REMARK"
+	}
+
+	text = {
+		trigger = {
+			has_global_flag = TIBET_UNITE_CHINA_YUEXE
+		}
+		localization_key = "GFX_SPEVNT_TIBET_UNITE_CHINA_YUEXE_REMARK"
+	}
+	
+	text = {
+		trigger = {
+			has_global_flag = TIBET_UNITE_CHINA_JIGME
+		}
+		localization_key = "GFX_SPEVNT_TIBET_UNITE_CHINA_JIGME_REMARK"
+	}
+	
+	text = {
+		trigger = {
+			has_global_flag = TAIWAN_XIONGZHENG_UNITE_CHINA
+		}
+		localization_key = "GFX_SPEVNT_TAIWAN_XIONGZHENG_UNITE_CHINA_REMARK"
+	}
+	
+	text = {
+		trigger = {
+			has_global_flag = TAIWAN_TPP_UNITE_CHINA
+		}
+		localization_key = "GFX_SPEVNT_TAIWAN_TPP_UNITE_CHINA_REMARK"
+	}
+	
+	text = {
+		trigger = {
+			has_global_flag = TAIWAN_COMMIE_UNITE_CHINA
+		}
+		localization_key = "GFX_SPEVNT_TAIWAN_COMMIE_UNITE_CHINA_REMARK"
+	}
+}
+
+defined_text = { #定义内容
+	name = KXX_get_superevent_desc
+	#KXX
+	text = { 
+        trigger = {
+            has_global_flag = ger_civl
+        }
+        localization_key = "SPEVNT_ger_civl_DESC"
+    }
+
+    text = { 
+        trigger = {
+            has_global_flag = greater_germanic_state_goebbels
+        }
+        localization_key = "GFX_SPEVNT_greater_germanic_state_goebbels_DESC"
+    }
+
+    text = { 
+        trigger = {
+            has_global_flag = endsieg_goebbels
+        }
+        localization_key = "GFX_SPEVNT_endsieg_goebbels_DESC"
+    }
+
+	text = { 
+		trigger = {
+			has_global_flag = FLN_EUROPE_UNIFICATION_thirart
+		}
+		localization_key = "GFX_SPEVNT_EUROPE_UNIFICATION_thirart_DESC"
+	}
+
+	###KX
+	text = { 
+        trigger = {
+            has_global_flag = FRA_valoi_dead
+        }
+        localization_key = "GFX_SPEVNT_Valoi_Dead_DESC"
+    }
+
+	text = { 
+        trigger = {
+            has_global_flag = FRA_anarchist_takeover
+        }
+        localization_key = "GFX_SPEVNT_Anarchist_Frances_DESC"
+    }
+
+	text = { 
+        trigger = {
+            has_global_flag = GEO_chaos_in_caucasus
+        }
+        localization_key = "GFX_SPEVNT_Caucasus_Chao_DESC"
+    }
+
+	text = { 
+        trigger = {
+            has_global_flag = BAN_took_homeland
+        }
+        localization_key = "GFX_SPEVNT_Romania_Restoration_DESC"
+    }
+
+	text = { 
+        trigger = {
+            has_global_flag = ENG_secession_occurred
+        }
+        localization_key = "GFX_SPEVNT_Collapse_Britains_DESC"
+    }
+
+	text = {
+		trigger = {
+			has_global_flag = SOV_gastev_technocracy
+		}
+		localization_key = "GFX_SPEVNT_Gastev_Technocracys_DESC"
+	}
+
+	###民族与革命
+	
+	text = { 
+		trigger = {
+			has_global_flag = CNT_cnt_fai_vitory
+		}
+		localization_key = "GFX_SPEVNT_CNT_cnt_fai_vitory_DESC"
+	}
+
+	text = { 
+		trigger = {
+			has_global_flag = WGR_sco_unit_germany
+		}
+		localization_key = "GFX_SPEVNT_WGR_sco_unit_germany_DESC"
+	}
+
+	text = { 
+		trigger = {
+			has_global_flag = WGR_syn_unit_germany
+		}
+		localization_key = "GFX_SPEVNT_WGR_syn_unit_germany_DESC"
+	}
+
+	text = { 
+		trigger = {
+			has_global_flag = DDR_the_pop_po_war
+		}
+		localization_key = "GFX_DDR_the_pop_po_war_DESC"
+	}
+	
+	text = { 
+		trigger = {
+			has_global_flag = DDR_Prussia_Collapsed
+		}
+		localization_key = "GFX_DDR_Prussia_Collapsed_DESC"
+	}
+
+
+	###红龙
+    text = {
+		trigger = {
+			has_global_flag = JAPAN_CW_superev
+		}
+		localization_key = "GFX_SPEVNT_JAPAN_CW_DESC"
+	}
+	text = {
+		trigger = {
+			has_global_flag = JAPAN_CW_Socialist_win_superev
+		}
+		localization_key = "GFX_SPEVNT_JAPAN_CW_Socialist_win_DESC"
+	}
+	
+	text = {
+		trigger = {
+			has_global_flag = JAPAN_CW_military_win_superev
+		}
+		localization_key = "GFX_SPEVNT_JAPAN_CW_military_win_DESC"
+	}
+	
+	text = {
+		trigger = {
+			has_global_flag = TIBET_UNITE_CHINA_ZHANG_GUOHUA
+		}
+		localization_key = "GFX_SPEVNT_TIBET_UNITE_CHINA_ZHANG_GUOHUA_DESC"
+	}
+	
+	text = {
+		trigger = {
+			has_global_flag = TIBET_UNITE_CHINA_YUEXE
+		}
+		localization_key = "GFX_SPEVNT_TIBET_UNITE_CHINA_YUEXE_DESC"
+	}
+	text = {
+		trigger = {
+			has_global_flag = TIBET_UNITE_CHINA_JIGME
+		}
+		localization_key = "GFX_SPEVNT_TIBET_UNITE_CHINA_JIGME_DESC"
+	}
+	
+	text = {
+		trigger = {
+			has_global_flag = TAIWAN_XIONGZHENG_UNITE_CHINA
+		}
+		localization_key = "GFX_SPEVNT_TAIWAN_XIONGZHENG_UNITE_CHINA_DESC"
+	}
+	
+	text = {
+		trigger = {
+			has_global_flag = TAIWAN_TPP_UNITE_CHINA
+		}
+		localization_key = "GFX_SPEVNT_TAIWAN_TPP_UNITE_CHINA_DESC"
+	}
+	
+	text = {
+		trigger = {
+			has_global_flag = TAIWAN_COMMIE_UNITE_CHINA
+		}
+		localization_key = "GFX_SPEVNT_TAIWAN_COMMIE_UNITE_CHINA_DESC"
+	}
+}

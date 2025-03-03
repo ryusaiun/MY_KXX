@@ -1,0 +1,13 @@
+﻿###OOB File for GEA.txt
+units = {
+	fleet = {
+		name = "Einheit zur flugzeugträgerabwehr"
+		naval_base = 12299
+		task_force = {
+			name = "Einheit zur flugzeugträgerabwehr"
+			location = 12299 
+			ship = { name = "SMS Europa" definition = carrier equipment = { ship_hull_carrier_1 = { amount = 1 owner = GEA version_name = "Maas Class I" } }}
+			ship = { name = "SMS Mucke" definition = carrier equipment = { ship_hull_carrier_1 = { amount = 1 owner = GEA version_name = "Maas Class I" } }}			
+		}
+	}
+}

@@ -1,0 +1,69 @@
+﻿l_english:
+
+
+### Parties ###
+ESP_totalist_party:0 "-"
+ESP_totalist_party_long:0 "-"
+ESP_syndicalist_party:0 "-"
+ESP_syndicalist_party_long:0 "-"
+ESP_radical_socialist_party:0 "-"
+ESP_radical_socialist_party_long:0 "-"
+ESP_social_democrat_party:0 "-"
+ESP_social_democrat_party_long:0 "-"
+ESP_social_liberal_party:0 "-"
+ESP_social_liberal_party_long:0 "-"
+ESP_market_liberal_party:0 "-"
+ESP_market_liberal_party_long:0 "-"
+ESP_social_conservative_party:0 "-"
+ESP_social_conservative_party_long:0 "-"
+ESP_authoritarian_democrat_party:0 "-"
+ESP_authoritarian_democrat_party_long:0 "-"
+ESP_paternal_autocrat_party:0 "-"
+ESP_paternal_autocrat_party_long:0 "-"
+ESP_national_populist_party:0 "Governação de Portugal"
+ESP_national_populist_party_long:0 "Governação de Portugal"
+
+
+
+### Leaders ###
+POLITICS_DUARTE_BRAGANCA_DESC:0 "As agreed in the Pact of Dover signed by royalists in exile before the Restoration, Duarte II inherited the throne from the heirless Manuel II. Since he was crowned in 1932, King Duarte has looked to strengthen ties with the Brazilian Imperial Family and with the British in exile in Canada, while at home keeping an amenable relationship with the Integralists, who fully control his government; a situation he will seek to change if possible."
+POLITICS_MARIA_ADLEAIDE_BRAGANCA_DESC:0 "Having taken up the crown after the second Regicide in 30 years, Maria III has dauting tasks ahead of her. The young Queen has always been popular when she was a princess, always looking to help people in need whenever possible. Her gentle and good demeanour may make her aggressive anti Integralist position seem surprising, but since taking the throne she has denounced excesses from that party, and her fearless attitude only helps her popularity"
+POLITICS_MARIA_PUPPET_DESC:0 "As the recently installed Queen of Portugal and the Algarves, Maria Ana I seems content in her role of doing little actual ruling. Her priority is ensuring the preservation of the Monarchy and in restoring ties with the deposed royal family. Her husband's German nationality, once a liability that essentially locked her out of inheritance, may very well help in this endeavour"
+
+
+### Ideas ###
+
+
+### Cosmetic Tags ###
+RPO_totalist:0 "Portuguese Socialist Republic"
+RPO_totalist_ADJ:0 "Portuguese"
+RPO_totalist_DEF:0 "the Portuguese Socialist Republic"
+RPO_syndicalist:0 "Portuguese Socialist Republic"
+RPO_syndicalist_ADJ:0 "Portuguese"
+RPO_syndicalist_DEF:0 "the Portuguese Socialist Republic"
+RPO_radical_socialist:0 "Portuguese Anarchist Union"
+RPO_radical_socialist_ADJ:0 "Portuguese"
+RPO_radical_socialist_DEF:0 "the Portuguese Anarchist Union"
+RPO_social_democrat:0 "Portugal"
+RPO_social_democrat_ADJ:0 "Portuguese"
+RPO_social_democrat_DEF:0 "Portugal"
+RPO_social_liberal:0 "Portugal"
+RPO_social_liberal_ADJ:0 "Portuguese"
+RPO_social_liberal_DEF:0 "Portugal"
+RPO_market_liberal:0 "Portugal"
+RPO_market_liberal_ADJ:0 "Portuguese"
+RPO_market_liberal_DEF:0 "Portugal"
+RPO_social_conservative:0 "Portugal"
+RPO_social_conservative_ADJ:0 "Portuguese"
+RPO_social_conservative_DEF:0 "Portugal"
+RPO_authoritarian_democrat:0 "Portugal"
+RPO_authoritarian_democrat_ADJ:0 "Portuguese"
+RPO_authoritarian_democrat_DEF:0 "Portugal"
+RPO_paternal_autocrat:0 "Kingdom of Portugal"
+RPO_paternal_autocrat_ADJ:0 "Portuguese"
+RPO_paternal_autocrat_DEF:0 "the Kingdom of Portugal"
+RPO_national_populist:0 "Portuguese Empire"
+RPO_national_populist_ADJ:0 "Portuguese"
+RPO_national_populist_DEF:0 "the Portuguese Empire"
+
+

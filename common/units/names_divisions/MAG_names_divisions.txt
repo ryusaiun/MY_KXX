@@ -1,0 +1,39 @@
+﻿MAG_INF_01 = {
+	name = "Waffen Schutzstaffel"
+
+	for_countries = { MAG }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" "mechanized" "marine" "mountaineers" "paratrooper" }
+
+	fallback_name = "%d. Waffen Schutzstaffel"
+
+	ordered = {
+		1 = {"1. Malaiische Schutztruppendivision 'Singapur'"}
+		2 = {"2. Malaiische Schutztruppendivision 'Dschohor'"}
+		3 = {"3. Malaiische Schutztruppendivision 'Perak'"}
+		7 = {"4. Malaiische Schutztruppendivision 'Pahang'"}
+		8 = {"4. Indochinesische Schutztruppendivision"}
+		9 = {"5. Indochinesische Schutztruppendivision"}
+		10 = {"5. Malaiische Schutztruppendivision"}
+	}
+}
+
+MAG_INF_02 = {
+	name = "Waffen Einsatzgruppen"
+
+	for_countries = { MAG }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "%d. Waffen Einsatzgruppen"
+
+	ordered = {
+		1 = {"Waffen Einsatzgruppen I"}
+		2 = {"Waffen Einsatzgruppen II"}
+		3 = {"Waffen Einsatzgruppen III"}
+	}
+}

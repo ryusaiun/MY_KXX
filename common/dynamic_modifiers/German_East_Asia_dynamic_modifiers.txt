@@ -1,0 +1,175 @@
+GEA_AOG_BONUS = {
+	consumer_goods_factor = GEA_AOG_CITIES
+	industrial_capacity_dockyard = GEA_AOG_SHIPYARD
+	trade_opinion_factor = GEA_TRADE_FACTOR
+}
+GEA_BEST_COLONIAL= {
+	icon = "GFX_idea_best_of_colonies"
+	enable = { always = yes }
+
+	stability_factor = GEA_BEST_COLONIAL_stability
+	war_support_factor = GEA_BEST_COLONIAL_war_support
+	supply_consumption_factor = GEA_BEST_COLONIAL_supply
+	local_building_slots_factor = GEA_BEST_COLONIAL_local_building_slots
+	local_resources_factor = GEA_BEST_COLONIAL_local_resources
+	industrial_capacity_factory = GEA_BEST_COLONIAL_industrial_capacity
+	repair_speed_factor = GEA_BEST_COLONIAL_repair_speed
+	industrial_capacity_dockyard = GEA_BEST_COLONIAL_shipyard
+	research_speed_factor = GEA_BEST_COLONIAL_research_speed
+	consumer_goods_factor = GEA_BEST_COLONIAL_consumer
+}
+GEA_gea_army = {
+	icon = "GFX_idea_GEA_gea_army"
+	enable = { always = yes }
+	remove_trigger = { always = no }
+	# INITIAL #
+	conscription = GEA_army_conscription #0.05 #适役人口
+	conscription_factor = GEA_army_conscription_factor #-0.85 #适役人口修正
+	army_org_factor = GEA_army_army_org_factor #0.10 #组织度
+	army_morale_factor = GEA_army_army_morale_factor #-0.10 #组织度恢复
+	# FROM FOCUS #
+	production_speed_rail_way_factor = GEA_army_production_speed_rail_way_factor #铁路建造速度
+	army_attack_factor = GEA_army_attack_factor #陆军攻击
+	army_defence_factor = GEA_army_defence_factor #陆军防御
+	army_artillery_attack_factor = GEA_army_artillery_attack_factor #炮兵攻击
+	army_artillery_defence_factor = GEA_army_artillery_defence_factor #炮兵防御
+	army_armor_attack_factor = GEA_army_armor_attack_factor #坦克攻击
+	army_armor_defence_factor = GEA_army_armor_defence_factor #坦克防御
+	army_armor_speed_factor = GEA_army_armor_speed_factor #坦克速度
+	army_bonus_air_superiority_factor = GEA_army_bonus_air_superiority_factor #陆军空优
+	air_cas_present_factor = GEA_air_cas_present_factor #空军支援
+	supply_node_range = GEA_army_supply_node_range #补给范围
+	land_reinforce_rate = GEA_army_land_reinforce_rate #增援率
+	experience_gain_army = GEA_army_experience_gain_army #陆军经验增长
+	terrain_penalty_reduction = GEA_army_terrain_penalty_reduction #地形惩罚减少
+	land_doctrine_cost_factor = GEA_army_land_doctrine_cost_factor #陆军学说花费
+	command_power_gain_mult = GEA_army_command_power_gain_mult #指挥点数增长层数
+	max_command_power = GEA_max_command_power #最大指挥点数提高
+	training_time_army_factor = GEA_army_training_time_army_factor #训练时间
+	minimum_training_level = GEA_army_minimum_training_level #最低训练程度
+	supply_consumption_factor = GEA_army_supply_consumption_factor #补给消耗
+	railway_gun_bombardment_factor = GEA_army_railway_gun_bombardment_factor #列车炮轰击
+	army_speed_factor = GEA_army_speed_factor #军队速度
+	breakthrough_factor = GEA_army_breakthrough_factor #突破
+	planning_speed = GEA_army_planning_speed #计划速度
+	max_dig_in_factor = GEA_army_max_dig_in_factor #堑壕上限
+	dig_in_speed_factor = GEA_dig_in_speed_factor #堑壕速度
+	no_supply_grace = GEA_no_supply_grace #协行补给
+	mobilization_speed =  GEA_mobilization_speed #动员速度
+	experience_loss_factor = GEA_experience_loss_factor  #有经验的士兵损失
+	org_loss_when_moving = GEA_org_loss_when_moving #陆军移动组织度损失
+	military_leader_cost_factor = GEA_military_leader_cost_factor #指挥官招募花费
+	acclimatization_hot_climate_gain_factor = GEA_acclimatization_hot_climate_gain_factor #炎热适应度增长率
+	combat_width_factor = GEA_combat_width_factor #战宽
+	experience_gain_army_unit_factor = GEA_experience_gain_army_unit_factor
+	army_fuel_consumption_factor = GEA_army_fuel_consumption_factor
+	unit_armored_car_design_cost_factor = GEA_unit_armored_car_design_cost_factor
+	enemy_attrition = GEA_enemy_attrition
+}
+
+GEA_mucke_reform = {
+	icon = "GFX_idea_GEA_mucke_reform"
+	enable = { always = yes }
+	remove_trigger = { 
+		NOT = { 
+			is_owned_by = GEA
+		}
+	}	
+	political_power_factor = GEA_mucke_reform_political_power_factor
+	political_power_gain = GEA_mucke_reform_political_power_gain
+	command_power_gain_mult = GEA_mucke_reform_command_power_gain_mult
+	stability_factor = GEA_mucke_reform_stability
+	stability_weekly = GEA_mucke_reform_stability_weekly
+	war_support_factor = GEA_mucke_reform_war_support
+	war_support_weekly = GEA_mucke_reform_war_support_weekly
+	production_speed_infrastructure_factor = GEA_mucke_reform_production_speed_infrastructure_factor
+	local_resources_factor = GEA_mucke_reform_local_resources
+	army_core_attack_factor = GEA_mucke_reform_army_core_attack_factor       
+	army_core_defence_factor = GEA_mucke_reform_army_core_defence_factor 
+	conscription = GEA_mucke_reform_army_conscription
+	conscription_factor = GEA_mucke_reform_army_conscription_factor
+	local_building_slots_factor = GEA_mucke_reform_local_building_slots_factor
+	production_speed_buildings_factor = GEA_mucke_reform_production_speed_buildings_factor   
+	defensive_war_stability_factor = GEA_mucke_reform_defensive_war_stability_factor      
+	local_manpower = GEA_mucke_reform_local_manpower   
+	party_popularity_stability_factor = GEA_mucke_reform_party_popularity_stability_factor 
+	required_garrison_factor = GEA_mucke_reform_required_garrison_factor 
+	local_resources_factor = GEA_mucke_reform_local_resources_factor  
+	monthly_population = GEA_mucke_reform_monthly_population
+	production_factory_max_efficiency_factor = GEA_mucke_reform_production_factory_max_efficiency_factor
+	production_factory_efficiency_gain_factor = GEA_mucke_reform_production_factory_efficiency_gain_factor
+	industrial_capacity_factory = GEA_mucke_reform_industrial_capacity_factory
+	line_change_production_efficiency_factor = GEA_mucke_reform_line_change_production_efficiency_factor
+	production_speed_industrial_complex_factor = GEA_mucke_reform_production_speed_industrial_complex_factor
+	production_speed_arms_factory_factor = GEA_mucke_reform_production_speed_arms_factory_factor
+}
+
+GEA_Defend_indochina = {
+	icon = "GFX_idea_GEA_Defend_indochina"
+	enable = { always = yes }
+	remove_trigger = { always = no }
+	stability_factor = GEA_Defend_indochina_stability
+	conscription_factor = GEA_Defend_indochina_army_conscription_factor
+	production_speed_buildings_factor = GEA_Defend_indochina_production_speed_buildings_factor   
+	required_garrison_factor = GEA_Defend_indochina_required_garrison_factor  
+	industrial_capacity_factory = GEA_Defend_indochina_industrial_capacity_factory
+	monthly_population = GEA_Defend_indochina_monthly_population
+	resistance_decay = GEA_Defend_indochina_resistance_decay
+	compliance_growth = GEA_Defend_indochina_compliance_growth
+}
+
+GEA_martial_law_modifier = {
+	icon = "GFX_paternal_autocrat_texticon"
+	enable = { always = yes }
+	remove_trigger = { 
+		NOT = { 
+			is_owned_by = GEA
+		}
+	}	
+	recruitable_population_factor = -0.15
+	mobilization_speed = 0.15                                                                                   
+	local_resources_factor = 0.20
+	resistance_decay = 0.1
+	compliance_growth = -0.5
+}
+
+GEA_developing_porgram = {
+	icon = "GFX_production_texticon"
+	enable = { always = yes }
+	remove_trigger = { 
+		NOT = { 
+			is_owned_by = GEA
+		}
+	}	
+	local_building_slots_factor = 0.2
+	production_speed_buildings_factor = 0.1                                                                         
+	production_speed_arms_factory_factor = 0.05
+	production_speed_industrial_complex_factor = 0.1
+	production_speed_infrastructure_factor = 0.1
+}
+
+GEA_more_mine1 = {
+	icon = "GFX_production_texticon"
+	enable = { always = yes }
+	remove_trigger = { 
+		NOT = { 
+			is_owned_by = GEA
+		}
+	}	
+	local_resources_factor = 0.20
+	production_speed_buildings_factor = 0.05  
+	compliance_growth = -0.2                                                                     
+}
+
+GEA_Bulldoze_village1 = {
+	icon = "GFX_production_texticon"
+	enable = { always = yes }
+	remove_trigger = { 
+		NOT = { 
+			is_owned_by = GEA
+		}
+	}	
+	conscription_factor = -0.1
+	non_core_manpower = -0.2
+	monthly_population = -0.05                                                              
+}

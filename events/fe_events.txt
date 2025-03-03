@@ -1,0 +1,1526 @@
+﻿add_namespace = shizo_finland
+
+
+### Jesus Fate
+country_event = {
+	id = shizo_finland.1 
+	immediate = {log = "[Root.GetName]: event shizo_finland.1"}
+	title = shizo_finland.1.t
+	desc = shizo_finland.1.d
+	
+	picture = GFX_event_fin_jesus
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shizo_finland.1.a
+		add_war_support = 0.03
+	}
+	option = {
+		name = shizo_finland.1.b
+		add_ideas = FIN_isoah
+	}
+	
+}
+
+country_event = {
+	id = shizo_finland.2
+	immediate = {log = "[Root.GetName]: event shizo_finland.2"}
+	title = shizo_finland.2.t
+	desc = shizo_finland.2.d
+	
+	picture = GFX_event_fin_body_with_head
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shizo_finland.2.a
+		complete_national_focus = FIN_old_gods
+		set_country_flag = FIN_gods_reborn
+	}
+	option = {
+		name = shizo_finland.2.b
+		complete_national_focus = FIN_athon
+		set_country_flag = FIN_ATON_reborn
+		set_country_leader_ideology = atenism_subtype
+	}
+}
+
+### Hyperborean Authonomy
+country_event = {			
+	id = shizo_finland.3 
+	immediate = {log = "[Root.GetName]: event shizo_finland.3"}
+	title = shizo_finland.3.t
+	desc = shizo_finland.3.d
+	
+	picture = GFX_event_fin_hyperborea
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shizo_finland.3.a
+		add_political_power = 100
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1500
+				producer = FIN
+			  }
+	}
+	
+}
+
+### Pyramids in Helsinki Built
+
+### Stuff happens and focuses change
+
+
+### Ultimatum from FIN
+country_event = {			
+	id = shizo_finland.6
+	immediate = {log = "[Root.GetName]: event shizo_finland.6"}
+	title = shizo_finland.6.t
+	desc = shizo_finland.6.d
+	
+	picture = GFX_event_fin_soldiers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shizo_finland.6.a
+		ai_chance = { factor = 5 }
+		FIN = {
+			annex_country = {
+				target = ROOT
+				transfer_troops = no
+			}
+		}
+	}
+	
+	option = {
+		name = shizo_finland.6.b
+		ai_chance = { factor = 20 }
+		FIN = {
+			create_wargoal = {
+				type = annex_everything
+				target = ROOT
+			}	
+		}
+	}
+	
+}
+
+### Aton Uprising
+country_event = {			
+	id = shizo_finland.7
+	immediate = {log = "[Root.GetName]: event shizo_finland.7"}
+	title = shizo_finland.7.t
+	desc = shizo_finland.7.d
+	
+	picture = GFX_event_fin_soldiers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shizo_finland.7.a
+		ai_chance = { factor = 10 }
+	}
+	
+}
+
+### Finns in Egypt
+country_event = {			
+	id = shizo_finland.8
+	immediate = {log = "[Root.GetName]: event shizo_finland.8"}
+	title = shizo_finland.8.t
+	desc = shizo_finland.8.d
+	
+	picture = GFX_event_fin_soldiers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shizo_finland.8.a
+		ai_chance = { factor = 10 }
+		play_song = "fe_superevent"
+		set_global_flag = finland_invades_egypt_Super_Event_Visible
+		set_global_flag = Super_Event_Visible
+	}
+	
+}
+
+### Renaming Helsinki
+country_event = {			
+	id = shizo_finland.9
+	immediate = {log = "[Root.GetName]: event shizo_finland.9"}
+	title = shizo_finland.9.t
+	desc = shizo_finland.9.d
+	
+	picture = GFX_event_fin_city
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shizo_finland.9.a
+		ai_chance = { factor = 10 }
+		
+		
+	}
+	
+}
+country_event = {			
+	id = shizo_finland.10
+	immediate = {log = "[Root.GetName]: event shizo_finland.10"}
+	title = shizo_finland.10.t
+	desc = shizo_finland.10.d
+	
+	picture = GFX_CAR_dark_room
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shizo_finland.10.a
+		ai_chance = { factor = 10 }
+		swap_ideas = {
+			remove_idea = FIN_mounting_dissent_idea
+			add_idea = FIN_AND_EGY
+		  }
+		
+	}
+	
+}
+country_event = {			
+	id = shizo_finland.11
+	immediate = {log = "[Root.GetName]: event shizo_finland.11"}
+	title = shizo_finland.11.t
+	desc = shizo_finland.11.d
+	
+	picture = GFX_report_event_IRE_killing
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shizo_finland.11.a
+		ai_chance = { factor = 10 }
+		add_manpower = -17
+	}
+}
+country_event = {			
+	id = shizo_finland.12
+	immediate = {log = "[Root.GetName]: event shizo_finland.12"}
+	title = shizo_finland.12.t
+	desc = shizo_finland.12.d
+	
+	picture = GFX_report_event_EGY_zeppellin_pyramid
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shizo_finland.12.a
+		unlock_decision_category_tooltip = FE_PR
+		set_country_flag = fe_start
+		ai_chance = { factor = 10 }
+	}
+	
+}
+country_event = {			
+	id = shizo_finland.13
+	immediate = {log = "[Root.GetName]: event shizo_finland.13"}
+	title = shizo_finland.13.t
+	desc = shizo_finland.13.d
+	
+	picture = GFX_report_event_EGY_zeppellin_pyramid
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shizo_finland.13.a
+		remove_ideas = FIN_work
+		add_ideas = FIN_pyramid
+		ai_chance = { factor = 10 }
+	}
+	
+}
+
+country_event = {			
+	id = shizo_finland.14
+	immediate = {log = "[Root.GetName]: event shizo_finland.14"}
+	title = shizo_finland.14.t
+	desc = shizo_finland.14.d
+	fire_only_once = yes
+	picture = GFX_report_event_IRE_street
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shizo_finland.14.a
+		ai_chance = { factor = 10 }
+		every_owned_state = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+			}
+		}
+		840 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+			  type = industrial_complex
+			  level = 2
+			  instant_build = yes
+			}
+		  }
+
+	}
+	
+}
+country_event = {			
+	id = shizo_finland.15
+	immediate = {log = "[Root.GetName]: event shizo_finland.15"}
+	title = shizo_finland.15.t
+	desc = shizo_finland.15.d
+	fire_only_once = yes
+	picture = GFX_report_event_COS_gold
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shizo_finland.15.a
+		swap_ideas = {
+			remove_idea = FIN_origin
+			add_idea = FIN_origin2
+		  }
+		ai_chance = { factor = 10 }
+	}
+	
+}
+country_event = {			
+	id = shizo_finland.16
+	immediate = {log = "[Root.GetName]: event shizo_finland.16"}
+	title = shizo_finland.16.t
+	desc = shizo_finland.16.d
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = shizo_finland.16.a
+		FIN = {
+			country_event = {
+				id = shizo_finland.28
+				days = 2
+			  }
+			}
+		ai_chance = { factor = 10 }
+	}
+	option = {
+		name = shizo_finland.16.b
+		FIN = {
+			country_event = {			
+			  id = shizo_finland.17 }
+			}
+		ai_chance = { factor = 0 }
+	}
+	
+}
+country_event = {			
+	id = shizo_finland.17
+	immediate = {log = "[Root.GetName]: event shizo_finland.17"}
+	title = shizo_finland.17.t
+	desc = shizo_finland.17.d
+	picture = GFX_report_event_IRE_dail_meeting
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = shizo_finland.17.a
+		ai_chance = { factor = 10 }
+	}
+}
+country_event = {			
+	id = shizo_finland.18
+	immediate = {log = "[Root.GetName]: event shizo_finland.17"}
+	title = shizo_finland.18.t
+	desc = shizo_finland.18.d
+	picture = GFX_report_event_CAN_acw_negotiations
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = shizo_finland.18.a
+		give_military_access = CAN
+        give_military_access = NFA
+		set_country_flag = fin_1_yes
+		hidden_effect = {
+			country_event = {
+			  id = shizo_finland.19
+			  days = 2
+			}
+		  }
+		ai_chance = { factor = 60 }
+	}
+	option = {
+		name = shizo_finland.18.b
+		hidden_effect = {
+			country_event = {
+			  id = shizo_finland.19
+			  days = 2
+			}
+		  }
+		set_country_flag = fin_1_no
+		ai_chance = { factor = 40 }
+	}
+}
+country_event = {			
+	id = shizo_finland.19
+	immediate = {log = "[Root.GetName]: event shizo_finland.19"}
+	title = shizo_finland.19.t
+	desc = shizo_finland.19.d
+	picture = GFX_report_event_JAP_meeting
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = shizo_finland.19.a
+        give_resource_rights = { receiver = CAN state = 149 }
+		give_resource_rights = { receiver = CAN state = 863 }
+		give_resource_rights = { receiver = CAN state = 1325 }
+		hidden_effect = {
+			country_event = {
+			  id = shizo_finland.20
+			  days = 2
+			}
+		  }
+		set_country_flag = fin_2_yes
+		ai_chance = { factor = 60 }
+	}
+	option = {
+		name = shizo_finland.19.b
+		hidden_effect = {
+			country_event = {
+			  id = shizo_finland.20
+			  days = 2
+			}
+		  }
+		set_country_flag = fin_2_no
+		ai_chance = { factor = 40 }
+	}
+}
+country_event = {			
+	id = shizo_finland.20
+	immediate = {log = "[Root.GetName]: event shizo_finland.20"}
+	title = shizo_finland.20.t
+	desc = shizo_finland.20.d
+	picture = GFX_report_event_ELS_meeting
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = shizo_finland.20.a
+		set_country_flag = fin_3_yes
+		hidden_effect = {
+			country_event = {
+			  id = shizo_finland.21
+			  days = 2
+			}
+		  }
+		CAN = {
+			add_tech_bonus = {
+					bonus = 1.0 
+					ahead_reduction = 1 
+					uses = 1
+					category = rocketry
+					category = electronics
+				}
+			}
+			CAN = {
+				add_tech_bonus = {
+					name = FRA_military_science
+					bonus = 1
+					uses = 2
+					category = naval_equipment
+					category = air_equipment
+				}
+				}
+		ai_chance = { factor = 60 }
+	}
+	option = {
+		name = shizo_finland.20.b
+		hidden_effect = {
+			country_event = {
+			  id = shizo_finland.21
+			  days = 2
+			}
+		  }
+		set_country_flag = fin_3_no
+		ai_chance = { factor = 40 }
+	}
+}
+country_event = {			
+	id = shizo_finland.21
+	immediate = {log = "[Root.GetName]: event shizo_finland.21"}
+	title = shizo_finland.21.t
+	desc = shizo_finland.21.d
+	picture = GFX_report_event_SWE_military_meeting
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = shizo_finland.21.a
+		 custom_effect_tooltip = FIN_say_no
+		set_country_flag = fin_4_yes
+		set_country_flag = fin_metting_done
+		ai_chance = { factor = 60 }
+	}
+	option = {
+		name = shizo_finland.21.b
+		set_country_flag = fin_4_no
+		set_country_flag = fin_metting_done
+		ai_chance = { factor = 40 }
+	}
+}
+country_event = {			
+	id = shizo_finland.22
+	immediate = {log = "[Root.GetName]: event shizo_finland.22"}
+	title = shizo_finland.22.t
+	desc = shizo_finland.22.d
+	picture = GFX_report_event_IRE_socialist_meeting
+	fire_only_once = yes
+	trigger = {
+		tag = FIN
+		FIN = {
+			and = { 
+				has_country_flag = fin_1_no
+				has_country_flag = fin_2_no
+				has_country_flag = fin_3_no
+				has_country_flag = fin_4_no
+			}
+		}
+	}
+	option = {
+		name = shizo_finland.22.a
+		hidden_effect = {
+			CAN = {
+			country_event = {
+			  id = shizo_finland.29
+			  days = 2
+			}
+		}
+		  }
+		ai_chance = { factor = 60 }
+	}
+}
+country_event = {			
+	id = shizo_finland.24
+	immediate = {log = "[Root.GetName]: event shizo_finland.23"}
+	title = shizo_finland.24.t
+	desc = shizo_finland.24.d
+	picture = GFX_report_event_IRE_army_oconnell
+	fire_only_once = yes
+	trigger = {
+		tag = FIN
+		FIN = {
+			has_country_flag = fin_metting_done
+			OR = {
+			and = {
+			has_country_flag = fin_1_yes
+			has_country_flag = fin_2_yes
+		    not = { has_country_flag = fin_3_yes 
+			has_country_flag = fin_4_yes  }
+			}
+		    and = { 
+			has_country_flag = fin_1_yes
+		 	has_country_flag = fin_3_yes 
+			not = { has_country_flag = fin_2_yes 
+			has_country_flag = fin_4_yes  } 
+		    }
+			and = { 
+			has_country_flag = fin_1_yes
+			has_country_flag = fin_4_yes 
+		    not = { has_country_flag = fin_3_yes 
+			has_country_flag = fin_2_yes  } 
+		    }
+			and = { 
+			has_country_flag = fin_2_yes
+			has_country_flag = fin_3_yes
+		    not = { has_country_flag = fin_1_yes 
+			has_country_flag = fin_4_yes  } 
+		    }
+			and = { 
+			has_country_flag = fin_2_yes
+			has_country_flag = fin_4_yes
+			not = { has_country_flag = fin_1_yes 
+			has_country_flag = fin_3_yes  } 
+		    }
+			and = { 
+				has_country_flag = fin_3_yes
+				has_country_flag = fin_4_yes
+				not = { has_country_flag = fin_1_yes 
+				has_country_flag = fin_2_yes  } 
+			}
+		}
+    } 
+
+	}
+
+	option = {
+		name = shizo_finland.24.a
+		hidden_effect = {
+			CAN = {
+			country_event = {
+			  id = shizo_finland.30
+			  days = 2
+			}
+		}
+		  }
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = 1300
+			producer = CAN
+		}
+		add_equipment_to_stockpile = {
+			type = artillery_equipment_1
+			amount = 600
+			producer = CAN
+		}
+		863= {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = supply_node
+				level = 2
+				instant_build = yes
+			}
+		}
+		build_railway = {
+			path = {
+			  3083
+			  9194
+			  11211
+			  6108
+			  11105
+			}
+		  }
+		  build_railway = {
+			path = {
+			  11105
+			  9129
+			  11172
+			  3025
+			  3137
+			  9167
+			}
+		  }
+		  build_railway = {
+			path = {
+			  11105
+			  9129
+			  6144
+			  9167
+			  67
+			  9073
+			  9183
+			  3061
+			}
+		  }
+		  build_railway = {
+			path = {
+			  11105
+			  6009
+			  204
+			  3161
+			  3061
+			}
+		  }
+		  if = {
+			limit = {
+			  owns_state = 1325
+			}
+			build_railway = {
+			  path = {
+				9183
+				11056
+				6082
+				9206
+			  }
+			}
+		  }
+		ai_chance = { factor = 60 }
+	}
+}
+
+country_event = {			
+	id = shizo_finland.23
+	immediate = {log = "[Root.GetName]: event shizo_finland.23"}
+	title = shizo_finland.23.t
+	desc = shizo_finland.23.d
+	picture = GFX_report_event_IRE_army_oconnell
+	fire_only_once = yes
+	trigger = {
+		tag = FIN
+		FIN = {
+			has_country_flag = fin_metting_done
+			OR = {
+			and = {
+			has_country_flag = fin_1_yes
+		    not = { 
+			has_country_flag = fin_2_yes
+			has_country_flag = fin_3_yes 
+			has_country_flag = fin_4_yes  }
+			}
+		    and = { 
+			has_country_flag = fin_2_yes 
+			not = { 
+			has_country_flag = fin_3_yes
+			has_country_flag = fin_1_yes 
+			has_country_flag = fin_4_yes  } 
+		    }
+			and = { 
+			has_country_flag = fin_3_yes
+		    not = { 
+			has_country_flag = fin_4_yes 
+			has_country_flag = fin_1_yes 
+			has_country_flag = fin_2_yes  } 
+		    }
+			and = { 
+			has_country_flag = fin_4_yes
+		    not = { 
+			has_country_flag = fin_1_yes
+			has_country_flag = fin_2_yes 
+			has_country_flag = fin_3_yes  } 
+		    }
+		}
+    } 
+
+	}
+
+	option = {
+		name = shizo_finland.23.a
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = 1300
+			producer = CAN
+		}
+		add_equipment_to_stockpile = {
+			type = artillery_equipment_1
+			amount = 600
+			producer = CAN
+		}
+		hidden_effect = {
+			CAN = {
+			country_event = {
+			  id = shizo_finland.30
+			  days = 2
+			}
+		}
+		  }
+		ai_chance = { factor = 60 }
+	}
+}
+		country_event = {			
+			id = shizo_finland.25
+			immediate = {log = "[Root.GetName]: event shizo_finland.24"}
+			title = shizo_finland.25.t
+			desc = shizo_finland.25.d
+			picture = GFX_report_event_IRE_army_oconnell
+			fire_only_once = yes
+			trigger = {
+				tag = FIN
+				FIN = {
+					has_country_flag = fin_metting_done
+					OR = {
+					and = {
+					has_country_flag = fin_1_yes
+					has_country_flag = fin_2_yes
+					has_country_flag = fin_3_yes 
+					not = { 
+					has_country_flag = fin_4_yes  }
+					}
+					and = { 
+					has_country_flag = fin_1_yes
+					 has_country_flag = fin_3_yes 
+					 has_country_flag = fin_4_yes 
+					not = { 
+					has_country_flag = fin_2_yes  } 
+					}
+					and = { 
+					has_country_flag = fin_1_yes
+					has_country_flag = fin_4_yes 
+					has_country_flag = fin_2_yes 
+					not = { 
+					has_country_flag = fin_3_yes  } 
+					}
+					and = { 
+					has_country_flag = fin_2_yes
+					has_country_flag = fin_3_yes
+					has_country_flag = fin_4_yes 
+					not = { 
+					has_country_flag = fin_1_yes  } 
+					}
+				}
+			} 
+		
+			}
+		
+			option = {
+				name = shizo_finland.25.a
+				hidden_effect = {
+					CAN = {
+					country_event = {
+					  id = shizo_finland.30
+					  days = 2
+					}
+				}
+				  }
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 1300
+					producer = CAN
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 600
+					producer = CAN
+				}
+				add_offsite_building = { type = arms_factory level = 1 }
+		        add_offsite_building = { type = industrial_complex level = 2 }
+				863= {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = supply_node
+						level = 2
+						instant_build = yes
+					}
+				}
+				build_railway = {
+					path = {
+					  3083
+					  9194
+					  11211
+					  6108
+					  11105
+					}
+				  }
+				  build_railway = {
+					path = {
+					  11105
+					  9129
+					  11172
+					  3025
+					  3137
+					  9167
+					}
+				  }
+				  build_railway = {
+					path = {
+					  11105
+					  9129
+					  6144
+					  9167
+					  67
+					  9073
+					  9183
+					  3061
+					}
+				  }
+				  build_railway = {
+					path = {
+					  11105
+					  6009
+					  204
+					  3161
+					  3061
+					}
+				  }
+				  if = {
+					limit = {
+					  owns_state = 1325
+					}
+					build_railway = {
+					  path = {
+						9183
+						11056
+						6082
+						9206
+					  }
+					}
+				  }
+				ai_chance = { factor = 60 }
+			}
+		}
+		country_event = {			
+			id = shizo_finland.26
+			immediate = {log = "[Root.GetName]: event shizo_finland.26"}
+			title = shizo_finland.26.t
+			desc = shizo_finland.26.d
+			picture = GFX_report_event_IRE_army_oconnell
+			fire_only_once = yes
+			trigger = {
+				tag = FIN
+				FIN = {
+					has_country_flag = fin_metting_done
+					and = {
+					has_country_flag = fin_1_yes
+					has_country_flag = fin_2_yes
+					has_country_flag = fin_3_yes 
+					has_country_flag = fin_4_yes 
+				}
+			} 
+		
+			}
+		
+			option = {
+				name = shizo_finland.26.a
+				set_country_flag = fin_friend
+				hidden_effect = {
+					CAN = {
+					country_event = {
+					  id = shizo_finland.31
+					  days = 2
+					}
+				}
+				  }
+				add_ideas = FIN_can
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 1300
+					producer = CAN
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 600
+					producer = CAN
+				}
+				add_offsite_building = { type = arms_factory level = 1 }
+		        add_offsite_building = { type = industrial_complex level = 2 }
+				863= {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = supply_node
+						level = 2
+						instant_build = yes
+					}
+				}
+				build_railway = {
+					path = {
+					  3083
+					  9194
+					  11211
+					  6108
+					  11105
+					}
+				  }
+				  build_railway = {
+					path = {
+					  11105
+					  9129
+					  11172
+					  3025
+					  3137
+					  9167
+					}
+				  }
+				  build_railway = {
+					path = {
+					  11105
+					  9129
+					  6144
+					  9167
+					  67
+					  9073
+					  9183
+					  3061
+					}
+				  }
+				  build_railway = {
+					path = {
+					  11105
+					  6009
+					  204
+					  3161
+					  3061
+					}
+				  }
+				  if = {
+					limit = {
+					  owns_state = 1325
+					}
+					build_railway = {
+					  path = {
+						9183
+						11056
+						6082
+						9206
+					  }
+					}
+				  }
+				ai_chance = { factor = 60 }
+			}
+		}
+		country_event = {			
+			id = shizo_finland.27
+			immediate = {log = "[Root.GetName]: event shizo_finland.26"}
+			title = shizo_finland.27.t
+			desc = shizo_finland.27.d
+			picture = GFX_report_event_IRE_army_oconnell
+			fire_only_once = yes
+			trigger = {
+				tag = FIN
+				FIN = {	has_country_flag = fin_4_yes } 
+				CAN = {
+					has_war_with = ENG
+				  }
+			}
+		
+			option = {
+				name = shizo_finland.27.a
+				declare_war_on = { target = ENG type = annex_everything }
+				add_war_support = 0.05
+				ai_chance = { factor = 60 }
+			}
+			option = {
+				name = shizo_finland.27.b
+					CAN = {
+					country_event = {
+					  id = shizo_finland.32
+					  days = 2
+					}
+				}
+				ai_chance = { factor = 40 }
+			}
+		}
+		country_event = {			
+			id = shizo_finland.28
+			immediate = {log = "[Root.GetName]: event shizo_finland.28"}
+			title = shizo_finland.28.t
+			desc = shizo_finland.28.d
+			picture = GFX_report_event_CAN_acw_negotiations
+			fire_only_once = yes
+		    is_triggered_only = yes
+		
+			option = {
+				name = shizo_finland.28.a
+				FIN = {
+					country_event = {			
+					  id = shizo_finland.18 }
+					}
+				ai_chance = { factor = 60 }
+			}
+		}
+		country_event = {			
+			id = shizo_finland.29
+			immediate = {log = "[Root.GetName]: event shizo_finland.29"}
+			title = shizo_finland.29.t
+			desc = shizo_finland.29.d
+			picture = GFX_report_event_CAN_acw_negotiations
+			fire_only_once = yes
+		    is_triggered_only = yes
+		
+			option = {
+				name = shizo_finland.29.a
+				ai_chance = { factor = 60 }
+			}
+		}
+		country_event = {			
+			id = shizo_finland.30
+			immediate = {log = "[Root.GetName]: event shizo_finland.30"}
+			title = shizo_finland.30.t
+			desc = shizo_finland.30.d
+			picture = GFX_report_event_CAN_acw_negotiations
+			fire_only_once = yes
+		    is_triggered_only = yes
+		
+			option = {
+				name = shizo_finland.30.a
+				ai_chance = { factor = 60 }
+			}
+		}
+		country_event = {			
+			id = shizo_finland.31
+			immediate = {log = "[Root.GetName]: event shizo_finland.31"}
+			title = shizo_finland.31.t
+			desc = shizo_finland.31.d
+			picture = GFX_report_event_CAN_acw_negotiations
+			fire_only_once = yes
+		    is_triggered_only = yes
+		
+			option = {
+				name = shizo_finland.31.a
+				ai_chance = { factor = 60 }
+			}
+		}
+		country_event = {			
+			id = shizo_finland.32
+			immediate = {log = "[Root.GetName]: event shizo_finland.32"}
+			title = shizo_finland.32.t
+			desc = shizo_finland.32.d
+			fire_only_once = yes
+			is_triggered_only = yes
+			option = {
+				name = shizo_finland.32.a
+				FIN = {
+					country_event = {			
+					  id = shizo_finland.33 }
+					}
+				ai_chance = { factor = 40 }
+			}
+		}
+		country_event = {			
+			id = shizo_finland.33
+			immediate = {log = "[Root.GetName]: event shizo_finland.32"}
+			title = shizo_finland.33.t
+			desc = shizo_finland.33.d
+			picture = GFX_report_event_CAN_lon_sanctions
+			fire_only_once = yes
+			is_triggered_only = yes
+			option = {
+				name = shizo_finland.33.a
+				hidden_effect = {
+				add_offsite_building = { type = arms_factory level = -1 }
+				add_offsite_building = { type = industrial_complex level = -2 }
+			}
+				add_stability = -0.2
+				remove_ideas = FIN_can
+				add_timed_idea = { idea = FIN_sanction days = 365 }
+				ai_chance = { factor = 40 }
+			}
+		}
+		
+			country_event = {			
+				id = shizo_finland.34
+				immediate = {log = "[Root.GetName]: event shizo_finland.34"}
+				title = shizo_finland.34.t
+				desc = shizo_finland.34.d
+				picture = GFX_report_event_KAR_vidlitsa_provocation
+				fire_only_once = yes
+				trigger = {
+					tag = FIN
+					has_completed_focus = FIN_volunteers_from_france
+					FIN = {
+						has_war_with = RUS
+					  }
+				}
+			
+				option = {
+					name = shizo_finland.34.a
+					add_war_support = 0.10
+			division_template = {
+				name = "卡累利阿起义军"
+				division_names_group = SRI_GAR_01
+				template_counter = 68
+				regiments = {
+					militia = { x = 0 y = 0 }
+					militia = { x = 0 y = 1 }
+					militia = { x = 0 y = 2 }
+					militia = { x = 1 y = 0 }
+					militia = { x = 1 y = 1 }
+				}
+				support = {
+          recon = {
+            x = 0
+            y = 0
+          }
+        }
+			}
+			hidden_effect = {
+			set_province_controller = 170
+			set_province_controller = 6117
+			set_province_controller = 6012
+			set_province_controller = 6029
+			set_province_controller = 6117
+			set_province_controller = 11150
+			set_province_controller = 3067
+			set_province_controller = 11159
+		}
+       215 = {
+        create_unit = {
+          division = "division_template = \"卡累利阿起义军\" start_experience_factor = 0 start_equipment_factor = 0.5"
+          owner = FIN
+        }
+        create_unit = {
+          division = "division_template = \"卡累利阿起义军\" start_experience_factor = 0 start_equipment_factor = 0.5"
+          owner = FIN
+        }
+		create_unit = {
+			division = "division_template = \"卡累利阿起义军\" start_experience_factor = 0 start_equipment_factor = 0.5"
+			owner = FIN
+		  }
+		  create_unit = {
+			division = "division_template = \"卡累利阿起义军\" start_experience_factor = 0 start_equipment_factor = 0.5"
+			owner = FIN
+		  }
+      }
+	  213 = {
+        create_unit = {
+          division = "division_template = \"卡累利阿起义军\" start_experience_factor = 0 start_equipment_factor = 0.5"
+          owner = FIN
+        }
+      }
+	  722 = {
+        create_unit = {
+          division = "division_template = \"卡累利阿起义军\" start_experience_factor = 0 start_equipment_factor = 0.5"
+          owner = FIN
+        }
+        create_unit = {
+          division = "division_template = \"卡累利阿起义军\" start_experience_factor = 0 start_equipment_factor = 0.5"
+          owner = FIN
+        }
+      }
+	  1274 = {
+        create_unit = {
+          division = "division_template = \"卡累利阿起义军\" start_experience_factor = 0 start_equipment_factor = 0.5"
+          owner = FIN
+        }
+      }
+	  1327 = {
+        create_unit = {
+          division = "division_template = \"卡累利阿起义军\" start_experience_factor = 0 start_equipment_factor = 0.5"
+          owner = FIN
+        }
+      }
+	  216 = {
+        create_unit = {
+          division = "division_template = \"卡累利阿起义军\" start_experience_factor = 0 start_equipment_factor = 0.5"
+          owner = FIN
+        }
+		create_unit = {
+			division = "division_template = \"卡累利阿起义军\" start_experience_factor = 0 start_equipment_factor = 0.5"
+			owner = FIN
+		  }
+		  create_unit = {
+			division = "division_template = \"卡累利阿起义军\" start_experience_factor = 0 start_equipment_factor = 0.5"
+			owner = FIN
+		  }
+      }
+					ai_chance = { factor = 60 }
+				}
+			}
+			country_event = {			
+				id = shizo_finland.35
+				immediate = {log = "[Root.GetName]: event shizo_finland.35"}
+				title = shizo_finland.35.t
+				desc = shizo_finland.35.d
+				picture = GFX_report_event_JAP_meeting
+				fire_only_once = yes
+				is_triggered_only = yes
+				option = {
+					name = shizo_finland.35.a
+					hidden_effect = {
+						FIN = {
+						country_event = {
+						  id = shizo_finland.36
+						  days = 37
+						}
+					}
+					  }
+					ai_chance = { factor = 40 }
+				}
+			}
+			country_event = {			
+				id = shizo_finland.36
+				immediate = {log = "[Root.GetName]: event shizo_finland.35"}
+				title = shizo_finland.36.t
+				desc = shizo_finland.36.d
+				picture = GFX_report_event_JAP_meeting
+				fire_only_once = yes
+				is_triggered_only = yes
+				option = {
+					name = shizo_finland.36.a
+					add_ideas = FIN_ary
+					add_doctrine_cost_reduction = {
+						cost_reduction = 0.5
+						uses = 3
+						category = land_doctrine
+					}
+					ai_chance = { factor = 40 }
+				}
+			}
+			country_event = {			
+				id = shizo_finland.37
+				immediate = {log = "[Root.GetName]: event shizo_finland.37"}
+				title = shizo_finland.37.t
+				desc = shizo_finland.37.d
+				picture = GFX_report_event_BBR_rocket_boom
+				fire_only_once = yes
+				is_triggered_only = yes
+				option = {
+					name = shizo_finland.37.a
+					add_tech_bonus = {
+						bonus = 0.5
+						uses = 1
+				        category = rocketry
+					}
+					hidden_effect = {
+						FIN = {
+						country_event = {
+						  id = shizo_finland.38
+						  days = 120
+						}
+					}
+					  }
+					add_manpower = -4
+					ai_chance = { factor = 40 }
+				}
+			}
+			country_event = {			
+				id = shizo_finland.38
+				immediate = {log = "[Root.GetName]: event shizo_finland.38"}
+				title = shizo_finland.38.t
+				desc = shizo_finland.38.d
+				picture = GFX_report_event_BBR_gay_spaceship
+				fire_only_once = yes
+				is_triggered_only = yes
+				option = {
+					name = shizo_finland.38.a
+					add_stability = 0.20
+					ai_chance = { factor = 40 }
+				}
+			}
+			country_event = {			
+				id = shizo_finland.39
+				immediate = {log = "[Root.GetName]: event shizo_finland.39"}
+				title = shizo_finland.39.t
+				desc = shizo_finland.39.d
+				picture = GFX_report_event_IRE_street
+				fire_only_once = yes
+				is_triggered_only = yes
+				option = {
+					name = shizo_finland.39.a
+					add_war_support = 0.01
+					ai_chance = { factor = 40 }
+				}
+			}
+			country_event = {			
+				id = shizo_finland.40
+				immediate = {log = "[Root.GetName]: event shizo_finland.40"}
+				title = shizo_finland.40.t
+				desc = shizo_finland.40.d
+				picture = GFX_NEE_mountains_of_madness
+				fire_only_once = yes
+				trigger = {
+					tag = FIN
+					has_completed_focus = FIN_clear_lands_of_set
+					SIB = {
+						and = {
+						is_subject = yes
+						owns_state = 653
+					}
+					  }
+				}
+				option = {
+					name = shizo_finland.40.a
+					SIB = { set_cosmetic_tag = SIB_HYB }
+					ai_chance = { factor = 40 }
+				}
+				
+			}
+			country_event = {			
+				id = shizo_finland.41
+				immediate = {log = "[Root.GetName]: event shizo_finland.41"}
+				title = shizo_finland.41.t
+				desc = shizo_finland.41.d
+				picture = GFX_event_fin_city
+				fire_only_once = yes
+				is_triggered_only = yes
+				option = {
+					name = shizo_finland.41.a
+					hidden_effect = {
+					country_event = {
+						id = shizo_finland.42
+						days = 17
+					  }
+					}
+					ai_chance = { factor = 40 }
+				}
+				
+			}
+			country_event = {			
+				id = shizo_finland.42
+				immediate = {log = "[Root.GetName]: event shizo_finland.41"}
+				title = shizo_finland.42.t
+				desc = shizo_finland.42.d
+				picture = GFX_report_event_BDN_timetravel
+				fire_only_once = yes
+				is_triggered_only = yes
+				option = {
+					name = shizo_finland.42.a
+					every_state = {
+						FIN = {
+							add_state_core = PREV
+						}
+					}
+					every_country = {
+						FIN = {
+							create_wargoal = {
+								target = PREV
+								type = annex_everything
+							}
+						}
+					}
+					set_cosmetic_tag = FIN_lunhui
+					ai_chance = { factor = 40 }
+				}
+				
+			}
+			country_event = {			
+				id = shizo_finland.43
+				immediate = {log = "[Root.GetName]: event shizo_finland.41"}
+				title = shizo_finland.43.t
+				desc = shizo_finland.43.d
+				picture = GFX_report_event_IRE_bombing
+				fire_only_once = yes
+				is_triggered_only = yes
+				option = {
+					name = shizo_finland.43.a
+					kill_country_leader = yes
+					create_country_leader = {
+			name = "芬诺-埃及临时政府"
+			picture = "gfx/leaders/POL/Portrait_POL_Wewnetrzny_Krag.png"
+			expire = "1.1.1"
+			ideology = occultism_subtype 
+		}
+					country_event = {
+						id = shizo_finland.44
+					  }
+					ai_chance = { factor = 40 }
+				}
+				
+			}
+			country_event = {			
+				id = shizo_finland.44
+				immediate = {log = "[Root.GetName]: event shizo_finland.41"}
+				title = shizo_finland.44.t
+				desc = shizo_finland.44.d
+				picture = GFX_report_event_EGY_sayyid_qutb
+				fire_only_once = yes
+				is_triggered_only = yes
+				option = {
+					name = shizo_finland.44.a
+					add_manpower = -1053
+					country_event = {
+						id = shizo_finland.45
+						days = 2
+					  }
+					ai_chance = { factor = 40 }
+				}
+				
+			}
+			country_event = {			
+				id = shizo_finland.45
+				immediate = {log = "[Root.GetName]: event shizo_finland.41"}
+				title = shizo_finland.45.t
+				desc = shizo_finland.45.d
+				picture = GFX_report_event_CAN_death_george
+				fire_only_once = yes
+				is_triggered_only = yes
+				option = {
+					name = shizo_finland.45.a
+					hidden_effect = {
+					country_event = {
+						id = shizo_finland.46
+						days = 17
+					  }
+					}
+					ai_chance = { factor = 40 }
+				}
+				
+			}
+			country_event = {			
+				id = shizo_finland.46
+				immediate = {log = "[Root.GetName]: event shizo_finland.41"}
+				title = shizo_finland.46.t
+				desc = shizo_finland.46.d
+				picture = GFX_report_event_BDN_timetravel
+				fire_only_once = yes
+				is_triggered_only = yes
+				option = {
+					name = shizo_finland.46.a
+					create_country_leader = {
+			name = "西格德·韦滕霍维·阿斯帕"
+			picture = "gfx/leaders/FIN/sigurd_fucked.png"
+			expire = "1.1.1"
+			ideology = occultism_subtype 
+		}
+					every_state = {
+						FIN = {
+							add_state_core = PREV
+						}
+					}
+					every_country = {
+						FIN = {
+							create_wargoal = {
+								target = PREV
+								type = annex_everything
+							}
+						}
+					}
+					set_cosmetic_tag = FIN_lunhui1
+					ai_chance = { factor = 40 }
+				}
+				
+			}
+			country_event = {			
+				id = shizo_finland.47
+				immediate = {log = "[Root.GetName]: event shizo_finland.41"}
+				title = shizo_finland.47.t
+				desc = shizo_finland.47.d
+				picture = GFX_event_fin_soldiers
+				fire_only_once = yes
+				is_triggered_only = yes
+				option = {
+					name = shizo_finland.47.a
+					every_state = {
+        limit = {
+          is_core_of = EGY
+        }
+        add_core_of = FIN
+      }
+					ai_chance = { factor = 40 }
+				}
+			}
+			country_event = {			
+				id = shizo_finland.48
+				immediate = {log = "[Root.GetName]: event shizo_finland.41"}
+				title = shizo_finland.48.t
+				desc = shizo_finland.48.d
+				picture = GFX_CZE_liliova_street
+				fire_only_once = yes
+				is_triggered_only = yes
+				option = {
+					name = shizo_finland.48.a
+					add_manpower = -3
+					ai_chance = { factor = 40 }
+				}
+			}
+			country_event = {			
+				id = shizo_finland.49
+				immediate = {log = "[Root.GetName]: event shizo_finland.41"}
+				title = shizo_finland.49.t
+				desc = shizo_finland.49.d
+				picture = GFX_report_event_HOL_prison_vught
+				fire_only_once = yes
+				is_triggered_only = yes
+				option = {
+					name = shizo_finland.49.a
+					add_manpower = -28
+					ai_chance = { factor = 40 }
+				}
+			}
+			country_event = {			
+				id = shizo_finland.50
+				immediate = {log = "[Root.GetName]: event shizo_finland.41"}
+				title = shizo_finland.50.t
+				desc = shizo_finland.50.d
+				fire_only_once = yes
+				is_triggered_only = yes
+				option = {
+					name = shizo_finland.50.a
+					UKR = {
+					add_manpower = 563 }
+					ai_chance = { factor = 40 }
+				}
+			}

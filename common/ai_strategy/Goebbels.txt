@@ -1,0 +1,366 @@
+RM_goebb_start = {
+	allowed = {
+		tag = GRU
+	}
+	enable = {
+		GRU = {
+			has_country_leader = { character = GRU_Joseph_Goebbels ruling_only = yes }
+		}
+		has_completed_focus = GRU_volkssturm
+	}
+
+	abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = spare_unit_factor
+        value = -250
+    }
+	ai_strategy = {
+        type = added_military_to_civilian_factory_ratio
+        value = 500
+    }
+	ai_strategy = {
+        type = force_build_armies
+        value = 250
+    }
+	ai_strategy = {
+        type = equipment_stockpile_surplus_ratio
+        value = -20
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = light_tank_chassis
+        value = -1000
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = light_tank_chassis_0
+        value = -1000
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = light_tank_chassis_1
+        value = -1000
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = light_tank_chassis_2
+        value = -150
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = light_tank_chassis_3
+        value = -50
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = light_tank_artillery_equipment_2
+        value = 250
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = light_tank_artillery_equipment_3
+        value = 250
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = light_tank_aa_equipment_2
+        value = 250
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = light_tank_aa_equipment_3
+        value = 250
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = infantry_equipment
+        value = -1000
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = infantry_equipment_0
+        value = -1000
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = infantry_equipment_1
+        value = -500
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = infantry_equipment_2
+        value = -100
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = infantry_equipment_3
+        value = -50
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = anti_tank_equipment_2
+        value = 150
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = anti_tank_equipment_3
+        value = 250
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = anti_air_equipment_2
+        value = 150
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = anti_air_equipment_3
+        value = 250
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = medium_tank_chassis_2
+        value = 250
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = medium_tank_chassis_3
+        value = 500
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = heavy_tank_chassis_2
+        value = 250
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = heavy_tank_chassis_3
+        value = 500
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = mechanized_equipment_1
+        value = 150
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = mechanized_equipment_2
+        value = 250
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = mechanized_equipment_3
+        value = 500
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = motorized_equipment
+        value = 100
+    }
+}
+
+RM_war_goebb_rus = {
+	allowed = {
+		tag = RUS
+	}
+	enable = {
+		GRU = {
+			has_country_leader = { character = GRU_Joseph_Goebbels ruling_only = yes }
+		}
+		has_war_with = GRU
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = GRU
+		value = 1000
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = GRU
+		value = 1000
+	}
+	ai_strategy = {
+        type = spare_unit_factor
+        value = -250
+    }
+	ai_strategy = {
+        type = front_armor_score
+        id = GRU
+        value = 1000
+    }
+	ai_strategy = {
+        type = theatre_distribution_demand_increase
+        value = 8
+        id = 195
+    }
+	ai_strategy = {
+        type = theatre_distribution_demand_increase
+        value = 12
+        id = 219
+    }
+	ai_strategy = {
+        type = theatre_distribution_demand_increase
+        value = 8
+        id = 217
+    }
+	ai_strategy = {
+        type = theatre_distribution_demand_increase
+        value = 4
+        id = 263
+    }
+	ai_strategy = {
+        type = theatre_distribution_demand_increase
+        value = 6
+        id = 242
+    }
+	ai_strategy = {
+        type = theatre_distribution_demand_increase
+        value = 6
+        id = 260
+    }
+	ai_strategy = {
+        type = added_military_to_civilian_factory_ratio
+        value = 500
+    }
+	ai_strategy = {
+        type = force_build_armies
+        value = 250
+    }
+	ai_strategy = {
+        type = equipment_stockpile_surplus_ratio
+        value = -20
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = light_tank_chassis
+        value = -1000
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = light_tank_chassis_0
+        value = -1000
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = light_tank_chassis_1
+        value = -1000
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = light_tank_chassis_2
+        value = -150
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = light_tank_chassis_3
+        value = -50
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = light_tank_artillery_equipment_2
+        value = 250
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = light_tank_artillery_equipment_3
+        value = 250
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = light_tank_aa_equipment_2
+        value = 250
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = light_tank_aa_equipment_3
+        value = 250
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = infantry_equipment
+        value = -1000
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = infantry_equipment_0
+        value = -1000
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = infantry_equipment_1
+        value = -500
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = infantry_equipment_2
+        value = -100
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = infantry_equipment_3
+        value = -50
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = anti_tank_equipment_2
+        value = 150
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = anti_tank_equipment_3
+        value = 250
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = anti_air_equipment_2
+        value = 150
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = anti_air_equipment_3
+        value = 250
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = medium_tank_chassis_2
+        value = 250
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = medium_tank_chassis_3
+        value = 500
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = heavy_tank_chassis_2
+        value = 250
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = heavy_tank_chassis_3
+        value = 500
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = mechanized_equipment_1
+        value = 150
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = mechanized_equipment_2
+        value = 250
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = mechanized_equipment_3
+        value = 500
+    }
+	ai_strategy = {
+        type = equipment_variant_production_factor
+        id = motorized_equipment
+        value = 100
+    }
+}

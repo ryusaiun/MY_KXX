@@ -1,0 +1,1636 @@
+add_namespace = Frajocbin
+country_event = {	
+	id = Frajocbin_war
+	immediate = {log = "[GetDateText]: [Root.GetName]: event Frajocbin.war"}
+	title = Frajocbin.war.1.t
+	desc = Frajocbin.war.1.d
+
+	trigger ={
+	tag = FRA
+	has_war_with=GER
+	has_idea = FRA_fiveyears
+}
+fire_only_once = yes
+hidden = no
+option = { 
+	name = Frajocbin.war.a
+	trigger = {
+		always=yes
+	}
+	add_political_power = -50
+	add_stability = -0.1
+	swap_ideas = {
+		remove_idea = FRA_fiveyears
+		add_idea = FRA_zhanzheng
+	}
+	
+}
+}
+country_event = {
+	id = Frajocbin.win
+	immediate = {log = "[GetDateText]: [Root.GetName]: event Frajocbin.win"}
+	title = Frajocbin.win.1.t
+	desc = Frajocbin.win.1.d
+
+	trigger ={
+	tag = FRA
+	has_war = no
+	has_idea = FRA_zhanzheng
+	GER = {
+		or={
+			exists = no
+		is_subject_of=fra
+		is_in_faction_with = fra
+	}
+}
+		
+	}
+fire_only_once = yes
+hidden = no
+option = { 
+	name = Frajocbin.win.a
+	trigger = {
+		always=yes
+	}
+	add_political_power = 150
+	add_stability = 0.2
+	add_popularity = {
+		ideology = totalist
+		popularity = 0.1
+	}
+
+	swap_ideas = {
+		remove_idea = FRA_zhanzheng
+		add_idea = FRA_heping
+	}
+	
+}
+}
+
+country_event = {
+	id = Frajocbin.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event Frajocbin.win"}
+	title = Frajocbin.1.t
+	desc = Frajocbin.1.d
+is_triggered_only = yes
+fire_only_once = yes
+hidden = no
+option = { 
+	name = Frajocbin.1.a
+	trigger = {
+		always=yes
+	}
+	add_political_power = -50
+	add_popularity = {
+		ideology = totalist
+		popularity = 0.05
+	}
+	add_ideas = FRA_farmer
+	add_stability = -0.05
+	ai_chance = {
+		factor = 1
+	}
+	
+}
+option = { 
+	name = Frajocbin.1.b
+	trigger = {
+		always=yes
+	}
+	add_political_power = 20
+	ai_chance = {
+		factor = 1
+	}
+}
+
+}
+
+country_event = {
+	id = Frajocbin.103
+	immediate = {log = "[GetDateText]: [Root.GetName]: event Frajocbin.win"}
+	title = Frajocbin.103.t
+	desc = Frajocbin.103.d
+	days = 450
+	is_triggered_only = yes
+fire_only_once = yes
+hidden = no
+option = { 
+	name = Frajocbin.103.a
+	trigger = {
+		always=yes
+	}
+	add_political_power = 250
+	add_popularity = {
+		ideology = totalist
+		popularity = 0.1
+	}
+	add_ideas = FRA_The_new_country
+	add_stability = 0.20
+	
+}
+
+}
+country_event = {
+	id = Frajocbin.101
+	immediate = {log = "[GetDateText]: [Root.GetName]: event Frajocbin.Dikang"}
+	title = Frajocbin.101.t
+	desc = Frajocbin.101.d
+is_triggered_only = yes
+fire_only_once = yes
+hidden = no
+option = { 
+	name = Frajocbin.101.a
+	trigger = {
+		not={
+			has_country_flag= ZHUANZHENG_FRA
+		}
+	}
+	add_political_power = -50
+	add_ideas =FRA_Gongshe1
+	add_ideas =FRA_Zibenjia
+	add_ideas =FRA_Right
+	add_stability = -0.075
+	
+}
+option = { 
+	name = Frajocbin.101.b
+	trigger = {
+		has_country_flag= ZHUANZHENG_FRA
+	}
+	add_political_power = -50
+	add_ideas =FRA_Gongshe
+	add_ideas =FRA_Zibenjia
+	add_ideas =FRA_Right
+	add_stability = -0.15
+	
+}
+
+
+}
+country_event = {
+	id = Frajocbin.1112
+	immediate = {log = "[GetDateText]: [Root.GetName]: event Frajocbin.1112"}
+	title = Frajocbin.1112.t
+	desc = Frajocbin.1112.d
+is_triggered_only = yes
+fire_only_once = yes
+hidden = no
+option = { 
+	name = Frajocbin.1112.a
+	add_political_power = 25
+	random_unit_leader = {
+		limit = { 
+			OR = {
+				has_id = 5770
+				has_id = 5771
+				has_id = 5773
+			}
+		}
+		remove_unit_leader = yes
+	}
+	add_ideas =FRA_GMJT
+	add_ideas =FRA_SORJJ
+	add_stability = -0.15
+	hidden_effect={
+		country_event = {
+			days = 3
+			id = FRAjocbin.1113
+		}
+}
+}
+}
+country_event = {
+	id = Frajocbin.1113
+	immediate = {log = "[GetDateText]: [Root.GetName]: event Frajocbin.1112"}
+	title = Frajocbin.1113.t
+	desc = Frajocbin.1113.d
+is_triggered_only = yes
+fire_only_once = yes
+hidden = no
+option = { 
+	name = Frajocbin.1113.a
+	add_stability = 0.05
+	hidden_effect={
+		country_event = {
+			days = 3
+			id = FRAjocbin.1114
+		}
+}
+}
+option = { 
+	name = Frajocbin.1113.b
+	add_political_power = 100
+	add_stability = 0.05
+}
+}
+country_event = {
+	id = Frajocbin.1114
+	immediate = {log = "[GetDateText]: [Root.GetName]: event Frajocbin.1112"}
+	title = Frajocbin.1114.t
+	desc = Frajocbin.1114.d
+is_triggered_only = yes
+fire_only_once = yes
+hidden = no
+option = { 
+	name = Frajocbin.1114.a
+	add_political_power = 100
+	add_stability = 0.05
+	add_popularity = {
+		ideology = totalist
+		popularity = -0.05
+	}
+	hidden_effect={
+		country_event = {
+			days = 5
+			id = FRAjocbin.1115
+		}
+}
+}
+option = { 
+	name = Frajocbin.1114.b
+	add_political_power = 50
+	add_stability = 0.025
+	random_owned_state = {
+		limit = {
+			free_building_slots = {
+				building = industrial_complex
+				size > 1
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+			type = industrial_complex
+			level = 1
+			instant_build = yes
+		}
+	}
+	hidden_effect={
+		country_event = {
+			days = 5
+			id = FRAjocbin.1115
+		}
+}
+}
+}
+
+country_event = {
+	id = Frajocbin.1115
+	immediate = {log = "[GetDateText]: [Root.GetName]: event Frajocbin.1112"}
+	title = Frajocbin.1115.t
+	desc = Frajocbin.1115.d
+is_triggered_only = yes
+fire_only_once = yes
+hidden = no
+option = { 
+	name = Frajocbin.1115.a
+	add_political_power = 50
+	add_stability = 0.05
+	add_popularity = {
+		ideology = totalist
+		popularity = -0.1
+	}
+	hidden_effect={
+		country_event = {
+			days = 10
+			id = FRAjocbin.1116
+		}
+}
+}
+}
+country_event = {
+	id = Frajocbin.1116
+	immediate = {log = "[GetDateText]: [Root.GetName]: event Frajocbin.1112"}
+	title = Frajocbin.1116.t
+	desc = Frajocbin.1116.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_FRA_event_Antisor
+hidden = no
+option = { 
+	name = Frajocbin.1116.a
+	add_political_power = 10
+	add_stability = 0.075
+	add_popularity = {
+		ideology = totalist
+		popularity = -0.075
+	}
+	hidden_effect={
+		country_event = {
+			days = 42
+			id = FRAjocbin.1117
+		}
+}
+}
+}
+country_event = {
+	id = Frajocbin.1117
+	immediate = {log = "[GetDateText]: [Root.GetName]: event Frajocbin.1112"}
+	title = Frajocbin.1117.t
+	desc = Frajocbin.1117.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_FRA_event_Antisor
+hidden = no
+option = { 
+	name = Frajocbin.1117.a
+	add_political_power = 100
+	add_popularity = {
+		ideology = radical_socialist
+		popularity = 0.1
+	}
+}
+}
+country_event = {
+	id = Frajocbin.1201
+	immediate = {log = "[GetDateText]: [Root.GetName]: event Frajocbin.1112"}
+	title =Frajocbin.1201.t
+	desc = Frajocbin.1201.d
+is_triggered_only = yes
+fire_only_once = yes
+hidden = no
+option = { 
+	name = Frajocbin.1201.a
+	set_country_flag= FRA_Black111111
+	add_political_power = 25
+	add_stability = 0.025
+	hidden_effect={
+		country_event = {
+			days = 5
+			id = FRAjocbin.1202
+		}
+}
+}
+option = { 
+	name = Frajocbin.1201.b
+	add_political_power = 25
+	add_stability = -0.025
+	custom_effect_tooltip=FRA_Black_guard_b
+	hidden_effect={
+		country_event = {
+			days = 5
+			id = FRAjocbin.1203
+		}
+}
+}
+}
+country_event = {
+	id = Frajocbin.1202
+	immediate = {log = "[GetDateText]: [Root.GetName]: event Frajocbin.1112"}
+	title =Frajocbin.1202.t
+	desc = Frajocbin.1202.d
+is_triggered_only = yes
+fire_only_once = yes
+hidden = no
+option = { 
+	name = Frajocbin.1202.a
+	set_country_flag= FRA_Black_over
+	add_political_power = 25
+	add_stability = 0.04
+	add_popularity = {
+		ideology = radical_socialist
+		popularity = 0.06
+	}
+}
+}
+country_event = {
+	id = Frajocbin.1203
+	immediate = {log = "[GetDateText]: [Root.GetName]: event Frajocbin.1112"}
+	title =Frajocbin.1203.t
+	desc = Frajocbin.1203.d
+is_triggered_only = yes
+fire_only_once = yes
+hidden = no
+option = { 
+	name = Frajocbin.1203.a
+	set_country_flag= FRA_Black_over
+	add_political_power = -50
+	add_war_support=0.05
+	add_stability = 0.1
+	add_popularity = {
+		ideology = radical_socialist
+		popularity = 0.05
+	}
+}
+}
+country_event = {
+	id = Frajocbin.1301
+	immediate = {log = "[GetDateText]: [Root.GetName]: event Frajocbin.1112"}
+	title =Frajocbin.1301.t
+	desc = Frajocbin.1301.d
+is_triggered_only = yes
+picture = GFX_FRA_event_Deat
+fire_only_once = yes
+hidden = no
+option = { 
+	name = Frajocbin.1301.a
+	add_political_power = 100
+	add_stability = -0.05
+	add_popularity = {
+		ideology = social_democrat
+		popularity = 0.05
+	}
+}
+}
+country_event = {
+	id = Frajocbin.1401
+	immediate = {log = "[GetDateText]: [Root.GetName]: event Frajocbin.1112"}
+	title =Frajocbin.1401.t
+	desc = Frajocbin.1401.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_FRA_event_Antisor
+hidden = no
+option = { 
+	name = Frajocbin.1401.a
+	remove_ideas= FRA_GMJT
+	add_political_power = 10
+	add_manpower = -1000
+	add_stability = 0.1
+	add_popularity = {
+		ideology = totalist
+		popularity = -0.1
+	}
+}
+}
+
+country_event = {
+	id = Frajocbin.1501
+	immediate = {log = "[GetDateText]: [Root.GetName]: event Frajocbin.1112"}
+	title =Frajocbin.1501.t
+	desc = Frajocbin.1501.d
+is_triggered_only = yes
+fire_only_once = yes
+
+hidden = no
+option = {    #无政府
+	name =Frajocbin.1501.a
+	trigger = {
+		has_country_flag=FRA_Black111111
+	}
+	add_political_power = 150
+	add_stability = 0.1
+	set_cosmetic_tag =1231313
+	country_event = FRAjocbin.1502
+	add_popularity = {
+		ideology = radical_socialist
+		popularity = 0.1
+	}
+	remove_ideas_with_trait = head_of_government
+		add_ideas =  FRA_Daniel_Guerin_hog_rso
+		remove_ideas_with_trait = foreign_minister
+		add_ideas = FRA_Nestor_Makhno_for_rso
+		remove_ideas_with_trait = economy_minister
+		add_ideas = FRA_Daniel_Guerin_eco_rso
+		remove_ideas_with_trait = security_minister
+		add_ideas = FRA_Sebastien_Faure_sec_rso
+	clr_country_flag = FRA_the_red_win
+	set_party_name = {
+		ideology = radical_socialist
+		long_name = FRA_Black_party_111
+		name = FRA_Black_party_11
+	}	
+}
+option = { 
+	name =Frajocbin.1501.b #法共
+	add_political_power = 150
+	add_stability = 0.15
+	swap_ideas={
+		remove_idea= FRA_PLA
+		add_idea= FRA_PLA1
+	}
+	set_cosmetic_tag =1231313
+	hidden_effect={
+		set_party_name = {
+			ideology = totalist
+			long_name = "法共-雅各宾派"			
+			name = "法兰西共产党"	
+		}
+		set_party_name = {
+			ideology = radical_socialist
+			long_name = "法共-无政府派"			
+			name = "法兰西共产党"	
+		}		
+		set_party_name = {
+			ideology = syndicalist
+			long_name = "法共-工会派"			
+			name = "法兰西共产党"	
+		}		
+		set_party_name = {
+			ideology = social_democrat
+			long_name = "法共-改良派"			
+			name = "法兰西共产党"	
+		}	
+		set_popularities = {
+			totalist = 30
+			syndicalist = 20
+			radical_socialist = 15
+			social_democrat = 25
+			social_liberal = 1
+			market_liberal= 1
+			social_conservative =0
+			authoritarian_democrat =8
+			paternal_autocrat =0
+			national_populist =0
+
+
+		}		
+	}
+}
+option = { 
+	name =Frajocbin.1501.c #工团
+	add_political_power = 150
+	add_stability = 0.1
+	add_popularity = {
+		ideology = syndicalist
+		popularity = 0.1
+	}
+	clr_country_flag = FRA_the_red_win
+	set_cosmetic_tag =1231313
+	set_politics = {
+		ruling_party = syndicalist
+		elections_allowed = no
+	}
+	country_event= Frajocbin.1503
+}
+option = { 
+	name =Frajocbin.1501.e  #戴亚
+	trigger = {
+		has_completed_focus= FRA_red_3
+	}
+	add_stability = 0.05
+	create_country_leader = {
+		name = "马塞尔·戴亚"
+		desc = "POLITICS_MARCEL_DEAT_DESC"
+		picture = "gfx/leaders/FRA/Portrait_France_Marcel_Deat.png"
+		expire = "1965.1.1"
+		ideology = new_socialism_subtype
+	}
+	remove_ideas_with_trait = head_of_government
+	add_ideas = FRA_Rene_Belin_hog_tot
+	remove_ideas_with_trait = foreign_minister
+	add_ideas = FRA_Pierre_Drieu_La_Rochelle_for_tot
+	remove_ideas_with_trait = economy_minister
+	add_ideas = FRA_Jacques_Doriot_eco_tot
+	remove_ideas_with_trait = security_minister
+	add_ideas = FRA_Henri_Barbe_sec_tot
+	set_politics = {
+		ruling_party = totalist
+		elections_allowed = no
+	}
+	add_popularity = {
+		ideology = totalist
+		popularity = 0.5
+	}
+	set_party_name = {
+		ideology = radical_socialist
+		long_name = "无政府派"
+		name = "无政府派"
+	}	
+	set_party_name = {
+		ideology = syndicalist
+		long_name = "工团派"
+		name = "工团派"
+	}	
+	set_party_name = {
+		ideology = social_democrat
+		long_name = "温和派"
+		name = "温和派"
+	}	
+	set_cosmetic_tag =1231313
+	create_country_leader = {
+		name = "涅斯托尔·马赫诺"
+		desc = "POLITICS_NESTOR_MAKHNO_DESC"
+		picture = "gfx/leaders/FRA/Portrait_France_Nestor_Makhno.png"
+		expire = "1965.1.1"
+		ideology = anarchism_subtype
+		traits = { anarchy_leader}
+	}
+	create_country_leader = {
+		name = "塞巴斯蒂安·富尔"
+		desc = "POLITICS_SEBASTIEN_FAURE_DESC"
+		picture = "gfx/leaders/FRA/Portrait_France_Sebastien_Faure.png"
+		expire = "1.1.1"
+		ideology = anarcho_syndicalist_subtype
+	}
+	hidden_effect={
+		complete_national_focus = FRA_Restoring_Socialist_Order
+		complete_national_focus = FRA_War_Against_Anarchist_Chaos
+		complete_national_focus = FRA_Decapitate_Valois_Crazed_Children
+		complete_national_focus = FRA_Only_True_Jacobins
+	}
+}
+}
+country_event = {
+	id = FRAjocbin.1502
+	immediate = {log = "[GetDateText]: [Root.GetName]: event Frajocbin.1112"}
+	title =FRAjocbin.1502.t
+	desc = FRAjocbin.1502.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_FRA_event_Antisor
+hidden = no
+option = { 
+	name =FRAjocbin.1502.a  #马赫诺
+	add_stability = -0.05
+	set_politics = {
+		ruling_party = radical_socialist
+		elections_allowed = no
+	}
+	add_synd_to_coalition = yes
+	add_popularity = {
+		ideology = radical_socialist
+		popularity = 0.15
+	}
+	set_party_name = {
+		ideology = radical_socialist
+		long_name = FRA_Black_party_111
+		name = FRA_Black_party_112
+	}	
+	set_party_name = {
+		ideology = syndicalist
+		long_name = "法兰西无政府工团"
+		name = "无政府/工团派"
+	}	
+	set_cosmetic_tag =1231313
+	create_country_leader = {
+		name = "涅斯托尔·马赫诺"
+		desc = "POLITICS_NESTOR_MAKHNO_DESC"
+		picture = "gfx/leaders/FRA/Portrait_France_Nestor_Makhno.png"
+		expire = "1965.1.1"
+		ideology = anarchism_subtype
+		traits = { anarchy_leader}
+	}
+	create_country_leader = {
+		name = "塞巴斯蒂安·富尔"
+		desc = "POLITICS_SEBASTIEN_FAURE_DESC"
+		picture = "gfx/leaders/FRA/Portrait_France_Sebastien_Faure.png"
+		expire = "1.1.1"
+		ideology = anarcho_syndicalist_subtype
+	}
+	hidden_effect={
+		complete_national_focus = FRA_state_anarchy
+		complete_national_focus = FRA_power
+		complete_national_focus = FRA_true_equality
+	}
+}
+option = { 
+	name =FRAjocbin.1502.b #无政府派
+	add_stability = -0.05
+	set_politics = {
+		ruling_party = radical_socialist
+		elections_allowed = no
+	}
+	set_cosmetic_tag =1231313
+	add_tot_to_coalition =yes
+	add_synd_to_coalition = yes
+	add_popularity = {
+		ideology = radical_socialist
+		popularity = 0.15
+	}
+	set_party_name = {
+		ideology = radical_socialist
+		long_name = FRA_Black_party_111
+		name = FRA_Black_party_114
+	}	
+	set_party_name = {
+		ideology = totalist
+		long_name = FRA_Black_party_115
+		name = FRA_Black_party_114
+	}	
+	create_country_leader = {
+		name = "达尼埃尔·介朗"
+		desc = "POLITICS_DANIEL_GUERIN_DESC"
+		picture = "gfx/leaders/FRA/Portrait_France_Daniel_Guerin.png"
+		expire = "1.1.1"
+		ideology = totalist_subtype
+	}
+	create_country_leader = {
+		name = "达尼埃尔·介朗"
+		desc = "POLITICS_DANIEL_GUERIN_DESC"
+		picture = "gfx/leaders/FRA/Portrait_France_Daniel_Guerin.png"
+		expire = "1.1.1"
+		ideology = anarcho_communism_subtype
+	}
+	create_country_leader = {
+		name = "塞巴斯蒂安·富尔"
+		desc = "POLITICS_SEBASTIEN_FAURE_DESC"
+		picture = "gfx/leaders/FRA/Portrait_France_Sebastien_Faure.png"
+		expire = "1.1.1"
+		ideology = anarcho_syndicalist_subtype
+	}
+	hidden_effect={
+		complete_national_focus = FRA_Between_Marxism_Narodism
+		complete_national_focus = FRA_Endorse_Antietatist_Vision
+		complete_national_focus = FRA_Devolve_Administration
+		complete_national_focus = FRA_Empower_Local_Committees
+		complete_national_focus = FRA_Autonomous_Councils
+		complete_national_focus = FRA_Establish_National_Collectives
+		complete_national_focus = FRA_Decentralized_Development_B
+		complete_national_focus = FRA_Work_With_Makhnovtsy
+		complete_national_focus = FRA_Communal_Democracy
+		complete_national_focus = FRA_Enforce_Land_Socialization
+		complete_national_focus = FRA_Mass_Nationalizations_B
+		complete_national_focus = FRA_Promote_Collective_Agriculture
+	}
+}
+option = { 
+	name =FRAjocbin.1502.c #无政府温和派
+	add_stability = -0.025
+	create_country_leader = {
+		name = "塞巴斯蒂安·富尔"
+		desc = "POLITICS_SEBASTIEN_FAURE_DESC"
+		picture = "gfx/leaders/FRA/Portrait_France_Sebastien_Faure.png"
+		expire = "1.1.1"
+		ideology = anarcho_syndicalist_subtype
+	}
+	set_politics = {
+		ruling_party = syndicalist
+		elections_allowed = no
+	}
+	set_cosmetic_tag =1231313
+	add_tot_to_coalition =yes
+	add_synd_to_coalition = yes
+	add_popularity = {
+		ideology = radical_socialist
+		popularity = 0.15
+	}
+	add_popularity = {
+		ideology = syndicalist
+		popularity = 0.15
+	}
+	set_party_name = {
+		ideology = radical_socialist
+		long_name = FRA_Black_party_115
+		name = FRA_Black_party_11
+	}	
+	set_party_name = {
+		ideology = totalist
+		long_name = FRA_Black_party_113
+		name = FRA_Black_party_114
+	}	
+	create_country_leader = {
+		name = "达尼埃尔·介朗"
+		desc = "POLITICS_DANIEL_GUERIN_DESC"
+		picture = "gfx/leaders/FRA/Portrait_France_Daniel_Guerin.png"
+		expire = "1.1.1"
+		ideology = totalist_subtype
+	}
+	create_country_leader = {
+		name = "涅斯托尔·马赫诺"
+		desc = "POLITICS_NESTOR_MAKHNO_DESC"
+		picture = "gfx/leaders/FRA/Portrait_France_Nestor_Makhno.png"
+		expire = "1965.1.1"
+		ideology = anarchism_subtype
+		traits = { anarchy_leader}
+	}
+	hidden_effect={
+		complete_national_focus = FRA_Between_Marxism_Narodism
+		complete_national_focus = FRA_Necessity_Of_State_Apparatus
+		complete_national_focus = FRA_Moderate_Decentralization
+		complete_national_focus = FRA_Oppose_Centralisation
+		complete_national_focus = FRA_Establish_Cheka
+		complete_national_focus = FRA_Workers_Commissions
+		complete_national_focus = FRA_Introduce_Planned_Elements
+		complete_national_focus = FRA_Balance_The_Highs_And_Lows
+		complete_national_focus = FRA_Enforce_Land_Socialization
+		complete_national_focus = FRA_Mass_Nationalizations_B
+		complete_national_focus = FRA_Promote_Collective_Agriculture
+	}
+}
+}
+country_event = {
+	id = Frajocbin.1503
+	immediate = {log = "[GetDateText]: [Root.GetName]: event Frajocbin.1112"}
+	title =Frajocbin.1503.t
+	desc = Frajocbin.1503.d
+is_triggered_only = yes
+fire_only_once = yes
+add_radsoc_to_coalition =yes
+add_socdem_to_coalition = yes
+add_tot_to_coalition=yes
+hidden = no
+option = { 
+	name = Frajocbin.1503.a
+	add_political_power = -50
+	add_stability = 0.05
+	add_popularity = {
+		ideology = syndicalist
+		popularity = 0.1
+	}
+	set_party_name = {
+		ideology = radical_socialist
+		long_name = "法兰西共产党-无政府派"			
+		name = "法兰西共产党"	
+	}		
+	set_party_name = {
+		ideology = syndicalist
+		long_name = "法兰西共产党-工会派"			
+		name = "法兰西共产党"	
+	}	
+	set_party_name = {
+		ideology = totalist
+		long_name = "法兰西共产党-雅各宾派"			
+		name = "法兰西共产党"	
+	}		
+	set_party_name = {
+		ideology = social_democrat
+		long_name = "法兰西共产党-温和派"			
+		name = "法兰西共产党"	
+	}		
+	hidden_effect={country_event= { id = comfrance.1004 days = 1460 }}
+}
+option = { 
+	name = Frajocbin.1503.b
+	add_political_power = 200
+	add_stability = 0.07
+	add_popularity = {
+		ideology = syndicalist
+		popularity = 0.15
+	}
+	set_party_name = {
+		ideology = radical_socialist
+		long_name = "无政府派/黑军"			
+		name = "无政府派"	
+	}		
+	set_party_name = {
+		ideology = syndicalist
+		long_name = "工团派"			
+		name = "工团派"	
+	}		
+	set_party_name = {
+		ideology = social_democrat
+		long_name = "甘末林/布鲁姆派"			
+		name = "温和派"	
+	}		
+	hidden_effect={country_event= { id = comfrance.1004 days = 1460 }}
+}
+}
+country_event = {
+	id = Frajocbin.1601
+	immediate = {log = "[GetDateText]: [Root.GetName]: event Frajocbin.1112"}
+	title =Frajocbin.1601.t
+	desc = Frajocbin.1601.d
+is_triggered_only = yes
+fire_only_once = yes #set_country_flag = LEADER_GUI_VISIBLE
+hidden = no
+option = { 
+	name = Frajocbin.1601.a
+	add_political_power = 10
+	add_manpower = 1000
+	add_stability = -0.05
+	add_popularity = {
+		ideology = totalist
+		popularity = 0.1
+	}
+	set_politics = {
+		ruling_party = totalist
+		elections_allowed = no
+	}
+
+	add_synd_to_coalition = yes
+	add_radsoc_to_coalition=yes
+	set_country_flag = LEADER_GUI_VISIBLE
+	complete_national_focus = FRA_red_12
+	hidden_effect={
+		create_country_leader = {
+			
+			name = "雅克·杜克洛"
+			#desc = "Dukeluo_DESC"
+			picture = "gfx/leaders/FRA/Portrait_France_Jacques_Duclos.png"
+			expire = "1.1.1"
+			traits = { COF_leader_1 }
+			ideology = jacobinism_subtype
+		}
+		create_country_leader = {
+			
+			name = "雅克·杜克洛"
+			#desc = "Dukeluo_DESC"
+			picture = "gfx/leaders/FRA/Portrait_France_Jacques_Duclos.png"
+			expire = "1.1.1"
+			traits = { COF_leader_1 }
+			ideology = anarcho_syndicalist_subtype
+		}
+		create_country_leader = {
+			
+			name = "雅克·杜克洛"
+			#desc = "Dukeluo_DESC"
+			picture = "gfx/leaders/FRA/Portrait_France_Jacques_Duclos.png"
+			expire = "1.1.1"
+			traits = { COF_leader_1 }
+			ideology = anarchism_subtype
+		}
+		create_country_leader = {
+			
+			name = "雅克·杜克洛"
+			#desc = "Dukeluo_DESC"
+			picture = "gfx/leaders/FRA/Portrait_France_Jacques_Duclos.png"
+			expire = "1.1.1"
+			traits = { COF_leader_1 }
+			ideology = marechal_democracy_subtype
+		}
+	}
+}
+option = { 
+	name = Frajocbin.1601.b
+	add_political_power = 10
+	add_manpower = 1000
+	add_stability = -0.05
+	add_popularity = {
+		ideology = totalist
+		popularity = 0.1
+	}
+	set_politics = {
+		ruling_party = totalist
+		elections_allowed = no
+	}
+	add_synd_to_coalition = yes
+	add_radsoc_to_coalition=yes
+	complete_national_focus = FRA_red_13
+	hidden_effect={
+		create_country_leader = {
+			
+			name = "雅克·杜克洛"
+			#desc = "Dukeluo_DESC"
+			picture = "gfx/leaders/FRA/Portrait_France_Jacques_Duclos.png"
+			expire = "1.1.1"
+			traits = { COF_leader_1 }
+			ideology = national_jacobinism_subtype
+		}
+		create_country_leader = {
+			
+			name = "雅克·杜克洛"
+			#desc = "Dukeluo_DESC"
+			picture = "gfx/leaders/FRA/Portrait_France_Jacques_Duclos.png"
+			expire = "1.1.1"
+			traits = { COF_leader_1 }
+			ideology = anarcho_syndicalist_subtype
+		}
+		create_country_leader = {
+			
+			name = "雅克·杜克洛"
+			#desc = "Dukeluo_DESC"
+			picture = "gfx/leaders/FRA/Portrait_France_Jacques_Duclos.png"
+			expire = "1.1.1"
+			traits = { COF_leader_1 }
+			ideology = anarchism_subtype
+		}
+		create_country_leader = {
+			
+			name = "雅克·杜克洛"
+			#desc = "Dukeluo_DESC"
+			picture = "gfx/leaders/FRA/Portrait_France_Jacques_Duclos.png"
+			expire = "1.1.1"
+			traits = { COF_leader_1 }
+			ideology = marechal_democracy_subtype
+		}
+	}
+}
+option = {
+	name = Frajocbin.1601.c
+	add_political_power = 10
+	add_manpower = 1000
+	add_stability = 0.05
+	add_popularity = {
+		ideology = social_democrat
+		popularity = 0.1
+	}
+	set_politics = {
+		ruling_party = social_democrat
+		elections_allowed = no
+	}
+	set_country_flag = LEADER_GUI_VISIBLE
+	hidden_effect={
+		create_country_leader = {
+			
+			name = "雅克·杜克洛"
+			#desc = "Dukeluo_DESC"
+			picture = "gfx/leaders/FRA/Portrait_France_Jacques_Duclos.png"
+			expire = "1.1.1"
+			traits = { COF_leader_1 }
+			ideology = jacobinism_subtype
+		}
+		create_country_leader = {
+			
+			name = "雅克·杜克洛"
+			#desc = "Dukeluo_DESC"
+			picture = "gfx/leaders/FRA/Portrait_France_Jacques_Duclos.png"
+			expire = "1.1.1"
+			traits = { COF_leader_1 }
+			ideology = anarcho_syndicalist_subtype
+		}
+		create_country_leader = {
+			
+			name = "雅克·杜克洛"
+			#desc = "Dukeluo_DESC"
+			picture = "gfx/leaders/FRA/Portrait_France_Jacques_Duclos.png"
+			expire = "1.1.1"
+			traits = { COF_leader_1 }
+			ideology = anarchism_subtype
+		}
+		create_country_leader = {
+			
+			name = "雅克·杜克洛"
+			#desc = "Dukeluo_DESC"
+			picture = "gfx/leaders/FRA/Portrait_France_Jacques_Duclos.png"
+			expire = "1.1.1"
+			traits = { COF_leader_1 }
+			ideology = marechal_democracy_subtype
+		}
+	}
+	complete_national_focus = FRA_red_14
+}
+}
+country_event = {
+	id = Frajocbin.1701
+	immediate = {log = "[GetDateText]: [Root.GetName]: event Frajocbin.1112"}
+	title =Frajocbin.1701.t
+	desc = Frajocbin.1701.d
+is_triggered_only = yes
+fire_only_once = yes
+hidden = no
+option = { 
+	name = Frajocbin.1301.a
+	add_political_power = 50
+	add_stability = 0.05
+	add_popularity = {
+		ideology = social_democrat
+		popularity = -0.1
+	}
+	add_popularity = {
+		ideology = authoritarian_democrat
+		popularity = -0.1
+	}
+}
+}
+country_event = {
+	id = Frajocbin.1702
+	immediate = {log = "[GetDateText]: [Root.GetName]: event Frajocbin.1112"}
+	title =Frajocbin.1702.t
+	desc = Frajocbin.1702.d
+is_triggered_only = yes
+fire_only_once = yes
+hidden = no
+option = { 
+	name = Frajocbin.1702.a
+	remove_ideas_with_trait = security_minister
+	add_ideas=FRA_Sebastien_Faure_sec_rso
+	add_political_power = 100
+	add_stability = -0.1
+	add_popularity = {
+		ideology = totalist
+		popularity = -0.15
+	}
+	add_power_balance_value = {
+		id = FRA_Dukeluo_balance
+		value = 0.1
+		tooltip_side = FRADKL_right_side
+	}
+}
+}
+country_event = {
+	id = Frajocbin.1703
+	immediate = {log = "[GetDateText]: [Root.GetName]: event Frajocbin.1112"}
+	title =Frajocbin.1703.t
+	desc = Frajocbin.1703.d
+is_triggered_only = yes
+fire_only_once = yes
+hidden = no
+option = { 
+	name = Frajocbin.1703.a
+	add_political_power = 50
+	add_stability = 0.05
+	add_power_balance_value = {
+		id = FRA_Dukeluo_balance
+		value = 0.1
+		tooltip_side = FRADKL_right_side
+	}
+}
+}
+country_event = {
+	id = Frajocbin.1803
+	immediate = {log = "[GetDateText]: [Root.GetName]: event Frajocbin.1112"}
+	title =Frajocbin.1803.t
+	desc = Frajocbin.1803.d
+	picture=GFX_FRA_event_jacobin3
+is_triggered_only = yes
+fire_only_once = yes
+hidden = no
+option = { 
+	name = Frajocbin.1803.a
+	add_political_power = 50
+	add_stability = 0.05
+	trigger = {
+		has_completed_focus= FRA_red_12
+	}
+	clr_country_flag=LEADER_GUI_VISIBLE
+	remove_ideas_with_trait = head_of_government
+	add_ideas = FRA_Marcel_Cachin_hog_tot
+	remove_ideas_with_trait = foreign_minister
+	add_ideas = FRA_Jacques_Duclos_for_tot
+	create_country_leader = {
+		name = "莫里斯·多列士"
+		desc = "POLITICS_MAURICE_THOREZ_DESC"
+		picture = "gfx/leaders/FRA/Portrait_France_Maurice_Thorez.png"
+		expire = "1965.1.1"
+		ideology = syndicalist_subtype
+	}
+	create_country_leader = {
+		name = "莫里斯·多列士"
+		desc = "POLITICS_MAURICE_THOREZ_DESC"
+		picture = "gfx/leaders/FRA/Portrait_France_Maurice_Thorez.png"
+		expire = "1965.1.1"
+		ideology = jacobinism_subtype
+		traits = { COF_leader_2 }
+	}
+	create_country_leader = {
+		name = "莫里斯·多列士"
+		desc = "POLITICS_MAURICE_THOREZ_DESC"
+		picture = "gfx/leaders/FRA/Portrait_France_Maurice_Thorez.png"
+		expire = "1965.1.1"
+		ideology = radical_socialist_subtype
+	}
+	create_country_leader = {
+		name = "莫里斯·多列士"
+		desc = "POLITICS_MAURICE_THOREZ_DESC"
+		picture = "gfx/leaders/FRA/Portrait_France_Maurice_Thorez.png"
+		expire = "1965.1.1"
+		ideology = social_democrat_subtype
+	}
+}
+option = { 
+	name = Frajocbin.1803.f
+	add_political_power = 120
+	add_stability = 0.1
+	hidden_effect={create_country_leader = {
+		name = "雅克·杜克洛"
+		picture = "gfx/leaders/FRA/dukeluo1.png"
+		expire = "1.1.1"
+		traits = { COF_leader_1 }
+		ideology = jacobinism_subtype
+	}}
+	trigger = {
+		has_completed_focus= FRA_red_12
+	}
+}
+option = { 
+	name = Frajocbin.1803.b
+	add_political_power = 50
+	clr_country_flag=LEADER_GUI_VISIBLE
+	remove_ideas_with_trait = head_of_government
+		add_ideas = FRA_Marcel_Cachin_hog_tot
+		remove_ideas_with_trait = foreign_minister
+		add_ideas = FRA_Jacques_Duclos_for_tot
+		create_country_leader = {
+			name = "雅克·多里奥"
+			picture = "gfx/leaders/FRA/Portrait_France_Jacques_Doriot.png"
+			expire = "1.1.1"
+			traits = { COF_leader_3 }
+			ideology = national_jacobinism_subtype
+		}
+		create_country_leader = {
+			name = "雅克·多里奥"
+			picture = "gfx/leaders/FRA/Portrait_France_Jacques_Doriot.png"
+			expire = "1.1.1"
+			traits = { COF_leader_3 }
+			ideology =  revisionist_marxism_subtype
+		}
+		create_country_leader = {
+			name = "雅克·多里奥"
+			picture = "gfx/leaders/FRA/Portrait_France_Jacques_Doriot.png"
+			expire = "1.1.1"
+			traits = { COF_leader_3 }
+			ideology = radical_socialist_subtype
+		}
+	add_stability = 0.05
+	trigger = {
+		has_completed_focus= FRA_red_13
+	}
+}
+option = { 
+	name = Frajocbin.1803.c #甘末林
+	add_political_power = 50
+	add_stability = 0.05
+	create_country_leader = {
+		name = "莫里斯·甘末林"
+		desc = "POLITICS_GAMELIN_DESC"
+		picture = "gfx/leaders/FRA/Portrait_France_Maurice_Gamelin_KR.png"
+		expire = "1965.1.1"
+		ideology = syndicalist_subtype
+		traits = {marshal_leader}
+	}
+
+	create_country_leader = {
+		name = "莫里斯·甘末林"
+		desc = "POLITICS_GAMELIN_DESC"
+		picture = "gfx/leaders/FRA/Portrait_France_Maurice_Gamelin_KR.png"
+		expire = "1965.1.1"
+		ideology = marechal_democracy_subtype
+		traits = {
+			marshal_leader
+			COF_leader_4
+	             }
+	}
+
+	create_country_leader = {
+		name = "莫里斯·甘末林"
+		desc = "POLITICS_GAMELIN_DESC"
+		picture = "gfx/leaders/FRA/Portrait_France_Maurice_Gamelin_KR.png"
+		expire = "1965.1.1"
+		ideology = radical_socialist_subtype
+		traits = {marshal_leader}
+	}
+	create_country_leader = {
+		name = "莫里斯·甘末林"
+		desc = "POLITICS_GAMELIN_DESC"
+		picture = "gfx/leaders/FRA/Portrait_France_Maurice_Gamelin_KR.png"
+		expire = "1965.1.1"
+		ideology = totalist_subtype
+		traits = {marshal_leader}
+	}
+
+	trigger = {
+		has_completed_focus= FRA_red_14
+	}
+}
+option = { 
+	name = Frajocbin.1803.e
+	add_political_power = 50
+	add_stability = 0.05
+	clr_country_flag=LEADER_GUI_VISIBLE
+	create_country_leader = {
+		name = "莱昂·布鲁姆"
+		picture = "gfx/leaders/FRA/Portrait_FRA_Leon_Blum_KX.png"
+		expire = "1.1.1"
+		ideology = revisionist_marxism_subtype
+		traits = {COF_leader_5}
+	}
+	create_country_leader = {
+		name = "莱昂·布鲁姆"
+		picture = "gfx/leaders/FRA/Portrait_FRA_Leon_Blum_KX.png"
+		expire = "1.1.1"
+		ideology = totalist_subtype
+	}
+	create_country_leader = {
+		name = "莱昂·布鲁姆"
+		picture = "gfx/leaders/FRA/Portrait_FRA_Leon_Blum_KX.png"
+		expire = "1.1.1"
+		ideology = radical_socialist_subtype
+	}
+	create_country_leader = {
+		name = "莱昂·布鲁姆"
+		picture = "gfx/leaders/FRA/Portrait_FRA_Leon_Blum_KX.png"
+		expire = "1.1.1"
+		ideology = syndicalist_subtype
+	}
+	trigger = {
+		has_completed_focus= FRA_red_14
+	}
+}
+}
+country_event = {
+	id = Frajocbin.1801
+	immediate = {log = "[GetDateText]: [Root.GetName]: event Frajocbin.1112"}
+	title =Frajocbin.1801.t
+	desc = Frajocbin.1801.d
+	picture= GFX_FRA_event_jacobin4
+is_triggered_only = yes
+fire_only_once = yes
+hidden = no
+option = { 
+	name = Frajocbin.1801.a
+	army_experience = 70
+	add_political_power = 50
+	add_stability = 0.05
+	remove_ideas_with_trait = head_of_government
+	remove_ideas_with_trait = economy_minister
+	remove_ideas_with_trait = security_minister
+	add_ideas=FRA_Sebastien_Faure_sec_rso
+	add_ideas=FRA_Vincent_Auriol_eco_rso
+    add_ideas=FRA_Leon_Blum_hog_rso
+	add_popularity = {
+		ideology = authoritarian_democrat
+		popularity = 0.05
+	}
+	add_popularity = {
+		ideology = social_democrat
+		popularity = 0.1
+	}
+	trigger = {
+		has_completed_focus= FRA_red_14
+	}
+	add_power_balance_value = {
+		id = FRA_Dukeluo_balance
+		value = 0.5
+		tooltip_side = FRADKL_right_side
+	}
+	hidden_effect={
+		complete_national_focus = FRA_red_over1
+		complete_national_focus = FRA_counter
+		complete_national_focus = FRA_defender
+		complete_national_focus = FRA_popular_front
+		complete_national_focus = FRA_marshal_law
+		complete_national_focus = FRA_restore_order
+		complete_national_focus = FRA_strengthen_military
+		complete_national_focus = FRA_pcf_menace
+		complete_national_focus = FRA_proclamation
+		complete_national_focus = FRA_without_gamelin
+	}
+}
+option = { 
+	name = Frajocbin.1801.b #多里奥
+	army_experience = 70
+	add_political_power = 50
+	add_stability = 0.05
+	trigger = {
+		has_completed_focus= FRA_red_13
+
+	}
+	add_popularity = {
+		ideology = totalist
+		popularity = 0.2
+	}
+	hidden_effect={
+		complete_national_focus = FRA_red_over1
+		country_event= { id = Frajocbin.1802 days = 15 }
+	}
+}
+option = { 
+	name = Frajocbin.1801.c
+	add_political_power = 50
+	add_stability = 0.05
+	remove_ideas_with_trait = foreign_minister
+	add_ideas=FRA_Marcel_Cachin_for_tot
+	add_popularity = {
+		ideology = totalist
+		popularity = 0.2
+	}
+	trigger = {
+		has_completed_focus= FRA_red_12
+
+	}
+	add_power_balance_value = {
+		id = FRA_Dukeluo_balance
+		value = -0.5
+		tooltip_side = FRADKL_left_side
+	}
+	hidden_effect={
+		complete_national_focus = FRA_red_over1
+		complete_national_focus = FRA_lenin_legacy
+		complete_national_focus = FRA_peoples_commune
+		complete_national_focus = FRA_big_jump
+		complete_national_focus = FRA_worker
+		complete_national_focus = FRA_bolshevik_learn
+		complete_national_focus = FRA_eradicate_boys
+		complete_national_focus = FRA_new_economic_plan
+		complete_national_focus = FRA_five_year_plan
+	}
+}
+}
+country_event = {
+	id = Frajocbin.1802
+	immediate = {log = "[GetDateText]: [Root.GetName]: event Frajocbin.1112"}#country_event = { id = comfrance.1004 days = 1825 }
+	title =Frajocbin.1802.t
+	desc = Frajocbin.1802.d
+	picture=GFX_FRA_event_jacobin1
+is_triggered_only = yes
+fire_only_once = yes
+hidden = no
+option = { 
+	name = Frajocbin.1802.a #雅各宾理想
+	add_political_power = 100
+	add_stability = 0.05
+	add_popularity = {
+		ideology = totalist
+		popularity = 0.1
+	}
+	trigger = {
+		OR={has_completed_focus= FRA_red_31
+		has_completed_focus= FRA_red_22
+	}
+	}
+	hidden_effect={
+		complete_national_focus = FRA_new_jacobin
+		complete_national_focus = FRA_french_marxism
+		complete_national_focus = FRA_commune_virtue
+		complete_national_focus = FRA_woke_women
+		complete_national_focus = FRA_show_trials
+		complete_national_focus = FRA_new_worker
+		complete_national_focus = FRA_revolutionary_youth
+		complete_national_focus = FRA_new_national_culture
+	}
+swap_ideas={
+	remove_idea= FRA_Jacobin_JJ
+	add_idea=FRA_Jacobin_JJ2
+}
+swap_ideas={
+	remove_idea= FRA_YHRV
+	add_idea=FRA_YHRV1
+}
+}
+option = { 
+	name = Frajocbin.1802.b #左妥协
+	add_political_power = -50
+	add_stability = 0.05
+	add_popularity = {
+		ideology = totalist
+		popularity = 0.1
+	}
+	add_power_balance_value = {
+		id = FRA_Dukeluo_balance
+		value = -0.4
+		tooltip_side = FRADKL_left_side
+	}
+	trigger = {
+		has_completed_focus= FRA_red_31
+		not={has_completed_focus= FRA_red_22}
+	}
+	set_country_flag=LEADER_GUI_VISIBLE
+	set_cosmetic_tag = FRA_Lenin
+swap_ideas={
+	remove_idea= FRA_Jacobin_JJ
+	add_idea=FRA_LEFTJJ1
+}
+swap_ideas={
+	remove_idea= FRA_YHRV
+	add_idea=FRA_YHRV2
+}
+add_ideas=FRA_Class_struggle2
+hidden_effect={
+	complete_national_focus = FRA_lenin_legacy
+	complete_national_focus = FRA_peoples_commune
+	complete_national_focus = FRA_big_jump
+	complete_national_focus = FRA_worker
+	complete_national_focus = FRA_bolshevik_learn
+	complete_national_focus = FRA_eradicate_boys
+	complete_national_focus = FRA_new_economic_plan
+	complete_national_focus = FRA_five_year_plan
+}
+}
+option = { 
+	name = Frajocbin.1802.c #右妥协
+	add_political_power = -50
+	add_stability = 0.05
+	remove_ideas_with_trait = head_of_government
+	add_ideas=FRA_Leon_Blum_hog_rso
+	remove_ideas_with_trait = security_minister
+	add_ideas=FRA_Sebastien_Faure_sec_rso
+	remove_ideas_with_trait = economy_minister
+	add_ideas=FRA_Andre_Breton_eco_rso
+
+	add_popularity = {
+		ideology = social_democrat
+		popularity = 0.2
+	}
+	add_power_balance_value = {
+		id = FRA_Dukeluo_balance
+		value = 0.3
+		tooltip_side = FRADKL_right_side
+	}
+	trigger = {
+		has_completed_focus= FRA_red_22
+		not={has_completed_focus= FRA_red_31}
+	}
+	set_politics = {
+		ruling_party = social_democrat
+		elections_allowed = no
+	}
+	create_country_leader = {
+		name = "雅克·多里奥"
+		picture = "gfx/leaders/FRA/Portrait_France_Jacques_Doriot.png"
+		expire = "1.1.1"
+		traits = { COF_leader_3 }
+		ideology = revisionist_marxism_subtype
+	}
+	set_cosmetic_tag = FRA_Gamelin
+	set_country_flag=LEADER_GUI_VISIBLE
+swap_ideas={
+	remove_idea= FRA_Jacobin_JJ
+	add_idea=FRA_Gamelin_JJ2
+}
+swap_ideas={
+	remove_idea= FRA_YHRV
+	add_idea=FRA_YHRV3
+}
+hidden_effect={
+	hidden_effect={
+		complete_national_focus = FRA_compromise_with_the_liberals
+		complete_national_focus = FRA_republican_govt
+		complete_national_focus = FRA_monetary_reform
+		complete_national_focus = FRA_restore_assembly_power
+		complete_national_focus = FRA_reassure_the_military
+		complete_national_focus = FRA_republican_traditions
+		complete_national_focus = FRA_constitutional_security
+	}
+	17={
+	add_building_construction = {
+		type = naval_base
+		level = 2
+		province = 11548
+		instant_build = yes
+	}
+	add_dynamic_modifier={modifier=FRA_Dukeluo_right_modifier}
+}
+21={
+	add_dynamic_modifier={modifier=FRA_Dukeluo_right_modifier}
+}
+19={
+	add_dynamic_modifier={modifier=FRA_Dukeluo_right_modifier}
+}
+983={
+	add_dynamic_modifier={modifier=FRA_Dukeluo_right_modifier}
+}}
+add_ideas=free_trade
+}
+option = { 
+	name = Frajocbin.1802.e #选举
+	add_political_power = -100
+	add_stability = 0.05
+	add_popularity = {
+		ideology = totalist
+		popularity = -0.15
+	}
+	clr_country_flag= FRA_the_red_win
+	trigger = {
+		not={has_completed_focus= FRA_red_31
+		has_completed_focus= FRA_red_22
+	}
+	}
+	custom_effect_tooltip = FRA_over_xuanju
+	country_event= { id = comfrance.1004 days = 30 }
+}
+}
+country_event = {
+	id = Frajocbin.1901
+	immediate = {log = "[GetDateText]: [Root.GetName]: event Frajocbin.1112"}
+	title =Frajocbin.1901.t
+	desc = Frajocbin.1901.d
+	picture = GFX_FRA_event_jacobin
+is_triggered_only = yes
+fire_only_once = yes
+hidden = no
+option = { 
+	name = Frajocbin.1901.a
+	add_political_power = 30
+	add_stability = 0.05
+	add_popularity = {
+		ideology = totalist
+		popularity = 0.15
+	}
+	20={
+		add_dynamic_modifier={modifier=FRA_Dukeluo_left_modifier}
+	}
+}
+}
+country_event = {
+	id = Frajocbin.1902
+	immediate = {log = "[GetDateText]: [Root.GetName]: event Frajocbin.1112"}
+	title =Frajocbin.1902.t
+	desc = Frajocbin.1902.d
+	picture =GFX_FRA_event_right
+is_triggered_only = yes
+fire_only_once = yes
+hidden = no
+option = { 
+	name = Frajocbin.1902.a
+	add_political_power = 30
+	add_stability = 0.05
+	add_popularity = {
+		ideology = social_democrat
+		popularity = 0.15
+	}
+}
+}
+country_event = {
+	id = Frajocbin.1903
+	immediate = {log = "[GetDateText]: [Root.GetName]: event Frajocbin.1112"}
+	title = Frajocbin.1903.t
+	desc =  Frajocbin.1903.d
+	picture =GFX_FRA_event_jacobin2
+is_triggered_only = yes
+fire_only_once = yes
+hidden = no
+option = { 
+	name = Frajocbin.1903.a #无事发生
+	add_political_power = -20
+	add_stability = 0.05
+	add_popularity = {
+		ideology = totalist
+		popularity = 0.05
+	}
+}
+option = { 
+	name = Frajocbin.1903.a #改革计划经济
+	add_political_power = 20
+	add_stability = -0.05
+	add_ideas = command_economy
+	swap_ideas={
+		remove_idea= FRA_Jacobin_JJ2
+		add_idea= FRA_Jacobin_JJ3
+	}
+	add_popularity = {
+		ideology = totalist
+		popularity = 0.05
+	}
+}
+}

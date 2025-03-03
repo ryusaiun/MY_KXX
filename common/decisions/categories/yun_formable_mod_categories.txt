@@ -1,0 +1,54 @@
+yun_debug_decisions = {
+	icon = generic_formable_nations	
+	picture = GFX_decision_sonko_chan
+	visible = {
+		is_ai = no
+		is_debug = yes
+	}
+	priority = 5000
+}
+
+yun_direct_to_nations = {
+	icon = generic_formable_nations	
+	visible = {
+		is_ai = no
+	}
+	priority = 4999
+}
+
+yun_change_party = {
+	icon = generic_formable_nations	
+	visible = {
+		is_ai = no
+	}
+	priority = 4998
+}
+
+yun_add_popularity = {
+	icon = generic_formable_nations	
+	visible = {
+		is_ai = no
+	}
+	priority = 4997
+}
+
+coalition_decisions = {
+	icon = generic_formable_nations
+    allowed = { always = yes }
+	visible = { has_country_flag = coalition_showed }
+	priority = 4996
+}
+
+formable_nations_mod_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_picture_ARG_international_loan_decisions
+	priority = 5001
+}
+
+KX_tribute_factories = {
+	icon = generic_formable_nations
+	visible = {
+		is_ai = no
+	}
+	priority = 4995
+}

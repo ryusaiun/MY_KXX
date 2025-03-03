@@ -1,0 +1,530 @@
+﻿capital = 597
+
+set_technology = {
+	### Infantry ###
+	infantry_weapons = 3
+	basic_train = 3
+}
+### Navy - MtG ###
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_light = 3
+		basic_ship_hull_light = 3
+		early_ship_hull_cruiser = 3
+		basic_ship_hull_cruiser = 3
+		
+		basic_naval_mines = 3
+
+		## Modules##
+		basic_battery = 3
+		basic_light_battery = 3
+		smoke_generator = 3
+	}
+}
+
+### Navy - Non MtG ###
+
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "Man the Guns"
+		}
+	}
+	set_technology = {
+		early_destroyer = 3
+		basic_destroyer = 3
+		early_light_cruiser = 3
+		basic_light_cruiser = 3
+	}
+}
+set_technology = {
+	basic_train = 2
+	### General ###
+	electronic_mechanical_engineering = 2
+	fuel_silos = 2
+
+	
+
+	### Infantry ###
+	infantry_weapons = 3
+	infantry_weapons1 = 3
+	tech_support = 3
+	tech_trucks = 3
+	motorised_infantry = 3
+	tech_recon = 3
+	tech_engineers = 3
+	tech_mountaineers = 3
+	marines = 3
+	gw_artillery = 3
+	interwar_antiair = 3
+
+}
+
+set_research_slots = 2
+set_politics = {
+	ruling_party = authoritarian_democrat
+	last_election = "1888.6.15"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	totalist = 22
+	radical_socialist = 0
+	syndicalist = 0
+	social_democrat = 13
+	social_liberal = 12
+	market_liberal = 0
+	social_conservative = 0
+	authoritarian_democrat = 35
+	paternal_autocrat = 0
+	national_populist = 18
+}
+add_ideas = {
+	KXX_JYBD_hog_tot
+	KXX_Motoori_Kosuzu_eco_ade
+	KXX_GRJCD_for_sil
+	KXX_Komeiji_Koishi_sec_sde	
+	KXX_Zhilu_Explosion
+	free_trade
+}
+set_country_flag = Pierre_Gemayel_dead
+
+### Party Leaders
+create_country_leader = {
+	name = "钾钇炳丁"
+	picture = "gfx/leaders/KXX/Portrait_KXX_Jiayibingding.png"
+	expire = "1.1.1"
+	desc = "POLITICS_JYBD_DESC"
+	ideology = tot_jiayibingdingism
+}
+create_country_leader = {
+	name = "烤蟹蟹群众"
+	picture = "gfx/leaders/KXX/Portrait_KXX_Peoples.png"
+	desc = "POLITICS_KXXPEOPLE_DESC"
+	expire = "1.1.1"
+	ideology = centralized_syndicalism_subtype
+}
+
+create_country_leader = {
+	name = "烤蟹蟹群众"
+	picture = "gfx/leaders/KXX/Portrait_KXX_Peoples.png"
+	desc = "POLITICS_KXXPEOPLE_DESC"
+	expire = "1.1.1"
+	ideology = radsoc_communism_subtype
+}
+
+create_country_leader = {
+	name = "烤蟹蟹群众"
+	desc = "POLITICS_KXXPEOPLE_DESC"
+	picture = "gfx/leaders/KXX/Portrait_KXX_Peoples.png"
+	expire = "1.1.1"
+	ideology = socdem_junta_subtype
+}
+
+create_country_leader = {
+	name = "烤蟹蟹群众"
+	picture = "gfx/leaders/KXX/Portrait_KXX_Peoples.png"
+	desc = "POLITICS_KXXPEOPLE_DESC"
+	expire = "1.1.1"
+	ideology = soclib_progressive_democracy_subtype
+}
+
+create_country_leader = {
+	name = "--"
+	picture = "gfx/leaders/CNT/no_leader.png"
+	desc = "NO"
+	expire = "1.1.1"
+	ideology = marlib_national_liberalism_subtype
+}
+
+create_country_leader = {
+	name = "--"
+	picture = "gfx/leaders/CNT/no_leader.png"
+	desc = "NO"
+	expire = "1.1.1"
+	ideology = moderate_authoritarianism_subtype
+}
+
+create_country_leader = {
+	name = "“本居小铃”"
+	picture = "gfx/leaders/KXX/Portrait_KXX_Motoori_Kosuzu.png"
+	desc = "NO"
+	expire = "1.1.1"
+	ideology = motoori_thought_subtype
+}
+
+create_country_leader = {
+	name = "古明地恋"
+	picture = "gfx/leaders/KXX/Portrait_KXX_Komeiji_Koishi.png"
+	desc = "NO"
+	expire = "1.1.1"
+	ideology = rightkxxism_subtype_subtype
+}
+
+create_country_leader = {
+	name = "？？？"
+	picture = "gfx/leaders/KXX/Portrait_France_Rene_Binet_KXX.png"
+	desc = "POLITICS_JYBD_DESC"
+	expire = "1.1.1"
+	ideology = npo_jiayibingdingism
+}
+
+### Corps Commanders ###
+create_field_marshal = {
+	name = "钾钇炳丁"
+	portrait_path = "gfx/leaders/KXX/Portrait_KXX_Jiayibingding.png"
+	traits = { 
+	}
+	id = 1114522
+	skill = 9
+	attack_skill = 10
+	defense_skill = 10
+	planning_skill = 10
+	logistics_skill = 10
+}
+create_field_marshal = {
+	name = "古明地恋"
+	portrait_path = "gfx/leaders/KXX/Portrait_KXX_Komeiji_Koishi.png"
+	traits = { 
+	}
+	skill = 9
+	attack_skill = 10
+	defense_skill = 10
+	planning_skill = 10
+	logistics_skill = 10
+}
+create_field_marshal = {
+	name = "绮丽宇连"
+	portrait_path = "gfx/leaders/KXX/Portrait_KXX_Kirenurun.png"
+	traits = { 
+	}
+	skill = 9
+	attack_skill = 10
+	defense_skill = 10
+	planning_skill = 10
+	logistics_skill = 10
+}
+create_field_marshal = {
+	name = "LXZSHLCZCDBD"
+	portrait_path = "gfx/leaders/KXX/Portrait_KXX_LXZSHLCZCDBD.png"
+	traits = { 
+	}
+	skill = 9
+	attack_skill = 10
+	defense_skill = 10
+	planning_skill = 10
+	logistics_skill = 10
+}
+create_field_marshal = {
+	name = "本居小铃"
+	portrait_path = "gfx/leaders/KXX/Portrait_KXX_Motoori_Kosuzu.png"
+	traits = { 
+	}
+	skill = 9
+	attack_skill = 10
+	defense_skill = 10
+	planning_skill = 10
+	logistics_skill = 10
+}
+create_field_marshal = {
+	name = "莱德斯科利"
+	portrait_path = "gfx/leaders/KXX/Portrait_KXX_Wu_Ledesma.png"
+	traits = { 
+	}
+	skill = 9
+	attack_skill = 10
+	defense_skill = 10
+	planning_skill = 10
+	logistics_skill = 10
+}
+create_corps_commander = {
+	name = "巴伐利亚大公"
+	portrait_path = "gfx/leaders/KXX/Portrait_KXX_Bavarian_Archduke.png"
+	traits = {
+	}
+	skill = 9
+	attack_skill = 10
+	defense_skill = 10
+	planning_skill = 10
+	logistics_skill = 10
+}
+create_corps_commander = {
+	name = "起名字什么的真是太麻烦了"
+	portrait_path = "gfx/leaders/KXX/Portrait_KXX_Doctor_Qi.png"
+	traits = {
+	}
+	skill = 9
+	attack_skill = 10
+	defense_skill = 10
+	planning_skill = 10
+	logistics_skill = 10
+}
+create_corps_commander = {
+	name = "Extremis"
+	portrait_path = "gfx/leaders/KXX/Portrait_KXX_Extremis.png"
+	traits = {
+	}
+	skill = 9
+	attack_skill = 10
+	defense_skill = 10
+	planning_skill = 10
+	logistics_skill = 10
+}
+create_corps_commander = {
+	name = "郭子岚"
+	portrait_path = "gfx/leaders/KXX/Portrait_KXX_Guo_Zilan.png"
+	traits = {
+	}
+	skill = 9
+	attack_skill = 10
+	defense_skill = 10
+	planning_skill = 10
+	logistics_skill = 10
+}
+create_corps_commander = {
+	name = "古月日京春"
+	portrait_path = "gfx/leaders/KXX/Portrait_KXX_Guyue_Rijingchun.png"
+	traits = {
+	}
+	skill = 9
+	attack_skill = 10
+	defense_skill = 10
+	planning_skill = 10
+	logistics_skill = 10
+}
+create_corps_commander = {
+	name = "格温er"
+	portrait_path = "gfx/leaders/KXX/Portrait_KXX_Gwener.png"
+	traits = {
+	}
+	skill = 9
+	attack_skill = 10
+	defense_skill = 10
+	planning_skill = 10
+	logistics_skill = 10
+}
+create_corps_commander = {
+	name = "哈哈哈哈"
+	portrait_path = "gfx/leaders/KXX/Portrait_KXX_Hahahaha.png"
+	traits = {
+	}
+	skill = 9
+	attack_skill = 10
+	defense_skill = 10
+	planning_skill = 10
+	logistics_skill = 10
+}
+create_corps_commander = {
+	name = "理想城II"
+	portrait_path = "gfx/leaders/KXX/Portrait_KXX_Hibiki.png"
+	traits = {
+	}
+	skill = 9
+	attack_skill = 10
+	defense_skill = 10
+	planning_skill = 10
+	logistics_skill = 10
+}
+create_corps_commander = {
+	name = "国际主义魅魔"
+	portrait_path = "gfx/leaders/KXX/Portrait_KXX_Internationalist_Succubus.png"
+	traits = {
+	}
+	skill = 9
+	attack_skill = 10
+	defense_skill = 10
+	planning_skill = 10
+	logistics_skill = 10
+}
+create_corps_commander = {
+	name = "路易空格"
+	portrait_path = "gfx/leaders/KXX/Portrait_KXX_Louis_Space.png"
+	traits = {
+	}
+	skill = 9
+	attack_skill = 10
+	defense_skill = 10
+	planning_skill = 10
+	logistics_skill = 10
+}
+create_corps_commander = {
+	name = "群小市民忙汉"
+	portrait_path = "gfx/leaders/KXX/Portrait_KXX_Manghan.png"
+	traits = {
+	}
+	skill = 9
+	attack_skill = 10
+	defense_skill = 10
+	planning_skill = 10
+	logistics_skill = 10
+}
+create_corps_commander = {
+	name = "梅勒斯"
+	portrait_path = "gfx/leaders/KXX/Portrait_KXX_Melos.png"
+	traits = {
+	}
+	skill = 9
+	attack_skill = 10
+	defense_skill = 10
+	planning_skill = 10
+	logistics_skill = 10
+}
+create_corps_commander = {
+	name = "神秘人"
+	portrait_path = "gfx/leaders/KXX/Portrait_KXX_Mysterious_Man.png"
+	traits = {
+	}
+	skill = 9
+	attack_skill = 10
+	defense_skill = 10
+	planning_skill = 10
+	logistics_skill = 10
+}
+create_corps_commander = {
+	name = "天王寺璃赞"
+	portrait_path = "gfx/leaders/KXX/Portrait_KXX_Rizan.png"
+	traits = {
+	}
+	skill = 9
+	attack_skill = 10
+	defense_skill = 10
+	planning_skill = 10
+	logistics_skill = 10
+}
+create_corps_commander = {
+	name = "夏盖虫"
+	portrait_path = "gfx/leaders/KXX/Portrait_KXX_Shaggai.png"
+	traits = {
+	}
+	skill = 9
+	attack_skill = 10
+	defense_skill = 10
+	planning_skill = 10
+	logistics_skill = 10
+}
+create_corps_commander = {
+	name = "天道"
+	portrait_path = "gfx/leaders/KXX/Portrait_KXX_Tian_Dao.png"
+	traits = {
+	}
+	skill = 9
+	attack_skill = 10
+	defense_skill = 10
+	planning_skill = 10
+	logistics_skill = 10
+}
+create_corps_commander = {
+	name = "乌尔比安的船锚"
+	portrait_path = "gfx/leaders/KXX/Portrait_KXX_Ulpianus.png"
+	traits = {
+	}
+	skill = 9
+	attack_skill = 10
+	defense_skill = 10
+	planning_skill = 10
+	logistics_skill = 10
+}
+create_corps_commander = {
+	name = "薇洛"
+	portrait_path = "gfx/leaders/KXX/Portrait_KXX_Willow.png"
+	traits = {
+	}
+	skill = 9
+	attack_skill = 10
+	defense_skill = 10
+	planning_skill = 10
+	logistics_skill = 10
+}
+create_corps_commander = {
+	name = "工人纠察分队"
+	portrait_path = "gfx/leaders/KXX/Portrait_KXX_Workers_Picket_Squad.png"
+	traits = {
+	}
+	skill = 9
+	attack_skill = 10
+	defense_skill = 10
+	planning_skill = 10
+	logistics_skill = 10
+}
+create_corps_commander = {
+	name = "夏尔莫拉斯"
+	portrait_path = "gfx/leaders/KXX/Portrait_KXX_Xiaer_Molasi.png"
+	traits = {
+	}
+	skill = 9
+	attack_skill = 10
+	defense_skill = 10
+	planning_skill = 10
+	logistics_skill = 10
+}
+create_corps_commander = {
+	name = "Zeromapping"
+	portrait_path = "gfx/leaders/KXX/Portrait_KXX_Zeromapping.png"
+	traits = {
+	}
+	skill = 9
+	attack_skill = 10
+	defense_skill = 10
+	planning_skill = 10
+	logistics_skill = 10
+}
+create_corps_commander = {
+	name = "政仁均紫"
+	portrait_path = "gfx/leaders/KXX/Portrait_KXX_Zhengrenjunzi.png"
+	traits = {
+	}
+	skill = 9
+	attack_skill = 10
+	defense_skill = 10
+	planning_skill = 10
+	logistics_skill = 10
+}
+create_corps_commander = {
+	name = "醉酒传伞"
+	portrait_path = "gfx/leaders/KXX/Portrait_KXX_Zuijiu_Chuansan.png"
+	traits = {
+	}
+	skill = 9
+	attack_skill = 10
+	defense_skill = 10
+	planning_skill = 10
+	logistics_skill = 10
+}
+create_corps_commander = {
+	name = "Noob"
+	portrait_path = "gfx/leaders/KXX/Portrait_KXX_Noob.png"
+	traits = {
+	}
+	skill = 9
+	attack_skill = 10
+	defense_skill = 10
+	planning_skill = 10
+	logistics_skill = 10
+}
+create_corps_commander = {
+	name = "萨伊黛"
+	portrait_path = "gfx/leaders/KXX/Portrait_KXX_Saeedah.png"
+	traits = {
+	}
+	skill = 9
+	attack_skill = 10
+	defense_skill = 10
+	planning_skill = 10
+	logistics_skill = 10
+}
+
+create_navy_leader = {
+	name = "理想城III"
+	portrait_path = "gfx/leaders/KXX/Portrait_KXX_Hibiki.png"
+	traits = { superior_tactician }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	maneuvering_skill = 3
+	coordination_skill = 3
+}

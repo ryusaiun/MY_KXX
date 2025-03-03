@@ -1,0 +1,209 @@
+
+######################
+### Meme Mode	###
+######################
+
+FRA_JACOBIN_SPLITX = {
+	name = "FRA_JACOBIN_SPLITX"
+	group = "RULE_GROUP_KAISERREICH_RULES_EUROPE"
+	option = {
+		name = DEFAULT
+		text = "RULE_OPTION_FRA_JACOBIN_SPLITX_RANDOM"
+		desc = "RULE_OPTION_FRA_JACOBIN_SPLITX_RANDOM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FRA_JACOBIN_SPLITX_MODE
+		text = "RULE_OPTION_FRA_JACOBIN_SPLITX_MODE"
+		desc = "RULE_OPTION_FRA_JACOBIN_SPLITX_MODE_DESC"
+		allow_achievements = yes
+	}
+}
+
+FRA_xday_of_imfamy = {
+	name = "FRA_XDAY_OF_INFAMY"
+	group = "RULE_GROUP_KAISERREICH_RULES_EUROPE"
+	option = {
+		name = DEFAULT
+		text = "RULE_OPTION_FRA_DAY_OF_INFAMY_RANDOM"
+		desc = "RULE_OPTION_FRA_DAY_OF_INFAMY_RANDOM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FRA_VALOIS_ETERNAL_CONTROL
+		text = "RULE_OPTION_FRA_VALOIS_ETERNAL_CONTROL"
+		desc = "RULE_OPTION_FRA_VALOIS_ETERNAL_CONTROL_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FRA_ARTHUYS_ASSUMES_CONTROL
+		text = "RULE_OPTION_FRA_ARTHUYS_ASSUMES_CONTROL"
+		desc = "RULE_OPTION_FRA_ARTHUYS_ASSUMES_CONTROL_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FRA_ORTHOR_ASSUMES_CONTROL
+		text = "RULE_OPTION_FRA_ORTHOR_ASSUMES_CONTROL"
+		desc = "RULE_OPTION_FRA_ORTHOR_ASSUMES_CONTROL_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FRA_DORIOT_ASSUMES_CONTROL
+		text = "RULE_OPTION_FRA_DORIOT_ASSUMES_CONTROL"
+		desc = "RULE_OPTION_FRA_DORIOT_ASSUMES_CONTROL_DESC"
+		allow_achievements = yes
+	}	
+	option = {
+		name = FRA_CLEMEN_ASSUMES_CONTROL
+		text = "RULE_OPTION_FRA_CLEMEN_ASSUMES_CONTROL"
+		desc = "RULE_OPTION_FRA_CLEMEN_ASSUMES_CONTROL_DESC"
+		allow_achievements = yes
+	}
+}
+
+FRA_after_deat= {
+	name = "FRA_AFTER_DEAT"
+	group = "RULE_GROUP_KAISERREICH_RULES_EUROPE"
+	option = {
+		name = DEFAULT
+		text = "RULE_OPTION_FRA_AFTER_DEAT_RANDOM"
+		desc = "RULE_OPTION_FRA_AFTER_DEAT_RANDOM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FRA_AFTER_DEAT_DEAT
+		text = "RULE_OPTION_FRA_AFTER_DEAT_DEAT"
+		desc = "RULE_OPTION_FRA_AFTER_DEAT_DEAT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FRA_AFTER_DEAT_DORGERES
+		text = "RULE_OPTION_FRA_AFTER_DEAT_DORGERES"
+		desc = "RULE_OPTION_FRA_AFTER_DEAT_DORGERES_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FRA_AFTER_DEAT_HERVE
+		text = "RULE_OPTION_FRA_AFTER_DEAT_HERVE"
+		desc = "RULE_OPTION_FRA_AFTER_DEAT_HERVE_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FRA_AFTER_DEAT_NAPOLEON
+		text = "RULE_OPTION_FRA_AFTER_DEAT_NAPOLEON"
+		desc = "RULE_OPTION_FRA_AFTER_DEAT_NAPOLEON_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FRA_AFTER_DEAT_CHRIST
+		text = "RULE_OPTION_FRA_AFTER_DEAT_CHRIST"
+		desc = "RULE_OPTION_FRA_AFTER_DEAT_CHRIST_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FRA_AFTER_DEAT_ANTIGOD
+		text = "RULE_OPTION_FRA_AFTER_DEAT_ANTIGOD"
+		desc = "RULE_OPTION_FRA_AFTER_DEAT_ANTIGOD_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FRA_AFTER_DEAT_CELTIC
+		text = "RULE_OPTION_FRA_AFTER_DEAT_CELTIC"
+		desc = "RULE_OPTION_FRA_AFTER_DEAT_CELTIC_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FRA_AFTER_DEAT_POSSIBLE
+		text = "RULE_OPTION_FRA_AFTER_DEAT_POSSIBLE"
+		desc = "RULE_OPTION_FRA_AFTER_DEAT_POSSIBLE_DESC"
+		allow_achievements = yes
+	}
+}
+
+FRA_rednap_ita_rules= {
+	name = "FRA_REDNAP_ITA_RULES"
+	group = "RULE_GROUP_KAISERREICH_RULES_EUROPE"
+	option = {
+		name = DEFAULT
+		text = "RULE_OPTION_FRA_REDNAP_ITA_RANDOM"
+		desc = "RULE_OPTION_FRA_REDNAP_ITA_RANDOM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = REDNAP_ITA_SISTERS
+		text = "RULE_OPTION_REDNAP_ITA_SISTERS"
+		desc = "RULE_OPTION_REDNAP_ITA_SISTERS_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FRA_REDNAP_ITA_KINGDOM
+		text = "RULE_OPTION_FRA_REDNAP_ITA_KINGDOM"
+		desc = "RULE_OPTION_FRA_REDNAP_ITA_KINGDOM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FRA_REDNAP_ITA_KINGDOM
+		text = "RULE_OPTION_FRA_REDNAP_ITA_UNITED"
+		desc = "RULE_OPTION_FRA_REDNAP_ITA_UNITED_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FRA_REDNAP_ITA_INTEGRATE
+		text = "RULE_OPTION_FRA_REDNAP_ITA_INTEGRATE"
+		desc = "RULE_OPTION_FRA_REDNAP_ITA_INTEGRATE_DESC"
+		allow_achievements = yes
+	}
+}
+
+FRA_rednap_rules= {
+	name = "FRA_REDNAP_RULES"
+	group = "RULE_GROUP_KAISERREICH_RULES_EUROPE"
+	option = {
+		name = DEFAULT
+		text = "RULE_OPTION_FRA_REDNAP_RANDOM"
+		desc = "RULE_OPTION_FRA_REDNAP_RANDOM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FRA_REDNAP_RULES_EP
+		text = "RULE_OPTION_FRA_REDNAP_EP"
+		desc = "RULE_OPTION_FRA_REDNAP_EP_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FRA_REDNAP_RULES_EU
+		text = "RULE_OPTION_FRA_REDNAP_EU"
+		desc = "RULE_OPTION_FRA_REDNAP_EU_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FRA_REDNAP_RULES_REMAIN
+		text = "RULE_OPTION_FRA_REDNAP_REMAIN"
+		desc = "RULE_OPTION_FRA_REDNAP_REMAIN_DESC"
+		allow_achievements = yes
+	}
+}
+
+CZE_gottwald_rules= {
+	name = "CZE_GOTTWALD_RULES"
+	group = "RULE_GROUP_KAISERREICH_RULES_EUROPE"
+	option = {
+		name = DEFAULT
+		text = "RULE_OPTION_CZE_GOTTWALD_RANDOM"
+		desc = "RULE_OPTION_CZE_GOTTWALD_RANDOM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = CZE_GOTTWALDISM_WIN
+		text = "RULE_OPTION_CZE_GOTTWALD_YES"
+		desc = "RULE_OPTION_CZE_GOTTWALD_YES_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = CZE_NO_GOTTWALDISM
+		text = "RULE_OPTION_CZE_GOTTWALD_NO"
+		desc = "RULE_OPTION_CZE_GOTTWALD_NO_DESC"
+		allow_achievements = yes
+	}
+}
+

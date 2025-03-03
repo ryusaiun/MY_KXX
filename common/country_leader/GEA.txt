@@ -1,0 +1,9 @@
+leader_traits = {
+
+	GEA_not_governor_but_king = {
+		political_power_factor = 0.15
+		stability_factor = 0.1
+		compliance_gain = -0.04
+	}
+}
+	

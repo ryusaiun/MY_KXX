@@ -1,0 +1,75 @@
+ideas = {
+	country = {
+        idea_CHI_SIK_mad_recover_power = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea idea_CHI_SIK_mad_recover_power" }
+			name = idea_CHI_SIK_mad_recover_power
+			picture = CHI_MXSHGM_idea
+			available = { 
+				NOT = {
+					AND = {
+					608 = { is_controlled_by_ROOT_or_ally = yes }
+					613 = { is_controlled_by_ROOT_or_ally = yes }
+					}
+				}
+			}
+			allowed = { always = no }
+			targeted_modifier = {
+				tag = QIE
+				attack_bonus_against = 1
+				defense_bonus_against = 10
+			}
+			targeted_modifier = {
+				tag = FNG
+				attack_bonus_against = 1
+				defense_bonus_against = 10
+			}
+			targeted_modifier = {
+				tag = LEP
+				attack_bonus_against = 1
+				defense_bonus_against = 10
+			}
+			targeted_modifier = {
+				tag = ANQ
+				attack_bonus_against = 1
+				defense_bonus_against = 10
+			}
+			modifier = {
+				surrender_limit = 1
+				war_support_factor = 0.2
+				army_core_attack_factor = 0.2
+				army_core_defence_factor = 0.2
+				political_power_gain = 5
+				stability_weekly = 0.1
+				weekly_manpower = 2000
+				consumer_goods_factor = -0.15
+				attrition = -0.15
+			}
+		}
+	}
+	country = {
+        idea_CHI_SIK_destroy_mongolia = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea idea_CHI_SIK_destroy_mongolia" }
+			name = idea_CHI_SIK_destroy_mongolia
+			picture = CHI_MXSHGM_idea
+			available = { 
+				country_exists = MON
+			}
+			allowed = { always = no }
+			targeted_modifier = {
+				tag = MON
+				attack_bonus_against = 0.5
+				defense_bonus_against = 10
+			}
+			targeted_modifier = {
+				tag = TIB
+				attack_bonus_against = 0.5
+				defense_bonus_against = 10
+			}
+			modifier = {
+				army_org_factor = 0.3
+				army_morale_factor = 0.3
+				army_speed_factor = 0.3
+			}
+		}
+	}
+}

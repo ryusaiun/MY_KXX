@@ -1,0 +1,125 @@
+###########################
+# MAG Decisions
+###########################
+# By Gwener
+###########################
+MAG_politics_decisions = {#马达加斯加政治决议
+    MAG_Consolidate_rule = { #巩固海德里希统治
+        icon = GFX_decision_GEA_Heydrich
+		cost = 30
+		days_remove = 30
+		days_re_enable = 60
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove MAG_Bribing_German_officials"
+			add_to_variable = { MAG_Heydrich_Power = 5 }
+			custom_effect_tooltip = MAG_Consolidate_rule_tt
+		}
+    }
+    MAG_With_help_of_French = { #借助法国人之手
+        icon = hand_out
+		cost = 30
+		days_remove = 60
+		days_re_enable = 60
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove MAG_Bribing_German_officials"
+			add_to_variable = { MAG_French_Power = 4 }
+			add_to_variable = { MAG_Local_Power = -3 }
+			add_to_variable = { MAG_Jewish_Power = -1 }
+			custom_effect_tooltip = MAG_With_help_of_French_tt
+		}
+    }
+    MAG_Trumped_up_charges = { #为法国佬捏造罪名
+        icon = brokencuffs
+		cost = 30
+		days_remove = 60
+		days_re_enable = 100
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove MAG_Trumped_up_charges"
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = -0.03
+			}
+			add_to_variable = { MAG_French_Power = -6 }
+			custom_effect_tooltip = MAG_Trumped_up_charges_tt
+		}
+    }
+	MAG_Take_butcher_knife = { #挥下屠刀
+        icon = Knife
+		cost = 30
+		days_remove = 60
+		days_re_enable = 100
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove MAG_Trumped_up_charges"
+			add_manpower = -1000
+			add_to_variable = { MAG_Local_Power = -2 }
+			add_to_variable = { MAG_Jewish_Power = -2 }
+			custom_effect_tooltip = MAG_Take_butcher_knife_tt
+		}
+    }
+    MAG_Bribing_German_officials = { #贿赂德国专员
+        icon = cash
+		cost = 30
+		days_remove = 30
+		days_re_enable = 90
+        available = {
+            NOT = {
+                has_country_flag = MAG_GER_POWER_UP
+            }
+        }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision MAG_Bribing_German_officials"
+            set_country_flag = MAG_GER_POWER_UP
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove MAG_Bribing_German_officials"
+			add_to_variable = { MAG_GER_Power = 2 }
+			custom_effect_tooltip = MAG_Bribing_German_officials_tt
+            clr_country_flag = MAG_GER_POWER_UP
+		}
+    }
+    MAG_Shut_them_up_forever = { #让他们永远闭嘴
+        icon = slave
+		cost = 30
+		days_remove = 30
+		days_re_enable = 120
+        available = {
+            NOT = {
+                has_country_flag = MAG_GER_POWER_UP
+            }
+        }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision MAG_Shut_them_up_forever"
+            set_country_flag = MAG_GER_POWER_UP
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove MAG_Shut_them_up_forever"
+			add_manpower = -10
+			decrease_ruling_party_popularity_by_5 = yes
+			add_stability = -0.02
+			add_to_variable = { MAG_GER_Power = 2 }
+			custom_effect_tooltip = MAG_Bribing_German_officials_tt
+            clr_country_flag = MAG_GER_POWER_UP
+		}
+    }
+	MAG_ask_for_help = { #向柏林申请援助
+		icon = GFX_decision_colonial_department
+		days_remove = 30
+		days_re_enable = 150
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = MAG_ask_for_help_available_tt
+				check_variable = { MAG_GER_Power > 10}
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision MAG_ask_for_help"
+			add_to_variable = { MAG_GER_Power = -3 }
+			custom_effect_tooltip = MAG_ask_for_help_tt
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove MAG_ask_for_help"
+			add_political_power = 100
+		}
+	}
+}
+

@@ -1,0 +1,130 @@
+
+defined_text = {
+	name = NeGetRulingIdeologySubtype
+
+	text = {
+		trigger = {
+			has_country_leader_ideology = radsoc_canaanism_subtype
+		}
+		localization_key = radsoc_canaanism_subtype
+	}
+	
+	text = {
+		trigger = {
+			has_country_leader_ideology = spanish_syndicalism
+		}
+		localization_key = spanish_syndicalism
+	}
+	
+	text = {
+		trigger = {
+			has_country_leader_ideology = popular_legionism
+		}
+		localization_key = popular_legionism
+	}
+
+	text = {
+		trigger = {
+			has_country_leader_ideology = syn_united_front
+		}
+		localization_key = syn_united_front
+	}
+	
+	text = {
+		trigger = {
+			has_country_leader_ideology = tot_natcol_subtype
+		}
+		localization_key = tot_natcol_subtype
+	}
+	
+	text = {
+		trigger = {
+			has_country_leader_ideology = radsoc_brownism
+		}
+		localization_key = radsoc_brownism
+	}
+	
+	text = {
+		trigger = {
+			has_country_leader_ideology = radsoc_sansepolcrismo
+		}
+		localization_key = radsoc_sansepolcrismo
+	}
+	
+	text = {
+		trigger = {
+			has_country_leader_ideology = goebbelism_subtype
+		}
+		localization_key = goebbelism_subtype
+	}
+	
+	text = {
+		trigger = {
+			has_country_leader_ideology = ingsoc_subtype
+		}
+		localization_key = ingsoc_subtype
+	}
+	
+	text = {
+		trigger = {
+			has_country_leader_ideology = tot_reformed_germanism
+		}
+		localization_key = tot_reformed_germanism
+	}
+	
+	text = {
+		trigger = {
+			has_country_leader_ideology = tot_sansepolcrismo
+		}
+		localization_key = tot_sansepolcrismo
+	}
+	
+	text = {
+		trigger = {
+			has_country_leader_ideology = tot_gothism
+		}
+		localization_key = tot_gothism
+	}
+	
+	text = {
+		trigger = {
+			has_country_leader_ideology = radsoc_reformed_germanism
+		}
+		localization_key = radsoc_reformed_germanism
+	}
+	
+	text = {
+		trigger = {
+			has_country_leader_ideology = socdem_reformed_germanism
+		}
+		localization_key = socdem_reformed_germanism
+	}
+	
+	text = {
+		trigger = {
+			has_country_leader_ideology = tot_euro_mosleyism
+		}
+		localization_key = tot_euro_mosleyism
+	}
+	
+	text = {
+		trigger = {
+			has_country_leader_ideology = radsoc_nasserism
+		}
+		localization_key = radsoc_nasserism
+	}
+	
+	text = {
+		trigger = {
+			has_country_leader_ideology = tot_neosocialism_subtype
+		}
+		localization_key = tot_neosocialism_subtype
+	}
+	
+	text = {
+		trigger = {
+			has_country_leader_ideology = tot_francism_subtype
+		}
+		localization_key = tot_francism_subtype
+	}
+}

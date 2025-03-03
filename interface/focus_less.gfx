@@ -1,0 +1,228 @@
+spriteTypes = {	
+
+	SpriteType = {
+	name = "GFX_Focus_ssnp_1"
+	texturefile = "gfx/interface/focus/Focus_ssnp_1.png"			
+	}
+	SpriteType = {
+	name = "GFX_Focus_ssnp_2"
+	texturefile = "gfx/interface/focus/Focus_ssnp_2.png"			
+	}
+	SpriteType = {
+	name = "GFX_Focus_ssnp_3"
+	texturefile = "gfx/interface/focus/Focus_ssnp_3.png"			
+	}
+	SpriteType = {
+	name = "GFX_Focus_ssnp_4"
+	texturefile = "gfx/interface/focus/Focus_ssnp_4.png"			
+	}
+	SpriteType = {
+	name = "GFX_Focus_ssnp_5"
+	texturefile = "gfx/interface/focus/Focus_ssnp_5.png"			
+	}
+	SpriteType = {
+	name = "GFX_Focus_ssnp_6"
+	texturefile = "gfx/interface/focus/Focus_ssnp_6.png"			
+	}
+	SpriteType = {
+	name = "GFX_Focus_BOS_1"
+	texturefile = "gfx/interface/focus/Focus_BOS_1.png"			
+	}
+	SpriteType = {
+	name = "GFX_Focus_BOS_2"
+	texturefile = "gfx/interface/focus/Focus_BOS_2.png"			
+	}
+	SpriteType = {
+	name = "GFX_Focus_WGR_1"
+	texturefile = "gfx/interface/focus/WGR_1.png"			
+	}
+	SpriteType = {
+	name = "GFX_Focus_WGR_2"
+	texturefile = "gfx/interface/focus/WGR_2.png"			
+	}
+	SpriteType = {
+	name = "GFX_Focus_WGR_3"
+	texturefile = "gfx/interface/focus/WGR_3.png"			
+	}
+	SpriteType = {
+	name = "GFX_Focus_WGR_4"
+	texturefile = "gfx/interface/focus/WGR_4.png"			
+	}
+	SpriteType = {
+	name = "GFX_FOCUS_BOS_UST_1"
+	texturefile = "gfx/interface/focus/FOCUS_BOS_UST_1.png"			
+	}
+	SpriteType = {
+	name = "GFX_FOCUS_BOS_UST_2"
+	texturefile = "gfx/interface/focus/FOCUS_BOS_UST_2.png"			
+	}
+	SpriteType = {
+	name = "GFX_FOCUS_BOS_UST_3"
+	texturefile = "gfx/interface/focus/FOCUS_BOS_UST_3.png"			
+	}
+	SpriteType = {
+	name = "GFX_FOCUS_BOS_UST_4"
+	texturefile = "gfx/interface/focus/FOCUS_BOS_UST_4.png"			
+	}
+	SpriteType = {
+	name = "GFX_FOCUS_BOS_UST_5"
+	texturefile = "gfx/interface/focus/FOCUS_BOS_UST_5.png"			
+	}
+	SpriteType = {
+	name = "GFX_FOCUS_BOS_UST_6"
+	texturefile = "gfx/interface/focus/FOCUS_BOS_UST_6.png"			
+	}
+	SpriteType = {
+	name = "GFX_FOCUS_BOS_UST_7"
+	texturefile = "gfx/interface/focus/FOCUS_BOS_UST_7.png"			
+	}
+	SpriteType = {
+	name = "GFX_FOCUS_BOS_UST_8"
+	texturefile = "gfx/interface/focus/FOCUS_BOS_UST_8.png"			
+	}
+	SpriteType = {
+	name = "GFX_FOCUS_BOS_UST_9"
+	texturefile = "gfx/interface/focus/FOCUS_BOS_UST_9.png"			
+	}
+	SpriteType = {
+	name = "GFX_FOCUS_BOS_UST_10"
+	texturefile = "gfx/interface/focus/FOCUS_BOS_UST_10.png"			
+	}
+	SpriteType = {
+	name = "GFX_FOCUS_BOS_UST_11"
+	texturefile = "gfx/interface/focus/FOCUS_BOS_UST_11.png"			
+	}
+	SpriteType = {
+	name = "GFX_FOCUS_BOS_UST_12"
+	texturefile = "gfx/interface/focus/FOCUS_BOS_UST_12.png"			
+	}
+	SpriteType = {
+	name = "GFX_FOCUS_BOS_UST_13"
+	texturefile = "gfx/interface/focus/FOCUS_BOS_UST_13.png"			
+	}
+	SpriteType = {
+	name = "GFX_FOCUS_BOS_UST_14"
+	texturefile = "gfx/interface/focus/FOCUS_BOS_UST_14.png"			
+	}
+	SpriteType = {
+	name = "GFX_FOCUS_BOS_UST_15"
+	texturefile = "gfx/interface/focus/FOCUS_BOS_UST_15.png"			
+	}
+	SpriteType = {
+	name = "GFX_FOCUS_BOS_UST_16"
+	texturefile = "gfx/interface/focus/FOCUS_BOS_UST_16.png"			
+	}
+	SpriteType = {
+	name = "GFX_FOCUS_BOS_UST_17"
+	texturefile = "gfx/interface/focus/FOCUS_BOS_UST_17.png"			
+	}
+	SpriteType = {
+	name = "GFX_FOCUS_BOS_UST_18"
+	texturefile = "gfx/interface/focus/FOCUS_BOS_UST_18.png"			
+	}
+	SpriteType = {
+	name = "GFX_FOCUS_BOS_UST_19"
+	texturefile = "gfx/interface/focus/FOCUS_BOS_UST_19.png"			
+	}
+	SpriteType = {
+	name = "GFX_FOCUS_BOS_UST_20"
+	texturefile = "gfx/interface/focus/FOCUS_BOS_UST_20.png"			
+	}
+	SpriteType = {
+	name = "GFX_FOCUS_BOS_UST_21"
+	texturefile = "gfx/interface/focus/FOCUS_BOS_UST_21.png"			
+	}
+	SpriteType = {
+	name = "GFX_FOCUS_BOS_UST_22"
+	texturefile = "gfx/interface/focus/FOCUS_BOS_UST_22.png"			
+	}
+	SpriteType = {
+	name = "GFX_FOCUS_BOS_UST_23"
+	texturefile = "gfx/interface/focus/FOCUS_BOS_UST_23.png"			
+	}
+	SpriteType = {
+	name = "GFX_FOCUS_BOS_UST_24"
+	texturefile = "gfx/interface/focus/FOCUS_BOS_UST_24.png"			
+	}
+	SpriteType = {
+	name = "GFX_FOCUS_BOS_UST_25"
+	texturefile = "gfx/interface/focus/FOCUS_BOS_UST_25.png"			
+	}
+	SpriteType = {
+	name = "GFX_FOCUS_BOS_UST_26"
+	texturefile = "gfx/interface/focus/FOCUS_BOS_UST_26.png"			
+	}
+	SpriteType = {
+	name = "GFX_FOCUS_BOS_UST_27"
+	texturefile = "gfx/interface/focus/FOCUS_BOS_UST_27.png"			
+	}
+	SpriteType = {
+	name = "GFX_FOCUS_BOS_UST_28"
+	texturefile = "gfx/interface/focus/FOCUS_BOS_UST_28.png"			
+	}
+	SpriteType = {
+	name = "GFX_FOCUS_BOS_UST_29"
+	texturefile = "gfx/interface/focus/FOCUS_BOS_UST_29.png"			
+	}
+	SpriteType = {
+	name = "GFX_FOCUS_BOS_UST_30"
+	texturefile = "gfx/interface/focus/FOCUS_BOS_UST_30.png"			
+	}
+	SpriteType = {
+	name = "GFX_FOCUS_BOS_UST_31"
+	texturefile = "gfx/interface/focus/FOCUS_BOS_UST_31.png"			
+	}
+	SpriteType = {
+	name = "GFX_FOCUS_BOS_UST_32"
+	texturefile = "gfx/interface/focus/FOCUS_BOS_UST_32.png"			
+	}
+	SpriteType = {
+	name = "GFX_FOCUS_BOS_UST_33"
+	texturefile = "gfx/interface/focus/FOCUS_BOS_UST_33.png"			
+	}
+	SpriteType = {
+	name = "GFX_Focus_COMFRA1"
+	texturefile = "gfx/interface/focus/Focus_COMFRA1.png"			
+	}
+	SpriteType = {
+	name = "GFX_Focus_COMFRA2"
+	texturefile = "gfx/interface/focus/Focus_COMFRA2.png"			
+	}
+	SpriteType = {
+	name = "GFX_Focus_COMFRA3"
+	texturefile = "gfx/interface/focus/Focus_COMFRA3.png"			
+	}
+	SpriteType = {
+	name = "GFX_Focus_COMFRA4"
+	texturefile = "gfx/interface/focus/Focus_COMFRA4.png"			
+	}
+	SpriteType = {
+	name = "GFX_Focus_COMFRA5"
+	texturefile = "gfx/interface/focus/Focus_COMFRA5.png"			
+	}
+	SpriteType = {
+	name = "GFX_Focus_COMFRA6"
+	texturefile = "gfx/interface/focus/Focus_COMFRA6.png"			
+	}
+	SpriteType = {
+	name = "GFX_Focus_COMFRA7"
+	texturefile = "gfx/interface/focus/Focus_COMFRA7.png"			
+	}
+	SpriteType = {
+	name = "GFX_Focus_COMFRA8"
+	texturefile = "gfx/interface/focus/Focus_COMFRA8.png"			
+	}
+	SpriteType = {
+	name = "GFX_Focus_COMFRA9"
+	texturefile = "gfx/interface/focus/Focus_COMFRA9.png"			
+	}
+	SpriteType = {
+	name = "GFX_Focus_COMFRA10"
+	texturefile = "gfx/interface/focus/Focus_COMFRA10.png"			
+	}
+	SpriteType = {
+	name = "GFX_Focus_COMFRA11"
+	texturefile = "gfx/interface/focus/Focus_COMFRA11.png"			
+	}
+
+}

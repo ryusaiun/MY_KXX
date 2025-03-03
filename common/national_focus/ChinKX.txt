@@ -1,0 +1,3161 @@
+focus_tree = {
+	id = ChinKX
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = KXX
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 200 y = 2500 }
+	focus={
+		id=KXX_Forever_Leftists_Ja
+		icon = GFX_goals_FRA_national_socialism
+		x=10
+		y=1
+		cost=10
+		prerequisite = {
+			focus = KXX_Towards_Greatness
+		}		
+		ai_will_do={
+			factor=1
+		}
+		available = {
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=KXX_Contemporary_Herve
+		icon = GFX_goals_FRA_herve
+		x=0
+		y=1
+		prerequisite={focus=KXX_Forever_Leftists_Ja}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_Forever_Leftists_Ja
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = FRA_The_France_of_Iron_and_Blood
+		}
+	}
+	focus={
+		id=KXX_Strike_Political_Illusions
+		icon = GFX_UKR_Hammer_And_Heart
+		x=-2
+		y=2
+		prerequisite={focus=KXX_Contemporary_Herve}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_Forever_Leftists_Ja
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		swap_ideas = {
+			remove_idea = FRA_corporate_syndie_idea
+			add_idea = FRA_Revolutionary_syndicalism
+			}
+		}
+	}
+	focus={
+		id=KXX_Salam_Chairman_Mao
+		icon = GFX_goal_KXX_Salam_Chairman_Mao
+		x=0
+		y=2
+		prerequisite={focus=KXX_Contemporary_Herve}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_Forever_Leftists_Ja
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		remove_ideas = FRA_Sorelian_Division
+		random_unit_leader = {
+				limit = { has_id = 5770 }			
+				remove_unit_leader = yes
+			}
+			add_manpower = -10
+		}
+	}
+	focus={
+		id=KXX_Gongren_Guizu
+		icon = GFX_goal_FRA_producer_aristocracy
+		x=2
+		y=2
+		prerequisite={focus=KXX_Contemporary_Herve}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_Forever_Leftists_Ja
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+	    add_ideas = FRA_french_nationalism_idea2
+		}
+	}
+	focus={
+		id=KXX_Expel_Reverse_Nationalists
+		icon = GFX_Focus_COMFRA3
+		x=-2
+		y=3
+		prerequisite={focus=KXX_Strike_Political_Illusions}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_Forever_Leftists_Ja
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = FRA_Estates_General
+		}
+	}
+	focus={
+		id=KXX_Qualify_Sorealism
+		icon = GFX_Focus_COMFRA8
+		x=0
+		y=3
+		prerequisite={focus=KXX_Salam_Chairman_Mao}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_Forever_Leftists_Ja
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_manpower = 10000
+		add_stability = 0.1
+		add_war_support = 0.1
+		add_political_power = 100
+		}
+	}
+	focus={
+		id=KXX_Eliminate_Fascism
+		icon = GFX_goal_KXX_Eliminate_Fascism
+		x=2
+		y=3
+		prerequisite={focus=KXX_Gongren_Guizu}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_Forever_Leftists_Ja
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = FRA_Civil_and_military_organizations
+		}
+	}
+	focus={
+		id=KXX_Iron_Fist_and_Market
+		icon = GFX_goal_CSA_class_fusion
+		x=-2
+		y=4
+		prerequisite={focus=KXX_Expel_Reverse_Nationalists}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_Forever_Leftists_Ja
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_ideas = FRA_cpai
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = KXX
+				}
+				increase_state_category_by_two_levels = yes
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = KXX
+				}
+				increase_state_category_by_one_level = yes
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = KXX
+				}
+				increase_state_category_by_one_level = yes
+			}
+		}
+	}
+	focus={
+		id=KXX_A_Beauty_Named_France
+		icon = GFX_Focus_COMFRA6
+		x=0
+		y=4
+		prerequisite={focus=KXX_Qualify_Sorealism}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_Forever_Leftists_Ja
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			random_owned_controlled_state = {
+				limit = { is_core_of = FRA }
+				increase_state_category_by_two_levels = yes
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = FRA }
+				increase_state_category_by_one_level = yes
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = FRA }
+				increase_state_category_by_one_level = yes
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = FRA }
+				increase_state_category_by_two_levels = yes
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = FRA }
+				increase_state_category_by_one_level = yes
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = FRA }
+				increase_state_category_by_one_level = yes
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = FRA }
+				increase_state_category_by_two_levels = yes
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = FRA }
+				increase_state_category_by_one_level = yes
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = FRA }
+				increase_state_category_by_one_level = yes
+			}
+		}
+	}
+	focus={
+		id=KXX_Glorious_Great_Correct
+		icon = GFX_goal_between_east_and_west
+		x=2
+		y=4
+		prerequisite={focus=KXX_Eliminate_Fascism}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_Forever_Leftists_Ja
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		swap_ideas = {
+			remove_idea = FRA_Civil_and_military_organizations
+			add_idea = FRA_Civil_and_military_organizations2
+		}
+		}
+	}
+	focus={
+		id=KXX_Socialism_is_Conservatism
+		icon = GFX_goal_FIU_france_east
+		x=0
+		y=5
+		prerequisite={focus=KXX_Iron_Fist_and_Market}
+		prerequisite={focus=KXX_A_Beauty_Named_France}
+		prerequisite={focus=KXX_Glorious_Great_Correct}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_Forever_Leftists_Ja
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			swap_ideas = {
+				remove_idea = FRA_The_France_of_Iron_and_Blood
+				add_idea = FRA_The_France_of_Iron_and_Blood2
+			}
+		}
+	}	
+	focus = {
+		id = KXX_Towards_Greatness
+		icon = GFX_goal_WHR_New_Man_Born_Seas_Fire
+		cost = 0.00
+		x = 20
+		y = 0
+
+	}
+	focus = {
+		id = KXX_Comrade_JJW
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = KXX_Towards_Greatness
+		}
+		x = 0
+		y = 1
+		relative_position_id = KXX_Towards_Greatness
+	}
+	focus = {
+		id = KXX_QLUOT
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = KXX_Comrade_JJW
+		}
+		x = -4
+		y = 2
+		relative_position_id = KXX_Towards_Greatness
+
+	}
+	focus = {
+		id = KXX_Not_Studying
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = KXX_QLUOT
+		}
+		x = -6
+		y = 3
+		relative_position_id = KXX_Towards_Greatness
+
+	}
+	focus = {
+		id = KXX_FKU_Politic
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = KXX_Not_Studying
+		}
+		x = -6
+		y = 4
+		relative_position_id = KXX_Towards_Greatness
+	}
+	focus = {
+		id = KXX_FKU_Lurkx_School
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = KXX_FKU_Politic
+		}
+		x = -6
+		y = 5
+		relative_position_id = KXX_Towards_Greatness
+	}	
+	focus = {
+		id = KXX_MAN_Bankruptcy
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = KXX_QLUOT
+		}
+		x = -4
+		y = 3
+		relative_position_id = KXX_Towards_Greatness
+
+	}
+	focus = {
+		id = KXX_CZE_Playing
+		icon = GFX_goal_CZE_czechoslovakia_surrounded
+		cost = 0.00
+		prerequisite = {
+			focus = KXX_MAN_Bankruptcy
+		}
+		x = -4
+		y = 4
+		relative_position_id = KXX_Towards_Greatness
+
+	}
+	focus = {
+		id = KXX_Love_ARG
+		icon = GFX_goal_ARG_FOP_debacle
+		cost = 0.00
+		prerequisite = {
+			focus = KXX_CZE_Playing
+		}
+		x = -4
+		y = 5
+		relative_position_id = KXX_Towards_Greatness
+	}
+	focus = {
+		id = KXX_Scavenge_Through_Garbage
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = KXX_QLUOT
+		}
+		x = -2
+		y = 3
+		relative_position_id = KXX_Towards_Greatness
+	}
+	focus = {
+		id = KXX_Overwrite_File
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = KXX_Scavenge_Through_Garbage
+		}
+		x = -2
+		y = 4
+		relative_position_id = KXX_Towards_Greatness
+	}
+	focus = {
+		id = KXX_Explanation_of_Changes
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = KXX_Overwrite_File
+		}
+		x = -2
+		y = 5
+		relative_position_id = KXX_Towards_Greatness
+	}
+	focus = {
+		id = KXX_Meigongne
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = KXX_Comrade_JJW
+		}
+		x = 0
+		y = 3
+		relative_position_id = KXX_Towards_Greatness
+
+	}
+	focus = {
+		id = KXX_Wenanne
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = KXX_Meigongne
+		}
+		x = 0
+		y = 4
+		relative_position_id = KXX_Towards_Greatness
+	}
+	focus = {
+		id = KXX_Shouquanne
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = KXX_Wenanne
+		}
+		x = 0
+		y = 5
+		relative_position_id = KXX_Towards_Greatness
+	}
+	focus = {
+		id = KXX_Jian_Qilu
+		icon = GFX_Goal_YUN_Promote_Tourism
+		cost = 0.00
+		prerequisite = {
+			focus = KXX_Comrade_JJW
+		}
+		x = 4
+		y = 2
+		relative_position_id = KXX_Towards_Greatness
+	}
+	focus = {
+		id = KXX_Lift_the_Table
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = KXX_Jian_Qilu
+		}
+		x = 2
+		y = 3
+		relative_position_id = KXX_Towards_Greatness
+	}
+	focus = {
+		id = KXX_JJW_Love_Shota
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = KXX_Lift_the_Table
+		}
+		x = 2
+		y = 4
+		relative_position_id = KXX_Towards_Greatness
+	}
+	focus = {
+		id = KXX_FKU_Kong_Laoer
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = KXX_JJW_Love_Shota
+		}
+		x = 2
+		y = 5
+		relative_position_id = KXX_Towards_Greatness
+	}
+	focus = {
+		id = KXX_One_Yuan_Eggtart
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = KXX_Jian_Qilu
+		}
+		x = 4
+		y = 3
+		relative_position_id = KXX_Towards_Greatness
+
+	}
+	focus = {
+		id = KXX_End_of_Outages
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = KXX_One_Yuan_Eggtart
+		}
+		x = 4
+		y = 4
+		relative_position_id = KXX_Towards_Greatness
+
+	}
+	focus = {
+		id = KXX_Anshidelei
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = KXX_End_of_Outages
+		}
+		x = 4
+		y = 5
+		relative_position_id = KXX_Towards_Greatness
+	}
+	focus = {
+		id = KXX_Chaotic_Group
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = KXX_Jian_Qilu
+		}
+		x = 6
+		y = 3
+		relative_position_id = KXX_Towards_Greatness
+	}
+	focus = {
+		id = KXX_Unstable_Position
+		icon = GFX_UKR_State_Management
+		cost = 0.00
+		prerequisite = {
+			focus = KXX_Chaotic_Group
+		}
+		x = 6
+		y = 4
+		relative_position_id = KXX_Towards_Greatness
+	}
+	focus = {
+		id = KXX_Ban_East_Asia
+		icon = GFX_goal_FNG_China_Reach
+		cost = 0.00
+		prerequisite = {
+			focus = KXX_Unstable_Position
+		}
+		x = 6
+		y = 5
+		relative_position_id = KXX_Towards_Greatness
+	}
+	focus = {
+		id = KXX_Fenghe_Yuanchuang
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = KXX_Shouquanne
+		}
+		prerequisite = {
+			focus = KXX_Explanation_of_Changes
+		}
+		prerequisite = {
+			focus = KXX_Ban_East_Asia
+			focus = KXX_FKU_Kong_Laoer
+			focus = KXX_Anshidelei
+			focus = KXX_Love_ARG
+			focus = KXX_FKU_Lurkx_School
+		}
+		x = 0
+		y = 6
+		relative_position_id = KXX_Towards_Greatness
+	}
+	focus={
+		id=KXX_Rise_of_Populism
+		icon = GFX_UBR_volkssturm
+		x=30
+		y=1
+		cost=10
+		prerequisite = {
+			focus = KXX_Towards_Greatness
+		}		
+		ai_will_do={
+			factor=1
+		}
+		available = {
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=KXX_Democracy_is_Useless
+		icon = GFX_goal_FRA_democratic_error
+		x=0
+		y=1
+		prerequisite={focus=KXX_Rise_of_Populism}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_Rise_of_Populism
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = FRA_The_France_of_Iron_and_Blood
+		}
+	}
+	focus={
+		id=KXX_Disrupts_the_World
+		icon = GFX_GRU_SMEPD_WORLD
+		x=-2
+		y=2
+		prerequisite={focus=KXX_Democracy_is_Useless}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_Rise_of_Populism
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		swap_ideas = {
+			remove_idea = FRA_corporate_syndie_idea
+			add_idea = FRA_Revolutionary_syndicalism
+			}
+		}
+	}
+	focus={
+		id=KXX_Insults_are_history
+		icon = GFX_goal_unknown
+		x=0
+		y=2
+		prerequisite={focus=KXX_Democracy_is_Useless}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_Rise_of_Populism
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		remove_ideas = FRA_Sorelian_Division
+		random_unit_leader = {
+				limit = { has_id = 5770 }			
+				remove_unit_leader = yes
+			}
+			add_manpower = -10
+		}
+	}
+	focus={
+		id=KXX_Qin_Zhi
+		icon = GFX_goal_BRG_Read_Leviathan
+		x=2
+		y=2
+		prerequisite={focus=KXX_Democracy_is_Useless}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_Rise_of_Populism
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		remove_ideas = FRA_black_guard_insurgency_idea
+		random_unit_leader = {
+				limit = { has_id = 14099 }			
+				remove_unit_leader = yes
+			}
+			add_manpower = -10
+		}
+	}
+	focus={
+		id=KXX_Destroy_the_Reactionaries
+		icon = GFX_goal_AUS_Blank_Check_Investigations_Rogue_Politickers
+		x=-2
+		y=3
+		prerequisite={focus=KXX_Disrupts_the_World}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_Rise_of_Populism
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = FRA_Estates_General
+		}
+	}
+	focus={
+		id=KXX_Jianzheng
+		icon = GFX_goal_unknown
+		x=0
+		y=3
+		prerequisite={focus=KXX_Insults_are_history}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_Rise_of_Populism
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_manpower = 10000
+		add_stability = 0.1
+		add_war_support = 0.1
+		add_political_power = 100
+		}
+	}
+	focus={
+		id=KXX_Jia_Xuan
+		icon = GFX_goal_unknown
+		x=2
+		y=3
+		prerequisite={focus=KXX_Qin_Zhi}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_Rise_of_Populism
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = FRA_Civil_and_military_organizations
+		}
+	}
+	focus={
+		id=KXX_Special_Foods
+		icon = GFX_goal_unknown
+		x=-2
+		y=4
+		prerequisite={focus=KXX_Destroy_the_Reactionaries}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_Rise_of_Populism
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		swap_ideas = {
+			remove_idea = FRA_Estates_General
+			add_idea = FRA_Estates_General2
+		}
+		}
+	}
+	focus={
+		id=KXX_The_New_Trinity
+		icon = GFX_goal_unknown
+		x=0
+		y=4
+		prerequisite={focus=KXX_Jianzheng}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_Rise_of_Populism
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			random_owned_controlled_state = {
+				limit = { is_core_of = FRA }
+				increase_state_category_by_two_levels = yes
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = FRA }
+				increase_state_category_by_one_level = yes
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = FRA }
+				increase_state_category_by_one_level = yes
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = FRA }
+				increase_state_category_by_two_levels = yes
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = FRA }
+				increase_state_category_by_one_level = yes
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = FRA }
+				increase_state_category_by_one_level = yes
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = FRA }
+				increase_state_category_by_two_levels = yes
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = FRA }
+				increase_state_category_by_one_level = yes
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = FRA }
+				increase_state_category_by_one_level = yes
+			}
+		}
+	}
+	focus={
+		id=KXX_Buaiguojiugun
+		icon = GFX_goal_generic_expel_people
+		x=2
+		y=4
+		prerequisite={focus=KXX_Jia_Xuan}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_Rise_of_Populism
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		swap_ideas = {
+			remove_idea = FRA_Civil_and_military_organizations
+			add_idea = FRA_Civil_and_military_organizations2
+		}
+		}
+	}
+	focus={
+		id=KXX_Great_Leadership
+		icon = GFX_GRU_diplo_nmdvp
+		x=0
+		y=5
+		prerequisite={focus=KXX_Special_Foods}
+		prerequisite={focus=KXX_The_New_Trinity}
+		prerequisite={focus=KXX_Buaiguojiugun}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_Rise_of_Populism
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			swap_ideas = {
+				remove_idea = FRA_The_France_of_Iron_and_Blood
+				add_idea = FRA_The_France_of_Iron_and_Blood2
+			}
+		}
+	}		
+	focus={
+		id=KXX_1
+		icon = GFX_goal_WCC_Bomb_Em_Back_into_the_stone_age
+		x=60
+		y=0
+		cost=0
+		ai_will_do={
+			factor=1
+		}
+		available = {
+		has_country_leader={
+				name="钾钇炳丁"
+				ruling_only=yes
+			}
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_manpower = 9999999
+		add_manpower = 9999999
+		add_manpower = 9999999
+		add_manpower = 9999999
+		}
+	}
+	focus={
+		id=KXX_2
+		icon = GFX_goal_backstab
+		x=-3
+		y=1
+		prerequisite={focus= KXX_1}
+		cost=1
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_1
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = KXX_GoBack
+		}
+	}
+	focus={
+		id=KXX_3
+		icon = GFX_goal_refugee_management
+		x=-3
+		y=2
+		prerequisite={focus=KXX_2}
+		cost=1
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_1		
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = KXX_GoWork
+		}
+	}
+	focus={
+		id=KXX_4
+		icon = GFX_goal_MAG_work_harder
+		x=-3
+		y=3
+		prerequisite={focus=KXX_3}
+		cost=1
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_1
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = KXX_GoSpeedWork
+		}
+	}
+	focus={
+		id=KXX_5
+		icon = GFX_BBR_the_final_call
+		x=0
+		y=1
+		prerequisite={focus=KXX_1}
+		cost=1
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_1
+		available = {
+		has_completed_focus = KXX_8
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_manpower = 9999999
+		add_manpower = 9999999
+		add_manpower = 9999999
+		add_manpower = 9999999
+		set_cosmetic_tag = KXX_NEWSHANDONG
+		}
+	}
+	focus={
+		id=KXX_6
+		icon = GFX_goal_PAL_Food_Import
+		x=0
+		y=2
+		prerequisite={focus=KXX_5}
+		cost=1
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_1
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = KXX_ThreeRemove
+		}
+	}
+	focus={
+		id=KXX_7
+		icon = GFX_Goal_YUN_Promote_Tourism
+		x=0
+		y=3
+		prerequisite={focus=KXX_6}
+		cost=1
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_1
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		set_autonomy = { target = CZE autonomy_state = autonomous_territory }	
+		278 = {
+		add_manpower = 9999999
+		add_manpower = 9999999
+		add_manpower = 9999999
+		add_manpower = 9999999
+		}
+		902 = {
+		add_manpower = 9999999
+		add_manpower = 9999999
+		add_manpower = 9999999
+		add_manpower = 9999999
+		}
+		1074 = {
+		add_manpower = 9999999
+		add_manpower = 9999999
+		add_manpower = 9999999
+		add_manpower = 9999999
+		}
+		903 = {
+		add_manpower = 9999999
+		add_manpower = 9999999
+		add_manpower = 9999999
+		add_manpower = 9999999
+		}
+		511 = {
+		add_manpower = 9999999
+		add_manpower = 9999999
+		add_manpower = 9999999
+		add_manpower = 9999999
+		}
+		506 = {
+		add_manpower = 9999999
+		add_manpower = 9999999
+		add_manpower = 9999999
+		add_manpower = 9999999
+		}
+		279 = {
+		add_manpower = 9999999
+		add_manpower = 9999999
+		add_manpower = 9999999
+		add_manpower = 9999999
+		}
+		299 = {
+		add_manpower = 9999999
+		add_manpower = 9999999
+		add_manpower = 9999999
+		add_manpower = 9999999
+		}
+		1029 = {
+		add_manpower = 9999999
+		add_manpower = 9999999
+		}
+		set_victory_points={
+			province=13219
+			value=45
+		}
+		set_victory_points={
+			province=12960
+			value=45
+		}
+		set_province_name = { id = 12364 name = "新济南" }
+		set_province_name = { id = 5918 name = "新淄博" }
+		set_province_name = { id = 7621 name = "新青岛" }
+		set_province_name = { id = 650 name = "新烟台 " }
+		set_province_name = { id = 13499 name = "新济宁" }
+		set_province_name = { id = 12994 name = "新枣庄" }
+		set_province_name = { id = 11001 name = "新临沂" }
+		set_province_name = { id = 7500 name = "新菏泽" }
+		set_province_name = { id = 8215 name = "新东营" }
+		set_province_name = { id = 12960 name = "烤蟹蟹之家" }
+		set_province_name = { id = 13219 name = "钾钇炳丁海军上将城" }
+		}
+	}
+	focus={
+		id=KXX_8
+		icon = GFX_goal_ARG_FOP_debacle
+		x=3
+		y=1
+		prerequisite={focus=KXX_1}
+		cost=1
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_1
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		division_template = {
+			name = "烤蟹蟹卫兵"
+			division_names_group = KXX_ARMY_00
+			regiments = {
+			infantry = { x = 0 y = 0 }
+			infantry = { x = 0 y = 1 }
+			infantry = { x = 0 y = 2 }
+			infantry = { x = 0 y = 3 }
+			infantry = { x = 0 y = 4 }
+			infantry = { x = 1 y = 0 }
+			infantry = { x = 1 y = 1 }
+			infantry = { x = 1 y = 2 }
+			infantry = { x = 1 y = 3 }
+			infantry = { x = 1 y = 4 }
+			infantry = { x = 2 y = 0 }
+			infantry = { x = 2 y = 1 }
+			infantry = { x = 2 y = 2 }
+			infantry = { x = 2 y = 3 }
+			infantry = { x = 2 y = 4 }
+			artillery_brigade  = { x = 3 y = 0 }
+			artillery_brigade  = { x = 3 y = 1 }
+			artillery_brigade  = { x = 3 y = 2 }
+			artillery_brigade  = { x = 3 y = 3 }
+			artillery_brigade  = { x = 3 y = 4 }
+			artillery_brigade  = { x = 4 y = 0 }
+			artillery_brigade  = { x = 4 y = 1 }
+			artillery_brigade  = { x = 4 y = 2 }
+			artillery_brigade  = { x = 4 y = 3 }
+			artillery_brigade  = { x = 4 y = 4 }
+			}
+			support = {
+				artillery = { x = 0 y = 0 }
+				recon = { x = 0 y = 1 }
+			}
+			}
+		random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+			}
+			declare_war_on = { target = ARG type = annex_everything }
+			declare_war_on = { target = FOP type = annex_everything }
+			declare_war_on = { target = CHL type = annex_everything }
+			every_state = {
+			limit = { is_core_of = ARG }
+			add_core_of = KXX
+			}
+			every_state = {
+			limit = { is_core_of = FOP }
+			add_core_of = KXX
+			}
+			every_state = {
+			limit = { is_core_of = CHL }
+			add_core_of = KXX
+			}
+		}
+	}
+	focus={
+		id=KXX_9
+		icon = GFX_ALA_killing_fields
+		x=3
+		y=2
+		prerequisite={focus=KXX_8}
+		cost=1
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_1
+		available = {
+		NOT = { country_exists = ARG }
+		NOT = { country_exists = FOP }
+		NOT = { country_exists = CHL }
+		controls_state = 512
+		controls_state = 278
+		controls_state = 279
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		507 = {
+		add_dynamic_modifier = { modifier = famine_serious_kxx days = 30 }
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		}
+		279 = {
+		add_dynamic_modifier = { modifier = famine_serious_kxx days = 30 }
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		}
+		874 = {
+		add_dynamic_modifier = { modifier = famine_serious_kxx days = 30 }
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		}
+		506 = {
+		add_dynamic_modifier = { modifier = famine_serious_kxx days = 30 }
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		}
+		873 = {
+		add_dynamic_modifier = { modifier = famine_serious_kxx days = 30 }
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		}
+		1029 = {
+		add_dynamic_modifier = { modifier = famine_serious_kxx days = 30 }
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		}
+		512 = {
+		add_dynamic_modifier = { modifier = famine_serious_kxx days = 30 }
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		}
+		278 = {
+		add_dynamic_modifier = { modifier = famine_serious_kxx days = 30 }
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		}
+		449 = {
+		add_dynamic_modifier = { modifier = famine_serious_kxx days = 30 }
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		}
+		720 = {
+		add_dynamic_modifier = { modifier = famine_serious_kxx days = 30 }
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		}
+		299 = {
+		add_dynamic_modifier = { modifier = famine_serious_kxx days = 30 }
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		}
+		579 = {
+		add_dynamic_modifier = { modifier = famine_serious_kxx days = 30 }
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		}
+		511 = {
+		add_dynamic_modifier = { modifier = famine_serious_kxx days = 30 }
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		}
+		902 = {
+		add_dynamic_modifier = { modifier = famine_serious_kxx days = 30 }
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		}
+		510 = {
+		add_dynamic_modifier = { modifier = famine_serious_kxx days = 30 }
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		}
+		1074 = {
+		add_dynamic_modifier = { modifier = famine_serious_kxx days = 30 }
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		}
+		509 = {
+		add_dynamic_modifier = { modifier = famine_serious_kxx days = 30 }
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		}
+		901 = {
+		add_dynamic_modifier = { modifier = famine_serious_kxx days = 30 }
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		}
+		903 = {
+		add_dynamic_modifier = { modifier = famine_serious_kxx days = 30 }
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		}
+		508 = {
+		add_dynamic_modifier = { modifier = famine_serious_kxx days = 30 }
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		}
+		904 = {
+		add_dynamic_modifier = { modifier = famine_serious_kxx days = 30 }
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		add_manpower = -9999999
+		}
+		}
+	}
+	focus={
+		id=KXX_10
+		icon = GFX_goal_ALB_Reaction_Fire
+		x=3
+		y=3
+		prerequisite={focus=KXX_9}
+		cost=1
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_1
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		set_capital = { state = 278 }
+		random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+				create_unit = {
+					division = "name = \"烤蟹蟹卫兵\" division_template = \"烤蟹蟹卫兵\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = KXX
+				}
+			}
+		}
+	}
+	focus={
+		id=KXX_11
+		icon = GFX_goal_FIN_Totalists
+		x=0
+		y=4
+		prerequisite={focus=KXX_4}
+		prerequisite={focus=KXX_7}
+		prerequisite={focus=KXX_10}
+		cost=1
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_1
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = KXX_KillWorld
+		}
+	}
+	focus={
+		id=KXX_12
+		icon = GFX_goal_generic_Gas_attack
+		x=0
+		y=5
+		prerequisite={focus=KXX_11}
+		cost=1
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_1
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		every_state = { add_core_of = ROOT }
+		every_country = {
+			KXX = {
+				create_wargoal = {
+					target = PREV
+					type = annex_everything
+				}
+			}
+		}
+		}
+	}
+###本居小铃路线
+	focus={
+		id = KXX_The_rugged_road_ahead
+		icon = GFX_goal_KXX_The_rugged_road_ahead
+		x=3
+		y=0
+		cost=2
+		ai_will_do={
+			factor=1
+		}
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_stability = 0.1
+			add_war_support = 0.1
+			add_political_power = 300
+		}
+	}
+	focus={
+		id = KXX_bleak_future
+		icon = GFX_goal_KXX_bleak_future
+		x=0
+		y=1
+		prerequisite={focus=KXX_The_rugged_road_ahead}
+		cost=2
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_The_rugged_road_ahead
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = FRA_The_France_of_Iron_and_Blood
+		}
+	}
+	focus={
+		id=KXX_invisible_pressure
+		icon = GFX_goal_KXX_invisible_pressure
+		x=-2
+		y=2
+		prerequisite={focus=KXX_bleak_future}
+		cost=2
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_The_rugged_road_ahead
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=KXX_Ja_Self_Recommendation
+		icon = GFX_goal_KXX_Ja_Self_Recommendation
+		x=0
+		y=2
+		prerequisite={focus=KXX_bleak_future}
+		cost=2
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_The_rugged_road_ahead
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		remove_ideas = FRA_Sorelian_Division
+		random_unit_leader = {
+				limit = { has_id = 5770 }			
+				remove_unit_leader = yes
+			}
+			add_manpower = -10
+		}
+	}
+	focus={
+		id=KXX_internal_crisis
+		icon = GFX_goal_KXX_internal_crisis
+		x=2
+		y=2
+		prerequisite={focus=KXX_bleak_future}
+		cost=2
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_The_rugged_road_ahead
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		remove_ideas = FRA_black_guard_insurgency_idea
+		random_unit_leader = {
+				limit = { has_id = 14099 }			
+				remove_unit_leader = yes
+			}
+			add_manpower = -10
+		}
+	}
+	focus={
+		id=KXX_workers_picket
+		icon = GFX_goal_KXX_workers_picket
+		x=-2
+		y=3
+		prerequisite={focus=KXX_invisible_pressure}
+		cost=2
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_The_rugged_road_ahead
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = FRA_Estates_General
+		}
+	}
+	focus={
+		id=KXX_Exchange_Group_Establishment
+		icon = GFX_goal_KXX_Exchange_Group_Establishment
+		x=0
+		y=3
+		prerequisite={focus=KXX_Ja_Self_Recommendation}
+		cost=2
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_The_rugged_road_ahead
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_manpower = 10000
+		}
+	}
+	focus={
+		id=KXX_Koishi_determine
+		icon = GFX_goal_KXX_Koishi_determine
+		x=2
+		y=3
+		prerequisite={focus=KXX_internal_crisis}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_The_rugged_road_ahead
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = FRA_Civil_and_military_organizations
+		}
+	}
+	focus={
+		id=KXX_Ally_Haizhou_Wuyue
+		icon = GFX_goal_KXX_Ally_Haizhou_Wuyue
+		x=-2
+		y=4
+		prerequisite={focus=KXX_workers_picket}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_The_rugged_road_ahead
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		swap_ideas = {
+			remove_idea = FRA_Estates_General
+			add_idea = FRA_Estates_General2
+		}
+		}
+	}
+	focus={
+		id=KXX_step_out_of_the_shadows
+		icon = GFX_goal_KXX_step_out_of_the_shadows
+		x=0
+		y=4
+		prerequisite={focus=KXX_Exchange_Group_Establishment}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_The_rugged_road_ahead
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			random_owned_controlled_state = {
+				limit = { is_core_of = FRA }
+				increase_state_category_by_two_levels = yes
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = FRA }
+				increase_state_category_by_one_level = yes
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = FRA }
+				increase_state_category_by_one_level = yes
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = FRA }
+				increase_state_category_by_two_levels = yes
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = FRA }
+				increase_state_category_by_one_level = yes
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = FRA }
+				increase_state_category_by_one_level = yes
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = FRA }
+				increase_state_category_by_two_levels = yes
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = FRA }
+				increase_state_category_by_one_level = yes
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = FRA }
+				increase_state_category_by_one_level = yes
+			}
+		}
+	}
+	focus={
+		id=KXX_Problems_with_Tendo
+		icon = GFX_goal_KXX_Problems_with_Tendo
+		x=2
+		y=4
+		prerequisite={focus=KXX_Koishi_determine}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_The_rugged_road_ahead
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		swap_ideas = {
+			remove_idea = FRA_Civil_and_military_organizations
+			add_idea = FRA_Civil_and_military_organizations2
+		}
+		}
+	}
+	focus={
+		id=BRAND_NEW_KXX
+		icon = GFX_goal_BRAND_NEW_KXX
+		x=0
+		y=5
+		prerequisite={focus=KXX_Ally_Haizhou_Wuyue}
+		prerequisite={focus=KXX_step_out_of_the_shadows}
+		prerequisite={focus=KXX_Problems_with_Tendo}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_The_rugged_road_ahead
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			swap_ideas = {
+				remove_idea = FRA_The_France_of_Iron_and_Blood
+				add_idea = FRA_The_France_of_Iron_and_Blood2
+			}
+		}
+	}	
+###天道线
+	focus={
+		id=KXX_Chairman_Tiandao
+		icon = GFX_goal_KXX_Problems_with_Tendo
+		x=3
+		y=8
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available = {
+			has_country_leader = {
+				ruling_only = yes
+				name = "天道"
+			}
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			increase_ruling_party_popularity_by_5 = yes
+			add_stability = 0.06
+			add_political_power = 25
+			add_command_power = 25
+		}
+	}
+	focus={
+		id=KXX_Make_It_Useful
+		icon = GFX_goal_NFA_Destiny_Purpose
+		x=0
+		y=1
+		prerequisite={focus=KXX_Chairman_Tiandao}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_Chairman_Tiandao
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_ideas = NFA_social_rep
+			add_popularity = {
+				ideology = radical_socialist
+				popularity = 0.2
+			}
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.2
+			}
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.15
+			}
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.15
+			}
+		}
+	}
+	focus={
+		id=KXX_Qiushou
+		icon = GFX_goal_VIN_pan_asian_appeals
+		x=-2
+		y=2
+		prerequisite={focus=KXX_Make_It_Useful}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_Chairman_Tiandao
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_ideas = CHI_towards_the_social_revolution_idea
+		}
+	}
+	focus={
+		id=KXX_Modernisation_Of_Rural_Life
+		icon = GFX_UKR_Rural_Development
+		x=0
+		y=2
+		prerequisite={focus=KXX_Make_It_Useful}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_Chairman_Tiandao
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_ideas = UKR_modernisation_of_rural_life
+			random_owned_controlled_state = {
+				limit = {
+					impassable = no
+					OR = {
+						has_state_category = four
+						has_state_category = three
+						has_state_category = two
+					}
+				}
+				ROOT = {
+					activate_targeted_decision = {
+						target = PREV
+						decision = UKR_develop_rural_infrastructure
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					impassable = no
+					OR = {
+						has_state_category = four
+						has_state_category = three
+						has_state_category = two
+					}
+				}
+				ROOT = {
+					activate_targeted_decision = {
+						target = PREV
+						decision = UKR_develop_rural_infrastructure
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					impassable = no
+					OR = {
+						has_state_category = four
+						has_state_category = three
+						has_state_category = two
+					}
+				}
+				ROOT = {
+					activate_targeted_decision = {
+						target = PREV
+						decision = UKR_develop_rural_infrastructure
+					}
+				}
+			}
+		}
+	}
+	focus={
+		id=KXX_Tuha_Lin
+		icon = GFX_SOV_Tukhachevskiy_Plan
+		x=2
+		y=2
+		prerequisite={focus=KXX_Make_It_Useful}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_Chairman_Tiandao
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+        add_ideas = SOV_tukhachevskiys_reform_plan_3
+		}
+	}
+	focus={
+		id=KXX_Mussolini_Thought
+		icon = GFX_goal_SRI_Futurist_Culture
+		x=-2
+		y=3
+		prerequisite={focus=KXX_Qiushou}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_Chairman_Tiandao
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = MLT_renaissanceism
+		}
+	}
+	focus={
+		id=KXX_Tian_Market_Economics
+		icon = GFX_goal_WCC_side_with_capital
+		x=0
+		y=3
+		prerequisite={focus=KXX_Modernisation_Of_Rural_Life}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_Chairman_Tiandao
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = KEN_Market_Economics_three_idea
+		}
+	}
+	focus={
+		id=KXX_Joan_of_Arc
+		icon = GFX_goal_NFA_joan_of_arc
+		x=2
+		y=3
+		prerequisite={focus=KXX_Tuha_Lin}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_Chairman_Tiandao
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_ideas = NFA_ideal_of_joan_of_arc
+		}
+	}
+	focus={
+		id=KXX_Back_to_USSR
+		icon = GFX_align_soviet
+		x=-2
+		y=4
+		prerequisite={focus=KXX_Mussolini_Thought}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_Chairman_Tiandao
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+            add_ideas = SOV_CULTURE_FRUNZE
+            add_ideas = SOV_RES_FRUNZE
+            add_ideas = SOV_cultural_influence_idea
+		}
+	}
+	focus={
+		id=KXX_New_Economic_Policy
+		icon = GFX_focus_rus_right_communists
+		x=0
+		y=4
+		prerequisite={focus=KXX_Tian_Market_Economics}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_Chairman_Tiandao
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_ideas = RUS_New_Economic_Policy_initial
+			random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=industrial_complex
+						size>0
+						include_locked=yes
+					}
+					free_building_slots={
+						building=arms_factory
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots=4
+				add_building_construction={
+					type=industrial_complex
+					level=2
+					instant_build=yes
+				}
+				add_building_construction={
+					type=arms_factory
+					level=1
+					instant_build=yes
+				}				
+			}
+			random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=industrial_complex
+						size>0
+						include_locked=yes
+					}
+					free_building_slots={
+						building=arms_factory
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots=4
+				add_building_construction={
+					type=industrial_complex
+					level=2
+					instant_build=yes
+				}
+				add_building_construction={
+					type=arms_factory
+					level=1
+					instant_build=yes
+				}				
+			}
+			random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=industrial_complex
+						size>0
+						include_locked=yes
+					}
+					free_building_slots={
+						building=arms_factory
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots=4
+				add_building_construction={
+					type=industrial_complex
+					level=2
+					instant_build=yes
+				}
+				add_building_construction={
+					type=arms_factory
+					level=1
+					instant_build=yes
+				}				
+			}
+			random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=industrial_complex
+						size>0
+						include_locked=yes
+					}
+					free_building_slots={
+						building=arms_factory
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots=4
+				add_building_construction={
+					type=industrial_complex
+					level=2
+					instant_build=yes
+				}
+				add_building_construction={
+					type=arms_factory
+					level=1
+					instant_build=yes
+				}				
+			}
+			random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=industrial_complex
+						size>0
+						include_locked=yes
+					}
+					free_building_slots={
+						building=arms_factory
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots=4
+				add_building_construction={
+					type=industrial_complex
+					level=2
+					instant_build=yes
+				}
+				add_building_construction={
+					type=arms_factory
+					level=1
+					instant_build=yes
+				}				
+			}												
+		}
+	}
+	focus={
+		id=KXX_The_Supreme_Commander
+		icon = GFX_goal_FRA_withoutthemarchalthereisnonewfrance
+		x=2
+		y=4
+		prerequisite={focus=KXX_Joan_of_Arc}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_Chairman_Tiandao
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		increase_ruling_party_popularity_by_10 = yes
+		add_political_power = 100
+		add_stability = 0.10			
+		add_ideas = FRA_marshal
+		add_ideas = FRA_Civil_and_military_organizations2
+		}
+	}
+	focus={
+		id=KXX_Chairman_Tiandao2
+		icon = GFX_goal_NFA_Social_Bonapartism
+		x=0
+		y=5
+		prerequisite={focus=KXX_Back_to_USSR}
+		prerequisite={focus=KXX_New_Economic_Policy}
+		prerequisite={focus=KXX_The_Supreme_Commander}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = KXX_Chairman_Tiandao
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_manpower = 10000
+			add_stability = 0.1
+			add_war_support = 0.1
+			add_political_power = 100
+		}
+	}
+	###古明地恋线
+	focus={
+		id=Koishi_1
+		icon = GFX_Focus_COMFRA1
+		x=11
+		y=8
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available = {
+			has_country_leader = {
+				ruling_only = yes
+				name = "“古明地恋”"
+			}
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		remove_ideas = FRA_valois_dead_idea
+		}
+	}
+	focus={
+		id=Koishi_2
+		icon = GFX_Focus_COMFRA9
+		x=0
+		y=1
+		prerequisite={focus=Koishi_1}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = Koishi_1
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = FRA_The_France_of_Iron_and_Blood
+		}
+	}
+	focus={
+		id=Koishi_3
+		icon = GFX_Focus_COMFRA10
+		x=-2
+		y=2
+		prerequisite={focus=Koishi_2}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = Koishi_1
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		swap_ideas = {
+			remove_idea = FRA_corporate_syndie_idea
+			add_idea = FRA_Revolutionary_syndicalism
+			}
+		}
+	}
+	focus={
+		id=Koishi_4
+		icon = GFX_Focus_COMFRA3
+		x=0
+		y=2
+		prerequisite={focus=Koishi_2}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = Koishi_1
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		remove_ideas = FRA_Sorelian_Division
+		random_unit_leader = {
+				limit = { has_id = 5770 }			
+				remove_unit_leader = yes
+			}
+			add_manpower = -10
+		}
+	}
+	focus={
+		id=Koishi_5
+		icon = GFX_Focus_COMFRA2
+		x=2
+		y=2
+		prerequisite={focus=Koishi_2}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = Koishi_1
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		remove_ideas = FRA_black_guard_insurgency_idea
+		random_unit_leader = {
+				limit = { has_id = 14099 }			
+				remove_unit_leader = yes
+			}
+			add_manpower = -10
+		}
+	}
+	focus={
+		id=Koishi_6
+		icon = GFX_Focus_COMFRA5
+		x=-2
+		y=3
+		prerequisite={focus=Koishi_3}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = Koishi_1
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = FRA_Estates_General
+		}
+	}
+	focus={
+		id=Koishi_7
+		icon = GFX_Focus_COMFRA8
+		x=0
+		y=3
+		prerequisite={focus=Koishi_4}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = Koishi_1
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_manpower = 10000
+		add_stability = 0.1
+		add_war_support = 0.1
+		add_political_power = 100
+		}
+	}
+	focus={
+		id=Koishi_8
+		icon = GFX_Focus_COMFRA4
+		x=2
+		y=3
+		prerequisite={focus=Koishi_5}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = Koishi_1
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = FRA_Civil_and_military_organizations
+		}
+	}
+	focus={
+		id=Koishi_9
+		icon = GFX_goal_FRA_sorealians_alt
+		x=-2
+		y=4
+		prerequisite={focus=Koishi_6}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = Koishi_1
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		swap_ideas = {
+			remove_idea = FRA_Estates_General
+			add_idea = FRA_Estates_General2
+		}
+		}
+	}
+	focus={
+		id=Koishi_10
+		icon = GFX_Focus_COMFRA7
+		x=0
+		y=4
+		prerequisite={focus=Koishi_7}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = Koishi_1
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			random_owned_controlled_state = {
+				limit = { is_core_of = FRA }
+				increase_state_category_by_two_levels = yes
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = FRA }
+				increase_state_category_by_one_level = yes
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = FRA }
+				increase_state_category_by_one_level = yes
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = FRA }
+				increase_state_category_by_two_levels = yes
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = FRA }
+				increase_state_category_by_one_level = yes
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = FRA }
+				increase_state_category_by_one_level = yes
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = FRA }
+				increase_state_category_by_two_levels = yes
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = FRA }
+				increase_state_category_by_one_level = yes
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = FRA }
+				increase_state_category_by_one_level = yes
+			}
+		}
+	}
+	focus={
+		id=Koishi_11
+		icon = GFX_Focus_COMFRA11
+		x=2
+		y=4
+		prerequisite={focus=Koishi_8}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = Koishi_1
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		swap_ideas = {
+			remove_idea = FRA_Civil_and_military_organizations
+			add_idea = FRA_Civil_and_military_organizations2
+		}
+		}
+	}
+	focus={
+		id=Koishi_12
+		icon = GFX_Focus_COMFRA6
+		x=0
+		y=5
+		prerequisite={focus=Koishi_9}
+		prerequisite={focus=Koishi_10}
+		prerequisite={focus=Koishi_11}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = Koishi_1
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			swap_ideas = {
+				remove_idea = FRA_The_France_of_Iron_and_Blood
+				add_idea = FRA_The_France_of_Iron_and_Blood2
+			}
+		}
+	}	
+	###吴佬线
+	focus={
+		id=ledesma_1
+		icon = GFX_Focus_ledesma1
+		x=19
+		y=8
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available = {
+			has_country_leader = {
+				ruling_only = yes
+				name = "莱德斯科利"
+			}
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		remove_ideas = FRA_valois_dead_idea
+		}
+	}
+	focus={
+		id=ledesma_2
+		icon = GFX_Focus_ledesma2
+		x=0
+		y=1
+		prerequisite={focus=ledesma_1}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = ledesma_1
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = FRA_The_France_of_Iron_and_Blood
+		}
+	}
+	focus={
+		id=ledesma_3
+		icon = GFX_Focus_ledesma3
+		x=-2
+		y=2
+		prerequisite={focus=ledesma_2}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = ledesma_1
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		swap_ideas = {
+			remove_idea = FRA_corporate_syndie_idea
+			add_idea = FRA_Revolutionary_syndicalism
+			}
+		}
+	}
+	focus={
+		id=ledesma_4
+		icon = GFX_Focus_ledesma4
+		x=0
+		y=2
+		prerequisite={focus=ledesma_2}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = ledesma_1
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		remove_ideas = FRA_Sorelian_Division
+		random_unit_leader = {
+				limit = { has_id = 5770 }			
+				remove_unit_leader = yes
+			}
+			add_manpower = -10
+		}
+	}
+	focus={
+		id=ledesma_5
+		icon = GFX_Focus_ledesma5
+		x=2
+		y=2
+		prerequisite={focus=ledesma_2}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = ledesma_1
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		remove_ideas = FRA_black_guard_insurgency_idea
+		random_unit_leader = {
+				limit = { has_id = 14099 }			
+				remove_unit_leader = yes
+			}
+			add_manpower = -10
+		}
+	}
+	focus={
+		id=ledesma_6
+		icon = GFX_Focus_ledesma6
+		x=-2
+		y=3
+		prerequisite={focus=ledesma_3}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = ledesma_1
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = FRA_Estates_General
+		}
+	}
+	focus={
+		id=ledesma_7
+		icon = GFX_Focus_ledesma7
+		x=0
+		y=3
+		prerequisite={focus=ledesma_4}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = ledesma_1
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_manpower = 10000
+		add_stability = 0.1
+		add_war_support = 0.1
+		add_political_power = 100
+		}
+	}
+	focus={
+		id=ledesma_8
+		icon = GFX_Focus_ledesma8
+		x=2
+		y=3
+		prerequisite={focus=ledesma_5}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = ledesma_1
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = FRA_Civil_and_military_organizations
+		}
+	}
+	focus={
+		id=ledesma_9
+		icon = GFX_Focus_ledesma9
+		x=-2
+		y=4
+		prerequisite={focus=ledesma_6}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = ledesma_1
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		swap_ideas = {
+			remove_idea = FRA_Estates_General
+			add_idea = FRA_Estates_General2
+		}
+		}
+	}
+	focus={
+		id=ledesma_10
+		icon = GFX_Focus_ledesma10
+		x=0
+		y=4
+		prerequisite={focus=ledesma_7}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = ledesma_1
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			random_owned_controlled_state = {
+				limit = { is_core_of = FRA }
+				increase_state_category_by_two_levels = yes
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = FRA }
+				increase_state_category_by_one_level = yes
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = FRA }
+				increase_state_category_by_one_level = yes
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = FRA }
+				increase_state_category_by_two_levels = yes
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = FRA }
+				increase_state_category_by_one_level = yes
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = FRA }
+				increase_state_category_by_one_level = yes
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = FRA }
+				increase_state_category_by_two_levels = yes
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = FRA }
+				increase_state_category_by_one_level = yes
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = FRA }
+				increase_state_category_by_one_level = yes
+			}
+		}
+	}
+	focus={
+		id=ledesma_11
+		icon = GFX_Focus_ledesma11
+		x=2
+		y=4
+		prerequisite={focus=ledesma_8}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = ledesma_1
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		swap_ideas = {
+			remove_idea = FRA_Civil_and_military_organizations
+			add_idea = FRA_Civil_and_military_organizations2
+		}
+		}
+	}
+	focus={
+		id=ledesma_12
+		icon = GFX_Focus_ledesma12
+		x=0
+		y=5
+		prerequisite={focus=ledesma_9}
+		prerequisite={focus=ledesma_10}
+		prerequisite={focus=ledesma_11}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		relative_position_id = ledesma_1
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			swap_ideas = {
+				remove_idea = FRA_The_France_of_Iron_and_Blood
+				add_idea = FRA_The_France_of_Iron_and_Blood2
+			}
+		}
+	}					
+}

@@ -1,0 +1,55 @@
+SpriteTypes = {	
+	SpriteType = {
+		name = "GFX_goal_CZE_cult_person"
+		texturefile = "gfx/interface/goals/KXX_CZE/CZE_cult_person.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_CZE_LM"
+		texturefile = "gfx/interface/goals/KXX_CZE/CZE_LM.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_CZE_StB"
+		texturefile = "gfx/interface/goals/KXX_CZE/CZE_StB.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_CZE_trials"
+		texturefile = "gfx/interface/goals/KXX_CZE/CZE_trials.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_CZE_new_prague"
+		texturefile = "gfx/interface/goals/KXX_CZE/CZE_new_prague.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_CZE_gulags"
+		texturefile = "gfx/interface/goals/KXX_CZE/CZE_gulags.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_CZE_national_front"
+		texturefile = "gfx/interface/goals/KXX_CZE/CZE_National_Front.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_CZE_University_Pardubice"
+		texturefile = "gfx/interface/goals/KXX_CZE/CZE_University_Pardubice.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_CZE_we_are_all_gottwald"
+		texturefile = "gfx/interface/goals/KXX_CZE/CZE_final_Gottwald.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_CZE_working_class"
+		texturefile = "gfx/interface/goals/KXX_CZE/CZE_working_class.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_CZE_media_rozhlas"
+		texturefile = "gfx/interface/goals/KXX_CZE/CZE_media_rozhlas.png"
+	}
+	SpriteType = { 
+		name = "GFX_goal_CZE_Nationalize"
+		texturefile = "gfx/interface/goals/KXX_CZE/CZE_NATIONALIZE.png"
+	}
+	SpriteType = { 
+		name = "GFX_goal_CZE_Five_year_plan"
+		texturefile = "gfx/interface/goals/KXX_CZE/CZE_Five_year_plan.png"
+	}
+		
+}

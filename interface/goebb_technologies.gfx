@@ -1,0 +1,403 @@
+spriteTypes = {
+	### Infantry Equipment
+	SpriteType = {
+		name = "GFX_GRU_motorized_rocket_unit_medium"
+		texturefile = "gfx/interface/technologies/Germany/GER_motorized_rocket_unit.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_mechanised_infantry3_medium"
+		texturefile = "gfx/interface/technologies/Germany/GER_mechanized_equipment_3.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_mechanised_infantry2_medium"
+		texturefile = "gfx/interface/technologies/GER_mechanized_equipment_2.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_amphibious_mechanized_infantry_medium"
+		texturefile = "gfx/interface/technologies/Germany/ger_amphibious_mech_1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_amphibious_mechanized_infantry_2_medium"
+		texturefile = "gfx/interface/technologies/Germany/ger_amphibious_mech_2.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_motorised_infantry_medium"
+		texturefile = "gfx/interface/technologies/Germany/GER_motorized_equipment_1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_motorized_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/Germany/GER_motorized_equipment_1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_mechanised_infantry_medium"
+		texturefile = "gfx/interface/technologies/Germany/GER_mechanized_equipment_1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_advanced_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/Germany/GER_infantry_equipment_3.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_improved_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/Germany/GER_infantry_equipment_2.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_infantry_weapons1_medium"
+		texturefile = "gfx/interface/technologies/Germany/GER_infantry_equipment_1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/Germany/GER_infantry_equipment_0.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_infantry_at_medium"
+		texturefile = "gfx/interface/technologies/Germany/GER_infantry_at.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_infantry_at2_medium"
+		texturefile = "gfx/interface/technologies/Germany/GER_infantry_at2.png"
+	}
+
+	### Artillery
+	SpriteType = {
+		name = "GFX_GRU_rocket_artillery4_medium"
+		texturefile = "gfx/interface/technologies/Rocket_Art_2_axis.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_rocket_artillery_medium"
+		texturefile = "gfx/interface/technologies/Rocket_Art_1_axis.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_artillery4_medium"
+		texturefile = "gfx/interface/technologies/Germany/GER_Art_3.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_artillery1_medium"
+		texturefile = "gfx/interface/technologies/Germany/GER_Art_2.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_gw_artillery_medium"
+		texturefile = "gfx/interface/technologies/Germany/GER_Art_1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_antitank5_medium"
+		texturefile = "gfx/interface/technologies/AT_3_axis.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_antitank2_medium"
+		texturefile = "gfx/interface/technologies/AT_2_axis.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_interwar_antitank_medium"
+		texturefile = "gfx/interface/technologies/AT_1_axis.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_antiair5_medium"
+		texturefile = "gfx/interface/technologies/Germany/GER_AA_3.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_antiair2_medium"
+		texturefile = "gfx/interface/technologies/AA_2_axis.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_interwar_antiair_medium"
+		texturefile = "gfx/interface/technologies/Germany/GER_AA_1.png"
+	}
+
+	### Tanks
+	SpriteType = {
+		name = "GFX_GRU_gwtank_medium"
+		texturefile = "gfx/interface/technologies/Germany/GER_gwtank.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_basic_light_tank_medium"
+		texturefile = "gfx/interface/technologies/ger_basic_light_tank.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_basic_light_td_medium"
+		texturefile = "gfx/interface/technologies/Germany/ger_basic_light_tank_td.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_basic_light_art_medium"
+		texturefile = "gfx/interface/technologies/Germany/ger_basic_light_tank_spa.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_basic_light_spaa_medium"
+		texturefile = "gfx/interface/technologies/Germany/ger_basic_light_tank_aa.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_improved_light_tank_medium"
+		texturefile = "gfx/interface/technologies/ger_imp_light_tank.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_improved_light_td_medium"
+		texturefile = "gfx/interface/technologies/Germany/ger_imp_light_tank_td.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_improved_light_art_medium"
+		texturefile = "gfx/interface/technologies/Germany/ger_imp_light_tank_spa.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_improved_light_spaa_medium"
+		texturefile = "gfx/interface/technologies/Germany/ger_imp_light_tank_aa.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_advanced_light_tank_medium"
+		texturefile = "gfx/interface/technologies/ger_adv_light_tank.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_advanced_light_td_medium"
+		texturefile = "gfx/interface/technologies/Germany/ger_adv_light_tank_td.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_advanced_light_art_medium"
+		texturefile = "gfx/interface/technologies/Germany/ger_adv_light_tank_spa.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_advanced_light_spaa_medium"
+		texturefile = "gfx/interface/technologies/Germany/ger_adv_light_tank_aa.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_basic_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/ger_basic_main_tank.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_basic_medium_td_medium"
+		texturefile = "gfx/interface/technologies/Germany/ger_basic_main_tank_td.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_basic_medium_art_medium"
+		texturefile = "gfx/interface/technologies/Germany/ger_basic_main_tank_spa.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_basic_medium_spaa_medium"
+		texturefile = "gfx/interface/technologies/Germany/ger_basic_main_tank_aa.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_improved_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/ger_imp_main_tank.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_improved_medium_td_medium"
+		texturefile = "gfx/interface/technologies/Germany/ger_imp_main_tank_td.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_improved_medium_art_medium"
+		texturefile = "gfx/interface/technologies/Germany/ger_imp_main_tank_spa.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_improved_medium_spaa_medium"
+		texturefile = "gfx/interface/technologies/Germany/ger_imp_main_tank_aa.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_advanced_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/ger_adv_main_tank.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_advanced_medium_td_medium"
+		texturefile = "gfx/interface/technologies/Germany/ger_adv_main_tank_td.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_advanced_medium_art_medium"
+		texturefile = "gfx/interface/technologies/Germany/ger_adv_main_tank_spa.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_advanced_medium_spaa_medium"
+		texturefile = "gfx/interface/technologies/Germany/ger_adv_main_tank_aa.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_basic_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/ger_basic_heavy_tank.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_basic_heavy_td_medium"
+		texturefile = "gfx/interface/technologies/Germany/ger_basic_heavy_tank_td.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_improved_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/ger_imp_heavy_tank.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_improved_heavy_td_medium"
+		texturefile = "gfx/interface/technologies/Germany/ger_imp_heavy_tank_td.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_improved_heavy_art_medium"
+		texturefile = "gfx/interface/technologies/Germany/ger_imp_heavy_tank_spa.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_advanced_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/ger_adv_heavy_tank.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_advanced_heavy_td_medium"
+		texturefile = "gfx/interface/technologies/Germany/ger_adv_heavy_tank_td.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_advanced_heavy_art_medium"
+		texturefile = "gfx/interface/technologies/Germany/ger_adv_heavy_tank_spa.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_main_battle_tank_medium"
+		texturefile = "gfx/interface/technologies/ger_main_battle_tank.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_modern_td_medium"
+		texturefile = "gfx/interface/technologies/Germany/ger_main_battle_tank_td.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_super_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/ger_superheavy_tank.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_super_heavy_td_medium"
+		texturefile = "gfx/interface/technologies/Germany/ger_superheavy_tank_td.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_super_heavy_art_medium"
+		texturefile = "gfx/interface/technologies/Germany/ger_superheavy_tank_spa.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_super_heavy_spaa_medium"
+		texturefile = "gfx/interface/technologies/Germany/ger_superheavy_tank_aa.png"
+	}
+
+	### FIGHTER
+	SpriteType = {
+		name = "GFX_GRU_early_fighter_medium"
+		texturefile = "gfx/interface/technologies/Germany/GER_early_fighter.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_fighter1_medium"
+		texturefile = "gfx/interface/technologies/Germany/GER_fighter1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_fighter2_medium"
+		texturefile = "gfx/interface/technologies/Germany/GER_fighter2.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_fighter3_medium"
+		texturefile = "gfx/interface/technologies/Germany/GER_fighter3.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_jet_fighter1_medium"
+		texturefile = "gfx/interface/technologies/Germany/GER_jet_fighter1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_jet_fighter2_medium"
+		texturefile = "gfx/interface/technologies/Germany/ger_jet_fighter2.png"
+	}
+
+	### HEAVY FIGHTER
+	SpriteType = {
+		name = "GFX_GRU_heavy_fighter1_medium"
+		texturefile = "gfx/interface/technologies/Germany/GER_heavy_fighter1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_heavy_fighter2_medium"
+		texturefile = "gfx/interface/technologies/Germany/GER_heavy_fighter2.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_heavy_fighter3_medium"
+		texturefile = "gfx/interface/technologies/Germany/GER_heavy_fighter3.png"
+	}
+
+	### CAS
+	SpriteType = {
+		name = "GFX_GRU_CAS1_medium"
+		texturefile = "gfx/interface/technologies/Germany/GER_CAS1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_CAS2_medium"
+		texturefile = "gfx/interface/technologies/Germany/GER_CAS2.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_CAS3_medium"
+		texturefile = "gfx/interface/technologies/Germany/GER_CAS3.png"
+	}
+
+	### NAV Bomber
+	SpriteType = {
+		name = "GFX_GRU_naval_bomber1_medium"
+		texturefile = "gfx/interface/technologies/Germany/GER_naval_bomber1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_naval_bomber2_medium"
+		texturefile = "gfx/interface/technologies/Germany/GER_naval_bomber2.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_naval_bomber3_medium"
+		texturefile = "gfx/interface/technologies/Germany/GER_naval_bomber3.png"
+	}
+
+	### TACTICAL BOMBER
+	SpriteType = {
+		name = "GFX_GRU_early_bomber_medium"
+		texturefile = "gfx/interface/technologies/Germany/GER_early_bomber.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_tactical_bomber1_medium"
+		texturefile = "gfx/interface/technologies/Germany/GER_tactical_bomber1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_tactical_bomber2_medium"
+		texturefile = "gfx/interface/technologies/Germany/GER_tactical_bomber2.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_tactical_bomber3_medium"
+		texturefile = "gfx/interface/technologies/Germany/GER_tactical_bomber3.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_jet_tactical_bomber1_medium"
+		texturefile = "gfx/interface/technologies/Germany/ger_jet_tactical_bomber1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_jet_tactical_bomber2_medium"
+		texturefile = "gfx/interface/technologies/Germany/ger_jet_tactical_bomber2.png"
+	}
+
+	### STRAT BOMBER
+	SpriteType = {
+		name = "GFX_GRU_strategic_bomber1_medium"
+		texturefile = "gfx/interface/technologies/Germany/GER_strategic_bomber1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_strategic_bomber2_medium"
+		texturefile = "gfx/interface/technologies/Germany/GER_strategic_bomber2.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_strategic_bomber3_medium"
+		texturefile = "gfx/interface/technologies/Germany/GER_strategic_bomber3.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_jet_strategic_bomber1_medium"
+		texturefile = "gfx/interface/technologies/Germany/ger_jet_strategic_bomber1.png"
+	}
+
+	### ROCKET INTERCEPTOR
+	SpriteType = {
+		name = "GFX_GRU_rocket_interceptor_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/Germany/ger_rocket_interceptor_1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_rocket_interceptor_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/Germany/ger_rocket_interceptor_2.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_rocket_interceptor_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/Germany/ger_rocket_interceptor_3.png"
+	}
+
+	### Guided Missile ###
+	SpriteType = {
+		name = "GFX_GRU_guided_missile_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/Germany/ger_guided_missile_1.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_guided_missile_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/Germany/ger_guided_missile_2.png"
+	}
+	SpriteType = {
+		name = "GFX_GRU_guided_missile_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/Germany/ger_guided_missile_3.png"
+	}
+}

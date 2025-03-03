@@ -1,0 +1,21 @@
+focus_tree = {
+	id = gru-totalist
+	continuous_focus_position = { x = 300 y = 1300 }
+	country = {
+		factor = 0
+	}
+	shared_focus = GRU_occupational_government
+	shared_focus = GRU_formation_of_the_nva
+	
+	shared_focus = GRU_THE_DEMOCRACY_PROMISE
+	shared_focus = GRU_NMDVP_PATH
+	shared_focus = GRU_SMEPD_DIPLO
+	shared_focus = GRU_CORPORATE_DICTATORSHIP
+	shared_focus = JUDEA_START
+	shared_focus = GRU_National_Corporatism
+	shared_focus = GRU_rva
+	shared_focus = GRU_National_Corporatism_Lensch
+	shared_focus = GRU_rva_Lensch
+	shared_focus = GRU_iva
+	shared_focus = GRU_BlackFront_Morgenrote
+}

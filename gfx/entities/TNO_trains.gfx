@@ -1,0 +1,45 @@
+objectTypes = {
+	pdxmesh = {
+		name = "BSPLoco_mesh"
+		file = "gfx/models/units/trains/BSPLoco.mesh"
+
+		animation = { id = "move" type = "train_locomotive_1_idle" }
+		animation = { id = "idle" type = "train_locomotive_1_moving" }
+	}
+	pdxmesh = {
+		name = "BSPWagon_mesh"
+		file = "gfx/models/units/trains/BSPWagon.mesh"
+
+		animation = { id = "move" type = "train_locomotive_1_idle" }
+		animation = { id = "idle" type = "train_locomotive_1_moving" }
+	}
+	pdxmesh = {
+		name = "BSPPassengerWagon_mesh"
+		file = "gfx/models/units/trains/BSPPassengerWagon.mesh"
+
+		animation = { id = "move" type = "train_locomotive_1_idle" }
+		animation = { id = "idle" type = "train_locomotive_1_moving" }
+	}
+	pdxmesh = {
+		name = "BSPLoco_Army_mesh"
+		file = "gfx/models/units/trains/BSPLoco.mesh"
+
+		animation = { id = "move" type = "train_locomotive_1_idle" }
+		animation = { id = "idle" type = "train_locomotive_1_moving" }
+
+		meshsettings = {
+			texture_diffuse = "Breitspurban_Army_diffuse.dds"
+		}
+	}
+	pdxmesh = {
+		name = "BSPWagon_Army_mesh"
+		file = "gfx/models/units/trains/BSPWagon.mesh"
+
+		animation = { id = "move" type = "train_locomotive_1_idle" }
+		animation = { id = "idle" type = "train_locomotive_1_moving" }
+
+		meshsettings = {
+			texture_diffuse = "Breitspurban_Army_diffuse.dds"
+		}
+	}
+}

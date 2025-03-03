@@ -1,0 +1,594 @@
+﻿capital = 336
+
+oob = "GEA"
+set_naval_oob= "GEA_naval"
+add_offsite_building = { type = arms_factory  level = 2 }
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+		basic_heavy_tank = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+		improved_light_tank_chassis = 1
+		basic_heavy_tank_chassis = 1
+		engine_tech_1 = 1
+	}
+}
+set_technology = {
+	### General ###
+	electronic_mechanical_engineering = 1
+	basic_train = 1
+	
+	### Infantry ###
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	marines = 1
+	tech_mountaineers = 1
+	tech_trucks = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_air_oob = "GEA_air_bba" 
+
+	set_technology = {
+		aa_lmg = 1
+		engines_1 = 1
+		engines_2 = 1
+		early_bombs = 1
+		aircraft_construction = 1
+		basic_small_airframe = 1
+		iw_small_airframe = 1
+		iw_medium_airframe = 1
+		basic_medium_airframe = 1
+		iw_large_airframe = 1
+		air_torpedoe_1 = 1
+	}
+	GEA_BBA_air_variants = yes
+}
+
+if = {
+	limit = { 
+		NOT = { has_dlc = "By Blood Alone" }
+	}
+	set_air_oob = "GEA_air_legacy"
+	set_technology = {
+		early_fighter = 1
+		fighter1 = 1
+		naval_bomber1 = 1
+		early_bomber = 1
+		tactical_bomber1 = 1
+		CAS1 = 1
+		cv_early_fighter = 1
+		cv_naval_bomber1 = 1
+		cv_CAS1 = 1
+	}
+}
+
+### Navy - MtG ###
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+
+	set_technology = {
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		panzerschiffe = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		cruiser_submarines = 1
+		early_ship_hull_carrier = 1
+		basic_ship_hull_carrier = 1
+		early_ship_hull_heavy = 1
+		basic_ship_hull_heavy = 1
+		ship_hull_super_heavy = 1
+		pre_dreadnoughts = 1
+		
+		basic_naval_mines = 1
+
+		## Modules##
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_medium_battery = 1
+		basic_heavy_battery = 1
+		basic_depth_charges = 1
+		basic_torpedo = 1
+		improved_ship_torpedo_launcher = 1
+		basic_cruiser_armor_scheme = 1
+		basic_heavy_armor_scheme = 1
+
+		### Transport ###
+		mtg_transport = 1
+	}
+}
+
+### Navy - Non MtG ###
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "Man the Guns"
+		}
+	}
+	set_technology = {
+		early_destroyer = 1
+		basic_destroyer = 1
+		early_light_cruiser = 1
+		basic_light_cruiser = 1
+		early_submarine = 1
+		basic_submarine = 1
+		early_heavy_cruiser = 1
+		basic_heavy_cruiser = 1
+		early_battlecruiser = 1
+		early_battleship = 1
+		basic_battleship = 1
+		heavy_battleship = 1
+		early_carrier = 1
+		basic_carrier = 1
+
+		### Transport ###
+		transport = 1
+	}
+}
+
+GER = {
+	set_autonomy = {
+		target = GEA
+		autonomy_state = GEA_colonial_government
+	}
+}
+
+LEC = { give_military_access = GEA }
+give_guarantee = LEC
+set_country_flag = legation_council_member
+
+set_research_slots = 3
+set_convoys = 150
+set_stability = 0.45
+set_war_support = 0.3
+starting_train_buffer = 1
+country_event = {
+	id = Ostasien.0
+	days = 1
+}
+
+country_event = {
+	id = Ostasien.1
+	days = 3
+}
+
+country_event = {
+	id = Ostasien.36
+	days = 22
+}
+
+country_event = { 
+	id = Ostasien.29 
+	days = 137
+}
+
+country_event = { 
+	id = Ostasien.6 
+	days = 161 
+}
+
+country_event = { 
+	id = Ostasien.24 
+	days = 175
+}
+
+country_event = { 
+	id = Ostasien.25
+	days = 204
+}
+
+
+country_event = { 
+	id = Ostasien.10
+	days = 260 
+}
+
+set_politics = {
+	ruling_party = authoritarian_democrat
+	last_election = "1930.11.9"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	totalist = 0
+	radical_socialist = 0
+	syndicalist = 0
+	social_democrat = 5
+	social_liberal = 5
+	market_liberal = 5
+	social_conservative = 20
+	authoritarian_democrat = 30
+	paternal_autocrat = 20
+	national_populist = 15
+}
+
+add_dynamic_modifier = { modifier = GEA_gea_army }
+set_variable = { GEA_army_conscription_factor = -0.85 }
+set_variable = { GEA_army_conscription = 0.05 }
+set_variable = { GEA_army_army_org_factor = 0.10 }
+set_variable = { GEA_army_army_morale_factor = -0.1 }
+set_variable = { GEA_army_command_power_gain_mult = 0.1 }
+
+add_ideas = {
+	GEA_colonial_question
+	GEA_admirality
+	free_trade
+	GEA_Paul_Koenig_hog_pau
+	GEA_Rudolph_Firle_for_pau
+	GEA_Paul_Koenig_eco_pau
+	GEA_Josias_zu_Waldeck_und_Pyrmont_sec_pau
+	GEA_AOG_profit_idea
+}
+if = {
+	limit = {
+		NOT  = {
+			has_dlc = "Together for Victory"
+		}
+	}
+	add_ideas = GEA_Colonial_Nation
+}
+GEA_setup_GEA_gea_army = yes
+add_dynamic_modifier = { modifier = GEA_AOG_BONUS }
+set_variable = { GEA_AOG_CITIES = -0.12  }
+set_variable = { GEA_AOG_CITIES_FACTORIES = -12  }
+set_variable = { GEA_AOG_CITIES_NUMBER = 7  }
+set_variable = { GEA_AOG_SHIPYARD = 0.15  }
+set_variable = { GEA_AOG_SHIPYARD_loacl = 15  }
+set_variable = { GEA_BEST_COLONIAL_stability = 0.10 }
+set_country_flag = GEA_owner_of_wenzhou
+set_country_flag = GEA_owner_of_xiamen
+set_country_flag = GEA_owner_of_guangzhou
+set_country_flag = GEA_owner_of_nantong
+set_country_flag = GEA_owner_of_weihaiwei
+set_country_flag = GEA_owner_of_qingdao
+set_country_flag = GEA_finish_mission_1
+set_country_flag = GEA_finish_mission_2
+set_country_flag = GEA_finish_mission_3
+set_country_flag = GEA_finish_mission_4
+set_country_flag = GEA_finish_mission_5
+set_country_flag = GEA_finish_mission_6
+add_to_tech_sharing_group = german_research
+set_variable = { GEA_josias_effect_political = 0.3}
+set_variable = { GEA_josias_effect_economy = 0.3}
+set_variable = { GEA_indochina_stab = 2}
+set_variable = { GEA_indochina_control = 3}
+set_variable = { GEA_singapore_development = 0.5}
+set_variable = { GEA_malaya_development = 0.2}
+set_variable = { GEA_Borneo_development = 0.1}
+set_variable = { GEA_Guinea_development = 0}
+set_variable = { GEA_dei_integration_degree = 0.2}
+set_variable = { GEA_brm_integration_degree = 0.2}
+set_variable = { renovation_times = 0}
+set_variable = { GEA_Progress_of_reform = 0}
+set_variable = { GEA_socialist_power = 35}
+set_variable = { GEA_nationalist_power = 20}
+set_variable = { GEA_mucke_reform_stability = 0.05}
+set_variable = { GEA_mucke_reform_war_support = 0.05}
+set_variable = { GEA_Defend_indochina_stability = 0.1}
+set_variable = { GEA_Defend_indochina_production_speed_buildings_factor = 0.05}
+set_variable = { GEA_Defend_indochina_industrial_capacity_factory = 0.05}
+
+add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 4000 producer = GEA }
+add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 1000 producer = GEA }
+add_equipment_to_stockpile = { type = gw_tank_equipment amount = 250 producer = GER }
+add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 600 producer = GEA }
+add_manpower = 35000
+### Country Leader
+create_country_leader = {
+	name = "赫尔穆特·冯·穆克"
+	desc = "POLITICS_HELLMUTH_VON_MUCKE_DESC"
+	picture = "gfx/leaders/GEA/Portrait_GEA_Hellmuth_von_Mucke.png"
+	expire = "1957.7.30"
+	ideology = soccon_colonial_govt_subtype
+	traits = {	
+		grand_admiral  
+		modernizer
+	}
+}
+create_country_leader = {
+	name = "阿尔贝特·巴林"
+	desc = "POLITICS_BALLIN_DESC"
+	picture = "gfx/leaders/GEA/Portrait_GEA_Albert_Ballin.png"
+	expire = "1957.7.30"
+	ideology = colonial_govt_subtype
+	traits = {	
+		eco_shipping_baron
+	}
+}
+
+create_country_leader = {
+	name = "威廉·海耶"
+	desc = "POLITICS_HEYE_DESC"
+	picture = "gfx/leaders/GEA/Portrait_GEA_Wilhelm_Heye.png"
+	expire = "1.1.1"
+	ideology = autocratic_colonial_govt_subtype
+	traits = {	
+		generaloberst
+	}
+}
+create_country_leader = {
+	name = "费迪南德·舍尔纳"
+	desc = "POLITICS_SCHORNER_DESC"
+	picture = "gfx/leaders/GEA/Portrait_GEA_Ferdinand_Schorner.png"
+	expire = "1957.7.30"
+	ideology = natpop_colonial_govt_subtype
+	traits = {	
+		bloody_ferdinand
+	}
+}
+
+### Field Marshals ###
+create_field_marshal = {
+	name = "威廉·海耶"
+	portrait_path = "gfx/leaders/ZIM/Wilhelm_Heye.png"
+	traits = {
+		war_hero
+		organizer
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 3
+	id = 22049
+}
+
+### Corps Commanders ### -
+
+create_corps_commander = {
+	name = "奥斯卡皇子"
+	portrait_path = "gfx/leaders/WAL/Portrait_Oskar_I.png"
+	traits = {
+		war_hero
+		politically_connected #Willy's son
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "约西亚斯·楚·瓦尔代克-皮尔蒙特亲王"
+	portrait_path = "gfx/leaders/GEA/Portrait_GEA_Prinz_Josias_Waldeck-Prymont.png"
+	traits = {
+		politically_connected # Wilhelmina's cousin
+		trait_reckless # Often injured back in the Weltkrieg
+		infantry_officer
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "弗里德里希·冯·克辛格" # Marines commander
+	portrait_path = "gfx/leaders/GEA/Portrait_GEA_Friedrich_von_Kessinger.png"
+	traits = {
+		naval_invader
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "埃米尔·克雷布斯" 
+	portrait_path = "gfx/leaders/GEA/Portrait_GEA_Emil_Krebs.png"
+	traits = {
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+
+create_corps_commander = {
+	name = "费迪南德·舍尔纳"
+	portrait_path = "gfx/leaders/GEA/Portrait_GEA_Ferdinand_Schorner.png"
+	traits = {
+		harsh_leader
+		career_officer
+	}
+	skill = 4
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "克劳斯·冯·施陶芬贝格"
+	portrait_path = "gfx/leaders/GEA/Portrait_GEA_Claus_von_Stauffenberg.png"
+	traits = {
+		brilliant_strategist
+		career_officer
+		armor_officer
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "亨宁·冯·特雷斯寇"
+	portrait_path = "gfx/leaders/GEA/Portrait_GEA_Henning_von_Tresckow.png"
+	traits = {
+		war_hero
+		politically_connected
+		cavalry_officer
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+### AOG Corps Commanders
+create_corps_commander = {
+	name = "赫尔曼·福格特-鲁舍韦"
+	portrait_path = "gfx/leaders/GEA/Portrait_GEA_Hermann_Voigt_Ruscheweyh.png"
+	traits = {
+		hill_fighter
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+	id = 12046
+}
+
+create_corps_commander = {
+	name = "迪特里希·冯·绍肯"
+	portrait_path = "gfx/leaders/GEA/Portrait_GEA_Dietrich_von_Saucken.png"
+	traits = {
+		cavalry_officer
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 1
+	id = 12047
+}
+
+create_corps_commander = {
+	name = "弗里茨·萨克塞"
+	portrait_path = "gfx/leaders/GEA/Portrait_GEA_Fritz_Sachsse.png"
+	traits = {
+		naval_invader
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+	id = 12048
+}
+create_corps_commander = {
+  name = "赫尔曼·埃尔哈特"  # Hermann Ehrhardt
+  portrait_path = "gfx/leaders/GEA/Portrait_GEA_Herman_Ehrhardt.png"
+  traits = {
+    cavalry_officer
+  }
+  skill = 2
+  attack_skill = 1
+  defense_skill = 2
+  planning_skill = 2
+  logistics_skill = 2
+}
+create_corps_commander = {
+  name = "海因茨·特雷特纳"  # Heinz Trettner
+  portrait_path = "gfx/leaders/GEA/Portrait_GEA_Heinz_Trettner.png"
+  traits = {
+    commando
+    paratrooper
+  }
+  skill = 2
+  attack_skill = 2
+  defense_skill = 1
+  planning_skill = 2
+  logistics_skill = 2
+}
+
+### Admirals ###
+create_navy_leader = {
+	name = "赫尔穆特·冯·穆克"
+	portrait_path = "gfx/leaders/GEA/Portrait_GEA_Hellmuth_von_Mucke_Admiral.png"
+	traits = { }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 3
+	maneuvering_skill = 4
+	coordination_skill = 4
+}
+
+create_navy_leader = {
+	name = "奥托·克里安克斯"
+	portrait_path = "gfx/leaders/GEA/Portrait_GEA_Otto_Ciliax.png"
+	traits = { superior_tactician blockade_runner }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 5
+	coordination_skill = 3
+}
+
+create_navy_leader = {
+	name = "费利克斯·冯·卢克纳" # "Sea Devil"
+	portrait_path = "gfx/leaders/GEA/Portrait_GEA_Felix_Von_Luckner.png"
+	traits = { superior_tactician }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	maneuvering_skill = 3
+	coordination_skill = 3
+}
+create_navy_leader = {
+	name = "鲁道夫·菲尔" # Specialised in fast-paced naval combat, some hands-on exp from WK
+	portrait_path = "gfx/leaders/GEA/Portrait_GEA_Rudolph_Firle.png"
+	traits = { blockade_runner }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	maneuvering_skill = 2
+	coordination_skill = 2
+}
+create_navy_leader = {
+	name = "贡特尔·普吕朔" # Ex-Naval Pilot, pretty much lack naval battle exp though
+	portrait_path = "gfx/leaders/GEA/Portrait_GEA_Gunther_Pluschow.png"
+	traits = { air_controller }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+create_navy_leader = {
+	name = "赫尔穆特·海耶"
+	portrait_path = "gfx/leaders/GEA/Portrait_GEA_Hellmuth_Heye.png"
+	traits = { cruiser_captain }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 3
+}
+
+GEA_start_naval_variant = yes
+

@@ -1,0 +1,42 @@
+JOSN_QLDZ  = {
+	icon = GFX_decision_category_generic_purge
+	picture = GFX_decision_JONS_the_power_struggles
+	allowed = {
+		OR = {
+			original_tag = CNT
+			original_tag = CAR
+		}
+	}
+	visible = {
+		original_tag = CNT
+		has_country_flag = CNT_JONSSTZZ
+	}
+	visible_when_empty = yes
+	
+	priority = 500
+}
+JONS_National_Reconstruction_Commission = {
+	icon = GFX_decision_category_ger_the_great_germania
+	picture = GFX_decision_National_Reconstruction_Commission
+	
+	allowed = {
+		OR = {
+			original_tag = CNT
+			original_tag = CAR
+		}
+	}
+	visible = {
+		OR = {
+			AND = {
+				original_tag = CNT
+				has_country_flag = JONS_WIN
+			}
+			AND = {
+				original_tag = CAR
+				has_country_flag = Falangist_Win
+			}
+		}
+	}
+	
+	priority = 400
+}

@@ -1,0 +1,120 @@
+add_namespace = gottwaldism
+
+country_event = { # Army Mutiny in Kasai
+	id = gottwaldism.1
+	title = gottwaldism.1.t
+	desc = gottwaldism.1.d
+	picture = GFX_report_event_Force_Publique
+	fire_only_once = yes
+	trigger = {
+		original_tag = CZE
+		has_completed_focus = CZE_unite_the_ideology
+	}
+
+	option = {
+		name = gottwaldism.1.a
+		ai_chance = {
+			factor = 45
+			modifier = {
+				factor = 100
+				has_game_rule = {
+					rule = CZE_gottwald_rules
+					option = CZE_GOTTWALD_YES
+				}
+			}
+		}
+		set_country_flag = CZE_gottwald
+		set_cosmetic_tag = CZE_gottwaldism
+		add_ideas = CZE_generals_mutiny
+		set_politics = {
+			ruling_party = totalist
+		}
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.05
+		}
+		if = {
+			limit = {
+				NOT = {
+					is_in_faction_with = FRA
+				}
+				is_in_faction = yes
+			}
+			leave_faction = yes
+		}
+		create_country_leader = {
+			name = "克莱门特·哥特瓦尔德"
+			desc = "POLITICS_GOTTWALD_DESC"
+			picture = "gfx/leaders/CZE/CZE_Klement_Gottwald.png"
+			expire = "1965.1.1"
+			ideology = gottwaldism_subtype
+		}
+		set_party_name = { 
+			ideology = totalist 
+			long_name = CZE_national_revolution_party_long
+			name = CZE_national_revolution_party
+		}
+		add_stability = -0.1
+		hidden_effect = {
+			remove_all_ministers = yes
+			add_ideas = {
+				CZE_Josef_Haken_hog_syn
+				CZE_Adolf_Hoffmeister_for_syn
+				CZE_Antonin_Novotny_sec_syn
+				CZE_Josef_Teska_eco_syn
+			}
+		}
+	}
+
+    option = {
+		name = gottwaldism.1.b
+		ai_chance = {
+			factor = 55
+			modifier = {
+				factor = 100
+					has_game_rule = {
+						rule = CZE_gottwald_rules
+						option = CZE_GOTTWALD_NO
+					}
+			}
+		}
+        add_stability = -0.1
+	}
+}
+
+country_event = { #New Prague
+	id = gottwaldism.2
+	title = gottwaldism.2.t
+	desc = gottwaldism.2.d
+	
+	picture = GFX_CZE_gottwaldov
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = gottwaldism.2.a
+		add_political_power = 100
+		set_province_name = { id = 11542 name = "哥特瓦尔德" }
+	}
+}
+
+country_event = { #Potato bug
+	id = gottwaldism.3
+	title = gottwaldism.3.t
+	desc = gottwaldism.3.d
+	
+	picture = GFX_CZE_mandelinka
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = gottwaldism.3.a
+		add_political_power = 5
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.02
+		}
+	}
+}

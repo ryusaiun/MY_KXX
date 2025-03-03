@@ -1,0 +1,120 @@
+ideas = {
+	country = {
+
+        FLK_coup = {
+                        on_add = { log = "[GetDateText]: [Root.GetName]: add idea FLK_coup" }
+			removal_cost = -1
+			picture = coup_detat_flk
+			modifier = {
+				war_support_factor = -0.05
+                                political_power_factor = -0.1 
+                                stability_factor = -0.15                          	
+			}
+		}
+
+         FLK_eyes_from_both = {
+                        on_add = { log = "[GetDateText]: [Root.GetName]: add idea FLK_eyes_from_both" }
+			removal_cost = -1
+			picture = eyes_from_both
+                        targeted_modifier = {
+                                        TAG = ARG 
+                                        attack_bonus_against = 0.05
+                                        defense_bonus_against = 0.15
+			}
+                        targeted_modifier = {
+                                        TAG = FOP 
+                                        attack_bonus_against = 0.05
+                                        defense_bonus_against = 0.15
+			}
+                        modifier = {
+				offence = 0.025
+                                army_core_attack_factor = 0.05
+                                army_core_defence_factor = 0.025  
+                                army_org_factor = 0.05                       	
+			}
+		}
+
+
+	FLK_political_immigration = {
+                        on_add = { log = "[GetDateText]: [Root.GetName]: add idea FLK_political_immigration" }
+			removal_cost = -1
+			picture = political_immigration
+			modifier = {
+                                conscription_factor = 0.03
+                                monthly_population = 0.015
+                                weekly_manpower = 120 
+                                consumer_goods_factor = 0.15                               	
+                                industrial_capacity_factory = -0.3
+                                stability_weekly_factor = -0.025
+			}
+		}
+
+         FLK_under_the_british_crown = {
+                        on_add = { log = "[GetDateText]: [Root.GetName]: add idea FLK_under_the_british_crown" }
+			removal_cost = -1
+			picture = under_the_british_crown
+			modifier = {
+				production_speed_buildings_factor = 0.05 
+                                production_speed_infrastructure_factor = 0.05
+                                production_factory_efficiency_gain_factor = 0.05
+                                production_factory_max_efficiency_factor = 0.05
+                                research_speed_factor = 0.025
+                                request_lease_tension = 0.15
+                                surrender_limit = -0.1
+                                justify_war_goal_time = 0.55
+                                trade_opinion_factor = -0.35
+			}
+		}
+
+          FLK_chaos = {
+                        on_add = { log = "[GetDateText]: [Root.GetName]: add idea FLK_chaos" }
+			removal_cost = -1
+			picture = under_the_british_crown
+			modifier = {
+                                research_speed_factor = 0.015
+                                request_lease_tension = 0.15
+                                stability_factor = -0.15
+			}
+		}
+
+          FLK_five_principles = {
+                        on_add = { log = "[GetDateText]: [Root.GetName]: add idea FLK_five_principles" }
+			removal_cost = -1
+			picture = five_principles
+			modifier = {
+                                recruitable_population = 0.03
+                                experience_gain_army = 0.1
+                                monthly_population = 0.05
+			}
+		}
+
+          FLK_atlantian_inhabitance = {
+                        on_add = { log = "[GetDateText]: [Root.GetName]: add idea FLK_atlantian_inhabitance" }
+			removal_cost = -1
+			picture = atlantian_statue
+			modifier = {
+                                monthly_population = 0.1
+                                defensive_war_stability_factor = 0.35
+                                party_popularity_stability_factor = 0.45
+                                stability_weekly_factor = 0.05
+                                war_stability_factor = 0.15
+                                production_speed_buildings_factor = 0.15
+                                research_speed_factor = 0.05
+			}
+		}
+              FLK_preparing_for_the_homeland = {
+                        on_add = { log = "[GetDateText]: [Root.GetName]: add idea FLK_preparing_for_the_homeland" }
+			removal_cost = -1
+			picture = preparing_homeland
+			modifier = {
+                                monthly_population = -0.05
+                                army_attack_factor = 0.05
+                                army_morale_factor = 0.05
+                                army_org_factor = 0.075
+                                dig_in_speed_factor = 0.05
+                                training_time_factor = 0.25
+			}
+		}
+
+     } 
+}       

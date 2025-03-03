@@ -1,0 +1,1228 @@
+
+head_of_government = { ### Head of Government ###
+FLN_Georges_Vereecken_hog_tot = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = head_of_gov_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Georges_Vereecken_hog_tot"
+	}
+	traits = {
+		head_of_government
+		totalist
+		hog_backroom_backstabber
+	}
+}
+
+FLN_Louis_Paul_Boon_hog_syn = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = head_of_gov_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Louis_Paul_Boon_hog_syn"
+	}
+	traits = {
+		head_of_government
+		syndicalist
+		hog_ambitious_union_boss
+	}
+}
+
+FLN_War_van_Overstraeten_hog_rso = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = head_of_gov_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_War_van_Overstraeten_hog_rso"
+	}
+	traits = {
+		head_of_government
+		radical_socialist
+		hog_backroom_backstabber
+	}
+}
+
+FLN_Camille_Huysmans_hog_sde = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = head_of_gov_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Camille_Huysmans_hog_sde"
+	}
+	traits = {
+		head_of_government
+		social_democrat
+		hog_happy_amateur
+	}
+}
+
+FLN_Adolphe_Van_Glabbeke_hog_sli = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = head_of_gov_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Adolphe_Van_Glabbeke_hog_sli"
+	}
+	traits = {
+		head_of_government
+		social_liberal
+		hog_silent_workhorse
+	}
+}
+
+FLN_Octave_Dierckx_hog_mli = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = head_of_gov_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Octave_Dierckx_hog_mli"
+	}
+	traits = {
+		head_of_government
+		market_liberal
+		hog_political_protege
+	}
+}
+
+FLN_Aloys_Van_de_Vyvere_hog_sco = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = head_of_gov_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Aloys_Van_de_Vyvere_hog_sco"
+	}
+	traits = {
+		head_of_government
+		social_conservative
+		hog_silent_workhorse
+	}
+}
+
+FLN_Frans_Van_Cauwelaert_hog_sco = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = head_of_gov_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Frans_Van_Cauwelaert_hog_sco"
+	}
+	traits = {
+		head_of_government
+		social_conservative
+		hog_naive_optimist
+	}
+}
+
+FLN_Dr_August_Borms_hog_ade = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = head_of_gov_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Dr_August_Borms_hog_ade"
+	}
+	traits = {
+		head_of_government
+		authoritarian_democrat
+		hog_silent_workhorse
+	}
+}
+
+FLN_Frans_Daels_hog_pau = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = head_of_gov_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Frans_Daels_hog_pau"
+	}
+	traits = {
+		head_of_government
+		paternal_autocrat
+		hog_flamboyant_tough_guy
+	}
+}
+
+FLN_Jef_van_de_Wiele_hog_npo = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = head_of_gov_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Jef_van_de_Wiele_hog_npo"
+	}
+	traits = {
+		head_of_government
+		national_populist
+		hog_backroom_backstabber
+	}
+}
+FLN_Jean_Francois_Thiriart_hog_tot = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = head_of_gov_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Georges_Vereecken_hog_tot"
+	}
+	traits = {
+		head_of_government
+		totalist
+		hog_backroom_backstabber
+	}
+}
+}
+
+person_of_influence = { ### Person of Influence ###
+## Foreign Minister ##
+FLN_Edgar_Lalmand_for_tot = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = minister_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Edgar_Lalmand_for_tot"
+	}
+	traits = {
+		foreign_minister
+		totalist
+		for_biased_intellectual
+	}
+}
+
+FLN_August_Vermeylen_for_syn = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = minister_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_August_Vermeylen_for_syn"
+	}
+	traits = {
+		foreign_minister
+		syndicalist
+		for_ideological_crusader
+	}
+}
+
+FLN_Jef_van_Extergem_for_rso = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = minister_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Jef_van_Extergem_for_rso"
+	}
+	traits = {
+		foreign_minister
+		radical_socialist
+		for_biased_intellectual
+	}
+}
+
+FLN_Eugene_Soudan_for_sli = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = minister_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Eugene_Soudan_for_sli"
+	}
+	traits = {
+		foreign_minister
+		social_liberal
+		for_ideological_crusader
+	}
+}
+
+FLN_Paul_Hymans_for_sli = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = minister_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Paul_Hymans_for_sli"
+	}
+	traits = {
+		foreign_minister
+		social_liberal
+		for_iron_fisted_brute
+	}
+}
+
+FLN_Henri_Story_for_mli = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = minister_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Henri_Story_for_mli"
+	}
+	traits = {
+		foreign_minister
+		market_liberal
+		for_great_compromiser
+	}
+}
+
+FLN_Clemens_De_Landtsheer_for_sco = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = minister_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Clemens_De_Landtsheer_for_sco"
+	}
+	traits = {
+		foreign_minister
+		social_conservative
+		for_ideological_crusader
+	}
+}
+
+FLN_Frans_Van_Cauwelaert_for_sco = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = minister_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Frans_Van_Cauwelaert_for_sco"
+	}
+	traits = {
+		foreign_minister
+		social_conservative
+		for_ideological_crusader
+	}
+}
+
+FLN_Cyriel_Verschaeve_for_pau = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = minister_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Cyriel_Verschaeve_for_pau"
+	}
+	traits = {
+		foreign_minister
+		paternal_autocrat
+		for_great_compromiser
+	}
+}
+
+FLN_Staf_de_Clercq_for_npo = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = minister_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Staf_de_Clercq_for_npo"
+	}
+	traits = {
+		foreign_minister
+		national_populist
+		for_biased_intellectual
+	}
+}
+FLN_Jean_Baptiste_Biaggi_for_tot = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = minister_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Edgar_Lalmand_for_tot"
+	}
+	traits = {
+		foreign_minister
+		totalist
+		for_biased_intellectual
+	}
+}
+
+## Economy Minister ##
+FLN_Edgar_Lalmand_eco_tot = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = minister_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Edgar_Lalmand_eco_tot"
+	}
+	traits = {
+		economy_minister
+		totalist
+		eco_infantry_proponent
+	}
+}
+
+FLN_Gustave_Lalmand_eco_tot = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = minister_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Gustave_Lalmand_eco_tot"
+	}
+	traits = {
+		economy_minister
+		totalist
+		eco_military_entrepreneur
+	}
+}
+
+FLN_Henri_de_Man_eco_syn = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = minister_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Henri_de_Man_eco_syn"
+	}
+	traits = {
+		economy_minister
+		syndicalist
+		eco_resource_industrialist
+	}
+}
+
+FLN_Felix_Van_den_Bergh_eco_rso = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = minister_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Felix_Van_den_Bergh_eco_rso"
+	}
+	traits = {
+		economy_minister
+		radical_socialist
+		eco_infantry_proponent
+	}
+}
+
+FLN_Albert_Wauters_eco_sde = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = minister_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Albert_Wauters_eco_sde"
+	}
+	traits = {
+		economy_minister
+		social_democrat
+		eco_military_entrepreneur
+	}
+}
+
+FLN_Albert_Edouard_Janssen_eco_sli = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = minister_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Albert_Edouard_Janssen_eco_sli"
+	}
+	traits = {
+		economy_minister
+		social_liberal
+		eco_traditionalist_economist
+	}
+}
+
+FLN_Hendrik_de_Man_eco_sli = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = minister_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Hendrik_de_Man_eco_sli"
+	}
+	traits = {
+		economy_minister
+		social_liberal
+		eco_administrative_genius
+	}
+}
+
+FLN_Franz_de_Voghel_eco_mli = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = minister_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Franz_de_Voghel_eco_mli"
+	}
+	traits = {
+		economy_minister
+		market_liberal
+		eco_laissez_faire_capitalist
+	}
+}
+
+FLN_Albert_de_Vleeschauwer_eco_sco = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = minister_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Albert_de_Vleeschauwer_eco_sco"
+	}
+	traits = {
+		economy_minister
+		social_conservative
+		eco_resource_industrialist
+	}
+}
+
+FLN_Rene_Lambrichts_eco_pau = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = minister_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Rene_Lambrichts_eco_pau"
+	}
+	traits = {
+		economy_minister
+		paternal_autocrat
+		eco_administrative_genius
+	}
+}
+
+FLN_Edgard_Delvo_eco_npo = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = minister_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Edgard_Delvo_eco_npo"
+	}
+	traits = {
+		economy_minister
+		national_populist
+		eco_resource_industrialist
+	}
+}
+FLN_Emile_Lecerf_eco_tot = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = minister_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Edgar_Lalmand_eco_tot"
+	}
+	traits = {
+		economy_minister
+		totalist
+		eco_infantry_proponent
+	}
+}
+
+## Security Minister ##
+FLN_Bert_Van_Hoorick_sec_tot = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = minister_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Bert_Van_Hoorick_sec_tot"
+	}
+	traits = {
+		security_minister
+		totalist
+		sec_health_and_safety
+	}
+}
+
+FLN_Willem_Eekelers_sec_syn = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = minister_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Willem_Eekelers_sec_syn"
+	}
+	traits = {
+		security_minister
+		syndicalist
+		sec_silent_lawyer
+	}
+}
+
+FLN_Ferdinand_Minnaert_sec_rso = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = minister_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Ferdinand_Minnaert_sec_rso"
+	}
+	traits = {
+		security_minister
+		radical_socialist
+		sec_media_magnate
+	}
+}
+
+FLN_Achille_Van_Acker_sec_sde = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = minister_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Achille_Van_Acker_sec_sde"
+	}
+	traits = {
+		security_minister
+		social_democrat
+		sec_health_and_safety
+	}
+}
+
+FLN_Adolphe_Van_Glabbeke_sec_sli = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = minister_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Adolphe_Van_Glabbeke_sec_sli"
+	}
+	traits = {
+		security_minister
+		social_liberal
+		sec_man_of_the_people
+	}
+}
+
+FLN_Paul_Hymans_sec_sli = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = minister_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Paul_Hymans_sec_sli"
+	}
+	traits = {
+		security_minister
+		social_liberal
+		sec_compassionate_gentleman
+	}
+}
+
+FLN_Albert_Lilar_sec_mli = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = minister_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Albert_Lilar_sec_mli"
+	}
+	traits = {
+		security_minister
+		market_liberal
+		sec_compassionate_gentleman
+	}
+}
+
+FLN_Albert_Janssen_sec_sco = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = minister_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Albert_Janssen_sec_sco"
+	}
+	traits = {
+		security_minister
+		social_conservative
+		sec_compassionate_gentleman
+	}
+}
+
+FLN_August_De_Schryver_sec_sco = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = minister_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_August_De_Schryver_sec_sco"
+	}
+	traits = {
+		security_minister
+		social_conservative
+		sec_compassionate_gentleman
+	}
+}
+
+FLN_Hendrik_J_Elias_sec_pau = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = minister_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Hendrik_J_Elias_sec_pau"
+	}
+	traits = {
+		security_minister
+		paternal_autocrat
+		sec_silent_lawyer
+	}
+}
+
+FLN_Edgar_Lehembre_sec_npo = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = minister_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Edgar_Lehembre_sec_npo"
+	}
+	traits = {
+		security_minister
+		national_populist
+		sec_prince_of_terror
+	}
+}
+FLN_Maurice_Bardeche_sec_tot = {
+	allowed = { original_tag = FLN }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = minister_available
+			always = no
+		}
+	}
+	cancel_if_invalid = no
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Bert_Van_Hoorick_sec_tot"
+	}
+	traits = {
+		security_minister
+		totalist
+		sec_health_and_safety
+	}
+}
+}
+
+chief_of_staff = { ### Chief of Staff ###
+FLN_Oscar_Michiels_cos_sco = {
+	allowed = { original_tag = FLN }
+	available = { }
+	visible = {
+		NOT = { has_country_flag = Oscar_Michiels_dead }
+	}
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Oscar_Michiels_cos_sco"
+	}
+	traits = {
+		chief_of_staff
+		cos_school_of_mass_combat
+	}
+	cancel_if_invalid = yes
+}
+
+FLN_Victor_van_Strydonck_cos_sco = {
+	allowed = { original_tag = FLN }
+	available = { }
+	visible = {
+		NOT = { has_country_flag = Victor_van_Strydonck_dead }
+	}
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Victor_van_Strydonck_cos_sco"
+	}
+	traits = {
+		chief_of_staff
+		cos_school_of_manoeuvre
+	}
+	cancel_if_invalid = yes
+}
+
+FLN_Jef_Francois_cos_npo = {
+	allowed = { original_tag = FLN }
+	available = { }
+	visible = {
+		NOT = { has_country_flag = Jef_Francois_dead }
+	}
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Jef_Francois_cos_npo"
+	}
+	traits = {
+		chief_of_staff
+		cos_school_of_mass_combat
+	}
+	cancel_if_invalid = yes
+}
+
+FLN_Lucien_Rijckeboer_cos_npo = {
+	allowed = { original_tag = FLN }
+	available = { }
+	visible = {
+		NOT = { has_country_flag = Lucien_Rijckeboer_dead }
+	}
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Lucien_Rijckeboer_cos_npo"
+	}
+	traits = {
+		chief_of_staff
+		cos_school_of_defence
+	}
+	cancel_if_invalid = yes
+}
+
+FLN_Raf_Van_Hulse_cos_npo = {
+	allowed = { original_tag = FLN }
+	available = { }
+	visible = {
+		NOT = { has_country_flag = Raf_Van_Hulse_dead }
+	}
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Raf_Van_Hulse_cos_npo"
+	}
+	traits = {
+		chief_of_staff
+		cos_school_of_manoeuvre
+	}
+	cancel_if_invalid = yes
+}
+
+FLN_Robert_Verbelen_cos_npo = {
+	allowed = { original_tag = FLN }
+	available = { }
+	visible = {
+		NOT = { has_country_flag = Robert_Verbelen_dead }
+	}
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Robert_Verbelen_cos_npo"
+	}
+	traits = {
+		chief_of_staff
+		cos_school_of_psychology
+	}
+	cancel_if_invalid = yes
+}
+
+FLN_Seraf_Trio_cos_npo = {
+	allowed = { original_tag = FLN }
+	available = { }
+	visible = {
+		NOT = { has_country_flag = Seraf_Trio_dead }
+	}
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Seraf_Trio_cos_npo"
+	}
+	traits = {
+		chief_of_staff
+		cos_school_of_fire_support
+	}
+	cancel_if_invalid = yes
+}
+
+}
+
+chief_of_army = { ### Chief of Army ###
+FLN_Oscar_Michiels_carm_sco = {
+	allowed = { original_tag = FLN }
+	available = { }
+	visible = {
+		NOT = { has_country_flag = Oscar_Michiels_dead }
+	}
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Oscar_Michiels_carm_sco"
+	}
+	traits = {
+		chief_of_army
+		carm_elastic_defence_doctrine
+	}
+	cancel_if_invalid = yes
+}
+
+FLN_Raoul_van_Overstraeten_carm_sco = {
+	allowed = { original_tag = FLN }
+	available = { }
+	visible = {
+		NOT = { has_country_flag = Raoul_van_Overstraeten_dead }
+	}
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Raoul_van_Overstraeten_carm_sco"
+	}
+	traits = {
+		chief_of_army
+		carm_guns_and_butter_doctrine
+	}
+	cancel_if_invalid = yes
+}
+
+FLN_Victor_van_Strydonck_carm_sco = {
+	allowed = { original_tag = FLN }
+	available = { }
+	visible = {
+		NOT = { has_country_flag = Victor_van_Strydonck_dead }
+	}
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Victor_van_Strydonck_carm_sco"
+	}
+	traits = {
+		chief_of_army
+		carm_armoured_spearhead_doctrine
+	}
+	cancel_if_invalid = yes
+}
+
+FLN_Jef_Francois_carm_npo = {
+	allowed = { original_tag = FLN }
+	available = { }
+	visible = {
+		NOT = { has_country_flag = Jef_Francois_dead }
+	}
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Jef_Francois_carm_npo"
+	}
+	traits = {
+		chief_of_army
+		carm_decisive_battle_doctrine
+	}
+	cancel_if_invalid = yes
+}
+
+FLN_Konrad_Schellong_carm_npo = {
+	allowed = { original_tag = FLN }
+	available = { }
+	visible = {
+		NOT = { has_country_flag = Konrad_Schellong_dead }
+	}
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Konrad_Schellong_carm_npo"
+	}
+	traits = {
+		chief_of_army
+		carm_armoured_spearhead_doctrine
+	}
+	cancel_if_invalid = yes
+}
+
+FLN_Lucien_Rijckeboer_carm_npo = {
+	allowed = { original_tag = FLN }
+	available = { }
+	visible = {
+		NOT = { has_country_flag = Lucien_Rijckeboer_dead }
+	}
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Lucien_Rijckeboer_carm_npo"
+	}
+	traits = {
+		chief_of_army
+		carm_static_defence_doctrine
+	}
+	cancel_if_invalid = yes
+}
+
+FLN_Rene_Lagrou_carm_npo = {
+	allowed = { original_tag = FLN }
+	available = { }
+	visible = {
+		NOT = { has_country_flag = Rene_Lagrou_dead }
+	}
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Rene_Lagrou_carm_npo"
+	}
+	traits = {
+		chief_of_army
+		carm_decisive_battle_doctrine
+	}
+	cancel_if_invalid = yes
+}
+
+FLN_Raf_Van_Hulse_carm_npo = {
+	allowed = { original_tag = FLN }
+	available = { }
+	visible = {
+		NOT = { has_country_flag = Raf_Van_Hulse_dead }
+	}
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Raf_Van_Hulse_carm_npo"
+	}
+	traits = {
+		chief_of_army
+		carm_guns_and_butter_doctrine
+	}
+	cancel_if_invalid = yes
+}
+
+}
+
+chief_of_navy = { ### Chief of Navy ###
+FLN_Etienne_Glorie_cnav_sco = {
+	allowed = { original_tag = FLN }
+	available = { }
+	visible = {
+		NOT = { has_country_flag = Etienne_Glorie_dead }
+	}
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Etienne_Glorie_cnav_sco"
+	}
+	traits = {
+		chief_of_navy
+		cnav_open_seas_doctrine
+	}
+	cancel_if_invalid = yes
+}
+
+FLN_G_Timmermans_cnav_sco = {
+	allowed = { original_tag = FLN }
+	available = { }
+	visible = {
+		NOT = { has_country_flag = G_Timmermans_dead }
+	}
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_G_Timmermans_cnav_sco"
+	}
+	traits = {
+		chief_of_navy
+		cnav_indirect_approach_doctrine
+	}
+	cancel_if_invalid = yes
+}
+
+}
+
+chief_of_air_force = { ### Chief of Air Force ###
+FLN_Felix_Iserentant_cair_mli = {
+	allowed = { original_tag = FLN }
+	available = { }
+	visible = {
+		NOT = { has_country_flag = Felix_Iserentant_dead }
+	}
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Felix_Iserentant_cair_mli"
+	}
+	traits = {
+		chief_of_air_force
+		cair_air_superiority_doctrine
+	}
+	cancel_if_invalid = yes
+}
+
+FLN_LFE_Wouters_cair_sco = {
+	allowed = { original_tag = FLN }
+	available = { }
+	visible = {
+		NOT = { has_country_flag = LFE_Wouters_dead }
+	}
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_LFE_Wouters_cair_sco"
+	}
+	traits = {
+		chief_of_air_force
+		cair_vertical_envelopment_doctrine
+	}
+	cancel_if_invalid = yes
+}
+
+FLN_Konrad_Schellong_cair_npo = {
+	allowed = { original_tag = FLN }
+	available = { }
+	visible = {
+		NOT = { has_country_flag = Konrad_Schellong_dead }
+	}
+	on_add = {
+		log = "[GetDateText]: [Root.GetName]: add idea FLN_Konrad_Schellong_cair_npo"
+	}
+	traits = {
+		chief_of_air_force
+		cair_battlefield_support_doctrine
+	}
+	cancel_if_invalid = yes
+}
+
+}

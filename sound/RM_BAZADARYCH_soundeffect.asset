@@ -1,0 +1,72 @@
+category = {
+	name = "Superevent Audios"
+	soundeffects = {
+		ger_civl_sound
+		superev_demilitarization
+		superev_remilitarization
+	    superev_greater_germanic_state_goebbels
+	    superev_endsieg_goebbels
+	}
+}
+
+########### AUDIO ASSETS
+sound = {
+	name = "ger_civl_sound"
+	file = "superevents/ger_civl.wav"
+	volume = 2.5
+}
+sound = {
+	name = "superev_demilitarization"
+	file = "superevents/superev_demilitarization.wav"
+	volume = 1.5
+}
+sound = {
+	name = "superev_remilitarization"
+	file = "superevents/superev_redemilitarisation.wav"
+	volume = 1.5
+}
+sound = {
+	name = "superev_greater_germanic_state_goebbels"
+	file = "superevents/superev_greater_germanic_state_goebbels.wav"
+}
+sound = {
+	name = "superev_endsieg_goebbels"
+	file = "superevents/superev_endsieg_goebbels.wav"
+}
+
+########## SOUND EFFECTS
+soundeffect = {
+	name = ger_civl_sound
+	volume = 2
+	sounds = {
+		sound = ger_civl_sound
+	} 
+}
+soundeffect = {
+	name = superev_demilitarization
+	volume = 1.5
+	sounds = {
+		sound = superev_demilitarization
+	} 
+}
+soundeffect = {
+	name = superev_remilitarization
+	volume = 1.5
+	sounds = {
+		sound = superev_remilitarization
+	} 
+}
+soundeffect = {
+	name = superev_greater_germanic_state_goebbels
+	volume = 2.5
+	sounds = {
+		sound = superev_greater_germanic_state_goebbels
+	} 
+}
+soundeffect = {
+	name = superev_endsieg_goebbels
+	volume = 2.5
+	sounds = {
+		sound = superev_endsieg_goebbels
+	} 
+}

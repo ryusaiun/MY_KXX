@@ -1,0 +1,70 @@
+characters = {
+	GRU_Oswald_Mosley = {
+		name = GRU_Oswald_Mosley
+		portraits = { civilian = { large = "gfx/leaders/ENG/Portrait_England_Oswald_Mosley_Uniform2.png" } }
+		country_leader = {
+			expire = "1.1.1"
+			ideology = british_maximism_subtype
+			traits = { grand_protector dictator }
+		}
+	}
+	GRU_Franz_Halder = {
+		name = GRU_Franz_Halder
+		portraits = { civilian = { large = "gfx/leaders/GER/Portrait_Germany_Franz_Halder_kr.png" } }
+		country_leader = {
+			expire = "1.1.1"
+			ideology = militarism_subtype
+		}
+	}
+	GRU_Heinrich_Himmler = {
+		name = GRU_Heinrich_Himmler
+		portraits = { civilian = { large = "gfx/leaders/GRU/Portrait_RRB_Heinrich_Himmler.png" } }
+		country_leader = {
+			desc = "GRU_Heinrich_Himmler_desc"
+			expire = "1.1.1"
+			ideology = natpop_goebbels2_subtype
+			traits = { gru_reichsfuhrer_rr }
+		}
+	}
+	GRU_Franco_Bahamonde = {
+		name = GRU_Franco_Bahamonde
+		portraits = { civilian = { large = "gfx/leaders/SPR/Portrait_SPR_Franco_Bahamonde.png" } }
+		country_leader = {
+			expire = "1.1.1"
+			ideology = pataut_christian_democracy_subtype
+		}
+	}
+	GRU_gian_galeazzo_ciano = {
+		name = GRU_gian_galeazzo_ciano
+		portraits = { civilian = { large = "gfx/leaders/GRU/ITA_gian_galeazzo_ciano.png" } }
+		country_leader = {
+			expire = "1.1.1"
+			ideology = italian_legionarism_subtype
+		}
+	}
+	GRU_Benito_Mussolini = {
+		name = GRU_Benito_Mussolini
+		portraits = { civilian = { large = "gfx/leaders/GRU/ITT_benito_mussolini.png" } }
+		country_leader = {
+			expire = "1.1.1"
+			ideology = natsynd_subtype
+			traits = { warmonger }
+		}
+	}
+	GRU_Miklos_Horthy = {
+		name = GRU_Miklos_Horthy
+		portraits = { civilian = { large = "gfx/leaders/HUN/Portrait_HUN_Miklos_Horthy.png" } }
+		country_leader = {
+			expire = "1.1.1"
+			ideology = scientific_monarchism_subtype
+		}
+	}
+	GRU_Zayed_Nahyan = {
+		name = GRU_Zayed_Nahyan
+		portraits = { civilian = { large = "gfx/leaders/TRU/Portrait_TRU_Zayed_Nahyan.png" } }
+		country_leader = {
+			expire = "1.1.1"
+			ideology = soccon_islamism_subtype
+		}
+	}
+}

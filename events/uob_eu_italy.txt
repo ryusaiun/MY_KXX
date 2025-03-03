@@ -1,0 +1,84 @@
+﻿add_namespace = uob_eu_italy
+	country_event = { 
+		id = uob_eu_italy.12
+		immediate = { log = "[GetDateText]: [Root.GetName]: event uob_eu_italy.12" }
+		title = uob_eu_italy.12.t
+		desc = uob_eu_italy.12.d
+		picture = GFX_report_event_SRI_Socialist_Liberty
+	
+		is_triggered_only = yes
+	
+		option = {
+			ai_chance = {
+				factor = 0
+			}
+			name = uob_eu_italy.12.a
+			every_country = {
+				limit = {
+					is_in_europe = yes
+				}
+				SRI = {
+					create_wargoal = {
+						target = PREV
+						type = annex_everything
+					}
+				}
+			}
+			
+			
+			every_state = {
+				limit = {
+					is_on_continent = europe
+				}
+				SRI = { 
+					add_state_core = PREV 
+				}
+			}
+			set_cosmetic_tag = AUS_EUF
+		}
+		option = {
+			name = uob_eu_italy.12.b
+		}
+	}
+	country_event = { 
+		id = uob_eu_italy.13
+		immediate = { log = "[GetDateText]: [Root.GetName]: event uob_eu_italy.12" }
+		title = uob_eu_italy.12.t
+		desc = uob_eu_italy.12.d
+		picture = GFX_report_event_SRI_Socialist_Liberty
+	
+		is_triggered_only = yes
+	
+		option = {
+			ai_chance = {
+				factor = 0
+			}
+			name = uob_eu_italy.12.a
+			every_country = {
+				limit = {
+					is_in_europe = yes
+				}
+				ITA = {
+					create_wargoal = {
+						target = PREV
+						type = annex_everything
+					}
+				}
+			}
+			
+			
+			every_state = {
+				limit = {
+					is_on_continent = europe
+				}
+				ITA = { 
+					add_state_core = PREV 
+				}
+			}
+			set_cosmetic_tag = AUS_EUF
+		}
+		option = {
+			name = uob_eu_italy.12.b
+		}
+	}
+

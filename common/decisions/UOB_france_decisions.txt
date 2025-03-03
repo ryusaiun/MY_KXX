@@ -1,0 +1,263 @@
+###########################################
+# Constitutional American Republic
+# Decisions by Matthew
+# SIKE THEY AINT - kalmus
+###########################################
+FRA_paneuropa_category = {
+	FRA_form_paneuropa_decision = {
+		icon = GFX_decision_generic_army_support
+		allowed = { original_tag = FRA }
+		available = {
+			has_completed_focus = FRA_deat_europe_focus
+			has_government = totalist
+			AND = {
+					BEL = {
+						OR  = {
+							exists = no 
+							is_puppet_of = FRA 
+							is_in_faction_with = FRA
+						}
+					}
+					SPR = {
+						OR  = {
+							exists = no 
+							is_puppet_of = FRA 
+							is_in_faction_with = FRA
+						}
+					}
+					POR = {
+						OR  = {
+							exists = no 
+							is_puppet_of = FRA 
+							is_in_faction_with = FRA
+						}
+					}
+					ITA = {
+						OR  = {
+							exists = no 
+							is_puppet_of = FRA 
+							is_in_faction_with = FRA
+						}
+					}
+					SWI = {
+						OR  = {
+							exists = no 
+							is_puppet_of = FRA 
+							is_in_faction_with = FRA
+						}
+					}
+					GRU = {
+						OR  = {
+							exists = no 
+							is_puppet_of = FRA 
+							is_in_faction_with = FRA
+						}
+					}
+					HOL = {
+						OR  = {
+							exists = no 
+							is_puppet_of = FRA 
+							is_in_faction_with = FRA
+						}
+					}
+					AUS = {
+						OR  = {
+							exists = no 
+							is_puppet_of = FRA 
+							is_in_faction_with = FRA
+						}
+					}
+			}
+		}
+		visible = {
+			has_completed_focus = FRA_deat_europe_focus
+			has_government = totalist
+			
+		}
+		cost = 150
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		complete_effect = {
+			set_country_flag = FRA_deat_europe
+			add_political_power = 100
+			set_cosmetic_tag = FRA_europe_deat
+			every_country = {
+				limit = {
+					is_puppet_of = FRA 
+				}
+				FRA = {
+					annex_country = {
+						target = PREV
+						transfer_troops = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					GRU = {
+						has_cosmetic_tag = GRU_OCCUPIED
+					}
+				}
+				FRA = {
+					annex_country = {
+						target = GRU
+						transfer_troops = yes
+					}
+				}
+			}
+		}
+	}
+	FRA_conquests_in_europe = {
+		icon = ger_military_buildup
+		
+		available = {
+			has_completed_focus = FRA_deat_europe_focus
+			NOT = {
+			has_country_flag = ENG_european_conquest
+			}
+		}
+		
+		visible = {
+			has_completed_focus = FRA_deat_europe_focus
+			has_government = totalist
+			FROM = { 
+				exists = yes
+				NOT = {
+				has_war_with = FRA
+				}
+			}
+		}
+		cost = 10
+		targets = { POR SPR CNT CAR FRA IRE SRD SIC PAP SRI ITA SWI AUS BEL WLL FLN HOL GER DEN NOR SWE FIN CZE HUN GAL POL CRO SER ALB GRE BUL ROM UKR WHR LIT BAT GBR ICE DKB KUB KLY MTR EST LAT RUS SOV TRM}
+		target_trigger = {
+			FROM = { exists = yes }
+			NOT = {
+				AND = {
+					has_war_with = PREV
+					is_in_faction_with = FRA
+				}
+			}
+			
+		}
+		days_remove = 14
+		days_re_enable = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				factor = 0
+				has_equipment = { infantry_equipment < 4000 }
+			}
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+		complete_effect = {
+			set_country_flag = FRA_european_conquest
+		}
+		remove_effect = {
+			clr_country_flag = FRA_european_conquest
+			declare_war_on = {	type = annex_everything	target = FROM }
+			hidden_effect = {
+			every_state = {
+				limit = {
+					is_owned_by = FROM
+					is_on_continent = europe
+				}
+				add_claim_by = ROOT
+				}
+			}
+		}
+	}
+	FRA_form_paneuropacollective_decision = {
+		icon = GFX_decision_generic_army_support
+		allowed = { original_tag = FRA }
+		available = {
+			has_completed_focus = FRA_greater_europe
+			has_government = totalist
+			
+			16 = { is_controlled_by_ROOT_or_ally = yes}
+			64 = { is_controlled_by_ROOT_or_ally = yes}
+			6 = { is_controlled_by_ROOT_or_ally = yes}
+			34 = { is_controlled_by_ROOT_or_ally = yes}
+			7 = { is_controlled_by_ROOT_or_ally = yes}
+			3 = { is_controlled_by_ROOT_or_ally = yes}
+			1137 = { is_controlled_by_ROOT_or_ally = yes}
+			41 = { is_controlled_by_ROOT_or_ally = yes}
+			112 = { is_controlled_by_ROOT_or_ally = yes}
+			117 = { is_controlled_by_ROOT_or_ally = yes}
+			2 = { is_controlled_by_ROOT_or_ally = yes}
+			1129 = { is_controlled_by_ROOT_or_ally = yes}
+			43 = { is_controlled_by_ROOT_or_ally = yes}
+			91 = { is_controlled_by_ROOT_or_ally = yes}
+			10 = { is_controlled_by_ROOT_or_ally = yes}
+			107 = { is_controlled_by_ROOT_or_ally = yes}
+			109 = { is_controlled_by_ROOT_or_ally = yes}
+			44 = { is_controlled_by_ROOT_or_ally = yes}
+			46 = { is_controlled_by_ROOT_or_ally = yes}
+			47 = { is_controlled_by_ROOT_or_ally = yes}
+			48 = { is_controlled_by_ROOT_or_ally = yes}
+			202 = { is_controlled_by_ROOT_or_ally = yes}
+			206 = { is_controlled_by_ROOT_or_ally = yes}
+			96 = { is_controlled_by_ROOT_or_ally = yes}
+			1091 = { is_controlled_by_ROOT_or_ally = yes}
+			840 = { is_controlled_by_ROOT_or_ally = yes}
+			37 = { is_controlled_by_ROOT_or_ally = yes}
+			110 = { is_controlled_by_ROOT_or_ally = yes}
+			141 = { is_controlled_by_ROOT_or_ally = yes}
+			219 = { is_controlled_by_ROOT_or_ally = yes}
+			195 = { is_controlled_by_ROOT_or_ally = yes}
+			100 = { is_controlled_by_ROOT_or_ally = yes}	
+					
+			
+		}
+		visible = {
+			has_completed_focus = FRA_greater_europe
+			has_government = totalist
+			
+		}
+		cost = 150
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		complete_effect = {
+			
+			add_political_power = 100
+			set_cosmetic_tag = FRA_europe_natcol
+			every_country = {
+				limit = {
+					is_puppet_of = FRA 
+				}
+				FRA = {
+					annex_country = {
+						target = PREV
+						transfer_troops = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					GRU = {
+						has_cosmetic_tag = GRU_OCCUPIED
+					}
+				}
+				FRA = {
+					annex_country = {
+						target = GRU
+						transfer_troops = yes
+					}
+				}
+			}
+		}
+	}
+}

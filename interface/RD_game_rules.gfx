@@ -1,0 +1,107 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_KR_game_rule_flag_FRA_Jacobinmod"
+		texturefile = "gfx/flags/small/FRA_Jacobinmod.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_KR_game_rule_flag_FRA_Arthuys"
+		texturefile = "gfx/flags/small/FRA_Arthuys.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_KR_game_rule_flag_FRA_natcol"
+		texturefile = "gfx/flags/small/FRA_natcol.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_KR_game_rule_flag_FRA_Vanguard"
+		texturefile = "gfx/flags/small/FRA_Vanguard.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_KR_game_rule_flag_FRA_lagardelle"
+		texturefile = "gfx/flags/small/FRA_Lagardelle_LON.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_KR_game_rule_flag_FRA_dorgeres"
+		texturefile = "gfx/flags/small/FRA_dorgeres.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_KR_game_rule_flag_FRA_herve"
+		texturefile = "gfx/flags/small/FRA_herve.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_KR_game_rule_flag_FRA_consulat"
+		texturefile = "gfx/flags/small/FRA_consulat.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_KR_game_rule_flag_FRA_christsoc"
+		texturefile = "gfx/flags/small/FRA_christsoc.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_KR_game_rule_flag_FRA_atheist"
+		texturefile = "gfx/flags/small/FRA_atheist.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_KR_game_rule_flag_FRA_celt"
+		texturefile = "gfx/flags/small/FRA_celt.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_KR_game_rule_flag_FRA_possible"
+		texturefile = "gfx/flags/small/FRA_Possibiliste.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_KR_game_rule_flag_FRA_possible"
+		texturefile = "gfx/flags/small/FRA_Possibiliste.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_KR_game_rule_flag_FRA_rednap_EP"
+		texturefile = "gfx/flags/small/FRA_rednap_United7.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_KR_game_rule_flag_FRA_rednap_EU"
+		texturefile = "gfx/flags/small/FRA_rednap_use.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_KR_game_rule_flag_FRA_rednap"
+		texturefile = "gfx/flags/small/FRA_rednap2.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_KR_game_rule_flag_CZE_gottwaldism"
+		texturefile = "gfx/flags/small/CZE_gottwaldism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_KR_game_rule_flag_ITR_FRA_rednap"
+		texturefile = "gfx/flags/small/ITR_FRA_rednap.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_KR_game_rule_flag_ITK_FRA_rednap"
+		texturefile = "gfx/flags/small/ITK_FRA_rednap.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_KR_game_rule_flag_FRITA_rednap"
+		texturefile = "gfx/flags/small/FRA_rednap_United8.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_KR_game_rule_EUFL6"
+		texturefile = "gfx/flags/small/EUFL6.tga"
+		legacy_lazy_load = no
+	}
+}

@@ -1,0 +1,128 @@
+﻿###########################
+# newIreland Events
+###########################
+
+add_namespace = newIreland
+#挑动英国内战#
+country_event = {
+	id = newIreland.1
+	title = newIreland.1.t
+	desc = newIreland.1.d
+	picture = GFX_engwar.1
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = newIreland.1.a		
+     complete_national_focus = IRE_wait_and_see_its_change
+	}
+    option = { 
+		name = newIreland.1.b
+     complete_national_focus = IRE_Liberate_the_British_people_who_have_been_oppressed_again
+	}
+}
+#英国已在手中
+country_event = {
+	id = newIreland.2
+	title = newIreland.2.t
+	desc = newIreland.2.d
+	picture = GFX_engwar.2
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = newIreland.2.a
+		IRE = {
+			transfer_state = 120
+            transfer_state = 136
+            transfer_state = 133
+            transfer_state = 938
+			transfer_state = 121
+			transfer_state = 131
+			transfer_state = 130
+			transfer_state = 132
+            transfer_state = 129
+			transfer_state = 128
+			transfer_state = 122
+			transfer_state = 125
+			transfer_state = 126
+			transfer_state = 127
+			transfer_state = 338
+			transfer_state = 123
+		}
+        120 = { add_core_of = IRE }
+        136 = { add_core_of = IRE }
+        133 = { add_core_of = IRE }
+        938 = { add_core_of = IRE }
+        121 = { add_core_of = IRE }
+        131 = { add_core_of = IRE }
+        126 = { add_core_of = IRE }
+        130 = { add_core_of = IRE }
+        132 = { add_core_of = IRE }
+        129 = { add_core_of = IRE }
+        128 = { add_core_of = IRE }
+        122 = { add_core_of = IRE }
+        125 = { add_core_of = IRE }
+        127 = { add_core_of = IRE }
+        338 = { add_core_of = IRE }
+        123 = { add_core_of = IRE }
+        news_event = { id = nsireland.1 days = 1 }
+	}
+    option = { 
+		name = newIreland.2.b
+		puppet = ENG
+		ENG = {
+			transfer_state = 120
+            transfer_state = 136
+            transfer_state = 133
+            transfer_state = 938
+			transfer_state = 121
+			transfer_state = 131
+			transfer_state = 130
+			transfer_state = 132
+            transfer_state = 129
+			transfer_state = 128
+			transfer_state = 122
+			transfer_state = 125
+			transfer_state = 127
+			transfer_state = 338
+			transfer_state = 123
+		}
+		IRE = {
+			transfer_state = 126
+		}
+        126 = { add_core_of = IRE }
+        news_event = { id = nsireland.2 days = 1 }
+	}
+    option = {
+		name = newIreland.2.c
+		puppet = SCT
+		puppet = WAL
+		puppet = ENG
+		SCT = {
+			transfer_state = 120
+            transfer_state = 136
+            transfer_state = 133
+			transfer_state = 121
+			transfer_state = 938
+		}
+		WAL = {
+			transfer_state = 122
+		}
+		ENG = {
+			transfer_state = 131
+			transfer_state = 130
+			transfer_state = 132
+            transfer_state = 129
+			transfer_state = 128
+			transfer_state = 125
+			transfer_state = 127
+			transfer_state = 338
+			transfer_state = 123
+		}
+        news_event = { id = nsireland.3 days = 1 }
+	}
+	option = { 
+		name = newIreland.2.dc
+	}
+}

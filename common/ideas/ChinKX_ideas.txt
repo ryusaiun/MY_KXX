@@ -1,0 +1,152 @@
+ideas = {
+	country = {
+		KXX_Zhilu_Explosion = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KXX_Zhilu_Explosion" }
+			name = KXX_Zhilu_Explosion
+			picture = kill_all_people
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.05
+				local_resources_factor = -0.1
+				conscription_factor = -0.35
+				supply_factor = -0.2
+				mobilization_speed = -0.2
+				army_org_factor = -0.2
+				industrial_capacity_factory = -0.5
+			}
+		}		
+		KXX_ThreeRemove = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KXX_ThreeRemove" }
+			name = KXX_ThreeRemove
+			picture = kill_all_people
+			allowed = { always = no }
+			modifier = {
+			supply_consumption_factor = -10
+			no_supply_grace = 9999
+			production_speed_supply_node_factor = 10
+			}
+		}
+		KXX_GoBack = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KXX_GoBack" }
+			name = KXX_GoBack
+			picture = kill_all_people
+			allowed = { always = no }
+			modifier = {
+			local_resources = 5.0
+			local_resources_factor = 5
+			local_manpower = 5
+			local_factories = 5
+			local_supplies = 5
+			consumer_goods_factor = -50
+			}
+		}
+		KXX_GoWork = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KXX_GoWork" }
+			name = KXX_GoWork
+			picture = kill_all_people
+			allowed = { always = no }
+			modifier = {
+			production_speed_buildings_factor = 5
+			production_speed_nuclear_reactor_factor = 5
+			production_speed_arms_factory_factor = 5
+			production_speed_industrial_complex_factor = 5
+			production_speed_synthetic_refinery_factor = 5
+			production_speed_dockyard_factor = 5
+			production_speed_bunker_factor = 5
+			production_speed_infrastructure_factor = 5
+			industry_repair_factor = 5
+			production_speed_coastal_bunker_factor = 5
+			production_speed_anti_air_building_factor = 10
+			production_speed_air_base_factor = 10
+			production_speed_naval_base_factor = 10
+			production_speed_rocket_site_factor = 10
+			production_speed_radar_station_factor = 10
+			production_factory_max_efficiency_factor = 10
+			production_factory_efficiency_gain_factor = 10
+			line_change_production_efficiency_factor = 10
+			}
+		}
+		KXX_GoSpeedWork = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KXX_GoSpeedWork" }
+			name = KXX_GoSpeedWork
+			picture = kill_all_people
+			allowed = { always = no }
+			modifier = {
+			stability_factor = 1
+			war_support_factor = 1
+			conscription = 0.5
+			justify_war_goal_time = -2
+			land_reinforce_rate = 5
+			special_forces_cap = 5
+			army_core_attack_factor = 2
+			army_core_defence_factor = 2
+			army_attack_factor = 2
+			army_defence_factor = 2
+			army_speed_factor = 5
+			army_morale_factor = 5
+			army_org_factor = 5
+			breakthrough_factor = 5
+			non_core_manpower = 0.5
+			mobilization_speed = 10
+			combat_width_factor = -0.5
+			attrition = -0.5
+			dig_in_speed_factor = 5
+			training_time_factor = -0.9
+			acclimatization_cold_climate_gain_factor = 1
+			acclimatization_hot_climate_gain_factor  = 1
+			occupation_cost = -0.5
+			org_loss_when_moving = -1
+			max_organisation = 100
+			motorized_attack_factor = 2
+			motorized_defence_factor = 2
+			mechanized_attack_factor = 2
+			mechanized_defence_factor = 2
+			army_artillery_defence_factor = 2
+			army_artillery_attack_factor = 2
+			army_armor_attack_factor = 2
+			army_armor_defence_factor = 2
+			special_forces_attack_factor = 2
+			special_forces_defence_factor = 2
+			cavalry_attack_factor = 2
+			cavalry_defence_factor = 2
+			}
+		}
+		KXX_KillWorld = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KXX_KillWorld" }
+			name = KXX_KillWorld
+			picture = kill_all_people
+			allowed = { always = no }
+			modifier = {
+			naval_strike = 2.00
+			naval_hit_chance = 2.00
+			naval_speed_factor = 2.00
+			naval_detection = 2.0
+			navy_max_range_factor = 2.00
+			navy_submarine_detection_factor = 2.00
+			navy_anti_air_attack_factor = 2.00
+			sortie_efficiency = 2.00
+			carrier_traffic = 2.0
+			amphibious_invasion = 2.0
+			amphibious_invasion_defence = 2.0
+			naval_invasion_capacity = 500
+			invasion_preparation = -1
+			air_attack_factor = 5.0
+			air_detection = 5.0
+			air_range_factor = 5.00
+			air_agility_factor = 5.00
+			air_maximum_speed_factor = 5.00
+			air_accidents = -1
+			air_mission_efficiency = 5.00
+			air_ace_generation_chance_factor = 2
+			air_bombing_targetting = 5.00
+			naval_strike_targetting_factor = 5.00
+			air_superiority_detect_factor = 5.00
+			air_superiority_efficiency = 5.00
+			army_bonus_air_superiority_factor = 5.00
+			air_night_penalty = -2
+			air_weather_penalty = -2
+			air_accidents_factor = -2
+			}
+		}
+	}
+}

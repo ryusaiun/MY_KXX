@@ -1,0 +1,260 @@
+capital = 1091
+
+oob = "BAL_1936"
+
+set_research_slots = 4
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	basic_train = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_military_police = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	#basic_heavy_tank = 1  # PLACEHOLDER
+	#basic_medium_tank = 1 # PLACEHOLDER
+	early_fighter = 1
+	fighter1 = 1
+	early_bomber = 1
+	strategic_bomber1 = 1
+	naval_bomber1 = 1
+	mass_assault = 1
+	fleet_in_being = 1
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+	}
+}
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_submarine = 1
+		basic_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		early_battlecruiser = 1
+		transport = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		mtg_transport = 1
+		basic_battery = 1
+		basic_torpedo = 1
+	}
+}
+
+set_party_name = { ideology = national_populist long_name = GRU_party_36_long name = GRU_party_36 }
+
+create_country_leader = {
+	name = GRU_Hinrich_Lohse
+	picture = "gfx/leaders/GRU/Portrait_Germany_Hinrich_Lohse.dds"
+	expire = "1.1.1"
+	ideology = germanic_socialism_subtype
+	traits = { 
+	}
+}
+
+create_field_marshal = {
+	name = GRU_general_Rudiger_von_der_Goltz
+	portrait_path = "gfx/leaders/BAT/Portrait_BAT_Rudiger_von_der_Goltz.png"
+	desc = "POLITICS_RUDIGER_VON_DER_GOLTZ_DESC"
+	traits = { old_guard offensive_doctrine media_personality }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = GRU_general_Wessel_von_Freytagh_Loringhoven
+	portrait_path = "gfx/leaders/BAT/Portrait_BAT_Wessel_von_Freytagh_Loringhoven.png"
+	desc = "POLITICS_WESSEL_VON_FREYTAGH_LORINGHOVEN_DESC"
+	traits = { trickster }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+
+}
+
+create_corps_commander = {
+	name = GRU_general_Werner_Kempf
+	portrait_path = "gfx/leaders/WHR/Portrait_WHR_Werner_Kempf.png"
+	traits = { panzer_leader career_officer brilliant_strategist }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 3
+
+}
+
+create_corps_commander = {
+	name = GRU_general_Ernst_Gustav_Heimert_von_Nolcken
+	portrait_path = "gfx/leaders/BAT/Portrait_BAT_Ernst_Gustav_Heimert_von_Nolcken.png"
+	desc = "POLITICS_ERNST_GUSTAV_HEIMERT_VON_NOLCKEN_DESC"
+	traits = { cavalry_officer cavalry_leader }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+
+}
+
+create_corps_commander = {
+	name = GRU_general_Heinrich_von_Behr
+	portrait_path = "gfx/leaders/BAT/Portrait_BAT_Heinrich_von_Behr.png"
+	desc = "POLITICS_HEINRICH_VON_BEHR_DESC"
+	traits = { panzer_leader }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+
+}
+
+create_corps_commander = {
+	name = GRU_general_Harry_Lutz
+	portrait_path = "gfx/leaders/BAT/Portrait_BAT_Harry_Lutz.png"
+	desc = "POLITICS_HARRY_LUTZ_DESC"
+	traits = { infantry_leader trait_reckless }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+
+}
+
+create_corps_commander = {
+	name = GRU_general_Constantin_von_Weiss
+	portrait_path = "gfx/leaders/BAT/Portrait_BAT_Constantin_von_Weiss.png"
+	desc = "POLITICS_CONSTANTIN_VON_WEISS_DESC"
+	traits = { old_guard infantry_officer }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+
+}
+
+create_corps_commander = {
+	name = GRU_general_Hans_Joachim_von_Manteuffel_Szoege
+	portrait_path = "gfx/leaders/BAT/Portrait_BAT_Hans_Joachim_von_Manteuffel_Szoege.png"
+	desc = "POLITICS_HANS_VON_MANTEUFFEL_SZOEGE_DESC"
+	traits = { commando }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+
+}
+
+create_corps_commander = {
+	name = GRU_general_Otto_Goldfeld
+	portrait_path = "gfx/leaders/BAT/Portrait_BAT_Otto_Goldfeld.png"
+	desc = "POLITICS_OTTO_GOLDFELD_DESC"
+	traits = { }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 3
+
+}
+
+create_corps_commander = {
+	name = GRU_general_Adrian_von_Folkersam
+	portrait_path = "gfx/leaders/BAT/Portrait_BAT_Adrian_von_Folkersam.png"
+	traits = { 
+		politically_connected 
+		commando
+		infantry_leader
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_navy_leader = {
+	name = GRU_general_Alexander_von_Salza
+	portrait_path = "gfx/leaders/EST/Portrait_EST_Alexander_von_Salza.png"
+	traits = { superior_tactician }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	maneuvering_skill = 3
+	coordination_skill = 3
+}
+
+create_navy_leader = {
+	name = GRU_general_Adam_Friedrich_von_Gernet
+	portrait_path = "gfx/leaders/BAT/Portrait_BAT_Adam_Friedrich_von_Gernet.png"
+	traits = { spotter }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 1
+	coordination_skill = 2
+}
+
+create_navy_leader = {
+	name = GRU_general_Johan_Pitka
+	portrait_path = "gfx/leaders/EST/Portrait_EST_Johan_Pitka.png"
+	traits = { blockade_runner }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	maneuvering_skill = 2
+	coordination_skill = 2
+}
+
+
+create_navy_leader = {
+	name = GRU_general_Archibald_von_Keyserling
+	portrait_path = "gfx/leaders/BAT/Portrait_BAT_Archibald_von_Keyserling.png"
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 2
+}

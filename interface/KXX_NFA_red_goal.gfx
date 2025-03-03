@@ -1,0 +1,94 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_goal_NFA_fuck_action_francaise"
+		texturefile = "gfx/interface/goals/NFA_fuck_action_francaise.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_NFA_red_monarchy"
+		texturefile = "gfx/interface/goals/NFA_red_monarchy.png"
+	}
+	spriteType = {
+		name = "GFX_idea_NFA_Roger_Nimier_hog_rso"
+		texturefile = "gfx/interface/ministers/NFA/NFA_Roger_Nimier_hog_rso.png"
+	}
+	spriteType = {
+		name = "GFX_idea_NFA_Jean_Marc_Bourquin_sec_rso"
+		texturefile = "gfx/interface/ministers/NFA/NFA_Jean_Marc_Bourquin_sec_rso.png"
+	}
+	spriteType = {
+		name = "GFX_idea_NFA_Pierre_Schaeffer_eco_rso"
+		texturefile = "gfx/interface/ministers/NFA/NFA_Pierre_Schaeffer_eco_rso.png"
+	}
+	spriteType = {
+		name = "GFX_idea_NFA_Rene_Lambert_for_rso"
+		texturefile = "gfx/interface/ministers/NFA/NFA_Rene_Lambert_for_rso.png"
+	}
+}
+
+
+
+
+
+SpriteTypes = {
+	spriteType = {
+		name = "GFX_goal_NFA_fuck_action_francaise_shine"
+		texturefile = "gfx/interface/goals/NFA_fuck_action_francaise.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/NFA_fuck_action_francaise.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/NFA_fuck_action_francaise.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_goal_NFA_red_monarchy_shine"
+		texturefile = "gfx/interface/goals/NFA_red_monarchy.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/NFA_red_monarchy.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/NFA_red_monarchy.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+}

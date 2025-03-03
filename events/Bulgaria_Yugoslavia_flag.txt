@@ -1,0 +1,61 @@
+add_namespace = Dimitrovdream
+
+country_event = { 
+	id = Dimitrovdream.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Dimitrovdream.1" }
+	title = Dimitrovdream.1.t
+	picture = GFX_report_event_BUL_YUG_flag
+
+	is_triggered_only = yes
+	
+	option = {  
+		name = Dimitrovdream.1.a
+		hidden_effect = {
+		set_cosmetic_tag= BUL_YUG
+			}
+	}
+
+	option = {  
+		name = Dimitrovdream.1.b
+		hidden_effect = {
+		set_cosmetic_tag= BUL_YUG2
+			}
+	}
+
+	option = {  
+		name = Dimitrovdream.1.c
+		hidden_effect = {
+		set_cosmetic_tag= BUL_YUG3
+			}
+	}
+
+	option = {  
+		name = Dimitrovdream.1.e
+		trigger = {
+			OR = {
+				has_country_leader = {
+					name = "Kimon Georgiev Stoyanov"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "基蒙·格奥尔基耶夫·斯托亚诺夫"
+					ruling_only = yes
+				}	
+			}
+		}		
+		hidden_effect = {
+		set_cosmetic_tag= BUL_YUG4
+			}
+	}
+
+	option = {  
+		name = Dimitrovdream.1.f
+		hidden_effect = {
+		set_cosmetic_tag= BUL_YUG5
+			}
+	}	
+
+	option = {  
+		name = Dimitrovdream.1.g
+	}
+}

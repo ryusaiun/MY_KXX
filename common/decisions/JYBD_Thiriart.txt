@@ -1,0 +1,544 @@
+
+FLN_paneu_diplomacy = {
+	FLN_unity = {
+		icon = generic_agreement
+		available = { is_subject = no }
+		visible = {
+			has_completed_focus = FLN_from_dublin_to_vladivostok
+			is_subject = no
+		}		
+		targets = { ENG FRA }
+		
+		target_trigger = {
+			FROM = {
+				is_subject = no
+				OR = {
+					has_country_leader_ideology = british_maximism_subtype
+					has_country_leader_ideology = national_collectivist_subtype
+					has_country_leader_ideology = neo_socialism_subtype
+				}
+				
+			}
+		}
+
+		cost = 25
+		days_remove = 7
+		fire_only_once = yes
+		
+
+		ai_will_do = { factor = 0 }
+
+		remove_effect = {
+			FLN = {
+				annex_country = { target = FROM transfer_troops = yes }
+			}
+			FROM = {
+				every_unit_leader = {	
+					set_nationality = FLN
+				}
+			}
+		}		
+			
+		
+
+		
+	}
+}
+FLN_paneu_puppet = {
+	FLN_puppet_africa = {
+	available = { 
+		is_subject = no 
+		NOT = {
+			ANG = { exists = yes }
+			BFA = { exists = yes }
+			BOT = { exists = yes }
+			BRD = { exists = yes } 
+			BRT = { exists = yes } 
+			CEA = { exists = yes }
+			CMR = { exists = yes }
+			IVO = { exists = yes }
+			KOG = { exists = yes } 
+			CVG = { exists = yes }
+			DAH = { exists = yes } 
+			ERI = { exists = yes }
+			ETH = { exists = yes }
+			GAB = { exists = yes }
+			GHA = { exists = yes }
+			GNA = { exists = yes }
+			HAU = { exists = yes } 
+			KBR = { exists = yes } 
+			KEN = { exists = yes } 
+			KIK = { exists = yes } 
+			KIV = { exists = yes } 
+			COG = { exists = yes } 
+			LIB = { exists = yes }
+			MAG = { exists = yes }
+			MAL = { exists = yes }
+			MLW = { exists = yes } 
+			MRT = { exists = yes }
+			MZB = { exists = yes }
+			NMB = { exists = yes }
+			NER = { exists = yes }
+			NGR = { exists = yes }
+			RWA = { exists = yes } 
+			SEN = { exists = yes }
+			SIE = { exists = yes }
+			SOM = { exists = yes }
+			SUD = { exists = yes }
+			TKE = { exists = yes } 
+			TZN = { exists = yes }
+			TOG = { exists = yes } 
+			TUA = { exists = yes }
+			UGA = { exists = yes }
+			WAD = { exists = yes }
+			ZAM = { exists = yes }
+			ZIM = { exists = yes }
+			ZZB = { exists = yes } 
+			MSF = { exists = yes } 
+			LPD = { exists = yes } 
+			UMN = { exists = yes } 
+			KAS = { exists = yes } 
+			CIV = { exists = yes }
+			DJI = { exists = yes } 	
+		}
+
+	}
+	allowed = { tag = FLN }
+	visible = {
+		is_subject = no
+		has_completed_focus = FLN_europe_guided_africa
+		is_ai = no
+	}
+
+	cost = 25
+		days_remove = 7
+		fire_only_once = yes
+	
+		ai_will_do = { factor = 0 }
+
+		remove_effect = {
+			set_temp_variable = { tag_to_release = COG }
+		release_targeted_tag = yes
+		COG = {
+			every_state = {
+				limit = {
+					is_on_continent = africa
+				}
+				add_core_of = COG
+				transfer_state_to = COG
+			}	
+			set_cosmetic_tag = FLN_COG_euro
+			add_popularity = {
+			ideology = totalist
+			popularity = 0.50
+			}
+			
+			set_politics = {
+			ruling_party = totalist
+			elections_allowed = no
+			}
+			create_country_leader = {
+				name = "阿尔贝·德科斯泰"
+				desc = "POLITICS_DECOSTER_DESC"
+				picture = "gfx/leaders/COG/Portrait_COG_Albert_Decoster.png"
+				expire = "1.1.1"
+				ideology = tot_euro_panafricanism_subtype 
+				traits = {}
+			}
+			set_party_name = {
+				ideology = totalist
+				long_name = COG_paneu
+				name = COG_paneu
+			  }
+			
+				
+			
+		
+		
+			
+		}
+		}	
+}
+FLN_puppet_asia = {
+	available = { 
+		is_subject = no 
+		NOT = {
+			ALQ = { exists = yes }
+			ANQ = { exists = yes }
+			BHU = { exists = yes }
+			BOR = { exists = yes }
+			BRM = { exists = yes }
+			CAM = { exists = yes }
+			CHI = { exists = yes }
+			ETS = { exists = yes }
+			FNG = { exists = yes }
+			GEA = { exists = yes }
+			GXC = { exists = yes }
+			PRC = { exists = yes }
+			HNN = { exists = yes }
+			INC = { exists = yes }
+			JAP = { exists = yes }
+			KAC = { exists = yes }
+			KOR = { exists = yes }
+			KYR = { exists = yes }
+			LAO = { exists = yes }
+			LEC = { exists = yes }
+			LEP = { exists = yes }
+			MAN = { exists = yes }
+			MLY = { exists = yes }
+			MON = { exists = yes }
+			QIE = { exists = yes }
+			PHI = { exists = yes }
+			PNG = { exists = yes }
+			SAR = { exists = yes }
+			SHA = { exists = yes }
+			SHX = { exists = yes }
+			SIA = { exists = yes }
+			SIK = { exists = yes }
+			SIR = { exists = yes }
+			SQI = { exists = yes }
+			SZC = { exists = yes }
+			TAJ = { exists = yes }
+			TAN = { exists = yes }
+			TIB = { exists = yes }
+			UZB = { exists = yes }
+			VIN = { exists = yes }
+			XSM = { exists = yes }
+			YUN = { exists = yes }
+			TRK = { exists = yes }
+			ALO = { exists = yes }
+		} 
+	}
+	allowed = { tag = FLN }
+	visible = {
+		is_subject = no
+		has_completed_focus = FLN_asian_liberation
+		is_ai = no
+	}
+
+	cost = 25
+		days_remove = 7
+		fire_only_once = yes
+	
+		ai_will_do = { factor = 0 }
+
+		remove_effect = {
+			set_temp_variable = { tag_to_release = CHI }
+		release_targeted_tag = yes
+		CHI = {
+			every_state = {
+				limit = {
+					is_on_continent = asia
+					NOT = { is_core_of = FLN }
+				}
+				add_core_of = CHI
+				transfer_state_to = CHI
+			}	
+			every_state = {
+				limit = {
+					is_on_continent = india
+				}
+				add_core_of = CHI
+				transfer_state_to = CHI
+			}
+			every_state = {
+				limit = {
+					is_on_continent = australia
+				}
+				add_core_of = CHI
+				transfer_state_to = CHI
+			}
+			set_cosmetic_tag = FLN_CHI_euro
+			add_popularity = {
+			ideology = totalist
+			popularity = 0.50
+			}
+			
+			set_politics = {
+			ruling_party = totalist
+			elections_allowed = no
+			}
+			create_country_leader = {
+				name = "蒋纬国"
+				picture = "gfx/leaders/CHI/Portrait_KMT_Chiang_Wei_kuo.png"
+				expire = "1.1.1"
+				desc = "POLITICS_CHI_CHIANG_WEI_KUO_ARMY_DESC"
+				ideology = tot_tridemism_subtype
+
+			}
+			set_party_name = {
+				ideology = totalist
+				long_name = CHI_paneu
+				name = CHI_paneu
+			  }	
+		}
+	}	
+}
+FLN_puppet_middleeast = {
+	available = { 
+		is_subject = no 
+NOT = {
+	TUR = { exists = yes }
+	GEO = { exists = yes }
+	ABK = { exists = yes }
+	ARM = { exists = yes }
+	AZE = { exists = yes }
+	EGY = { exists = yes }
+	IKH = { exists = yes }
+	IRQ = { exists = yes }
+	ASY = { exists = yes }
+	JBS = { exists = yes }
+	HEJ = { exists = yes }
+	KDR = { exists = yes }
+	KUR = { exists = yes }
+	LBA = { exists = yes }
+	TRU = { exists = yes }
+	LEB = { exists = yes }
+	OMA = { exists = yes }
+	PAL = { exists = yes }
+	PER = { exists = yes }
+	SAU = { exists = yes }
+	SYR = { exists = yes }
+	YEM = { exists = yes }
+		}
+	}
+	allowed = { tag = FLN }
+	visible = {
+		is_subject = no
+		has_completed_focus = FLN_asian_liberation
+		is_ai = no
+	}
+
+	cost = 25
+		days_remove = 7
+		fire_only_once = yes
+	
+		ai_will_do = { factor = 0 }
+
+		remove_effect = {
+			set_temp_variable = { tag_to_release = EGY }
+		release_targeted_tag = yes
+		EGY = {
+			every_state = {
+				limit = {
+					is_on_continent = middle_east
+				}
+				add_core_of = EGY
+				transfer_state_to = EGY
+			}	
+			
+			set_cosmetic_tag = FLN_EGY_euro
+			add_popularity = {
+			ideology = totalist
+			popularity = 0.50
+			}
+			
+			set_politics = {
+			ruling_party = totalist
+			elections_allowed = no
+			}
+			create_country_leader = {
+				name = "贾迈勒·阿卜杜勒·纳赛尔"
+				desc = "POLITICS_NASSER_DESC"
+				picture = "gfx/leaders/EGY/Portrait_EGY_Gamel_Abdel_Nasser.png"
+				expire = "1965.1.1"
+				ideology = tot_developing_leftism_subtype
+				
+			}
+			set_party_name = {
+				ideology = totalist
+				long_name = EGY_paneu
+				name = EGY_paneu
+			  }
+			
+				
+			
+		
+		
+			
+		}
+		}	
+}
+FLN_puppet_america = {
+	available = { 
+		is_subject = no 
+		NOT = {
+			USA = { exists = yes }
+			CSA = { exists = yes }
+			COR = { exists = yes }
+			WCC = { exists = yes }
+			BBR = { exists = yes }
+			CAL = { exists = yes }
+			CAN = { exists = yes }
+			ALA = { exists = yes }
+			QUE = { exists = yes }
+			TEX = { exists = yes }
+			TXS = { exists = yes }
+		}
+	}
+	
+	allowed = { tag = FLN }
+	visible = {
+		is_subject = no
+		has_completed_focus = FLN_crusade_against_atlanticism
+		is_ai = no
+	}
+
+	cost = 25
+		days_remove = 7
+		fire_only_once = yes
+	
+		ai_will_do = { factor = 0 }
+
+		remove_effect = {
+			set_temp_variable = { tag_to_release = COR }
+		release_targeted_tag = yes
+		COR = {
+			every_state = {
+				limit = {
+					is_on_continent = north_america
+				}
+				add_core_of = COR
+				transfer_state_to = COR
+			}	
+			
+			set_cosmetic_tag = FLN_COR_euro
+			add_popularity = {
+			ideology = totalist
+			popularity = 0.50
+			}
+			
+			set_politics = {
+			ruling_party = totalist
+			elections_allowed = no
+			}
+			create_country_leader = {
+				name = "弗朗西斯·帕克·约基"
+				desc = "POLITICS_FRANCIS_PARKER_YOCKEY_DESC"
+				picture = "gfx/leaders/COR/Portrait_COR_Francis_Parker_Yockey.png"
+				expire = "1.1.1"
+				ideology = tot_paneuropeanism_subtype
+				traits = { young_leader_hos twentieth_century_philosopher }
+			}
+			set_party_name = {
+				ideology = totalist
+				long_name = COR_paneu
+				name = COR_paneu
+			  }
+			
+				
+			
+		
+		
+			
+		}
+		}	
+	}
+	FLN_puppet_latinamerica = {
+		available = { 
+			is_subject = no 
+			NOT = {
+AMA = { exists = yes }
+ARG = { exists = yes }
+BAH = { exists = yes }
+CHL = { exists = yes }
+COL = { exists = yes }
+CUB = { exists = yes }
+DOM = { exists = yes }
+ECU = { exists = yes }
+FOP = { exists = yes }
+GRP = { exists = yes }
+GOY = { exists = yes }
+MEX = { exists = yes }
+PIR = { exists = yes } 
+PRI = { exists = yes } 
+PRU = { exists = yes }
+RJM = { exists = yes }
+SPO = { exists = yes }
+URG = { exists = yes }
+VEN = { exists = yes }
+
+GYA = { exists = yes }
+HAI = { exists = yes }
+JAM = { exists = yes }
+SUR = { exists = yes }
+TRI = { exists = yes }
+
+BOL = { exists = yes }
+CEN = { exists = yes }
+COS = { exists = yes }
+ELS = { exists = yes }
+GUA = { exists = yes }
+HON = { exists = yes }
+NIC = { exists = yes }
+PAN = { exists = yes }
+PAR = { exists = yes }
+YUC = { exists = yes }
+			}
+		}
+		
+		allowed = { tag = FLN }
+		visible = {
+			is_subject = no
+			has_completed_focus = FLN_crusade_against_atlanticism
+			is_ai = no
+		}
+	
+		cost = 25
+			days_remove = 7
+			fire_only_once = yes
+		
+			ai_will_do = { factor = 0 }
+	
+			remove_effect = {
+				set_temp_variable = { tag_to_release = FOP }
+			release_targeted_tag = yes
+			FOP = {
+				
+				every_state = {
+					limit = {
+						is_on_continent = south_america
+					}
+					add_core_of = FOP
+					transfer_state_to = FOP
+				}
+				every_state = {
+					limit = {
+						is_on_continent = central_america
+					}
+					add_core_of = FOP
+					transfer_state_to = FOP
+				}
+				set_cosmetic_tag = FLN_FOP_euro
+				add_popularity = {
+				ideology = totalist
+				popularity = 0.50
+				}
+				
+				set_politics = {
+				ruling_party = totalist
+				elections_allowed = no
+				}
+				create_country_leader = {
+					name = "胡安·多明戈·庇隆"
+					desc = "POLITICS_DOMINGO_PERON_DESC"
+					picture = "gfx/leaders/ARG/Portrait_Argentine_Domingo_Peron.png"
+					expire = "1.1.1"
+					ideology = tot_left_nationalism_subtype
+					
+				}
+				set_party_name = {
+					ideology = totalist
+					long_name = FOP_paneu
+					name = FOP_paneu
+				  }
+				
+					
+				
+			
+			
+				
+			}
+			}	
+		}
+}

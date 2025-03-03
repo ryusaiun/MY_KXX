@@ -1,0 +1,32 @@
+political_actions = {
+
+ BUL_YUG_Flag_Picker = {
+		icon = generic_nationalism
+		allowed = { is_ai = no }
+		visible = {
+			is_ai = no
+			tag = BUL
+			has_socialist_government = yes
+			OR = {
+			has_cosmetic_tag = BUL_YUG				
+			has_cosmetic_tag = BUL_YUG2
+			has_cosmetic_tag = BUL_YUG3		
+			has_cosmetic_tag = BUL_YUG4
+			has_cosmetic_tag = BUL_YUG5							
+				}	
+		}
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision BUL_YUG_Flag_Picker"		
+			BUL = {	
+			country_event = Dimitrovdream.1
+			}
+		}
+	}	
+}	

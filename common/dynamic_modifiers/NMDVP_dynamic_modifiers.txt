@@ -1,0 +1,14 @@
+GRU_reinland_modifier = {
+	enable = { always = yes }
+	remove_trigger = { always = no }	
+	
+	icon = GFX_reinland_icon
+	disable_strategic_redeployment_for_controller = 1
+	local_supplies_for_controller = -0.99
+    recruitable_population_factor = -0.85
+	mobilization_speed = -0.95
+	local_resources_factor = -0.95
+    state_resources_factor = -0.95
+	state_production_speed_buildings_factor = -0.95
+    local_building_slots_factor = -0.95
+}

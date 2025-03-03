@@ -1,0 +1,8 @@
+ZZZ = "countries/Anarchy Zone.txt"
+NSP = "countries/POR_colonies.txt"
+ESP = "countries/POR_colonies.txt"
+SSP = "countries/POR_colonies.txt"
+CSP = "countries/POR_colonies.txt"
+MCU = "countries/POR_colonies.txt"
+GOA = "countries/POR_colonies.txt"
+JER = "countries/Channel Islands.txt"

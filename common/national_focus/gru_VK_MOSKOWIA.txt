@@ -1,0 +1,620 @@
+focus_tree = {
+	id = gru_VKM
+	continuous_focus_position = { x = 2700 y = 300 }
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = MOS
+		}
+	}
+	focus = {
+		id = VK_FOCUS_MOSKOWIA_START_COLONIZING
+		icon = VKM_COLONIZE
+		relative_position_id = VK_FOCUS_SHARED_ESTABLISH_VK
+		x = 0
+		y = 3
+		allow_branch = {
+			has_country_flag = IS_MOS
+		}
+		cost = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_MOSKOWIA_START_COLONIZING"
+
+			set_province_name = { id = 6380 name = GRU_name_province_6380 }
+			219 = { set_state_name = GRU_name_state_219 }
+			set_province_name = { id = 11248 name = GRU_name_province_11248 }
+			254 = { set_state_name = GRU_name_state_254 }
+			set_province_name = { id = 357 name = GRU_name_province_357 }
+			set_province_name = { id = 6174 name = GRU_name_province_6174 }
+			195 = { set_state_name = GRU_name_state_195 }
+			set_province_name = { id = 117 name = GRU_name_province_117 }
+			263 = { set_state_name = GRU_name_state_263 }
+			set_province_name = { id = 3578 name = GRU_name_province_3578 }
+			239 = { set_state_name = GRU_name_state_239 }
+			set_province_name = { id = 7375 name = GRU_name_province_7375 }
+			398 = { set_state_name = GRU_name_state_398 }
+
+			create_corps_commander = {
+				name = GRU_general_Adolf_Eichmann
+				portrait_path = "gfx/leaders/MOS/GRU_Portrait_Adolf_Eichmann.png"
+				traits = { panzer_leader ranger war_hero RR_OFFICER }
+				skill = 4
+			    attack_skill = 5
+			    defense_skill = 4
+			    maneuvering_skill = 4
+			    coordination_skill = 3
+			}
+			219 = {
+				add_core_of = MOS
+			}
+			swap_ideas = {
+				remove_idea = VK_COLONY_ONE
+				add_idea = VK_COLONY_TWO
+			}
+		}
+		prerequisite = { focus = VK_FOCUS_SHARED_MORE_SETTLERS  }
+		prerequisite = { focus = VK_FOCUS_SHARED_OUR_OWN_RR  }
+		prerequisite = { focus = VK_FOCUS_SHARED_ENSLAVE_NATIVES  }
+	}
+
+	focus = {
+		id = VK_FOCUS_MOSKOWIA_COLONIZE_ONE
+		icon = VKM_COLONIZE_ONE
+		relative_position_id = VK_FOCUS_MOSKOWIA_START_COLONIZING
+		x = -1
+		y = 1
+		available = {
+			MOS = {
+				OR = {
+					MOS = {
+						controls_state = 205
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 205
+					}
+				}
+				OR = {
+					MOS = {
+						controls_state = 246
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 246
+					}
+				}
+				OR = {
+					MOS = {
+						controls_state = 247
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 247
+					}
+				}
+				OR = {
+					MOS = {
+						controls_state = 248
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 248
+					}
+				}
+				OR = {
+					MOS = {
+						controls_state = 253
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 253
+					}
+				}
+				OR = {
+					MOS = {
+						controls_state = 254
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 254
+					}
+				}
+				OR = {
+					MOS = {
+						controls_state = 258
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 258
+					}
+				}
+				OR = {
+					MOS = {
+						controls_state = 223
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 223
+					}
+				}
+				OR = {
+					MOS = {
+						controls_state = 263
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 263
+					}
+				}
+				OR = {
+					MOS = {
+						controls_state = 208
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 208
+					}
+				}
+				OR = {
+					MOS = {
+						controls_state = 244
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 244
+					}
+				}
+				OR = {
+					MOS = {
+						controls_state = 195
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 195
+					}
+				}
+				OR = {
+					MOS = {
+						controls_state = 1328
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 1328
+					}
+				}
+				OR = {
+					MOS = {
+						controls_state = 264
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 264
+					}
+				}
+				OR = {
+					MOS = {
+						controls_state = 252
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 252
+					}
+				}
+				OR = {
+					MOS = {
+						controls_state = 1204
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 1204
+					}
+				}
+				OR = {
+					MOS = {
+						controls_state = 1205
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 1205
+					}
+				}
+				OR = {
+					MOS = {
+						controls_state = 255
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 255
+					}
+				}
+				OR = {
+					MOS = {
+						controls_state = 239
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 239
+					}
+				}
+				OR = {
+					MOS = {
+						controls_state = 401
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 401
+					}
+				}
+				OR = {
+					MOS = {
+						controls_state = 265
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 265
+					}
+				}
+				OR = {
+					MOS = {
+						controls_state = 260
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 260
+					}
+				}
+				OR = {
+					MOS = {
+						controls_state = 257
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 257
+					}
+				}
+				OR = {
+					MOS = {
+						controls_state = 258
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 258
+					}
+				}
+				OR = {
+					MOS = {
+						controls_state = 222
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 222
+					}
+				}
+				OR = {
+					MOS = {
+						controls_state = 224
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 224
+					}
+				}
+				OR = {
+					MOS = {
+						controls_state = 242
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 242
+					}
+				}
+				OR = {
+					MOS = {
+						controls_state = 250
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 250
+					}
+				}
+				OR = {
+					MOS = {
+						controls_state = 1198
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 1198
+					}
+				}
+				OR = {
+					MOS = {
+						controls_state = 256
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 256
+					}
+				}
+			}
+		}
+		cost = 6
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_MOSKOWIA_COLONIZE_ONE"
+
+			every_state = {
+				limit = {
+					OR = {
+						state = 205
+				        state = 246
+				        state = 247
+				        state = 248
+				        state = 253
+				        state = 254
+				        state = 258
+				        state = 223
+				        state = 263
+				        state = 208
+				        state = 244
+				        state = 195
+				        state = 1328
+				        state = 264
+				        state = 252
+				        state = 1204
+				        state = 1205
+				        state = 255
+				        state = 239
+				        state = 401
+				        state = 265
+				        state = 260
+				        state = 257
+				        state = 250
+				        state = 258
+				        state = 222
+				        state = 224
+				        state = 242
+				        state = 250
+				        state = 1198
+				        state = 256
+				        state = 219
+					}
+				}
+				MOS = {
+					add_state_core = PREV
+					transfer_state = PREV
+				}
+			}
+		}
+		prerequisite = { focus = VK_FOCUS_MOSKOWIA_START_COLONIZING  }
+	}
+	
+	focus = {
+		id = VK_FOCUS_MOSKOWIA_COLONIZE_TWO
+		icon = VKM_COLONIZE_TWO
+		relative_position_id = VK_FOCUS_MOSKOWIA_START_COLONIZING
+		x = 1
+		y = 1
+		available = {
+			MOS = {
+				OR = {
+					MOS = {
+						controls_state = 351
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 351
+					}
+				}
+				OR = {
+					MOS = {
+						controls_state = 214
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 214
+					}
+				}
+				OR = {
+					MOS = {
+						controls_state = 397
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 397
+					}
+				}
+				OR = {
+					MOS = {
+						controls_state = 400
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 400
+					}
+				}
+				OR = {
+					MOS = {
+						controls_state = 1193
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 1193
+					}
+				}
+				OR = {
+					MOS = {
+						controls_state = 399
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 399
+					}
+				}
+				OR = {
+					MOS = {
+						controls_state = 249
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 249
+					}
+				}
+				OR = {
+					MOS = {
+						controls_state = 1199
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 1199
+					}
+				}
+				OR = {
+					MOS = {
+						controls_state = 251
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 251
+					}
+				}
+				OR = {
+					MOS = {
+						controls_state = 1207
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 1207
+					}
+				}
+				OR = {
+					MOS = {
+						controls_state = 1224
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 1224
+					}
+				}
+				OR = {
+					MOS = {
+						controls_state = 406
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 406
+					}
+				}
+				OR = {
+					MOS = {
+						controls_state = 652
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 652
+					}
+				}
+				OR = {
+					MOS = {
+						controls_state = 1194
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 1194
+					}
+				}
+				OR = {
+					MOS = {
+						controls_state = 1197
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 1197
+					}
+				}
+				OR = {
+					MOS = {
+						controls_state = 651
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 651
+					}
+				}
+				OR = {
+					MOS = {
+						controls_state = 398
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 398
+					}
+				}
+				OR = {
+					MOS = {
+						controls_state = 1208
+					}
+					any_other_country = {
+						is_subject_of = MOS
+						controls_state = 1208
+					}
+				}
+			}
+		}
+		cost = 6
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_MOSKOWIA_COLONIZE_TWO"
+
+			every_state = {
+				limit = {
+					OR = {
+						state = 351
+				        state = 214
+				        state = 397
+				        state = 400
+				        state = 1193
+				        state = 399
+				        state = 249
+				        state = 1199
+				        state = 251
+				        state = 1207
+				        state = 1224
+				        state = 406
+				        state = 652
+				        state = 1194
+				        state = 1197
+				        state = 651
+				        state = 398
+				        state = 1208
+				        state = 262
+					}
+				}
+				MOS = {
+					add_state_core = PREV
+					transfer_state = PREV
+				}
+			}
+		}
+		prerequisite = { focus = VK_FOCUS_MOSKOWIA_START_COLONIZING  }
+	}
+	
+	focus = {
+		id = VK_FOCUS_MOSKOWIA_COLONIZED
+		icon = VKM_COLONIZED
+		relative_position_id = VK_FOCUS_MOSKOWIA_START_COLONIZING
+		x = 0
+		y = 2
+		cost = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_MOSKOWIA_COLONIZED"
+			swap_ideas = {
+				remove_idea = VK_COLONY_TWO
+				add_idea = VK_COLONY_THREE
+			}
+			set_country_flag = Germanized_VKM
+		}
+		prerequisite = { focus =  VK_FOCUS_MOSKOWIA_COLONIZE_ONE }
+		prerequisite = { focus =  VK_FOCUS_MOSKOWIA_COLONIZE_TWO }
+	}
+	shared_focus = VK_FOCUS_SHARED_ESTABLISH_VK
+	#shared_focus = GRU_formation_of_the_nva
+}

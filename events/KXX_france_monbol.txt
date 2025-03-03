@@ -1,0 +1,122 @@
+﻿###########################
+# COMMIE NATFRA Events
+###########################
+# By jybd
+###########################
+
+add_namespace = kxx_fra_monbol
+
+
+country_event = { 
+	id = kxx_fra_monbol.1 #entry event
+	immediate = { log = "[GetDateText]: [Root.GetName]: event neonepal.1" }
+	title = kxx_fra_monbol.1.t
+	desc = kxx_fra_monbol.1.d
+	trigger = {
+		tag = NFA
+		OR = {
+			has_country_flag = NFA_la_cagoule_in_charge
+			has_country_flag = NFA_maurrasians_in_charge
+		}
+		
+	}
+	fire_only_once = yes
+	option = {
+		name = kxx_fra_monbol.1.a
+		hidden_effect = {
+			country_event = {
+				id = kxx_fra_monbol.2
+				days = 7
+			}
+		}
+	}
+	option = {
+		name = kxx_fra_monbol.1.b
+		hidden_effect = {
+			country_event = {
+				id = kxx_fra_monbol.3
+				days = 7
+			}
+		}
+	}
+}
+country_event = { 
+	id = kxx_fra_monbol.2 #nothing else
+	immediate = { log = "[GetDateText]: [Root.GetName]: event neonepal.1" }
+	title = kxx_fra_monbol.2.t
+	desc = kxx_fra_monbol.2.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = kxx_fra_monbol.2.a
+	}
+	
+}
+country_event = { 
+	id = kxx_fra_monbol.3 #msm
+	immediate = { log = "[GetDateText]: [Root.GetName]: event neonepal.1" }
+	title = kxx_fra_monbol.3.t
+	desc = kxx_fra_monbol.3.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = kxx_fra_monbol.3.a
+
+set_country_flag = NFA_msm
+set_party_name = {
+	ideology = radical_socialist
+	long_name = FRA_msm_party
+	name = FRA_msm_party
+}
+			clr_country_flag = NFA_la_cagoule_in_charge
+			clr_country_flag = NFA_maurrasians_in_charge
+		create_country_leader = {
+			name = "亨利六世"
+			desc = "POLITICS_HENRI_VI_DESC"
+			picture = "gfx/leaders/NFA/Portrait_NFA_Henri_VI_bowtie.png"
+			expire = "1.1.1"
+			ideology = monsoc_subtype
+			traits = { NFA_Young_Prince }
+		}
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.1
+		}
+		add_ideas =  NFA_total_chaos
+		complete_national_focus = NFA_monsoc
+		set_politics = {
+			ruling_party = radical_socialist
+		}
+		remove_all_ministers = yes
+	add_ideas = NFA_Roger_Nimier_hog_rso
+	add_ideas = NFA_Rene_Lambert_for_rso
+	add_ideas = NFA_Pierre_Schaeffer_eco_rso
+	add_ideas = NFA_Jean_Marc_Bourquin_sec_rso
+	set_country_flag = LEADER_GUI_NOT_VISIBLE
+		set_country_flag = KXX_LEADER_GUI_VISIBLE
+		set_country_flag = NFA_Roger_Nimier_VISIBLE
+		set_cosmetic_tag = NFA_monbol
+	}
+	
+}
+country_event = {
+	id = kxx_fra_monbol.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nepal.5" }
+	title = kxx_fra_monbol.4.t 
+	desc = kxx_fra_monbol.4.d 
+
+	fire_only_once = yes
+    is_triggered_only = yes
+
+	option = {
+		name = kxx_fra_monbol.4.a 
+		complete_national_focus = NFA_crush_liberalism
+		NFA_monbol_stablize_effect = yes
+	}
+	option = {
+		name = kxx_fra_monbol.4.b
+		complete_national_focus = NFA_restore_parliament
+		NFA_monbol_stablize_effect = yes
+	}
+}
+

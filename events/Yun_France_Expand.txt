@@ -1,0 +1,910 @@
+add_namespace = rednap
+add_namespace = COF_BCD
+add_namespace = COF_Valois
+add_namespace = COF_redflood
+
+country_event = { 
+	id = rednap.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rednap.1" }
+	title = rednap.1.t
+	desc = rednap.1.d
+		
+	is_triggered_only = yes
+
+	option = {
+		name = rednap.1.a
+		ai_chance = {
+			factor = 35
+			modifier = {
+				factor = 100
+				has_game_rule = {
+					rule = FRA_rednap_ita_rules
+					option = REDNAP_ITA_SISTERS
+				}
+			}
+		}
+		SRI = {								
+			set_cosmetic_tag = ITR_FRA_rednap
+			set_politics = {
+				ruling_party = radical_socialist
+				elections_allowed = no
+			}										
+		}
+		PAP = {								
+			set_cosmetic_tag = PAP_FRA_rednap
+			set_politics = {
+				ruling_party = radical_socialist
+				elections_allowed = no
+			}										
+		}		
+		SIC = {								
+			set_cosmetic_tag = SICR_FRA_rednap
+			set_politics = {
+				ruling_party = radical_socialist
+				elections_allowed = no
+			}										
+		}						
+		set_autonomy = { target = SRI autonomy_state = autonomous_territory }
+		set_autonomy = { target = PAP autonomy_state = autonomous_territory }
+		set_autonomy = { target = SIC autonomy_state = autonomous_territory }
+			hidden_effect = {
+				SRI = {
+				transfer_state = 159
+				transfer_state = 783
+				transfer_state = 160
+				transfer_state = 759
+				transfer_state = 1004
+				transfer_state = 161
+				transfer_state = 157
+				every_owned_state = { add_core_of = SRI }
+				}	
+				PAP = {
+				transfer_state = 162
+				transfer_state = 1005
+				transfer_state = 764
+				transfer_state = 2
+				transfer_state = 1149
+				every_owned_state = { add_core_of = PAP }
+				}	
+				SIC = {
+				transfer_state = 117
+				transfer_state = 742
+				transfer_state = 837
+				transfer_state = 1006
+				transfer_state = 156
+				transfer_state = 115
+				every_owned_state = { add_core_of = SIC }
+				}																								
+			}		
+	}
+
+	option = {
+		name = rednap.1.b
+		ai_chance = {
+			factor = 35
+			modifier = {
+				factor = 100
+				has_game_rule = {
+					rule = FRA_rednap_ita_rules
+					option = FRA_REDNAP_ITA_KINGDOM
+				}
+			}
+		}
+		SRI = {								
+			set_cosmetic_tag = ITK_FRA_rednap
+			set_politics = {
+				ruling_party = radical_socialist
+				elections_allowed = no
+			}
+			create_country_leader = {
+				name = "拿破仑二世"
+				picture = "gfx/leaders/NFA/Portrait_NFA_Napoleon_Westphalia.png"
+				expire = "1.1.1"
+				ideology = radsoc_bonapartism_subtype
+				traits = { red_napoleon UKR_red_prince NFA_New_Eagle }			
+				}	
+			set_party_name = {
+				name = "波拿巴家族"
+				long_name = "波拿巴家族"
+				ideology = radical_socialist
+			}													
+		}
+		PAP = {								
+			set_cosmetic_tag = PAP_FRA_rednap
+			set_politics = {
+				ruling_party = radical_socialist
+				elections_allowed = no
+			}										
+		}		
+		SIC = {								
+			set_cosmetic_tag = SIC_FRA_rednap
+			set_politics = {
+				ruling_party = radical_socialist
+				elections_allowed = no
+			}										
+		}						
+		set_autonomy = { target = SRI autonomy_state = autonomous_territory }
+		set_autonomy = { target = PAP autonomy_state = autonomous_territory }
+		set_autonomy = { target = SIC autonomy_state = autonomous_territory }
+			hidden_effect = {
+				SRI = {
+				transfer_state = 159
+				transfer_state = 783
+				transfer_state = 160
+				transfer_state = 759
+				transfer_state = 1004
+				transfer_state = 161
+				transfer_state = 157
+				every_owned_state = { add_core_of = SRI }				
+				}	
+				PAP = {
+				transfer_state = 162
+				transfer_state = 1005
+				transfer_state = 764
+				transfer_state = 2
+				transfer_state = 1149
+				every_owned_state = { add_core_of = PAP }			
+				}	
+				SIC = {
+				transfer_state = 117
+				transfer_state = 742
+				transfer_state = 837
+				transfer_state = 1006
+				transfer_state = 156
+				transfer_state = 115
+				every_owned_state = { add_core_of = SIC }			
+				}																									
+			}
+	}
+	option = { 
+		name = rednap.1.c
+		ai_chance = {
+			factor = 15
+			modifier = {
+				factor = 100
+				has_game_rule = {
+					rule = FRA_rednap_ita_rules
+					option = FRA_REDNAP_ITA_UNITED
+				}
+			}
+		}
+		PAP = {								
+			set_cosmetic_tag = SRI_confederation
+			set_politics = {
+				ruling_party = radical_socialist
+				elections_allowed = no
+			}										
+		}								
+		set_autonomy = { target = PAP autonomy_state = autonomous_territory }
+		country_event = rednap.2
+			hidden_effect = {
+				PAP = {
+				transfer_state = 159
+				transfer_state = 783
+				transfer_state = 160
+				transfer_state = 759
+				transfer_state = 1004
+				transfer_state = 161
+				transfer_state = 157
+				transfer_state = 162
+				transfer_state = 1005
+				transfer_state = 764
+				transfer_state = 2
+				transfer_state = 1149
+				transfer_state = 117
+				transfer_state = 742
+				transfer_state = 837
+				transfer_state = 1006
+				transfer_state = 156
+				transfer_state = 115
+				every_owned_state = { add_core_of = PAP }
+				create_country_leader = {
+					name = "Giuseppe Garibaldi II"
+					picture = "gfx/leaders/SRI/Portrait_SRI_Giuseppe_Garibaldi_II_Suit.png"
+					desc = ""
+					ideology = radsoc_socialist_feminism_subtype
+					traits = { }
+			    }
+			    create_country_leader = {
+					name = "Giuseppe Garibaldi II"
+					picture = "gfx/leaders/SRI/Portrait_SRI_Giuseppe_Garibaldi_II_Suit.png"
+					desc = ""
+					ideology = liberal_socialism_subtype
+					traits = { }
+			    }
+				create_country_leader = {
+					name = "Giuseppe Garibaldi II"
+					picture = "gfx/leaders/SRI/Portrait_SRI_Giuseppe_Garibaldi_II_Suit.png"
+					desc = ""
+					ideology = marlib_radical_liberalism_subtype
+					traits = { }
+				}
+				create_country_leader = {
+					name = "Giuseppe Garibaldi II"
+					picture = "gfx/leaders/SRI/Portrait_SRI_Giuseppe_Garibaldi_II_Suit.png"
+					desc = ""
+					ideology = paternal_socialism_subtype 
+					traits = { }
+				}
+				create_country_leader = {
+					name = "Giuseppe Garibaldi II"
+					picture = "gfx/leaders/SRI/Portrait_SRI_Giuseppe_Garibaldi_II_Suit.png"
+					desc = ""
+					ideology = qualunquismo_subtype
+					traits = { }
+				}
+				create_country_leader = {
+					name = "Giuseppe Garibaldi II"
+					picture = "gfx/leaders/SRI/Portrait_SRI_Giuseppe_Garibaldi_II_Suit.png"
+					desc = ""
+					ideology = pataut_national_conservative_subtype
+					traits = { }
+				}						
+			}																									
+		}		
+	}	
+	option = { 
+		name = rednap.1.e
+		ai_chance = {
+			factor = 15
+			modifier = {
+				factor = 100
+				has_game_rule = {
+					rule = FRA_rednap_ita_rules
+					option = FRA_REDNAP_ITA_INTEGRATE
+				}
+			}
+		}
+		hidden_effect = {
+			#伦巴第-威尼西亚
+			759 = { add_core_of = ROOT 
+			       transfer_state_to = ROOT }
+			160 = { add_core_of = ROOT 
+			       transfer_state_to = ROOT }
+			159 = { add_core_of = ROOT 
+			       transfer_state_to = ROOT }
+			783 = { add_core_of = ROOT 
+			       transfer_state_to = ROOT }
+			#意大利社会主义共和国
+			1003 = { add_core_of = ROOT 
+			       transfer_state_to = ROOT }
+			158 = { add_core_of = ROOT 
+			       transfer_state_to = ROOT }
+			838 = { add_core_of = ROOT 
+			       transfer_state_to = ROOT }
+			1004 = { add_core_of = ROOT 
+			       transfer_state_to = ROOT }
+			161 = { add_core_of = ROOT 
+			       transfer_state_to = ROOT }
+			162 = { add_core_of = ROOT 
+			       transfer_state_to = ROOT }
+			157 = { add_core_of = ROOT 
+			       transfer_state_to = ROOT }
+			1005 = { add_core_of = ROOT 
+			       transfer_state_to = ROOT }
+			1236 = { add_core_of = ROOT 
+			       transfer_state_to = ROOT }
+			764 = { add_core_of = ROOT 
+			       transfer_state_to = ROOT }
+			#两西西里
+			742 = { add_core_of = ROOT 
+			       transfer_state_to = ROOT }
+			117 = { add_core_of = ROOT 
+			       transfer_state_to = ROOT }
+			837 = { add_core_of = ROOT 
+			       transfer_state_to = ROOT }
+			1006 = { add_core_of = ROOT 
+			       transfer_state_to = ROOT }
+			156 = { add_core_of = ROOT 
+			       transfer_state_to = ROOT }
+			115 = { add_core_of = ROOT 
+			       transfer_state_to = ROOT }
+			#撒丁岛
+			114 = { add_core_of = ROOT 
+			       transfer_state_to = ROOT }
+			1002 = { add_core_of = ROOT 
+			       transfer_state_to = ROOT }
+			#教宗
+			2 = { add_core_of = ROOT 
+			       transfer_state_to = ROOT }
+			1149 = { add_core_of = ROOT 
+			       transfer_state_to = ROOT }				
+		every_state = {
+			limit = {
+				OR = {
+					is_core_of = SRI
+					is_claimed_by = SRI
+				}
+			}
+			add_core_of = ROOT
+		}	
+		every_state = {
+			limit = {
+				OR = {
+					is_core_of = PAP
+					is_claimed_by = PAP
+				}
+			}
+			add_core_of = ROOT
+		}	
+		every_state = {
+			limit = {
+				OR = {
+					is_core_of = ITA
+					is_claimed_by = ITA
+				}
+			}
+			add_core_of = ROOT
+		}
+		every_state = {
+			limit = {
+				OR = {
+					is_core_of = SIC
+					is_claimed_by = SIC
+				}
+			}
+			add_core_of = ROOT
+		}	
+		}				
+	}	
+}
+
+country_event = { 
+	id = rednap.2
+	title = rednap.2.t
+	is_triggered_only = yes
+	
+	option = { 
+		name = rednap.2.a
+		ai_chance = { base = 25 }
+		PAP = {
+		set_cosmetic_tag = ITK_FRA_rednap
+		create_country_leader = {
+			name = "拿破仑二世"
+			picture = "gfx/leaders/NFA/Portrait_NFA_Napoleon_Westphalia.png"
+			expire = "1.1.1"
+			ideology = radsoc_bonapartism_subtype
+			traits = { red_napoleon UKR_red_prince NFA_New_Eagle }			
+			}	
+		set_party_name = {
+			name = "波拿巴家族"
+			long_name = "波拿巴家族"
+			ideology = radical_socialist
+		}
+		}
+	}
+	option = { 
+		name = rednap.2.b
+		ai_chance = { base = 25 }	
+		PAP = {
+		set_cosmetic_tag = ITA_napoleonic
+		create_country_leader = {
+			name = "缪拉六世亲王"
+			picture = "gfx/leaders/NFA/Portrait_NFA_Joachim_Napoleon_Murat.png"
+			expire = "1.1.1"
+			ideology = radsoc_bonapartism_subtype
+			}	
+		set_party_name = {
+			name = "波拿巴家族"
+			long_name = "波拿巴家族"
+			ideology = radical_socialist
+		}
+		}
+	}	
+	option = { 
+		name = rednap.2.c
+		ai_chance = { base = 25 }
+		PAP = {
+		set_cosmetic_tag = PAP_FRA_rednap
+		create_country_leader = {
+			name = "利奥十四世"
+			picture = "gfx/leaders/PAP/Portrait_Papal_State_Leo.png"
+			expire = "1.1.1"
+			ideology = christian_socialism_subtype
+		}
+		set_party_name = {
+			name = "罗马教廷"
+			long_name = "罗马教廷"
+			ideology = radical_socialist
+		}	
+		}	
+	}
+	option = { 
+		name = rednap.2.e
+		ai_chance = { base = 25 }
+		add_stability = 0.15
+		add_political_power = 300
+	}		
+}
+country_event = { 
+	id = rednap.3
+	title = rednap.3.t
+	desc = rednap.3.d
+	is_triggered_only = yes
+	
+	option = { 
+		name = rednap.3.a
+		ai_chance = { base = 25 }
+		CRO = {
+		create_country_leader = {
+			name = "莫里斯·甘末林"
+			desc = "POLITICS_GAMELIN_DESC"
+			picture = "gfx/leaders/FRA/Portrait_France_Maurice_Gamelin_KR.png"
+			expire = "1.1.1"
+			ideology = radsoc_bonapartism_subtype	
+			traits = {marshal_leader}		
+			}	
+		}
+	}
+	option = { 
+		name = rednap.3.b
+		ai_chance = { base = 50 }	
+		CRO = {
+		create_country_leader = {
+			name = "约瑟夫·普茨"
+			picture = "gfx/leaders/FRA/Portrait_FRA_Joseph_Putz.png"
+			expire = "1.1.1"
+			ideology = radsoc_bonapartism_subtype
+			}	
+		}
+	}	
+	option = { 
+		name = rednap.3.c
+		ai_chance = { base = 25 }
+		CRO = {
+		create_country_leader = {
+			name = "亨利·弗勒奈"
+			picture = "gfx/leaders/FRA/Portrait_FRA_Henri_Frenay.png"
+			expire = "1.1.1"
+			ideology = radsoc_bonapartism_subtype
+		}
+		}	
+	}		
+}
+country_event = { 
+	id = rednap.4
+	title = rednap.4.t
+	desc = rednap.4.d
+	is_triggered_only = yes
+	
+	option = { 
+		name = rednap.4.a
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 100
+				has_game_rule = {
+					rule = FRA_rednap_ita_rules
+					option = FRA_REDNAP_EP
+				}
+			}
+		}
+		set_cosmetic_tag = FRA_rednap_United4
+		country_event = {
+		id = rednap.5
+		days = 3
+		}
+	}
+	option = { 
+		name = rednap.4.b
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 100
+				has_game_rule = {
+					rule = FRA_rednap_ita_rules
+					option = FRA_REDNAP_EU
+				}
+			}
+		}
+		set_cosmetic_tag = FRA_rednap_use
+		country_event = {
+		id = rednap.7
+		days = 3
+		}
+	}	
+	option = { 
+		name = rednap.4.c
+		add_political_power = 2000
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 100
+				has_game_rule = {
+					rule = FRA_rednap_ita_rules
+					option = FRA_REDNAP_REMAIN
+				}
+			}
+		}
+	}	
+}
+country_event = { 
+	id = rednap.5
+	title = rednap.5.t
+	is_triggered_only = yes
+	
+	option = { 
+		name = rednap.5.a
+		set_cosmetic_tag = FRA_rednap_United
+	}
+	option = { 
+		name = rednap.5.b
+		set_cosmetic_tag = FRA_rednap_United2
+	}	
+	option = { 
+		name = rednap.5.c
+		set_cosmetic_tag = FRA_rednap_United3
+	}
+	option = { 
+		name = rednap.5.e
+		set_cosmetic_tag = FRA_rednap_United4
+	}	
+	option = { 
+		name = rednap.5.f
+		set_cosmetic_tag = FRA_rednap_United5
+	}
+	option = { 
+		name = rednap.5.g
+		country_event = rednap.6
+	}	
+}
+country_event = { 
+	id = rednap.6
+	title = rednap.6.t
+	is_triggered_only = yes
+	
+	option = { 
+		name = rednap.6.a
+		set_cosmetic_tag = FRA_rednap_United6
+	}
+	option = { 
+		name = rednap.6.b
+		set_cosmetic_tag = FRA_rednap_United7
+	}	
+	option = { 
+		name = rednap.6.c
+		set_cosmetic_tag = FRA_rednap_United8
+	}	
+	option = { 
+		name = rednap.6.e
+	}	
+}
+country_event = { 
+	id = rednap.7
+	title = rednap.7.t
+	is_triggered_only = yes
+	
+	option = { 
+		name = rednap.7.a
+		set_cosmetic_tag = FRA_rednap_use
+	}
+	option = { 
+		name = rednap.7.b
+		set_cosmetic_tag = FRA_rednap_use2
+	}	
+	option = { 
+		name = rednap.7.c
+	}	
+}
+#布卡德的赤色查理曼之旅
+country_event = { 
+	id = COF_BCD.1
+	title = COF_BCD.1.t
+	desc = COF_BCD.1.d
+	is_triggered_only = yes
+	
+	option = { 
+		name = COF_BCD.1.a
+		ai_will_do = {
+			factor = 80
+			modifier = {
+				factor = 100
+				OR = { 
+					FORM = { 
+						ic_ratio = {
+							tag = FRA
+							ratio < 0.5
+						} 
+					}
+					FORM = {
+						overlord = { 				
+							ic_ratio = {
+							tag = FRA
+							ratio < 0.5
+							}  
+						}			
+					}
+				}
+			}
+		}
+		FRA = {
+			country_event = {
+				id = COF_BCD.2
+				days = 3
+			}
+		}
+	}
+	option = { 
+		name = COF_BCD.1.b
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 0
+				is_puppet_of = FRA
+			}
+		}
+		FRA = {
+			country_event = {
+				id = COF_BCD.3
+				days = 3
+			}
+		}
+		if = {
+			limit = { is_in_faction_with = FRA }
+			leave_faction = yes
+		}
+	}
+}
+
+country_event = { 
+	id = COF_BCD.2
+	title = COF_BCD.2.t
+	desc = COF_BCD.2.d
+	is_triggered_only = yes
+	
+	option = { 
+		name = COF_BCD.2.a
+		FRA = {
+			puppet = FROM
+		}
+	}
+}
+
+country_event = { 
+	id = COF_BCD.3
+	title = COF_BCD.3.t
+	desc = COF_BCD.3.d
+	is_triggered_only = yes
+	
+	option = { 
+		name = COF_BCD.3.a
+		declare_war_on = { target = FROM type = take_state }
+	}
+}
+
+country_event = { 
+	id = COF_Valois.1
+	title = COF_Valois.1.t
+	desc = COF_Valois.1.d
+	is_triggered_only = yes
+	
+	option = { 
+		name = COF_Valois.1.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_game_rule = {
+					rule = FRA_xday_of_imfamy
+					option = FRA_VALOIS_ETERNAL_CONTROL
+				}
+			}
+		}
+		country_event = COF_Valois.2
+	}
+
+	option = { 
+		name = COF_Valois.1.b
+		ai_chance = {
+			factor = 99
+			modifier = {
+				factor = 100
+				OR = {
+					has_game_rule = {
+						rule = FRA_xday_of_imfamy
+						option = FRA_ARTHUYS_ASSUMES_CONTROL
+					}
+					has_game_rule = {
+						rule = FRA_day_of_imfamy
+						option = FRA_BUCARD_ASSUMES_CONTROL
+					}
+					id = comfrance.928
+					has_game_rule = {
+						rule = FRA_xday_of_imfamy
+						option = FRA_ORTHOR_ASSUMES_CONTROL
+					}
+					has_game_rule = {
+						rule = FRA_day_of_imfamy
+						option = FRA_DEAT_ASSUMES_CONTROL
+					}
+					has_game_rule = {
+						rule = FRA_day_of_imfamy
+						option = FRA_BLACK_GUARD_COUNTERREVOLUTION
+					}
+					has_game_rule = {
+						rule = FRA_xday_of_imfamy
+						option = FRA_CLEMEN_ASSUMES_CONTROL
+					}
+					has_game_rule = {
+						rule = FRA_xday_of_imfamy
+						option = FRA_DORIOT_ASSUMES_CONTROL
+					}
+				}
+			}
+		}
+		country_event = comfrance.904
+	}
+
+	option = { 
+		name = COF_Valois.1.c
+		trigger = {
+			always = no
+		}
+		ai_chance = {
+			factor = 0
+		}
+		set_cosmetic_tag = FRA_Sorel_Capetiens
+		set_country_leader_portrait = {
+			portrait = "gfx/leaders/FRA/Portrait_France_Georges_Valois_King.png"
+		}
+		add_country_leader_trait = COF_prometheus_the_immortal_traits
+		add_country_leader_trait = COF_leader_of_national_rejuvenation
+		add_country_leader_trait = COF_totalism_international_mentor
+		set_party_name = {
+			ideology = totalist
+			long_name = FRA_Sorel_Capetiens_Party
+			name = FRA_Sorel_Capetiens_Party
+		}
+	}
+
+}
+
+country_event = { 
+	id = COF_Valois.2
+	title = COF_Valois.2.t
+	desc = COF_Valois.2.d
+	is_triggered_only = yes
+
+	option = { 
+		name = COF_Valois.2.a
+		set_country_flag = Georges_Valois_lived
+		hidden_effect = {
+			set_politics = {
+				ruling_party = totalist
+				elections_allowed = no
+			}			
+		}
+	}
+
+}
+
+country_event = { #索雷尔派的变革之风
+	id = COF_Valois.99
+	title = COF_Valois.99.t
+	desc = COF_Valois.99.d
+	picture = GFX_report_event_CHI_SJ
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = COF_Valois.99.a
+		ai_chance = {
+			factor = 0
+		}
+		create_country_leader = {
+			name = "夏尔·阿尔伯特"
+			desc = ""
+			picture = "gfx/leaders/FRA/Portrait_France_Charles_Albert.png"
+			expire = "1965.1.1"
+			ideology = neo_socialism_subtype
+		}
+	}
+
+    option = {
+		name = COF_Valois.99.b
+		ai_chance = {
+			factor = 0
+		}
+		create_country_leader = {
+			name = "于贝尔·布尔然"
+			desc = ""
+			picture = "gfx/leaders/FRA/Portrait_FRA_Hubert_Bourgin.png"
+			expire = "1965.1.1"
+			ideology = tot_reformed_natsynd_subtype
+		}
+	}
+
+    option = {
+		name = COF_Valois.99.b
+		ai_chance = {
+			factor = 0
+		}
+		create_country_leader = {
+			name = "菲利普·拉莫尔"
+			desc = ""
+			picture = "gfx/leaders/FRA/Portrait_FRA_Philippe_Lamour.png"
+			expire = "1965.1.1"
+			ideology = technocracy_subtype
+		}
+	}
+
+	option = {
+		name = COF_Valois.99.b
+		ai_chance = {
+			factor = 0
+		}
+		create_country_leader = {
+			name = "保罗·尼赞"
+			desc = ""
+			picture = "gfx/leaders/FRA/Portrait_France_Paul_Nizan.png"
+			expire = "1965.1.1"
+			ideology = massimalismo_subtype
+		}
+	}
+
+}
+
+country_event = { 
+	id = COF_redflood.1
+	title = COF_redflood.1.t
+	desc = COF_redflood.1.d
+	is_triggered_only = yes
+
+	option = { 
+		name = COF_redflood.1.a
+		hidden_effect = {
+			country_event = {
+				id = COF_redflood.2
+				days = 7
+			}
+		}
+	}
+
+	option = { 
+		name = COF_redflood.1.b
+	}
+
+}
+
+country_event = { 
+	id = COF_redflood.2
+	title = COF_redflood.2.t
+	desc = COF_redflood.2.d
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			complete_national_focus = FRA_anarchists_second
+			remove_all_ministers = yes
+			add_ideas = {
+				FRA_Benoit_Broutchoux_hog_rso
+				FRA_Fernand_Despres_for_rso
+				FRA_Andre_Breton_eco_rso
+				FRA_Maurice_Joyeux_sec_rso
+			}
+		}
+		set_country_flag = FRA_SECOND_ANAR
+	}
+
+	option = { 
+		name = COF_redflood.2.a
+		create_country_leader = {
+			name = "安德烈·布勒东"
+			desc = ""
+			picture = "gfx/leaders/FRA/Portrait_FRA_Andre_Breton.png"
+			expire = "1.1.1"
+			ideology = radsoc_surrealism_subtype
+		}
+		set_politics = {
+			ruling_party = radical_socialist
+			elections_allowed = no
+		}
+		set_party_name = { 
+			ideology = radical_socialist 
+			long_name = FRA_surrealism_group_long
+			name = FRA_surrealism_group
+		}
+		
+	}
+
+}

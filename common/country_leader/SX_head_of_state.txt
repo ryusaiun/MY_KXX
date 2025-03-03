@@ -1,0 +1,17 @@
+
+leader_traits = {
+
+	##Soccred
+	ENG_Humble_Protector_Trait = {
+		stability_factor = 0.10
+		conscription_factor = -0.01
+		political_power_gain = 0.10
+		ai_focus_peaceful_factor = 0.1
+		random = no
+	}
+	ENG_Muppet = {
+		political_power_gain = -0.25
+		stability_weekly = -0.001
+		random = no
+	}
+}

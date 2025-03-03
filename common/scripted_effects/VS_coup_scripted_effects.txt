@@ -1,0 +1,451 @@
+GRU_setup_spheres_of_influence = {
+	### Württemberg ###
+	50 = { set_variable = { BlackFront_Authority = 0.76 } }
+	50 = { set_variable = { Goebbels_Authority = 0.24 } }
+	50 = { set_variable = { VS_Map_frame = 1 } }
+
+	### Upper Bavaria ###
+	52 = { set_variable = { BlackFront_Authority = 0.67 } }
+	52 = { set_variable = { Goebbels_Authority = 0.33 } }
+	52 = { set_variable = { VS_Map_frame = 1 } }
+
+	### Lower Bavaria ###
+	53 = { set_variable = { BlackFront_Authority = 0.86 } }
+	53 = { set_variable = { Goebbels_Authority = 0.14 } }
+	53 = { set_variable = { VS_Map_frame = 1 } }
+
+	### Baden ###
+	780 = { set_variable = { BlackFront_Authority = 0.71 } }
+	780 = { set_variable = { Goebbels_Authority = 0.29 } }
+	780 = { set_variable = { VS_Map_frame = 1 } }
+
+	### Franconia ###
+	54 = { set_variable = { BlackFront_Authority = 0.69 } }
+	54 = { set_variable = { Goebbels_Authority = 0.31 } }
+	54 = { set_variable = { VS_Map_frame = 1 } }
+
+	### Saxony ###
+	65 = { set_variable = { BlackFront_Authority = 0.73 } }
+	65 = { set_variable = { Goebbels_Authority = 0.27 } }
+	65 = { set_variable = { VS_Map_frame = 1 } }
+
+	### Lower Silesia ###
+	66 = { set_variable = { BlackFront_Authority = 0.55 } }
+	66 = { set_variable = { Goebbels_Authority = 0.45 } }
+	66 = { set_variable = { VS_Map_frame = 1 } }
+
+	### Neumark ###
+	68 = { set_variable = { BlackFront_Authority = 0.39 } }
+	68 = { set_variable = { Goebbels_Authority = 0.61 } }
+	68 = { set_variable = { VS_Map_frame = 2 } }
+
+	### Farther Pomerania ###
+	63 = { set_variable = { BlackFront_Authority = 0.27 } }
+	63 = { set_variable = { Goebbels_Authority = 0.73 } }
+	63 = { set_variable = { VS_Map_frame = 2 } }
+
+	### Brandenburg ###
+	64 = { set_variable = { BlackFront_Authority = 0.30 } }
+	64 = { set_variable = { Goebbels_Authority = 0.70 } }
+	64 = { set_variable = { VS_Map_frame = 2 } }
+
+	### Thuringia ###
+	60 = { set_variable = { BlackFront_Authority = 0.38 } }
+	60 = { set_variable = { Goebbels_Authority = 0.62 } }
+	60 = { set_variable = { VS_Map_frame = 2 } }
+
+	### Hither Pomerania ###
+	62 = { set_variable = { BlackFront_Authority = 0.31 } }
+	62 = { set_variable = { Goebbels_Authority = 0.69 } }
+	62 = { set_variable = { VS_Map_frame = 2 } }
+
+	### Mecklenburg ###
+	61 = { set_variable = { BlackFront_Authority = 0.15 } }
+	61 = { set_variable = { Goebbels_Authority = 0.85 } }
+	61 = { set_variable = { VS_Map_frame = 2 } }
+
+	### Holstein ###
+	58 = { set_variable = { BlackFront_Authority = 0.3 } }
+	58 = { set_variable = { Goebbels_Authority = 0.97 } }
+	58 = { set_variable = { VS_Map_frame = 2 } }
+
+	### Hanover ###
+	59 = { set_variable = { BlackFront_Authority = 0.39 } }
+	59 = { set_variable = { Goebbels_Authority = 0.61 } }
+	59 = { set_variable = { VS_Map_frame = 2 } }
+
+	### Oldenburg ###
+	56 = { set_variable = { BlackFront_Authority = 0.68 } }
+	56 = { set_variable = { Goebbels_Authority = 0.32 } }
+	56 = { set_variable = { VS_Map_frame = 2 } }
+
+	### Westphalia ###
+	57 = { set_variable = { BlackFront_Authority = 0.74 } }
+	57 = { set_variable = { Goebbels_Authority = 0.26 } }
+	57 = { set_variable = { VS_Map_frame = 2 } }
+
+	### Hesse ###
+	55 = { set_variable = { BlackFront_Authority = 0.19 } }
+	55 = { set_variable = { Goebbels_Authority = 0.81 } }
+	55 = { set_variable = { VS_Map_frame = 2 } }
+
+	GRU_calculate_overall_authorities = yes
+}
+
+GRU_clamp_spheres_of_influence = { 
+	hidden_effect = {
+		GRU = {
+			every_owned_state = {
+				limit =  {
+		        	OR = {
+		        	    state = 50
+		        	    state = 52
+						state = 53
+		        	    state = 780
+						state = 54
+		        	    state = 65
+						state = 66
+		        	    state = 68
+						state = 63
+		        	    state = 64
+						state = 60
+		        	    state = 62
+						state = 61
+		        	    state = 58
+						state = 59
+		        	    state = 56
+						state = 57
+		        	    state = 55
+		        	}
+		        }
+				if = {
+					limit = { check_variable = { BlackFront_Authority < 0 } }
+					set_variable = { BlackFront_Authority = 0 }
+				}
+				if = {
+					limit = { check_variable = { Goebbels_Authority < 0 } }
+					set_variable = { Goebbels_Authority = 0 }
+				}
+				#
+				if = {
+					limit = { check_variable = { BlackFront_Authority > 1 } }
+					set_variable = { BlackFront_Authority = 1.001 }
+				}
+				if = {
+					limit = { check_variable = { Goebbels_Authority > 1 } }
+					set_variable = { Goebbels_Authority = 1.001 }
+				}
+
+				if = {
+					limit = { check_variable = { BlackFront_Authority = 1.001 } }
+					set_variable = { Goebbels_Authority = 0 }
+					set_variable = { BlackFront_Authority = 1 }
+				}
+				if = {
+					limit = { check_variable = { Goebbels_Authority = 1.001 } }
+					set_variable = { BlackFront_Authority = 0 }
+					set_variable = { Goebbels_Authority = 1 }
+				}
+
+				###
+				if = {
+					limit = {
+						check_variable = { BlackFront_Authority > Goebbels_Authority }
+					}
+					set_variable = { THIS.VS_Map_frame = 1 }
+				}
+				if = {
+					limit = {
+						check_variable = { Goebbels_Authority > BlackFront_Authority }
+					}
+					set_variable = { THIS.VS_Map_frame = 2 }
+				}
+			}
+			GRU_calculate_overall_authorities = yes
+		}
+	}
+}
+
+GRU_calculate_overall_authorities = {
+
+	set_variable = { GRU_Overall_BlackFront_Support = 0 }
+	set_variable = { GRU_Overall_Goebbels_Support = 0 }
+
+	set_variable = { GRU_total_owned_states = 0 }
+
+	every_owned_state = {
+		limit =  {
+			OR = {
+			    state = 50
+		        state = 52
+				state = 53
+		        state = 780
+				state = 54
+		        state = 65
+				state = 66
+		        state = 68
+				state = 63
+		        state = 64
+				state = 60
+		        state = 62
+				state = 61
+		        state = 58
+				state = 59
+		        state = 56
+				state = 57
+		        state = 55
+			}
+			is_fully_controlled_by = GRU
+		}
+
+		set_temp_variable = { GRU_Overall_BlackFront_Support_state = BlackFront_Authority }
+		set_temp_variable = { GRU_Overall_Goebbels_Support_state = Goebbels_Authority }
+
+		add_to_variable = { PREV.GRU_Overall_BlackFront_Support = GRU_Overall_BlackFront_Support_state }
+		add_to_variable = { PREV.GRU_Overall_Goebbels_Support = GRU_Overall_Goebbels_Support_state }
+
+		add_to_variable = { PREV.GRU_total_owned_states = 1 }
+	}
+
+	divide_variable = { GRU_Overall_BlackFront_Support = GRU_total_owned_states }
+	divide_variable = { GRU_Overall_Goebbels_Support = GRU_total_owned_states }
+}
+
+GRU_recalculate_variables = {
+	hidden_effect = { 
+		every_owned_state = {
+			limit = {
+				OR = {
+			        state = 50
+		        	state = 52
+					state = 53
+		        	state = 780
+					state = 54
+		        	state = 65
+					state = 66
+		        	state = 68
+					state = 63
+		        	state = 64
+					state = 60
+		        	state = 62
+					state = 61
+		        	state = 58
+					state = 59
+		        	state = 56
+					state = 57
+		        	state = 55
+				}
+			}
+			
+			set_temp_variable = { Should_Be_Authority = 1 }
+			set_temp_variable = { Total_Autority = 0 }
+		
+			add_to_temp_variable = { Total_Autority = BlackFront_Authority }
+			add_to_temp_variable = { Total_Autority = Goebbels_Authority }
+				
+			if = {
+				limit = {
+					check_variable = { Total_Autority < Should_Be_Authority }
+				}
+				subtract_from_temp_variable = { Should_Be_Authority = Total_Autority }
+				divide_temp_variable = { Should_Be_Authority = 2 }
+				
+				add_to_variable = { BlackFront_Authority = Should_Be_Authority }
+				add_to_variable = { Goebbels_Authority = Should_Be_Authority }
+				
+				GRU_clamp_spheres_of_influence = yes
+			}
+			else_if = {
+				limit = {
+					check_variable = { Total_Autority > Should_Be_Authority }
+				}
+				subtract_from_temp_variable = { Total_Autority = Should_Be_Authority }
+				divide_temp_variable = { Total_Autority = 2 }
+				
+				subtract_from_variable = { BlackFront_Authority = Total_Autority }
+				subtract_from_variable = { Goebbels_Authority = Total_Autority }
+				
+				GRU_clamp_spheres_of_influence = yes
+			}
+		}	
+	}
+}
+VS_inf_p_bar = {
+	set_variable = { VS_p_bar_up_blackfront = GRU_Overall_BlackFront_Support }
+	multiply_variable = { VS_p_bar_up_blackfront = 100 }
+	round_variable = VS_p_bar_up_blackfront
+
+	set_variable = { VS_p_bar_up_goebbels = GRU_Overall_Goebbels_Support }
+	multiply_variable = { VS_p_bar_up_goebbels = 100 }
+	round_variable = VS_p_bar_up_goebbels
+}
+VS_rev_lvl_up_p_bar = {
+	set_variable = { VS_coup_prss_rev_var = VS_coup_prss_rev }
+	multiply_variable = { VS_coup_prss_rev_var = 100 }
+	round_variable = VS_coup_prss_rev_var
+	set_variable = { VS_coup_prss_rev_indc_var = VS_coup_prss_rev }
+	multiply_variable = { VS_coup_prss_rev_indc_var = 385 }
+	round_variable = VS_coup_prss_rev_indc_var
+}
+
+VS_add_ovrl_infl_10_nmdvp = {
+	GRU = {
+		every_owned_state = {
+			limit = {
+				OR = {
+			        state = 50
+		        	state = 52
+					state = 53
+		        	state = 780
+					state = 54
+		        	state = 65
+					state = 66
+		        	state = 68
+					state = 63
+		        	state = 64
+					state = 60
+		        	state = 62
+					state = 61
+		        	state = 58
+					state = 59
+		        	state = 56
+					state = 57
+		        	state = 55
+				}
+			}
+		    add_to_variable = {
+		    	Goebbels_Authority = 0.05
+	        }
+		    add_to_variable = {
+		    	BlackFront_Authority = -0.05
+	        }
+		}
+	}
+}
+VS_add_ovrl_infl_5_nmdvp = {
+	GRU = {
+		every_owned_state = {
+			limit = {
+				OR = {
+			        state = 50
+		        	state = 52
+					state = 53
+		        	state = 780
+					state = 54
+		        	state = 65
+					state = 66
+		        	state = 68
+					state = 63
+		        	state = 64
+					state = 60
+		        	state = 62
+					state = 61
+		        	state = 58
+					state = 59
+		        	state = 56
+					state = 57
+		        	state = 55
+				}
+			}
+		    add_to_variable = {
+		    	Goebbels_Authority = 0.05
+	        }
+		    add_to_variable = {
+		    	BlackFront_Authority = -0.05
+	        }
+		}
+	}
+}
+GRU_setup_AI_infl = {
+	### Württemberg ###
+	50 = { set_variable = { BlackFront_Authority = 0 } }
+	50 = { set_variable = { Goebbels_Authority = 1 } }
+	50 = { set_variable = { VS_Map_frame = 2 } }
+
+	### Upper Bavaria ###
+	52 = { set_variable = { BlackFront_Authority = 0 } }
+	52 = { set_variable = { Goebbels_Authority = 1 } }
+	52 = { set_variable = { VS_Map_frame = 2 } }
+
+	### Lower Bavaria ###
+	53 = { set_variable = { BlackFront_Authority = 0 } }
+	53 = { set_variable = { Goebbels_Authority = 1 } }
+	53 = { set_variable = { VS_Map_frame = 2 } }
+
+	### Baden ###
+	780 = { set_variable = { BlackFront_Authority = 0 } }
+	780 = { set_variable = { Goebbels_Authority = 1 } }
+	780 = { set_variable = { VS_Map_frame = 2 } }
+
+	### Franconia ###
+	54 = { set_variable = { BlackFront_Authority = 0 } }
+	54 = { set_variable = { Goebbels_Authority = 1 } }
+	54 = { set_variable = { VS_Map_frame = 2 } }
+
+	### Saxony ###
+	65 = { set_variable = { BlackFront_Authority = 0 } }
+	65 = { set_variable = { Goebbels_Authority = 1 } }
+	65 = { set_variable = { VS_Map_frame = 2 } }
+
+	### Lower Silesia ###
+	66 = { set_variable = { BlackFront_Authority = 0 } }
+	66 = { set_variable = { Goebbels_Authority = 1 } }
+	66 = { set_variable = { VS_Map_frame = 2 } }
+
+	### Neumark ###
+	68 = { set_variable = { BlackFront_Authority = 0 } }
+	68 = { set_variable = { Goebbels_Authority = 1 } }
+	68 = { set_variable = { VS_Map_frame = 2 } }
+
+	### Farther Pomerania ###
+	63 = { set_variable = { BlackFront_Authority = 0 } }
+	63 = { set_variable = { Goebbels_Authority = 1 } }
+	63 = { set_variable = { VS_Map_frame = 2 } }
+
+	### Brandenburg ###
+	64 = { set_variable = { BlackFront_Authority = 0 } }
+	64 = { set_variable = { Goebbels_Authority = 1 } }
+	64 = { set_variable = { VS_Map_frame = 2 } }
+
+	### Thuringia ###
+	60 = { set_variable = { BlackFront_Authority = 0 } }
+	60 = { set_variable = { Goebbels_Authority = 1 } }
+	60 = { set_variable = { VS_Map_frame = 2 } }
+
+	### Hither Pomerania ###
+	62 = { set_variable = { BlackFront_Authority = 0 } }
+	62 = { set_variable = { Goebbels_Authority = 1 } }
+	62 = { set_variable = { VS_Map_frame = 2 } }
+
+	### Mecklenburg ###
+	61 = { set_variable = { BlackFront_Authority = 0 } }
+	61 = { set_variable = { Goebbels_Authority = 1 } }
+	61 = { set_variable = { VS_Map_frame = 2 } }
+
+	### Holstein ###
+	58 = { set_variable = { BlackFront_Authority = 0 } }
+	58 = { set_variable = { Goebbels_Authority = 1 } }
+	58 = { set_variable = { VS_Map_frame = 2 } }
+
+	### Hanover ###
+	59 = { set_variable = { BlackFront_Authority = 0 } }
+	59 = { set_variable = { Goebbels_Authority = 1 } }
+	59 = { set_variable = { VS_Map_frame = 2 } }
+
+	### Oldenburg ###
+	56 = { set_variable = { BlackFront_Authority = 0 } }
+	56 = { set_variable = { Goebbels_Authority = 1 } }
+	56 = { set_variable = { VS_Map_frame = 2 } }
+
+	### Westphalia ###
+	57 = { set_variable = { BlackFront_Authority = 0 } }
+	57 = { set_variable = { Goebbels_Authority = 1 } }
+	57 = { set_variable = { VS_Map_frame = 2 } }
+
+	### Hesse ###
+	55 = { set_variable = { BlackFront_Authority = 0 } }
+	55 = { set_variable = { Goebbels_Authority = 1 } }
+	55 = { set_variable = { VS_Map_frame = 2 } }
+
+	GRU_calculate_overall_authorities = yes
+}

@@ -1,0 +1,3691 @@
+### Portuguese Decisions by Carmain, Modded and Expanded by Border Man ####
+
+
+###Iberia###
+
+POR_iberia_cat = {
+POR_restore_order_galicia = {
+		icon = generic_nationalism
+		allowed = { original_tag = POR }
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 171
+			}
+		}
+
+		available = {
+			controls_state = 171
+		}
+
+		visible = {
+			171 = {
+				is_owned_by = ROOT
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		cost = 100
+		days_remove = 180
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_restore_order_galicia target: [From.GetName]"
+
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_restore_order_galicia target: [From.GetName]"
+                add_state_core = 171
+			if = {
+				limit = { 171 = { is_claimed_by = POR } }
+				remove_state_claim = 171
+                                
+			}
+
+
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+}
+
+POR_iberia_cat = {
+POR_restore_order_gibraltar = {
+
+		icon = generic_nationalism
+		
+		allowed = { original_tag = POR }
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 118
+			}
+		}
+
+		available = {
+			controls_state = 118
+		}
+
+		visible = {
+			118 = {
+				is_owned_by = ROOT
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		cost = 100
+		days_remove = 180
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_restore_order_gibraltar target: [From.GetName]"
+			
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_restore_order_gibratar target: [From.GetName]"
+                add_state_core = 118
+			if = {
+				limit = { 118 = { is_claimed_by = POR } }
+				remove_state_claim = 118
+                                
+			}
+
+
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+}
+
+
+POR_iberia_cat = {
+  POR_GAL = {
+		
+		war_with_target_on_remove = yes
+		icon = generic_decision		
+		
+		allowed = { original_tag = POR }
+
+		available = {
+            owns_state = 180
+            FROM = { controls_state = 171 }
+		}
+		
+		target_trigger = {
+			FROM = {
+				owns_state = 171
+			}
+		}
+
+		visible = {
+            has_completed_focus = POR_trumph
+            FROM = { controls_state = 171 }
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 15
+
+                cost = 25
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_GAL target: [From.GetName]"
+                        
+                171 = { add_claim_by = POR }
+
+			
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_GAL target: [From.GetName]"
+			POR = {
+				declare_war_on = {
+					type = annex_everything
+					target = FROM
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				POR = {
+					has_war = yes
+				}
+			}
+			modifier = {
+				factor = 100
+				POR = { alliance_strength_ratio > 1.5 }	
+			}
+		}	
+	}
+}
+
+
+
+
+POR_iberia_cat = {
+	POR_GBR = {
+		war_with_target_on_remove = yes
+		icon = generic_decision
+
+		allowed = { original_tag = POR }
+
+		available = {
+            owns_state = 171
+            FROM = { controls_state = 118 }
+		}
+		
+		target_trigger = {
+			FROM = {
+				owns_state = 118
+			}
+		}
+
+		visible = {
+            has_completed_focus = POR_trumph
+            FROM = { controls_state = 118 }
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 15
+
+                cost = 25
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_GBR target: [From.GetName]"
+                        
+                118 = { add_claim_by = POR }
+			
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_GBR target: [From.GetName]"
+			POR = {
+				declare_war_on = {
+					type = annex_everything
+					target = FROM
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				ROOT = {
+					has_war = yes
+				}
+			}
+			modifier = {
+				factor = 100
+				ROOT = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+	}
+ }
+
+
+POR_iberia_cat = {
+  POR_KSP = {
+		war_with_target_on_remove = yes
+		icon = generic_decision
+
+		allowed = { original_tag = POR }
+
+		available = {
+			owns_state = 171
+			owns_state = 118
+		}
+		
+		target_trigger = {
+			FROM = { 
+				owns_state = 41 
+				owns_state = 165 
+				owns_state = 169 
+				owns_state = 176 
+			}
+		}
+
+		visible = {
+            has_completed_focus = POR_trumph
+            FROM = { controls_state = 41 }
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 15
+
+        cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_KSP target: [From.GetName]"
+                        
+                290 = { add_claim_by = POR }
+                178 = { add_claim_by = POR }
+                699 = { add_claim_by = POR }
+                968 = { add_claim_by = POR }
+			
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_KSP target: [From.GetName]"
+			POR = {
+				declare_war_on = {
+					type = annex_everything
+					target = FROM
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				POR = {
+					has_war = yes
+				}
+			}
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}	
+	}
+ }
+
+
+### Securing the straits### 
+
+POR_SEA_cat = {
+  POR_SUEZ = {
+		war_with_target_on_remove = yes
+		icon = generic_decision
+
+		allowed = { original_tag = POR }
+
+		available = {
+            FROM = { controls_state = 753 }
+		}
+
+		visible = {
+            has_completed_focus = POR_trumph
+            FROM = { controls_state = 753 }
+		}
+		
+		target_trigger = {
+			FROM = { 
+				owns_state = 753
+			}
+		}
+
+		fire_only_once = yes
+		days_remove = 15
+         cost = 10
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_SUEZ target: [From.GetName]"
+            753 = { add_claim_by = POR }
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_SUEZ target: [From.GetName]"
+			POR = {
+				declare_war_on = {
+					type = annex_everything
+					target = FROM
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				POR = {
+					has_war = yes
+				}
+			}
+			
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+	}
+ }
+
+POR_SEA_cat = {
+  POR_PANAMA = {
+		war_with_target_on_remove = yes
+		icon = generic_decision
+
+		allowed = { original_tag = POR }
+
+		available = {
+            FROM = { controls_state = 685 }
+		}
+		
+		target_trigger = {
+			FROM = { 
+				owns_state = 685
+			}
+		}
+
+		visible = {
+            has_completed_focus = POR_trumph
+            FROM = { controls_state = 685 }
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 15
+
+        cost = 10
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_PANAMA target: [From.GetName]"
+                        
+                685 = { add_claim_by = POR }
+
+			
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_PANAMA target: [From.GetName]"
+			POR = {
+				declare_war_on = {
+					type = annex_everything
+					target = FROM
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				POR = {
+					has_war = yes
+				}
+			}
+			
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+	}
+ }
+
+POR_SEA_cat = {
+  POR_SING = {
+		war_with_target_on_remove = yes
+		icon = generic_decision
+
+		allowed = { original_tag = POR }
+
+		available = {
+                FROM = { controls_state = 336 }
+		}
+		
+		target_trigger = {
+			FROM = { 
+				owns_state = 336
+			}
+		}
+
+		visible = {
+                has_completed_focus = POR_trumph
+                FROM = { controls_state = 336 }
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 15
+
+                cost = 10
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_SING target: [From.GetName]"
+                        
+                336 = { add_claim_by = POR }
+                672 = { add_claim_by = POR }
+
+			
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_SING target: [From.GetName]"
+			POR = {
+				declare_war_on = {
+					type = annex_everything
+					target = FROM
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				POR = {
+					has_war = yes
+				}
+			}
+			
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+	}
+ }
+
+POR_SEA_cat = {
+  POR_BAB = {
+		war_with_target_on_remove = yes
+		icon = generic_decision
+
+		allowed = { original_tag = POR }
+
+		available = {
+                owns_state = 753
+		}
+		
+		target_trigger = {
+			FROM = { 
+				owns_state = 268
+			}
+		}
+
+		visible = {
+                has_completed_focus = POR_trumph
+                FROM = { controls_state = 268 }
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 15
+
+                cost = 10
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_BAB target: [From.GetName]"
+                        
+                659 = { add_claim_by = POR }
+                268 = { add_claim_by = POR }
+
+			
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_BAB target: [From.GetName]"
+			POR = {
+				declare_war_on = {
+					type = annex_everything
+					target = FROM
+				}
+				declare_war_on = {
+					type = annex_everything
+					target = YEM
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				POR = {
+					has_war = yes
+				}
+			}
+			
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+	}
+ }
+
+POR_SEA_cat = {
+  POR_CON = {
+		war_with_target_on_remove = yes
+		icon = generic_decision
+
+		allowed = { original_tag = POR }
+
+		available = {
+                FROM = { controls_state = 773 }
+		}
+		
+		target_trigger = {
+			FROM = { 
+				owns_state = 773
+			}
+		}
+
+		visible = {
+                has_completed_focus = POR_trumph
+                FROM = { controls_state = 773 }
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 15
+
+                cost = 10
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_CON target: [From.GetName]"
+                        
+                773 = { add_claim_by = POR }
+                340 = { add_claim_by = POR }
+                341 = { add_claim_by = POR }
+
+			
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_CON target: [From.GetName]"
+			POR = {
+				declare_war_on = {
+					type = annex_everything
+					target = FROM
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				POR = {
+					has_war = yes
+				}
+			}
+			
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+	}
+ }
+
+### USA OIL TIME BAYBEE ###
+
+POR_OIL_cat = {
+  POR_TUR = {
+		war_with_target_on_remove = yes
+		icon = generic_decision
+
+		allowed = { original_tag = POR }
+
+		available = {
+                FROM = { controls_state = 812 }
+		}
+
+		visible = {
+                has_completed_focus = POR_trumph
+                FROM = { controls_state = 812 }
+		}
+		
+		target_trigger = {
+			FROM = { 
+				owns_state = 812
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 30
+
+                cost = 30
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_TUR target: [From.GetName]"
+                        
+                349 = { add_claim_by = POR }
+                676 = { add_claim_by = POR }
+                291 = { add_claim_by = POR }
+                812 = { add_claim_by = POR }
+
+			
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_TUR target: [From.GetName]"
+			POR = {
+				declare_war_on = {
+					type = annex_everything
+					target = FROM
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				POR = {
+					has_war = yes
+				}
+			}
+			
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+	}
+ }
+
+POR_OIL_cat = {
+  POR_IRA = {
+		war_with_target_on_remove = yes
+		icon = generic_decision
+
+		allowed = { original_tag = POR }
+
+		available = {
+                        owns_state = 812
+                FROM = { controls_state = 413 }
+		}
+		
+		target_trigger = {
+			FROM = { 
+				owns_state = 413
+			}
+		}
+
+		visible = {
+                has_completed_focus = POR_trumph
+                FROM = { controls_state = 413 }
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 30
+
+                cost = 30
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_IRA target: [From.GetName]"
+                        
+                413 = { add_claim_by = POR }
+			
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_IRA target: [From.GetName]"
+			POR = {
+				declare_war_on = {
+					type = annex_everything
+					target = FROM
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				POR = {
+					has_war = yes
+				}
+			}
+			
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+	}
+ }
+
+POR_OIL_cat = {
+  POR_VEN = {
+		war_with_target_on_remove = yes
+		icon = generic_decision
+
+
+		allowed = { original_tag = POR }
+
+		available = {
+                        owns_state = 498
+                FROM = { controls_state = 489 }
+		}
+		
+		target_trigger = {
+			FROM = { 
+				owns_state = 489
+			}
+		}
+
+		visible = {
+                has_completed_focus = POR_trumph
+                FROM = { controls_state = 489 }
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 30
+
+                cost = 30
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_VEN target: [From.GetName]"
+                        
+                489 = { add_claim_by = POR }
+			
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_VEN target: [From.GetName]"
+			POR = {
+				declare_war_on = {
+					type = annex_everything
+					target = FROM
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				POR = {
+					has_war = yes
+				}
+			}
+			
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+	}
+ }
+
+### Wild ride China tour ###
+
+POR_china_cat = {
+  POR_LEP = {
+		war_with_target_on_remove = yes
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = LEP
+			}
+		}
+
+		allowed = { original_tag = POR }
+
+		available = {
+		}
+
+		visible = {
+                has_completed_focus = POR_trumph
+			LEP = {
+				exists = yes
+
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 15
+
+                cost = 10
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_LEP target: [From.GetName]"
+									every_state = {
+				limit = {
+					is_owned_by = LEP
+				}
+				add_core_of = GXC
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_LEP target: [From.GetName]"
+			POR = {
+				declare_war_on = {
+					type = annex_everything
+					target = LEP
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				POR = {
+					has_war = yes
+				}
+			}
+			
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+	}
+ }
+
+POR_china_cat = {
+  POR_QIE = {
+		war_with_target_on_remove = yes
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = QIE
+			}
+		}
+
+		allowed = { original_tag = POR }
+
+		available = {
+		}
+
+		visible = {
+                has_completed_focus = POR_trumph
+			QIE = {
+				exists = yes
+
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 15
+
+                cost = 10
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_QIE target: [From.GetName]"
+												every_state = {
+				limit = {
+					is_owned_by = QIE
+				}
+				add_core_of = GXC
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_QIE target: [From.GetName]"
+			POR = {
+				declare_war_on = {
+					type = annex_everything
+					target = QIE
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				POR = {
+					has_war = yes
+				}
+			}
+			
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+	}
+ }
+
+
+POR_china_cat = {
+  POR_FNG = {
+		war_with_target_on_remove = yes
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = FNG
+			}
+		}
+
+		allowed = { original_tag = POR }
+
+		available = {
+		}
+
+		visible = {
+                has_completed_focus = POR_trumph
+			FNG = {
+				exists = yes
+
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 15
+
+                cost = 10
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_FNG target: [From.GetName]"
+												every_state = {
+				limit = {
+					is_owned_by = FNG
+				}
+				add_core_of = GXC
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_FNG target: [From.GetName]"
+			POR = {
+				declare_war_on = {
+					type = annex_everything
+					target = FNG
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				POR = {
+					has_war = yes
+				}
+			}
+			
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+	}
+ }
+
+POR_china_cat = {
+  POR_SQI = {
+		war_with_target_on_remove = yes
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = SQI
+			}
+		}
+
+		allowed = { original_tag = POR }
+
+		available = {
+		}
+
+		visible = {
+                has_completed_focus = POR_trumph
+			SQI = {
+				exists = yes
+
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 15
+
+                cost = 10
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_SQI target: [From.GetName]"
+												every_state = {
+				limit = {
+					is_owned_by = SQI
+				}
+				add_core_of = GXC
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_SQI target: [From.GetName]"
+			POR = {
+				declare_war_on = {
+					type = annex_everything
+					target = SQI
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				POR = {
+					has_war = yes
+				}
+			}
+			
+
+			#modifier = {
+			#	factor = 100
+			#	FROM = { alliance_strength_ratio > 1.5 }	
+			#}
+		}
+	}
+ }
+
+POR_china_cat = {
+  POR_SHX = {
+		war_with_target_on_remove = yes
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = SHX
+			}
+		}
+
+		allowed = { original_tag = POR }
+
+		available = {
+		}
+
+		visible = {
+                has_completed_focus = POR_trumph
+			SHX = {
+				exists = yes
+
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 15
+
+                cost = 10
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_SHX target: [From.GetName]"
+												every_state = {
+				limit = {
+					is_owned_by = SHX
+				}
+				add_core_of = GXC
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_SHX target: [From.GetName]"
+			POR = {
+				declare_war_on = {
+					type = annex_everything
+					target = SHX
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				POR = {
+					has_war = yes
+				}
+			}
+			
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+	}
+ }
+
+POR_china_cat = {
+  POR_XSM = {
+		war_with_target_on_remove = yes
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = XSM
+			}
+		}
+
+		allowed = { original_tag = POR }
+
+		available = {
+		}
+
+		visible = {
+                has_completed_focus = POR_trumph
+			XSM = {
+				exists = yes
+
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 15
+
+                cost = 10
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_XSM target: [From.GetName]"
+												every_state = {
+				limit = {
+					is_owned_by = XSM
+				}
+				add_core_of = GXC
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_XSM target: [From.GetName]"
+			POR = {
+				declare_war_on = {
+					type = annex_everything
+					target = XSM
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				POR = {
+					has_war = yes
+				}
+			}
+			
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+	}
+ }
+
+POR_china_cat = {
+  POR_CHI = {
+		war_with_target_on_remove = yes
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = CHI
+			}
+		}
+
+		allowed = { original_tag = POR }
+
+		available = {
+		}
+
+		visible = {
+                has_completed_focus = POR_trumph
+			CHI = {
+				exists = yes
+
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 15
+
+                cost = 10
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_CHI target: [From.GetName]"
+															every_state = {
+				limit = {
+					is_owned_by = CHI
+				}
+				add_core_of = GXC
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_CHI target: [From.GetName]"
+			POR = {
+				declare_war_on = {
+					type = annex_everything
+					target = CHI
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				POR = {
+					has_war = yes
+				}
+			}
+			
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+	}
+ }
+
+
+POR_china_cat = {
+  POR_ANQ = {
+		war_with_target_on_remove = yes
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = ANQ
+			}
+		}
+
+		allowed = { original_tag = POR }
+
+		available = {
+		}
+
+		visible = {
+                has_completed_focus = POR_trumph
+			ANQ = {
+				exists = yes
+
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 15
+
+                cost = 10
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_ANQ target: [From.GetName]"
+															every_state = {
+				limit = {
+					is_owned_by = ANQ
+				}
+				add_core_of = GXC
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_ANQ target: [From.GetName]"
+			POR = {
+				declare_war_on = {
+					type = annex_everything
+					target = ANQ
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				POR = {
+					has_war = yes
+				}
+			}
+			
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+	}
+ }
+
+POR_china_cat = {
+  POR_YUN = {
+		war_with_target_on_remove = yes
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = YUN
+			}
+		}
+
+		allowed = { original_tag = POR }
+
+		available = {
+		}
+
+		visible = {
+                has_completed_focus = POR_trumph
+			YUN = {
+				exists = yes
+
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 15
+
+                cost = 10
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_YUN target: [From.GetName]"
+															every_state = {
+				limit = {
+					is_owned_by = YUN
+				}
+				add_core_of = GXC
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_YUN target: [From.GetName]"
+			POR = {
+				declare_war_on = {
+					type = annex_everything
+					target = YUN
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				POR = {
+					has_war = yes
+				}
+			}
+			
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+	}
+ }
+
+POR_china_cat = {
+  POR_GXC = {
+		war_with_target_on_remove = yes
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = GXC
+			}
+		}
+
+		allowed = { original_tag = POR }
+
+		available = {
+		}
+
+		visible = {
+                has_completed_focus = POR_trumph
+			GXC = {
+				exists = yes
+				NOT = {
+					is_subject_of = POR
+				}
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 15
+
+                cost = 10
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_GXC target: [From.GetName]"
+			
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_GXC target: [From.GetName]"
+			POR = {
+				declare_war_on = {
+					type = annex_everything
+					target = GXC
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				POR = {
+					has_war = yes
+				}
+			}
+			
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+	}
+ }
+
+POR_china_cat = {
+  POR_HNN = {
+		war_with_target_on_remove = yes
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = HNN
+			}
+		}
+
+		allowed = { original_tag = POR }
+
+		available = {
+		}
+
+		visible = {
+                has_completed_focus = POR_trumph
+			HNN = {
+				exists = yes
+
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 15
+
+                cost = 10
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_HNN target: [From.GetName]"
+															every_state = {
+				limit = {
+					is_owned_by = HNN
+				}
+				add_core_of = GXC
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_HNN target: [From.GetName]"
+			POR = {
+				declare_war_on = {
+					type = annex_everything
+					target = HNN
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				POR = {
+					has_war = yes
+				}
+			}
+			
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+	}
+ }
+
+
+POR_china_cat = {
+  POR_SIK = {
+		war_with_target_on_remove = yes
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = SIK
+			}
+		}
+
+		allowed = { original_tag = POR }
+
+		available = {
+		}
+
+		visible = {
+                has_completed_focus = POR_trumph
+			SIK = {
+				exists = yes
+
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 15
+
+                cost = 10
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_SIK target: [From.GetName]"
+															every_state = {
+				limit = {
+					is_owned_by = SIK
+				}
+				add_core_of = GXC
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_SIK target: [From.GetName]"
+			POR = {
+				declare_war_on = {
+					type = annex_everything
+					target = SIK
+				}
+				declare_war_on = {
+					type = annex_everything
+					target = TAN
+				}
+				declare_war_on = {
+					type = annex_everything
+					target = ETS
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				POR = {
+					has_war = yes
+				}
+			}
+			
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+	}
+ }
+
+POR_china_cat = {
+ POR_TAN = {
+		war_with_target_on_remove = yes
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = KUM
+			}
+		}
+
+		allowed = { original_tag = POR }
+
+		available = {
+		}
+
+		visible = {
+			original_tag = POR
+               has_completed_focus = POR_trumph
+			KUM = {
+				exists = yes
+
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 15
+
+                cost = 10
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_KUM target: [From.GetName]"
+															every_state = {
+				limit = {
+					is_owned_by = KUM
+				}
+				add_core_of = GXC
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_KUM target: [From.GetName]"
+			POR = {
+				declare_war_on = {
+					type = annex_everything
+					target = KUM
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				POR = {
+					has_war = yes
+				}
+			}
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+	}
+}
+
+POR_china_cat = {
+  POR_ETS = {
+		war_with_target_on_remove = yes
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = ETS
+			}
+		}
+
+		allowed = { original_tag = POR }
+
+		available = {
+		}
+
+		visible = {
+                has_completed_focus = POR_trumph
+			ETS = {
+				exists = yes
+
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 15
+
+                cost = 10
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_ETS target: [From.GetName]"
+															every_state = {
+				limit = {
+					is_owned_by = ETS
+				}
+				add_core_of = GXC
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_ETS target: [From.GetName]"
+			POR = {
+				declare_war_on = {
+					type = annex_everything
+					target = ETS
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				POR = {
+					has_war = yes
+				}
+			}
+			
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+	}
+ }
+
+POR_china_cat = {
+  POR_SZC = {
+		war_with_target_on_remove = yes
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = SZC
+			}
+		}
+
+		allowed = { original_tag = POR }
+
+		available = {
+		}
+
+		visible = {
+                has_completed_focus = POR_trumph
+			SZC = {
+				exists = yes
+
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 15
+
+                cost = 10
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_SZC target: [From.GetName]"
+															every_state = {
+				limit = {
+					is_owned_by = SZC
+				}
+				add_core_of = GXC
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_SZC target: [From.GetName]"
+			POR = {
+				declare_war_on = {
+					type = annex_everything
+					target = SZC
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				POR = {
+					has_war = yes
+				}
+			}
+			
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+	}
+ }
+
+POR_china_cat = {
+  POR_TIB = {
+		war_with_target_on_remove = yes
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = TIB
+			}
+		}
+
+		allowed = { original_tag = POR }
+
+		available = {
+		}
+
+		visible = {
+                has_completed_focus = POR_trumph
+			TIB = {
+				exists = yes
+
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 15
+
+                cost = 10
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_TIB target: [From.GetName]"
+															every_state = {
+				limit = {
+					is_owned_by = TIB
+				}
+				add_claim_by = GXC
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_TIB target: [From.GetName]"
+			POR = {
+				declare_war_on = {
+					type = annex_everything
+					target = TIB
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				POR = {
+					has_war = yes
+				}
+			}
+			
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+	}
+ }
+
+POR_china_cat = {
+  POR_MON = {
+		war_with_target_on_remove = yes
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = MON
+			}
+		}
+
+		allowed = { original_tag = POR }
+
+		available = {
+		}
+
+		visible = {
+                has_completed_focus = POR_trumph
+			MON = {
+				exists = yes
+
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 15
+
+                cost = 10
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_MON target: [From.GetName]"
+															every_state = {
+				limit = {
+					is_owned_by = MON
+				}
+				add_claim_by = GXC
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_MON target: [From.GetName]"
+			POR = {
+				declare_war_on = {
+					type = annex_everything
+					target = MON
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				POR = {
+					has_war = yes
+				}
+			}
+			
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+	}
+ }
+
+POR_china_cat = {
+  POR_LEC = {
+		war_with_target_on_remove = yes
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = LEC
+			}
+		}
+
+		allowed = { original_tag = POR }
+
+		available = {
+		}
+
+		visible = {
+               has_completed_focus = POR_trumph
+			LEC = {
+				exists = yes
+
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 15
+
+                cost = 10
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_LEC target: [From.GetName]"
+						every_state = {
+				limit = {
+					is_owned_by = LEC
+				}
+				add_claim_by = POR
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_LEC target: [From.GetName]"
+			POR = {
+				declare_war_on = {
+					type = annex_everything
+					target = LEC
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				POR = {
+					has_war = yes
+				}
+			}
+			
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+	}
+ }
+
+
+### Come to Brasil! ###
+
+POR_SA_cat = {
+  POR_BRA = {
+		war_with_target_on_remove = yes
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = BRA
+			}
+		}
+
+		allowed = {
+			original_tag = POR
+		}
+
+		available = {
+			NOT = {
+				OR = {
+					is_in_faction_with = BRA
+					BRA = { is_subject_of = POR }
+				}
+			}
+		}
+
+		visible = {
+               has_completed_focus = POR_trumph
+			BRA = {
+				exists = yes
+			}
+			NOT = {
+				OR = {
+					is_in_faction_with = BRA
+					BRA = { is_subject_of = POR }
+				}
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 30
+
+                cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_BRA target: [From.GetName]"
+						every_state = {
+				limit = {
+					is_owned_by = BRA
+				}
+				add_claim_by = POR
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_BRA target: [From.GetName]"
+			POR = {
+				declare_war_on = {
+					type = annex_everything
+					target = BRA
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				POR = {
+					has_war = yes
+				}
+			}
+			
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+	}
+ }
+
+POR_SA_cat = {
+  POR_URG = {
+		war_with_target_on_remove = yes
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = URG
+			}
+		}
+
+		allowed = {
+			original_tag = POR
+		}
+
+		available = {
+            owns_state = 502
+			NOT = {
+				OR = {
+					is_in_faction_with = BRA
+					BRA = { is_subject_of = POR }
+				}
+			}
+		}
+
+		visible = {
+            has_completed_focus = POR_trumph
+			URG = {
+				exists = yes
+			}
+			NOT = {
+				OR = {
+					is_in_faction_with = BRA
+					BRA = { is_subject_of = POR }
+				}
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 10
+
+                cost = 20
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_URG target: [From.GetName]"
+						every_state = {
+				limit = {
+					is_owned_by = URG
+				}
+				add_claim_by = POR
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_URG target: [From.GetName]"
+			POR = {
+				declare_war_on = {
+					type = annex_everything
+					target = URG
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				POR = {
+					has_war = yes
+				}
+			}	
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+	}
+ }
+
+
+
+### Standard Imperialism ###
+
+POR_empire_cat = {
+  POR_MOR = {
+		war_with_target_on_remove = yes
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = MOR
+			}
+		}
+
+		allowed = { original_tag = POR }
+
+		available = {
+		}
+
+		visible = {
+                has_completed_focus = POR_trumph
+			MOR = {
+				exists = yes
+
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 30
+
+                cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_MOR target: [From.GetName]"
+                        
+                699 = { add_claim_by = POR }
+                462 = { add_claim_by = POR }
+                461 = { add_claim_by = POR }
+                968 = { add_claim_by = POR }
+                290 = { add_claim_by = POR }
+
+			
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_MOR target: [From.GetName]"
+			POR = {
+				declare_war_on = {
+					type = annex_everything
+					target = MOR
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				POR = {
+					has_war = yes
+				}
+			}	
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+	}
+ }
+
+POR_empire_cat = {
+  POR_MAF = {
+		war_with_target_on_remove = yes
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = MAF
+			}
+		}
+
+		allowed = { original_tag = POR }
+
+		available = {
+		}
+
+		visible = {
+                has_completed_focus = POR_trumph
+			MAF = {
+				exists = yes
+
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 30
+
+                cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_MAF target: [From.GetName]"
+                        
+                813 = { add_claim_by = POR }
+                298 = { add_claim_by = POR }
+                956 = { add_claim_by = POR }
+                955 = { add_claim_by = POR }
+                871 = { add_claim_by = POR }
+                879 = { add_claim_by = POR }
+                295 = { add_claim_by = POR }
+                881 = { add_claim_by = POR }
+                958 = { add_claim_by = POR }
+                928 = { add_claim_by = POR }
+                899 = { add_claim_by = POR }
+                964 = { add_claim_by = POR }
+			
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_MAF target: [From.GetName]"
+			POR = {
+				declare_war_on = {
+					type = annex_everything
+					target = MAF
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				POR = {
+					has_war = yes
+				}
+			}
+			
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+	}
+ }
+
+POR_empire_cat = {
+  POR_GEA = {
+		war_with_target_on_remove = yes
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = GEA
+			}
+		}
+
+		allowed = { original_tag = POR }
+
+		available = {
+		}
+
+		visible = {
+               has_completed_focus = POR_trumph
+			GEA = {
+				exists = yes
+
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 30
+
+                cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_GEA target: [From.GetName]"
+						every_state = {
+				limit = {
+					is_owned_by = GEA
+				}
+				add_claim_by = POR
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_GEA target: [From.GetName]"
+			POR = {
+				declare_war_on = {
+					type = annex_everything
+					target = GEA
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				POR = {
+					has_war = yes
+				}
+			}	
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+	}
+ }
+
+
+### west africa ###
+
+POR_empire_cat = {
+  POR_NFA = {
+		war_with_target_on_remove = yes
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = NFA
+			}
+		}
+
+		allowed = { original_tag = POR }
+
+		available = {
+		}
+
+		visible = {
+                has_completed_focus = POR_trumph
+			NFA = {
+				exists = yes
+
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 30
+
+                cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_NFA target: [From.GetName]"
+                        
+                700 = { add_claim_by = POR }
+                806 = { add_claim_by = POR }
+				807 = { add_claim_by = POR }
+
+
+			
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_NFA target: [From.GetName]"
+			POR = {
+				declare_war_on = {
+					type = annex_everything
+					target = NFA
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				POR = {
+					has_war = yes
+				}
+			}
+			
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+	}
+ }
+
+POR_empire_cat = {
+  POR_LIB = {
+		war_with_target_on_remove = yes
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = LIB
+			}
+		}
+
+		allowed = { original_tag = POR }
+
+		available = {
+                        owns_state = 806
+						owns_state = 807
+                        owns_state = 700
+		}
+
+		visible = {
+                has_completed_focus = POR_trumph
+			LIB = {
+				exists = yes
+
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 30
+
+                cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_LIB target: [From.GetName]"
+                        
+                298 = { add_claim_by = POR }
+
+
+			
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_LIB target: [From.GetName]"
+			POR = {
+				declare_war_on = {
+					type = annex_everything
+					target = LIB
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				POR = {
+					has_war = yes
+				}
+			}
+			
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+	}
+ }
+
+### Empire state conditions ###
+
+POR_empire_cat = {
+  POR_RHO = {
+		war_with_target_on_remove = yes
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				controls_state = 545
+			}
+		}
+
+		allowed = { original_tag = POR }
+
+		available = {
+                        owns_state = 950
+                        owns_state = 813
+                FROM = { controls_state = 545 }
+		}
+
+		visible = {
+                has_completed_focus = POR_trumph
+                FROM = { controls_state = 545 }
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 30
+
+                cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_RHO target: [From.GetName]"
+                        
+                545 = { add_claim_by = POR }
+
+			
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_RHO target: [From.GetName]"
+			POR = {
+				declare_war_on = {
+					type = annex_everything
+					target = FROM
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				POR = {
+					has_war = yes
+				}
+			}
+			
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+	}
+ }
+
+POR_empire_cat = {
+  POR_CEY = {
+		war_with_target_on_remove = yes
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				controls_state = 422
+			}
+		}
+
+		allowed = { original_tag = POR }
+
+		available = {
+                FROM = { controls_state = 422 }
+		}
+
+		visible = {
+                has_completed_focus = POR_trumph
+                FROM = { controls_state = 422 }
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 30
+
+                cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_CEY target: [From.GetName]"
+                        
+                422 = { add_claim_by = POR }
+                281 = { add_claim_by = POR }
+
+			
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_CEY target: [From.GetName]"
+			POR = {
+				declare_war_on = {
+					type = annex_everything
+					target = FROM
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				POR = {
+					has_war = yes
+				}
+			}
+			
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+	}
+ }
+
+
+POR_empire_cat = {
+  POR_IND = {
+		war_with_target_on_remove = yes
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				controls_state = 868
+			}
+		}
+
+		allowed = { original_tag = POR }
+
+		available = {
+                        owns_state = 321
+                FROM = { controls_state = 868 }
+		}
+
+		visible = {
+                has_completed_focus = POR_trumph
+                FROM = { controls_state = 868 }
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 30
+
+                cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_IND target: [From.GetName]"
+                        
+                868 = { add_claim_by = POR }
+
+			
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_IND target: [From.GetName]"
+			POR = {
+				declare_war_on = {
+					type = annex_everything
+					target = FROM
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				POR = {
+					has_war = yes
+				}
+			}
+			
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+	}
+ }
+
+
+POR_empire_cat = {
+  POR_DEI = {
+		war_with_target_on_remove = yes
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				controls_state = 1017
+			}
+		}
+
+		allowed = { original_tag = POR }
+
+		available = {
+                owns_state = 721
+                FROM = { controls_state = 1017 }
+		}
+
+		visible = {
+                has_completed_focus = POR_trumph
+                FROM = { controls_state = 1017 }
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 30
+
+                cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_DEI target: [From.GetName]"
+                        
+                1017 = { add_claim_by = POR }
+                1018 = { add_claim_by = POR }
+                667 = { add_claim_by = POR }
+                1020 = { add_claim_by = POR }
+                672 = { add_claim_by = POR }
+
+
+			
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_DEI target: [From.GetName]"
+			POR = {
+				declare_war_on = {
+					type = annex_everything
+					target = FROM
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				POR = {
+					has_war = yes
+				}
+			}
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+	}
+ }
+
+
+
+### SUPERPOWERS ###
+
+POR_rivals_cat = {
+  POR_GER = {
+		war_with_target_on_remove = yes
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = GER
+			}
+		}
+
+		allowed = { original_tag = POR }
+
+		available = {
+		}
+
+		visible = {
+                has_completed_focus = POR_trumph
+			GER = {
+				exists = yes
+
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 30
+
+                cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_GER target: [From.GetName]"
+			
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_GER target: [From.GetName]"
+			POR = {
+				declare_war_on = {
+					type = annex_everything
+					target = GER
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				POR = {
+					has_war = yes
+				}
+			}
+			
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+	}
+ }
+
+POR_rivals_cat = {
+  POR_ENG = {
+		war_with_target_on_remove = yes
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = ENG
+			}
+		}
+
+		allowed = { original_tag = POR }
+
+		available = {
+		}
+
+		visible = {
+               has_completed_focus = POR_trumph
+			ENG = {
+				exists = yes
+
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 30
+
+                cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_ENG target: [From.GetName]"
+			
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_ENG target: [From.GetName]"
+			POR = {
+				declare_war_on = {
+					type = annex_everything
+					target = ENG
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				POR = {
+					has_war = yes
+				}
+			}
+			
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+	}
+ }
+
+POR_rivals_cat = {
+  POR_JAP = {
+		war_with_target_on_remove = yes
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = JAP
+			}
+		}
+
+		allowed = { original_tag = POR }
+
+		available = {
+		}
+
+		visible = {
+               has_completed_focus = POR_trumph
+			JAP = {
+				exists = yes
+
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 30
+
+                cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_JAP target: [From.GetName]"
+						every_state = {
+				limit = {
+					is_owned_by = JAP
+				}
+				add_claim_by = POR
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_JAP target: [From.GetName]"
+			POR = {
+				declare_war_on = {
+					type = annex_everything
+					target = JAP
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				POR = {
+					has_war = yes
+				}
+			}
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+	}
+ }
+    
+POR_rivals_cat = {
+  POR_USA = {
+		war_with_target_on_remove = yes
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = USA
+			}
+		}
+
+		allowed = { original_tag = POR }
+
+		available = {
+		}
+
+		visible = {
+               has_completed_focus = POR_trumph
+			ENG = {
+				exists = yes
+
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 30
+
+                cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_USA target: [From.GetName]"
+			
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_USA target: [From.GetName]"
+			POR = {
+				declare_war_on = {
+					type = annex_everything
+					target = USA
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				POR = {
+					has_war = yes
+				}
+			}
+			
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+	}
+ }
+
+
+POR_rivals_cat = {
+  POR_FRA = {
+		war_with_target_on_remove = yes
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = FRA
+			}
+		}
+
+		allowed = { original_tag = POR }
+
+		available = {
+		}
+
+		visible = {
+               has_completed_focus = POR_trumph
+			ENG = {
+				exists = yes
+
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 30
+
+                cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_FRA target: [From.GetName]"
+			
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove POR_FRA target: [From.GetName]"
+			POR = {
+				declare_war_on = {
+					type = annex_everything
+					target = FRA
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				POR = {
+					has_war = yes
+				}
+			}
+			
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+	}
+ }
+
+### puppet china ###
+
+POR_china_cat = {
+	POR_release_GXC = {
+		icon = GFX_decision_generic_nationalism
+
+		allowed = { original_tag = POR }
+
+
+		available = {
+			594 = {
+				is_fully_controlled_by = ROOT
+			}
+			NOT = { country_exists = CHI }
+			NOT = { country_exists = LEP }
+			NOT = { country_exists = ANQ }
+			NOT = { country_exists = SQI }
+			NOT = { country_exists = GXC }
+			NOT = { country_exists = SHX }
+			NOT = { country_exists = YUN }
+			NOT = { country_exists = SZC }
+			NOT = { country_exists = XSM }
+			NOT = { country_exists = MON }
+			NOT = { country_exists = LEC }
+			NOT = { country_exists = TAN }
+			NOT = { country_exists = TIB }
+			NOT = { country_exists = FNG }
+			NOT = { country_exists = SIK }
+			NOT = { country_exists = QIE }
+		}
+		
+		visible = {
+			has_completed_focus = POR_trumph 
+		}
+		
+		cost = 0
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_release_GXC"
+			release = GXC
+			puppet = GXC
+			GXC = { load_focus_tree = generic_focus
+				set_cosmetic_tag = PCN
+				set_politics = {
+					ruling_party = national_populist 
+					elections_allowed = no
+				}
+				create_country_leader = {
+					name = "杜阿尔特一世"
+					desc = "POLITICS_GXC_DUARTE_DESC"
+					picture = "gfx/leaders/POR/Portrait_Portugal_Duarte_Nuno.png"
+					expire = "1965.1.1"
+					ideology = national_populist_subtype
+					traits = { }
+				}
+				remove_ideas = { GXC_backwards_guangxi GXC_AOG_leftovers GXC_bailing_out_peasants GXC_bailing_out_merchants GXC_guangxi_militarism GXC_militia_corps GXC_factionalism GXC_divided_military }
+				add_ideas = GXC_portugese_puppet
+				transfer_state = 613
+				transfer_state = 610
+				transfer_state = 716
+				transfer_state = 328
+				transfer_state = 715
+				transfer_state = 886
+				transfer_state = 885
+				transfer_state = 884
+				transfer_state = 714
+				transfer_state = 883
+				transfer_state = 717
+				transfer_state = 1014
+				transfer_state = 1068
+				transfer_state = 596
+				transfer_state = 1067
+				transfer_state = 1044
+				transfer_state = 1069
+				transfer_state = 595
+				transfer_state = 1066
+				transfer_state = 1046
+				transfer_state = 600
+				transfer_state = 602
+				transfer_state = 1052
+				transfer_state = 1013
+				transfer_state = 1055
+				transfer_state = 1054
+				transfer_state = 1053
+				transfer_state = 599
+				transfer_state = 594
+				transfer_state = 1056
+				transfer_state = 591
+				transfer_state = 593
+				transfer_state = 800
+				transfer_state = 1012
+				transfer_state = 1045
+				transfer_state = 592
+				transfer_state = 802
+				transfer_state = 803
+				transfer_state = 322
+				transfer_state = 748
+				transfer_state = 693
+				transfer_state = 330
+				transfer_state = 612
+				transfer_state = 1084
+				transfer_state = 329
+				transfer_state = 811
+				transfer_state = 654
+				transfer_state = 606
+				transfer_state = 611
+				transfer_state = 614
+				transfer_state = 608
+				transfer_state = 615
+				transfer_state = 1062
+				transfer_state = 1063
+				transfer_state = 1061
+				transfer_state = 1060
+				transfer_state = 1059
+				transfer_state = 607
+				transfer_state = 1058
+				transfer_state = 1048
+				transfer_state = 620
+				transfer_state = 1050
+				transfer_state = 608
+				transfer_state = 1047
+				transfer_state = 598
+				transfer_state = 1064
+				transfer_state = 1065
+				transfer_state = 597
+				transfer_state = 603
+				transfer_state = 1051
+				transfer_state = 325
+				transfer_state = 816
+				transfer_state = 601
+				transfer_state = 605
+				transfer_state = 661
+				transfer_state = 650
+				transfer_state = 788
+				transfer_state = 283
+				transfer_state = 604
+				transfer_state = 353
+				transfer_state = 774
+				transfer_state = 348
+				transfer_state = 616
+				transfer_state = 621
+				transfer_state = 622
+				transfer_state = 1015
+				transfer_state = 1072
+				transfer_state = 1083
+				transfer_state = 618
+				transfer_state = 617
+				transfer_state = 619
+				transfer_state = 287
+				transfer_state = 897
+				transfer_state = 1085
+				transfer_state = 1049
+				transfer_state = 1086
+				transfer_state = 1293
+				transfer_state = 799
+				transfer_state = 609
+				transfer_state = 747
+				transfer_state = 746
+				transfer_state = 743
+				1293 = { add_core_of = GXC }
+				799 = { add_core_of = GXC }
+				609 = { add_core_of = GXC }
+				747 = { add_core_of = GXC }
+				746 = { add_core_of = GXC }
+				743 = { add_core_of = GXC }
+				613 = { add_core_of = GXC }
+				592 = { add_core_of = GXC }
+				1045 = { add_core_of = GXC }
+				1014 = { add_core_of = GXC }
+				1068 = { add_core_of = GXC }
+				596 = { add_core_of = GXC }
+				1067 = { add_core_of = GXC }
+				1069 = { add_core_of = GXC }
+				595 = { add_core_of = GXC }
+				1066 = { add_core_of = GXC }
+				1046 = { add_core_of = GXC }
+				600 = { add_core_of = GXC }
+				602 = { add_core_of = GXC }
+				1052 = { add_core_of = GXC }
+				1013 = { add_core_of = GXC }
+				1055 = { add_core_of = GXC }
+				1053 = { add_core_of = GXC }
+				599 = { add_core_of = GXC }
+				594 = { add_core_of = GXC }
+				1056 = { add_core_of = GXC }
+				591 = { add_core_of = GXC }
+				593 = { add_core_of = GXC }
+				800 = { add_core_of = GXC }
+				1012 = { add_core_of = GXC }
+				1044 = { add_core_of = GXC }
+				1054 = { add_core_of = GXC }
+				802 = { add_core_of = GXC }
+				803 = { add_core_of = GXC }
+				322 = { add_core_of = GXC }
+				748 = { add_core_of = GXC }
+				693 = { add_core_of = GXC }
+				330 = { add_core_of = GXC }
+				612 = { add_core_of = GXC }
+				1084 = { add_core_of = GXC }
+				329 = { add_core_of = GXC }
+				811 = { add_core_of = GXC }
+				654 = { add_core_of = GXC }
+				611 = { add_core_of = GXC }
+				606 = { add_core_of = GXC }
+				614 = { add_core_of = GXC }
+				608 = { add_core_of = GXC }
+				615 = { add_core_of = GXC }
+				1062 = { add_core_of = GXC }
+				1063 = { add_core_of = GXC }
+				1061 = { add_core_of = GXC }
+				1060 = { add_core_of = GXC }
+				1059 = { add_core_of = GXC }
+				607 = { add_core_of = GXC }
+				1058 = { add_core_of = GXC }
+				1048 = { add_core_of = GXC }
+				620 = { add_core_of = GXC }
+				1050 = { add_core_of = GXC }
+				608 = { add_core_of = GXC }
+				1047 = { add_core_of = GXC }
+				598 = { add_core_of = GXC }
+				1064 = { add_core_of = GXC }
+				1065 = { add_core_of = GXC }
+				597 = { add_core_of = GXC }
+			}
+		}
+	}
+}
+
+POR_colonial_development_cat = {
+	POR_core_angola = {
+		icon = GFX_decision_generic_nationalism
+
+		allowed = { original_tag = POR }
+
+		available = {
+			959 = {
+				is_fully_controlled_by = ROOT
+				compliance > 75
+			}
+			917 = {
+				is_fully_controlled_by = ROOT
+				compliance > 75
+			}
+                        914 = {
+				is_fully_controlled_by = ROOT
+				compliance > 75
+			}
+			916 = {
+				is_fully_controlled_by = ROOT
+				compliance > 75
+			}
+                        540 = {
+				is_fully_controlled_by = ROOT
+				compliance > 75
+			}
+		}
+
+		visible = { has_completed_focus = POR_punish_traitors }
+		cost = 200
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_core_angola"
+			add_state_core = 540
+			add_state_core = 916
+			add_state_core = 914
+			add_state_core = 917
+			add_state_core = 959
+		}
+	}
+}
+
+
+POR_colonial_development_cat = {
+	POR_core_mos = {
+		icon = GFX_decision_generic_nationalism
+
+		allowed = { original_tag = POR }
+
+		available = {
+			544 = {
+				is_fully_controlled_by = ROOT
+				compliance > 75
+			}
+			950 = {
+				is_fully_controlled_by = ROOT
+				compliance > 75
+			}
+                        954 = {
+				is_fully_controlled_by = ROOT
+				compliance > 75
+			}
+
+		}
+
+		visible = { has_completed_focus = POR_punish_traitors }
+		cost = 250
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_core_mos"
+			add_state_core = 544
+			add_state_core = 954
+			add_state_core = 950
+		}
+    }
+}
+
+
+
+POR_colonial_development_cat = {
+	POR_core_goa = {
+		icon = GFX_decision_generic_nationalism
+
+		allowed = { original_tag = POR }
+
+		available = {
+			321 = {
+				is_fully_controlled_by = ROOT
+			}
+		}
+
+		visible = { has_completed_focus = POR_punish_traitors }
+		cost = 150
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_core_goa"
+			add_state_core = 321
+		}
+    }
+}
+
+
+POR_colonial_development_cat = {
+	POR_core_macau = {
+		icon = GFX_decision_generic_nationalism
+
+		allowed = { original_tag = POR }
+
+		available = {
+			729 = {
+				is_fully_controlled_by = ROOT
+			}
+		}
+
+		visible = { has_completed_focus = POR_punish_traitors }
+
+		cost = 300
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_core_macau"
+			add_state_core = 729
+		}
+    }
+}
+
+POR_colonial_development_cat = {
+	POR_core_timor = {
+		icon = GFX_decision_generic_nationalism
+
+		allowed = { original_tag = POR }
+
+		available = {
+			721 = {
+				is_fully_controlled_by = ROOT
+                compliance > 90
+			}
+		}
+
+		visible = { has_completed_focus = POR_punish_traitors }
+		
+		cost = 350
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_core_timor"
+			add_state_core = 721
+		}
+    }
+}
+
+
+POR_colonial_development_cat = {
+	POR_core_guinea = {
+		icon = GFX_decision_generic_nationalism
+
+		allowed = { original_tag = POR }
+
+
+		available = {
+			296 = {
+				is_fully_controlled_by = ROOT
+                compliance > 80
+			}
+		}
+
+		visible = { has_completed_focus = POR_punish_traitors }
+		
+		cost = 150
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POR_core_guinea"
+			add_state_core = 296
+		}
+    }	
+}
+
+###Faction###
+
+political_actions = {
+    POR_found_faction = {
+		icon = GFX_decision_eng_blackshirt_march
+
+		allowed = { original_tag = POR }
+		available = {
+			MAF = {
+				OR = {
+					exists = no
+					NOT = {
+						has_idea = MAF_border_shit_show
+					}
+				}
+			}
+			#at_peace_or_same_enemies_as_FROM = yes
+			OR = {
+				date > 1938.1.1
+				has_global_flag = MAF_NoAttack_Portugal
+				owns_state = 958
+			}
+		}
+
+		visible = {
+			is_subject = no
+			is_in_faction = no
+			has_socialist_government = no
+		}
+
+        complete_effect = {
+			POR = {
+				log = "[GetDateText]: [Root.GetName]: Decision POR_found_faction target: [From.GetName]"
+				 create_faction = "帝国保护联盟"
+			}
+		}
+
+		fire_only_once = yes
+		cost = 100
+
+		ai_will_do = {
+			factor = 100
+		}
+    }
+}
+
+political_actions = {
+    POR_invite_brazil = {
+		icon = GFX_decision_eng_blackshirt_march
+
+		allowed = { original_tag = POR }
+		available = {
+			BRA = { has_government = FROM }
+		}
+
+		visible = {
+			is_faction_leader = yes
+		}
+
+        complete_effect = {
+			POR = {
+				log = "[GetDateText]: [Root.GetName]: Decision POR_invite_brazil target: [From.GetName]"
+			}
+			BRA = { country_event = por.561 }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		ai_will_do = {
+			factor = 100
+		}
+    }
+}

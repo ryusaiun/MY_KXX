@@ -1,0 +1,19 @@
+﻿l_english:
+
+### Leaders ###
+POLITICS_GXC_DUARTE_DESC:0 "With the Portuguese intervention into China, Duarte has taken the title of Emperor of China. While Duarte privately despises this title as some kind of joke, the Integralist government has insisted on it, so as to increase their legitimacy in China. Time will tell whether Duarte's reign in China will be lasting, or quickly confined to the dustbin of history, along with many past Emperors of China."
+
+### Ideas ###
+
+GXC_portugese_puppet:0 "Portuguese Colonial State"
+GXC_portugese_puppet_desc:0 "This state is nothing more then an organisation for the continuation and expansion of Portuguese rule in China. Much of its industry goes to Portugal to fuel the new Empire's expansion, while the administration struggles to recruit locals into our army and administration due to its perceived illegitimacy."
+
+### Parties ###
+
+GXC_national_populist_party:0 "Portuguese Administration"
+GXC_national_populist_party_long:0 "Portuguese Administration                                                                §gSet up in the aftermath of the Portuguese invasion, the administration seeks nothing less than rule over all of China, with a Portuguese Emperor as the head of state. The formal direct Portuguese administration contains a combination of Portuguese administrators and loyal civilian locals, the latter of whom seek either financial reward or peace under the Portuguese Crown. Similarly to the British Raj, the administration has handed rule of local regions to noble families, who are more then happy to reclaim their titles. The loyalty of these nobles is assured, as they are empowered beyond even the days before the recent collapse of Qing hegemony or the Republican Revolution of 1911. They owe everything to Portugal, and the administration is more then happy to reap the benefits of them repaying their debts.§!"
+
+### Cosmetic Tags ###
+GXC_Guangxi_national_populist:0 "Sino-Portuguese"
+GXC_Guangxi_national_populist_ADJ:0 "Sino-Portuguese"
+GXC_Guangxi_national_populist_DEF:0 "Sino-Portuguese"

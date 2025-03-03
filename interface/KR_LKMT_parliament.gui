@@ -1,0 +1,211 @@
+@CHI_parliament_gui_container_height = 430
+@CHI_PMC_party_window_y = 35
+@CHI_CRA_party_window_y = 105
+@CHI_CSL_party_window_y = 175
+@CHI_degree_of_party_radicalism_y = 260
+@CHI_degree_of_party_radicalism_progress_y = 285
+@CHI_parliament_text_y = 330
+
+guiTypes = {
+	containerWindowType = {
+
+		#主框架
+
+        name = "CHI_parliament_gui_container"
+        position = { x = 0 y = 0 }
+		size = { width = 470 height = @CHI_parliament_gui_container_height }
+		
+		#标题栏
+
+		instantTextBoxType = {
+			name = "CHI_parliament_title"
+			position = { x = 45 y = 0 }
+			font = "hoi_24header"
+			text = "CHI_parliament_title"
+			maxWidth = 400
+			maxHeight = 24
+			format = center
+		}
+
+#农会
+		containerWindowType = {
+			name = "CHI_PMC_party_window"
+			position = { x = 55 y = @CHI_PMC_party_window_y }
+			orientation = UPPER_LEFT
+			size = { width = 300 height= 24 }
+			moveable = yes
+			clipping = no
+
+			iconType = {
+				name = "CHI_PMC_party"
+				spriteType = txt_icon_KMT_Mao_zedong
+				pdx_tooltip = "CHI_PMC_party_desc"
+				position = { x = 10 y = 10 }
+			}
+
+			instantTextBoxType = {
+				name = "CHI_PMC_party_name"
+				position = { x = 70 y = 18 }
+				font = "hoi_20b"
+				text = "CHI_PMC_party_name"
+				pdx_tooltip = "CHI_PMC_party_desc"
+				maxWidth = 500
+				maxHeight = 24
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "CHI_PMC_party_leader"
+				position = { x = 70 y = 36 }
+				font = "hoi_20b"
+				text = "CHI_PMC_party_leader"
+				pdx_tooltip = "CHI_PMC_party_desc"
+				maxWidth = 500
+				maxHeight = 24
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "CHI_PMC_party_influence"
+				position = { x = 70 y = 53 }
+				font = "hoi_20b"
+				text = "CHI_PMC_party_influence"
+				pdx_tooltip = "CHI_PMC_party_desc"
+				maxWidth = 500
+				maxHeight = 24
+				format = left
+			}
+		}
+
+#复兴社
+		containerWindowType = {
+			name = "CHI_CRA_party_window"
+			position = { x = 55 y = @CHI_CRA_party_window_y }
+			orientation = UPPER_LEFT
+			size = { width = 300 height= 24 }
+			moveable = yes
+			clipping = no
+	
+			iconType = {
+				name = "CHI_CRA_party"
+				spriteType = txt_icon_Zhang_Guotao
+				pdx_tooltip = "CHI_CRA_party_desc"
+				position = { x = 10 y = 10 }
+			}
+	
+			instantTextBoxType = {
+				name = "CHI_CRA_party_name"
+				position = { x = 70 y = 18 }
+				font = "hoi_20b"
+				text = "CHI_CRA_party_name"
+				pdx_tooltip = "CHI_CRA_party_desc"
+				maxWidth = 500
+				maxHeight = 24
+				format = left
+			}
+	
+			instantTextBoxType = {
+				name = "CHI_CRA_party_leader"
+				position = { x = 70 y = 36 }
+				font = "hoi_20b"
+				text = "CHI_CRA_party_leader"
+				pdx_tooltip = "CHI_CRA_party_desc"
+				maxWidth = 500
+				maxHeight = 24
+				format = left
+			}
+	
+			instantTextBoxType = {
+				name = "CHI_CRA_party_influence"
+				position = { x = 70 y = 53 }
+				font = "hoi_20b"
+				text = "CHI_CRA_party_influence"
+				pdx_tooltip = "CHI_CRA_party_desc"
+				maxWidth = 500
+				maxHeight = 24
+				format = left
+			}
+		}
+
+#中工盟
+		containerWindowType = {
+			name = "CHI_CSL_party_window"
+			position = { x = 55 y = @CHI_CSL_party_window_y }
+			orientation = UPPER_LEFT
+			size = { width = 300 height= 24 }
+			moveable = yes
+			clipping = no
+
+			iconType = {
+				name = "CHI_CSL_party"
+				spriteType = txt_icon_KMT_Chen_Duxiu
+				pdx_tooltip = "CHI_CSL_party_desc"
+				position = { x = 10 y = 10 }
+			}
+
+			instantTextBoxType = {
+				name = "CHI_CSL_party_name"
+				position = { x = 70 y = 18 }
+				font = "hoi_20b"
+				text = "CHI_CSL_party_name"
+				pdx_tooltip = "CHI_CSL_party_desc"
+				maxWidth = 500
+				maxHeight = 24
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "CHI_CSL_party_leader"
+				position = { x = 70 y = 36 }
+				font = "hoi_20b"
+				text = "CHI_CSL_party_leader"
+				pdx_tooltip = "CHI_CSL_party_desc"
+				maxWidth = 500
+				maxHeight = 24
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "CHI_CSL_party_influence"
+				position = { x = 70 y = 53 }
+				font = "hoi_20b"
+				text = "CHI_CSL_party_influence"
+				pdx_tooltip = "CHI_CSL_party_desc"
+				maxWidth = 500
+				maxHeight = 24
+				format = left
+			}
+		}
+
+#激进度
+		instantTextBoxType = {
+			name = "CHI_degree_of_party_radicalism"
+			position = { x = 80 y = @CHI_degree_of_party_radicalism_y }
+			font = "hoi_20b"
+			text = "CHI_degree_of_party_radicalism"
+			maxWidth = 500
+			maxHeight = 24
+			format = left
+		}
+
+		iconType = {
+			name = "CHI_degree_of_party_radicalism_progress"
+			spriteType = "GFX_CHI_radicalism_progress_red"
+			position = { x = 70 y = @CHI_degree_of_party_radicalism_progress_y }
+		}
+
+#下方文字描述
+
+		instantTextboxType = {
+			name = "CHI_parliament_text"
+			position = { x = 35 y = @CHI_parliament_text_y }
+			font = "hoi_20b"
+			maxWidth = 450
+			maxHeight = 16
+			format = left
+			
+			text = "CHI_parliament_text"
+		}
+	}
+}
+

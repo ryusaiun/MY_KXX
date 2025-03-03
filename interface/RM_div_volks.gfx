@@ -1,0 +1,717 @@
+spriteTypes = {
+	### INFANTRY VOLKSSTURM
+	spriteType = {
+		name = "GFX_volkssturm_1"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_1.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_4"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_4.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_5"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_5.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_6"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_6.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_7"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_7.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_8"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_8.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_9"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_9.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_11"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_11.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_12"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_12.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_15"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_15.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_16"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_16.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_17"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_17.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_18"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_18.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_19"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_19.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_21"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_21.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_22"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_22.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_23"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_23.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_24"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_24.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_26"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_26.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_27"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_27.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_28"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_28.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_30"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_30.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_31"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_31.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_32"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_32.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_33"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_33.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_34"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_34.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_35"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_35.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_38"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_38.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_39"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_39.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_41"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_41.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_42"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_42.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_44"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_44.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_45"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_45.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_46"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_46.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_47"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_47.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_48"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_48.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_49"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_49.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_50"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_50.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_52"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_52.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_56"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_56.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_57"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_57.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_58"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_58.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_59"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_59.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_61"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_61.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_62"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_62.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_65"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_65.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_68"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_68.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_69"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_69.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_71"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_71.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_72"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_72.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_73"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_73.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_75"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_75.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_76"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_76.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_77"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_77.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_78"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_78.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_79"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_79.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_81"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_81.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_82"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_82.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_83"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_83.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_86"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_86.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_87"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_87.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_88"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_88.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_91"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_91.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_93"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_93.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_94"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_94.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_95"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_95.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_96"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_96.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_97"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_97.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_98"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_98.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_99"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_99.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_100"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_100.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_102"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_102.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_104"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_104.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_106"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_106.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_110"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_110.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_111"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_111.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_112"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_112.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_114"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_114.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_117"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_117.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_118"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_118.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_121"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_121.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_122"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_122.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_123"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_123.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_125"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_125.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_126"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_126.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_129"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_129.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_131"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_131.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_132"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_132.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_133"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_133.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_134"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_134.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_137"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_137.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_161"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_161.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_162"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_162.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_163"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_163.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_164"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_164.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_167"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_167.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_168"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_168.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_169"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_169.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_170"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_170.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_181"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_181.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_183"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_183.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_197"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_197.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_205"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_205.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_206"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_206.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_207"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_207.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_208"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_208.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_211"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_211.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_212"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_212.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_214"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_214.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_217"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_217.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_225"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_225.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_227"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_227.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_243"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_243.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_252"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_252.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_253"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_253.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_254"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_254.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_257"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_257.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_258"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_258.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_291"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_291.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_292"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_292.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_295"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_295.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_297"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_297.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_320"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_320.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_329"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_329.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_340"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_340.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_376"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_376.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_383"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_383.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_541"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_541.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_542"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_542.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_547"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_547.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_553"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_553.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_707"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_707.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_719"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_719.png"
+	}
+	## MOT VOLKSSTURM
+	spriteType = {
+		name = "GFX_volkssturm_mot_2"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_mot_2.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_mot_3"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_mot_3.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_mot_10"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_mot_10.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_mot_13"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_mot_13.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_mot_14"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_mot_14.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_mot_15"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_mot_15.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_mot_20"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_mot_20.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_mot_25"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_mot_25.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_mot_35"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_mot_25.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_mot_29"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_mot_29.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_mot_36"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_mot_36.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_mot_60"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_mot_60.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_mot_volksfuhrer"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_volksfuhrer.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_mot_brand"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_brand.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_mot_greatgermany"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_greatgermany.png"
+	}
+	## TANK VOLKSSTURM
+	spriteType = {
+		name = "GFX_volkssturm_tank_1"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_tank_1.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_tank_2"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_tank_2.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_tank_3"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_tank_3.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_tank_4"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_tank_4.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_tank_5"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_tank_5.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_tank_6"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_tank_6.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_tank_7"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_tank_7.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_tank_8"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_tank_8.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_tank_9"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_tank_9.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_tank_10"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_tank_10.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_tank_11"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_tank_11.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_tank_12"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_tank_12.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_tank_13"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_tank_13.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_tank_14"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_tank_14.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_tank_15"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_tank_15.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_tank_16"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_tank_16.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_tank_17"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_tank_17.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_tank_18"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_tank_18.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_tank_19"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_tank_19.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_tank_20"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_tank_20.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_tank_21"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_tank_21.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_tank_22"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_tank_22.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_tank_23"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_tank_23.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_tank_24"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_tank_24.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_tank_25"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_tank_25.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_tank_26"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_tank_26.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_tank_27"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_tank_27.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_tank_lehr"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_tank_lehr.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_tank_pzd_munch"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_tank_pzd_munch.png"
+	}
+	spriteType = {
+		name = "GFX_volkssturm_feldherrnhalle"
+		texturefile = "gfx/interface/decisions/Volkssturm/volkssturm_feldherrnhalle.png"
+	}
+}

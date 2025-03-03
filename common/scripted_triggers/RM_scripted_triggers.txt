@@ -1,0 +1,302 @@
+is_possible_target_for_germanoid_alliance = {
+	OR = {
+		AND = {
+			has_government = syndicalist
+			ROOT = { 
+				OR = {
+					has_government = syndicalist 
+					has_government = radical_socialist
+				}
+			}
+		}
+		AND = {
+			has_government = radical_socialist
+			ROOT = { 
+				OR = {
+					has_government = social_democrat 
+					has_government = radical_socialist
+				}
+			}
+		}
+		AND = {
+			has_government = social_democrat
+			ROOT = { 
+				OR = {
+					has_government = social_democrat 
+					has_government = radical_socialist
+					has_government = social_liberal
+				}
+			}
+		}
+		AND = {
+			has_government = social_liberal
+			ROOT = { 
+				OR = {
+					has_government = social_democrat 
+					has_government = market_liberal
+					has_government = social_liberal
+				}
+			}
+		}
+		AND = {
+			has_government = market_liberal
+			ROOT = { 
+				OR = {
+					has_government = social_conservative 
+					has_government = market_liberal
+					has_government = social_liberal
+				}
+			}
+		}
+		AND = {
+			has_government = social_conservative
+			ROOT = { 
+				OR = {
+					has_government = social_conservative 
+					has_government = market_liberal
+					has_government = authoritarian_democrat
+				}
+			}
+		}
+		AND = {
+			has_government = authoritarian_democrat
+			ROOT = { 
+				OR = {
+					has_government = social_conservative 
+					has_government = authoritarian_democrat
+				}
+			}
+		}
+	}
+}
+
+is_not_excluded_from_germanoid_alliance = {
+	NOT = {
+		is_in_faction_with = GRU
+		is_in_faction = yes 
+		is_puppet = yes 
+		is_subject = yes 
+		has_war = yes
+		tag = RUS
+		tag = WGR
+		tag = DDR
+		tag = BAY
+		tag = NGF
+		tag = GER
+		tag = GEX
+		tag = MAF
+		tag = GEA
+		tag = LEC
+	}
+}
+
+is_internationale_invite_target_for_gru = {
+	AND = {
+		is_in_faction = no 
+		is_puppet = no 
+		is_subject = no 
+		has_socialist_government = yes
+		NOT = { is_in_faction_with = GRU }
+		exists = yes
+		has_war = no
+	}
+}
+
+is_possible_target_for_stahlpakt_alliance = {
+	OR = {
+		AND = {
+			OR = {
+				has_government = totalist
+				has_government = national_populist
+			}
+			ROOT = { has_country_leader = { character = GRU_Joseph_Goebbels ruling_only = yes } }
+		}
+	}				
+}
+is_not_excluded_from_stahlpakt_alliance = {
+	OR = {
+		is_in_faction_with = GRU
+		is_in_faction = yes 
+		is_puppet = yes 
+		is_subject = yes 
+		has_war = yes
+		tag = RUS
+		tag = WGR
+		tag = DDR
+		tag = BAY
+		tag = NGF
+		tag = GER
+		tag = GEX
+		tag = MAF
+		tag = GEA
+		tag = LEC
+		tag = RVA
+		tag = ALO
+		tag = TRK
+		tag = UZB
+		tag = KYR
+		tag = TAJ
+		tag = BAT
+		tag = EST
+		tag = LAT
+		tag = LIT
+		tag = WHR
+		tag = UKR
+		tag = DKB
+		tag = KUB
+		tag = MTR
+		tag = GEO
+		tag = AZE
+		tag = ARM
+		tag = RUS
+		tag = SOV
+		tag = RRE
+		tag = RRF
+		tag = OTT
+		tag = TRM
+		tag = MON
+		tag = MAF
+		tag = GEX
+		tag = GEA
+		tag = VSJ
+		tag = VST
+		tag = BAL
+		tag = DKS
+		tag = RUT
+		tag = MOS
+		tag = SKN
+		tag = LEP
+		tag = GXC
+		tag = CHI
+		tag = HNN
+		tag = QIE
+		tag = YUN
+		tag = SZC
+		tag = SHX
+		tag = XSM
+		tag = SIK
+		tag = ETS
+		tag = MON
+		tag = TIB
+		tag = FNG
+		tag = AOG
+		tag = LEC
+		tag = MLT
+		tag = CRE
+		tag = VLG
+		tag = RRF
+		tag = GOR
+		tag = RVA
+		tag = TTR
+		tag = PRM
+		tag = BSK
+		tag = RRV
+		tag = ORB
+		tag = URP
+		tag = ZLT
+		tag = DRL
+		tag = NWP
+		tag = KZK
+		tag = ALO
+		tag = PTS
+		tag = PVD
+		tag = TMN
+		tag = SVD
+		tag = SUG
+		tag = SHE
+		tag = NVS
+		tag = OMS
+		tag = SBR
+		tag = KNS
+		tag = SAT
+		tag = IRK
+		tag = BRY
+		tag = CHT
+		tag = YAK
+		tag = AMR
+		tag = OHT
+		tag = KMC
+		tag = KAZ
+		tag = KST
+		tag = HRZ
+		tag = BUH
+		tag = ISM
+		tag = PSS
+
+		tag = IZH
+		tag = GGL
+		tag = SMR
+		tag = ALT
+		tag = MGD
+		tag = OMO
+	}
+}
+
+
+GRU_GREATER_DONE = {
+	AND = {
+			has_country_flag = denmark_cored
+			has_country_flag = dutch_cored
+			has_country_flag = belgium_cored
+			has_country_flag = luxembourg_cored
+			has_country_flag = austria_cored
+			has_country_flag = bohemia_cored
+	}
+}
+
+is_VK = {
+	OR = {
+		AND = {
+			OR = {
+				has_government = totalist
+				has_government = national_populist
+			}
+			is_subject_of = GRU
+		}
+		AND = {
+			OR = {
+				has_government = totalist
+				has_government = national_populist
+			}
+			tag = GRU
+		}
+	}
+}
+
+GRU_new_internationale_eligible = {
+	has_socialist_government = yes
+	OR = {
+		has_country_leader_ideology = totalist_subtype
+		has_country_leader_ideology = radical_socialist_subtype
+		has_country_leader_ideology = authcom_subtype
+		has_country_leader_ideology = technocratic_socialism_subtype
+		has_country_leader_ideology = national_communism_subtype
+		has_country_leader_ideology = red_junta_subtype
+		has_country_leader_ideology = nazbol_subtype
+		has_country_leader_ideology = popcom_subtype
+		has_country_leader_ideology = jacobinism_subtype
+		has_country_leader_ideology = moderate_socialist_subtype
+		has_country_leader_ideology = radsoc_red_junta_subtype
+		has_country_leader_ideology = radsoc_tridemism_subtype
+		has_country_leader_ideology = socdem_democratic_socialism_subtype
+		has_country_leader_ideology = austromarxism_subtype
+		has_country_leader_ideology = socdem_tridemism_subtype
+		has_country_leader_ideology = autocratic_socialist_subtype
+		has_country_leader_ideology = hoxhaism_subtype
+		has_country_leader_ideology = ultra_hoxhaism_subtype
+		has_country_leader_ideology = agrarian_socialism_subtype
+		has_country_leader_ideology = market_socialist_subtype
+		has_country_leader_ideology = radsoc_communism_subtype
+		has_country_leader_ideology = christian_socialism_subtype
+	}
+	NOT = {
+		tag = FRA
+		tag = RUS
+		tag = JAP
+		tag = BHC
+		tag = TRM
+		is_in_faction = yes
+		is_subject = yes
+		has_government = syndicalist
+	}
+}

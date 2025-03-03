@@ -1,0 +1,107 @@
+unique_id = kaiserreduxxflavourachievements_1936
+
+ACHV_ENG_lltk = { #新王万岁
+    possible = { #是不列颠联盟
+		difficulty > 1
+		game_rules_allow_achievements = yes
+		has_any_custom_difficulty_setting = no
+ 		original_tag = ENG
+    }
+  
+    happened = { #已经选举出一名国王
+		has_country_flag = BRG_elected_king
+    }
+}
+
+ACHV_COMFRA_LON = { #新秩序
+    possible = { #是法兰西公社
+		difficulty > 1
+		game_rules_allow_achievements = yes
+		has_any_custom_difficulty_setting = no
+ 		original_tag = FRA
+    }
+  
+    happened = { #控制地块类
+		always = no
+    }
+}
+
+ACHV_COMFRA_Gamelin = { #没有大元帅，就没有新法国
+    possible = { #是法兰西公社
+		difficulty > 1
+		game_rules_allow_achievements = yes
+		has_any_custom_difficulty_setting = no
+ 		original_tag = FRA
+    }
+  
+    happened = { #组建军政府
+		has_completed_focus = FRA_military_government
+    }
+}
+
+ACHV_SRI_Imperator_Mussolini = { #
+    possible = { #
+		difficulty > 1
+		game_rules_allow_achievements = yes
+		has_any_custom_difficulty_setting = no
+ 		original_tag = SRI
+    }
+  
+    happened = { #
+		always = no
+    }
+}
+
+ACHV_FLN_dublin_to_voladivostok = { #
+    possible = { #
+		difficulty > 1
+		game_rules_allow_achievements = yes
+		has_any_custom_difficulty_setting = no
+ 		tag = FLN
+    }
+  
+    happened = { #
+		always = no
+    }
+}
+
+ACHV_KOG_dictator_death = { #拒绝死亡的独夫
+    possible = { #是刚果（布）
+		difficulty > 1
+		game_rules_allow_achievements = yes
+		has_any_custom_difficulty_setting = no
+ 		tag = KOG
+    }
+  
+    happened = { #触发萨拉查被处决事件
+		has_completed_focus = KOG_TRO_Salazar_Economics
+		has_stability < -0.5
+		has_country_flag = KOG_death_of_salazar
+    }
+}
+
+ACHV_CNT_roncesvalles = { #在龙塞斯瓦耶斯隘口的骑士
+    possible = { #是无政府工联
+		difficulty > 1
+		game_rules_allow_achievements = yes
+		has_any_custom_difficulty_setting = no
+ 		tag = CNT  
+		has_country_leader = {
+			name = "拉米罗·莱德斯马·拉莫斯"
+			ruling_only = yes
+		}      
+    }
+  
+    happened = { #完全吞并法国
+			owns_state = 16
+			owns_state = 19
+			owns_state = 31
+			owns_state = 20
+			owns_state = 21
+			owns_state = 762
+			owns_state = 14
+			owns_state = 983
+			owns_state = 15
+		NOT = { country_exists = FRA }
+    }
+}

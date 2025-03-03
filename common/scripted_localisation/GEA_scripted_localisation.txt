@@ -1,0 +1,143 @@
+defined_text = {
+	name = GEA_colonial_reform_Status
+	text = {
+		trigger = {
+			check_variable = { GEA_Progress_of_reform < 0.05 }
+			NOT = {
+				has_country_flag = GEA_bloody_ferdinand_Appointed
+			}
+		}
+		localization_key = GEA_status1
+	}
+	text = {
+		trigger = {
+			check_variable = { GEA_Progress_of_reform > 0.04 }
+			NOT = {
+				has_country_flag = GEA_bloody_ferdinand_Appointed
+			}
+		}
+		localization_key = GEA_status2
+	}
+	text = {
+		trigger = {
+			has_country_flag = GEA_bloody_ferdinand_Appointed
+		}
+		localization_key = GEA_status3
+	}
+}
+
+defined_text = {
+	name = GEA_socialist_Status
+	text = {
+		trigger = {
+			check_variable = { GEA_socialist_power < 15 }
+		}
+		localization_key = GEA_socialist_status1
+	}
+	text = {
+		trigger = {
+			check_variable = { GEA_socialist_power < 30 }
+		}
+		localization_key = GEA_socialist_status2
+	}
+	text = {
+		trigger = {
+			check_variable = { GEA_socialist_power < 50 }
+		}
+		localization_key = GEA_socialist_status3
+	}
+	text = {
+		trigger = {
+			check_variable = { GEA_socialist_power < 65 }
+		}
+		localization_key = GEA_socialist_status4
+	}
+	text = {
+		trigger = {
+			check_variable = { GEA_socialist_power < 80 }
+		}
+		localization_key = GEA_socialist_status5
+	}
+	text = {
+		trigger = {
+			check_variable = { GEA_socialist_power < 120 }
+		}
+		localization_key = GEA_socialist_status6
+	}
+	text = {
+		trigger = {
+			check_variable = { GEA_socialist_power = 0 }
+		}
+		localization_key = GEA_socialist_status7
+	}
+}
+
+defined_text = {
+	name = GEA_nationalist_Status
+	text = {
+		trigger = {
+			check_variable = { GEA_nationalist_power < 15 }
+		}
+		localization_key = GEA_socialist_status1
+	}
+	text = {
+		trigger = {
+			check_variable = { GEA_nationalist_power < 30 }
+		}
+		localization_key = GEA_socialist_status2
+	}
+	text = {
+		trigger = {
+			check_variable = { GEA_nationalist_power < 50 }
+		}
+		localization_key = GEA_socialist_status3
+	}
+	text = {
+		trigger = {
+			check_variable = { GEA_nationalist_power < 75 }
+		}
+		localization_key = GEA_socialist_status4
+	}
+	text = {
+		trigger = {
+			check_variable = { GEA_nationalist_power < 85 }
+		}
+		localization_key = GEA_socialist_status5
+	}
+	text = {
+		trigger = {
+			check_variable = { GEA_nationalist_power < 100 }
+		}
+		localization_key = GEA_socialist_status6
+	}
+	text = {
+		trigger = {
+			check_variable = { GEA_nationalist_power = 0 }
+		}
+		localization_key = GEA_socialist_status7
+	}
+}
+
+defined_text = {
+	name = GEA_Borneoloc_Status
+	text = {
+		trigger = {
+			GEA = {
+				owns_state = 333
+				owns_state = 828
+				owns_state = 334
+				owns_state = 1016
+			}
+		}
+		localization_key =  GEA_Borneo_decisions_desc2
+	}
+	text = {
+		trigger = {
+			GEA = {
+				owns_state = 333
+				owns_state = 828
+			}
+		}
+		localization_key =  GEA_Borneo_decisions_desc1
+	}
+}

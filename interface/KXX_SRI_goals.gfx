@@ -1,0 +1,325 @@
+spriteTypes = {
+	#National Europa 意社
+	spriteType = {
+		name = "GFX_goal_SRI_italian_mosley"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_italian_mosley.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SRI_syndicalist_sansepolcrist_victory"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_syndicalist_sansepolcrist_victory.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SRI_new_italy"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_new_italy.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SRI_new_people"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_new_people.png"
+	}	
+	spriteType = {		
+		name = "GFX_goal_SRI_new_red_italy"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_new_red_italy.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SRI_united_staet"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_united_staet.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SRI_peoples_state"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_peoples_state.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SRI_worker_state"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_worker_state.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SRI_rally_confederates"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_rally_confederates.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SRI_second_garibaldi_togliatti"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_second_garibaldi_togliatti.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SRI_turinian_revolution"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_turinian_revolution.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SRI_bandiera_rossa"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_bandiera_rossa.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SRI_people_front"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_people_front.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SRI_trade_union_unification"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_trade_union_unification.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SRI_mobilize_proletariat"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_mobilize_proletariat.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SRI_organize_the_communist_party"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_organize_the_communist_party.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SRI_communist_majority"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_communist_majority.png"
+	}
+	#
+	spriteType = {
+		name = "GFX_goal_SRI_steady_and_ready"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_steady_and_ready.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SRI_united_against_reaction"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_united_against_reaction.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SRI_liberation_of_peoples"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_liberation_of_peoples.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SRI_the_great_sprint_forward"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_the_great_sprint_forward.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SRI_steady_sail"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_steady_sail.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SRI_reject_totalism"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_reject_totalism.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SRI_our_united_cause"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_our_united_cause.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SRI_work_with_the_centre"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_work_with_the_centre.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SRI_open_letter"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_open_letter.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SRI_preserve_socialist_causes"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_preserve_socialist_cause.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SRI_rally_the_unions"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_rally_the_unions.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SRI_orthodox_syndicalists_reign"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_orthodox_syndicalists_reign.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SRI_moderate_victory"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_moderate_victory.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SRI_establish_united_italy"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_establish_united_italy.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SRI_join_the_confederation"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_join_the_confederation.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SRI_open_the_market_to_confederation"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_open_the_market_to_confederation.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SRI_meridionalist_institute"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_meridionalist_institute.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SRI_against_habsburg_imperialism"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_against_habsburg_imperialism.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SRI_olive_branch_to_florence"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_olive_branch_to_florence.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SRI_olive_branch_to_messogiorno"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_olive_branch_to_messogiorno.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SRI_lift_the_regulations"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_lift_the_regulations.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SRI_pursue_moderate_policy"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_pursue_moderate_policy.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SRI_pursue_social_democracy"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_pursue_social_democracy.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SRI_red_and_black_flag_waves"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_red_and_black_flag_waves.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SRI_old_enemies"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_old_enemies.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SRI_ego_and_his_own"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_ego_and_his_own.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SRI_new_enemies"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_new_enemies.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SRI_future_of_anarchism"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_future_of_anarchism.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SRI_free_the_people"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_free_the_people.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SRI_free_the_unions"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_free_the_unions.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SRI_anarchist_victory"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_anarchist_victory.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SRI_red"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_red.png"
+	}
+
+	spriteType = {
+		name = "GFX_goal_SRI_ideological_orthodoxy"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_ideological_orthodoxy.png"
+	}
+
+	spriteType = {
+		name = "GFX_goal_SRI_total_revolution"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_total_revolution.png"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_SRI_bianchi_squadrismo"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_bianchi_squadrismo.png"
+	}
+
+	spriteType = {
+		name = "GFX_goal_SRI_cult_of_mussolini"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_cult_of_mussolini.png"
+	}
+
+	spriteType = {
+		name = "GFX_goal_SRI_cult_of_bianchi"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_cult_of_bianchi.png"
+	}
+
+	spriteType = {
+		name = "GFX_goal_SRI_farmer_rossoni"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_farmer.png"
+	}
+
+	spriteType = {
+		name = "GFX_goal_SRI_catholic_ethos_rossoni"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_catholic_ethos_rossoni.png"
+	}
+
+	spriteType = {
+		name = "GFX_goal_SRI_continue_revolution_rossoni"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_continue_revolution.png"
+	}
+
+	spriteType = {
+		name = "GFX_goal_SRI_guard_farmers_rossoni"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_guard_farmers.png"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_SRI_ally_SYNDIE_rossoni"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_ally_SYNDIE_rossoni.png"
+	}
+
+	spriteType = {
+		name = "GFX_goal_SRI_ally_fasci_rossoni"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_ally_fasci_rossoni.png"
+	}
+
+	spriteType = {
+		name = "GFX_goal_SRI_ballin"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_ballin.png"
+	}
+
+	spriteType = {
+		name = "GFX_goal_SRI_reshuffle_the_scene"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_reshuffle_the_scene.png"
+	}
+
+	spriteType = {
+		name = "GFX_goal_SRI_economic_liberalization_ciano"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_economic_liberalization_ciano.png"
+	}
+
+	spriteType = {
+		name = "GFX_goal_SRI_corporatism"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_corporatism.png"
+	}
+
+	spriteType = {
+		name = "GFX_goal_SRI_ally_SYNDIE"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_ally_SYNDIE.png"
+	}
+
+	spriteType = {
+		name = "GFX_goal_SRI_ally_ANI"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_ally_ANI.png"
+	}
+
+	spriteType = {
+		name = "GFX_goal_SRI_crush_the_cringetards"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_crush_the_libtards.png"
+	}
+
+	spriteType = {
+		name = "GFX_goal_SRI_musso_the_corpse"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_musso_the_corpse.png"
+	}
+
+	spriteType = {
+		name = "GFX_goal_SRI_rossoni_the_peasant"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_rossoni_the_peasant.png"
+	}
+
+	spriteType = {
+		name = "GFX_goal_SRI_bianchi_the_militant"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_bianchi_the_militant.png"
+	}
+
+	spriteType = {
+		name = "GFX_goal_SRI_new_duce"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_new_duce.png"
+	}
+
+	spriteType = {
+		name = "GFX_goal_SRI_ciano_the_reformer"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_ciano_the_reformer.png"
+	}
+
+	spriteType = {
+		name = "GFX_goal_SRI_succession_after_musso"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_succession_after_musso.png"
+	}
+
+	spriteType = {
+		name = "GFX_goal_SRI_peoples_hierarchy"
+		texturefile = "gfx/interface/goals/NE_SRI/SRI_peoples_hierarchy.png"
+	}
+}

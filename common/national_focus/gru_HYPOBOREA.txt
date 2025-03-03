@@ -1,0 +1,368 @@
+focus_tree = {
+	id = gru_SKN
+	continuous_focus_position = { x = 2700 y = 300 }
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SKN
+		}
+	}
+	focus = {
+		id = HYPOBOREA_START
+		icon = HYPOBOREA_Start
+		x = 15
+		y = 0
+		cost = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HYPOBOREA"
+			add_ideas = HYP_HYPOBOREA1
+		}
+	}
+	focus = {
+		id = HYPOBOREA_germanize_PEOPLE
+		icon = HYP_GERMANIZE_ONE
+		relative_position_id = HYPOBOREA_START
+		x = -2
+		y = 1
+		cost = 6
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HYPOBOREA_germanize"
+			set_province_name = { id = 6050 name = GRU_name_province_6050 }
+			add_ideas = HYP_NORDMANNEN
+		}
+		prerequisite = { focus = HYPOBOREA_START  }
+	}
+	focus = {
+		id = HYPOBOREA_germanize_LAND
+		icon = HYP_GERMANIZE_TWO
+		relative_position_id = HYPOBOREA_START
+		x = -3
+		y = 2
+		cost = 6
+		available = {
+				141 = {
+					is_owned_and_controlled_by  = SKN
+				}
+				139 = {
+					is_owned_and_controlled_by  = SKN
+				}
+				138 = {
+					is_owned_and_controlled_by  = SKN
+				}	
+				124 = {
+					is_owned_and_controlled_by  = SKN
+				}
+				140 = {
+					is_owned_and_controlled_by  = SKN
+				}
+				908 = {
+					is_owned_and_controlled_by  = SKN
+				}
+				38 = {
+					is_owned_and_controlled_by  = SKN
+				}
+				778 = {
+					is_owned_and_controlled_by  = SKN
+				}
+				666 = {
+					is_owned_and_controlled_by  = SKN
+				}
+				960 = {
+					is_owned_and_controlled_by  = SKN
+				}
+				909 = {
+					is_owned_and_controlled_by  = SKN
+				}
+				145 = {
+					is_owned_and_controlled_by  = SKN
+				}
+				110 = {
+					is_owned_and_controlled_by  = SKN
+				}
+				142 = {
+					is_owned_and_controlled_by  = SKN
+				}
+				143 = {
+					is_owned_and_controlled_by  = SKN
+				}
+				144 = {
+					is_owned_and_controlled_by  = SKN
+				}
+				937 = {
+					is_owned_and_controlled_by  = SKN
+				}
+				936 = {
+					is_owned_and_controlled_by  = SKN
+				}
+				844 = {
+					is_owned_and_controlled_by  = SKN
+				}
+				148 = {
+					is_owned_and_controlled_by  = SKN
+				}
+				213 = {
+					is_owned_and_controlled_by  = SKN
+				}
+				147 = {
+					is_owned_and_controlled_by  = SKN
+				}
+				
+				722 = {
+					is_owned_and_controlled_by  = SKN
+				}
+				215 = {
+					is_owned_and_controlled_by  = SKN
+				}
+				149 = {
+					is_owned_and_controlled_by  = SKN
+				}
+				150 = {
+					is_owned_and_controlled_by  = SKN
+				}
+				111 = {
+					is_owned_and_controlled_by  = SKN
+				}
+				864 = {
+					is_owned_and_controlled_by  = SKN
+				}
+				863 = {
+					is_owned_and_controlled_by  = SKN
+				}
+				840 = {
+					is_owned_and_controlled_by  = SKN
+				}
+				865 = {
+					is_owned_and_controlled_by  = SKN
+				}
+				146 = {
+					is_owned_and_controlled_by  = SKN
+				}
+				216 = {
+					is_owned_and_controlled_by  = SKN
+				}
+				1274 = {
+					is_owned_and_controlled_by  = SKN
+				}
+				1326 = {
+					is_owned_and_controlled_by  = SKN
+				}
+				1327 = {
+					is_owned_and_controlled_by  = SKN
+				}
+				1325 = {
+					is_owned_and_controlled_by  = SKN
+				}
+				1324 = {
+					is_owned_and_controlled_by  = SKN
+				}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HYPOBOREA_germanize_LAND"
+				141 = {
+					add_core_of  = SKN
+				}
+				139 = {
+					add_core_of  = SKN
+				}
+				138 = {
+					add_core_of  = SKN
+				}	
+				124 = {
+					add_core_of  = SKN
+				}
+				140 = {
+					add_core_of  = SKN
+				}
+				908 = {
+					add_core_of  = SKN
+				}
+				38 = {
+					add_core_of  = SKN
+				}
+				778 = {
+					add_core_of  = SKN
+				}
+				666 = {
+					add_core_of  = SKN
+				}
+				960 = {
+					add_core_of  = SKN
+				}
+				909 = {
+					add_core_of  = SKN
+				}
+				145 = {
+					add_core_of  = SKN
+				}
+				110 = {
+					add_core_of  = SKN
+				}
+				142 = {
+					add_core_of  = SKN
+				}
+				143 = {
+					add_core_of  = SKN
+				}
+				144 = {
+					add_core_of  = SKN
+				}
+				937 = {
+					add_core_of  = SKN
+				}
+				936 = {
+					add_core_of  = SKN
+				}
+				844 = {
+					add_core_of  = SKN
+				}
+				148 = {
+					add_core_of  = SKN
+				}
+				213 = {
+					add_core_of  = SKN
+				}
+				147 = {
+					add_core_of  = SKN
+				}
+				722 = {
+					add_core_of  = SKN
+				}
+				215 = {
+					add_core_of  = SKN
+				}
+				1274 = {
+					add_core_of  = SKN
+				}
+				149 = {
+					add_core_of  = SKN
+				}
+				150 = {
+					add_core_of  = SKN
+				}
+				111 = {
+					add_core_of  = SKN
+				}
+				864 = {
+					add_core_of  = SKN
+				}
+				863 = {
+					add_core_of  = SKN
+				}
+				840 = {
+					add_core_of  = SKN
+				}
+				865 = {
+					add_core_of  = SKN
+				}
+				146 = {
+					add_core_of  = SKN
+				}
+				216 = {
+					add_core_of  = SKN
+				}
+				1274 = {
+					add_core_of  = SKN
+				}
+				1326 = {
+					add_core_of  = SKN
+				}
+				1327 = {
+					add_core_of  = SKN
+				}
+				1325 = {
+					add_core_of  = SKN
+				}
+				1324 = {
+					add_core_of  = SKN
+				}
+		}
+		prerequisite = { focus = HYPOBOREA_germanize_PEOPLE  }
+	}
+	focus = {
+		id = HYPOBOREA_GERMAN_SYSTEM
+		icon = NMDVP
+		relative_position_id = HYPOBOREA_START
+		x = 2
+		y = 1
+		cost = 6
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HYPOBOREA_GERMAN_SYSTEM"
+			add_ideas = GRU_volkssturm_idea
+		}
+		prerequisite = { focus = HYPOBOREA_START  }
+	}
+	focus = {
+		id = HYPOBOREA_YOUTH_ORG
+		icon = HYPOBOREA_FDJ
+		relative_position_id = HYPOBOREA_START
+		x = 3
+		y = 2
+		cost = 6
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HYPOBOREA_YOUTH_ORG"
+			add_ideas = GRU_FDJ
+		}
+		prerequisite = { focus = HYPOBOREA_GERMAN_SYSTEM  }
+	}
+	focus = {
+		id = HYPOBOREA_RR
+		icon = VK_RR
+		relative_position_id = HYPOBOREA_START
+		x = 0
+		y = 1
+		cost = 6
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HYPOBOREA_RR"
+			add_ideas = GRU_guard
+		}
+		prerequisite = { focus = HYPOBOREA_START  }
+	}
+	focus = {
+		id = HYPOBOREA_LEBENSBORN
+		icon = GRU_NM_family
+		relative_position_id = HYPOBOREA_START
+		x = -1
+		y = 2
+		cost = 6
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HYPOBOREA_LEBENSBORN"
+			add_ideas = GRU_NW_FAMILY_idea
+		}
+		prerequisite = { focus = HYPOBOREA_germanize_PEOPLE  }
+		prerequisite = { focus = HYPOBOREA_GERMAN_SYSTEM  }
+	}
+	focus = {
+		id = HYPOBOREA_NATURE_PROTECTION
+		icon = Nature_protec
+		relative_position_id = HYPOBOREA_START
+		x = 1
+		y = 2
+		cost = 6
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HYPOBOREA_RR"
+			add_ideas = HYP_NATURE
+		}
+		prerequisite = { focus = HYPOBOREA_germanize_PEOPLE  }
+		prerequisite = { focus = HYPOBOREA_GERMAN_SYSTEM  }
+	}
+	focus = {
+		id = HYPOBOREA_THE_GREAT
+		icon = HYP_THE_GREAT
+		relative_position_id = HYPOBOREA_START
+		x = 0
+		y = 3
+		cost = 6
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HYPOBOREA_RR"
+			swap_ideas = {
+							remove_idea = HYP_HYPOBOREA1
+							add_idea = HYP_HYPOBOREA2
+						}
+		}
+		prerequisite = { focus = HYPOBOREA_germanize_LAND  }
+		prerequisite = { focus = HYPOBOREA_YOUTH_ORG  }
+		prerequisite = { focus = HYPOBOREA_LEBENSBORN  }
+		prerequisite = { focus = HYPOBOREA_NATURE_PROTECTION  }
+	}
+}

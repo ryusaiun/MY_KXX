@@ -1,0 +1,26 @@
+spriteTypes = {
+	spriteType  = {
+		name = "GFX_MAG_heydrich"
+		texturefile = "gfx/event_pictures/GFX_MAG_heydrich.png"
+	}	
+	spriteType  = {
+		name = "GFX_MAG_cayla"
+		texturefile = "gfx/event_pictures/GFX_MAG_cayla.png"
+	}	
+	spriteType  = {
+		name = "GFX_MAG_travel"
+		texturefile = "gfx/event_pictures/GFX_MAG_travel.png"
+	}
+	spriteType  = {
+		name = "GFX_MAG_gille"
+		texturefile = "gfx/event_pictures/GFX_MAG_gille.png"
+	}
+	spriteType  = {
+		name = "GFX_MAG_truth"
+		texturefile = "gfx/event_pictures/GFX_MAG_truth.png"
+	}
+	spriteType  = {
+		name = "GFX_MAG_thyssen"
+		texturefile = "gfx/event_pictures/GFX_MAG_thyssen.png"
+	}
+}

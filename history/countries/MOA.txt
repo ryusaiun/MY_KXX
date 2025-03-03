@@ -1,0 +1,220 @@
+capital = 965
+
+oob = "MOA_1936"
+
+set_research_slots = 5
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	basic_train = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_military_police = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	#basic_heavy_tank = 1  # PLACEHOLDER
+	#basic_medium_tank = 1 # PLACEHOLDER
+	early_fighter = 1
+	fighter1 = 1
+	early_bomber = 1
+	strategic_bomber1 = 1
+	naval_bomber1 = 1
+	mass_assault = 1
+	fleet_in_being = 1
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+	}
+}
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_submarine = 1
+		basic_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		early_battlecruiser = 1
+		transport = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		mtg_transport = 1
+		basic_battery = 1
+		basic_torpedo = 1
+	}
+}
+
+add_ideas = limited_conscription
+add_ideas = limited_exports
+add_ideas = war_economy
+
+set_politics = {
+	ruling_party = totalist
+	elections_allowed = no
+}
+set_popularities = {
+	totalist = 100
+}
+set_party_name = {
+	ideology = totalist
+	long_name = GRU_party_38_long
+	name = GRU_party_38
+}
+create_country_leader = {
+	name = GRU_Hans_Huttig
+	desc = "POLITICS_HUTTIG_DESC"
+    picture = "gfx/leaders/GRU/MOA_Hans_Huttig.png"
+	expire = "1.1.1"
+	ideology = germanic_socialism_subtype
+}
+
+create_field_marshal = {
+	name = GRU_general_Hans_Huttig
+	portrait_path = "gfx/leaders/MAF/MAF_Hans_Huttig.png"
+	traits = { politically_connected old_guard }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = GRU_general_Sepp_Dietrich
+	portrait_path = "gfx/leaders/MAF/Portrait_Mittelafrika_Sepp_Dietrich.png"
+	traits = { trait_reckless media_personality panzer_leader }
+	skill = 3
+	attack_skill = 5
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = GRU_general_Theodor_Eicke
+	portrait_path = "gfx/leaders/MAF/Portrait_Mittelafrika_Theodor_Eicke.png"
+	traits = { harsh_leader armor_officer }
+	skill = 3
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 4
+}
+create_corps_commander = {
+	name = GRU_general_Fritz_Klingenberg
+	portrait_path = "gfx/leaders/MAF/Portrait_Mittelafrika_Fritz_Klingenberg.png"
+	traits = { politically_connected commando }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = GRU_general_Felix_Steiner
+	portrait_path = "gfx/leaders/MAF/Portrait_Mittelafrika_Felix_Steiner.png"
+	traits = { war_hero politically_connected brilliant_strategist }
+	skill = 3
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 4
+}
+create_corps_commander = {
+	name = GRU_general_Martin_Bormann
+	portrait_path = "gfx/leaders/COG/Portrait_COG_Martin_Bormann.png"
+	traits = { politically_connected }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = GRU_general_Hans_Frank
+	portrait_path = "gfx/leaders/MAF/Portrait_Mittelafrika_Hans_Frank.png"
+	traits = { politically_connected }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = GRU_general_Siegfried_Muller
+	portrait_path = "gfx/leaders/COG/Portrait_COG_Siegfried_Muller.png"
+	traits = { politically_connected }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = GRU_general_Walther_von_Brauchitsch
+	portrait_path = "gfx/leaders/MAF/Portrait_Mittelafrika_Walther_von_Brauchitsch.png"
+	traits = { cavalry_leader career_officer expert_delegator }
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+}
+create_corps_commander = { 
+	name = GRU_general_Hermann_Fegelein
+	portrait_path = "gfx/leaders/COG/Portrait_COG_Hermann_Fegelein.png"
+	traits = { politically_connected }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 0
+	planning_skill = 1
+	logistics_skill = 0
+}
+create_corps_commander = {
+	name = GRU_general_Herbert_Gille
+	portrait_path = "gfx/leaders/MAF/Portrait_MAF_Herbert_Gille.png"
+	traits = { politically_connected war_hero career_officer }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = { 
+	name = GRU_general_Wilhelm_Mohnke
+	portrait_path = "gfx/leaders/COG/Portrait_COG_Wilhelm_Mohnke.png"
+	traits = { politically_connected harsh_leader }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 0
+	planning_skill = 1
+	logistics_skill = 0
+}

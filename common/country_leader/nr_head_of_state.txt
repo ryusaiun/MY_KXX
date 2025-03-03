@@ -1,0 +1,63 @@
+#Russia rework
+
+leader_traits = {
+	###Russia
+	Supreme_party_chairman = {
+		random = no
+		political_power_gain = 0.12
+		political_power_factor = 0.12
+		stability_factor = 0.1
+	}
+	Generalissimo_of_Spain = {
+		random = no
+		political_power_gain = 0.12
+		army_defence_factor = 0.15
+		army_attack_factor = 0.15
+		stability_factor = 0.1
+	}
+	The_supreme_king = {
+		random = no
+		political_power_gain = 0.12
+		political_power_factor = 0.12
+		stability_factor = 0.05
+		production_factory_efficiency_gain_factor = 0.15
+	}
+	The_Fuhrer_of_all_Ukrainians = {
+		random = no
+		political_power_gain = 0.12
+		war_support_factor = 0.07
+		army_morale_factor = 0.07
+	}
+	Governor_of_Hesse = {
+		random = no
+		political_power_gain = 0.2
+		consumer_goods_factor = -0.35
+		stability_factor = 0.05
+		local_building_slots_factor = 0.3
+	}
+	The_peoples_president = {
+		random = no
+		stability_factor = 0.05
+		compliance_gain = 0.5
+	}
+	The_Savior_of_the_Revolution = {
+		random = no
+		stability_factor = 0.05
+		production_speed_buildings_factor = 0.15
+		political_power_gain = 0.2
+		army_core_defence_factor = 0.15
+		army_core_attack_factor = 0.15
+	}
+	Unquestionable_Federal_President = {
+		random = no
+		stability_factor = 0.05
+		war_support_factor = 0.05
+		production_factory_efficiency_gain_factor = 0.2
+		army_defence_factor = 0.1
+		army_attack_factor = 0.1
+	}
+	gru_01 = {
+		random = no
+		command_power_gain = 5
+	}
+}

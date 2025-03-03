@@ -1,0 +1,107 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_goebb_volkssturm"
+		texturefile = "gfx/interface/ideas_headers/goebb_volkssturm.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_goebb_volkssturm_2"
+		texturefile = "gfx/interface/ideas_headers/tooltips/goebb_volkssturm_tt.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_goebb_stasi"
+		texturefile = "gfx/interface/ideas_headers/goebb_stasi.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_goebb_ufa"
+		texturefile = "gfx/interface/ideas_headers/goebb_ufa.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_goebb_fdj"
+		texturefile = "gfx/interface/ideas_headers/goebb_fdj.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_goebb_blackbook"
+		texturefile = "gfx/interface/ideas_headers/goebb_blackbook.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_goebb_breitspur"
+		texturefile = "gfx/interface/ideas_headers/goebb_breitspur.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_goebb_breitspur_tt"
+		texturefile = "gfx/interface/ideas_headers/tooltips/goebb_breitspur_tt.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_goebb_rr"
+		texturefile = "gfx/interface/ideas_headers/goebb_rr.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_goebb_lager"
+		texturefile = "gfx/interface/ideas_headers/goebb_lager.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_goebb_economic"
+		texturefile = "gfx/interface/ideas_headers/goebb_economic.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_goebb_industry"
+		texturefile = "gfx/interface/ideas_headers/goebb_industry.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_architecture"
+		texturefile = "gfx/interface/ideas_headers/architecture.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_goebb_MFSP"
+		texturefile = "gfx/interface/ideas_headers/goebb_MFSP.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_goebb_KDF"
+		texturefile = "gfx/interface/ideas_headers/goebb_KDF.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_goebb_new_germany"
+		texturefile = "gfx/interface/ideas_headers/goebb_new_germany.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_goebb_pol_off"
+		texturefile = "gfx/interface/ideas_headers/goebb_pol_off.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_goebb_oknvh"
+		texturefile = "gfx/interface/ideas_headers/goebb_oknvh.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_goebb_oknlw"
+		texturefile = "gfx/interface/ideas_headers/goebb_oknlw.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_goebb_oknvm"
+		texturefile = "gfx/interface/ideas_headers/goebb_oknvm.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_goebb_lebens"
+		texturefile = "gfx/interface/ideas_headers/tooltips/goebb_lebens_tt.png"
+		legacy_lazy_load = no
+	}
+}

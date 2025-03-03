@@ -1,0 +1,903 @@
+### Bosnia Ideas ###
+
+ideas = {
+	country = {
+		BOS_the_brilliance_of_democracy = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_the_brilliance_of_democracy" }
+			name = BOS_the_brilliance_of_democracy
+			picture = generic_social_democracy
+			allowed = { always = no }
+			modifier = {
+			political_power_gain = 0.4
+			stability_factor = 0.15
+			war_support_factor = 0.1
+			production_speed_buildings_factor = 0.1
+			}
+		}
+		BOS_patriotic_unity_and_unity = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_patriotic_unity_and_unity" }
+			name = BOS_patriotic_unity_and_unity
+			picture = generic_ultranationalism
+			allowed = { always = no }
+			modifier = {
+			political_power_gain = 0.4
+			stability_factor = 0.15
+			war_support_factor = 0.1
+			production_speed_buildings_factor = 0.1
+			}
+		}
+		BOS_patriotic_zeal = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_patriotic_zeal" }
+			name = BOS_patriotic_zeal
+			picture = French_Revanchism_idea
+			allowed = { always = no }
+			modifier = {
+			army_core_attack_factor = 0.2
+			army_core_defence_factor = 0.2
+			conscription = 0.03
+			industrial_capacity_factory = 0.15
+			}
+		}
+		BOS_Islamic_re_education = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_Islamic_re_education" }
+			name = BOS_Islamic_re_education
+			picture = TUR_golden_age_of_islam
+			allowed = { always = no }
+			modifier = {
+			army_core_attack_factor = 0.1
+			army_core_defence_factor = 0.1
+			army_attack_factor = 0.1
+			army_defence_factor = 0.1
+			}
+		}
+		BOS_Islamic_re_education_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_Islamic_re_education_1" }
+			name = BOS_Islamic_re_education_1
+			picture = TUR_golden_age_of_islam
+			allowed = { always = no }
+			modifier = {
+			army_core_attack_factor = 0.1
+			army_core_defence_factor = 0.1
+			army_attack_factor = 0.1
+			army_defence_factor = 0.1
+			political_power_gain = 0.25
+			stability_weekly = 0.002
+			war_support_weekly = 0.002
+			}
+		}
+		BOS_Islamic_re_education_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_Islamic_re_education_2" }
+			name = BOS_Islamic_re_education_2
+			picture = TUR_golden_age_of_islam
+			allowed = { always = no }
+			modifier = {
+			army_core_attack_factor = 0.15
+			army_core_defence_factor = 0.15
+			army_attack_factor = 0.15
+			army_defence_factor = 0.15
+			political_power_gain = 0.3
+			stability_weekly = 0.004
+			war_support_weekly = 0.004
+			}
+		}
+		BOS_Islamic_re_education_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_Islamic_re_education_3" }
+			name = BOS_Islamic_re_education_3
+			picture = TUR_golden_age_of_islam
+			allowed = { always = no }
+			modifier = {
+			army_core_attack_factor = 0.15
+			army_core_defence_factor = 0.15
+			army_attack_factor = 0.15
+			army_defence_factor = 0.15
+			political_power_gain = 0.3
+			stability_weekly = 0.005
+			war_support_weekly = 0.005
+			}
+			targeted_modifier = {
+				tag = SER
+				attack_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = SER
+				defense_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = ALB
+				attack_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = ALB
+				defense_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = BUL
+				attack_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = BUL
+				defence_bonus_against = 0.05
+			}
+		}
+		BOS_Islamic_re_education_4 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_Islamic_re_education_4" }
+			name = BOS_Islamic_re_education_4
+			picture = TUR_golden_age_of_islam
+			allowed = { always = no }
+			modifier = {
+			army_core_attack_factor = 0.2
+			army_core_defence_factor = 0.2
+			army_attack_factor = 0.2
+			army_defence_factor = 0.2
+			political_power_gain = 0.35
+			stability_weekly = 0.005
+			war_support_weekly = 0.005
+			}
+			targeted_modifier = {
+				tag = SER
+				attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = SER
+				defense_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = ALB
+				attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = ALB
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = BUL
+				attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = BUL
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = HUN
+				attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = HUN
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = ROM
+				attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = ROM
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = CRO
+				attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = CRO
+				defense_bonus_against = 0.1
+			}
+		}
+		BOS_Islamic_re_education_5 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_Islamic_re_education_5" }
+			name = BOS_Islamic_re_education_5
+			picture = TUR_golden_age_of_islam
+			allowed = { always = no }
+			modifier = {
+			army_core_attack_factor = 0.2
+			army_core_defence_factor = 0.2
+			army_attack_factor = 0.2
+			army_defence_factor = 0.2
+			political_power_gain = 0.35
+			stability_weekly = 0.005
+			war_support_weekly = 0.005
+			industrial_capacity_factory = 0.2
+			production_factory_max_efficiency_factor = 0.2
+			production_factory_efficiency_gain_factor = 0.2
+			production_speed_buildings_factor = 0.2
+			research_speed_factor = 0.2
+			}
+			targeted_modifier = {
+				tag = SER
+				attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = SER
+				defense_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = ALB
+				attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = ALB
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = BUL
+				attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = BUL
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = HUN
+				attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = HUN
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = ROM
+				attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = ROM
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = CRO
+				attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = CRO
+				defense_bonus_against = 0.1
+			}
+		}
+		BOS_Islamic_identity = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_Islamic_identity" }
+			name = BOS_Islamic_identity
+			picture = TUR_golden_age_of_islam
+			allowed = { always = no }
+			modifier = {
+			army_attack_factor = 0.05
+			army_defence_factor = 0.05
+			army_speed_factor = 0.05
+			planning_speed = 0.05
+			max_planning = 0.1
+			}
+			targeted_modifier = {
+				tag = TUR
+				attack_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = TUR
+				defense_bonus_against = 0.05
+			}
+		}
+		BOS_Islamic_identity_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_Islamic_identity_1" }
+			name = BOS_Islamic_identity_1
+			picture = TUR_golden_age_of_islam
+			allowed = { always = no }
+			modifier = {
+			army_attack_factor = 0.05
+			army_defence_factor = 0.05
+			army_speed_factor = 0.05
+			planning_speed = 0.05
+			max_planning = 0.1
+			}
+			targeted_modifier = {
+				tag = TUR
+				attack_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = TUR
+				defense_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = JBS
+				attack_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = EGY
+				attack_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = SAU
+				attack_bonus_against = 0.05
+			}
+		}
+		BOS_Islamic_identity_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_Islamic_identity_2" }
+			name = BOS_Islamic_identity_2
+			picture = TUR_golden_age_of_islam
+			allowed = { always = no }
+			modifier = {
+			army_attack_factor = 0.07
+			army_defence_factor = 0.07
+			army_speed_factor = 0.07
+			planning_speed = 0.1
+			max_planning = 0.2
+			breakthrough_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = TUR
+				attack_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = TUR
+				defense_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = JBS
+				attack_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = JBS
+				defense_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = EGY
+				attack_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = EGY
+				defense_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = SAU
+				attack_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = SAU
+				defense_bonus_against = 0.05
+			}
+		}
+		BOS_Democracy_and_socialism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_Democracy_and_socialism" }
+			name = BOS_Democracy_and_socialism
+			picture = generic_radical_socialist_revolution
+			allowed = { always = no }
+			modifier = {
+			syndicalist_drift = 0.01
+			radical_socialist_drift = 0.01
+			social_democrat_drift = 0.03
+			industrial_capacity_factory = 0.05
+			}
+		}
+		BOS_Democracy_and_socialism_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_Democracy_and_socialism_1" }
+			name = BOS_Democracy_and_socialism_1
+			picture = generic_radical_socialist_revolution
+			allowed = { always = no }
+			modifier = {
+			syndicalist_drift = 0.01
+			radical_socialist_drift = 0.01
+			social_democrat_drift = 0.03
+			industrial_capacity_factory = 0.2
+			production_factory_efficiency_gain_factor = 0.2
+			}
+		}
+		BOS_Democracy_and_socialism_syn_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_Democracy_and_socialism_syn_1" }
+			name = BOS_Democracy_and_socialism_syn_1
+			picture = generic_radical_socialist_revolution
+			allowed = { always = no }
+			modifier = {
+			army_attack_factor = 0.2
+			army_defence_factor = 0.2
+			army_speed_factor = 0.25
+			army_morale_factor = 0.3
+			army_org_factor = 0.2
+			army_core_attack_factor = 0.2
+			army_core_defence_factor = 0.2
+			supply_consumption_factor = -0.2
+			attrition = -0.2
+			syndicalist_drift = 0.03
+			radical_socialist_drift = 0.01
+			social_democrat_drift = 0.01
+			industrial_capacity_factory = 0.3
+			production_factory_efficiency_gain_factor = 0.3
+			}
+		}
+		BOS_Social_welfare = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_Social_welfare" }
+			name = BOS_Social_welfare
+			picture = HOL_welfare_state
+			allowed = { always = no }
+			modifier = {
+			political_power_gain = -0.4
+			industrial_capacity_factory = 0.25
+			production_speed_buildings_factor = 0.2
+			production_factory_max_efficiency_factor = 0.2
+			}
+		}
+		BOS_Workers_movement = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_Workers_movement" }
+			name = BOS_Workers_movement
+			picture = generic_syndicalist_worker
+			allowed = { always = no }
+			modifier = {
+			stability_weekly = - 1.4
+			political_power_gain = -0.4
+			syndicalist_drift = 0.03
+			radical_socialist_drift = 0.02
+			social_democrat_drift = 0.01
+			}
+		}
+		BOS_Workers_movement_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_Workers_movement_1" }
+			name = BOS_Workers_movement_1
+			picture = generic_syndicalist_worker
+			allowed = { always = no }
+			modifier = {
+			stability_factor = 0.05
+			industrial_capacity_factory = 0.15
+			production_speed_buildings_factor = 0.15
+			political_power_gain = -0.4
+			syndicalist_drift = 0.03
+			radical_socialist_drift = 0.02
+			social_democrat_drift = 0.02
+			}
+		}
+		BOS_Guided_industrial_policy = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_Guided_industrial_policy" }
+			name = BOS_Guided_industrial_policy
+			picture = agro_industrial_army
+			allowed = { always = no }
+			modifier = {
+			production_speed_arms_factory_factor = 0.2
+			production_speed_industrial_complex_factor = 0.3
+			production_speed_infrastructure_factor = 0.3
+			}
+		}
+		BOS_Guided_industrial_policy_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_Guided_industrial_policy_1" }
+			name = BOS_Guided_industrial_policy_1
+			picture = agro_industrial_army
+			allowed = { always = no }
+			modifier = {
+			production_speed_arms_factory_factor = 0.2
+			production_speed_industrial_complex_factor = 0.5
+			production_speed_infrastructure_factor = 0.5
+			}
+		}
+		BOS_big_federal = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_big_federal" }
+			name = BOS_big_federal
+			picture = federal_education_administration
+			allowed = { always = no }
+			modifier = {
+			stability_factor = 0.07
+			political_power_gain = 0.02
+			command_power_gain = 0.02
+			conscription_factor = 0.02
+			}
+		}
+		BOS_Nationals_are_in_progress = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_Nationals_are_in_progress" }
+			name = BOS_Nationals_are_in_progress
+			picture = MAF_disgruntled_natives
+			allowed = { always = no }
+			modifier = {
+			social_liberal_drift = 0.05
+			production_speed_buildings_factor = 0.2
+			}
+		}
+		BOS_Nationals_are_in_progress_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_Nationals_are_in_progress_1" }
+			name = BOS_Nationals_are_in_progress_1
+			picture = MAF_disgruntled_natives
+			allowed = { always = no }
+			modifier = {
+			social_liberal_drift = 0.05
+			production_speed_buildings_factor = 0.2
+			industrial_capacity_factory = 0.15
+			line_change_production_efficiency_factor = 0.05
+			}
+		}
+		BOS_All_in_one = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_All_in_one" }
+			name = BOS_All_in_one
+			picture = farmer_labor_alliance
+			allowed = { always = no }
+			modifier = {
+			stability_factor = 0.05
+			war_support_factor = 0.07
+			conscription_factor = 0.15
+			production_speed_buildings_factor = 0.2
+			}
+		}
+		BOS_Community_autonomy = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_Community_autonomy" }
+			name = BOS_Community_autonomy
+			picture = WCC_mormon_autonomy
+			allowed = { always = no }
+			modifier = {
+			political_power_gain = 0.03
+			conscription = 0.1
+			stability_factor = 0.03
+			}
+		}
+		BOS_Continuing_the_Flame_of_Freedom = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_Continuing_the_Flame_of_Freedom" }
+			name = BOS_Continuing_the_Flame_of_Freedom
+			picture = liberal_welfare_1
+			allowed = { always = no }
+			modifier = {
+			market_liberal_drift = 0.05
+			local_factories = 0.1
+			}
+		}
+		BOS_Liberty_bells = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_Liberty_bells" }
+			name = BOS_Liberty_bells
+			picture = NFA_liberation_army
+			allowed = { always = no }
+			modifier = {
+			market_liberal_drift = 0.02
+			production_speed_buildings_factor = 0.2
+			consumer_goods_factor = 0.05
+			}
+		}
+		BOS_Liberty_bells_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_Liberty_bells_1" }
+			name = BOS_Liberty_bells_1
+			picture = NFA_liberation_army
+			allowed = { always = no }
+			modifier = {
+			market_liberal_drift = 0.02
+			production_speed_buildings_factor = 0.4
+			consumer_goods_factor = 0.25
+			stability_factor = 0.1
+			}
+		}
+		BOS_The_economy_is_fully_open = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_The_economy_is_fully_open" }
+			name = BOS_The_economy_is_fully_open
+			picture = liberal_welfare_2
+			allowed = { always = no }
+			modifier = {
+			local_factories = 0.2
+			consumer_goods_factor = 0.15
+			}
+		}
+		BOS_The_economy_is_fully_open_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_The_economy_is_fully_open_1" }
+			name = BOS_The_economy_is_fully_open_1
+			picture = liberal_welfare_2
+			allowed = { always = no }
+			modifier = {
+			local_factories = 0.2
+			consumer_goods_factor = 0.3
+			production_speed_industrial_complex_factor = 0.5
+			}
+		}
+		BOS_The_economy_is_fully_open_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_The_economy_is_fully_open_2" }
+			name = BOS_The_economy_is_fully_open_2
+			picture = liberal_welfare_2
+			allowed = { always = no }
+			modifier = {
+			local_factories = 0.5
+			consumer_goods_factor = 0.2
+			production_speed_industrial_complex_factor = 1
+			}
+		}
+		BOS_trade = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_trade" }
+			name = BOS_trade
+			picture = generic_trade
+			allowed = { always = no }
+			modifier = {
+			consumer_goods_factor = -0.1
+			production_speed_industrial_complex_factor = 0.2
+			}
+		}
+		BOS_Creators_first = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_Creators_first" }
+			name = BOS_Creators_first
+			picture = Worksharingplan
+			allowed = { always = no }
+			modifier = {
+			production_speed_buildings_factor  = 0.3
+			production_factory_max_efficiency_factor = 0.3
+			production_factory_efficiency_gain_factor = 0.3
+			consumer_goods_factor = 0.2
+			}
+		}
+		BOS_army_artillery = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_army_artillery" }
+			name = BOS_army_artillery
+			picture = GEN_army_artillery
+			allowed = { always = no }
+			modifier = {
+			army_armor_attack_factor = 0.3
+			breakthrough_factor = 0.3
+			army_attack_factor = 0.1
+			}
+		}
+		BOS_Muslim_dominant = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_Muslim_dominant" }
+			name = BOS_Muslim_dominant
+			picture = EGY_egyptian_islamic_democracy
+			allowed = { always = no }
+			modifier = {
+			stability_factor = -0.05
+			political_power_gain = 0.2
+			}
+		}
+		BOS_Muslim_dominant_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_Muslim_dominant_1" }
+			name = BOS_Muslim_dominant_1
+			picture = EGY_egyptian_islamic_democracy
+			allowed = { always = no }
+			modifier = {
+			stability_factor = 0.03
+			political_power_gain = 0.2
+			industrial_capacity_factory = 0.15
+			consumer_goods_factor = -0.05
+			}
+		}
+		BOS_National_identity = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_National_identity" }
+			name = BOS_National_identity
+			picture = SAF_native_service
+			allowed = { always = no }
+			modifier = {
+			political_power_gain = 0.2
+			stability_factor = 0.07
+			war_support_factor = 0.05
+			compliance_growth = 0.002
+			}
+		}
+		BOS_Modern_Halal_Thought = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_Modern_Halal_Thought" }
+			name = BOS_Modern_Halal_Thought
+			picture = TUR_golden_age_of_islam
+			allowed = { always = no }
+			modifier = {
+			production_speed_buildings_factor = 0.15
+			production_factory_efficiency_gain_factor = 0.15
+			consumer_goods_factor = -0.05
+			}
+		}
+		BOS_Modern_Halal_Thought_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_Modern_Halal_Thought_1" }
+			name = BOS_Modern_Halal_Thought_1
+			picture = TUR_golden_age_of_islam
+			allowed = { always = no }
+			modifier = {
+			stability_factor = 0.1
+			production_speed_buildings_factor = 0.25
+			production_factory_efficiency_gain_factor = 0.25
+			consumer_goods_factor = -0.1
+			}
+		}
+		BOS_Values_advocacy = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_Values_advocacy" }
+			name = BOS_Values_advocacy
+			picture = generic_traditional_values
+			allowed = { always = no }
+			modifier = {
+			consumer_goods_factor = -0.2
+			production_speed_buildings_factor = 0.3
+			industrial_capacity_factory = 0.2
+			political_power_factor = 0.04
+			}
+		}
+		BOS_Croatiaism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_Croatiaism" }
+			name = BOS_Croatiaism
+			picture = GEN_army_core
+			allowed = { always = no }
+			modifier = {
+			army_attack_factor = 0.1
+			army_core_defence_factor = 0.1
+			army_defence_factor = 0.1
+			war_support_weekly = 0.005
+			}
+		}
+		BOS_Croatiaism2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_Croatiaism2" }
+			name = BOS_Croatiaism2
+			picture = GEN_army_core
+			allowed = { always = no }
+			modifier = {
+			army_attack_factor = 0.1
+			army_core_defence_factor = 0.1
+			army_defence_factor = 0.1
+			war_support_weekly = 0.005
+			land_reinforce_rate = 0.2
+			breakthrough_factor = 0.15
+			no_supply_grace = 24
+			conscription = 0.05
+			}
+		}
+		BOS_Croatiaism3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_Croatiaism3" }
+			name = BOS_Croatiaism3
+			picture = GEN_army_core
+			allowed = { always = no }
+			modifier = {
+			army_attack_factor = 0.15
+			army_core_defence_factor = 0.1
+			army_defence_factor = 0.15
+			war_support_weekly = 0.005
+			stability_factor = 0.005
+			land_reinforce_rate = 0.25
+			breakthrough_factor = 0.2
+			no_supply_grace = 24
+			conscription = 0.1
+			attrition = -0.2
+			}
+		}
+		BOS_Croatiaism4 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_Croatiaism4" }
+			name = BOS_Croatiaism4
+			picture = GEN_army_core
+			allowed = { always = no }
+			modifier = {
+			army_attack_factor = 0.15
+			army_core_defence_factor = 0.1
+			army_defence_factor = 0.15
+			war_support_weekly = 0.005
+			stability_factor = 0.005
+			land_reinforce_rate = 0.25
+			breakthrough_factor = 0.2
+			no_supply_grace = 24
+			conscription = 0.1
+			attrition = -0.2
+			industrial_capacity_factory = 0.2
+			production_speed_buildings_factor = 0.2
+			industry_repair_factor = 0.25
+			production_speed_arms_factory_factor = 0.2
+			}
+		}
+		BOS_protectionism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_protectionism" }
+			name = BOS_protectionism
+			picture = GEN_army_doctrine_def
+			allowed = { always = no }
+			modifier = {
+			stability_weekly = 0.005
+			army_core_defence_factor = 0.1
+			drift_defence_factor = 1
+			political_power_factor = 0.3
+			}
+		}
+		BOS_protectionism2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_protectionism2" }
+			name = BOS_protectionism2
+			picture = GEN_army_doctrine_def
+			allowed = { always = no }
+			modifier = {
+			stability_weekly = 0.005
+			army_core_defence_factor = 0.1
+			drift_defence_factor = 1
+			political_power_factor = 0.5
+			political_power_gain = 0.5
+			command_power_gain = 0.5
+			max_command_power = 5000
+			}
+		}
+		BOS_protectionism3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_protectionism3" }
+			name = BOS_protectionism3
+			picture = GEN_army_doctrine_def
+			allowed = { always = no }
+			modifier = {
+			stability_weekly = 0.007
+			army_core_defence_factor = 0.15
+			war_support_factor = 0.1
+			resistance_target = -0.2
+			mobilization_speed = 0.5
+			army_artillery_defence_factor = 0.1
+			drift_defence_factor = 1
+			political_power_factor = 0.5
+			political_power_gain = 0.7
+			command_power_gain = 0.7
+			max_command_power = 5000
+			defensive_war_stability_factor = 0.25
+			}
+		}
+		BOS_Revolutionary_Council = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_Revolutionary_Council" }
+			name = BOS_Revolutionary_Council
+			picture = red_militias
+			allowed = { always = no }
+			modifier = {
+			army_attack_factor = 0.1
+			army_defence_factor = 0.15
+			political_power_factor = 0.2
+			political_power_gain = 0.5
+			}
+		}
+		BOS_Revolutionary_Council2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_Revolutionary_Council2" }
+			name = BOS_Revolutionary_Council2
+			picture = red_militias
+			allowed = { always = no }
+			modifier = {
+			army_attack_factor = 0.1
+			army_defence_factor = 0.15
+			political_power_factor = 0.2
+			political_power_gain = 0.5
+			army_leader_start_level = 2
+			military_leader_cost_factor = -0.5
+			recon_factor = 0.5
+			army_org_factor = 0.2
+			}
+		}
+		BOS_Revolutionary_Council3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_Revolutionary_Council3" }
+			name = BOS_Revolutionary_Council3
+			picture = red_militias
+			allowed = { always = no }
+			modifier = {
+			army_attack_factor = 0.15
+			army_defence_factor = 0.2
+			political_power_factor = 0.3
+			political_power_gain = 0.7
+			army_leader_start_level = 2
+			military_leader_cost_factor = -0.5
+			recon_factor = 0.5
+			army_org_factor = 0.25
+			}
+		}
+		BOS_The_revolution_continues = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_The_revolution_continues" }
+			name = BOS_The_revolution_continues
+			picture = ALB_cultural_ideological_revolution
+			allowed = { always = no }
+			modifier = {
+			army_core_attack_factor = 0.15
+			army_core_attack_factor = 0.15
+			industrial_capacity_factory = 0.2
+			line_change_production_efficiency_factor = 0.15
+			production_factory_max_efficiency_factor = 0.15
+			production_factory_efficiency_gain_factor = 0.15
+			}
+		}
+		BOS_The_revolution_continues2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_The_revolution_continues2" }
+			name = BOS_The_revolution_continues2
+			picture = ALB_cultural_ideological_revolution
+			allowed = { always = no }
+			modifier = {
+			army_core_attack_factor = 0.15
+			army_core_attack_factor = 0.15
+			industrial_capacity_factory = 0.25
+			line_change_production_efficiency_factor = 0.2
+			production_factory_max_efficiency_factor = 0.2
+			production_factory_efficiency_gain_factor = 0.2
+			production_speed_buildings_factor = 0.1
+			}
+		}
+		BOS_Normativism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_Normativism" }
+			name = BOS_Normativism
+			picture = generic_totalist_revolution
+			allowed = { always = no }
+			modifier = {
+			conscription = 0.05
+			conscription_factor = 0.2
+			mobilization_speed = 0.25
+			breakthrough_factor = 0.1
+			war_support_weekly = 0.005
+			}
+		}
+		BOS_Normativism2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_Normativism2" }
+			name = BOS_Normativism
+			picture = generic_totalist_revolution
+			allowed = { always = no }
+			modifier = {
+			conscription = 0.07
+			conscription_factor = 0.2
+			mobilization_speed = 0.25
+			breakthrough_factor = 0.15
+			supply_consumption_factor = -0.1
+			org_loss_when_moving = -0.1
+			war_support_weekly = 0.005
+			}
+		}
+	}
+}

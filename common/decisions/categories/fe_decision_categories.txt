@@ -1,0 +1,102 @@
+FE_politics_cat = {
+	
+	icon = GFX_decision_cat_join_fra
+	allowed = {
+		tag= FIN
+	}
+	visible = {
+		has_completed_focus = FIN_pharaoh_of_finland
+		NOT = { 
+			{ has_country_flag = fin_CAP } 
+		}
+	} 
+	visible_when_empty = no
+	priority = 30
+}
+
+FE_league_solar_decisions_cat = {
+	
+	icon = GFX_decision_cat_join_fra
+	allowed = {
+		tag= FIN
+	}
+	visible = {
+		has_completed_focus = FIN_french_vdohnoveniye
+	} 
+	visible_when_empty = yes
+	priority = 30
+}
+
+FE_titans_cat = {
+	
+	icon = GFX_decision_cat_join_fra
+	picture = GFX_decision_cat_picture_build_titans
+	allowed = {
+		tag= FIN
+	}
+	visible = {
+		has_completed_focus = FIN_war_churches
+	} 
+	visible_when_empty = yes
+	priority = 30
+}
+FE_PR = {
+	
+	icon = GFX_decision_cat_join_fra
+	picture = GFX_report_event_EGY_zeppellin_pyramid
+	allowed = {
+		tag= FIN
+	}
+	visible = {
+		has_country_flag = fe_start
+	} 
+	visible_when_empty = yes
+	priority = 30
+}
+FE_kill = {
+	icon = GFX_decision_cat_join_fra
+	allowed = {
+		tag= FIN
+	}
+	visible = {
+		has_completed_focus = FIN_clear_lands_of_set
+		NOT = { 
+			AND = { has_country_flag = fe_kill_1 
+			has_country_flag = fe_kill_2
+			has_country_flag = fe_kill_3
+			has_country_flag = fe_kill_4 } 
+		}
+	} 
+	visible_when_empty = yes
+	priority = 0
+}
+FE_core = {
+	icon = GFX_decision_cat_join_fra
+	allowed = {
+		tag= FIN
+	}
+	visible = {
+		has_completed_focus = FIN_complie_lands_of_set
+		NOT = { 
+			AND = { has_country_flag = fe_core_1 
+			has_country_flag = fe_core_2
+			has_country_flag = fe_core_3
+			has_country_flag = fe_core_4 } 
+		}
+	} 
+	visible_when_empty = yse
+	priority = 0
+}
+fe_UNITY = {
+	allowed = {
+		tag= FIN
+	}
+	visible = {
+		has_completed_focus = FIN_purge_north
+	} 
+	visible_when_empty = yse
+	priority = 0
+}
+
+
+

@@ -1,0 +1,138 @@
+﻿capital = 27
+oob = "empty"
+
+set_research_slots = 3
+
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+		basic_heavy_tank = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+		improved_light_tank_chassis = 1
+		basic_heavy_tank_chassis = 1
+		engine_tech_1 = 1
+	}
+}
+### Starting Technologies ###
+set_technology = {
+	### General ###
+	electronic_mechanical_engineering = 1
+	### Infantry ###
+	infantry_weapons = 1
+	basic_train = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	tech_trucks = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	### Air ###
+	early_fighter = 1
+	naval_bomber1 = 1
+	early_bomber = 1
+	cv_early_fighter = 1
+	cv_naval_bomber1 = 1
+}
+
+### Navy - MtG ###
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		
+		basic_naval_mines = 1
+
+		## Modules##
+		basic_battery = 1
+		basic_light_battery = 1
+		smoke_generator = 1
+	}
+}
+
+### Navy - Non MtG ###
+
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "Man the Guns"
+		}
+	}
+	set_technology = {
+		early_destroyer = 1
+		basic_destroyer = 1
+		early_light_cruiser = 1
+		basic_light_cruiser = 1
+	}
+}
+
+
+set_convoys = 30
+set_stability = 0.45
+set_war_support = 0.3
+
+set_party_name = { ideology = syndicalist long_name = "勃艮第工农辛迪加" name = "勃艮第工农辛迪加" }
+
+add_ideas = {
+							
+}
+
+set_politics = {
+	ruling_party = syndicalist
+	last_election = "1932.5.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	totalist = 0
+	radical_socialist = 0
+	syndicalist = 100
+	social_democrat = 0
+	social_liberal = 0
+	market_liberal = 0
+	social_conservative = 0
+	authoritarian_democrat = 0
+	paternal_autocrat = 0
+	national_populist = 0
+}
+
+create_country_leader = {
+	name = "亨利·阿尔伯特·卡农热"
+	picture = "gfx/leaders/PDL/Portrait_DOB_Henri_Albert_Canonge.png"
+	expire = "1.1.1"
+	ideology = agrarian_syndicalism_subtype
+	traits = {  }
+}
+
+#
+create_field_marshal = {
+	name = "亨利·阿尔伯特·卡农热"
+	portrait_path = "gfx/leaders/PDL/Portrait_DOB_Henri_Albert_Canonge.png"
+	traits = {
+		
+	}
+	skill = 1
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}

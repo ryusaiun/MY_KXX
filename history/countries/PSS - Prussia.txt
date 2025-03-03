@@ -1,0 +1,277 @@
+﻿oob = "PSS_1936"
+
+starting_train_buffer = 2.0
+### Starting Technologies ###
+if = {
+	limit = { NOT = { has_dlc = "No Step Back" } }
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+		basic_heavy_tank = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+		improved_light_tank_chassis = 1
+		basic_heavy_tank_chassis = 1
+		engine_tech_1 = 1
+	}
+}
+set_technology = {
+	basic_train = 1
+	### General ###
+	electronic_mechanical_engineering = 1
+
+	### Infantry ###
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_trucks = 1
+	motorised_infantry = 1
+	tech_recon = 1
+	tech_engineers = 1
+	tech_mountaineers = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "GRU_air_bba"
+
+		set_technology = {
+			aa_lmg = 1
+			aa_cannon_1 = 1
+			engines_2 = 1
+			aircraft_construction = 1
+			early_bombs = 1
+			engines_1 = 1
+			iw_small_airframe = 1
+			basic_small_airframe = 1
+			iw_medium_airframe = 1
+			iw_large_airframe = 1
+			basic_medium_airframe = 1
+			basic_large_airframe = 1
+			air_torpedoe_1 = 1
+		}
+		GRU_BBA_air_variants = yes
+	else = {
+		set_air_oob = "GRU_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			fighter1 = 1
+			naval_bomber1 = 1
+			early_bomber = 1
+			strategic_bomber1 = 1
+			CAS1 = 1
+			cv_early_fighter = 1
+			cv_naval_bomber1 = 1
+			cv_CAS1 = 1
+		}
+	}
+}
+
+### Navy - MtG ###
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+
+	set_technology = {
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		panzerschiffe = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		cruiser_submarines = 1
+		early_ship_hull_carrier = 1
+		basic_ship_hull_carrier = 1
+		early_ship_hull_heavy = 1
+		basic_ship_hull_heavy = 1
+		ship_hull_super_heavy = 1
+		pre_dreadnoughts = 1
+		
+		basic_naval_mines = 1
+
+		## Modules##
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_medium_battery = 1
+		basic_heavy_battery = 1
+		basic_depth_charges = 1
+		basic_torpedo = 1
+		improved_ship_torpedo_launcher = 1
+		basic_cruiser_armor_scheme = 1
+		basic_heavy_armor_scheme = 1
+
+		### Transport ###
+		mtg_transport = 1
+	}
+}
+
+### Navy - Non MtG ###
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "Man the Guns"
+		}
+	}
+	set_technology = {
+		early_destroyer = 1
+		basic_destroyer = 1
+		early_light_cruiser = 1
+		basic_light_cruiser = 1
+		early_submarine = 1
+		basic_submarine = 1
+		early_heavy_cruiser = 1
+		basic_heavy_cruiser = 1
+		early_battlecruiser = 1
+		early_battleship = 1
+		basic_battleship = 1
+		heavy_battleship = 1
+		early_carrier = 1
+		basic_carrier = 1
+
+		### Transport ###
+		transport = 1
+	}
+}
+
+recruit_character = GRU_Kurt_Schleicher
+recruit_character = GRU_Erich_Ludendorff
+recruit_character = GRU_Mathilde_Ludendorff
+
+create_corps_commander = {
+	name = "Ferdinand von Bredow"
+	portrait_path = "gfx/leaders/GER/Portrait_Germany_Ferdinand_von_Bredow.png"
+	traits = { 
+		politically_connected
+		skilled_staffer
+		career_officer
+		GER_schleicher_clique_member_trait
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Oskar von Hutier"
+	portrait_path = "gfx/leaders/GER/Portrait_Germany_Oskar_von_Hutier.png"
+	traits = { old_guard artillery_specialist war_hero trickster infantry_officer GER_schleicher_clique_member_trait }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Kurt von Hammerstein-Equord"
+	desc = "GER_kurt_von_hammerstein_equord_commander_desc"
+	portrait_path = "gfx/leaders/GER/Portrait_Germany_Kurt_von_Hammerstein_Equord.png"
+	traits = { politically_connected brilliant_strategist defensive_doctrine GER_schleicher_clique_member_trait }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "Max Bauer"
+	portrait_path = "gfx/leaders/GER/Portrait_Germany_Max_Bauer.png"
+	traits = { aggressive_assaulter politically_connected GER_schleicher_clique_member_trait }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Walther von Reichenau"
+	desc = "GER_walther_von_reichenau_commander_desc"
+	portrait_path = "gfx/leaders/GER/Portrait_Germany_Walther_von_Reichenau.png"
+	traits = { career_officer GER_schleicher_clique_member_trait }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Friedrich von Rabenau"
+	portrait_path = "gfx/leaders/GER/Portrait_Germany_Friedrich_Rabenau.png"
+	traits = { bearer_of_artillery trait_cautious GER_schleicher_clique_member_trait }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Oskar von Hindenburg"
+	portrait_path = "gfx/leaders/GER/Portrait_Germany_Oskar_von_Hindenburg.png"
+	traits = { politically_connected GER_schleicher_clique_member_trait }
+	skill = 1
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Walter Nicolai"
+	portrait_path = "gfx/leaders/GER/Portrait_Germany_Walter_Nicolai.png"
+	traits = { career_officer organizer harsh_leader GER_schleicher_clique_member_trait }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}
+create_field_marshal = {
+	name = "Kurt von Schleicher"
+	desc = "GER_kurt_von_schleicher_commander_desc"
+	portrait_path = "gfx/leaders/GER/Portrait_Germany_Kurt_von_Schleicher.png"
+	traits = { 
+		infantry_officer
+		skilled_staffer
+		career_officer
+		GER_schleicher_clique_member_trait
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 3
+}
+create_field_marshal = {
+	name = "Rupprecht von Bayern"
+	desc = "GER_rupprecht_von_bayern_commander_desc"
+	portrait_path = "gfx/leaders/GER/Portrait_Germany_Rupprecht_Bayern_kr.png"
+	traits = { old_guard trait_cautious inflexible_strategist defensive_doctrine organizer GER_bayerische_armee_commander_trait }
+	skill = 4
+	attack_skill = 2
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "Werner von Blomberg"
+	desc = "GER_werner_von_blomberg_commander_desc"
+	portrait_path = "gfx/leaders/GER/Portrait_Germany_Werner_von_Blomberg.png"
+	traits = { trickster armor_officer career_officer GER_schleicher_clique_member_trait }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}

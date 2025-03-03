@@ -1,0 +1,92 @@
+
+
+defined_text = {
+	name = JONS_LEADERQW_TEXT
+	text = {
+    trigger = {
+      tag = CNT
+	  OR = {
+	  CNT = { check_variable = { JONS_ledesma_power < -4 } }
+		}
+	}
+    localization_key = JONS_LEADERQW_TEXT4
+  }
+	text = {
+    trigger = {
+      tag = CNT
+	  OR = {
+	  CNT = { check_variable = { JONS_ledesma_power > -5 } }
+	  CNT = { check_variable = { JONS_ledesma_power > 0 } }
+	  CNT = { check_variable = { JONS_ledesma_power = 0 } }
+		}
+	  CNT = { check_variable = { JONS_ledesma_power < 5 } }
+	}
+    localization_key = JONS_LEADERQW_TEXT
+  }
+   text = {
+    trigger = {
+      tag = CNT
+	  OR = {
+	  CNT = { check_variable = { JONS_ledesma_power > 5 } }
+	  CNT = { check_variable = { JONS_ledesma_power = 5 } }
+		}
+	  CNT = { check_variable = { JONS_ledesma_power < 10 } }
+	}
+    localization_key = JONS_LEADERQW_TEXT2
+  }
+    text = {
+    trigger = {
+      tag = CNT
+	  OR = {
+	  CNT = { check_variable = { JONS_ledesma_power > 10 } }
+	  CNT = { check_variable = { JONS_ledesma_power = 10 } }
+		}
+	}
+    localization_key = JONS_LEADERQW_TEXT3
+  }
+}
+defined_text = {
+	name = JONS_LEADERQW2_TEXT
+	text = {
+    trigger = {
+      tag = CNT
+	  OR = {
+	  CNT = { check_variable = { JONS_redondo_power < -4 } }
+		}
+	}
+    localization_key = JONS_LEADERQW2_TEXT4
+  }
+  text = {
+    trigger = {
+      tag = CNT
+	  OR = {
+	  CNT = { check_variable = { JONS_redondo_power > -5 } }
+	  CNT = { check_variable = { JONS_redondo_power > 0 } }
+	  CNT = { check_variable = { JONS_redondo_power = 0 } }
+		}
+	  CNT = { check_variable = { JONS_redondo_power < 5 } }
+    }
+    localization_key = JONS_LEADERQW2_TEXT
+  }
+  text = {
+    trigger = {
+      tag = CNT
+	  OR = {
+	  CNT = { check_variable = { JONS_redondo_power > 5 } }
+	  CNT = { check_variable = { JONS_redondo_power = 5 } }
+		}
+	  CNT = { check_variable = { JONS_redondo_power < 10 } }
+    }
+    localization_key = JONS_LEADERQW2_TEXT2
+  }
+  text = {
+    trigger = {
+      tag = CNT
+	  OR = {
+	  CNT = { check_variable = { JONS_redondo_power > 10 } }
+	  CNT = { check_variable = { JONS_redondo_power = 10 } }
+		}
+    }
+    localization_key = JONS_LEADERQW2_TEXT3
+  }
+}

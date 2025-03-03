@@ -1,0 +1,198 @@
+guiTypes = {
+	containerWindowType =  {
+		name = "GRU_joe_biden_gui"
+		position = { x = 10 y = 44 }
+		size = { width = 170 height = 260 }
+		orientation = upper_left
+
+		iconType = { #
+			name = "Hermann_Goering"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_GRU_Hermann_Goering"
+		}
+
+		iconType = { #
+			name = "Ernst_Rhoem"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_GRU_Ernst_Rhoem"
+		}
+		iconType = { #
+			name = "GRU_Heinrich_Himmler"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_GRU_Heinrich_Himmler"
+		}
+		iconType = { #
+			name = "Albert_Speer"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_GRU_Albert_Speer"
+		}
+		iconType = { #
+			name = "Rosa_Luxenburg"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_GRU_Rosa_Luxenburg"
+		}
+		###
+		iconType = { #
+			name = "Britain_Charles_III"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_GGB_Britain_Charles_III"
+		}
+		iconType = { #
+			name = "Antonio_Salazar"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_IBR_Antonio_Salazar"
+		}
+		iconType = { #
+			name = "Victor_Emmanuel_III"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_ITT_Victor_Emmanuel_III"
+		}
+		iconType = { #
+			name = "IEA_Victor_Emmanuel_III"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_IEA_Victor_Emmanuel_III"
+		}
+		iconType = { #
+			name = "MNT_king_michael"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_MNT_king_michael"
+		}
+		iconType = { #
+			name = "GRU_SER_Otto"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_GRU_Otto"
+		}
+		###
+		iconType = { #
+			name = "Pyotr_Wrangel_Tsar"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_VYT_Pyotr_Wrangel_Tsar"
+		}
+		iconType = { #
+			name = "Grigol_Ordzhonikikdze"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_Grigol_Ordzhonikikdze"
+		}
+		iconType = { #
+			name = "Carl_Gustaf_Mannerheim"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_Carl_Gustaf_Mannerheim"
+		}
+		iconType = { #
+			name = "Aleksandr_Yegorov"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_Aleksandr_Yegorov"
+		}
+		iconType = { #
+			name = "Bronislav_Kaminski"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_Bronislav_Kaminski"
+		}
+		iconType = { #
+			name = "Konstantin_Rodzaevsky"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_Konstantin_Rodzaevsky"
+		}
+		iconType = { #
+			name = "Diterikhs"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_Diterikhs"
+		}
+		iconType = { #
+			name = "SHE_Regency"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_SHE_Regency"
+		}
+		
+		iconType = {
+			name = "GRU_pm_frame"
+			quadTextureSprite ="GFX_pol_leader_frame"
+			position = { x = 0 y = 0 }
+			pdx_tooltip = "GRUGUIHEADNAME"
+		}
+
+		buttonType = {
+			name = "GRU_leader_button"
+			quadTextureSprite ="GFX_HOS_button"
+			position = { x = 155 y = 230 }
+			pdx_tooltip = "GRU_HOS_OR_HOG"
+		}
+		
+		buttonType = {
+			name = "GRU_second_leader_button"
+			quadTextureSprite ="GFX_HOS_button"
+			position = { x = 155 y = 205 }
+			pdx_tooltip = "GRU_HOS_OR_HOG"
+		}
+		
+		instantTextboxType = {
+			name = "GRU_pm_name"
+			position = { x = 8 y = 226 }
+			font = "hoi_18mbs"
+			text = "[GRUGetPrimeMinister]"
+			pdx_tooltip = "GRUGUIHEADNAME"
+			maxWidth = 155
+			maxHeight = 20
+			format = center
+			vertical_alignment = center
+		}	
+		
+		instantTextboxType = {
+			name = "GRU_second_pm_name"
+			position = { x = 8 y = 226 }
+			font = "hoi_18mbs"
+			text = "[GRUGetOtherPrimeMinister]"
+			pdx_tooltip = "GRUGUIHEADNAME"
+			maxWidth = 155
+			maxHeight = 20
+			format = center
+			vertical_alignment = center
+		}	
+	}
+}
+guiTypes = {
+	containerWindowType = {
+		name = "GRU_for_joe_biden_gui"
+		position = { x = 130 y = 255 }
+		
+		IconType = {
+			name = "GRU_for_leader_button"
+			position = { x = 0 y = 0}
+			spriteType = "GFX_HOS_button"
+			pdx_tooltip = "GRUGetSecondLEADER"
+		}
+	
+		IconType = {
+			name = "GRU_for_second_leader_button"
+			position = { x = 0 y = 28}
+			spriteType = "GFX_HOS_button"
+			pdx_tooltip = "GRUGetThirdLEADER"
+		}
+	}
+
+	containerWindowType = {
+		name = "for_gru_pm_gui"
+		position = { x = 130 y = 282 }
+		
+		IconType = {
+			name = "gru_pm_button"
+			position = { x = 0 y = 0}
+			spriteType = "GFX_GRU_pm_button"
+			pdx_tooltip = "CAN_GRU_PM_GOE"
+		}
+	}
+}
+
+guiTypes = {
+	containerWindowType = {
+		name = "gru_pm_gui"
+		position = { x = 165 y = 245 }
+		
+		IconType = {
+			name = "gru_pm_button"
+			position = { x = 0 y = 0}
+			spriteType = "GFX_GRU_pm_button"
+			pdx_tooltip = "CAN_GRU_PM_GOE"
+		}
+	}
+}

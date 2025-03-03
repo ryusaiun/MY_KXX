@@ -1,0 +1,111 @@
+spriteTypes = {
+	# National Europa 埃及
+	spriteType = {
+		name = "GFX_goal_EGY_last_focus_naguib"
+		texturefile = "gfx/interface/goals/NE_EGY/EGY_last_focus_naguib.png"
+	}
+	spriteType = {
+		name = "GFX_goal_EGY_muslim_brotherhood"
+		texturefile = "gfx/interface/goals/NE_EGY/EGY_muslim_brotherhood.png"
+	}
+	spriteType = {
+		name = "GFX_goal_EGY_naguib_rahbar"
+		texturefile = "gfx/interface/goals/NE_EGY/EGY_naguib_rahbar.png"
+	}
+	spriteType = {
+		name = "GFX_goal_EGY_president_primacy"
+		texturefile = "gfx/interface/goals/NE_EGY/EGY_president_primacy.png"
+	}
+	spriteType = {
+		name = "GFX_goal_EGY_rally"
+		texturefile = "gfx/interface/goals/NE_EGY/EGY_rally.png"
+	}
+	spriteType = {
+		name = "GFX_goal_EGY_pragmatism"
+		texturefile = "gfx/interface/goals/NE_EGY/EGY_pragmatism.png"
+	}
+	spriteType = {
+		name = "GFX_goal_EGY_troops_naguib"
+		texturefile = "gfx/interface/goals/NE_EGY/EGY_troops_naguib.png"
+	}
+	spriteType = {
+		name = "GFX_goal_EGY_conservatism"
+		texturefile = "gfx/interface/goals/NE_EGY/EGY_conservatism.png"
+	}
+	spriteType = {
+		name = "GFX_goal_EGY_arab_banner"
+		texturefile = "gfx/interface/goals/NE_EGY/EGY_arab_banner.png"
+	}
+	spriteType = {
+		name = "GFX_goal_EGY_ahlef_besamaha"
+		texturefile = "gfx/interface/goals/NE_EGY/EGY_ahlef_besamaha.png"
+	}
+	spriteType = {
+		name = "GFX_goal_EGY_united_folks"
+		texturefile = "gfx/interface/goals/NE_EGY/EGY_united_folks.png"
+	}
+	spriteType = {
+		name = "GFX_goal_EGY_benelovent_republic"
+		texturefile = "gfx/interface/goals/NE_EGY/EGY_benelovent_republic.png"
+	}
+	spriteType = {
+		name = "GFX_goal_EGY_national_union"
+		texturefile = "gfx/interface/goals/NE_EGY/EGY_national_union.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_EGY_arab_spring"
+		texturefile = "gfx/interface/goals/NE_EGY/EGY_arab_spring.png"
+	}
+	spriteType = {
+		name = "GFX_goal_EGY_slow_progress"
+		texturefile = "gfx/interface/goals/NE_EGY/EGY_slow_progress.png"
+	}
+	spriteType = {
+		name = "GFX_goal_EGY_new_economic_policy"
+		texturefile = "gfx/interface/goals/NE_EGY/EGY_new_economic_policy.png"
+	}
+	spriteType = {
+		name = "GFX_goal_EGY_centrist_army"
+		texturefile = "gfx/interface/goals/NE_EGY/EGY_centrist_army.png"
+	}
+	spriteType = {
+		name = "GFX_goal_EGY_panarabia"
+		texturefile = "gfx/interface/goals/NE_EGY/EGY_panarabia.png"
+	}
+	spriteType = {
+		name = "GFX_goal_EGY_unified_debate"
+		texturefile = "gfx/interface/goals/NE_EGY/EGY_unified_debate.png"
+	}
+	spriteType = {
+		name = "GFX_goal_EGY_the_great_game"
+		texturefile = "gfx/interface/goals/NE_EGY/EGY_the_great_game.png"
+	}
+	spriteType = {
+		name = "GFX_goal_EGY_syndie_debate"
+		texturefile = "gfx/interface/goals/NE_EGY/EGY_syndie_debate.png"
+	}
+	spriteType = {
+		name = "GFX_goal_EGY_army_debate"
+		texturefile = "gfx/interface/goals/NE_EGY/EGY_army_debate.png"
+	}
+	spriteType = {
+		name = "GFX_goal_EGY_republican_debate"
+		texturefile = "gfx/interface/goals/NE_EGY/EGY_republican_debate.png"
+	}
+	spriteType = {
+		name = "GFX_goal_EGY_political_debate"
+		texturefile = "gfx/interface/goals/NE_EGY/EGY_political_debate.png"
+	}
+	spriteType = {
+		name = "GFX_goal_EGY_secularism_debate"
+		texturefile = "gfx/interface/goals/NE_EGY/EGY_secularism_debate.png"
+	}
+	spriteType = {
+		name = "GFX_goal_EGY_economic_debate"
+		texturefile = "gfx/interface/goals/NE_EGY/EGY_economic_debate.png"
+	}
+	spriteType = {
+		name = "GFX_goal_EGY_revolution_successful"
+		texturefile = "gfx/interface/goals/NE_EGY/EGY_revolution_successful.png"
+	}
+}

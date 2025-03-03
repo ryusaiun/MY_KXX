@@ -1,0 +1,119 @@
+ideas = {
+	country = {
+	
+		CZE_generals_mutiny = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_"}
+			picture = CZE_chaos_generals
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.08
+				stability_factor = -0.1
+				conscription = -0.01
+			}
+		}
+		
+		CZE_ideological_fanatism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_"}
+			picture = CZE_obedient_staff
+			removal_cost = -1
+			modifier = {
+				command_power_gain_mult = -0.1
+				conscription = 0.03
+				stability_factor = 0.2
+				war_support_factor = 0.075
+			}
+		}
+		
+		CZE_czech_socialism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_"}
+			picture = CZE_czech_socialism
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.2
+				consumer_goods_factor = -0.03
+				monthly_population = 0.05
+				forced_surrender_limit = 0.05
+				conscription_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+		
+		CZE_nationalization = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_"}
+			picture = national_ownership_1
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.09
+				production_factory_efficiency_gain_factor = 0.03
+				production_factory_max_efficiency_factor = 0.09
+			}
+		}
+		
+		CZE_national_front = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_"}
+			picture = CZE_national_front
+			removal_cost = -1
+			modifier = {
+				army_org_regain = 0.05
+				consumer_goods_factor = -0.05
+				stability_factor = 0.05
+			}
+		}
+		
+		CZE_PTP = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_"}
+			picture = CZE_ptp
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				production_factory_max_efficiency_factor = 0.1
+				local_resources_factor = 0.05
+			}
+		}
+		
+		CZE_gottwald_cult = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_"}
+			picture = CZE_cult_gottwald
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.03
+				research_speed_factor = 0.08
+			}
+		}
+
+		CZE_StB = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_"}
+			picture = CZE_StB
+			removal_cost = -1
+			research_bonus = {
+				decryption_tech = 0.10
+				encryption_tech = 0.10
+			}
+			modifier = {
+				political_power_cost = -0.05
+				compliance_growth = 0.1
+			}
+		}
+
+		CZE_StB_II = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_"}
+			picture = CZE_StB
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.05
+				operative_slot = 1
+				intel_network_gain_factor = 0.1
+			}
+		}
+		
+		CZE_university_pardubice = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOS_"}
+			picture = new_sciences
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.03
+			}
+		}
+		
+	}
+}

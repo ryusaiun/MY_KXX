@@ -1,0 +1,440 @@
+ideas = {
+head_of_government = { ### Head of Government ###
+       FRA_Henri_Dorgeres_hog_rso = {
+			allowed = { original_tag = FRA }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIC_Amadeo_Bordiga_hog_tot"
+			}
+			traits = {
+				head_of_government
+				radical_socialist
+				hog_flamboyant_tough_guy 
+			}
+		}
+		FRA_Gustaf_Herve_hog_tot = {
+			allowed = { original_tag = FRA }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIC_Amadeo_Bordiga_hog_tot"
+			}
+			traits = {
+				head_of_government
+				totalist
+				hog_political_protege
+			}
+		}
+		FRA_Andre_Chaumet_hog_rso = {
+			allowed = { original_tag = FRA }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIC_Amadeo_Bordiga_hog_tot"
+			}
+			traits = {
+				head_of_government
+				radical_socialist
+				hog_monarchist_loyalist
+			}
+		}
+		FRA_Simone_Weil_hog_rso = {
+			allowed = { original_tag = FRA }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIC_Amadeo_Bordiga_hog_tot"
+			}
+			traits = {
+				head_of_government
+				radical_socialist
+				hog_spiritual_leader
+			}
+		}
+		FRA_Robert_Pelletier_hog_rso = {
+			allowed = { original_tag = FRA }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIC_Amadeo_Bordiga_hog_tot"
+			}
+			traits = {
+				head_of_government
+				radical_socialist
+				hog_naive_optimist  
+			}
+		}
+		FRA_Louis_Vallon_hog_tot = {
+			allowed = { original_tag = FRA }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIC_Amadeo_Bordiga_hog_tot"
+			}
+			traits = {
+				head_of_government
+				totalist
+				hog_silent_workhorse
+			}
+		}
+		
+}
+person_of_influence = { ### Person of Influence ###
+		## Foreign Minister ##
+		FRA_Jacques_Le_Roy_Ladurie_for_rso = {
+			allowed = { original_tag = FRA}
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIC_Onorato_Damen_for_tot"
+			}
+			traits = {
+				foreign_minister
+				radical_socialist
+				for_great_compromiser 
+			}
+		}
+		FRA_Jean_Allemane_for_tot = {
+			allowed = { original_tag = FRA}
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIC_Onorato_Damen_for_tot"
+			}
+			traits = {
+				foreign_minister
+				totalist
+				for_ideological_crusader
+			}
+		}
+		FRA_Jean_Turlais_for_rso = {
+			allowed = { original_tag = FRA}
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIC_Onorato_Damen_for_tot"
+			}
+			traits = {
+				foreign_minister
+				radical_socialist
+				for_iron_fisted_brute
+			}
+		}
+		FRA_Gaston_Tessier_for_rso = {
+			allowed = { original_tag = FRA}
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIC_Onorato_Damen_for_tot"
+			}
+			traits = {
+				foreign_minister
+				radical_socialist
+				for_great_compromiser
+			}
+		}
+		FRA_Phileas_Lebesgue_for_rso = {
+			allowed = { original_tag = FRA}
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIC_Onorato_Damen_for_tot"
+			}
+			traits = {
+				foreign_minister
+				radical_socialist
+				for_ideological_crusader 
+			}
+		}
+		FRA_Rene_Pleven_for_tot = {
+			allowed = { original_tag = FRA}
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIC_Onorato_Damen_for_tot"
+			}
+			traits = {
+				foreign_minister
+				totalist
+				for_tireless_organiser 
+			}
+		}
+		FRA_Pierre_Caziot_eco_rso = {
+			allowed = { original_tag = FRA }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIC_Bruno_Fortichiari_eco_tot"
+			}
+			traits = {
+				economy_minister
+				radical_socialist
+				eco_resource_industrialist
+			}
+		}
+		FRA_Victor_Meric_eco_tot = {
+			allowed = { original_tag = FRA }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIC_Bruno_Fortichiari_eco_tot"
+			}
+			traits = {
+				economy_minister
+				totalist
+				eco_balanced_budget_economy
+			}
+		}
+		FRA_Paul_Cassagnac_eco_rso = {
+			allowed = { original_tag = FRA }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIC_Bruno_Fortichiari_eco_tot"
+			}
+			traits = {
+				economy_minister
+				radical_socialist
+				eco_administrative_genius
+			}
+		}
+		FRA_Pierre_Pascal_eco_rso = {
+			allowed = { original_tag = FRA }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIC_Bruno_Fortichiari_eco_tot"
+			}
+			traits = {
+				economy_minister
+				radical_socialist
+				eco_captain_of_industry
+			}
+		}
+		FRA_Eugene_Figuiere_eco_rso = {
+			allowed = { original_tag = FRA }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIC_Bruno_Fortichiari_eco_tot"
+			}
+			traits = {
+				economy_minister
+				radical_socialist
+				eco_planned_economy_proponent
+			}
+		}
+		FRA_Pierre_Clostermann_eco_tot = {
+			allowed = { original_tag = FRA }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIC_Bruno_Fortichiari_eco_tot"
+			}
+			traits = {
+				economy_minister
+				totalist
+				eco_air_superiority_proponent
+			}
+		}
+		FRA_Pierre_Poujade_sec_rso = {
+			allowed = { original_tag = FRA }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIC_Bruno_Maffi_sec_tot"
+			}
+			traits = {
+				security_minister
+				radical_socialist
+				sec_crime_fighter
+			}
+		}
+		FRA_Alexandre_Zevaes_sec_tot = {
+			allowed = { original_tag = FRA }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIC_Bruno_Maffi_sec_tot"
+			}
+			traits = {
+				security_minister
+				totalist
+				sec_compassionate_gentleman
+			}
+		}
+		FRA_Joachim_Napoleon_sec_rso = {
+			allowed = { original_tag = FRA }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIC_Bruno_Maffi_sec_tot"
+			}
+			traits = {
+				security_minister
+				radical_socialist
+				sec_man_of_the_people
+			}
+		}
+		FRA_Jules_Catoire_sec_rso = {
+			allowed = { original_tag = FRA }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIC_Bruno_Maffi_sec_tot"
+			}
+			traits = {
+				security_minister
+				radical_socialist
+				sec_man_of_the_people
+			}
+		}
+		FRA_Francois_Jaffrennou_sec_rso = {
+			allowed = { original_tag = FRA }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIC_Bruno_Maffi_sec_tot"
+			}
+			traits = {
+				security_minister
+				radical_socialist
+				sec_efficient_sociopath
+			}
+		}
+		FRA_Jean_Moulin_sec_tot = {
+			allowed = { original_tag = FRA }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea SIC_Bruno_Maffi_sec_tot"
+			}
+			traits = {
+				security_minister
+				totalist
+				sec_man_of_the_people
+			}
+		}
+	}
+}

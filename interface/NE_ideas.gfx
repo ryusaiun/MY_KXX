@@ -1,0 +1,152 @@
+spriteTypes = {
+	## autonomy
+	spriteType = {
+		name = "GFX_bucard_governate_general_icon"
+		texturefile = "gfx/interface/autonomy/bucardpuppet.png"
+	}
+	spriteType = {
+		name = "GFX_eu_ass_state_icon"
+		texturefile = "gfx/interface/autonomy/ass_state.png"
+	}
+	spriteType = {
+		name = "GFX_eu_workers_union_icon"
+		texturefile = "gfx/interface/autonomy/eurocommiethingy.png"
+	}
+	spriteType = {
+		name = "GFX_eu_demolibally_icon"
+		texturefile = "gfx/interface/autonomy/eurodemothingy.png"
+	}
+	### EUR ###
+	spriteType = {
+		name = "GFX_idea_EUR_mosleymarx"
+		texturefile = "gfx/interface/ideas/Nation_Europa/marx_mosley.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EUR_trial"
+		texturefile = "gfx/interface/ideas/Nation_Europa/TREMBLE.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EUR_eurobuild"
+		texturefile = "gfx/interface/ideas/Nation_Europa/eurobuild.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EUR_crusade"
+		texturefile = "gfx/interface/ideas/Nation_Europa/crusade.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EUR_shinybritain"
+		texturefile = "gfx/interface/ideas/Nation_Europa/centreofcivilization.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EUR_eurodream"
+		texturefile = "gfx/interface/ideas/Nation_Europa/eurodream.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EUR_atlandam"
+		texturefile = "gfx/interface/ideas/Nation_Europa/atlantrodam.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EUR_highway"
+		texturefile = "gfx/interface/ideas/Nation_Europa/highway.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EUR_tucbuilding"
+		texturefile = "gfx/interface/ideas/Nation_Europa/mosleybuilding.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SRI_italyreforge"
+		texturefile = "gfx/interface/ideas/Nation_Europa/italyreforge.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SRI_italianmarketsocialism"
+		texturefile = "gfx/interface/ideas/Nation_Europa/italianmarketsocialism.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SRI_italianhierarchy"
+		texturefile = "gfx/interface/ideas/Nation_Europa/italianhierarchy.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SRI_italiancorporatism"
+		texturefile = "gfx/interface/ideas/Nation_Europa/italiancorporatism.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SRI_eternalmusso"
+		texturefile = "gfx/interface/ideas/Nation_Europa/eternalmusso.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SRI_eternalbianchi"
+		texturefile = "gfx/interface/ideas/Nation_Europa/eternalbianchi.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SRI_mussolinism"
+		texturefile = "gfx/interface/ideas/Nation_Europa/mussolinism.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SRI_bianchism"
+		texturefile = "gfx/interface/ideas/Nation_Europa/bianchism.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SRI_peasantvanguard"
+		texturefile = "gfx/interface/ideas/Nation_Europa/peasantvanguard.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SRI_revspirit"
+		texturefile = "gfx/interface/ideas/Nation_Europa/revspirit.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SRI_christiansocialism"
+		texturefile = "gfx/interface/ideas/Nation_Europa/christiansocialism.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EGY_newarabs"
+		texturefile = "gfx/interface/ideas/Nation_Europa/newarabs.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EGY_quranburning"
+		texturefile = "gfx/interface/ideas/Nation_Europa/quranburning.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EGY_arabsocialism"
+		texturefile = "gfx/interface/ideas/Nation_Europa/arabsocialism.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EGY_bigbrain"
+		texturefile = "gfx/interface/ideas/Nation_Europa/bigbrain.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EGY_anticolonialism"
+		texturefile = "gfx/interface/ideas/Nation_Europa/anticolonialism.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EGY_arabmasters"
+		texturefile = "gfx/interface/ideas/Nation_Europa/arabmasters.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EGY_trade"
+		texturefile = "gfx/interface/ideas/Nation_Europa/trade.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EGY_conservatism"
+		texturefile = "gfx/interface/ideas/Nation_Europa/conservatism.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EGY_mixedeconomy"
+		texturefile = "gfx/interface/ideas/Nation_Europa/mixedeconomy.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EGY_egyptianarmy"
+		texturefile = "gfx/interface/ideas/Nation_Europa/egyptianarmy.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EGY_liberty"
+		texturefile = "gfx/interface/ideas/Nation_Europa/liberty.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EGY_secularism"
+		texturefile = "gfx/interface/ideas/Nation_Europa/secularism.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EGY_freedomofspeech"
+		texturefile = "gfx/interface/ideas/Nation_Europa/freedomofspeech.png"
+	}
+}

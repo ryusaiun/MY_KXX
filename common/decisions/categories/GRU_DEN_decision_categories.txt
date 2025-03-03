@@ -1,0 +1,7 @@
+DEN_puppet_decisions = {
+	icon = DEN_resistance
+	allowed = { tag = DEN }
+	visible = {
+		has_country_flag = rev_ger_den_pupt
+	}
+}

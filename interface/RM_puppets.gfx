@@ -1,0 +1,51 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_RM_Stahlpakt_member_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_GRU_PUPPETS_icon.dds"
+	}
+
+	spriteType = {
+		name = "GFX_RM_Volkskommissariat_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_GRU_PUPPETS_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_RM_Reichskommissariat_icon"
+		textureFile = "gfx/interface/autonomy/reichskommissariat.png"
+	}
+	spriteType = {
+		name = "GFX_RM_Volkssatellitestate_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_GRU_PUPPETS_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_RM_Reichssatellitestate_icon"
+		textureFile = "gfx/interface/autonomy/reichssatellitestate.png"
+	}
+	spriteType = {
+		name = "GFX_RM_Reichsgeneralgovernorate_icon"
+		textureFile = "gfx/interface/autonomy/reichsgeneralgovernorate.png"
+	}
+	spriteType = {
+		name = "GFX_RM_Volkssgeneralgovernorate_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_GRU_PUPPETS_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_RM_Volksland_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_GRU_PUPPETS_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_RM_Reichsland_icon"
+		textureFile = "gfx/interface/autonomy/reichsland.png"
+	}
+	spriteType = {
+		name = "GFX_RM_Volksstaat_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_GRU_PUPPETS_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_RM_Ordensstaat_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_RM_Ordensstaat_icon.png"
+	}
+	spriteType = {
+		name = "GFX_RM_triumvirate_icon"
+		textureFile = "gfx/interface/autonomy/triumvirate.png"
+	}
+}

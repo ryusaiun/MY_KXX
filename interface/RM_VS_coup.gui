@@ -1,0 +1,578 @@
+guiTypes = {
+	containerWindowType = {
+		name = "GRU_VS_coup_window_GUI"
+		size = { width = 482 height = 710 }
+		position = { x = 0 y = 0 }
+
+		containerWindowType = {
+			name = "operation_window"
+			position = { x = 0 y = -40 }
+			size = { width = 100%% height = 100%% }
+			margin = { left = 12 right = 12 bottom = 0 top = 30 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_VS_coup_gui_background"
+				position = { x = 5 y = 15 }
+			}
+
+			instantTextBoxType = {
+				name = "header"
+				position = { x = 15 y = 00 }
+				font = "hoi_20b"
+				format = center
+				text = "VS_COUP_DECISION_GUI_HEADER"
+				maxWidth = 446
+				maxHeight = 10
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+
+			containerWindowType = {
+				name = "progressbar_window"
+				position = { x = 45 y = 255 }
+				size = { width = 385 height = 20 }
+
+				iconType = {
+					name = "VS_coup_progressbar_background"
+					position = { x = 5 y = 7 }
+					spriteType = "GFX_VS_coup_progressbar_background"
+					pdx_tooltip = "tt_rebl_current"
+				}
+
+				iconType = {
+					name = "GRU_coup_progressbar"
+					position = { x = 5 y = 7 }
+					spriteType = "GFX_VS_coup_progressbar"
+					alwaystransparent = yes
+				}
+
+				iconType = {
+					name = "VS_coup_progressbar_frame"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_VS_coup_progressbar_frame"
+					alwaystransparent = yes
+				}
+
+				containerWindowType = {
+					name = "phases_window"
+					position = { x = 0 y = -70 }
+					size = { width = 100%% height = 100%% }
+
+					containerWindowType = {
+						name = "phases_1_window"
+						position = { x = 102 y = 0 }
+						size = { width = 67 height = 73 }
+
+						iconType = {
+							name = "phase_icon_1"
+							position = { x = 0 y = 0 }
+							spriteType = "GFX_VS_coup_phases_icons"
+							frame = 1
+							pdx_tooltip_anchor = {
+								x = 60
+								y = -120
+							}
+						}
+						iconType = {
+							name = "phase_icon_1_active"
+							position = { x = 0 y = 0 }
+							spriteType = "GFX_VS_coup_phases_icons"
+							frame = 2
+						}
+						instantTextBoxType = {
+							name = "phase_text_1"
+							position = { x = 15 y = 45 }
+							font = "hoi_16mbs"
+							format = center
+							text = "1"
+							maxWidth = 35
+							maxHeight = 10
+							fixedsize = yes
+							alwaystransparent = yes
+							text_color_code = g
+						}
+						instantTextBoxType = {
+							name = "phase_text_1_active"
+							position = { x = 15 y = 45 }
+							font = "hoi_16mbs"
+							format = center
+							text = "1"
+							maxWidth = 35
+							maxHeight = 10
+							fixedsize = yes
+							alwaystransparent = yes
+						}
+					}
+
+					containerWindowType = {
+						name = "phases_2_window"
+						position = { x = 266 y = 0 }
+						size = { width = 67 height = 73 }
+
+						iconType = {
+							name = "phase_icon_2"
+							position = { x = 0 y = 0 }
+							spriteType = "GFX_VS_coup_phases_icons"
+							frame = 3
+						}
+						iconType = {
+							name = "phase_icon_2_active"
+							position = { x = 0 y = 0 }
+							spriteType = "GFX_VS_coup_phases_icons"
+							frame = 4
+						}
+						instantTextBoxType = {
+							name = "phase_text_2"
+							position = { x = 15 y = 45 }
+							font = "hoi_16mbs"
+							format = center
+							text = "2"
+							maxWidth = 35
+							maxHeight = 10
+							fixedsize = yes
+							alwaystransparent = yes
+							text_color_code = g
+						}
+						instantTextBoxType = {
+							name = "phase_text_2_active"
+							position = { x = 15 y = 45 }
+							font = "hoi_16mbs"
+							format = center
+							text = "2"
+							maxWidth = 35
+							maxHeight = 10
+							fixedsize = yes
+							alwaystransparent = yes
+						}
+					}
+
+					containerWindowType = {
+						name = "phases_3_window"
+						position = { x = 330 y = 0 }
+						size = { width = 67 height = 73 }
+
+						iconType = {
+							name = "phase_icon_3"
+							position = { x = 0 y = 0 }
+							spriteType = "GFX_VS_coup_phases_icons"
+							frame = 5
+						}
+						iconType = {
+							name = "phase_icon_3_active"
+							position = { x = 0 y = 0 }
+							spriteType = "GFX_VS_coup_phases_icons"
+							frame = 6
+						}
+						instantTextBoxType = {
+							name = "phase_text_3"
+							position = { x = 15 y = 45 }
+							font = "hoi_16mbs"
+							format = center
+							text = "3"
+							maxWidth = 35
+							maxHeight = 10
+							fixedsize = yes
+							alwaystransparent = yes
+							text_color_code = g
+						}
+						instantTextBoxType = {
+							name = "phase_text_3_active"
+							position = { x = 15 y = 45 }
+							font = "hoi_16mbs"
+							format = center
+							text = "3"
+							maxWidth = 35
+							maxHeight = 10
+							fixedsize = yes
+							alwaystransparent = yes
+						}
+					}
+				}
+
+				containerWindowType = {
+					name = "indicator_window"
+					position = { x = -32 y = 24 }
+					size = { width = 100%% height = 100%% }
+
+					iconType = {
+						name = "indicator_icon"
+						position = { x = 0 y = 0 }
+						spriteType = "GFX_VS_coup_percentage_indicator"
+						pdx_tooltip = "tt_rebl_current"
+					}
+
+					containerWindowType = {
+						name = "value_window"
+						position = { x = 20 y = 18 }
+						size = { width = 32 height = 17 }
+
+						instantTextBoxType = {
+							name = "indicator_value_text"
+							position = { x = 0 y = 0 }
+							font = "hoi_16mbs"
+							format = center
+							text = "[?VS_coup_prss_rev|0%]"
+							text_color_code = g
+							maxWidth = 34
+							maxHeight = 10
+							fixedsize = yes
+							alwaystransparent = yes
+						}
+					}
+				}
+			}
+		}
+
+		containerWindowType = {
+			name = "VS_coup_leaders"
+			position = { x = 0 y = 0 }
+			size = { width = 100%% height = 100%% }
+
+			containerWindowType = {
+				name = "VS_coup_ldr_progressbar_window"
+				position = { x = 45 y = 0 }
+				size = { width = 385 height = 20 }
+
+				iconType = {
+					name = "VS_coup_p_bar_blackfront"
+					position = { x = 142 y = 30 }
+					spriteType = "GFX_VS_coup_p_bar"
+					pdx_tooltip = "VS_BlackFront_influence"
+				}
+				iconType = {
+					name = "VS_coup_p_bar_goebb"
+					position = { x = 246 y = 30 }
+					spriteType = "GFX_VS_coup_p_bar"
+					pdx_tooltip = "VS_Goebbels_influence"
+				}
+			}
+		}
+
+		iconType = {
+			name ="VS_coup_ic_l"
+			spriteType = "GFX_VS_coup_l"
+			position = { x = 85 y = 30 }
+			pdx_tooltip = "VS_BlackFront_influence"
+		}
+		iconType = {
+			name ="VS_coup_ic_r"
+			spriteType = "GFX_VS_coup_r"
+			position = { x = 300 y = 30 }
+			pdx_tooltip = "VS_Goebbels_influence"
+		}
+
+		###
+		containerWindowType = {
+			name = "VS_coup_map_window"
+			size = { width = 100% height = 100% }
+			position = { x = 0 y = 0 }
+
+			buttonType = {
+				name = "VS_coup_21_gb_button"
+			    position = { x = 275 y = 315 }
+				multiline = yes
+				spriteType = "GFX_VS_cp_gb_21"
+				pdx_tooltip = test
+				pdx_tooltip_delayed = test_desc
+			}
+			buttonType = {
+				name = "VS_coup_20_gb_button"
+			    position = { x = 336 y = 303 }
+				multiline = yes
+				spriteType = "GFX_VS_cp_gb_20"
+				pdx_tooltip = test
+				pdx_tooltip_delayed = test_desc
+			}
+			buttonType = {
+				name = "VS_coup_19_gb_button"
+			    position = { x = 338 y = 374 }
+				multiline = yes
+				spriteType = "GFX_VS_cp_gb_18"
+				pdx_tooltip = test
+				pdx_tooltip_delayed = test_desc
+			}
+			buttonType = {
+				name = "VS_coup_18_gb_button"
+			    position = { x = 206 y = 328 }
+				multiline = yes
+				spriteType = "GFX_VS_cp_gb_19"
+				pdx_tooltip = test
+				pdx_tooltip_delayed = test_desc
+			}
+			buttonType = {
+				name = "VS_coup_17_gb_button"
+			    position = { x = 223 y = 371 }
+				multiline = yes
+				spriteType = "GFX_VS_cp_gb_17"
+				pdx_tooltip = test
+				pdx_tooltip_delayed = test_desc
+			}
+			buttonType = {
+				name = "VS_coup_16_gb_button"
+			    position = { x = 155 y = 318 }
+				multiline = yes
+				spriteType = "GFX_VS_cp_gb_16"
+				pdx_tooltip = test
+				pdx_tooltip_delayed = test_desc
+			}
+			buttonType = {
+				name = "VS_coup_15_gb_button"
+			    position = { x = 126 y = 348 }
+				multiline = yes
+				spriteType = "GFX_VS_cp_gb_14"
+				pdx_tooltip = test
+				pdx_tooltip_delayed = test_desc
+			}
+			buttonType = {
+				name = "VS_coup_14_gb_button"
+			    position = { x = 362 y = 428 }
+				multiline = yes
+				spriteType = "GFX_VS_cp_gb_15"
+				pdx_tooltip = test
+				pdx_tooltip_delayed = test_desc
+			}
+			buttonType = {
+				name = "VS_coup_13_gb_button"
+			    position = { x = 178 y = 446 }
+				multiline = yes
+				spriteType = "GFX_VS_cp_gb_13"
+				pdx_tooltip = test
+				pdx_tooltip_delayed = test_desc
+			}
+			buttonType = {
+				name = "VS_coup_12_gb_button"
+			    position = { x = 62 y = 354 }
+				multiline = yes
+				spriteType = "GFX_VS_cp_gb_12"
+				pdx_tooltip = test
+				pdx_tooltip_delayed = test_desc
+			}
+			buttonType = {
+				name = "VS_coup_11_gb_button"
+			    position = { x = 52 y = 410 }
+				multiline = yes
+				spriteType = "GFX_VS_cp_gb_11"
+				pdx_tooltip = test
+				pdx_tooltip_delayed = test_desc
+			}
+			buttonType = {
+				name = "VS_coup_10_gb_button"
+			    position = { x = 257 y = 454 }
+				multiline = yes
+				spriteType = "GFX_VS_cp_gb_9"
+				pdx_tooltip = test
+				pdx_tooltip_delayed = test_desc
+			}
+			buttonType = {
+				name = "VS_coup_9_gb_button"
+			    position = { x = 84 y = 451 }
+				multiline = yes
+				spriteType = "GFX_VS_cp_gb_8"
+				pdx_tooltip = test
+				pdx_tooltip_delayed = test_desc
+			}
+			iconType = {
+				name = "VS_coup_7_gb_button"
+			    position = { x = 34 y = 442 }
+				multiline = yes
+				spriteType = "GFX_VS_cp_gb_10"
+				pdx_tooltip = GRU_no_influence_tt
+			}
+			iconType = {
+				name = "VS_coup_8_gb_button"
+			    position = { x = 25 y = 445 }
+				multiline = yes
+				spriteType = "GFX_VS_cp_gb_7"
+				pdx_tooltip = GRU_no_influence_tt
+			}
+			iconType = {
+				name = "VS_coup_6_gb_button"
+			    position = { x = 36 y = 527 }
+				multiline = yes
+				spriteType = "GFX_VS_cp_gb_6"
+				pdx_tooltip = GRU_no_influence_tt
+			}
+			buttonType = {
+				name = "VS_coup_5_gb_button"
+			    position = { x = 77 y = 554 }
+				multiline = yes
+				spriteType = "GFX_VS_cp_gb_4"
+			}
+			buttonType = {
+				name = "VS_coup_3_gb_button"
+			    position = { x = 112 y = 565 }
+				multiline = yes
+				spriteType = "GFX_VS_cp_gb_2"
+			}
+			buttonType = {
+				name = "VS_coup_1_gb_button"
+			    position = { x = 142 y = 492 }
+				multiline = yes
+				spriteType = "GFX_VS_cp_gb_1"
+			}
+			
+			buttonType = {
+				name = "VS_map_reg_50"
+			    position = { x = -129 y = 210 }
+				spriteType = "GFX_VS_map_reg_50"
+				multiline = yes
+				orientation = center
+				pdx_tooltip = "GRU_50_tt"
+			}
+			buttonType = {
+				name = "VS_map_reg_53"
+			    position = { x = -12 y = 177 }
+				spriteType = "GFX_VS_map_reg_53"
+				multiline = yes
+				orientation = center
+				pdx_tooltip = "GRU_53_tt"
+			}
+			buttonType = {
+				name = "VS_map_reg_52"
+			    position = { x = -63 y = 232 }
+				spriteType = "GFX_VS_map_reg_52"
+				multiline = yes
+				orientation = center
+				pdx_tooltip = "GRU_52_tt"
+			}
+			buttonType = {
+				name = "VS_map_reg_53"
+			    position = { x = -12 y = 177 }
+				spriteType = "GFX_VS_map_reg_53"
+				multiline = yes
+				orientation = center
+				pdx_tooltip = "GRU_53_tt"
+			}
+			buttonType = {
+				name = "VS_map_reg_780"
+			    position = { x = -165 y = 198 }
+				spriteType = "GFX_VS_map_reg_780"
+				multiline = yes
+				orientation = center
+				pdx_tooltip = "GRU_780_tt"
+			}
+			buttonType = {
+				name = "VS_map_reg_54"
+			    position = { x = -98 y = 139 }
+				spriteType = "GFX_VS_map_reg_54"
+				multiline = yes
+				orientation = center
+				pdx_tooltip = "GRU_54_tt"
+			}
+			buttonType = {
+				name = "VS_map_reg_65"
+			    position = { x = 16 y = 99 }
+				spriteType = "GFX_VS_map_reg_65"
+				multiline = yes
+				orientation = center
+				pdx_tooltip = "GRU_65_tt"
+			}
+			buttonType = {
+				name = "VS_map_reg_66"
+			    position = { x = 120 y = 73 }
+				spriteType = "GFX_VS_map_reg_66"
+				multiline = yes
+				orientation = center
+				pdx_tooltip = "GRU_66_tt"
+			}
+			buttonType = {
+				name = "VS_map_reg_68"
+			    position = { x = 98 y = 20 }
+				spriteType = "GFX_VS_map_reg_68"
+				multiline = yes
+				orientation = center
+				pdx_tooltip = "GRU_68_tt"
+			}
+			buttonType = {
+				name = "VS_map_reg_63"
+			    position = { x = 96 y = -52 }
+				spriteType = "GFX_VS_map_reg_63"
+				multiline = yes
+				orientation = center
+				pdx_tooltip = "GRU_63_tt"
+			}
+			buttonType = {
+				name = "VS_map_reg_64"
+			    position = { x = -18 y = 16 }
+				spriteType = "GFX_VS_map_reg_64"
+				multiline = yes
+				orientation = center
+				pdx_tooltip = "GRU_64_tt"
+			}
+			buttonType = {
+				name = "VS_map_reg_60"
+			    position = { x = -64 y = 91 }
+				spriteType = "GFX_VS_map_reg_60"
+				multiline = yes
+				orientation = center
+				pdx_tooltip = "GRU_60_tt"
+			}
+			buttonType = {
+				name = "VS_map_reg_62"
+			    position = { x = 33 y = -40 }
+				spriteType = "GFX_VS_map_reg_62"
+				multiline = yes
+				orientation = center
+				pdx_tooltip = "GRU_62_tt"
+			}
+			buttonType = {
+				name = "VS_map_reg_61"
+			    position = { x = -36 y = -26 }
+				spriteType = "GFX_VS_map_reg_61"
+				multiline = yes
+				orientation = center
+				pdx_tooltip = "GRU_61_tt"
+			}
+			buttonType = {
+				name = "VS_map_reg_58"
+			    position = { x = -87 y = -36 }
+				spriteType = "GFX_VS_map_reg_58"
+				multiline = yes
+				orientation = center
+				pdx_tooltip = "GRU_58_tt"
+			}
+			buttonType = {
+				name = "VS_map_reg_59"
+			    position = { x = -116 y = -6 }
+				spriteType = "GFX_VS_map_reg_59"
+				multiline = yes
+				orientation = center
+				pdx_tooltip = "GRU_59_tt"
+			}
+			buttonType = {
+				name = "VS_map_reg_56"
+			    position = { x = -180 y = 0 }
+				spriteType = "GFX_VS_map_reg_56"
+				multiline = yes
+				orientation = center
+				pdx_tooltip = "GRU_56_tt"
+			}
+			buttonType = {
+				name = "VS_map_reg_57"
+			    position = { x = -190 y = 56 }
+				spriteType = "GFX_VS_map_reg_57"
+				multiline = yes
+				orientation = center
+				pdx_tooltip = "GRU_57_tt"
+			}
+			buttonType = {
+				name = "VS_map_reg_55"
+			    position = { x = -156 y = 96 }
+				spriteType = "GFX_VS_map_reg_55"
+				multiline = yes
+				orientation = center
+				pdx_tooltip = "GRU_55_tt"
+			}
+		}
+
+		containerWindowType = {
+	    	name = "VS_coup_map_entry"
+	    	buttonType = {
+	    		name = "VS_coup_map_state"
+	    		spriteType = "GFX_blank"
+	    		pdx_tooltip = VS_coup_map_state_tt
+	    	}
+	    }
+	}
+}

@@ -1,0 +1,22 @@
+spriteTypes = {
+	SpriteType = {
+	name = "GFX_HDP"
+	texturefile = "gfx/event_pictures/HDP.png"			
+	}
+	SpriteType = {
+	name = "GFX_NSDP"
+	texturefile = "gfx/event_pictures/NSDP.png"			
+	}
+	SpriteType = {
+	name = "GFX_HSCP"
+	texturefile = "gfx/event_pictures/HSCP.png"			
+	}
+	SpriteType = {
+	name = "GFX_HSP"
+	texturefile = "gfx/event_pictures/HSP.png"			
+	}
+	spriteType = {
+		name = "jons_mor_jews_decision"
+		texturefile = "gfx/interface/decisions/jons_mor_jews_decision.png"
+	}
+}

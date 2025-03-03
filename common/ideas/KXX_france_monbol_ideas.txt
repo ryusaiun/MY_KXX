@@ -1,0 +1,591 @@
+##############
+# Australasia
+##############
+ideas = {
+
+	##############
+	# Country ideas
+	##############
+	country = {
+		### SUBMOD ADDED!!!
+		NFA_circle_prondhon = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AST_uob_advisors_idea"}
+			
+			picture = NFA_devastation
+			
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				conscription = 0.01
+				conscription_factor = 0.1
+				totalist_drift = 0.02
+				national_populist_drift = 0.02
+			}
+		}
+		NFA_circle_prondhon2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AST_uob_advisors_idea"}
+			
+			picture = NFA_devastation
+			
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				industrial_capacity_factory = 0.1
+				production_speed_buildings_factor = 0.1
+				conscription = 0.01
+				conscription_factor = 0.1
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+				totalist_drift = 0.05
+				national_populist_drift = 0.05
+			}
+		}
+		NFA_regional_autonomy3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NFA_regional_autonomy2"}
+
+			allowed = { always = no }
+            modifier = {
+				global_building_slots_factor = 0.15
+				production_factory_max_efficiency_factor = 0.15
+				weekly_manpower = 100
+				production_lack_of_resource_penalty_factor = -0.15
+				production_resource_need_factor = -0.1
+				production_speed_buildings_factor = 0.1
+				monthly_population = 0.25
+				supply_consumption_factor = -0.1
+			}
+
+			name = NFA_regional_autonomy
+			picture = NFA_regional_autonomy
+		}
+		NFA_maurrasisme_5 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NFA_maurrasisme_4"}
+
+			allowed = { always = no }
+            modifier = {
+				political_power_factor = 0.25
+				party_popularity_stability_factor = 0.1
+				stability_factor = 0.2
+				stability_weekly = 0.02
+				research_speed_factor = 0.1
+				consumer_goods_factor = -0.15
+				local_resources_factor = 0.1
+				defensive_war_stability_factor = 0.25
+				offensive_war_stability_factor = 0.25
+
+			}
+
+			name = NFA_maurrasisme
+			picture = NFA_maurrasianism
+		}
+		NFA_maurrasian_doctrinal_cohesion3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NFA_maurrasian_doctrinal_cohesion2"}
+
+			allowed = { always = no }
+            modifier = {
+				party_popularity_stability_factor = 0.1
+				political_power_factor = 0.1
+				stability_factor = 0.1
+				conscription_factor = 0.1
+				command_power_gain = 0.1
+				max_command_power = 150
+				command_power_gain_mult = 0.1
+				max_command_power_mult = 0.1
+				compliance_growth = 0.15
+			}
+
+			name = NFA_maurrasian_doctrinal_cohesion
+			picture = NFA_maurrasianism
+		}
+		
+		FRA_true_national_front = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NFA_le_pen_idea_3"}
+
+			allowed = { always = no }
+            modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				line_change_production_efficiency_factor = 0.15
+				conversion_cost_civ_to_mil_factor = -0.1
+				resistance_target = -0.1
+				war_support_weekly = 0.005
+				max_command_power = 100
+				army_strength_factor = 0.1
+				terrain_penalty_reduction = 0.1
+				totalist_drift = 0.04
+				syndicalist_drift = 0.02
+				radical_socialist_drift = 0.02
+				national_populist_drift = 0.04
+			}
+
+			
+			picture = NFA_le_pen
+		}
+		NFA_total_chaos = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AST_uob_advisors_idea"}
+			
+			picture = NFA_devastation
+			
+			modifier = {
+				consumer_goods_factor = 0.8
+				stability_weekly = -0.1
+				war_support_weekly = -0.1
+				political_power_gain = -0.25
+				command_power_gain_mult = -0.25
+				max_command_power_mult = -0.25
+				conscription = -0.05
+				conscription_factor = -0.5
+				radical_socialist_drift = -0.01
+			}
+		}
+		NFA_total_chaos1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AST_uob_advisors_idea"}
+			
+			picture = NFA_devastation
+			
+			modifier = {
+				consumer_goods_factor = 0.5
+				stability_weekly = -0.1
+				war_support_factor = -0.1
+				political_power_gain = -0.25
+				command_power_gain_mult = -0.25
+				max_command_power_mult = -0.25
+				conscription = -0.05
+				conscription_factor = -0.5
+
+			}
+		}
+		NFA_total_chaos2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AST_uob_advisors_idea"}
+			
+			picture = NFA_devastation
+			
+			modifier = {
+				consumer_goods_factor = 0.5
+				stability_weekly = -0.1
+				war_support_factor = -0.1
+				political_power_gain = -0.1
+				command_power_gain_mult = -0.1
+				max_command_power_mult = -0.1
+				conscription = -0.02
+				conscription_factor = -0.4
+
+			}
+		}
+		NFA_total_chaos3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AST_uob_advisors_idea"}
+			
+			picture = NFA_devastation
+			
+			modifier = {
+				consumer_goods_factor = 0.2
+				stability_weekly = -0.1
+				war_support_factor = -0.05
+				political_power_gain = -0.05
+				command_power_gain_mult = -0.1
+				max_command_power_mult = -0.1
+				conscription = -0.01
+				conscription_factor = -0.4
+
+			}
+		}
+		NFA_total_chaos4 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AST_uob_advisors_idea"}
+			
+			picture = NFA_devastation
+			
+			modifier = {
+				consumer_goods_factor = 0.2
+				stability_weekly = -0.1
+				war_support_factor = -0.02
+				political_power_gain = -0.02
+				command_power_gain_mult = -0.1
+				max_command_power_mult = -0.1
+				
+				conscription_factor = -0.4
+
+			}
+		}
+		NFA_total_chaos4 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AST_uob_advisors_idea"}
+			
+			picture = NFA_devastation
+			
+			modifier = {
+				consumer_goods_factor = 0.2
+				stability_weekly = -0.05
+				war_support_factor = -0.02
+				political_power_gain = -0.02
+				command_power_gain_mult = -0.1
+				max_command_power_mult = -0.1
+				
+				conscription_factor = -0.1
+
+			}
+		}
+		NFA_total_chaos5 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AST_uob_advisors_idea"}
+			
+			picture = NFA_devastation
+			
+			modifier = {
+				consumer_goods_factor = 0.2
+				stability_weekly = -0.05
+				war_support_factor = -0.02
+				political_power_gain = -0.02
+				
+
+			}
+		}
+		NFA_total_chaos_aftermath = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AST_uob_advisors_idea"}
+			
+			picture = NFA_devastation
+			
+			modifier = {
+				political_power_cost = 0.05
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				consumer_goods_factor = 0.1
+			}
+		}
+		NFA_total_chaos6 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AST_uob_advisors_idea"}
+			
+			picture = NFA_devastation
+			
+			modifier = {
+				consumer_goods_factor = 0.1
+				stability_weekly = -0.02
+				war_support_factor = -0.02
+				political_power_gain = -0.01
+				
+
+			}
+		}
+		NFA_msm_left = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AST_social_reforms_1"}
+			picture = generic_syndicalist_monarchy
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				research_speed_factor = 0.05
+				production_speed_buildings_factor = 0.1
+				radical_socialist_drift = 0.05
+				syndicalist_drift = 0.02
+				totalist_drift = 0.01
+
+			}
+		}
+		NFA_msm_left1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AST_social_reforms_1"}
+			picture = generic_syndicalist_monarchy
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				research_speed_factor = 0.05
+				conscription = 0.015
+				monthly_population = 0.5
+				stability_popularity_factor = 0.1
+				resistance_target = -0.1
+				production_speed_buildings_factor = 0.1
+				radical_socialist_drift = 0.05
+				syndicalist_drift = 0.02
+				totalist_drift = 0.01
+				national_populist_drift = 0.02
+				authoritarian_democrat_drift = 0.01
+			}
+		}
+		NFA_msm_left2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AST_social_reforms_1"}
+			picture = generic_syndicalist_monarchy
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				research_speed_factor = 0.1
+				conscription = 0.015
+				monthly_population = 0.5
+				stability_popularity_factor = 0.1
+				resistance_target = -0.1
+				production_speed_buildings_factor = 0.1
+				army_attack_speed_factor = 0.1
+				production_resource_need_factor = -0.1
+				consumer_goods_factor = -0.15
+				command_power_gain = 0.15
+				production_factory_start_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.1
+				compliance_growth = 0.1
+				army_attack_factor = 0.1
+				radical_socialist_drift = 0.05
+				syndicalist_drift = 0.02
+				totalist_drift = 0.01
+				national_populist_drift = 0.02
+				authoritarian_democrat_drift = 0.01
+			}
+		}
+		NFA_christian_socialism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AST_social_reforms_1"}
+			picture = christian_commonwealth
+			modifier = {
+				political_power_cost = -0.20
+				stability_factor = 0.1
+				production_factory_max_efficiency_factor = 0.10
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+				conscription_factor = 0.12
+			}
+		}
+		NFA_mercyful_monarch = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AST_social_reforms_1"}
+			picture = CAN_exile_government
+			modifier = {
+				political_power_factor = 0.1
+				war_support_factor = 0.1
+				radical_socialist_drift = 0.02
+				production_factory_efficiency_gain_factor = 0.1
+
+			}
+		}
+		NFA_mercyful_monarch1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AST_social_reforms_1"}
+			picture = CAN_exile_government
+			modifier = {
+				political_power_factor = 0.1
+				war_support_factor = 0.1
+				radical_socialist_drift = 0.02
+				production_factory_efficiency_gain_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				offensive_war_stability_factor = 0.25
+				training_time_army_factor = -0.1
+				encryption = 0.03
+				decryption = 0.03
+				required_garrison_factor = -0.1
+			}
+		}
+		NFA_social_welfare = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AST_social_reforms_1"}
+			picture = generic_welfare_state
+			modifier = {
+				consumer_goods_factor = 0.2
+				stability_weekly = 0.06
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_infrastructure_factor = 0.1
+				monthly_population = 0.25
+				industrial_capacity_factory = 0.15
+				experience_loss_factor = -0.1
+			}
+		}
+		NFA_social_patriotism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AST_liberal_economy"}
+			picture = NFA_mass
+			modifier = {
+				weekly_manpower = 100
+				org_loss_at_low_org_factor = -0.2
+				dig_in_speed_factor = 0.1
+				max_dig_in_factor = 0.1
+				army_strength_factor = 0.1
+				planning_speed = 0.15
+				max_planning = 0.2
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_speed_factor = 0.1
+				breakthrough_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+				breakthrough_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = AUS
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+				breakthrough_bonus_against = 0.1
+			}
+		}
+		NFA_introduce_managism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AST_liberal_economy"}
+			picture = CSA_4_hours_day
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.2
+					defense = 0.1
+					breakthrough = 0.1
+					hardness = 0.1
+					soft_attack = 0.1
+
+					instant = yes
+				}
+				artillery_equipment = {
+					build_cost_ic = -0.15
+					defense = 0.1
+					breakthrough = 0.1
+					hardness = 0.1
+					soft_attack = 0.1
+					instant = yes
+				}
+				armor = {
+					build_cost_ic = -0.1
+					defense = 0.1
+					breakthrough = 0.1
+					hardness = 0.1
+					soft_attack = 0.1
+					instant = yes
+				}
+			}
+		
+		}
+		NFA_red_regionalism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AST_liberal_economy"}
+			picture = NFA_crown
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.15
+				global_building_slots_factor = 0.5
+				political_power_cost = -0.2
+				conscription_factor = 0.15
+				stability_factor = 0.1
+			}
+		}
+		NFA_bourquinisme = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AST_liberal_economy"}
+			picture = generic_syndicalist_revolution
+			modifier = {
+				political_power_factor = 0.25
+				party_popularity_stability_factor = 0.1
+				stability_factor = 0.2
+				stability_weekly = 0.015
+				research_speed_factor = 0.1
+				drift_defence_factor = 0.2
+
+			}
+		}
+		NFA_msm_right = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AST_liberal_economy"}
+			picture = generic_syndicalist_monarchy
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				research_speed_factor = 0.05
+				production_speed_buildings_factor = 0.1
+				radical_socialist_drift = 0.05
+				syndicalist_drift = 0.02
+				
+
+			}
+		}
+		NFA_msm_right1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AST_liberal_economy"}
+			picture = generic_syndicalist_monarchy
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				research_speed_factor = 0.05
+				production_speed_buildings_factor = 0.1
+				radical_socialist_drift = 0.05
+				syndicalist_drift = 0.02
+				social_democrat_drift = 0.02
+				social_liberal_drift = 0.02
+				market_liberal_drift = 0.01
+				social_conservative_drift = 0.01
+				authoritarian_democrat_drift = 0.01
+				paternal_autocrat_drift = 0.01
+				consumer_goods_factor = -0.25
+				min_export = 0
+				compliance_growth = 0.15
+				resistance_target = -0.15
+				required_garrison_factor = -0.15
+				attrition = -0.15
+
+			}
+		}
+		NFA_msm_right2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AST_liberal_economy"}
+			picture = generic_syndicalist_monarchy
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				research_speed_factor = 0.05
+				production_speed_buildings_factor = 0.1
+				radical_socialist_drift = 0.05
+				syndicalist_drift = 0.02
+				social_democrat_drift = 0.02
+				social_liberal_drift = 0.02
+				market_liberal_drift = 0.01
+				social_conservative_drift = 0.01
+				authoritarian_democrat_drift = 0.01
+				paternal_autocrat_drift = 0.01
+				consumer_goods_factor = -0.25
+				min_export = 0
+				compliance_growth = 0.15
+				resistance_target = -0.15
+				required_garrison_factor = -0.15
+				attrition = -0.15
+				line_change_production_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+
+			}
+		}
+		NFA_minorty_rights = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AST_liberal_economy"}
+			picture = generic_demonstrations
+			modifier = {
+				monthly_population = 0.5
+				conscription = 0.02
+				conscription_factor = 0.1
+				non_core_manpower = 0.5
+				production_speed_buildings_factor = 0.1
+
+			}
+		}
+		NFA_guild_socialism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AST_liberal_economy"}
+			picture = soc_confederacy
+			modifier = {
+				consumer_goods_factor = -0.2
+				production_speed_buildings_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
+				production_speed_industrial_complex_factor = 0.05
+				line_change_production_efficiency_factor = 0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_factory_start_efficiency_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+
+			}
+		}
+		NFA_free_speech = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AST_liberal_economy"}
+			picture = expand_unionisation
+			modifier = {
+				political_power_factor = 0.25
+				compliance_growth = 0.1
+				radical_socialist_drift = 0.02
+				stability_factor = 0.2
+				war_support_factor = 0.2
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
+
+			}
+		}
+		
+	}
+}

@@ -1,0 +1,19 @@
+###OOB File for GEA.txt
+units = {
+	fleet = {
+		name = "Flotte verstärkung"
+		naval_base = 12299 ###Change to proper province number
+		task_force = {
+			name = "Flotte verstärkung"
+			location = 12299 ###Change to proper province number
+			ship = { name = "SMS Prinz Heinrich" definition = battle_cruiser equipment = { ship_hull_heavy_2 = { amount = 1 owner = GEA version_name = "Johann Jakob Class" } } }
+            ship = { name = "SMS Karl der Grobe" definition = battle_cruiser equipment = { ship_hull_heavy_2 = { amount = 1 owner = GEA version_name = "Johann Jakob Class" } } }
+            
+            ship = { name = "SMS Siegfried" definition = heavy_cruiser equipment = { ship_hull_cruiser_panzerschiff = { amount = 1 owner = GEA version_name = "Prinz Eugen Class" } } } 
+            ship = { name = "SMS Bittenfeld" definition = heavy_cruiser equipment = { ship_hull_cruiser_panzerschiff = { amount = 1 owner = GEA version_name = "Prinz Eugen Class" } } }
+            ship = { name = "SMS Danzig" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = GEA version_name = "Bremen Class" } } }
+            ship = { name = "SMS Stettin" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = GEA version_name = "Bremen Class" } } }
+            ship = { name = "SMS Dresden" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = GEA version_name = "Bremen Class" } } }
+		}
+	}
+}

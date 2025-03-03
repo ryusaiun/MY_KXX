@@ -1,0 +1,78 @@
+
+equipments = {
+	egyptian_starship = {
+		year = 2000
+		
+		can_be_produced = {
+			has_country_flag = FIN_STARSHIPS_FLAG
+		}
+		
+		type = egyptian_starship_type
+		priority = 999999999999
+		
+		allow_mission_type = training
+		group_by = archetype
+		sprite = heavy_plane
+		air_map_icon_frame = 11
+		interface_category = interface_category_air
+		
+		allow_mission_type = {
+			air_superiority
+			interception
+			cas
+			naval_bomber
+			port_strike
+			attack_logistics
+			naval_patrol
+			strategic_bomber
+		}
+		
+		interface_overview_category_index = 5
+		
+		air_superiority = 0.15
+		is_archetype = yes
+		is_convertable = no
+		picture = archetype_strat_bomber_equipment
+		is_buildable = yes
+		air_range = 2500
+		maximum_speed = 100
+		air_agility = 90
+		air_attack = 200
+		air_defence = 200
+		air_bombing = 200
+		air_ground_attack = 200
+		
+		
+		
+		naval_strike_attack = 2
+		naval_strike_targetting = 100
+
+		upgrades = {
+			
+		}
+
+		air_superiority = 5
+		reliability = 1.0
+
+		# Air vs Navy - low damage / high hit chance / easy to hurt
+		naval_strike_attack = 2
+		naval_strike_targetting = 25
+		surface_detection = 25 # For airwing of 100 planes (Destroyer I: 20 surface detection)
+		sub_detection = 2.5 # For airwing of 100 planes (Destroyer I: 5 sub detection )
+
+		#Space taken in convoy
+		lend_lease_cost = 16
+
+		build_cost_ic = 1000
+		resources = {
+			oil = 5
+			aluminium = 5
+			rubber = 5
+			steel = 10
+		}
+
+		manpower = 500
+		fuel_consumption = 0.5
+
+	}
+}

@@ -1,0 +1,54 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_The_troubles_caused_by_the_uprising_sailors"
+		textureFile = "gfx/interface/ideas/Red_Ireland/ideas1.png"
+	}
+	spriteType = {
+		name = "GFX_big_decision1"
+		textureFile = "gfx/interface/decisions/Red_Ireland/big_decision1.png"
+	}
+	spriteType = {
+		name = "GFX_decision1"
+		textureFile = "gfx/interface/decisions/Red_Ireland/decision1.png"
+	}
+	spriteType = {
+		name = "GFX_decision2"
+		textureFile = "gfx/interface/decisions/Red_Ireland/decision2.png"
+	}
+	spriteType = {
+		name = "GFX_big_decision2"
+		textureFile = "gfx/interface/decisions/Red_Ireland/big_decision2.png"
+	}
+	spriteType = {
+		name = "GFX_decision3"
+		textureFile = "gfx/interface/decisions/Red_Ireland/decision3.png"
+	}
+	spriteType = {
+		name = "GFX_big_decision3"
+		textureFile = "gfx/interface/decisions/Red_Ireland/big_decision3.png"
+	}
+	spriteType = {
+		name = "GFX_big_decision4"
+		textureFile = "gfx/interface/decisions/Red_Ireland/big_decision4.png"
+	}
+	spriteType = {
+		name = "GFX_decision4"
+		textureFile = "gfx/interface/decisions/Red_Ireland/decision4.png"
+	}
+	spriteType = {
+		name = "GFX_big_decision5"
+		textureFile = "gfx/interface/decisions/Red_Ireland/big_decision5.png"
+	}
+	spriteType = {
+		name = "GFX_decision5"
+		textureFile = "gfx/interface/decisions/Red_Ireland/decision5.png"
+	}
+	spriteType = {
+		name = "GFX_decision6"
+		textureFile = "gfx/interface/decisions/Red_Ireland/decision6.png"
+	}
+	spriteType = {
+		name = "GFX_big_decision6"
+		textureFile = "gfx/interface/decisions/Red_Ireland/big_decision6.png"
+	}
+}

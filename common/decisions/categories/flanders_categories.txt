@@ -1,0 +1,18 @@
+FLN_paneu_diplomacy = {
+	icon = generic_propaganda
+	allowed = { tag = FLN }
+	visible = {
+		is_subject = no
+		has_completed_focus = FLN_from_dublin_to_vladivostok
+		is_ai = no
+	}
+}
+FLN_paneu_puppet = {
+	icon = generic_propaganda
+	allowed = { tag = FLN }
+	visible = {
+		is_subject = no
+		has_completed_focus = FLN_liberation_of_europe
+		is_ai = no
+	}
+}

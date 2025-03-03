@@ -1,0 +1,9 @@
+MAG_politics_decisions = {
+	icon = GFX_decision_MAG_politics_decisions
+	picture = GFX_decision_heydrich_decision
+	allowed = {
+		original_tag = MAG
+	}
+	visible_when_empty = yes
+	priority = 1000
+}

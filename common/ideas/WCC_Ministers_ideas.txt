@@ -1,0 +1,107 @@
+ideas = {
+	head_of_government = {
+			WCC_Curtis_LeMay_hog_pau = {
+				allowed = { original_tag = WCC }
+				available = {
+					custom_trigger_tooltip = {
+						tooltip = head_of_gov_available
+						always = no
+					}
+				}
+				picture = WCC_Curtis_LeMay_eco_npo
+				on_add = {
+					log = "[GetDateText]: [Root.GetName]: add idea WCC_Curtis_LeMay_hog_pau"
+				}
+				traits = {
+					head_of_government
+					paternal_autocrat
+					hog_Air_force_hero
+				}
+				cancel_if_invalid = no
+			}
+			WCC_George_Wallace_hog_ade = {
+				allowed = { original_tag = WCC }
+				available = {
+					custom_trigger_tooltip = {
+						tooltip = head_of_gov_available
+						always = no
+					}
+				}
+				picture = COR_George_Wallace_hog_sde
+				visible = {
+					has_completed_focus = WCC_olive_branch_of_the_South
+				}
+				on_add = {
+					log = "[GetDateText]: [Root.GetName]: add idea WCC_George_Wallace_hog_ade"
+				}
+				traits = {
+					head_of_government
+					authoritarian_democrat
+					hog_hardline_segregationist
+				}
+				cancel_if_invalid = no
+			}		
+		} 
+	person_of_influence = {
+		#外交部长
+		WCC_John_Foster_Dulles_for_ade = {
+			allowed = { original_tag = WCC }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			picture = WCC_John_Foster_Dulles_for_ade
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea WCC_John_Foster_Dulles_for_ade"
+			}
+			traits = {
+				foreign_minister
+				authoritarian_democrat
+				for_ideological_crusader
+			}
+			cancel_if_invalid = no
+		}
+		#经济部长
+		WCC_George_M_Humphrey_eco_ade = {
+			allowed = { original_tag = WCC }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			picture = WCC_George_M_Humphrey_eco_ade
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea WCC_George_M_Humphrey_eco_ade"
+			}
+			traits = {
+				economy_minister
+				authoritarian_democrat
+				eco_balanced_budget_economy
+			}
+			cancel_if_invalid = no
+		}
+		#内政部长
+		WCC_Douglas_James_McKay_sec_ade = {
+			allowed = { original_tag = WCC }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			picture = WCC_Douglas_James_McKay_sec_ade
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea WCC_Douglas_James_McKay_sec_ade"
+			}
+			traits = {
+				security_minister
+				authoritarian_democrat
+				sec_natural_resource_developer
+			}
+			cancel_if_invalid = no
+		}
+	}
+}

@@ -1,0 +1,167 @@
+add_namespace = fin
+add_namespace = finland_border_conflict
+
+
+
+################
+#### FINLAND
+################
+
+country_event = {
+	id = fin.100
+	title = fin.100.t
+	desc = fin.100.desc
+	picture = GFX_report_event_IRE_army_climbing
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = fin.100.a
+		custom_effect_tooltip = fin_WRUARMY
+		hidden_effect = {
+			load_oob = FIN_balticnubian
+			division_template = {
+				name = "波罗的佣兵团"
+				division_names_group = SRI_GAR_01
+				template_counter = 68
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					artillery_brigade = { x = 2 y = 0 }
+				}
+				support = {
+          recon = {
+            x = 0
+            y = 0
+          }
+          artillery = {
+            x = 0
+            y = 1
+          }
+        }
+			}
+      840 = {
+        create_unit = {
+          division = "division_template = \"波罗的佣兵团\" start_experience_factor = 0.1 start_equipment_factor = 0.7"
+          owner = ROOT
+        }
+        create_unit = {
+          division = "division_template = \"波罗的佣兵团\" start_experience_factor = 0.1 start_equipment_factor = 0.7"
+          owner = ROOT
+        }
+		create_unit = {
+			division = "division_template = \"波罗的佣兵团\" start_experience_factor = 0.1 start_equipment_factor = 0.7"
+			owner = ROOT
+		  }
+      }
+		}
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = 800
+			producer = WRU
+		}
+		WRU = {
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.10
+			}
+		}
+	}
+}
+
+country_event = {
+	id = fin.999
+	title = fin.999.t
+	desc = fin.999.desc
+	picture = GFX_report_event_USA_navy
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = fin.999.a
+		set_war_support = 1
+		add_manpower = 2049
+	}
+}
+country_event = {
+	id = fin.77777
+	title = fin.77777.t
+	desc = fin.77777.desc
+	#picture = GFX_report_event_thecat
+	fire_only_once = yes
+	trigger = {
+		tag = ENG
+		EGY = {
+			has_capitulated = yes
+			has_defensive_war = yes
+			has_war_with = FIN
+		}
+		FIN = {
+			has_government = reactionism
+		}
+	}
+	option = {
+		ai_chance = {
+			base = 99
+		}
+		name = fin.77777.a
+		FIN = {
+			country_event = {
+				id = fin.77778
+				days = 1
+			}
+		}
+	}
+	option = {
+			ai_chance = {
+			base = 1
+		}
+		name = fin.77777.b
+		add_war_support = -0.10
+	}
+}
+country_event = {
+	id = fin.77778
+	title = fin.77778.t
+	desc = fin.77778.desc
+	#picture = GFX_report_event_thecat
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = fin.77778.a
+		white_peace = ENG
+		white_peace = CAN
+		white_peace = SAF
+		white_peace = WAS
+		white_peace = NZL
+		white_peace = AST
+		white_peace = WAF
+		white_peace = IRE
+		white_peace = NGA
+		annex_country = {
+			target = EGY
+			transfer_troops = yes
+		}
+	}
+}
+country_event = {
+	id = fin.11
+	title = fin.11.t
+	desc = fin.11.desc
+	#picture = GFX_report_event_thecat
+	is_triggered_only = yes
+
+	option = {
+		name = fin.11.a
+		add_popularity = {
+			ideology = reactionism
+			popularity = 0.03
+		}
+	}
+}
+
+# Question of Nations #
+# Question of Borders #
+

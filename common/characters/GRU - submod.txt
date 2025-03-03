@@ -1,0 +1,716 @@
+characters = {
+	GRU_Kurt_Schuhmacher = {
+		name = GRU_Kurt_Schuhmacher
+		portraits = { civilian = { large = "gfx/leaders/GRU/Portrait_Germany_Kurt_Schuhmacher.png" } }
+		country_leader = {
+			expire = "1.1.1"
+			ideology = socdem_democratic_socialism_subtype
+		}
+	}
+	GRU_Erich_Honecker = {
+		name = GRU_Erich_Honecker
+		portraits = { civilian = { large = "gfx/leaders/GRU/Portrait_Germany_Erich_Honecker_young.png" } }
+		country_leader = {
+			expire = "1.1.1"
+			ideology = moderate_socialist_subtype
+		}
+	}
+	GRU_Wilhelm_III = {
+		name = GRU_Wilhelm_III
+		portraits = { civilian = { large = "gfx/leaders/GER/Portrait_Germany_Wilhelm_III_field_marshall.png" } }
+		country_leader = {
+			expire = "1.1.1"
+			ideology = paternal_autocrat_subtype
+		}
+	}
+	GRU_Rupprecht = {
+		name = GRU_Rupprecht
+		portraits = { civilian = { large = "gfx/leaders/GER/Portrait_Germany_Rupprecht_Bayern_kr.png" } }
+		country_leader = {
+			expire = "1.1.1"
+			ideology = integralism_subtype
+		}
+	}
+	GRU_Konrad_Adenauer = {
+		name = GRU_Konrad_Adenauer
+		portraits = { civilian = { large = "gfx/leaders/GER/Portrait_Germany_Konrad_Adenauer_kr.png" } }
+		country_leader = {
+			desc = "GRU_ADENAUER_DESC"
+			expire = "1.1.1"
+			ideology = soccon_paneuropeanism_subtype
+		}
+	}
+	GRU_Karl_Artelt = {
+		name = GRU_Karl_Artelt
+		portraits = { civilian = { large = "gfx/leaders/GRU/Portrait_Germany_Karl_Artelt.png" } }
+		country_leader = {
+			desc = "GRU_Artelt_DESC"
+			expire = "1.1.1"
+			ideology = radical_socialist_subtype
+		}
+	}
+	GRU_SAX_George = {
+		name = GRU_SAX_George
+		portraits = { civilian = { large = "gfx/leaders/SAX/SAX_George.png" } }
+		country_leader = {
+			desc = "POLITICS_Georg_DESC"
+			expire = "1.1.1"
+			ideology = soccon_paneuropeanism_subtype
+		}
+		country_leader = {
+			desc = "POLITICS_Georg_DESC"
+			expire = "1.1.1"
+			ideology = socdem_democratic_socialism_subtype
+		}
+		country_leader = {
+			desc = "POLITICS_Georg_DESC"
+			expire = "1.1.1"
+			ideology = centrist_subtype
+		}
+		country_leader = {
+			desc = "POLITICS_Georg_DESC"
+			expire = "1.1.1"
+			ideology = marlib_national_liberalism_subtype
+		}
+		country_leader = {
+			desc = "POLITICS_Georg_DESC"
+			expire = "1.1.1"
+			ideology = prussian_constitutionalism_subtype
+		}
+		country_leader = {
+			desc = "POLITICS_Georg_DESC"
+			expire = "1.1.1"
+			ideology = absolute_monarchy_subtype
+		}
+		country_leader = {
+			desc = "POLITICS_Georg_DESC"
+			expire = "1.1.1"
+			ideology = militarism_subtype
+		}
+	}
+	GRU_Rupprecht_Bayern = {
+		name = GRU_Rupprecht_Bayern
+		portraits = { civilian = { large = "gfx/leaders/GER/Portrait_Germany_Rupprecht_Bayern_kr.png" } }
+		country_leader = {
+			expire = "1.1.1"
+			ideology = soccon_paneuropeanism_subtype
+		}
+		country_leader = {
+			expire = "1.1.1"
+			ideology = socdem_democratic_socialism_subtype
+		}
+		country_leader = {
+			expire = "1.1.1"
+			ideology = centrist_subtype
+		}
+		country_leader = {
+			expire = "1.1.1"
+			ideology = marlib_national_liberalism_subtype
+		}
+		country_leader = {
+			expire = "1.1.1"
+			ideology = prussian_constitutionalism_subtype
+		}
+		country_leader = {
+			expire = "1.1.1"
+			ideology = absolute_monarchy_subtype
+		}
+		country_leader = {
+			expire = "1.1.1"
+			ideology = militarism_subtype
+		}
+	}
+	GRU_Duke_of_Bavaria = {
+		name = GRU_Duke_of_Bavaria
+		portraits = { civilian = { large = "gfx/leaders/FRP/Albrecht_Duke_of_Bavaria.png" } }
+		country_leader = {
+			expire = "1.1.1"
+			ideology = soccon_paneuropeanism_subtype
+		}
+		country_leader = {
+			expire = "1.1.1"
+			ideology = socdem_democratic_socialism_subtype
+		}
+		country_leader = {
+			expire = "1.1.1"
+			ideology = centrist_subtype
+		}
+		country_leader = {
+			expire = "1.1.1"
+			ideology = marlib_national_liberalism_subtype
+		}
+		country_leader = {
+			expire = "1.1.1"
+			ideology = prussian_constitutionalism_subtype
+		}
+		country_leader = {
+			expire = "1.1.1"
+			ideology = absolute_monarchy_subtype
+		}
+		country_leader = {
+			expire = "1.1.1"
+			ideology = militarism_subtype
+		}
+	}
+	GRU_Friedrich_Viktor_von_Hohenzollern = {
+		name = GRU_Friedrich_Viktor_von_Hohenzollern
+		portraits = { civilian = { large = "gfx/leaders/SPR/Friedrich_Viktor_von_Hohenzollern.png" } }
+		country_leader = {
+			expire = "1.1.1"
+			ideology = soccon_paneuropeanism_subtype
+		}
+		country_leader = {
+			expire = "1.1.1"
+			ideology = socdem_democratic_socialism_subtype
+		}
+		country_leader = {
+			expire = "1.1.1"
+			ideology = centrist_subtype
+		}
+		country_leader = {
+			expire = "1.1.1"
+			ideology = marlib_national_liberalism_subtype
+		}
+		country_leader = {
+			expire = "1.1.1"
+			ideology = prussian_constitutionalism_subtype
+		}
+		country_leader = {
+			expire = "1.1.1"
+			ideology = absolute_monarchy_subtype
+		}
+		country_leader = {
+			expire = "1.1.1"
+			ideology = militarism_subtype
+		}
+	}
+	GRU_Franz_Joseph = {
+		name = GRU_Franz_Joseph
+		portraits = { civilian = { large = "gfx/leaders/GEA/Portrait_GEA_Franz_Joseph.png" } }
+		country_leader = {
+			expire = "1.1.1"
+			ideology = soccon_paneuropeanism_subtype
+		}
+		country_leader = {
+			expire = "1.1.1"
+			ideology = socdem_democratic_socialism_subtype
+		}
+		country_leader = {
+			expire = "1.1.1"
+			ideology = centrist_subtype
+		}
+		country_leader = {
+			expire = "1.1.1"
+			ideology = marlib_national_liberalism_subtype
+		}
+		country_leader = {
+			expire = "1.1.1"
+			ideology = prussian_constitutionalism_subtype
+		}
+		country_leader = {
+			expire = "1.1.1"
+			ideology = absolute_monarchy_subtype
+		}
+		country_leader = {
+			expire = "1.1.1"
+			ideology = militarism_subtype
+		}
+	}
+	GRU_Friedrich_Wilhelm = {
+		name = GRU_Friedrich_Wilhelm
+		portraits = { civilian = { large = "gfx/leaders/GER/Portrait_Germany_Friedrich_Wilhelm.png" } }
+		country_leader = {
+			expire = "1.1.1"
+			ideology = soccon_paneuropeanism_subtype
+		}
+		country_leader = {
+			expire = "1.1.1"
+			ideology = socdem_democratic_socialism_subtype
+		}
+		country_leader = {
+			expire = "1.1.1"
+			ideology = centrist_subtype
+		}
+		country_leader = {
+			expire = "1.1.1"
+			ideology = marlib_national_liberalism_subtype
+		}
+		country_leader = {
+			expire = "1.1.1"
+			ideology = prussian_constitutionalism_subtype
+		}
+		country_leader = {
+			expire = "1.1.1"
+			ideology = absolute_monarchy_subtype
+		}
+		country_leader = {
+			expire = "1.1.1"
+			ideology = militarism_subtype
+		}
+	}
+	GRU_JohaanLudwig = {
+		name = GRU_JohaanLudwig
+		portraits = { civilian = { large = "gfx/leaders/POM/POM_JohaanLudwig.png" } }
+		country_leader = {
+			desc = "POLITICS_JOHANN_KROSIGK_DESC"
+			expire = "1.1.1"
+			ideology = volkism_subtype
+		}
+	}
+	GRU_Erwin_von_Witzleben = {
+		name = GRU_Erwin_von_Witzleben
+		portraits = { civilian = { large = "gfx/leaders/GER/Portrait_Germany_Erwin_von_Witzleben_kr.png" } }
+		country_leader = {
+			desc = "POLITICS_Erwin_Witzleben_DESC"
+			expire = "1.1.1"
+			ideology = junta_subtype
+		}
+	}
+	GRU_Karl_Donitz = {
+		name = GRU_Karl_Donitz
+		portraits = { civilian = { large = "gfx/leaders/GER/Portrait_Germany_Karl_Donitz_kr.png" } }
+		country_leader = {
+			desc = "POLITICS_Donitz_DESC"
+			expire = "1.1.1"
+			ideology = junta_subtype
+		}
+	}
+	GRU_denmark_occupation = {
+		name = GRU_denmark_occupation
+		portraits = { civilian = { large = "gfx/leaders/SCH/SCH_danish_occupation.png" } }
+		country_leader = {
+			desc = "POLITICS_denmark_occupation_desc"
+			expire = "1.1.1"
+			ideology = authoritarian_democrat_subtype
+		}
+	}
+	GRU_Felix_Yusupov = {
+		name = GRU_Felix_Yusupov
+		portraits = { civilian = { large = "gfx/leaders/RUS/Portrait_RUS_Felix_Yusupov.png" } }
+		country_leader = {
+			expire = "1.1.1"
+			ideology = authoritarian_democrat_subtype
+		}
+	}
+	GRU_Andrey_Vlasov_eff_rm = {
+		name = GRU_Andrey_Vlasov_eff_rm
+		portraits = { civilian = { large = "gfx/leaders/RUS/Portrait_RUS_Andrey_Vlasov.png" } }
+		country_leader = {
+			expire = "1.1.1"
+			ideology = national_populist_subtype
+		}
+	}
+	GRU_ZKDR = {
+		name = GRU_ZKDR
+		portraits = { civilian = { large = "gfx/leaders/GRU/ZKDR.png" } }
+		country_leader = {
+			desc = "GRU_REB_DESC"
+			expire = "1.1.1"
+			ideology = syn_red_junta_subtype
+		}
+	}
+	GRU_FAUD = {
+		name = GRU_FAUD
+		portraits = { civilian = { large = "gfx/leaders/GRU/FAUD.png" } }
+		country_leader = {
+			desc = "GRU_REB_DESC"
+			expire = "1.1.1"
+			ideology = anarchism_subtype
+		}
+	}
+	GRU_NMKF = {
+		name = GRU_NMKF
+		portraits = { civilian = { large = "gfx/leaders/GRU/NMKF.png" } }
+		country_leader = {
+			desc = "GRU_REB_DESC"
+			expire = "1.1.1"
+			ideology = strasserism_subtype
+		}
+	}
+	GRU_Franz_Bluecher = {
+		name = GRU_Franz_Bluecher
+		portraits = { civilian = { large = "gfx/leaders/GRU/Portrait_Germany_Franz_Bluecher.png" } }
+		country_leader = {
+			desc = "GRU_bluecher_DESC"
+			expire = "1.1.1"
+			ideology = classical_liberalism_subtype
+		}
+	}
+	GRU_Mittelafrika_Wilhelm_II = {
+		name = GRU_Mittelafrika_Wilhelm_II
+		portraits = { civilian = { large = "gfx/leaders/MAF/Portrait_Mittelafrika_Wilhelm_II.png" } }
+		country_leader = {
+			expire = "1.1.1"
+			ideology = soccon_colonial_govt_subtype
+		}
+		country_leader = {
+			expire = "1.1.1"
+			ideology = marlib_colonial_govt_subtype
+		}
+		country_leader = {
+			expire = "1.1.1"
+			ideology = soclib_colonial_govt_subtype
+		}
+		country_leader = {
+			expire = "1.1.1"
+			ideology = socdem_colonial_govt_subtype
+		}
+		country_leader = {
+			expire = "1.1.1"
+			ideology = colonial_govt_subtype
+		}
+		country_leader = {
+			expire = "1.1.1"
+			ideology = autocratic_colonial_govt_subtype
+		}
+	}
+	GRU_Mittelafrika_Wilhelm_III = {
+		name = GRU_Mittelafrika_Wilhelm_III
+		portraits = { civilian = { large = "gfx/leaders/MAF/Portrait_Germany_Wilhelm_III.png" } }
+		country_leader = {
+			expire = "1.1.1"
+			ideology = socdem_colonial_govt_subtype
+		}
+		country_leader = {
+			expire = "1.1.1"
+			ideology = soclib_colonial_govt_subtype
+		}
+		country_leader = {
+			expire = "1.1.1"
+			ideology = marlib_colonial_govt_subtype
+		}
+		country_leader = {
+			expire = "1.1.1"
+			ideology = soccon_colonial_govt_subtype
+		}
+		country_leader = {
+			expire = "1.1.1"
+			ideology = colonial_govt_subtype
+		}
+		country_leader = {
+			expire = "1.1.1"
+			ideology = autocratic_colonial_govt_subtype
+		}
+	}
+	GRU_Joseph_Goebbels = {
+		name = GRU_Joseph_Goebbels
+		portraits = { civilian = { large = "gfx/leaders/GRU/Portrait_Germany_Josef_Goebbels_13.png" } }
+		country_leader = {
+			desc = "GRU_GOEBBELS_DESC"
+			expire = "1.1.1"
+			ideology = germanic_socialism_subtype
+			traits = { gru_froncophobe }
+		}
+	}
+	GRU_Ernst_Rhoem = {
+		name = GRU_Ernst_Rhoem
+		portraits = { civilian = { large = "gfx/leaders/GRU/Portrait_Germany_Ernst_Rhoem.png" } }
+		country_leader = {
+			expire = "1.1.1"
+			ideology = strasserism_subtype
+			traits = { gru_froncophobe }
+		}
+	}
+	GRU_Paul_Lensch = {
+		name = GRU_Paul_Lensch
+		portraits = { civilian = { large = "gfx/leaders/GER/Portrait_Germany_Paul_Lensch.png" } }
+		country_leader = {
+			desc = "POLITICS_PAUL_LENSCH_DESC"
+			expire = "1.1.1"
+			ideology = germanic_socialism_lensch_subtype
+			traits = { gru_froncophobe }
+		}
+	}
+	GRU_Wilhelm_Pieck = {
+		name = GRU_Wilhelm_Pieck
+		portraits = { civilian = { large = "gfx/leaders/GRU/Portrait_Germany_Wilhelm_Pieck_I.png" } }
+		country_leader = {
+			desc = "GRU_PIECK_DESC"
+			expire = "1.1.1"
+			ideology = authcom_subtype
+		}
+		country_leader = {
+			desc = "GRU_PIECK_DESC"
+			expire = "1.1.1"
+			ideology = centralized_syndicalism_subtype
+		}
+	}
+	GRU_Ernst_Thalmann = {
+		name = GRU_Ernst_Thalmann
+		portraits = { civilian = { large = "gfx/leaders/GRU/Portrait_Germany_Ernst_Thalmann.png" } }
+		country_leader = {
+			desc = "GRU_THALY_DESC"
+			expire = "1.1.1"
+			ideology = centralized_syndicalism_subtype
+		}
+	}
+	GRU_Karl_Liebknecht = {
+		name = GRU_Karl_Liebknecht
+		portraits = { civilian = { large = "gfx/leaders/GRU/Portrait_Germany_Karl_Liebknecht.png" } }
+		country_leader = {
+			desc = "GRU_LIEBKNECHT_DESC"
+			expire = "1.1.1"
+			ideology = socdem_democratic_socialism_subtype
+		}
+		country_leader = {
+			desc = "GRU_LIEBKNECHT_DESC"
+			expire = "1.1.1"
+			ideology = moderate_socialist_subtype
+		}
+	}
+	GRU_Rudolf_Rocker = {
+		name = GRU_Rudolf_Rocker
+		portraits = { civilian = { large = "gfx/leaders/GRU/Portrait_Rudolf_Rocker.png" } }
+		country_leader = {
+			desc = "GRU_ROCKER_DESC"
+			expire = "1.1.1"
+			ideology = radsoc_anarcho_syndicalist_subtype
+		}
+		country_leader = {
+			desc = "GRU_ROCKER_DESC"
+			expire = "1.1.1"
+			ideology = anarcho_syndicalist_subtype
+		}
+		country_leader = {
+			desc = "GRU_ROCKER_DESC"
+			expire = "1.1.1"
+			ideology = anarchism_subtype
+		}
+	}
+	GRU_no_freedom = {
+		name = GRU_no_freedom
+		portraits = { civilian = { large = "gfx/leaders/GRU/germans_no_freedom.png" } }
+		country_leader = {
+			desc = "GRU_OCCUPIED_GOV_DESC"
+			expire = "1.1.1"
+			ideology = democratic_syndicalism_subtype
+		}
+		country_leader = {
+			desc = "GRU_OCCUPIED_GOV_DESC"
+			expire = "1.1.1"
+			ideology = radsoc_red_junta_subtype
+		}
+		country_leader = {
+			desc = "GRU_OCCUPIED_GOV_DESC"
+			expire = "1.1.1"
+			ideology = socialist_security_state_subtype
+		}
+	}
+	GRU_Gustav_Krupp = {
+		name = GRU_Gustav_Krupp
+		portraits = { civilian = { large = "gfx/leaders/GRU/Portrait_GRU_Gustav_Krupp.png" } }
+		country_leader = {
+			expire = "1.1.1"
+			ideology = marlib_national_liberalism_subtype
+		}
+		country_leader = {
+			expire = "1.1.1"
+			ideology = oligarchy_subtype
+		}
+		country_leader = {
+			expire = "1.1.1"
+			ideology = right_technocracy_subtype
+		}
+	}
+	GRU_Rudolf_Hess = {
+		name = GRU_Rudolf_Hess
+		portraits = { civilian = { large = "gfx/leaders/GRU/Portrait_Germany_Rudolf_Hess2.png" } }
+		country_leader = {
+			expire = "1.1.1"
+			ideology = germanic_socialism_subtype
+		}
+	}
+	GRU_Hinrich_Lohse = {
+		name = GRU_Hinrich_Lohse
+		portraits = { civilian = { large = "gfx/leaders/GRU/Portrait_Germany_Hinrich_Lohse.dds" } }
+		country_leader = {
+			expire = "1.1.1"
+			ideology = germanic_socialism_subtype
+		}
+	}
+	GRU_Heinrich_Laufenberg = {
+		name = GRU_Heinrich_Laufenberg
+		portraits = { civilian = { large = "gfx/leaders/GER/Portrait_Germany_Heinrich_Laufenberg.png" } }
+		country_leader = {
+			expire = "1.1.1"
+			ideology = national_communism_subtype
+		}
+	}
+	GRU_Paul_Levi = {
+		name = GRU_Paul_Levi
+		portraits = { civilian = { large = "gfx/leaders/GER/Portrait_Germany_Paul_Levi.png" } }
+		country_leader = {
+			expire = "1.1.1"
+			ideology = radsoc_communism_subtype
+		}
+	}
+	GRU_Gustav_Noske = {
+		name = GRU_Gustav_Noske
+		portraits = { civilian = { large = "gfx/leaders/GER/Portrait_Germany_Gustav_Noske.png" } }
+		country_leader = {
+			expire = "1.1.1"
+			ideology = authoritarian_social_democracy_subtype
+		}
+	}
+	GRU_Friedrich_Meinecke = {
+		name = GRU_Friedrich_Meinecke
+		portraits = { civilian = { large = "gfx/leaders/GER/Portrait_Germany_Friedrich_Meinecke.png" } }
+		country_leader = {
+			expire = "1.1.1"
+			ideology = national_liberalism_subtype
+		}
+	}
+	GRU_Gustav_Stresemann = {
+		name = GRU_Gustav_Stresemann
+		portraits = { civilian = { large = "gfx/leaders/GER/Portrait_Germany_Gustav_Stresemann.png" } }
+		country_leader = {
+			expire = "1.1.1"
+			ideology = marlib_authoritarian_liberalism_subtype
+		}
+	}
+	GRU_Heinrich_Bruning = {
+		name = GRU_Heinrich_Bruning
+		portraits = { civilian = { large = "gfx/leaders/GER/Portrait_Germany_Heinrich_Bruning.png" } }
+		country_leader = {
+			expire = "1.1.1"
+			ideology = christian_democracy_subtype
+		}
+	}
+	GRU_Schlange_Schoningen = {
+		name = GRU_Schlange_Schoningen
+		portraits = { civilian = { large = "gfx/leaders/GER/Portrait_Germany_Hans_Schlange_Schoningen.png" } }
+		country_leader = {
+			expire = "1.1.1"
+			ideology = authdem_agrarianism_subtype
+		}
+	}
+	GRU_Alfred_Hugenberg = {
+		name = GRU_Alfred_Hugenberg
+		portraits = { civilian = { large = "gfx/leaders/GER/Portrait_Germany_Alfred_Hugenberg.png" } }
+		country_leader = {
+			expire = "1.1.1"
+			ideology = pataut_volkism_subtype
+		}
+	}
+	GRU_Moeller_van_den_Bruck = {
+		name = GRU_Moeller_van_den_Bruck
+		portraits = { civilian = { large = "gfx/leaders/GER/Portrait_Germany_Moeller_van_den_Bruck.png" } }
+		country_leader = {
+			expire = "1.1.1"
+			ideology = neokonservatismus_subtype
+		}
+	}
+	GRU_Hans_Huttig = {
+		name = GRU_Hans_Huttig
+		portraits = { civilian = { large = "gfx/leaders/GRU/MOA_Hans_Huttig.png" } }
+		country_leader = {
+			desc = "POLITICS_HUTTIG_DESC"
+			expire = "1.1.1"
+			ideology = natpop_neo_feudalism_subtype
+		}
+	}
+	GRU_Karl_Vonheldoff = {
+		name = GRU_Karl_Vonheldoff
+		portraits = { civilian = { large = "gfx/leaders/GRU/Portrait_Germany_Karl_Vonheldoff.png" } }
+		country_leader = {
+			expire = "1.1.1"
+			ideology = germanic_socialism_subtype
+		}
+		country_leader = {
+			expire = "1.1.1"
+			ideology = germanic_socialism_subtype
+		}
+	}
+	GRU_Siegfried_Muller = {
+		name = GRU_Siegfried_Muller
+		portraits = { civilian = { large = "gfx/leaders/MSF/MSF_Siegfried_Muller.png" } }
+		country_leader = {
+			expire = "1.1.1"
+			ideology = germanic_socialism_subtype
+		}
+	}
+	GRU_Philipp_Bouhler = {
+		name = GRU_Philipp_Bouhler
+		portraits = { civilian = { large = "gfx/leaders/GRU/Portrait_Germany_Philipp_Bouhler.png" } }
+		country_leader = {
+			expire = "1.1.1"
+			ideology = germanic_socialism_subtype
+		}
+	}
+	GRU_Wolfgang_Schenc = {
+		name = GRU_Wolfgang_Schenc
+		portraits = { civilian = { large = "gfx/leaders/MAF/Portrait_Mittelafrika_Wolfgang_Schenck.png" } }
+		country_leader = {
+			expire = "1.1.1"
+			ideology = germanic_socialism_subtype
+		}
+	}
+	GRU_Alfred_rosenberg = {
+		name = GRU_Alfred_rosenberg
+		portraits = { civilian = { large = "gfx/leaders/GRU/Portrait_Germany_Alfred_rosenberg.png" } }
+		country_leader = {
+			expire = "1.1.1"
+			ideology = germanic_socialism_subtype
+		}
+	}
+	GRU_HYP_sevn = {
+		name = GRU_HYP_sevn
+		portraits = { civilian = { large = "gfx/leaders/GRU/Portrait_HYP_sevn.png" } }
+		country_leader = {
+			expire = "1.1.1"
+			ideology = natpop_goebbels3_subtype
+		}
+		country_leader = {
+			expire = "1.1.1"
+			ideology = germanic_socialism_subtype
+		}
+	}
+	GRU_Avraham_Stern = {
+		name = GRU_Avraham_Stern
+		portraits = { civilian = { large = "gfx/leaders/GRU/GRU_Portrait_Avraham_Stern.png" } }
+		country_leader = {
+			expire = "1.1.1"
+			ideology = germanic_socialism_subtype
+		}
+	}
+	GRU_Mirsaid_Sultangaliev = {
+		name = GRU_Mirsaid_Sultangaliev
+		portraits = { civilian = { large = "gfx/leaders/GRU/Portrait_Germany_Mirsaid_Sultangaliev.png" } }
+		country_leader = {
+			expire = "1.1.1"
+			ideology = germanic_socialism_subtype
+		}
+	}
+	GRU_wehrmacht_command = {
+		name = GRU_wehrmacht_command
+		portraits = { civilian = { large = "gfx/leaders/GRU/Portrait_wehrmacht_command.png" } }
+		country_leader = {
+			expire = "1.1.1"
+			ideology = red_junta_subtype
+		}
+	}
+	GRU_Kurt_Schleicher = {
+		name = GRU_Kurt_Schleicher
+		portraits = { civilian = { large = "gfx/leaders/GER/Portrait_Germany_Kurt_von_Schleicher.png" } }
+		country_leader = {
+			expire = "1.1.1"
+			ideology = authdem_junta_subtype
+		}
+	}
+	GRU_Erich_Ludendorff = {
+		name = GRU_Erich_Ludendorff
+		portraits = { civilian = { large = "gfx/leaders/GRU/Portrait_PRUSSIA_Erich_Ludendorff.png" } }
+		country_leader = {
+			expire = "1.1.1"
+			ideology = militarism_subtype
+		}
+	}
+	GRU_Mathilde_Ludendorff = {
+		name = GRU_Mathilde_Ludendorff
+		portraits = { civilian = { large = "gfx/leaders/GER/Portrait_Germany_Mathilde_Ludendorff.png" } }
+		country_leader = {
+			expire = "1.1.1"
+			ideology = god_knowers_subtype
+		}
+	}
+}

@@ -1,0 +1,176 @@
+ideas = {
+    country = {
+        ENG_Economy_Planning = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ENG_Economy_Planning"}
+			allowed = { always = no }
+			available = {
+				
+				is_puppet = no
+			}
+			picture = ENG_Economy_Planning
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = -0.1
+				political_power_factor = -0.05
+			}
+		}
+
+        ENG_Soccred_Purges = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ENG_Soccred_Purges"}
+			allowed = { always = yes }
+			picture = ENG_Soccred_Purges
+			modifier = {
+				weekly_manpower = -150
+				
+				radical_socialist_drift = 0.05
+				totalist_drift = 0.05
+			}
+		}
+
+        ENG_ERC_Influence_Low = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ERC_Influence_Low"}
+			allowed = { always = yes }
+			available = {
+				
+				is_puppet = no
+			}
+			picture = ENG_ERC_Influence_Low
+			modifier = {
+				production_speed_buildings_factor = 0.02
+				radical_socialist_drift = 0.01
+			}
+		}
+		ENG_ERC_Influence_Medium = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ERC_Influence_Medium"}
+			allowed = { always = yes }
+			available = {
+				
+				is_puppet = no
+			}
+			picture = ENG_ERC_Influence_Medium
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				radical_socialist_drift = 0.02
+			}
+		}
+		ENG_ERC_Influence_High = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ERC_Influence_High"}
+			allowed = { always = yes }
+			available = {
+				
+				is_puppet = no
+			}
+			picture = ENG_ERC_Influence_High
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = -0.05
+				radical_socialist_drift = 0.05
+			}
+		}
+		ENG_ERC_Influence_Overwhelming = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ERC_Influence_Overwhelming"}
+			allowed = { always = yes }
+			available = {
+				
+				is_puppet = no
+			}
+			picture = ENG_ERC_Influence_Overwhelming
+			modifier = {
+				production_speed_buildings_factor = 0.2
+				consumer_goods_factor = -0.10
+				radical_socialist_drift = 0.07
+				political_power_factor = -0.01
+				
+			}
+		}
+
+        ENG_Paying_Bills = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ENG_Paying_Bills"}
+			allowed = { always = yes }
+			available = {
+				has_government = radical_socialist
+			}
+			picture = ENG_Paying_Bills
+			modifier = {
+				political_power_cost = 0.15
+				consumer_goods_factor = 0.01
+			}
+		}
+
+        ENG_Soccred_Boom = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ERC_Influence_Low"}
+			allowed = { always = yes }
+			available = {
+				
+			}
+			picture = ENG_Soccred_Boom_Idea
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				research_speed_factor = 0.05
+				radical_socialist_drift = 0.04
+				totalist_drift = 0.04
+				war_support_factor = -0.1
+			}
+		}
+
+        ENG_Soccred_War_Idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ENG_ERC_War"}
+			allowed = { always = no }
+			picture = ENG_Soccred_War_Idea
+			
+			modifier = {
+				line_change_production_efficiency_factor = 0.075
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_speed_buildings_factor = 0.05
+				conversion_cost_civ_to_mil_factor = -0.1
+			}
+		}
+
+        ENG_Soccred_Peace_Idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ENG_ERC_Peace"}
+			
+			allowed = { 
+				always = no
+			 }
+			picture = ENG_Soccred_Peace
+			modifier = {
+				consumer_goods_factor = -0.2
+				production_speed_infrastructure_factor = 0.15
+				conversion_cost_mil_to_civ_factor = -0.1
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				monthly_population = 0.5
+			}
+		}
+
+        ENG_Soccred_Mixed = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ENG_ERC_Fusion"}
+						allowed = { always = no }
+			picture = ENG_Soccred_Mixed
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_speed_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+
+        ENG_Ministry_Information_Idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ENG_Ministry_Information_Idea"}
+			picture = ENG_Ministry_Information
+						allowed = { always = yes }
+            modifier = {
+				foreign_subversive_activites = -0.2
+				operative_slot = 2
+				encryption_factor = 0.2
+				political_power_gain = 0.05
+				radical_socialist_drift =  0.02
+				stability_weekly = 0.002
+			}
+		}
+    }
+}

@@ -1,0 +1,1176 @@
+### WCC Ideas
+ideas = {
+### Country ideas ###
+	country = {
+	### Starting Ideas ###
+	WCC_defending_the_west = { #Defending the West
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_bradley_plan"}
+		picture = WCC_western_command_center
+		allowed = { always = no }
+            modifier = {
+			army_org_Factor = 0.2
+			command_power_gain = 0.3
+			dig_in_speed_factor = 0.09
+			army_defence_factor = 0.09
+		}
+		targeted_modifier = {
+			tag = TEX
+			defense_bonus_against = 0.35
+		}
+		targeted_modifier = {
+			tag = CAL
+			defense_bonus_against = 0.35
+		}
+	}
+	WCC_america_last_hope = { #America's Last Hope
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_america_last_hope"}
+		picture = WCC_Ike_Bradley_Plan
+		allowed = { always = no }
+            modifier = {
+			army_org_Factor = -0.03
+			army_defence_factor = 0.03
+			max_planning = -0.02
+			army_morale_factor = 0.05
+		}
+		targeted_modifier = {
+			tag = USA
+			defense_bonus_against = 0.20
+		}
+	}
+	WCC_bradley_plan = { #Bradley Plan
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_bradley_plan"}
+		picture = WCC_Ike_Bradley_Plan
+		allowed = { always = no }
+            modifier = {
+			army_org_Factor = 0.2
+			max_planning = 0.1
+			planning_speed = 0.05
+			terrain_penalty_reduction = 0.1
+			heat_attrition = -0.1
+			conversion_cost_civ_to_mil_factor = -0.2
+			max_command_power = 25
+			max_commander_army_size	= 1
+		}
+	}
+	WCC_bradley_plan_2 = { #Bradley Plan
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_bradley_plan_2"}
+		picture = WCC_ike_bradley_strategy
+		allowed = { always = no }
+            modifier = {
+			army_org_Factor = 0.25
+			max_planning = 0.15
+			planning_speed = 0.15
+			terrain_penalty_reduction = 0.2
+			heat_attrition = -0.2
+			max_dig_in_factor = 0.15
+			conversion_cost_civ_to_mil_factor = -0.2
+			max_command_power = 25
+			max_commander_army_size	= 1
+			army_core_defence_factor = 0.12
+		}
+	}
+	WCC_bradley_plan_3 = { #Bradley Plan
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_bradley_plan_3"}
+		picture = WCC_ike_bradley_strategy
+		allowed = { always = no }
+            modifier = {
+			army_org_Factor = 0.35
+			max_planning = 0.25
+			army_morale_factor = 0.35
+			supply_consumption_factor = -0.05
+			planning_speed = 0.25
+			terrain_penalty_reduction = 0.3
+			heat_attrition = -0.2
+			max_dig_in_factor = 0.15
+			army_speed_factor = 0.05
+			conversion_cost_civ_to_mil_factor = -0.25
+			org_loss_when_moving = -0.1
+			army_core_defence_factor = 0.12
+			max_command_power = 50
+			max_commander_army_size	= 1
+		}
+	}
+	WCC_bradley_plan_4 = { #Bradley Plan
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_bradley_plan_4"}
+		picture = WCC_ike_bradley_strategy
+		allowed = { always = no }
+            modifier = {
+			army_org_Factor = 0.45
+			max_planning = 0.3
+			army_morale_factor = 0.4
+			supply_consumption_factor = -0.08
+			planning_speed = 0.3
+			terrain_penalty_reduction = 0.3
+			heat_attrition = -0.25
+			max_dig_in_factor = 0.15
+			army_speed_factor = 0.05
+			conversion_cost_civ_to_mil_factor = -0.3
+			org_loss_when_moving = -0.1
+			army_core_attack_factor = 0.05
+			army_core_defence_factor = 0.15
+			max_command_power = 75
+			max_commander_army_size	= 1
+			required_garrison_factor = -0.09
+			land_reinforce_rate = 0.08
+		}
+	}
+	WCC_partial_suppression = {#Partial Suppression
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea WCC_partial_suppression"}
+			allowed = {	always = no	}
+			picture = local_budgeting_1
+			allowed = { always = no }
+            modifier = { 
+				industrial_capacity_factory = -0.03
+				political_power_gain = 0.02
+				production_factory_max_efficiency_factor = 0.05
+				resistance_growth = -0.03
+				encryption_factor = 0.02
+				local_supplies = 0.05
+			}
+		}
+	WCC_full_suppression = {#Full Suppression
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea WCC_full_suppression"}
+			allowed = {	always = no	}
+			picture = local_budgeting_1
+			allowed = { always = no }
+            modifier = { 
+				industrial_capacity_factory = -0.05
+				political_power_gain = -0.01
+				production_factory_max_efficiency_factor = 0.08
+				resistance_growth = -0.05
+				encryption_factor = 0.04
+				local_supplies = 0.07
+			}
+		}
+	WCC_RBET = { #红球快递车队
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_RBET"}
+		picture = WCC_RBET
+		allowed = { always = no }
+        modifier = {
+			no_supply_grace = 48
+			org_loss_when_moving = -0.08
+			supply_consumption_factor = -0.15
+			attrition = -0.05
+		}
+	}
+	WCC_invincible_army = { #攻无不克的军队
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_invincible_army"}
+		picture = WCC_invincible_army
+		allowed = { always = no }
+        modifier = {
+			army_infantry_attack_factor = 0.06
+			army_attack_factor = 0.04
+			army_defence_factor = 0.04
+			experience_gain_army_factor = 0.1
+		}
+	}
+	WCC_invincible_army2 = { #攻无不克的军队
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_invincible_army2"}
+		picture = WCC_invincible_army
+		allowed = { always = no }
+        modifier = {
+			army_infantry_attack_factor = 0.1
+			army_attack_factor = 0.1
+			army_defence_factor = 0.1
+			experience_gain_army_factor = 0.1
+			breakthrough_factor = 0.06
+		}
+	}
+	WCC_mormon_autonomy = { #摩门教自治
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_mormon_autonomy"}
+		picture = WCC_mormon_autonomy
+		allowed = { always = no }
+            modifier = {
+			conscription_factor = 0.05
+			attack_bonus_against_cores = 0.11
+			encryption_factor = 0.03
+			recon_factor_while_entrenched = 0.1
+			army_morale_factor = 0.08
+		}
+	}
+	WCC_conscription = { #西部征兵运动
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_conscription"}
+		picture = WCC_western_recruitment_campaign
+		allowed = { always = no }
+            modifier = {
+			conscription_factor = 0.05
+			surrender_limit = 0.1
+			non_core_manpower = 0.4
+			mobilization_speed = 0.1
+			training_time_factor = -0.1
+		}
+	}
+	WCC_conscription_2 = { #全美征兵运动
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_conscription_2"}
+		picture = WCC_american_recruitment_campaign
+		allowed = { always = no }
+            modifier = {
+			conscription_factor = 0.15
+			surrender_limit = 0.15
+			non_core_manpower = 0.8
+			mobilization_speed = 0.25
+			training_time_factor = -0.1
+			org_loss_when_moving = -0.15
+		}
+	}
+	CAL_western_project = { #Western Project
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea CAL_western_project"}
+		picture = WCC_western_information_branches
+		allowed = { always = no }
+        modifier = {
+			encryption_factor = 0.08
+			decryption_factor = 0.08
+			consumer_goods_factor = -0.06
+			resistance_growth = -0.1
+			equipment_capture = 0.14
+			party_popularity_stability_factor = 0.15
+		}
+	}
+	WCC_the_colorado_idea = { #科罗拉多河
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_the_colorado_idea"}
+		picture = WCC_colorado
+		allowed = { always = no }
+            modifier = {
+			river_crossing_factor = -0.35
+			reassignment_duration_factor = -0.1
+			army_speed_factor = 0.1
+		}
+	}
+	WCC_war_bonds_idea = { #War Bonds
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_war_bonds_idea"}
+		picture = WCC_War_Bonds
+		allowed = { always = no }
+            modifier = {
+			production_factory_start_efficiency_factor = 0.1
+			production_factory_max_efficiency_factor = 0.05
+			industry_repair_factor = 0.05
+			local_resources = 0.05
+			war_support_factor = 0.05
+			political_power_gain = 0.02
+			production_oil_factor = 0.1
+			production_speed_arms_factory_factor = 0.1
+			production_speed_infrastructure_factor = 0.1
+			production_speed_industrial_complex_factor = -0.1
+		}
+	}
+#新idea
+	WCC_new_pompey = { #民主救星
+		on_add = {log = "[GetDateText]: [Root.GetName]: add idea WCC_new_pompey"}
+		picture = WCC_new_pompey
+		allowed = { always = no }
+		modifier = {
+			political_power_gain = 0.04
+			conscription_factor = 0.07
+			stability_weekly = 0.002
+			war_support_weekly = 0.002
+		}
+	}
+	WCC_new_pompey2 = { #民主救星
+		on_add = {log = "[GetDateText]: [Root.GetName]: add idea WCC_new_pompey2"}
+		picture = WCC_new_pompey
+		allowed = { always = no }
+		modifier = {
+			political_power_gain = 0.1
+			conscription_factor = 0.07
+			stability_weekly = 0.005
+			war_support_weekly = 0.002
+			radical_socialist_drift = 0.01
+			social_democrat_drift = 0.02
+			social_liberal_drift = 0.02
+			market_liberal_drift = 0.02
+			social_conservative_drift = 0.02
+			research_speed_factor = 0.04
+		}
+	}
+	WCC_military_reconstruction_idea = { #军工复合体
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_military_reconstruction_idea"}
+		picture = generic_build_infrastructure
+		allowed = { always = no }
+        modifier = {
+			industry_repair_factor = 0.5
+			production_speed_arms_factory_factor = 0.15
+			production_speed_industrial_complex_factor = 0.08
+			non_core_manpower = 0.05
+			mobilization_speed = 0.05
+			war_support_weekly = 0.02
+		}
+	}
+	WCC_national_military_order = { #国家军事订单
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_national_military_order"}
+		picture = WCC_national_military_order
+		allowed = { always = no }
+        modifier = {
+			consumer_goods_factor = 0.08
+			industrial_capacity_factory = 0.13
+			production_factory_max_efficiency_factor = 0.08
+		}
+	}
+	WCC_vet_affairs_idea = { #老兵福利
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_vet_affairs_idea"}
+		picture = WCC_veteran_benefits
+		allowed = { always = no }
+            modifier = {
+			party_popularity_stability_factor = 0.05
+			political_power_gain = 0.03
+			weekly_manpower	= 90
+			production_factory_efficiency_gain_factor = 0.03
+			monthly_population = 0.03
+			consumer_goods_factor = 0.05
+		}
+	}
+	WCC_military_spirit = { #尚武精神
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_military_spirit"}
+		picture = WCC_military_spirit
+		allowed = { always = no }
+		modifier = {
+			conscription = 0.007
+			conscription_factor = 0.11
+			army_leader_start_level = 1 
+			land_reinforce_rate = 0.05
+			army_org_factor = 0.08
+		}
+	}
+	WCC_political_machine = { #开动政治机器
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_political_machine"}
+		picture = WCC_political_machine
+		allowed = { always = no }
+		modifier = {
+			political_power_factor = 0.2
+			drift_defence_factor = 0.2
+			authoritarian_democrat_drift = 0.03
+			stability_factor = 0.06
+		}
+	}
+	WCC_political_machine2 = { #开动政治机器
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_political_machine2"}
+		picture = WCC_political_machine
+		allowed = { always = no }
+		modifier = {
+			political_power_factor = 0.2
+			drift_defence_factor = 0.2
+			authoritarian_democrat_drift = 0.05
+			stability_factor = 0.1
+			conscription_factor = 0.08
+			experience_gain_army_factor = 0.1
+			training_time_army_factor = -0.06
+		}
+	}
+	WCC_National_Security_Council = { #国家安全委员会
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_National_Security_Council"}
+		picture = WCC_National_Security_Council
+		allowed = { always = no }
+		modifier = {
+			war_support_factor = 0.1
+			war_stability_factor = 0.05
+			political_power_gain = 0.07
+			command_power_gain = 0.05
+			resistance_activity = -0.05
+		}
+	}
+	WCC_National_Security_Council2 = { #国家安全委员会
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_National_Security_Council2"}
+		picture = WCC_National_Security_Council
+		allowed = { always = no }
+		modifier = {
+			war_support_factor = 0.15
+			war_stability_factor = 0.15
+			political_power_gain = 0.1
+			command_power_gain = 0.1
+			resistance_activity = -0.05
+			local_resources_factor = 0.08
+			production_speed_buildings_factor = 0.04
+		}
+	}
+	WCC_National_Security_Council3 = { #国家安全委员会
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_National_Security_Council3"}
+		picture = WCC_National_Security_Council
+		allowed = { always = no }
+		modifier = {
+			war_support_factor = 0.15
+			war_stability_factor = 0.15
+			political_power_gain = 0.1
+			command_power_gain = 0.1
+			resistance_activity = -0.05
+			local_resources_factor = 0.15
+			production_speed_buildings_factor = 0.08
+			consumer_goods_factor = -0.13
+			production_speed_industrial_complex_factor = 0.09
+		}
+	}
+	WCC_Defend_fire_of_freedom = { #保卫自由之火
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_Defend_fire_of_freedom"}
+		picture = WCC_National_Security_Council
+		allowed = { always = no }
+		modifier = {
+			political_power_gain = 0.08
+			defensive_war_stability_factor = 0.2
+			drift_defence_factor = 0.1
+			monthly_population = 0.15
+		}
+	}
+	WCC_american_dream = { #崭新美国梦
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_american_dream"}
+		picture = WCC_National_Security_Council
+		allowed = { always = no }
+		modifier = {
+			political_power_gain = 0.11
+			local_building_slots_factor = 0.13
+			consumer_goods_factor = -0.08
+			stability_weekly = 0.01
+			production_factory_max_efficiency_factor = 0.1
+			production_factory_efficiency_gain_factor = 0.1
+		}
+	}
+	WCC_new_law = { #新宪法
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_new_law"}
+		picture = WCC_new_law
+		allowed = { always = no }
+		modifier = {
+			stability_factor = 0.1
+			stability_weekly = 0.005
+			opinion_gain_monthly_factor = 0.5
+			production_speed_buildings_factor = 0.04
+			research_speed_factor = 0.06
+		}
+	}
+	WCC_society_fair_and_moral = { #富饶而平等
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_society_fair_and_moral"}
+		picture = WCC_new_law
+		allowed = { always = no }
+		modifier = {
+			production_speed_infrastructure_factor = 0.13
+			monthly_population = 0.3
+			attrition = -0.08
+			production_speed_industrial_complex_factor = 0.01
+			consumer_goods_factor = 0.1
+			industrial_capacity_factory = 0.15
+		}
+	}
+	WCC_Global_intervention = { #全球干涉
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_society_fair_and_moral"}
+		picture = WCC_new_law
+		allowed = { always = no }
+		modifier = {
+			send_volunteer_size = 5
+			generate_wargoal_tension = -1
+			send_volunteer_divisions_required = -0.3
+			surrender_limit = 0.2
+		}
+	}
+	WCC_patriotism	= { #美式爱国主义
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_society_fair_and_moral"}
+		picture = WCC_new_law
+		allowed = { always = no }
+		modifier = {
+			conscription = 0.02
+			conscription_factor = 0.15
+			line_change_production_efficiency_factor = 0.07
+			industrial_capacity_factory = 0.14
+			production_factory_max_efficiency_factor = 0.05
+			war_support_factor = 0.08
+		}
+	}
+	WCC_mac	= { #麦克阿瑟派的支持
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_mac"}
+		picture = WCC_mac
+		allowed = { always = no }
+		modifier = {
+			stability_factor = 0.08
+			paternal_autocrat_drift = 0.02
+			breakthrough_factor = 0.04
+			local_resources_factor = 0.10
+			production_speed_arms_factory_factor = 0.05
+		}
+	}
+	WCC_mac2 = { #麦克阿瑟派的支持
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_mac2"}
+		picture = WCC_mac
+		allowed = { always = no }
+		modifier = {
+			stability_factor = 0.15
+			paternal_autocrat_drift = 0.05
+			breakthrough_factor = 0.08
+			local_resources_factor = 0.15
+			production_speed_arms_factory_factor = 0.05
+			army_org_factor = 0.1
+			conscription = 0.02
+			mobilization_speed = 0.07
+		}
+	}
+	WCC_McCarthyism	= { #煽动麦卡锡主义
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_McCarthyism"}
+		picture = WCC_McCarthyism
+		allowed = { always = no }
+		modifier = {
+			political_power_factor = 0.15
+			drift_defence_factor = 0.25
+			weekly_manpower = -100
+			command_power_gain = 20
+			totalist_drift = -0.01
+			syndicalist_drift = -0.01
+			radical_socialist_drift = -0.01
+		}
+	}
+	WCC_strongman_politics	= { #强人政治
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_strongman_politics"}
+		picture = WCC_Strongman_politics
+		allowed = { always = no }
+		modifier = {
+			political_power_factor = 0.15
+			political_power_cost = -0.05
+			max_command_power = 30
+			production_speed_arms_factory_factor = 0.1
+			production_speed_industrial_complex_factor = 0.1
+			local_building_slots_factor = 0.03
+			political_advisor_cost_factor = -0.67
+			mobilization_laws_cost_factor = -0.67
+		}
+	}
+	WCC_american_military_political_system = { #强人政治
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_american_military_political_system"}
+		picture = WCC_Strongman_politics
+		allowed = { always = no }
+		modifier = {
+			conscription = 0.02
+			conscription_factor = 0.2
+			production_speed_arms_factory_factor = 0.12
+			production_speed_buildings_factor = 0.11
+			research_speed_factor = 0.03
+			local_resources_factor = 0.08
+			production_speed_dockyard_factor = 0.05
+			war_support_factor = 0.1
+		}
+	}
+	WCC_good_days = {#美好时日即是今日
+		on_add = {log = "[GetDateText]: [Root.GetName]: add idea WCC_good_days"}
+		picture = COR_by_people_for_people
+		allowed = { always = no }
+		modifier = {
+			consumer_goods_factor = -0.06
+			production_speed_infrastructure_factor = 0.2
+			line_change_production_efficiency_factor = 0.08
+			industrial_capacity_factory = 0.11
+			industrial_capacity_dockyard = 0.13
+			production_factory_max_efficiency_factor = 0.1
+			production_factory_efficiency_gain_factor = 0.15			
+		}
+	}
+	WCC_better_roads = {#好路运动
+		on_add = {log = "[GetDateText]: [Root.GetName]: add idea WCC_better_roads"}
+		picture = WCC_better_roads
+		allowed = { always = no }
+		modifier = {
+			production_factory_start_efficiency_factor = 0.06
+			production_factory_efficiency_gain_factor = 0.07
+			consumer_goods_factor = -0.13
+			production_speed_infrastructure_factor = 0.12
+			party_popularity_stability_factor = 0.12
+			army_speed_factor = 0.05
+		}
+	}
+	WCC_education = {#公民教育
+		on_add = {log = "[GetDateText]: [Root.GetName]: add idea WCC_education"}
+		picture = educate_rural_whites
+		allowed = { always = no }
+		modifier = {
+			stability_factor = 0.04
+			research_speed_factor = 0.1
+			local_resources_factor = 0.08
+			production_factory_max_efficiency_factor = 0.07
+			production_factory_efficiency_gain_factor = 0.11
+		}
+	}
+	WCC_From_soldier_to_builder = {#从士兵到建设者
+		on_add = {log = "[GetDateText]: [Root.GetName]: add idea WCC_From_soldier_to_builder"}
+		picture = freedom_from_want_2
+		allowed = { always = no }
+		modifier = {
+			conscription = -0.005
+			local_building_slots_factor = 0.12
+			production_speed_buildings_factor = 0.1
+			production_speed_arms_factory_factor = 0.07
+			production_speed_industrial_complex_factor = 0.07		
+		}
+	}
+	WCC_Country_time_in_America = {#美利坚的乡村时光
+		on_add = {log = "[GetDateText]: [Root.GetName]: add idea WCC_Country_time_in_America"}
+		picture = RUS_gorg_peasant
+		allowed = { always = no }
+		modifier = {
+			non_core_manpower = 0.11
+			monthly_population = 0.23
+			required_garrison_factor = -0.07
+			no_supply_grace = 24
+			supply_consumption_factor = -0.08		
+		}
+	}
+	WCC_counterinsurgency = {#惩治叛乱法修正案
+		on_add = {log = "[GetDateText]: [Root.GetName]: add idea WCC_counterinsurgency"}
+		picture = USA_purge_rebels
+		allowed = { always = no }
+		modifier = {
+			political_power_factor = 0.08
+			resistance_growth = -0.1
+			compliance_growth = 0.1
+			subversive_activites_upkeep = -0.2
+			command_power_gain = 5
+			stability_weekly = 0.002
+		}
+	}
+	WCC_coffee_chocolate_icecream = {#
+		on_add = {log = "[GetDateText]: [Root.GetName]: add idea WCC_coffee_chocolate_icecream"}
+		picture = WCC_coffee_chocolate_icecream
+		allowed = { always = no }
+		modifier = {
+			consumer_goods_factor = -0.09
+			surrender_limit = -0.1
+			production_speed_buildings_factor = 0.07
+			army_org_factor = 0.11
+			supply_consumption_factor = -0.06
+			conscription_factor = 0.05
+		}
+	}
+	WCC_liquidating_the_Bourgeosie = {#
+		on_add = {log = "[GetDateText]: [Root.GetName]: add idea WCC_liquidating_the_Bourgeosie"}
+		picture = liquidating_the_Bourgeosie
+		allowed = { always = no }
+		modifier = {
+			consumer_goods_factor = -0.1
+			local_building_slots_factor = 0.13
+			line_change_production_efficiency_factor = 0.04
+			research_speed_factor = -0.03
+			political_power_cost = -0.06
+			stability_factor = -0.02
+		}
+	}
+		WCC_public_infrastructure = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_public_infrastructure"}
+			allowed = { always = no }
+			modifier = {
+				production_speed_infrastructure_factor = 0.01
+				stability_factor = 0.05
+				local_building_slots_factor = 0.1
+				supply_consumption_factor = -0.05
+				research_speed_factor = 0.05
+			}
+			picture = generic_build_infrastructure
+		}	
+#麦凯撒idea
+	WCC_aggressive_training = { #Aggressive Training
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_aggressive_training"}
+		picture = WCC_aggressive_training
+		allowed = { always = no }
+            modifier = {
+			training_time_army_factor = -0.1
+			conscription = 0.1
+			non_core_manpower = 0.2
+			mobilization_speed = 0.1
+			war_support_weekly = 0.02
+			supply_consumption_factor = -0.1
+			production_speed_buildings_factor = 0.1
+		}
+	}
+	WCC_aggressive_training_2 = { #Aggressive Training
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_aggressive_training_2"}
+		picture = WCC_aggressive_recruitment
+		allowed = { always = no }
+            modifier = {
+			training_time_army_factor = -0.1
+			conscription = 0.1
+			non_core_manpower = 0.2
+			mobilization_speed = 0.15
+			war_support_weekly = 0.02
+			supply_consumption_factor = -0.1
+			production_speed_industrial_complex_factor = 0.08
+			conversion_cost_civ_to_mil_factor = 0.15
+			political_power_gain = 0.05
+		}
+	}
+	WCC_aggressive_training_3 = { #Aggressive Training
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_aggressive_training_3"}
+		picture = WCC_all_army_policy
+		allowed = { always = no }
+            modifier = {
+			party_popularity_stability_factor = 0.15
+			training_time_army_factor = -0.1
+			conscription = 0.12
+			non_core_manpower = 0.25
+			mobilization_speed = 0.2
+			war_support_weekly = 0.03
+			supply_consumption_factor = -0.12
+			production_speed_industrial_complex_factor = 0.08
+			conversion_cost_civ_to_mil_factor = 0.35
+			political_power_gain = 0.08
+		}
+	}
+	WCC_aggressive_training_4 = { #Aggressive Training
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_aggressive_training_4"}
+		picture = WCC_all_army_policy
+		allowed = { always = no }
+            modifier = {
+			party_popularity_stability_factor = 0.2
+			training_time_army_factor = -0.15
+			conscription = 0.12
+			non_core_manpower = 0.25
+			mobilization_speed = 0.25
+			war_support_weekly = 0.03
+			supply_consumption_factor = -0.12
+			production_speed_industrial_complex_factor = 0.08
+			conversion_cost_civ_to_mil_factor = 0.35
+			political_power_gain = 0.1
+			army_attack_factor = 0.05
+			army_defence_factor = 0.05
+			air_ace_generation_chance_factor = 0.15
+			industrial_capacity_factory = 0.08
+		}
+	}
+	WCC_silence_critics_idea = {#压制批判者
+		on_add = {log = "[GetDateText]: [Root.GetName]: add idea WCC_silence_critics_idea"}
+		picture = WCC_silence_critics
+		allowed = { always = no }
+		modifier = {
+			political_power_gain = 0.01
+			encryption_factor = 0.03
+			decryption_factor = 0.03
+		}
+	}
+	WCC_officers = {#提拔青年军官
+		on_add = {log = "[GetDateText]: [Root.GetName]: add idea WCC_officers"}
+		picture = USA_american_junta
+		allowed = { always = no }
+		modifier = {
+			experience_gain_army_factor = 0.11
+			army_attack_factor = 0.04
+			planning_speed = 0.06
+			max_planning = 0.06
+			air_mission_efficiency = 0.07
+		}
+	}	
+	WCC_Intelligence_bureau = {#扩大情报工作
+		on_add = {log = "[GetDateText]: [Root.GetName]: add idea WCC_Intelligence_bureau"}
+		picture = WCC_Intelligence_bureau
+		allowed = { always = no }
+		modifier = {
+			decryption_power_factor = 0.05
+			root_out_resistance_effectiveness_factor = 0.1
+			decryption_factor = 0.06
+			encryption_factor = 0.06
+			agency_upgrade_time = -0.1
+		}
+	}
+	WCC_mobile_truck = {#机动部队
+		on_add = {log = "[GetDateText]: [Root.GetName]: add idea WCC_mobile_truck"}
+		picture = WCC_mobile_truck
+		allowed = { always = no }
+		modifier = {
+			org_loss_when_moving = -0.12
+			breakthrough_factor = 0.07
+			army_speed_factor = 0.09
+			motorized_attack_factor = 0.05
+			mechanized_attack_factor = 0.05
+		}
+	}
+	WCC_praise_patriots = {#
+		on_add = {log = "[GetDateText]: [Root.GetName]: add idea WCC_praise_patriots"}
+		picture = COR_champion_southern_suffrage
+		allowed = { always = no }
+		modifier = {
+			local_resources_factor = 0.07
+			local_building_slots_factor = 0.1
+			weekly_manpower = 120
+			supply_consumption_factor = -0.06
+			army_org_factor = 0.04
+		}
+	}
+	WCC_Infiltration_tactics = {#渗透战术
+		on_add = {log = "[GetDateText]: [Root.GetName]: add idea WCC_Infiltration_tactics"}
+		picture = GEN_army_core
+		allowed = { always = no }
+		modifier = {
+			army_infantry_attack_factor = 0.11
+			acclimatization_hot_climate_gain_factor = 0.14
+			recon_factor = 0.09
+			special_forces_cap = 0.3
+			special_forces_training_time_factor = -0.1
+			special_forces_no_supply_grace = -0.2
+		}
+	}
+	WCC_watchmen = {#守望者
+		on_add = {log = "[GetDateText]: [Root.GetName]: add idea WCC_watchmen"}
+		picture = WCC_watchmen
+		allowed = { always = no }
+		modifier = {
+			resistance_target = -0.07
+			resistance_decay = 0.13
+			compliance_starting_value = 0.06
+			required_garrison_factor = -0.08
+			army_leader_start_level = 1 
+			army_morale_factor = 0.04
+		}
+	}
+	WCC_Military_education_for_youth = {#儿童军事教育
+		on_add = {log = "[GetDateText]: [Root.GetName]: add idea WCC_Military_education_for_youth"}
+		picture = COR_long_gray_spirit
+		allowed = { always = no }
+		modifier = {
+			war_support_weekly = 0.01
+			army_org_factor = 0.07
+			army_morale_factor = 0.06
+			military_leader_cost_factor = -0.25
+			conscription_factor = 0.14
+		}
+	}
+	WCC_central_bureau_idea = { #Aggressive Training
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_central_bureau_idea"}
+		picture = WCC_central_bureau
+		allowed = { always = no }
+            modifier = {
+			max_command_power = 65
+			max_planning = 0.3
+			planning_speed = 0.2
+			experience_gain_army = 0.2
+			army_speed_factor = 0.05
+			army_core_attack_factor	= 0.05
+			breakthrough_factor	= 0.02
+			dig_in_speed = 1
+		}
+	}
+	WCC_no_parties_idea = {#Banned Parties
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea WCC_no_parties_idea"}
+			allowed = {	always = no	}
+			picture = social_engineering
+			allowed = { always = no }
+            modifier = {
+				market_liberal_drift = -0.03
+				social_liberal_drift = -0.03
+				social_conservative_drift = -0.03
+				social_democrat_drift = -0.03
+				radical_socialist_drift = -0.03
+				totalist_drift = -0.03
+			}
+		}
+	WCC_veteran_pensions_idea = { #Veterans Pensions
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_veteran_pensions_idea"}
+			available = {
+				tag = WCC
+			}
+			allowed = { always = no }
+            modifier = {
+				political_power_gain = 0.07
+				army_morale_factor = 0.06
+				conscription_factor = 0.08
+				production_factory_efficiency_gain_factor = -0.03
+				party_popularity_stability_factor = 0.05
+			}
+			removal_cost = -1
+			picture = BBR_veteran_support
+		}	
+	WCC_first_stage_idea = {#麦克阿瑟整顿国家
+		on_add = {log = "[GetDateText]: [Root.GetName]: add idea WCC_first_stage_idea"}
+		available = {
+			has_government = national_populist
+		}
+		removal_cost = -1
+		picture = WCC_first_stage
+		allowed = { always = no }
+         modifier = {
+				party_popularity_stability_factor = -0.10
+				consumer_goods_factor = 0.08
+				political_power_gain = -0.1
+				stability_factor = -0.05
+				research_speed_factor = -0.06
+				local_supplies = -0.05
+				local_resources = -0.03
+		}
+	}
+	WCC_first_stage_idea2 = {#受监督的公民与国家
+		on_add = {log = "[GetDateText]: [Root.GetName]: add idea WCC_first_stage_idea2"}
+		available = {
+			has_government = national_populist
+		}
+		removal_cost = -1
+		picture = WCC_first_stage
+		allowed = { always = no }
+         modifier = {
+				party_popularity_stability_factor = 0.05
+				consumer_goods_factor = -0.02
+				political_power_gain = 0.05
+				stability_factor = 0.04
+				research_speed_factor = -0.1
+				national_populist_drift = 0.02
+				drift_defence_factor = 0.1
+				local_supplies = -0.05
+				local_resources = -0.03
+		}
+	}
+	WCC_first_stage_idea3 = {#美利坚的奥古斯都
+		on_add = {log = "[GetDateText]: [Root.GetName]: add idea WCC_first_stage_idea3"}
+		available = {
+			has_government = national_populist
+		}
+		removal_cost = -1
+		picture = WCC_first_stage
+		allowed = { always = no }
+        modifier = {
+				stability_weekly = 0.01
+				party_popularity_stability_factor = 0.1
+				consumer_goods_factor = -0.05
+				political_power_gain = 0.1
+				stability_factor = 0.1
+				research_speed_factor = -0.1
+				national_populist_drift = 0.05
+				drift_defence_factor = 0.15
+				mobilization_speed = 0.05
+				experience_loss_factor = -0.15
+		}
+	}
+	WCC_Military_service = { #军事劳役
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_Military_service"}
+		picture = black_laws
+		allowed = { always = no }
+            modifier = {
+			monthly_population = -0.04
+			war_support_factor = 0.05
+			production_speed_buildings_factor = 0.06
+			industrial_capacity_factory = 0.03
+		}
+	}		
+	WCC_strangle_the_cobra_idea = { #Strangle the Cobra
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea WCC_strangle_the_cobra_idea"}
+		picture = WCC_rollback_strategy
+		allowed = { always = no }
+            modifier = {
+			justify_war_goal_time = -0.5
+			puppet_cost_factor = -0.90
+			ai_focus_aggressive_factor = 0.75
+		}
+	}	
+#####Air Force Tree Ideas########
+	WCC_Le_May_reform_plan1 = {# Chennault Reform
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea WCC_Le_May_reform_plan1"}
+			removal_cost = -1
+			picture = generic_air_research
+			allowed = { always = no }
+            modifier = {
+				army_bonus_air_superiority_factor = 0.05
+				air_intercept_efficiency = 0.05
+				air_strategic_bomber_bombing_factor = 0.10
+			}
+			equipment_bonus = {
+				medium_plane_fighter_airframe = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				large_plane_airframe = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+		}
+		WCC_Le_May_reform_plan2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea WCC_Le_May_reform_plan2"}
+			removal_cost = -1
+			picture = generic_air_research
+			allowed = { always = no }
+            modifier = {
+				army_bonus_air_superiority_factor = 0.10
+				air_intercept_efficiency = 0.10
+				air_strategic_bomber_bombing_factor = 0.20
+			}
+			equipment_bonus = {
+				medium_plane_fighter_airframe = {
+					build_cost_ic = -0.20
+					instant = yes
+				}
+				large_plane_airframe = {
+					build_cost_ic = -0.20
+					instant = yes
+				}
+			}
+		}
+	}	
+### Industrial Companies ###
+	### Industrial Companies ###
+	industrial_concern = {
+		Farnsworth_Television = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Farnsworth_Television"}
+			allowed = { is_american_tag = yes }
+			available = {
+				owns_state = 380
+			}
+			traits = { electronics_manufacturer }
+            modifier = { production_speed_radar_station_factor = 0.3 }
+			research_bonus = { electronics = 0.1 }
+		}
+		
+		Engineering_and_Research_Corporation = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Engineering_and_Research_Corporation"}
+			allowed = { is_american_tag = yes }
+			available = {
+				owns_state = 382
+			}
+			traits = { electronics_manufacturer }
+            modifier = { production_speed_radar_station_factor = 0.3 }
+			research_bonus = { electronics = 0.1 }
+		}
+		
+		
+		
+		Consolidation_Coal_Company = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Consolidation_Coal_Company"}
+			allowed = { is_american_tag = yes }
+			available = {
+				owns_state = 382
+			}
+			traits = { chemical_producer }
+            modifier = { production_speed_synthetic_refinery_factor = 0.3 }
+			research_bonus = { synth_resources = 0.1 }
+		}
+		
+		US_railways = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea US_railways"}
+			allowed = { is_american_tag = yes }
+			available = {
+				owns_state = 382
+			}
+			traits = { industrial_manufacturer }
+            modifier = {
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
+				local_resources_factor = 0.1
+				production_speed_rail_way_factor = 0.05
+			}
+			research_bonus = { industry = 0.1 }
+		}
+		
+		General_Mills = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea General_Mills"}
+			allowed = { is_american_tag = yes }
+			available = {
+				owns_state = 382
+			}
+			traits = { chemical_producer }
+            modifier = { production_speed_synthetic_refinery_factor = 0.15 }
+			research_bonus = { synth_resources = 0.1 }
+		}
+		
+		War_Production_Board = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea War_Production_Board"}
+			allowed = { is_american_tag = yes }
+			available = {
+				owns_state = 382
+			}
+			traits = { chemical_producer }
+            modifier = { production_speed_synthetic_refinery_factor = 0.15 }
+			research_bonus = { synth_resources = 0.1 }
+		}
+		
+		National_Reconstruction_Authority = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea National_Reconstruction_Authority"}
+			allowed = { is_american_tag = yes }
+			available = {
+				owns_state = 382
+			}
+			traits = { industrial_manufacturer }
+            modifier = {
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
+				local_resources_factor = 0.1
+			}
+			research_bonus = { industry = 0.1 }
+		}
+		
+	}
+
+### Weapons Manufacturers ###
+	materiel_manufacturer = {
+		designer = yes
+		
+		Aberdeen_proving_ground = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Aberdeen_proving_ground"}
+			allowed = { is_american_tag = yes }
+			available = {
+				owns_state = 382
+			}
+			traits = { infantry_equipment_producer_mass_0 }
+			research_bonus = { infantry_weapons = 0.1 }
+		}
+		
+		us_army_company = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Aberdeen_proving_ground"}
+			allowed = { is_american_tag = yes }
+			available = {
+				owns_state = 382
+			}
+			traits = { infantry_equipment_producer_mass_0 }
+			research_bonus = { infantry_weapons = 0.1 }
+		}
+		
+		American_Motors_Corporation = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea American_Motors_Corporation"}
+			allowed = { is_american_tag = yes }
+			available = {
+				owns_state = 382
+			}
+			traits = { motorised_equipment_producer_offense_1 }
+			research_bonus = { motorized_equipment = 0.1 }
+		}
+		
+	}
+
+### Tank Manufacturers ###
+	tank_manufacturer = {
+		
+		
+	}
+
+	### Naval Manufacturers ###
+	naval_manufacturer = {
+		designer = yes
+		shipping_board = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea shipping_board"}
+			allowed = { is_american_tag = yes }
+			available = {
+				owns_state = 382
+			}
+			traits = { small_ship_producer_defense_1 }
+			research_bonus = { naval_equipment = 0.1 }
+		}
+		
+		Victory_shipyards = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Victory_shipyards"}
+			allowed = { is_american_tag = yes }
+			available = {
+				owns_state = 382
+			}
+			traits = { capital_ship_producer_defense_1 }
+			research_bonus = { naval_equipment = 0.1 }
+		}
+		
+	}
+
+	### Aircraft Manufacturers ###
+	aircraft_manufacturer = {
+		designer = yes
+		Convair = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Convair"}
+			allowed = { is_american_tag = yes }
+			available = {
+				owns_state = 382
+			}
+			traits = { fighter_producer_offense_2 }
+			research_bonus = { air_equipment = 0.1 }
+		}
+		
+		Republic_Aviation = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Republic_Aviation"}
+			allowed = { is_american_tag = yes }
+			available = {
+				owns_state = 382
+			}
+			traits = { fighter_producer_defense_1 }
+			research_bonus = { air_equipment = 0.1 }
+		}
+	
+	}
+}

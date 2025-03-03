@@ -1,0 +1,5 @@
+opinion_modifiers = {
+    CHP_jointly_resist_the_enemy = {
+        value = 200
+    }
+}

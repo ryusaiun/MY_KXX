@@ -1,0 +1,56 @@
+operations = { 
+	FRA_surviving_Farmer_Revolution = {
+		icon = generic_army_support
+
+		allowed = { always = no } #manually activated
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		selectable_mission = no
+		days_mission_timeout = 120
+		is_good = no
+		fire_only_once = yes
+
+		cancel_trigger = {
+			NOT = { country_exists = CHP }
+		}
+
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision timeout PLX_surviving_german_invasion_ger"
+			if = {
+				limit = {
+					NOT = {
+						country_exists = PRO
+					}
+				}
+				white_peace = CHP
+				remove_ideas = FRA_Fruit_Farmer_Revolution	
+				remove_ideas = FRA_The_supply_of_wine_is_obstructed_2
+			}
+			if = {
+				limit = {
+					country_exists = PRO
+				}
+				white_peace = CHP
+				PRO = { transfer_state = 762 }
+				PRO = { add_state_core = 762 }
+				remove_ideas = FRA_Fruit_Farmer_Revolution	
+				remove_ideas = FRA_The_supply_of_wine_is_obstructed_2
+			}
+			
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision PLX_surviving_german_invasion_ger"
+			remove_ideas = FRA_Fruit_Farmer_Revolution	
+			remove_ideas = FRA_The_supply_of_wine_is_obstructed_2
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}	
+
+}

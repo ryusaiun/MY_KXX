@@ -1,0 +1,340 @@
+focus_tree = {
+	id = Provence
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = PRO
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 2000 y = 2000 }
+	
+	focus = {
+		id = PRO_The_Federation_took_advantage_of_the_chaos_to_act
+		icon = GFX_goal_generic_stable_government
+		prerequisite = {
+			
+		}
+		x = 15
+		y = 0
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			add_ideas = PRO_Federation_1
+		}
+	}	
+
+	focus = {
+		id = PRO_Local_conscription_movement
+		icon = GFX_goal_TEX_universal_jobs_registry
+		prerequisite = {
+			focus = PRO_The_Federation_took_advantage_of_the_chaos_to_act
+		}
+		x = 0
+		y = 1
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		relative_position_id = PRO_The_Federation_took_advantage_of_the_chaos_to_act
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			add_manpower = 400000
+			CHP = {
+				add_manpower = 300000
+			}
+			DOB = {
+				add_manpower = 300000
+			}
+			PDL = {
+				add_manpower = 300000
+			}	
+		}
+	}	
+
+	focus = {
+		id = PRO_Supporting_the_fishing_industry
+		icon = GFX_RUS_Transitional_Council
+		prerequisite = {
+			focus = PRO_Local_conscription_movement
+		}
+		x = -2
+		y = 2
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		relative_position_id = PRO_The_Federation_took_advantage_of_the_chaos_to_act
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			swap_ideas = {
+				remove_idea = PRO_Federation_1
+				add_idea = PRO_Federation_2
+			}
+			add_ideas = PRO_fish
+		}
+	}	
+
+	focus = {
+		id = PRO_Local_priority
+		icon = GFX_goal_CAN_Expand_Training_Facilities
+		prerequisite = {
+			focus = PRO_Local_conscription_movement
+		}
+		x = 0
+		y = 2
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		relative_position_id = PRO_The_Federation_took_advantage_of_the_chaos_to_act
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			army_experience = 150
+		}
+	}	
+
+	focus = {
+		id = PRO_Strive_for_external_support
+		icon = GFX_goal_generic_free_market
+		prerequisite = {
+			focus = PRO_Local_conscription_movement
+		}
+		x = 2
+		y = 2
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		relative_position_id = PRO_The_Federation_took_advantage_of_the_chaos_to_act
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = GER
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = CAN
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = JAP
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 500
+				producer = NFA
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 500
+				producer = RUS
+			}
+		}
+	}	
+
+	focus = {
+		id = PRO_Expand_shipyard
+		icon = GFX_goal_FIU_proper_armada
+		prerequisite = {
+			focus = PRO_Supporting_the_fishing_industry
+		}
+		prerequisite = {
+			focus = PRO_Local_priority
+		}
+		prerequisite = {
+			focus = PRO_Strive_for_external_support
+		}
+		x = -1
+		y = 3
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		relative_position_id = PRO_The_Federation_took_advantage_of_the_chaos_to_act
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			21 = {
+				add_building_construction = {
+					type = dockyard
+					province = 11875
+					level = 2
+				}
+			}
+		}
+	}	
+
+	focus = {
+		id = PRO_Expansion_of_Toulon_Port
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = {
+			focus = PRO_Supporting_the_fishing_industry
+		}
+		prerequisite = {
+			focus = PRO_Local_priority
+		}
+		prerequisite = {
+			focus = PRO_Strive_for_external_support
+		}
+		x = 1
+		y = 3
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		relative_position_id = PRO_The_Federation_took_advantage_of_the_chaos_to_act
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			swap_ideas = {
+				remove_idea = PRO_Federation_2
+				add_idea = PRO_Federation_3
+			}
+			21 = {
+				add_building_construction = {
+					type = infrastructure
+					province = 911
+					level = 2
+				}
+			}
+		}
+	}	
+
+	focus = {
+		id = PRO_Encourage_private_investment
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = {
+			focus = PRO_Expand_shipyard
+		}
+		prerequisite = {
+			focus = PRO_Expansion_of_Toulon_Port
+		}
+		x = -2
+		y = 4
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		relative_position_id = PRO_The_Federation_took_advantage_of_the_chaos_to_act
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			swap_ideas = {
+				remove_idea = PRO_Federation_3
+				add_idea = PRO_Federation_4
+			}
+		}
+	}	
+
+	focus = {
+		id = PRO_Open_up_new_supply_lines
+		icon = GFX_goal_USA_liberty_ships
+		prerequisite = {
+			focus = PRO_Expand_shipyard
+		}
+		prerequisite = {
+			focus = PRO_Expansion_of_Toulon_Port
+		}
+		x = 0
+		y = 4
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		relative_position_id = PRO_The_Federation_took_advantage_of_the_chaos_to_act
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			add_ideas = PRO_supply_line
+		}
+	}	
+
+	focus = {
+		id = PRO_Seaside_Fortification
+		icon = GFX_goal_NVN_Fortify_Fort_Defiance
+		prerequisite = {
+			focus = PRO_Expand_shipyard
+		}
+		prerequisite = {
+			focus = PRO_Expansion_of_Toulon_Port
+		}
+		x = 2
+		y = 4
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		relative_position_id = PRO_The_Federation_took_advantage_of_the_chaos_to_act
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			21 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = 911
+					level = 4
+				}
+			}
+		}
+	}	
+
+	focus = {
+		id = PRO_Investment_in_scientific_research_and_development
+		icon = GFX_goal_military_research_2
+		prerequisite = {
+			focus = PRO_Encourage_private_investment
+		}
+		prerequisite = {
+			focus = PRO_Open_up_new_supply_lines
+		}
+		prerequisite = {
+			focus = PRO_Seaside_Fortification
+		}
+		x = 0
+		y = 5
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		relative_position_id = PRO_The_Federation_took_advantage_of_the_chaos_to_act
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			add_research_slot = 1
+			CHP = {
+				add_research_slot = 1
+			}
+			DOB = {
+				add_research_slot = 1
+			}
+			PDL = {
+				add_research_slot = 1
+			}	
+		}
+	}	
+
+	focus = {
+		id = PRO_The_chips_are_in_your_own_hands
+		icon = GFX_goal_bag_of_money
+		prerequisite = {
+			focus = PRO_Investment_in_scientific_research_and_development
+		}
+		x = 0
+		y = 6
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		relative_position_id = PRO_The_Federation_took_advantage_of_the_chaos_to_act
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			swap_ideas = {
+				remove_idea = PRO_Federation_4
+				add_idea = PRO_Federation_5
+			}
+		}
+	}	
+}

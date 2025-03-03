@@ -1,0 +1,2517 @@
+
+
+defined_text = {
+	name = KXXGUIHOGNAME  #定义副领袖框架
+	text = {
+    	trigger = {
+			OR = {
+				has_country_flag = POL_Jozef_Chacinski_VISIBLE
+			}
+ 		}
+    	localization_key =  KXXGUIHOGNAME
+  	}
+}
+
+
+
+defined_text = {
+	name = KXXGetHOGTitle  #定义按钮名字
+
+	#小黄副元首
+	text = {
+		trigger = {
+			has_country_flag = GRU_GOEBB_ROEM_VISIBLE
+		}
+		localization_key = GOEBB_OR_RHOEM
+	}
+	#杜克洛
+ 	text = {
+    	trigger = {
+     	 	tag = FRA
+      		has_country_flag= FRA_the_red_win
+    	}
+ 		localization_key = FR_OR_LEADER3
+ 	}
+	#刚果&葡萄牙
+	text = {
+    	trigger = {
+      		has_country_flag= POR_Duarte_II_VISIBLE
+    	}
+ 		localization_key = KOG_OR_LEADER
+ 	}
+	text = {
+    	trigger = {
+      		has_country_flag= KOG_Pedro_VII_VISIBLE
+    	}
+ 		localization_key = KOG_OR_LEADER1
+ 	}
+	#法兰西公社
+	text = {
+    	trigger = {
+     	 	tag = FRA
+      		has_country_flag= FRA_Andre_Chaumet_VISIBLE
+    	}
+ 		localization_key = FRA_OR_LEADER
+ 	}
+	text = {
+    	trigger = {
+     	 	tag = FRA
+      		has_country_flag= FRA_Simone_Weil_VISIBLE
+    	}
+ 		localization_key = FRA_OR_LEADER1
+ 	}
+	text = {
+    	trigger = {
+     	 	tag = FRA
+      		has_country_flag= FRA_Jesus_Weil_VISIBLE
+    	}
+ 		localization_key = FRA_OR_JESUS
+ 	}	
+	#丹麦
+	text = {
+    	trigger = {
+     	 	tag = DEN
+      		has_country_flag= DEN_Max_Arildskov_VISIBLE
+    	}
+ 		localization_key = DEN_OR_LEADER
+ 	}
+	#国法
+	text = {
+    	trigger = {
+     	 	tag = NFA
+			OR = {
+				has_country_flag= NFA_Roger_Nimier_visible
+				has_country_flag= NFA_Nicolas_Kayanakis_visible
+			}
+    	}
+ 		localization_key = NFA_OR_LEADER
+ 	}
+    #拿破仑傀儡
+	text = {
+    	trigger = {
+     	 	tag = CNT
+      		has_country_flag= NPL_Jose_Antonio_VISIBLE
+    	}
+ 		localization_key = NPL_OR_SPRPM
+ 	}	
+
+	#波兰
+	text = {
+    	trigger = {
+     	 	tag = POL
+			OR = {
+				has_country_flag = POL_Alfred_Lampe_VISIBLE
+				has_country_flag = POL_Adolf_Warski_VISIBLE
+				has_country_flag = POL_Julian_Leszczyński_VISIBLE
+			}
+    	}
+ 		localization_key = FR_OR_LEADER3
+ 	}
+	text = {
+    	trigger = {
+     	 	tag = POL
+			NOT= {
+				OR = {
+					has_country_flag = POL_Alfred_Lampe_VISIBLE
+					has_country_flag = POL_Adolf_Warski_VISIBLE
+					has_country_flag = POL_Julian_Leszczyński_VISIBLE
+					has_country_flag = POL_Michal_Kalecki_VISIBLE
+					has_country_flag = POL_Oskar_Lange_VISIBLE
+					has_country_flag = POL_Forty_Four_VISIBLE
+					has_country_flag = POL_Christ_King_VISIBLE
+					has_country_flag = POL_Jezus_Lechia_VISIBLE
+				}
+			}
+    	}
+ 		localization_key = EM_OR_LEADER
+ 	}
+	text = {
+    	trigger = {
+     	 	tag = POL
+			OR = {
+				has_country_flag = POL_Michal_Kalecki_VISIBLE
+				has_country_flag = POL_Oskar_Lange_VISIBLE
+			}
+    	}
+ 		localization_key = POL_OR_LEADER
+ 	}
+	text = {
+    	trigger = {
+     	 	tag = POL
+			OR = {
+				has_country_flag = POL_Forty_Four_VISIBLE
+				has_country_flag = POL_Christ_King_VISIBLE
+				has_country_flag = POL_Jezus_Lechia_VISIBLE
+			}
+    	}
+ 		localization_key = POL_OR_LEADER1
+ 	}
+
+	#西俄革
+	text = {
+		trigger = {
+			tag = WRS
+      		has_country_flag = WRS_Georgy_Zhukov_VISIBLE
+		}
+		localization_key = WRS_OR_Zhukov
+	}
+	#法国复兴政府
+	text = {
+		trigger = {
+			tag = FRG
+      		KXX_uses_double_leader_gui = no
+		}
+		localization_key = PM_OR_LEADER
+	}
+	text = {
+		trigger = {
+			tag = FRG
+      		KXX_uses_double_leader_gui = yes
+		}
+		localization_key = FRG_OR_LEADER
+	}
+
+	#民族与革命
+	text = {
+    	trigger = {
+      	tag = WSU
+			OR = {
+				has_country_leader = {
+					name = "西蒙·彼得留拉"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "沃洛基米尔·契赫夫斯基"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "帕利夫·德米特罗"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "德米特罗·列维茨基"
+					ruling_only = yes
+				}
+	  		}
+    	}
+    	localization_key = LEADER_OR_OUN
+  	}
+	text = {
+    	trigger = {
+      	tag = WSU
+			OR = {
+				has_idea = WSU_Roman_Shukhevych_hog_pau
+				has_idea = WSU_Vasyl_Kuk_hog_tot
+				has_idea = WSU_Dmytro_Dontsov_hog_npo
+	  		}
+    	}
+    	localization_key = OUN_OR_LEADER
+  	}
+	text = {
+    	trigger = {
+      	tag = WSU
+			OR = {
+				has_country_leader = {
+					name = "涅斯托尔·马赫诺"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "瓦西里·沙赫赖"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "亚历山大·舒姆斯基"
+					ruling_only = yes
+				}
+	  		}
+    	}
+    	localization_key = OUN_OR_LEADER
+  	}
+	text = {
+    	trigger = {
+      	tag = CAR
+			OR = {
+				has_idea = CAR_Francisco_Franco_Bahamonde_hog_ade
+				has_idea = CAR_Eugenio_Montes_hog_npo
+	  		}
+    	}
+    	localization_key = LEADER_OR_KING
+  	}
+	text = {
+    	trigger = {
+      	tag = CAR
+	  		OR = {
+			has_idea = CAR_Jose_Antonio_Primo_de_Rivera_hog_pau
+			has_idea = CAR_Juan_Laguia_Lliteras_hog_syn
+	  	}
+    	}
+    	localization_key = FE_OR_LEADER
+  	}
+	text = {
+    	trigger = {
+      		tag = ROM
+	  		has_idea = ROM_Gheorghe_Clime_hog_npo
+    	}
+    	localization_key = IO_OR_LEADER
+ 	}
+  	text = {
+    	trigger = {
+    	  tag = ROM
+		  has_idea = ROM_Mihai_Strescu_hog_tot
+   		}
+    	localization_key = COM_OR_LEADER
+ 	}
+  	text = {
+ 	   trigger = {
+  		    tag = BAY
+			    OR = {
+			    has_idea = BAY_Paul_Nikolaus_Cossmann_hog_npo
+			    has_idea = BAY_Fritz_Gerlich_hog_ade
+			    has_idea = BAY_Hans_Erhard_hog_sco
+			}
+  		}
+    	localization_key = KZ_OR_LEADER
+  	}
+  	text = {
+    	trigger = {
+      		tag = MNT
+	  		has_idea = MNT_Dracha_Mikhailovich_hog_npo
+    	}
+    	localization_key = PM_OR_LEADER
+  	}
+
+	#日本&红龙日本#
+	text = {
+    	trigger = {
+     		tag = JAP
+    	}
+    	localization_key = EM_OR_LEADER
+  	}
+}
+defined_text = {
+	name = KXXGetFORHOGTitle  ##定义外交
+
+	#小黄副元首
+	text = {
+		trigger = {
+			has_country_flag = GRU_GOEBB_ROEM_VISIBLE
+		}
+		localization_key = GOEBB_OR_RHOEM_2
+	}
+	#杜克洛
+  	text = {
+    	trigger = {
+      		tag = FRA
+      		has_country_flag= FRA_the_red_win
+    	}
+    	localization_key = FR_OR_LEADER4
+  	}
+	#刚果&葡萄牙
+	text = {
+    	trigger = {
+      		has_country_flag= POR_Duarte_II_VISIBLE
+    	}
+ 		localization_key = KOG_OR_LEADER2
+ 	}
+	text = {
+    	trigger = {
+      		has_country_flag= KOG_Pedro_VII_VISIBLE
+    	}
+ 		localization_key = KOG_OR_LEADER3
+ 	}
+	#法兰西公社
+	text = {
+    	trigger = {
+     	 	tag = FRA
+      		has_country_flag= FRA_Andre_Chaumet_VISIBLE
+    	}
+ 		localization_key = FRA_OR_LEADER3
+ 	}
+	text = {
+    	trigger = {
+     	 	tag = FRA
+      		has_country_flag= FRA_Simone_Weil_VISIBLE
+    	}
+ 		localization_key = FRA_OR_LEADER2
+ 	}
+	text = {
+    	trigger = {
+     	 	tag = FRA
+      		has_country_flag= FRA_Jesus_Weil_VISIBLE
+    	}
+ 		localization_key = FRA_OR_JESUS2
+ 	}	
+	#丹麦
+	text = {
+    	trigger = {
+     	 	tag = DEN
+      		has_country_flag= DEN_Max_Arildskov_VISIBLE
+    	}
+ 		localization_key = NFA_OR_LEADER1
+ 	}
+	#国法
+	text = {
+    	trigger = {
+     	 	tag = NFA
+      		OR = {
+				has_country_flag= NFA_Roger_Nimier_visible
+				has_country_flag= NFA_Nicolas_Kayanakis_visible
+			}
+    	}
+ 		localization_key = NFA_OR_LEADER1
+ 	}
+    #拿破仑傀儡
+	text = {
+    	trigger = {
+     	 	tag = CNT
+      		has_country_flag= NPL_Jose_Antonio_VISIBLE
+    	}
+ 		localization_key = NSPR_PM
+ 	}		
+	#波兰
+	text = {
+    	trigger = {
+     	 	tag = POL
+			OR = {
+				has_country_flag = POL_Alfred_Lampe_VISIBLE
+				has_country_flag = POL_Adolf_Warski_VISIBLE
+				has_country_flag = POL_Julian_Leszczyński_VISIBLE
+			}
+    	}
+ 		localization_key = FR_OR_LEADER4
+ 	}
+	text = {
+    	trigger = {
+     	 	tag = POL
+			NOT= {
+				OR = {
+					has_country_flag = POL_Alfred_Lampe_VISIBLE
+					has_country_flag = POL_Adolf_Warski_VISIBLE
+					has_country_flag = POL_Julian_Leszczyński_VISIBLE
+					has_country_flag = POL_Michal_Kalecki_VISIBLE
+					has_country_flag = POL_Oskar_Lange_VISIBLE
+					has_country_flag = POL_Christ_King_VISIBLE
+					has_country_flag = POL_Forty_Four_VISIBLE
+					has_country_flag = POL_Jezus_Lechia_VISIBLE
+				}
+			}
+    	}
+ 		localization_key = EM_OR_LEADER2
+ 	}
+	text = {
+    	trigger = {
+     	 	tag = POL
+			OR = {
+				has_country_flag = POL_Michal_Kalecki_VISIBLE
+				has_country_flag = POL_Oskar_Lange_VISIBLE
+			}
+    	}
+ 		localization_key = POL_OR_LEADER2
+ 	}
+	text = {
+    	trigger = {
+     	 	tag = POL
+			OR = {
+				has_country_flag = POL_Christ_King_VISIBLE
+				has_country_flag = POL_Forty_Four_VISIBLE
+				has_country_flag = POL_Jezus_Lechia_VISIBLE
+			}
+    	}
+ 		localization_key = POL_OR_LEADER3
+ 	}
+
+	#西俄革
+	text = {
+		trigger = {
+			has_country_flag = WRS_Georgy_Zhukov_VISIBLE
+		}
+		localization_key = WRS_OR_Zhukov_2
+	}
+	#法国复兴政府
+	text = {
+		trigger = {
+			has_country_flag = FRG_Robert_Brasillach_VISIBLE
+		}
+		localization_key = FRG_OR_LEADER_1
+	}
+	text = {
+		trigger = {
+			has_country_flag = FRG_Charles_Nogues_VISIBLE
+		}
+		localization_key = FRG_OR_LEADER_2
+	}
+	#民族与革命
+	text = {
+    	trigger = {
+      	tag = WSU
+			OR = {
+				has_country_leader = {
+					name = "西蒙·彼得留拉"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "沃洛基米尔·契赫夫斯基"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "帕利夫·德米特罗"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "德米特罗·列维茨基"
+					ruling_only = yes
+				}
+	  		}
+    	}
+    	localization_key = LEADER_OR_OUN2
+  	}
+	text = {
+    	trigger = {
+      	tag = WSU
+			OR = {
+				has_country_leader = {
+					name = "涅斯托尔·马赫诺"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "瓦西里·沙赫赖"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "亚历山大·舒姆斯基"
+					ruling_only = yes
+				}
+	  		}
+    	}
+    	localization_key = LEADER_AND_OUN2
+  	}
+	text = {
+    	trigger = {
+      		tag = WSU
+	  		has_idea = WSU_Roman_Shukhevych_hog_pau
+    	}
+    	localization_key = OUN_OR_LEADER2
+  	}
+	text = {
+    	trigger = {
+      		tag = WSU
+	  		has_idea = WSU_Vasyl_Kuk_hog_tot
+    	}
+    	localization_key = OUN_OR_LEADER2
+  	}
+	text = {
+    	trigger = {
+      		tag = WSU
+	  		has_idea = WSU_Dmytro_Dontsov_hog_npo
+    	}
+    	localization_key = OUN_OR_LEADER2
+  	}
+	text = {
+    	trigger = {
+      		tag = CAR
+	   		OR = {
+				has_idea = CAR_Francisco_Franco_Bahamonde_hog_ade
+				has_idea = CAR_Eugenio_Montes_hog_npo
+	  		}
+    	}
+    	localization_key = LEADER_OR_KING2
+  	}
+  	text = {
+    	trigger = {
+      	tag = CAR
+	  		OR = {
+				has_idea = CAR_Jose_Antonio_Primo_de_Rivera_hog_pau
+				has_idea = CAR_Juan_Laguia_Lliteras_hog_syn
+	  		}
+    	}
+    	localization_key = FE_OR_LEADER2
+  	}
+	text = {
+    	trigger = {
+   		   tag = BAY
+	    		OR = {
+		    	has_idea = BAY_Paul_Nikolaus_Cossmann_hog_npo
+		    	has_idea = BAY_Fritz_Gerlich_hog_ade
+		    	has_idea = BAY_Hans_Erhard_hog_sco
+		  	}
+    	}
+    	localization_key = CH_OR_PM2
+  	}
+  	text = {
+    	trigger = {
+      		tag = ROM
+	  		has_idea = ROM_Gheorghe_Clime_hog_npo
+    	}
+    	localization_key = IORM_OR_COMMANDER2
+  	}
+  	text = {
+    	trigger = {
+      		tag = ROM
+	  		has_idea = ROM_Mihai_Strescu_hog_tot
+    	}
+    	localization_key = COM_OR_LEADER2
+ 	}
+  	text = {
+    	trigger = {
+      		tag = MNT
+	 		has_idea = MNT_Dracha_Mikhailovich_hog_npo
+    	}
+    	localization_key = COU_OR_LEADER2
+  	}
+
+	#日本&红龙日本#
+	text = {
+    	trigger = {
+     		tag = JAP
+    	}
+    	localization_key = EM_OR_LEADER2
+  	}
+}
+
+defined_text = {
+	name = KXXGetHeadDescription #定义副领袖介绍
+	#小黄副元首
+	text = {
+		trigger = {
+			has_country_flag = GRU_GOEBB_ROEM_VISIBLE
+		}
+		localization_key = GRU_Ernst_Rhoem_desc
+	}
+	#法国复兴政府
+	text = {
+		trigger = {
+			has_country_flag = FRG_Charles_Nogues_VISIBLE
+		}
+		localization_key = PB_Leader_Charles_Nogues_DESC
+	}
+
+	#波兰
+	text = {
+		trigger = {
+			has_country_flag = POL_Jozef_Chacinski_VISIBLE
+		}
+		localization_key =  POL_Jozef_Chacinski_DESC
+	}
+}
+
+defined_text = {
+	name = KXXGetPrimeMinister  #定义副领袖名字
+
+	###小黄副元首
+	text = {
+		trigger = {
+			has_country_flag = GRU_GOEBB_ROEM_VISIBLE
+		}
+		localization_key = GRU_LC_ROEM
+	}
+
+	#杜克洛
+  	text = {
+    	trigger = {
+      		has_country_flag = FRA_Jacques_Doriot_VISIBLE
+    	}
+    	localization_key =  FRA_Jacques_Doriot_eco_tot
+  	}
+  	text = {
+    	trigger = {
+   		   has_country_flag = FRA_Maurice_Thorez_VISIBLE
+ 		}
+    	localization_key =  FRA_Maurice_Thorez_sec_tot
+  	}
+	#刚果&葡萄牙
+	text = {
+    	trigger = {
+      		has_country_flag= POR_Duarte_II_VISIBLE
+    	}
+ 		localization_key = KOG_OR_Duarte_II
+ 	}
+	text = {
+    	trigger = {
+      		has_country_flag= KOG_Pedro_VII_VISIBLE
+    	}
+ 		localization_key = KOG_OR_Pedro_VII
+ 	}
+	#法兰西公社
+	text = {
+    	trigger = {
+   		   has_country_flag = FRA_Andre_Chaumet_VISIBLE
+ 		}
+    	localization_key =  FRA_or_Chaumet
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = FRA_Simone_Weil_VISIBLE
+ 		}
+    	localization_key =  FRA_or_Weil
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = FRA_Jesus_Weil_VISIBLE
+ 		}
+    	localization_key =  FRA_or_Jesus
+  	}	
+	#丹麦
+	text = {
+    	trigger = {
+     	 	tag = DEN
+      		has_country_flag= DEN_Max_Arildskov_VISIBLE
+    	}
+ 		localization_key = DEN_OR_Arildskov
+ 	}
+	#国法
+	text = {
+    	trigger = {
+      		has_country_flag= NFA_Roger_Nimier_visible
+    	}
+ 		localization_key = NFA_OR_Nimier
+ 	}
+	text = {
+    	trigger = {
+      		has_country_flag= NFA_Nicolas_Kayanakis_visible
+    	}
+ 		localization_key = NFA_OR_Kayanakis
+ 	}
+    #拿破仑傀儡
+	text = {
+    	trigger = {
+      		has_country_flag= NPL_Jose_Antonio_VISIBLE
+    	}
+ 		localization_key = NSPR_Jose_Antonio
+ 	}	
+	#波兰
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Alfred_Lampe_VISIBLE
+ 		}
+    	localization_key =  POL_or_Lampe
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Adolf_Warski_VISIBLE
+ 		}
+    	localization_key =  POL_or_Warski
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Julian_Leszczyński_VISIBLE
+ 		}
+    	localization_key =  POL_or_Julian
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Stanislaw_Dubois_VISIBLE
+ 		}
+    	localization_key =  POL_or_Dubois
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Kazimierz_Zakrzewski_VISIBLE
+ 		}
+    	localization_key =  POL_or_Zakrzewski
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Michal_Kalecki_VISIBLE
+ 		}
+    	localization_key =  POL_or_Kalecki
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Oskar_Lange_VISIBLE
+ 		}
+    	localization_key =  POL_or_Lange
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Jozef_Chacinski_VISIBLE
+ 		}
+    	localization_key =  POL_or_Chacinski
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Norbert_Barlicki_VISIBLE
+ 		}
+    	localization_key =  POL_or_Barlicki
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Stanislaw_Mikolajczyk_VISIBLE
+ 		}
+    	localization_key =  POL_or_Mikolajczyk
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Walery_Slawek_VISIBLE
+ 		}
+    	localization_key =  POL_or_Slawek
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Roman_Dmowski_VISIBLE
+ 		}
+    	localization_key =  POL_or_Dmowski
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Antoni_Ciszak_VISIBLE
+ 		}
+    	localization_key =  POL_or_Ciszak
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Eugeniusz_Kwiatkowski_VISIBLE
+ 		}
+    	localization_key =  POL_or_Kwiatkowski
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Julian_Tuwim_VISIBLE
+ 		}
+    	localization_key =  POL_or_Tuwim
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Wladyslaw_Gomulka_VISIBLE
+ 		}
+    	localization_key =  POL_or_Gomulka
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Jozef_Niecko_VISIBLE
+ 		}
+    	localization_key =  POL_or_Niecko
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Stefan_Wyszynski_VISIBLE
+ 		}
+    	localization_key =  POL_or_Wyszynski
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Odrodzenia_Polski_VISIBLE
+ 		}
+    	localization_key =  POL_or_Polski
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Wewnetrzny_Krag_VISIBLE
+ 		}
+    	localization_key =  POL_or_Krag
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Adam_Doboszynski_VISIBLE
+ 		}
+    	localization_key =  POL_or_Doboszynski
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Jan_Hempel_VISIBLE
+ 		}
+    	localization_key =  POL_or_Hempel
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Zgromadzenie_Lechickie_VISIBLE
+ 		}
+    	localization_key =  POL_or_Lechickie
+  	}
+
+
+	#西俄革
+	text = {
+		trigger = {
+			has_country_flag = WRS_Georgy_Zhukov_VISIBLE
+		}
+		localization_key = WRS_LC_Zhukov
+	}
+
+	#法国复兴政府
+	text = {
+		trigger = {
+			has_country_flag = FRG_Robert_Brasillach_VISIBLE
+		}
+		localization_key = FRG_OR_Robert_Brasillach
+	}
+	text = {
+		trigger = {
+			has_country_flag = FRG_Charles_Nogues_VISIBLE
+		}
+		localization_key = FRG_OR_Charles_Nogues
+	}
+
+	#民族与革命
+	text = {
+    	trigger = {
+      	tag = WSU
+			OR = {
+				has_country_leader = {
+					name = "西蒙·彼得留拉"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "沃洛基米尔·契赫夫斯基"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "帕利夫·德米特罗"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "德米特罗·列维茨基"
+					ruling_only = yes
+				}
+	  		}
+    	}
+    	localization_key = WSU_Stepan_Bandera_hog_tot
+  	}
+	text = {
+    	trigger = {
+      	tag = WSU
+			OR = {
+				has_country_leader = {
+					name = "涅斯托尔·马赫诺"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "瓦西里·沙赫赖"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "亚历山大·舒姆斯基"
+					ruling_only = yes
+				}
+	  		}
+    	}
+    	localization_key = WSU_Stepan_Bandera_hog_tot
+  	}
+	text = {
+    	trigger = {
+      		has_idea = WSU_Roman_Shukhevych_hog_pau
+    	}
+    	localization_key = WSU_Roman_Shukhevych_hog_pau
+  	}
+	text = {
+    	trigger = {
+      		has_idea = WSU_Vasyl_Kuk_hog_tot
+    	}
+    	localization_key = WSU_Vasyl_Kuk_hog_tot
+  	}
+	text = {
+    	trigger = {
+      		has_idea = WSU_Dmytro_Dontsov_hog_npo
+    	}
+    	localization_key = WSU_Dmytro_Dontsov_hog_npo
+  	}
+	text = {
+    	trigger = {
+       		OR = {
+				has_idea = CAR_Francisco_Franco_Bahamonde_hog_ade
+				has_idea = CAR_Eugenio_Montes_hog_npo
+	  		}
+    	}
+    	localization_key = CAR_Javier_I
+  	}
+  	text = {
+    	trigger = {
+      		has_idea = CAR_Juan_Laguia_Lliteras_hog_syn
+    	}
+    	localization_key = CAR_Juan_Laguia_Lliteras_hog_syn
+  	}
+  	text = {
+    	trigger = {
+    		  has_idea = CAR_Jose_Antonio_Primo_de_Rivera_hog_pau
+    	}
+    	localization_key = CAR_Jose_Antonio_Primo_de_Rivera_hog_pau
+  	}
+	text = {
+    	trigger = {
+      		has_idea = ROM_Mihai_Strescu_hog_tot
+    	}
+    	localization_key = ROM_Mihai_Strescu_hog_tot
+  	}
+  	text = {
+    	trigger = {
+      		has_idea = BAY_Paul_Nikolaus_Cossmann_hog_npo
+    	}
+    	localization_key = BAY_Paul_Nikolaus_Cossmann_hog_npo
+  	}
+  	text = {
+    	trigger = {
+      		has_idea = ROM_Gheorghe_Clime_hog_npo
+    	}
+    	localization_key = ROM_Gheorghe_Clime_hog_npo
+  	}
+  	text = {
+    	trigger = {
+      		has_idea = BAY_Fritz_Gerlich_hog_ade
+    	}
+    	localization_key = BAY_Fritz_Gerlich_hog_ade
+  	}
+  	text = {
+    	trigger = {
+      		has_idea = BAY_Hans_Erhard_hog_sco
+    	}
+    	localization_key = BAY_Hans_Erhard_hog_sco
+  	}
+  	text = {
+    	trigger = {
+      		has_idea = MNT_Dracha_Mikhailovich_hog_npo
+    	}
+    	localization_key = MNT_Dracha_Mikhailovich_hog_npo
+  	}
+
+
+	#日本&红龙日本#
+	text = { 
+		trigger = {
+			has_idea = JAP_Abe_Iso_hog_sde
+		}
+		localization_key = JAP_Abe_Iso_hog_sde
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Katayama_Tetsu_hog_sde
+		}
+		localization_key = JAP_Katayama_Tetsu_hog_sde
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Machida_Chuji_hog_mli
+		}
+		localization_key = JAP_Machida_Chuji_hog_mli
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Hamaguchi_Osachi_hog_mli
+		}
+		localization_key = JAP_Hamaguchi_Osachi_hog_mli
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Ugaki_Kazushige_hog_mli
+		}
+		localization_key = JAP_Ugaki_Kazushige_hog_mli
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Inukai_Tsuyoshi_hog_sco
+		}
+		localization_key = JAP_Inukai_Tsuyoshi_hog_sco
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Suzuki_Kisaburo_hog_sco
+		}
+		localization_key = JAP_Suzuki_Kisaburo_hog_sco
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Mizuno_Rentaro_hog_sco
+		}
+		localization_key = JAP_Mizuno_Rentaro_hog_sco
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Yoshizawa_Kenkichi_hog_sco
+		}
+		localization_key = JAP_Yoshizawa_Kenkichi_hog_sco
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Hatoyama_Ichiro_hog_sco
+		}
+		localization_key = JAP_Hatoyama_Ichiro_hog_sco
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Adachi_Kenzo_hog_ade
+		}
+		localization_key = JAP_Adachi_Kenzo_hog_ade
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Maeda_Yonezo_hog_ade
+		}
+		localization_key = JAP_Maeda_Yonezo_hog_ade
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Hiranuma_Kiichiro_hog_pau
+		}
+		localization_key = JAP_Hiranuma_Kiichiro_hog_pau
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Hayashi_Senjuro_hog_pau
+		}
+		localization_key = JAP_Hayashi_Senjuro_hog_pau
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Tojo_Hideki_hog_pau
+		}
+		localization_key = JAP_Tojo_Hideki_hog_pau
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Nagata_Tetsuzan_hog_pau
+		}
+		localization_key = JAP_Nagata_Tetsuzan_hog_pau
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Konoe_Fumimaro_hog_npo
+		}
+		localization_key = JAP_Konoe_Fumimaro_hog_npo
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Araki_Sadao_hog_npo
+		}
+		localization_key = JAP_Araki_Sadao_hog_npo
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Kuhara_Fusanosuke_hog_npo
+		}
+		localization_key = JAP_Kuhara_Fusanosuke_hog_npo
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Iwane_Matsui_hog_npo
+		}
+		localization_key = JAP_Iwane_Matsui_hog_npo
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Ryutaro_Nagai_hog_sli
+		}
+		localization_key = JAP_Ryutaro_Nagai_hog_sli
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Chikuhei_Nakajima_hog_sco
+		}
+		localization_key = JAP_Chikuhei_Nakajima_hog_sco
+	}
+	
+	####Added To RD####
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_jotaro_kawakami_hog_sde
+		}
+		localization_key = JAP_jotaro_kawakami_hog_sde
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Yamamoto_Kenzo_hog_syn
+		}
+		localization_key = JAP_Yamamoto_Kenzo_hog_syn
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Yamamoto_Kenzo_hog_sde
+		}
+		localization_key = JAP_Yamamoto_Kenzo_hog_sde
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Katayama_Tetsu_hog_sde
+		}
+		localization_key = JAP_Katayama_Tetsu_hog_sde
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Nakano_Seigo_hog_npo
+		}
+		localization_key = JAP_Nakano_Seigo_hog_npo
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Nakano_Seigo_hog_tot
+		}
+		localization_key = JAP_Nakano_Seigo_hog_tot
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_saito_takao_hog_sli
+		}
+		localization_key = JAP_saito_takao_hog_sli
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_inejiro_asanuma_hog_rso
+		}
+		localization_key = JAP_inejiro_asanuma_hog_rso
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Katsumaro_Akamatsu_hog_tot
+		}
+		localization_key = JAP_Katsumaro_Akamatsu_hog_tot
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Kokkai_hog_ade
+		}
+		localization_key = JAP_Kokkai_hog_ade
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Giro_Senoo_hog_rso
+		}
+		localization_key = JAP_Giro_Senoo_hog_rso
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Yoshio_Kodama_hog_pau
+		}
+		localization_key = JAP_Yoshio_Kodama_hog_pau
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Tatsuo_Tsukui_hog_tot
+		}
+		localization_key = JAP_Tatsuo_Tsukui_hog_tot
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Kanji_Ishiwara_hog_npo
+		}
+		localization_key = JAP_Kanji_Ishiwara_hog_npo
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Kingoro_Hashimoto_hog_tot
+		}
+		localization_key = JAP_Kingoro_Hashimoto_hog_tot
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Okawa_Shumei_hog_npo
+		}
+		localization_key = JAP_Okawa_Shumei_hog_npo
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Kita_Ikki_hog_tot
+		}
+		localization_key = JAP_Kita_Ikki_hog_tot
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Ryohei_Uchida_hog_npo
+		}
+		localization_key = JAP_Ryohei_Uchida_hog_npo
+	}
+	text = { 
+		trigger = {
+			has_idea = JAP_Toyama_Mitsuru_hog_npo
+		}
+		localization_key = JAP_Toyama_Mitsuru_hog_npo
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Onisaburo_Deguchi_hog_npo
+		}
+		localization_key = JAP_Onisaburo_Deguchi_hog_npo
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Bin_Akao_hog_npo
+		}
+		localization_key = JAP_Bin_Akao_hog_npo
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Kozaburo_Tachibana_hog_npo
+		}
+		localization_key = JAP_Kozaburo_Tachibana_hog_npo
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Nissho_Inoue_hog_npo
+		}
+		localization_key = JAP_Nissho_Inoue_hog_npo
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Akira_Kazami_hog_ade
+		}
+		localization_key = JAP_Akira_Kazami_hog_ade
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Josei_Toda_hog_sde
+		}
+		localization_key = JAP_Josei_Toda_hog_sde
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Tsunesaburo_Makiguchi_hog_tot
+		}
+		localization_key = JAP_Tsunesaburo_Makiguchi_hog_tot
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Hirano_Rikizo_hog_tot
+		}
+		localization_key = JAP_Hirano_Rikizo_hog_tot
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Sumihisa_Ikeda_hog_tot
+		}
+		localization_key = JAP_Sumihisa_Ikeda_hog_tot
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Aso_Hisashi_hog_tot
+		}
+		localization_key = JAP_Aso_Hisashi_hog_tot
+	}
+	text = { 
+		trigger = {
+			has_idea = JAP_Yoshikuru_Yamana_hog_tot
+		}
+		localization_key = JAP_Yoshikuru_Yamana_hog_tot
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Zaibatsu_Council_hog_pau
+		}
+		localization_key = JAP_Zaibatsu_Council_hog_pau
+	}
+}
+
+defined_text = {
+	name = KXXGetPMPortrait   #定义图片
+
+	text = {
+		trigger = {
+			has_country_flag = GRU_GOEBB_ROEM_VISIBLE
+		}
+		localization_key = GFX_Portrait_GRU_Ernst_Rhoem
+	}
+
+	#杜克洛
+  	text = {
+    	trigger = {
+      		has_country_flag = FRA_Jacques_Doriot_VISIBLE
+    	}
+    	localization_key = GFX_Portrait_France_Jacques_Doriot
+  	}
+  	text = {
+    	trigger = {
+      		has_country_flag = FRA_Maurice_Thorez_VISIBLE
+    	}
+    	localization_key = GFX_Portrait_France_Maurice_Thorez
+  	}
+	#刚果&葡萄牙
+	text = {
+    	trigger = {
+      		has_country_flag= POR_Duarte_II_VISIBLE
+    	}
+ 		localization_key = GFX_Portrait_POR_Duarte_II
+ 	}
+	text = {
+    	trigger = {
+      		has_country_flag= KOG_Pedro_VII_VISIBLE
+    	}
+ 		localization_key = GFX_Portrait_KOG_Pedro_VII
+ 	}
+
+	#法兰西公社
+	text = {
+    	trigger = {
+   		   has_country_flag = FRA_Andre_Chaumet_VISIBLE
+ 		}
+    	localization_key =  GFX_Portrait_FRA_Andre_Chaumet
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = FRA_Simone_Weil_VISIBLE
+ 		}
+    	localization_key =  GFX_Portrait_FRA_Simone_Weil
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = FRA_Jesus_Weil_VISIBLE
+ 		}
+    	localization_key =  GFX_Portrait_FRA_MY_Lord_Jesus
+  	}
+	#丹麦
+	text = {
+    	trigger = {
+     	 	tag = DEN
+      		has_country_flag= DEN_Max_Arildskov_VISIBLE
+    	}
+ 		localization_key = GFX_Portrait_DEN_Max_Arildskov
+ 	}
+	#国法
+	text = {
+    	trigger = {
+      		has_country_flag= NFA_Roger_Nimier_visible
+    	}
+ 		localization_key = GFX_Portrait_NFA_Roger_Nimier
+ 	}
+	text = {
+    	trigger = {
+      		has_country_flag= NFA_Nicolas_Kayanakis_visible
+    	}
+ 		localization_key = GFX_Portrait_NFA_Nicolas_Kayanakis
+ 	}
+    #拿破仑傀儡
+	text = {
+    	trigger = {
+      		has_country_flag= NPL_Jose_Antonio_VISIBLE
+    	}
+ 		localization_key = GFX_Portrait_NPL_Jose_Antonio
+ 	}	
+	#波兰
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Alfred_Lampe_VISIBLE
+ 		}
+    	localization_key =  GFX_Portrait_POL_Alfred_Lampe
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Adolf_Warski_VISIBLE
+ 		}
+    	localization_key =  GFX_Portrait_POL_Adolf_Warski
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Julian_Leszczyński_VISIBLE
+ 		}
+    	localization_key =  GFX_Portrait_POL_Julian
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Stanislaw_Dubois_VISIBLE
+ 		}
+    	localization_key =  GFX_Portrait_POL_Stanislaw_Dubois
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Kazimierz_Zakrzewski_VISIBLE
+ 		}
+    	localization_key =  GFX_Portrait_POL_Kazimierz_Zakrzewski
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Michal_Kalecki_VISIBLE
+ 		}
+    	localization_key =  GFX_Portrait_POL_Michal_Kalecki
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Oskar_Lange_VISIBLE
+ 		}
+    	localization_key =  GFX_Portrait_POL_Oskar_Lange
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Jozef_Chacinski_VISIBLE
+ 		}
+    	localization_key =  GFX_Portrait_POL_Jozef_Chacinski
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Norbert_Barlicki_VISIBLE
+ 		}
+    	localization_key =  GFX_Portrait_POL_Norbert_Barlicki
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Stanislaw_Mikolajczyk_VISIBLE
+ 		}
+    	localization_key =  GFX_Portrait_POL_Stanislaw_Mikolajczyk
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Walery_Slawek_VISIBLE
+ 		}
+    	localization_key =  GFX_Portrait_POL_Walery_Slawek
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Roman_Dmowski_VISIBLE
+ 		}
+    	localization_key =  GFX_Portrait_POL_Roman_Dmowski
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Antoni_Ciszak_VISIBLE
+ 		}
+    	localization_key =  GFX_Portrait_POL_Antoni_Ciszak
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Eugeniusz_Kwiatkowski_VISIBLE
+ 		}
+    	localization_key =  GFX_Portrait_POL_Eugeniusz_Kwiatkowski
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Julian_Tuwim_VISIBLE
+ 		}
+    	localization_key =  GFX_Portrait_POL_Julian_Tuwim
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Wladyslaw_Gomulka_VISIBLE
+ 		}
+    	localization_key =  GFX_Portrait_POL_Wladyslaw_Gomulka
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Jozef_Niecko_VISIBLE
+ 		}
+    	localization_key =  GFX_Portrait_POL_Jozef_Niecko
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Stefan_Wyszynski_VISIBLE
+ 		}
+    	localization_key =  GFX_Portrait_POL_Stefan_Wyszynski
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Odrodzenia_Polski_VISIBLE
+ 		}
+    	localization_key =  GFX_Portrait_POL_Odrodzenia_Polski
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Wewnetrzny_Krag_VISIBLE
+ 		}
+    	localization_key =  GFX_Portrait_POL_Wewnetrzny_Krag
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Adam_Doboszynski_VISIBLE
+ 		}
+    	localization_key =  GFX_Portrait_POL_Adam_Doboszynski
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Jan_Hempel_VISIBLE
+ 		}
+    	localization_key =  GFX_Portrait_POL_Jan_Hempel
+  	}
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Zgromadzenie_Lechickie_VISIBLE
+ 		}
+    	localization_key =  GFX_Portrait_POL_Zgromadzenie_Lechickie
+  	}
+
+	#西俄革
+	text = {
+		trigger = {
+			has_country_flag = WRS_Georgy_Zhukov_VISIBLE
+		}
+		localization_key = GFX_Portrait_WRS_Georgy_Zhukov
+	}
+	#法国复兴政府
+	text = {
+		trigger = {
+			has_country_flag = FRG_Robert_Brasillach_VISIBLE
+		}
+		localization_key = GFX_Portrait_FRG_Robert_Brasillach
+	}
+	text = {
+		trigger = {
+			has_country_flag = FRG_Charles_Nogues_VISIBLE
+		}
+		localization_key = GFX_Portrait_FRG_Charles_Nogues
+	}
+
+
+	#民族与革命
+	text = {
+    	trigger = {
+      	tag = WSU
+			OR = {
+				has_country_leader = {
+					name = "西蒙·彼得留拉"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "沃洛基米尔·契赫夫斯基"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "帕利夫·德米特罗"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "德米特罗·列维茨基"
+					ruling_only = yes
+				}
+	  		}
+    	}
+    	localization_key = GFX_Portrait_Stepan_Bandera2
+  	}
+	text = {
+    	trigger = {
+      	tag = WSU
+			OR = {
+				has_country_leader = {
+					name = "涅斯托尔·马赫诺"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "瓦西里·沙赫赖"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "亚历山大·舒姆斯基"
+					ruling_only = yes
+				}
+	  		}
+    	}
+    	localization_key = GFX_Portrait_Stepan_Bandera
+  	}
+	text = {
+    	trigger = {
+      		has_idea = WSU_Roman_Shukhevych_hog_pau
+    	}
+    	localization_key = "GFX_Portrait_Shukevich"
+  	}
+  	text = {
+    	trigger = {
+    		has_idea = WSU_Vasyl_Kuk_hog_tot
+    	}
+    	localization_key = "GFX_Portrait_Vasyl_Kuk"
+  	}
+  	text = {
+    	trigger = {
+    		has_idea = WSU_Dmytro_Dontsov_hog_npo
+    	}
+    	localization_key = "GFX_Portrait_UKR_Dmitri_Dontsov"
+  	}
+	text = {
+    	trigger = {
+      		has_idea = CAR_Juan_Laguia_Lliteras_hog_syn
+    	}
+    	localization_key = "GFX_Portrait_Juan_Laguia_Lliteras"
+  	}
+  	text = {
+    	trigger = {
+      		OR = {
+				has_idea = CAR_Francisco_Franco_Bahamonde_hog_ade
+				has_idea = CAR_Eugenio_Montes_hog_npo
+	  		}
+    	}
+    	localization_key = "GFX_Portrait_Javier_I"
+  	}
+	text = {
+    	trigger = {
+    		  has_idea = CAR_Jose_Antonio_Primo_de_Rivera_hog_pau
+    	}
+    	localization_key = "GFX_Portrait_SPA_Jose_Antonio_RF"
+  	}
+	text = {
+    	trigger = {
+      		has_idea = ROM_Gheorghe_Clime_hog_npo
+    	}
+    	localization_key = "GFX_Portrait_Gheorghe_Clime"
+  	}
+  	text = {
+    	trigger = {
+      		has_idea = ROM_Mihai_Strescu_hog_tot
+    	}
+    	localization_key = "GFX_Portrait_Mihai_Strescu"
+  	}
+  	text = {
+    	trigger = {
+    		has_idea = BAY_Paul_Nikolaus_Cossmann_hog_npo
+    	}
+    	localization_key = "GFX_Portrait_Bavaria_Paul_Nikolaus_Cossmann"
+  	}
+  	text = {
+    	trigger = {
+      		has_idea = BAY_Fritz_Gerlich_hog_ade
+    	}
+    	localization_key = "GFX_Portrait_Fritz_Gerlich"
+  	}
+  	text = {
+    	trigger = {
+      		has_idea = BAY_Hans_Erhard_hog_sco
+    	}
+    	localization_key = "GFX_Portrait_Hans_Erhard"
+  	}
+  	text = {
+    	trigger = {
+      		has_idea = MNT_Dracha_Mikhailovich_hog_npo
+    	}
+    	localization_key = "GFX_Portrait_SER_Draza_Mihailovic"
+  	}
+
+	###日本&红龙日本
+	text = { 
+		trigger = {
+			has_idea = JAP_Abe_Iso_hog_sde
+		}
+		localization_key = GFX_Portrait_JAP_Abe_Iso
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Katayama_Tetsu_hog_sde
+		}
+		localization_key = GFX_Portrait_JAP_Tetsu_Katayama_KX
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Machida_Chuji_hog_mli
+		}
+		localization_key = GFX_Portrait_JAP_Machida_Chuji
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Hamaguchi_Osachi_hog_mli
+		}
+		localization_key = GFX_Portrait_JAP_Hamaguchi_Osachi
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Ugaki_Kazushige_hog_mli
+		}
+		localization_key = GFX_Portrait_JAP_Kazushige_Ugaki
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Yoshida_Shigeru_hog_mli
+		}
+		localization_key = GFX_Portrait_JAP_Yoshida_Shigeru
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Inukai_Tsuyoshi_hog_sco
+		}
+		localization_key = GFX_Portrait_JAP_Inukai_Tsuyoshi
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Suzuki_Kisaburo_hog_sco
+		}
+		localization_key = GFX_Portrait_JAP_Suzuki_Kisaburo
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Mizuno_Rentaro_hog_sco
+		}
+		localization_key = GFX_Portrait_JAP_Mizuno_Rentaro
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Yoshizawa_Kenkichi_hog_sco
+		}
+		localization_key = GFX_Portrait_JAP_Kenkichi_Yoshizawa
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Hatoyama_Ichiro_hog_sco
+		}
+		localization_key = GFX_Portrait_JAP_Hatoyama_Ichiro
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Adachi_Kenzo_hog_ade
+		}
+		localization_key = GFX_Portrait_JAP_Adachi_Kenzo
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Maeda_Yonezo_hog_ade
+		}
+		localization_key = GFX_Portrait_JAP_Maeda_Yonezo
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Higashikuni_Naruhiko_hog_ade
+		}
+		localization_key = GFX_Portrait_JAP_Naruhiko_Higashikuni
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Hiranuma_Kiichiro_hog_pau
+		}
+		localization_key = GFX_Portrait_JAP_Hiranuma_Kiichiro
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Hayashi_Senjuro_hog_pau
+		}
+		localization_key = GFX_Portrait_JAP_Senjuro_Hayashi
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Tojo_Hideki_hog_pau
+		}
+		localization_key = GFX_Portrait_JAP_Hideki_Tojo
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Nagata_Tetsuzan_hog_pau
+		}
+		localization_key = GFX_Portrait_JAP_Nagata_Tetsuzan
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Kishi_Nobusuke_hog_pau
+		}
+		localization_key = GFX_Portrait_JAP_Nobusuke_Kishi
+	}
+	
+	text = { 
+		trigger = {
+			JAP_has_fumimaro_konoe = yes
+		}
+		localization_key = GFX_Portrait_JAP_Konoe_Fumimaro
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Araki_Sadao_hog_npo
+		}
+		localization_key = GFX_Portrait_JAP_Sadao_Araki
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Kuhara_Fusanosuke_hog_npo
+		}
+		localization_key = GFX_Portrait_JAP_Fusanosuke_Kuhara
+	}
+	
+	text = {
+		trigger = {
+			AND = {
+				tag = JAP
+				NOT = {
+					has_idea_with_trait = head_of_government
+				}
+			}
+		}
+		localization_key = GFX_Portrait_JAP_Vacant_Office
+	}
+	
+	####Added To RD####
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_jotaro_kawakami_hog_sde
+		}
+		localization_key = GFX_Portrait_JAP_Jotaro_Kawakami
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Yamamoto_Kenzo_hog_syn
+		}
+		localization_key = GFX_Portrait_JAP_Yamamoto_Kenzo
+	}
+	text = { 
+		trigger = {
+			has_idea = JAP_Yamamoto_Kenzo_hog_sde
+		}
+		localization_key = GFX_Portrait_JAP_Yamamoto_Kenzo
+	}
+
+	text = { 
+		trigger = {
+			has_idea = JAP_Katayama_Tetsu_hog_sde
+		}
+		localization_key = GFX_Portrait_JAP_Katayama_Tetsu
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_inejiro_asanuma_hog_rso
+		}
+		localization_key = GFX_Portrait_JAP_Inejiro_Asanuma
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Katsumaro_Akamatsu_hog_tot
+		}
+		localization_key = GFX_Portrait_JAP_Katsumaro_Akamatsu
+	}
+	
+	text = { 
+		trigger = {
+			OR = {
+			has_idea = JAP_Nakano_Seigo_hog_npo
+			has_idea = JAP_Nakano_Seigo_hog_tot
+			}
+		}
+		localization_key = GFX_Portrait_JAP_Seigo_Nakano
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_saito_takao_hog_sli
+		}
+		localization_key = GFX_Portrait_JAP_Saito_Takao
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Kokkai_hog_ade
+		}
+		localization_key = GFX_Portrait_JAP_Kokkai
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Giro_Senoo_hog_rso
+		}
+		localization_key = GFX_Portrait_JAP_Giro_Senoo
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Kanji_Ishiwara_hog_npo
+		}
+		localization_key = GFX_Portrait_JAP_Kanji_Ishiwara
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Yoshio_Kodama_hog_pau
+		}
+		localization_key = GFX_Portrait_JAP_Yoshio_Kodama
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Tatsuo_Tsukui_hog_tot
+		}
+		localization_key = GFX_Portrait_JAP_Tatsuo_Tsukui
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Okawa_Shumei_hog_npo
+		}
+		localization_key = GFX_Portrait_JAP_Okawa_Shumei
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Kita_Ikki_hog_tot
+		}
+		localization_key = GFX_Portrait_JAP_Ikki_Kita
+	}
+
+	text = { 
+		trigger = {
+			has_idea = JAP_Ryohei_Uchida_hog_npo
+		}
+		localization_key = GFX_Portrait_JAP_Ryohei_Uchida
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Toyama_Mitsuru_hog_npo
+		}
+		localization_key = GFX_Portrait_JAP_Toyama_Mitsuru
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Kozaburo_Tachibana_hog_npo
+		}
+		localization_key = GFX_Portrait_JAP_Kozaburo_Tachibana
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Onisaburo_Deguchi_hog_npo
+		}
+		localization_key = GFX_Portrait_JAP_Onisaburo_Deguchi
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Iwane_Matsui_hog_npo
+		}
+		localization_key = GFX_Portrait_JAP_Iwane_Matsui
+	}
+	text = { 
+		trigger = {
+			has_idea = JAP_Ryutaro_Nagai_hog_sli
+		}
+		localization_key = GFX_Portrait_JAP_Ryutaro_Nagai
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Chikuhei_Nakajima_hog_sco
+		}
+		localization_key = GFX_Portrait_JAP_Chikuhei_Nakajima
+	}
+	text = { 
+		trigger = {
+			has_idea = JAP_Nissho_Inoue_hog_npo
+		}
+		localization_key = GFX_Portrait_JAP_Nissho_Inoue
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Akira_Kazami_hog_ade
+		}
+		localization_key = GFX_Portrait_JAP_Akira_Kazami
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Bin_Akao_hog_npo
+		}
+		localization_key = GFX_Portrait_JAP_Bin_Akao
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Josei_Toda_hog_sde
+		}
+		localization_key = GFX_Portrait_JAP_Josei_Toda
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Tsunesaburo_Makiguchi_hog_tot
+		}
+		localization_key = GFX_Portrait_JAP_Tsunesaburo_Makiguchi
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Hirano_Rikizo_hog_tot
+		}
+		localization_key = GFX_Portrait_JAP_Rikizo_Hirano
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Sumihisa_Ikeda_hog_tot
+		}
+		localization_key = GFX_Portrait_JAP_Sumihisa_Ikeda
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Aso_Hisashi_hog_tot
+		}
+		localization_key = GFX_Portrait_JAP_Aso_Hisashi
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Yoshikuru_Yamana_hog_tot
+		}
+		localization_key = GFX_Portrait_JAP_Yoshikuru_Yamana
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = JAP_Zaibatsu_Council_hog_pau
+		}
+		localization_key = GFX_Portrait_JAP_Zaibatsu_Council
+	}
+	
+	text = { 
+		trigger = {
+			OR = {
+			has_idea = JAP_Kingoro_Hashimoto_hog_npo
+			has_idea = JAP_Kingoro_Hashimoto_hog_tot
+			
+			}
+		}
+		localization_key = GFX_Portrait_JAP_Kingoro_Hashimoto
+	}
+}
+
+
+##########################第三领袖分区#########################
+defined_text = {
+	name = KXXGetHOG2Title   #三头政府按钮定义
+	#西俄革
+	text = {
+		trigger = {
+			tag = WRS
+      		has_country_flag = WRS_Mikhail_Tukhachevskiy_VISIBLE
+		}
+		localization_key = WRS_OR_Tukhachevskiy
+	}
+	
+	#刚果&葡萄牙
+	text = {
+		trigger = {
+			OR = {
+				has_country_flag = BRA_Gilberto_de_Mello_Freyre_VISIBLE
+				has_country_flag = POR_Antonio_Salazar_VISIBLE
+				has_country_flag = BRA_Oswald_de_Andrade_VISIBLE
+			}
+		}
+		localization_key = KOG_OR_LEADER4
+	}
+
+	#红德
+	text = {
+		trigger = {
+			tag = GRU
+      		has_country_flag = GRU_Horst_Wessel_VISIBLE
+		}
+		localization_key = gru_OR_LEADER2
+	}
+
+	#波兰
+	text = {
+    	trigger = {
+     	 	tag = POL
+			OR = {
+				has_country_flag = POL_Forty_Four_VISIBLE
+				has_country_flag = POL_Christ_King_VISIBLE
+				has_country_flag = POL_Jezus_Lechia_VISIBLE
+			}
+    	}
+ 		localization_key = POL_OR_LEADER5
+ 	}
+	#民族与革命
+	text = {
+    	trigger = {
+	  		tag = WSU
+      		has_idea = UKR_Oleksander_Shumsky_sec_rso
+    	}
+    	localization_key = WSU_SRP_LEADER
+  	}
+}
+
+defined_text = {
+	name = KXXGetThirdLeaderTitle  #第三领袖外交按钮
+	#西俄革
+  	text = {
+		trigger = {
+			has_country_flag = WRS_Mikhail_Tukhachevskiy_VISIBLE
+		}
+		localization_key = WRS_OR_Tukhachevskiy_2
+	}
+
+	#刚果&葡萄牙
+	text = {
+		trigger = {
+			OR = {
+				has_country_flag = BRA_Gilberto_de_Mello_Freyre_VISIBLE
+				has_country_flag = POR_Antonio_Salazar_VISIBLE
+				has_country_flag = BRA_Oswald_de_Andrade_VISIBLE
+			}
+		}
+		localization_key = KOG_OR_LEADER5
+	}
+
+	#红德
+	text = {
+		trigger = {
+			tag = GRU
+      		has_country_flag = GRU_Horst_Wessel_VISIBLE
+		}
+		localization_key = gru_OR_LEADER3
+	}
+
+	#法国复兴政府
+	text = {
+		trigger = {
+			has_country_flag = FRG_Xavier_Vallat_VISIBLE
+		}
+		localization_key = FRG_OR_LEADER_3
+	}
+
+	#波兰
+	text = {
+		trigger = {
+			OR = {
+				has_country_flag = POL_Jezus_Lechia_VISIBLE
+				has_country_flag = POL_Forty_Four_VISIBLE
+				has_country_flag = POL_Christ_King_VISIBLE
+			}
+		}
+		localization_key = POL_OR_LEADER4
+	}
+
+	#民族与革命
+	text = {
+    	trigger = {
+	  		tag = WSU
+      		has_idea = UKR_Oleksander_Shumsky_sec_rso
+    	}
+    	localization_key = WSU_SRP_LEADER2
+  	}
+}
+
+defined_text = {
+	name = KXXGetThirdHeadDescription #定义第三副领袖介绍
+	#法国复兴政府
+	text = {
+		trigger = {
+			has_country_flag = FRG_Xavier_Vallat_VISIBLE
+		}
+		localization_key = PB_Xavier_Vallat_DESC
+	}
+}
+
+defined_text = {
+	name = KXXGetOtherPrimeMinister  #第三领袖名字
+	#西俄革
+	text = {
+		trigger = {
+			has_country_flag = WRS_Mikhail_Tukhachevskiy_VISIBLE
+		}
+		localization_key = WRS_LC_Tukhachevskiy
+	}
+
+	
+	#刚果&葡萄牙
+	text = {
+		trigger = {
+			OR = {
+				has_country_flag = BRA_Gilberto_de_Mello_Freyre_VISIBLE
+				
+			}
+		}
+		localization_key = KOG_OR_Freyre
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_country_flag = POR_Antonio_Salazar_VISIBLE
+			}
+		}
+		localization_key = KOG_OR_Salazar
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_country_flag = BRA_Oswald_de_Andrade_VISIBLE
+			}
+		}
+		localization_key = KOG_OR_Andrade
+	}
+
+	#红德
+	text = {
+		trigger = {
+			tag = GRU
+      		has_country_flag = GRU_Horst_Wessel_VISIBLE
+		}
+		localization_key = GRU_Horst_Wessel
+	}
+
+	#法国复兴政府
+	text = {
+		trigger = {
+			has_country_flag = FRG_Xavier_Vallat_VISIBLE
+		}
+		localization_key = FRG_OR_Xavier_Vallat
+	}
+	#波兰
+	text = {
+		trigger = {
+			has_country_flag = POL_Forty_Four_VISIBLE
+		}
+		localization_key = POL_OR_Forty_Four
+	}
+	text = {
+		trigger = {
+			has_country_flag = POL_Christ_King_VISIBLE
+		}
+		localization_key = POL_OR_Christ_King
+	}
+	text = {
+		trigger = {
+			has_country_flag = POL_Jezus_Lechia_VISIBLE
+		}
+		localization_key = POL_OR_Jezus_Lechia
+	}
+	#民族与革命
+	text = {
+    	trigger = {
+      		has_idea = UKR_Oleksander_Shumsky_sec_rso
+    	}
+    	localization_key = UKR_Oleksander_Shumsky_sec_rso
+  	}
+}
+
+defined_text = {
+	name = KXXGetOtherPMPortrait  #第三领袖图片
+	#西俄革
+	text = {
+		trigger = {
+			has_country_flag = WRS_Mikhail_Tukhachevskiy_VISIBLE
+		}
+		localization_key = GFX_Portrait_WRS_Mikhail_Tukhachevskiy
+	}
+
+	#刚果&葡萄牙
+	text = {
+		trigger = {
+			OR = {
+				has_country_flag = BRA_Gilberto_de_Mello_Freyre_VISIBLE
+				
+			}
+		}
+		localization_key = GFX_Portrait_BRA_Gilberto_de_Mello_Freyre
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_country_flag = POR_Antonio_Salazar_VISIBLE
+			}
+		}
+		localization_key = GFX_Portrait_POR_Antonio_Salazar
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_country_flag = BRA_Oswald_de_Andrade_VISIBLE
+			}
+		}
+		localization_key = GFX_Portrait_BRA_Oswald_de_Andrade
+	}
+	
+	#法国复兴政府
+	text = {
+		trigger = {
+			has_country_flag = FRG_Xavier_Vallat_VISIBLE
+		}
+		localization_key = GFX_Portrait_FRG_Xavier_Vallat
+	}
+	#波兰
+	text = {
+		trigger = {
+			has_country_flag = POL_Forty_Four_VISIBLE
+		}
+		localization_key =  GFX_Portrait_POL_Forty_Four
+	}
+	text = {
+		trigger = {
+			has_country_flag = POL_Christ_King_VISIBLE
+		}
+		localization_key =  GFX_Portrait_POL_Christ_King
+	}
+	text = {
+		trigger = {
+			has_country_flag = POL_Jezus_Lechia_VISIBLE
+		}
+		localization_key =  GFX_Portrait_POL_Jezus_Lechia
+	}
+	#红德
+	text = {
+		trigger = {
+			tag = GRU
+      		has_country_flag = GRU_Horst_Wessel_VISIBLE
+		}
+		localization_key = GFX_Portrait_GRU_Horst_Wessel
+	}
+	#民族与革命
+	text = {
+    	trigger = {
+      		has_idea = UKR_Oleksander_Shumsky_sec_rso
+    	}
+    	localization_key = GFX_Portrait_Oleksander_Shumsky
+  	}
+}
+
+
+
+
+#####################第四领袖分区############################
+defined_text = {
+	name = KXXGetHOG3Title  #第四领袖按钮定义	
+	#红德
+	text = {
+		trigger = {
+			has_country_flag = GRU_Albert_Speer_VISIBLE
+		}
+		localization_key =  gru_OR_LEADER4
+	}
+}
+
+defined_text = {
+	name = KXXGetfourthLeaderTitle  #第四领袖外交定义	
+	#红德
+	text = {
+		trigger = {
+			has_country_flag = GRU_Albert_Speer_VISIBLE
+		}
+		localization_key =  gru_OR_LEADER5
+	}
+}
+
+defined_text = {
+	name = KXXGetfourthHeadDescription  #第四领袖介绍	
+	#红德
+	
+}
+
+defined_text = {
+	name = KXXGetthirdPrimeMinister  #第四领袖名字	
+	#红德
+	text = {
+		trigger = {
+			has_country_flag = GRU_Albert_Speer_VISIBLE
+		}
+		localization_key =  GRU_Albert_Speer
+	}
+}
+
+defined_text = {
+	name = KXXGetthirdPortrait  #第四领袖图片
+	#红德
+	text = {
+		trigger = {
+			has_country_flag = GRU_Albert_Speer_VISIBLE
+		}
+		localization_key =  GFX_Portrait_GRU_Albert_Speer
+	}
+}
+
+
+
+
+
+
+######################特殊领袖分区############################
+defined_text = {
+	name = KXXGetgruTitle  #红德特殊双领袖按钮定义
+	text = {
+		trigger = {
+			has_country_flag = GRU_Gregor_Strasser_VISIBLE
+		}
+		localization_key =  gru_OR_LEADER
+	}
+}
+
+defined_text = {
+	name = KXXGetgruLeaderTitle  #红德特殊双领袖外交
+	text = {
+		trigger = {
+			has_country_flag = GRU_Gregor_Strasser_VISIBLE
+		}
+		localization_key = gru_OR_LEADER1
+	}
+}
+
+defined_text = {
+	name = KXXGetgruHeadDescription  #红德特殊双领袖介绍
+	#红德
+	
+}
+
+defined_text = {
+	name = KXXGetgruMinister  #红德特殊双领袖名字
+	text = {
+		trigger = {
+			has_country_flag = GRU_Gregor_Strasser_VISIBLE
+		}
+		localization_key = GRU_Gregor_Strasser
+	}
+}
+
+defined_text = {
+	name = KXXGetgruPortrait  #红德特殊双领袖图片
+	text = {
+		trigger = {
+			has_country_flag = GRU_Gregor_Strasser_VISIBLE
+		}
+		localization_key =  GFX_Portrait_GRU_Gregor_Strasser
+	}
+}
+
+
+
+defined_text = {
+	name = KXXGetHOGTrait  #
+	text = {
+    	trigger = {
+   		   has_country_flag = POL_Jozef_Chacinski_VISIBLE
+ 		}
+    	localization_key =  Jozef_Chacinski_Trait
+  	}
+}

@@ -1,0 +1,140 @@
+KXX_uses_leader_gui = {
+	OR = {
+		AND = {
+			tag = GRU
+			has_country_flag = GRU_GOEBB_GORING_VISIBLE
+			NOT = {
+				has_country_flag = GRU_pm_is_hos
+			}
+		}
+
+		GRU_has_leader_GUI = yes
+		JAP_has_leader_GUI = yes
+
+		has_country_flag = KXX_LEADER_GUI_VISIBLE
+	}
+	NOT = {
+		has_country_flag = KXX_LEADER_GUI_NOT_VISIBLE
+	}
+}
+
+KXX_uses_double_leader_gui = {
+	OR = {
+		has_country_flag = KXX_DOUBLE_LEADER_GUI_VISIBLE
+		has_idea_with_trait = land_marshal_of_liv_ord
+	}
+}
+
+KXX_uses_third_leader_gui = {
+	has_country_flag = KXX_third_LEADER_GUI_VISIBLE
+}
+
+KXX_uses_gru_leader_gui = {
+	has_country_flag = KXX_gru_LEADER_GUI_VISIBLE
+}
+
+KXX_LEADER_GUI_USES_CUSTOM_TITLE = {
+	OR = {
+		has_country_flag = KXX_USES_CUSTOM_TITLE
+		has_idea_with_trait = land_marshal_of_liv_ord
+		has_idea_with_trait = minister_for_ulster_affairs 
+	}
+}
+
+### GRU
+GRU_has_leader_GUI = {
+	OR = {
+		has_country_flag = GRU_GOEBB_ROEM_VISIBLE
+		has_country_flag = GRU_GOEBB_HIMMLER_VISIBLE
+		has_country_flag = GRU_GOEBB_SPEER_VISIBLE
+		has_country_flag = GRU_LIEBK_ROSA_VISIBLE
+	}
+}
+GGB_has_leader_GUI = {
+	has_country_leader = { character = GRU_Oswald_Mosley ruling_only = yes }
+}
+IBR_has_leader_GUI = {
+	has_country_leader = { character = GRU_Franco_Bahamonde ruling_only = yes }
+}
+ITT_has_leader_GUI = {
+	OR = {
+		has_country_leader = { character = GRU_gian_galeazzo_ciano ruling_only = yes }
+		has_country_leader = { character = GRU_Benito_Mussolini ruling_only = yes }
+	}
+}
+JAP_has_leader_GUI = {
+	OR = {
+		has_idea = JAP_Abe_Iso_hog_sde
+		has_idea = JAP_Katayama_Tetsu_hog_sde
+		has_idea = JAP_Machida_Chuji_hog_mli
+		has_idea = JAP_Hamaguchi_Osachi_hog_mli
+		has_idea = JAP_Yoshida_Shigeru_hog_mli
+		has_idea = JAP_Ugaki_Kazushige_hog_mli
+		has_idea = JAP_Inukai_Tsuyoshi_hog_sco
+		has_idea = JAP_Suzuki_Kisaburo_hog_sco
+		has_idea = JAP_Mizuno_Rentaro_hog_sco
+		has_idea = JAP_Yoshizawa_Kenkichi_hog_sco
+		has_idea = JAP_Hatoyama_Ichiro_hog_sco
+		has_idea = JAP_Adachi_Kenzo_hog_ade
+		has_idea = JAP_Maeda_Yonezo_hog_ade
+		has_idea = JAP_Higashikuni_Naruhiko_hog_ade
+		has_idea = JAP_Hiranuma_Kiichiro_hog_pau
+		has_idea = JAP_Hayashi_Senjuro_hog_pau
+		has_idea = JAP_Tojo_Hideki_hog_pau
+		has_idea = JAP_Nagata_Tetsuzan_hog_pau
+		has_idea = JAP_Konoe_Fumimaro_hog_npo
+		has_idea = JAP_Araki_Sadao_hog_npo
+		has_idea = JAP_Kuhara_Fusanosuke_hog_npo
+		has_idea = JAP_Kozaburo_Tachibana_hog_npo
+		has_idea = JAP_Iwane_Matsui_hog_npo
+		
+		has_idea = JAP_jotaro_kawakami_hog_sde
+		has_idea = JAP_Yamamoto_Kenzo_hog_sde
+		has_idea = JAP_Katayama_Tetsu_hog_sde
+		has_idea = JAP_Nakano_Seigo_hog_tot
+		has_idea = JAP_Nakano_Seigo_hog_npo
+		has_idea = JAP_saito_takao_hog_sli
+		has_idea = JAP_inejiro_asanuma_hog_rso
+		has_idea = JAP_Katsumaro_Akamatsu_hog_tot
+		has_idea = JAP_Kokkai_hog_ade
+		has_idea = JAP_Giro_Senoo_hog_rso
+		has_idea = JAP_Kanji_Ishiwara_hog_npo
+		has_idea = JAP_Nissho_Inoue_hog_npo
+		has_idea = JAP_Yoshio_Kodama_hog_pau
+		has_idea = JAP_Tatsuo_Tsukui_hog_tot
+		has_idea = JAP_Kingoro_Hashimoto_hog_tot
+		has_idea = JAP_Okawa_Shumei_hog_npo
+		has_idea = JAP_Kita_Ikki_hog_tot
+		has_idea = JAP_Ryohei_Uchida_hog_npo
+		has_idea = JAP_Toyama_Mitsuru_hog_npo
+		has_idea = JAP_Onisaburo_Deguchi_hog_npo
+		has_idea = JAP_Ryutaro_Nagai_hog_sli
+		has_idea = JAP_Chikuhei_Nakajima_hog_sco
+		has_idea = JAP_Bin_Akao_hog_npo
+		has_idea = JAP_Akira_Kazami_hog_ade
+		has_idea = JAP_Josei_Toda_hog_sde
+		has_idea = JAP_Tsunesaburo_Makiguchi_hog_tot
+		has_idea = JAP_Hirano_Rikizo_hog_tot
+		has_idea = JAP_Sumihisa_Ikeda_hog_tot
+		has_idea = JAP_Aso_Hisashi_hog_tot
+		has_idea = JAP_Yoshikuru_Yamana_hog_tot
+		has_idea = JAP_Zaibatsu_Council_hog_pau
+		NOT = {
+      		has_idea_with_trait = head_of_government
+    	}
+	}
+	OR = {
+    	has_country_leader = {
+      		name = "裕仁"  # Hirohito
+      		ruling_only = yes
+    	}
+    	has_country_leader = {
+     	 name = "雍仁"  # Yasuhito
+    	  ruling_only = yes
+    	}
+   	 	has_country_leader = {
+   	   		name = "高松宫宣仁亲王"  # Takamatsu Nobuhito
+      		ruling_only = yes
+    	}
+  	}
+}

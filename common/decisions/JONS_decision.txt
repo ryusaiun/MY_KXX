@@ -1,0 +1,906 @@
+
+political_actions = {
+	JONS_deport_jews_to_morocco = {
+		icon = jons_mor_jews_decision
+
+		allowed = { 
+			original_tag = CNT 
+		}
+
+		available = {
+			MOR = {
+				is_subject_of = CNT			
+			}
+		}
+		
+		visible = {
+			has_country_leader_ideology = spanish_syndicalism
+			has_completed_focus = JONS_43
+			NOT = { any_country = { has_cosmetic_tag = MOR_JONS } } 
+		}
+		
+		cost = 100
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			set_autonomy = { target = MOR autonomy_state = autonomous_territory }
+			MOR = { load_focus_tree = generic_focus
+				set_cosmetic_tag = MOR_JONS
+				create_country_leader = {
+					name = "西班牙-北非委员会"
+					desc = ""
+					picture = "gfx/leaders/CNT/JONS_Army_Room_Template.png"
+					expire = "1965.1.1"
+					ideology = spanish_syndicalism
+					traits = { }
+				}
+				set_politics = {
+					ruling_party = totalist
+					elections_allowed = no
+				}
+				set_party_name = {
+					ideology = totalist
+					name = "MOR_JONS_JEWS_party"
+					long_name = "MOR_JONS_JEWS_party_long"
+				}
+			}
+		}
+	}
+	JONS_expand_morojews_algeria = {
+		icon = jons_mor_jews_decision
+
+		allowed = { 
+			original_tag = CNT 
+		}
+
+		available = {
+			MOR = {
+				is_subject_of = CNT			
+			}
+			459 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+			805 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+			460 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+		}
+		
+		visible = {
+			has_country_leader_ideology = spanish_syndicalism
+			has_completed_focus = JONS_43
+			MOR = { has_cosmetic_tag = MOR_JONS }
+		}
+		
+		cost = 50
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			459 = { add_core_of = MOR 
+				transfer_state_to = MOR }
+			805 = { add_core_of = MOR 
+				transfer_state_to = MOR }
+			460 = { add_core_of = MOR 
+				transfer_state_to = MOR }
+			513 = { add_core_of = MOR 
+				transfer_state_to = MOR }
+			514 = { add_core_of = MOR 
+				transfer_state_to = MOR }
+		}
+	}
+
+	JONS_expand_morojews_tunisia = {
+		icon = jons_mor_jews_decision
+
+		allowed = { 
+			original_tag = CNT 
+		}
+
+		available = {
+			MOR = {
+				is_subject_of = CNT			
+			}
+			458 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+			665 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+		}
+		
+		visible = {
+			has_country_leader_ideology = spanish_syndicalism
+			has_completed_focus = JONS_43
+			MOR = { has_cosmetic_tag = MOR_JONS }
+		}
+		
+		cost = 50
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			458 = { add_core_of = MOR 
+				transfer_state_to = MOR }
+			665 = { add_core_of = MOR 
+				transfer_state_to = MOR }
+		}
+	}
+
+}
+JOSN_QLDZ  = {
+	JONS_Nationalization_was_enforced = {
+
+		icon = factories
+
+		ai_will_do = {
+			factor = 0
+		}
+		
+		cost = 20
+		
+		available = {
+		}
+		
+		visible = {
+		has_country_flag = JONS_LEADERQW_button_desc
+		has_country_flag = JONS_LEADERQW_yes
+		}
+		
+		fire_only_once = no
+		days_remove = 7
+
+		remove_effect = {
+		custom_effect_tooltip = JONS_ledesma_power_get
+		add_to_variable = {
+				var = JONS_ledesma_power
+				value = 1
+			}
+		random_owned_controlled_state={
+			prioritize={
+			}
+			limit={
+				free_building_slots={
+					building=industrial_complex
+					size>0
+					include_locked=yes
+				}
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction={
+				type=industrial_complex
+				level=1
+				instant_build=yes
+			}
+		}
+		}
+	}
+	JONS_Eliminate_extremist_influences = {
+
+		icon = ban_iron_front
+
+		ai_will_do = {
+			factor = 0
+		}
+		
+		cost = 20
+		
+		available = {
+		}
+		
+		visible = {
+		has_country_flag = JONS_LEADERQW_button_desc
+		has_country_flag = JONS_LEADERQW_yes
+		}
+		
+		fire_only_once = no
+		days_remove = 12
+
+		remove_effect = {
+		custom_effect_tooltip = JONS_ledesma_power_get
+		custom_effect_tooltip = JONS_redondo_power_lose
+		add_to_variable = {
+				var = JONS_ledesma_power
+				value = 1
+			}
+		add_to_variable = {
+				var = JONS_redondo_power
+				value = -1
+			}
+		add_manpower = -100
+		add_political_power = 50
+		}
+	}
+	JONS_Meeting_with_the_syndicalists = {
+
+		icon = generic_agreement
+
+		ai_will_do = {
+			factor = 0
+		}
+		
+		cost = 20
+		
+		available = {
+		}
+		
+		visible = {
+		has_country_flag = JONS_LEADERQW_button_desc
+		has_country_flag = JONS_LEADERQW_yes
+		}
+		
+		fire_only_once = no
+		days_remove = 10
+
+		remove_effect = {
+		custom_effect_tooltip = JONS_ledesma_power_get
+		custom_effect_tooltip = JONS_redondo_power_lose
+		add_to_variable = {
+				var = JONS_ledesma_power
+				value = 1
+			}
+		add_to_variable = {
+				var = JONS_redondo_power
+				value = -1
+			}
+		add_political_power = 50
+		add_popularity = { ideology = syndicalist popularity = 0.01 }
+		}
+	}
+	JONS_Call_for_loyal_soldiers = {
+
+		icon = soldierly_discipline
+
+		ai_will_do = {
+			factor = 0
+		}
+		
+		cost = 20
+		
+		available = {
+		}
+		
+		visible = {
+		has_country_flag = JONS_LEADERQW_button_desc
+		has_country_flag = JONS_LEADERQW_yes
+		}
+		
+		fire_only_once = no
+		days_remove = 5
+
+		remove_effect = {
+		custom_effect_tooltip = JONS_ledesma_power_get
+		add_to_variable = {
+				var = JONS_ledesma_power
+				value = 1
+			}
+		add_manpower = 200
+		}
+	}
+	JONS_Buying_government_officials = {
+
+		icon = give_cash
+
+		ai_will_do = {
+			factor = 0
+		}
+		
+		cost = 20
+		
+		available = {
+		}
+		
+		visible = {
+		has_country_flag = JONS_LEADERQW2_button_desc
+		has_country_flag = JONS_LEADERQW_yes
+		}
+		
+		fire_only_once = no
+		days_remove = 12
+
+		remove_effect = {
+		custom_effect_tooltip = JONS_redondo_power_get
+		custom_effect_tooltip = JONS_ledesma_power_lose
+		add_to_variable = {
+				var = JONS_ledesma_power
+				value = -1
+			}
+		add_to_variable = {
+				var = JONS_redondo_power
+				value = 1
+			}
+		add_popularity = { ideology = national_populist popularity = 0.01 }
+		add_political_power = 30
+		}
+	}
+	JONS_Nest_expansion = {
+
+		icon = bear
+
+		ai_will_do = {
+			factor = 0
+		}
+		
+		cost = 20
+		
+		available = {
+		}
+		
+		visible = {
+		has_country_flag = JONS_LEADERQW2_button_desc
+		has_country_flag = JONS_LEADERQW_yes
+		}
+		
+		fire_only_once = no
+		days_remove = 10
+
+		remove_effect = {
+		custom_effect_tooltip = JONS_redondo_power_get
+		add_to_variable = {
+				var = JONS_redondo_power
+				value = 1
+			}
+		add_popularity = { ideology = national_populist popularity = 0.02 }
+		add_manpower = 250
+		}
+	}
+	JONS_Ensure_internal_loyalty = {
+
+		icon = hand_grab
+
+		ai_will_do = {
+			factor = 0
+		}
+		
+		cost = 20
+		
+		available = {
+		}
+		
+		visible = {
+		has_country_flag = JONS_LEADERQW2_button_desc
+		has_country_flag = JONS_LEADERQW_yes
+		}
+		
+		fire_only_once = no
+		days_remove = 7
+
+		remove_effect = {
+		custom_effect_tooltip = JONS_redondo_power_get
+		add_to_variable = {
+				var = JONS_redondo_power
+				value = 1
+			}
+		custom_effect_tooltip = JONS_ledesma_power_lose
+		add_to_variable = {
+				var = JONS_ledesma_power
+				value = -1
+			}
+		add_political_power = 70
+		}
+	}
+	JONS_Promoting_ultra_nationalism = {
+
+		icon = trumpet
+
+		ai_will_do = {
+			factor = 0
+		}
+		
+		cost = 20
+		
+		available = {
+		}
+		
+		visible = {
+		has_country_flag = JONS_LEADERQW2_button_desc
+		has_country_flag = JONS_LEADERQW_yes
+		}
+		
+		fire_only_once = no
+		days_remove = 12
+
+		remove_effect = {
+		custom_effect_tooltip = JONS_redondo_power_get
+		add_to_variable = {
+				var = JONS_redondo_power
+				value = 1
+			}
+		add_war_support = 0.02
+		}
+	}
+}
+JONS_National_Reconstruction_Commission = {
+	JONS_arms_factory_reconstruction_plan = {
+
+		icon = factories
+
+		ai_will_do = {
+			factor = 0
+		}
+		
+		cost =  50
+		
+		available = {
+		}
+		
+		visible = {
+		}
+		
+		fire_only_once = no
+		days_remove = 20
+
+		remove_effect = {
+		random_owned_controlled_state={
+			prioritize={
+			}
+			limit={
+				free_building_slots={
+					building=arms_factory
+					size>0
+					include_locked=yes
+				}
+			}
+			add_building_construction={
+				type=arms_factory
+				level=1
+				instant_build=yes
+			}
+		}
+		}
+	}
+	JONS_industrial_complex_reconstruction_plan = {
+
+		icon = factories
+
+		ai_will_do = {
+			factor = 0
+		}
+		
+		cost =  50
+		
+		available = {
+		}
+		
+		visible = {
+		}
+		
+		fire_only_once = no
+		days_remove = 20
+
+		remove_effect = {
+		random_owned_controlled_state={
+			prioritize={
+			}
+			limit={
+				free_building_slots={
+					building=industrial_complex
+					size>0
+					include_locked=yes
+				}
+			}
+			add_building_construction={
+				type=industrial_complex
+				level=1
+				instant_build=yes
+			}
+		}
+		}
+	}
+	JONS_arms_factory_reconstruction_plan2 = {
+
+		icon = factories
+
+		ai_will_do = {
+			factor = 0
+		}
+		
+		cost =  50
+		
+		available = {
+		}
+		
+		visible = {
+		}
+		
+		fire_only_once = no
+		days_remove = 20
+
+		remove_effect = {
+		random_owned_controlled_state={
+			prioritize={
+			}
+			limit={
+				free_building_slots={
+					building=arms_factory
+					size>0
+					include_locked=yes
+				}
+			}
+			add_building_construction={
+				type=arms_factory
+				level=1
+				instant_build=yes
+			}
+		}
+		}
+	}
+	JONS_industrial_complex_reconstruction_plan2 = {
+
+		icon = factories
+
+		ai_will_do = {
+			factor = 0
+		}
+		
+		cost =  50
+		
+		available = {
+		}
+		
+		visible = {
+		}
+		
+		fire_only_once = no
+		days_remove = 20
+
+		remove_effect = {
+		random_owned_controlled_state={
+			prioritize={
+			}
+			limit={
+				free_building_slots={
+					building=industrial_complex
+					size>0
+					include_locked=yes
+				}
+			}
+			add_building_construction={
+				type=industrial_complex
+				level=1
+				instant_build=yes
+			}
+		}
+		}
+	}
+	JONS_arms_factory_reconstruction_plan3 = {
+
+		icon = factories
+
+		ai_will_do = {
+			factor = 0
+		}
+		
+		cost =  50
+		
+		available = {
+		}
+		
+		visible = {
+		}
+		
+		fire_only_once = no
+		days_remove = 20
+
+		remove_effect = {
+		random_owned_controlled_state={
+			prioritize={
+			}
+			limit={
+				free_building_slots={
+					building=arms_factory
+					size>0
+					include_locked=yes
+				}
+			}
+			add_building_construction={
+				type=arms_factory
+				level=1
+				instant_build=yes
+			}
+		}
+		}
+	}
+	JONS_industrial_complex_reconstruction_plan3 = {
+
+		icon = factories
+
+		ai_will_do = {
+			factor = 0
+		}
+		
+		cost =  50
+		
+		available = {
+		}
+		
+		visible = {
+		}
+		
+		fire_only_once = no
+		days_remove = 20
+
+		remove_effect = {
+		random_owned_controlled_state={
+			prioritize={
+			}
+			limit={
+				free_building_slots={
+					building=industrial_complex
+					size>0
+					include_locked=yes
+				}
+			}
+			add_building_construction={
+				type=industrial_complex
+				level=1
+				instant_build=yes
+			}
+		}
+		}
+	}
+	JONS_exploitation_reconstruction_plan = {
+
+		icon = factories
+
+		ai_will_do = {
+			factor = 0
+		}
+		
+		cost =  50
+		
+		available = {
+		}
+		
+		visible = {
+		}
+		
+		fire_only_once = no
+		days_remove = 7
+
+		remove_effect = {
+		random_owned_controlled_state={
+		add_extra_state_shared_building_slots=1
+		}
+		}
+	}
+	JONS_exploitation_reconstruction_plan2 = {
+
+		icon = factories
+
+		ai_will_do = {
+			factor = 0
+		}
+		
+		cost =  50
+		
+		available = {
+		}
+		
+		visible = {
+		}
+		
+		fire_only_once = no
+		days_remove = 7
+
+		remove_effect = {
+		random_owned_controlled_state={
+		add_extra_state_shared_building_slots=1
+		}
+		}
+	}
+	JONS_exploitation_reconstruction_plan3 = {
+
+		icon = factories
+
+		ai_will_do = {
+			factor = 0
+		}
+		
+		cost =  50
+		
+		available = {
+		}
+		
+		visible = {
+		}
+		
+		fire_only_once = no
+		days_remove = 7
+
+		remove_effect = {
+		random_owned_controlled_state={
+		add_extra_state_shared_building_slots=1
+		}
+		}
+	}
+	JONS_air_base_plan = {
+
+		icon = factories
+
+		ai_will_do = {
+			factor = 0
+		}
+		
+		cost =  50
+		
+		available = {
+		}
+		
+		visible = {
+		}
+		
+		fire_only_once = no
+		days_remove = 20
+
+		remove_effect = {
+		random_owned_controlled_state={
+			prioritize={
+			}
+			limit={
+				free_building_slots={
+					building=air_base
+					size>0
+					include_locked=yes
+				}
+			}
+			add_building_construction={
+				type=air_base
+				level=1
+				instant_build=yes
+			}
+		}
+		}
+	}
+	JONS_infrastructure_plan = {
+
+		icon = factories
+
+		ai_will_do = {
+			factor = 0
+		}
+		
+		cost =  50
+		
+		available = {
+		}
+		
+		visible = {
+		}
+		
+		fire_only_once = no
+		days_remove = 20
+
+		remove_effect = {
+		random_owned_controlled_state={
+			prioritize={
+			}
+			limit={
+				free_building_slots={
+					building=infrastructure
+					size>0
+					include_locked=yes
+				}
+			}
+			add_building_construction={
+				type=infrastructure
+				level=1
+				instant_build=yes
+			}
+		}
+		}
+	}
+	JONS_anti_air_building_plan = {
+
+		icon = factories
+
+		ai_will_do = {
+			factor = 0
+		}
+		
+		cost =  50
+		
+		available = {
+		}
+		
+		visible = {
+		}
+		
+		fire_only_once = no
+		days_remove = 20
+
+		remove_effect = {
+		random_owned_controlled_state={
+			prioritize={
+			}
+			limit={
+				free_building_slots={
+					building=anti_air_building
+					size>0
+					include_locked=yes
+				}
+			}
+			add_building_construction={
+				type=anti_air_building
+				level=1
+				instant_build=yes
+			}
+		}
+		}
+	}
+	JONS_synthetic_refinery_plan = {
+
+		icon = factories
+
+		ai_will_do = {
+			factor = 0
+		}
+		
+		cost =  50
+		
+		available = {
+		}
+		
+		visible = {
+		}
+		
+		fire_only_once = no
+		days_remove = 20
+
+		remove_effect = {
+		random_owned_controlled_state={
+			prioritize={
+			}
+			limit={
+				free_building_slots={
+					building=synthetic_refinery
+					size>0
+					include_locked=yes
+				}
+			}
+			add_building_construction={
+				type=synthetic_refinery
+				level=1
+				instant_build=yes
+			}
+		}
+		}
+	}
+	JONS_fuel_silo_plan = {
+
+		icon = factories
+
+		ai_will_do = {
+			factor = 0
+		}
+		
+		cost =  50
+		
+		available = {
+		}
+		
+		visible = {
+		}
+		
+		fire_only_once = no
+		days_remove = 20
+
+		remove_effect = {
+		random_owned_controlled_state={
+			prioritize={
+			}
+			limit={
+				free_building_slots={
+					building=fuel_silo
+					size>0
+					include_locked=yes
+				}
+			}
+			add_building_construction={
+				type=fuel_silo
+				level=1
+				instant_build=yes
+			}
+		}
+		}
+	}
+}

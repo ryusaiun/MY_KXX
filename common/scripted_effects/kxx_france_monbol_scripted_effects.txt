@@ -1,0 +1,503 @@
+NFA_monbol_stablize_effect = {
+	if = {
+		limit = {
+			has_idea = NFA_total_chaos
+		}
+		swap_ideas = {
+			remove_idea = NFA_total_chaos
+			add_idea = NFA_total_chaos1
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = NFA_total_chaos1
+		}
+		swap_ideas = {
+			remove_idea = NFA_total_chaos1
+			add_idea = NFA_total_chaos2
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = NFA_total_chaos2
+		}
+		swap_ideas = {
+			remove_idea = NFA_total_chaos2
+			add_idea = NFA_total_chaos3
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = NFA_total_chaos3
+		}
+		swap_ideas = {
+			remove_idea = NFA_total_chaos3
+			add_idea = NFA_total_chaos4
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = NFA_total_chaos4
+		}
+		swap_ideas = {
+			remove_idea = NFA_total_chaos4
+			add_idea = NFA_total_chaos5
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = NFA_total_chaos5
+		}
+		swap_ideas = {
+			remove_idea = NFA_total_chaos5
+			add_idea = NFA_total_chaos6
+		}
+	}
+	else = {
+		
+			remove_ideas = NFA_total_chaos6
+			add_timed_idea = {
+				idea = NFA_total_chaos_aftermath
+				days = 730
+			}
+		
+	}
+}
+FRA_decrease_postwar = {
+	if = {
+		limit = {
+			has_idea = FRA_post_war_scars 
+		}
+		swap_ideas = {
+			remove_idea = FRA_post_war_scars 
+			add_idea = FRA_post_war_scars1
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = FRA_post_war_scars1
+		}
+		swap_ideas = {
+			remove_idea = FRA_post_war_scars1
+			add_idea = FRA_post_war_scars2
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = FRA_post_war_scars2
+		}
+		swap_ideas = {
+			remove_idea = FRA_post_war_scars2
+			add_idea = FRA_post_war_scars3
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = FRA_post_war_scars3
+		}
+		swap_ideas = {
+			remove_idea = FRA_post_war_scars3
+			add_idea = FRA_post_war_scars4
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = FRA_post_war_scars4
+		}
+		swap_ideas = {
+			remove_idea = FRA_post_war_scars4
+			add_idea = FRA_post_war_scars5
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = FRA_post_war_scars5
+		}
+		swap_ideas = {
+			remove_idea = FRA_post_war_scars5
+			add_idea = FRA_post_war_scars6
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = FRA_post_war_scars6
+		}
+		swap_ideas = {
+			remove_idea = FRA_post_war_scars6
+			add_idea = FRA_post_war_scars7
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = FRA_post_war_scars7
+		}
+		swap_ideas = {
+			remove_idea = FRA_post_war_scars7
+			add_idea = FRA_post_war_scars8
+		}
+	}
+	else = {
+		
+		remove_ideas = FRA_post_war_scars8
+			
+		
+	}
+}
+
+FRA_spawn_five_ships = {
+	if = {
+		limit = { has_dlc_mtg = yes }
+		if = {
+			limit = { NOT = { has_tech = improved_ship_hull_light } }
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = tooltip_add_tech
+					TECH = ship_hull_light_3
+				}
+				set_technology = { improved_ship_hull_light = 1 }
+			}
+		}
+		if = {
+			limit = {
+				has_tech = cavity_magnatron
+				has_tech = improved_depth_charges
+			}
+			create_equipment_variant = {
+				name = "Cheetah Class"
+				type = ship_hull_light_3
+				role_icon_index = 2
+				modules = {
+					fixed_ship_battery_slot = ship_light_battery_2
+					fixed_ship_anti_air_slot = ship_anti_air_2
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+					fixed_ship_radar_slot = ship_radar_2
+					fixed_ship_torpedo_slot = ship_torpedo_2
+					fixed_ship_engine_slot = light_ship_engine_2
+
+					front_1_custom_slot = ship_anti_air_2
+					mid_1_custom_slot = ship_torpedo_2
+					rear_1_custom_slot = ship_depth_charge_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_tech = cavity_magnatron
+			}
+			create_equipment_variant = {
+				name = "Cheetah Class"
+				type = ship_hull_light_3
+				role_icon_index = 2
+				modules = {
+					fixed_ship_battery_slot = ship_light_battery_2
+					fixed_ship_anti_air_slot = ship_anti_air_2
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+					fixed_ship_radar_slot = ship_radar_2
+					fixed_ship_torpedo_slot = ship_torpedo_2
+					fixed_ship_engine_slot = light_ship_engine_2
+
+					front_1_custom_slot = ship_anti_air_1
+					mid_1_custom_slot = ship_torpedo_2
+					rear_1_custom_slot = ship_depth_charge_1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_tech = improved_depth_charges
+			}
+			create_equipment_variant = {
+				name = "Cheetah Class"
+				type = ship_hull_light_3
+				role_icon_index = 2
+				modules = {
+					fixed_ship_battery_slot = ship_light_battery_2
+					fixed_ship_anti_air_slot = ship_anti_air_2
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+					fixed_ship_radar_slot = ship_sonar_1
+					fixed_ship_torpedo_slot = ship_torpedo_2
+					fixed_ship_engine_slot = light_ship_engine_2
+
+					front_1_custom_slot = ship_anti_air_1
+					mid_1_custom_slot = ship_torpedo_2
+					rear_1_custom_slot = ship_depth_charge_2
+				}
+			}
+		}
+		else = {
+			create_equipment_variant = {
+				name = "Cheetah Class"
+				type = ship_hull_light_3
+				role_icon_index = 2
+				modules = {
+					fixed_ship_battery_slot = ship_light_battery_2
+					fixed_ship_anti_air_slot = ship_anti_air_2
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+					fixed_ship_radar_slot = ship_sonar_1
+					fixed_ship_torpedo_slot = ship_torpedo_2
+					fixed_ship_engine_slot = light_ship_engine_2
+
+					front_1_custom_slot = ship_anti_air_1
+					mid_1_custom_slot = ship_torpedo_2
+					rear_1_custom_slot = ship_depth_charge_1
+				}
+			}
+		}
+		create_ship = { type = ship_hull_light_3 equipment_variant = "Cheetah Class" creator = FRA name = "Orleans" }
+		create_ship = { type = ship_hull_light_3 equipment_variant = "Cheetah Class" creator = FRA name = "Rouen" }
+		create_ship = { type = ship_hull_light_3 equipment_variant = "Cheetah Class" creator = FRA name = "Tours" }
+		create_ship = { type = ship_hull_light_3 equipment_variant = "Cheetah Class" creator = FRA name = "Brest" }
+		create_ship = { type = ship_hull_light_3 equipment_variant = "Cheetah Class" creator = FRA name = "Toulon" }
+		add_equipment_production = {
+			equipment = {
+				type = ship_hull_light_3
+				creator = FRA
+				version_name = "Cheetah Class"
+			}
+			requested_factories = 3
+			progress = 0.35
+			amount = 1
+		}
+		add_equipment_production = {
+			equipment = {
+				type = ship_hull_light_3
+				creator = FRA
+				version_name = "Cheetah Class"
+			}
+			requested_factories = 3
+			progress = 0.25
+			amount = 1
+		}
+	}
+	else = {
+		if = {
+			limit = { NOT = { has_tech = improved_destroyer } }
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = tooltip_add_tech
+					TECH = destroyer_3
+				}
+				set_technology = { improved_destroyer = 1 }
+			}
+		}
+
+		create_ship = { type = destroyer_3 equipment_variant = "Advanced Destroyer" creator = FRA name = "Orleans" }
+		create_ship = { type = destroyer_3 equipment_variant = "Advanced Destroyer" creator = FRA name = "Rouen" }
+		create_ship = { type = destroyer_3 equipment_variant = "Advanced Destroyer" creator = FRA name = "Tours" }
+		create_ship = { type = destroyer_3 equipment_variant = "Advanced Destroyer" creator = FRA name = "Brest" }
+		create_ship = { type = destroyer_3 equipment_variant = "Advanced Destroyer" creator = FRA name = "Toulon" }
+		add_equipment_production = {
+			equipment = {
+				type = destroyer_3
+				creator = FRA
+				version_name = "Advanced Destroyer"
+			}
+			requested_factories = 3
+			progress = 0.35
+			amount = 1
+		}
+		add_equipment_production = {
+			equipment = {
+				type = destroyer_3
+				creator = FRA
+				version_name = "Advanced Destroyer"
+			}
+			requested_factories = 3
+			progress = 0.25
+			amount = 1
+		}
+	}
+}
+
+FRA_neocolonialism_create_califonia = {
+	CAL = {
+		transfer_state = 386
+		transfer_state = 385
+		transfer_state = 378
+		transfer_state = 797
+		transfer_state = 829
+		transfer_state = 798
+		transfer_state = 1165
+		transfer_state = 379
+		transfer_state = 380
+		transfer_state = 377
+		transfer_state = 376
+		transfer_state = 1096
+		transfer_state = 1166
+		transfer_state = 1161
+		transfer_state = 833
+		transfer_state = 387
+		add_state_core = 386
+		add_state_core = 385
+		add_state_core = 378
+		add_state_core = 797
+		add_state_core = 829
+		add_state_core = 798
+		add_state_core = 1165
+		add_state_core = 379
+		add_state_core = 380
+		add_state_core = 377
+		add_state_core = 376
+		add_state_core = 1096
+		add_state_core = 1166
+		add_state_core = 1161
+		add_state_core = 833
+		add_state_core = 387
+
+		set_party_name = {
+			ideology = radical_socialist
+			long_name = NVN_authoritarian_democrat_party_long
+			name = NVN_authoritarian_democrat_party
+		}
+	}
+	puppet = CAL
+}
+
+FRA_neocolonialism_create_alaska = {
+	ALA = {
+		transfer_state = 463
+		add_state_core = 463
+		transfer_state = 473
+		transfer_state = 1332
+		add_state_core = 473
+		add_state_core = 1332
+		transfer_state = 740
+		add_state_core = 740
+		transfer_state = 471
+		add_state_core = 471
+		transfer_state = 472
+		add_state_core = 472
+	
+	set_party_name = {
+		ideology = radical_socialist
+		long_name = "Tlingit Council"
+		name = "Tlingit Council"
+	}
+	set_politics = {
+		ruling_party = radical_socialist
+		elections_allowed = no
+	}
+	puppet = ALA
+}
+	
+}
+
+FRA_neocolonialism_create_thirteen_colony = {
+	CSA = {
+		set_capital = { state = 465 }
+		set_politics = {
+			ruling_party = radical_socialist
+			election_frequency = 48
+			elections_allowed = no
+		}
+		add_state_core = 464
+		add_state_core = 357
+		transfer_state = 1330
+		transfer_state = 1331
+		add_state_core = 1330
+		add_state_core = 1331
+		add_state_core = 366
+		add_state_core = 1171
+		add_state_core = 1169
+		add_state_core = 365
+		add_state_core = 1170
+		add_state_core = 364
+		add_state_core = 363
+		add_state_core = 1155
+		add_state_core = 1160
+		add_state_core = 1158
+		add_state_core = 362
+		add_state_core = 1159
+		add_state_core = 361
+		add_state_core = 930
+		add_state_core = 360
+		add_state_core = 1162
+		add_state_core = 358
+		add_state_core = 359
+		add_state_core = 796
+		add_state_core = 931
+		add_state_core = 935
+		add_state_core = 932
+		add_state_core = 933
+		add_state_core = 934
+		add_state_core = 357
+		add_state_core = 465
+		add_state_core = 464
+		transfer_state = 464
+		transfer_state = 357
+		transfer_state = 366
+		transfer_state = 1171
+		transfer_state = 1169
+		transfer_state = 365
+		transfer_state = 1170
+		transfer_state = 364
+		transfer_state = 363
+		transfer_state = 1155
+		transfer_state = 1160
+		transfer_state = 1158
+		transfer_state = 362
+		transfer_state = 1159
+		transfer_state = 361
+		transfer_state = 930
+		transfer_state = 360
+		transfer_state = 1162
+		transfer_state = 358
+		transfer_state = 359
+		transfer_state = 796
+		transfer_state = 931
+		transfer_state = 935
+		transfer_state = 932
+		transfer_state = 933
+		transfer_state = 934
+		transfer_state = 357
+		transfer_state = 465
+		transfer_state = 464
+		transfer_state = 929
+	}
+	FRA = { puppet = CSA }
+}
+
+FRA_neocolonialism_create_nouvelle_france = {
+	every_state = {
+		limit = {
+			OR = {
+				is_core_of = USA
+				is_claimed_by = USA
+				is_core_of = COR
+				is_claimed_by = COR
+				is_core_of = CSA
+				is_claimed_by = CSA
+				is_core_of = TEX
+				is_claimed_by = TEX
+				is_core_of = WCC
+				is_claimed_by = WCC
+				is_core_of = CAL
+				is_claimed_by = CAL
+				is_core_of = CAN
+				is_core_of = NFL
+			}
+			is_owned_by = FRA
+		}
+		QUE = {
+			add_state_core = PREV
+			if = {
+				limit = { PREV = { is_owned_by = FRA } }
+				transfer_state = PREV
+			}
+		}
+	}
+	FRA = { puppet = QUE }
+	QUE = {
+		set_cosmetic_tag = GUA_newfrance
+		
+		set_party_name = {
+			ideology = radical_socialist
+			long_name = "新法兰西管理局"
+			name = "新法兰西管理局"
+		}
+	}
+	every_state = {
+		limit = { is_on_continent = north_america }
+		remove_claim_by = FRA
+	}
+}

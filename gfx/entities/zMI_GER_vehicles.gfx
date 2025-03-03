@@ -1,0 +1,56 @@
+
+objectTypes = {	
+
+	pdxmesh = {
+		name = "MI_GER_opel_motorized_1_mesh"
+		file = "gfx/models/units/vehicles/GER_motorized_01_opel.mesh"
+		
+		animation = { id = "idle"			type = "GER_motorized_01_idle_animation" }
+		animation = { id = "move"			type = "GER_motorized_01_move_animation" }
+	}
+
+	pdxmesh = {
+		name = "MI_GER_opel_motorized_2_mesh"
+		file = "gfx/models/units/vehicles/GER_motorized_02_opel.mesh"
+		
+		animation = { id = "idle"			type = "GER_motorized_01_idle_animation" }
+		animation = { id = "move"			type = "GER_motorized_01_move_animation" }
+	}
+	
+###################################
+### MECHANIZED - SDKFZ 251 BASE ###
+###################################
+
+	pdxmesh = {
+		name = "MI_GER_mechanized_1_mesh"
+		file = "gfx/models/units/vehicles/GER_mechanized_01_sdkfz251.mesh"
+		
+		animation = { id = "idle"			type = "GER_mechanized_01_idle_animation" }
+		animation = { id = "move"			type = "GER_mechanized_01_move_animation" }
+		animation = { id = "attack"			type = "GER_mechanized_01_attack_animation" }
+	}
+
+	pdxmesh = {
+		name = "MI_GER_mechanized_2_mesh"
+		file = "gfx/models/units/vehicles/GER_mechanized_02_sdkfz251.mesh"
+		
+		animation = { id = "idle"			type = "GER_mechanized_01_idle_animation" }
+		animation = { id = "move"			type = "GER_mechanized_01_move_animation" }
+		animation = { id = "attack"			type = "GER_mechanized_01_attack_animation" }
+	}
+	
+################################
+### MECHANIZED - KATZEN BASE ###
+################################
+
+	pdxmesh = {
+		name = "MI_GER_mechanized_3_mesh"
+		file = "gfx/models/units/vehicles/GER_mechanized_03_katzen.mesh"
+		
+		animation = { id = "idle"			type = "GER_light_armor_0_idle_animation" }
+		animation = { id = "move"			type = "GER_light_armor_0_moving_animation" }
+#		animation = { id = "attack"			type = "GER_light_armor_0_attack_animation" }
+			
+	}
+
+}

@@ -1,0 +1,120 @@
+leader_traits = {
+
+	FIN_athonism_pharaoh_trait = {
+		random = no
+		political_power_gain = 0.10
+		line_change_production_efficiency_factor = 0.10
+		stability_weekly = 0.001
+		drift_defence_factor = 0.2
+		conscription_factor = 0.10
+		offensive_war_stability_factor = 0.20
+	}
+	
+	mika_valtari_trait = {
+		stability_factor = -0.05
+		political_power_gain = 0.25
+		accelerationism_drift = 0.02
+		reactionism_drift = 0.02
+		random = no
+	}
+	
+	########################################
+	## ECONOMY MINISTER
+	########################################
+
+	imhotep_trait = {
+		consumer_goods_factor = -0.02
+		production_speed_buildings_factor = 0.01
+		industrial_capacity_factory = 0.025
+		production_factory_max_efficiency_factor = 0.025
+		political_power_gain = -0.15
+		random = no
+	}
+	
+	########################################
+	## CHIEF of ARMY
+	########################################
+
+	anhur_trait = {
+		conscription = 0.01
+		army_attack_factor = 0.05
+		army_org_factor = 0.05
+		experience_gain_army = 0.07
+		army_morale_factor = 0.05
+		political_power_gain = -0.1
+		random = no
+	}
+	
+	########################################
+	## CHIEF of NAVY
+	########################################
+
+	sebek_trait = {
+		experience_gain_navy = 0.07
+		production_speed_dockyard_factor = 0.05
+		navy_submarine_detection_factor = 0.05
+		navy_submarine_attack_factor = 0.05
+		navy_fuel_consumption_factor = -0.1
+		navy_capital_ship_attack_factor = 0.1
+		political_power_gain = -0.1
+		random = no
+	}
+	
+	########################################
+	## CHIEF of AIR
+	########################################
+
+	shu_trait = {
+		experience_gain_air = 0.07
+		air_ace_generation_chance_factor = 0.1
+		air_strategic_bomber_bombing_factor = 0.1
+		air_close_air_support_attack_factor = 0.05
+		army_bonus_air_superiority_factor = 0.1
+		political_power_gain = -0.1
+		random = no
+	}
+	
+	
+	########################################
+	## MINISTER OF INTERNAL
+	########################################
+
+	maat_trait = {
+		drift_defence_factor = 0.1
+		stability_factor = 0.1
+		monthly_population = 0.1
+		random = no
+	}
+	fin_faraoh = {
+		national_populist_drift = 0.03
+		justify_war_goal_time = -0.10
+		mobilization_speed = 0.05
+		ai_focus_aggressive_factor = 0.75
+		r
+		andom = no
+	}
+	GUA_NAP1 = {
+		random = no
+		war_support_weekly = 0.025
+		army_core_defence_factor = 0.05
+		army_core_attack_factor = 0.05
+	}
+	GUA_NAP2 = {
+		random = no
+		political_power_gain = 0.10
+		war_support_weekly = 0.1
+		army_attack_factor = 0.075
+		army_defence_factor = 0.075
+	}
+    GUA_NAP3 = {
+		random = no
+		stability_weekly = 0.025
+		political_power_gain = 0.10
+		production_speed_buildings_factor = 0.05
+		industrial_capacity_factory = 0.05
+		compliance_growth = 0.1
+	}
+	
+	
+	
+}

@@ -1,0 +1,6136 @@
+###########################
+# GEA Decisions
+###########################
+# By Gwener
+###########################
+GEA_decisions = {#德属东亚殖民地决议
+	GEA_tou_zi_di_fang = {#投资地方
+		icon = cash
+		visible = {
+			has_completed_focus = GEA_federalization_reform
+			check_variable = {
+				var = GEA_Progress_of_reform
+				value = 1
+				compare = less_than
+			}
+		}
+
+		cost = 75
+		days_remove = 50
+		days_re_enable = 120
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_tou_zi_di_fang"
+			add_to_variable = {
+				GEA_Progress_of_reform = 0.05
+			}
+			custom_effect_tooltip = GEA_reforming_colonial_institutions_tt
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	GEA_tui_xing_de_yi_zhi_wen_hua = {#推行德意志文化
+		icon = GEA_colonial_department
+		visible = {
+			has_completed_focus = GEA_german_states_model
+			check_variable = {
+				var = GEA_Progress_of_reform
+				value = 1
+				compare = less_than
+			}
+		}
+
+		cost = 30
+		days_remove = 30
+		days_re_enable = 90
+
+		modifier = {
+			stability_weekly = -0.005 
+			political_power_gain = 0.05
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_tui_xing_de_yi_zhi_wen_hua"
+			add_stability = 0.02
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.02
+			}
+			add_to_variable = {
+				GEA_Progress_of_reform = 0.05
+			}
+			custom_effect_tooltip = GEA_reforming_colonial_institutions_tt
+		}
+	}
+	GEA_de_shi_shou_xun = {#德式授勋
+		icon = police
+		visible = {
+			has_completed_focus = GEA_east_germany
+			check_variable = {
+				var = GEA_Progress_of_reform
+				value = 1
+				compare = less_than
+			}
+		}
+
+		cost = 30
+		days_remove = 45
+		days_re_enable = 100
+
+		modifier = {
+			stability_weekly = 0.005 
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_de_shi_shou_xun"
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.01
+			}
+			add_command_power = 30
+			add_to_variable = {
+				GEA_Progress_of_reform = 0.05
+			}
+			custom_effect_tooltip = GEA_reforming_colonial_institutions_tt
+		}
+	}
+	GEA_Integrated_tribe = {#整编部落
+		icon = king
+		visible = {
+			has_completed_focus = GEA_tribes_become_states
+			check_variable = {
+				var = GEA_Progress_of_reform
+				value = 1
+				compare = less_than
+			}
+		}
+
+		cost = 20
+		days_remove = 30
+		days_re_enable = 90
+
+		modifier = {
+			stability_weekly = 0.01 
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_Integrated_tribe"
+			increase_ruling_party_popularity_by_5 = yes
+			add_command_power = 25
+			add_political_power = 20
+			add_to_variable = {
+				GEA_Progress_of_reform = 0.05
+			}
+			custom_effect_tooltip = GEA_reforming_colonial_institutions_tt
+		}
+	}
+	GEA_long_luo_dang_di_hao_qiang = {#笼络地方豪强
+		icon = Citizen
+		visible = {
+			has_completed_focus = GEA_follow_reality
+			check_variable = {
+				var = GEA_Progress_of_reform
+				value = 1
+				compare = less_than
+			}
+		}
+
+		cost = 75
+		days_remove = 14
+		days_re_enable = 180
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_long_luo_dang_di_hao_qiang"
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.02
+			}
+			add_to_variable = {
+				GEA_Progress_of_reform = 0.075
+			}
+			custom_effect_tooltip = GEA_long_luo_dang_di_hao_qiang_tt
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_manpower = 500
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 200
+				producer = GEA
+			}
+		}
+	}
+	GEA_fu_yu_di_fang_quan_li = {#扩大地方权力
+		icon = generic_agreement
+
+		available = {
+			has_completed_focus = GEA_strengthen_local
+		}
+		visible = {
+			has_completed_focus = GEA_strengthen_local
+			check_variable = {
+				var = GEA_Progress_of_reform
+				value = 1
+				compare = less_than
+			}
+		}
+
+		cost = 30
+		days_remove = 14
+		days_re_enable = 120
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_fu_yu_di_fang_quan_li"
+			add_stability = 0.05
+			add_to_variable = {
+				GEA_Progress_of_reform = 0.1
+			}
+			custom_effect_tooltip = GEA_local_government_tt
+		}
+	}
+	GEA_she_li_di_dang_fa_gui = {#掌控地方法规
+		icon = decision_election
+		visible = {
+			OR = {
+				has_completed_focus = GEA_strengthen_local
+				has_completed_focus = GEA_strengthen_government
+			}
+			check_variable = {
+				var = GEA_Progress_of_reform
+				value = 1
+				compare = less_than
+			}
+		}
+
+		cost = 25
+		days_remove = 30
+		days_re_enable = 90
+
+		modifier = {
+			political_power_gain = 0.03
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_she_li_di_dang_fa_gui"
+			add_stability = 0.03
+			add_war_support = 0.03
+			increase_ruling_party_popularity_by_5 = yes
+			add_to_variable = {
+				GEA_Progress_of_reform = 0.05
+			}
+			custom_effect_tooltip = GEA_reforming_colonial_institutions_tt
+		}
+	}
+	GEA_shui_shou_ren_wu = {#调整地方税收要求
+		icon = give_cash
+		visible = {
+			OR = {
+				has_completed_focus = GEA_new_parliament
+				has_completed_focus = GEA_new_administrative_division
+			}
+			check_variable = {
+				var = GEA_Progress_of_reform
+				value = 1
+				compare = less_than
+			}
+		}
+		days_remove = 60
+		days_re_enable = 120
+
+		modifier = {
+			political_power_gain = 0.05
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_shui_shou_ren_wu"
+			add_political_power = 75
+			add_stability = -0.03
+			add_to_variable = {
+				GEA_Progress_of_reform = 0.075
+			}
+			custom_effect_tooltip = GEA_long_luo_dang_di_hao_qiang_tt
+		}
+	}
+	GEA_tui_jin_jing_ying = {#推进地方精英入政府
+		icon = generic_prepare_civil_war #没有去选图
+		visible = {
+			has_completed_focus = GEA_centralization_reform
+			check_variable = {
+				var = GEA_Progress_of_reform
+				value = 1
+				compare = less_than
+			}
+		}
+
+		cost = 30
+		days_remove = 28
+		days_re_enable = 90
+
+		modifier = {
+			stability_weekly = 0.005 
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_tui_jin_jing_ying"
+			add_stability = 0.05
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.05
+			}
+			add_to_variable = {
+				GEA_Progress_of_reform = 0.075
+			}
+			custom_effect_tooltip = GEA_long_luo_dang_di_hao_qiang_tt
+		}
+	}		
+	GEA_jian_she_ji_chu_she_shi = {#建设交通干线
+		icon = road
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+		}
+		visible = {
+			has_completed_focus = GEA_strengthen_ties
+			check_variable = {
+				var = GEA_Progress_of_reform
+				value = 1
+				compare = less_than
+			}
+		}
+		cost = 60
+		days_remove = 50
+		days_re_enable = 120
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_tou_zi_di_fang"
+			add_to_variable = {
+				GEA_Progress_of_reform = 0.1
+			}
+			custom_effect_tooltip = GEA_local_government_tt
+			random_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	GEA_da_sui_fan_bang = {#切割部藩
+		icon = boot
+		visible = {
+			OR = {
+				has_completed_focus = GEA_no_tribe
+				has_completed_focus = GEA_german_states_model
+			}
+			check_variable = {
+				var = GEA_Progress_of_reform
+				value = 1
+				compare = less_than
+			}
+		}
+
+		cost = 30
+		days_remove = 30
+		days_re_enable = 120
+
+		modifier = {
+			political_power_gain = -0.05
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_da_sui_fan_bang"
+			add_political_power = 60
+			add_manpower = -248
+			add_to_variable = {
+				GEA_Progress_of_reform = 0.10
+			}
+			custom_effect_tooltip = GEA_local_government_tt
+		}
+	}
+	GEA_Basic_industry_construction = {#基础工业建设
+		icon = factories
+		visible = {
+			has_completed_focus = GEA_start_of_urbanization
+			check_variable = {
+				var = GEA_Progress_of_reform
+				value = 1
+				compare = less_than
+			}
+		}
+
+		cost = 50
+		days_remove = 60
+		days_re_enable = 120
+
+		modifier = {
+			political_power_gain = -0.02
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_Basic_industry_construction"
+			random_list = { 
+				40 = { 				
+					random_owned_state = {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					}
+				} 
+  				30 = {					
+					random_owned_state = {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				} 
+  				30 = { 					
+					random_owned_state = {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = dockyard
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+			}
+			add_to_variable = {GEA_Progress_of_reform = 0.10}							
+			custom_effect_tooltip = GEA_local_government_tt
+		}
+	}
+	GEA_Local_garrison_troops = {#地方守备部队
+		icon = martial_law
+		visible = {
+			has_completed_focus = GEA_the_local_garrison
+			check_variable = {
+				var = GEA_Progress_of_reform
+				value = 1
+				compare = less_than
+			}
+		}
+
+		cost = 80
+		days_remove = 120
+		fire_only_once = yes
+
+		modifier = {
+			political_power_gain = -0.01
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_Local_garrison_troops"
+			add_manpower = -1200
+			add_to_variable = {
+				GEA_Progress_of_reform = 0.10
+			}
+			custom_effect_tooltip = GEA_Local_garrison_troops_tt
+		}
+		remove_effect = {
+			set_country_flag = GEA_Activate_conscription_of_local_forces
+		}
+	}
+	GEA_333_militia = {#婆罗洲民兵
+		icon = martial_law
+		visible = {
+			has_war = yes
+			has_country_flag = GEA_Activate_conscription_of_local_forces
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 30
+
+		modifier = {
+			political_power_gain = -0.01
+		}
+		custom_cost_text = GEA_we_need_soldier_cost_tt
+		custom_cost_trigger = {
+			command_power > 25 
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_333_militia"
+			add_command_power = -25
+			333 = {
+				create_unit = {
+					division = "division_template = \"Ostasiatische Miliztruppe\" start_experience_factor = 2"
+					owner = GEA
+				}
+				create_unit = {
+					division = "division_template = \"Ostasiatische Miliztruppe\" start_experience_factor = 2"
+					owner = GEA
+				}
+				create_unit = {
+					division = "division_template = \"Ostasiatische Miliztruppe\" start_experience_factor = 1"
+					owner = GEA
+				}
+			}
+			custom_effect_tooltip = GEA_333_militia_tt
+		}
+	}
+	GEA_828_militia = {#沙巴民兵
+		icon = martial_law
+		visible = {
+			has_war = yes
+			has_country_flag = GEA_Activate_conscription_of_local_forces
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 30
+
+		modifier = {
+			political_power_gain = -0.01
+		}
+		custom_cost_text = GEA_we_need_soldier_cost_tt
+		custom_cost_trigger = {
+			command_power > 25 
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_828_militia"
+			add_command_power = -25
+			828 = {
+				create_unit = {
+					division = "division_template = \"Ostasiatische Miliztruppe\" start_experience_factor = 2"
+					owner = GEA
+				}
+				create_unit = {
+					division = "division_template = \"Ostasiatische Miliztruppe\" start_experience_factor = 2"
+					owner = GEA
+				}
+			}
+			custom_effect_tooltip = GEA_828_militia_tt
+		}
+	}
+	GEA_670_militia = {#老挝民兵
+		icon = martial_law
+		visible = {
+			has_war = yes
+			has_country_flag = GEA_Activate_conscription_of_local_forces
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 30
+
+		modifier = {
+			political_power_gain = -0.01
+		}
+		custom_cost_text = GEA_we_need_soldier_cost_tt
+		custom_cost_trigger = {
+			command_power > 25 
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_670_militia"
+			add_command_power = -25
+			670 = {
+				create_unit = {
+					division = "division_template = \"Ostasiatische Miliztruppe\" start_experience_factor = 2"
+					owner = GEA
+				}
+				create_unit = {
+					division = "division_template = \"Ostasiatische Miliztruppe\" start_experience_factor = 2"
+					owner = GEA
+				}
+			}
+			custom_effect_tooltip = GEA_670_militia_tt
+		}
+	}
+	GEA_827_militia = {#安南民兵
+		icon = martial_law
+		visible = {
+			has_war = yes
+			has_country_flag = GEA_Activate_conscription_of_local_forces
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 30
+
+		modifier = {
+			political_power_gain = -0.01
+		}
+		custom_cost_text = GEA_we_need_soldier_cost_tt
+		custom_cost_trigger = {
+			command_power > 25 
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_827_militia"
+			add_command_power = -25
+			827 = {
+				create_unit = {
+					division = "division_template = \"Ostasiatische Miliztruppe\" start_experience_factor = 2"
+					owner = GEA
+				}
+				create_unit = {
+					division = "division_template = \"Ostasiatische Miliztruppe\" start_experience_factor = 2"
+					owner = GEA
+				}
+				create_unit = {
+					division = "division_template = \"Ostasiatische Miliztruppe\" start_experience_factor = 2"
+					owner = GEA
+				}
+			}
+			custom_effect_tooltip = GEA_827_militia_tt
+		}
+	}
+}
+
+GEA_indochina_decisions = {#印度支那决议
+	GEA_Integrate_inc = {
+		icon = eng_trade_unions_demand
+		visible = {
+			GEA = {
+				OR = {
+					owns_state = 857
+					owns_state = 671
+					owns_state = 827
+					owns_state = 670
+					owns_state = 826
+					owns_state = 286
+					owns_state = 856
+				}
+			}
+			has_completed_focus = GEA_Revenge_for_Indochina
+		}
+		available = {
+			AND = {
+				owns_state = 857
+				owns_state = 671
+				owns_state = 827
+				owns_state = 670
+				owns_state = 826
+				owns_state = 286
+				owns_state = 856
+			}
+			OR = {
+				857 = {
+					compliance > 75
+				}
+				671 = {
+					compliance > 75
+				}
+				827 = {
+					compliance > 75
+				}
+				670 = {
+					compliance > 75
+				}
+				826 = {
+					compliance > 75
+				}
+				286 = {
+					compliance > 75
+				}
+				856 = {
+					compliance > 75
+				}
+			}
+		}
+		days_remove = 180
+		fire_only_once = yes
+		ai_will_do = { factor = 1000 }
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Integrate_inc target: [From.GetName]"
+			set_country_flag = GEA_Total_suppression_of_Indochina
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					OR = {
+						state = 857
+						state = 671
+						state = 827
+						state = 670
+						state = 826
+						state = 286
+						state = 856
+					}
+				}
+				add_core_of = GEA	
+			}
+		}
+	}
+	GEA_indochina_martial_law = {#颁布戒严令
+		icon = martial_law
+		allowed = { original_tag = GEA }
+		fire_only_once = yes
+		visible = {
+			GEA = {
+				owns_state = 286
+				286 = {
+					NOT = {
+						has_dynamic_modifier = { modifier = GEA_martial_law_modifier } 
+					}
+				}
+			}
+		}	
+		available = {
+			OR = {
+				custom_trigger_tooltip ={
+					tooltip = GEA_indochina_martial_law_trigger_tt
+					check_variable = { GEA_socialist_power > 75 }
+					check_variable = { GEA_nationalist_power > 75 }
+				} 
+				has_country_flag = GEA_do_martial_law
+			}
+		}
+		highlight_states = {
+			highlight_states_trigger = {
+				OR = {
+					state = 286
+				}
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				has_country_flag = {
+					flag = GEA_Indochinese_Anger
+					value > 3
+				}
+				factor = 100
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_indochina_martial_law"
+			286 = { 
+				add_dynamic_modifier = { modifier = GEA_martial_law_modifier } 
+			}
+			add_stability = 0.05
+			set_country_flag = GEA_indochina_martial_law
+			add_to_variable = { GEA_socialist_power = -5 }  
+			add_to_variable = { GEA_nationalist_power = -5 }  
+			add_to_variable = { GEA_indochina_stab = -2 }  
+			add_to_variable = { GEA_indochina_control = 2 }  
+			custom_effect_tooltip = GEA_indochina_martial_law_tt
+			set_country_flag = GEA_martial_law_modifier_DONE			
+		}
+	}
+	GEA_286_martial_law = {#颁布西贡戒严令
+		icon = iron_fist
+		allowed = { original_tag = GEA }
+		visible = {
+			GEA = {
+				has_country_flag = GEA_martial_law_modifier_DONE	
+				owns_state = 286
+				856 = {
+					NOT = {
+						has_dynamic_modifier = { modifier = GEA_martial_law_modifier } 
+					}
+				}
+			}
+		}	
+		highlight_states = {
+			highlight_state_targets = {
+				state = 286 
+			}
+		}
+		on_map_mode = map_only
+		ai_will_do = {
+			factor = 20
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_286_martial_law"
+			856 = { 
+				add_dynamic_modifier = { modifier = GEA_martial_law_modifier } 
+			}
+			add_stability = 0.01		
+		}
+	}	
+	GEA_856_martial_law = {#颁布湄公河三角洲戒严令
+		icon = iron_fist
+		allowed = { original_tag = GEA }
+		visible = {
+			GEA = {
+				has_country_flag = GEA_martial_law_modifier_DONE	
+				owns_state = 856
+				856 = {
+					NOT = {
+						has_dynamic_modifier = { modifier = GEA_martial_law_modifier } 
+					}
+				}
+			}
+		}	
+		highlight_states = {
+			highlight_state_targets = {
+				state = 856
+			}
+		}
+		on_map_mode = map_only
+		ai_will_do = {
+			factor = 20
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_856_martial_law"
+			856 = { 
+				add_dynamic_modifier = { modifier = GEA_martial_law_modifier } 
+			}
+			add_stability = 0.01		
+		}
+	}	
+	GEA_826_martial_law = {#颁布上丁戒严令
+		icon = iron_fist
+		allowed = { original_tag = GEA }
+		visible = {
+			GEA = {
+				has_country_flag = GEA_martial_law_modifier_DONE	
+				owns_state = 826
+				826 = {
+					NOT = {
+						has_dynamic_modifier = { modifier = GEA_martial_law_modifier } 
+					}
+				}
+			}
+		}	
+		highlight_states = {
+			highlight_state_targets = {
+				state = 826
+			}
+		}
+		days_remove = 3
+		on_map_mode = map_only
+		ai_will_do = {
+			factor = 20
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_826_martial_law"
+			826 = { 
+				add_dynamic_modifier = { modifier = GEA_martial_law_modifier } 
+			}
+			add_stability = 0.01		
+		}
+	}	
+	GEA_827_martial_law = {#颁布安南戒严令
+		icon = iron_fist
+		allowed = { original_tag = GEA }
+		visible = {
+			GEA = {
+				has_country_flag = GEA_martial_law_modifier_DONE	
+				owns_state = 827
+				827 = {
+					NOT = {
+						has_dynamic_modifier = { modifier = GEA_martial_law_modifier } 
+					}
+				}
+			}
+		}	
+		highlight_states = {
+			highlight_state_targets = {
+				state = 827
+			}
+		}
+		days_remove = 3
+		on_map_mode = map_only
+		ai_will_do = {
+			factor = 20
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_827_martial_law"
+			827 = { 
+				add_dynamic_modifier = { modifier = GEA_martial_law_modifier } 
+			}
+			add_stability = 0.01		
+		}
+	}
+	GEA_670_martial_law = {#颁布老挝戒严令
+		icon = iron_fist
+		allowed = { original_tag = GEA }
+		visible = {
+			GEA = {
+				has_country_flag = GEA_martial_law_modifier_DONE	
+				owns_state = 670
+				670 = {
+					NOT = {
+						has_dynamic_modifier = { modifier = GEA_martial_law_modifier } 
+					}
+				}
+			}
+		}	
+		highlight_states = {
+			highlight_state_targets = {
+				state = 670
+			}
+		}
+		days_remove = 3
+		ai_will_do = {
+			factor = 20
+		}
+		on_map_mode = map_only
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_670_martial_law"
+			670 = { 
+				add_dynamic_modifier = { modifier = GEA_martial_law_modifier } 
+			}
+			add_stability = 0.01		
+		}
+	}
+	GEA_671_martial_law = {#颁布东京戒严令
+		icon = iron_fist
+		allowed = { original_tag = GEA }
+		visible = {
+			GEA = {
+				has_country_flag = GEA_martial_law_modifier_DONE	
+				owns_state = 671
+				671 = {
+					NOT = {
+						has_dynamic_modifier = { modifier = GEA_martial_law_modifier } 
+					}
+				}
+			}
+		}	
+		highlight_states = {
+			highlight_state_targets = {
+				state = 671
+			}
+		}
+		days_remove = 3
+		on_map_mode = map_only
+		ai_will_do = {
+			factor = 20
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_671_martial_law"
+			671 = { 
+				add_dynamic_modifier = { modifier = GEA_martial_law_modifier } 
+			}
+			add_stability = 0.01		
+		}
+	}	
+	GEA_857_martial_law = {#颁布东北戒严令
+		icon = iron_fist
+		allowed = { original_tag = GEA }
+		visible = {
+			GEA = {
+				has_country_flag = GEA_martial_law_modifier_DONE	
+				owns_state = 857
+				857 = {
+					NOT = {
+						has_dynamic_modifier = { modifier = GEA_martial_law_modifier } 
+					}
+				}
+			}
+		}	
+		highlight_states = {
+			highlight_state_targets = {
+				state = 857
+			}
+		}
+		days_remove = 3
+		on_map_mode = map_only
+		ai_will_do = {
+			factor = 20
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_857_martial_law"
+			857 = { 
+				add_dynamic_modifier = { modifier = GEA_martial_law_modifier } 
+			}
+			add_stability = 0.01		
+		}
+	}		
+	GEA_Make_concessions_to_proletarians = {#对工农让步
+		icon = eng_trade_unions_support
+		allowed = { original_tag = GEA }
+		days_remove = 60
+		days_re_enable = 45
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				check_variable = { GEA_nationalist_power > 20 }
+				factor = 20
+			}
+			modifier = {
+				check_variable = { GEA_nationalist_power > 50 }
+				factor = 50
+			}
+			modifier = {
+				check_variable = { GEA_nationalist_power > 70 }
+				factor = 100
+			}
+		}
+		modifier = {
+			syndicalist_drift = 0.01
+			radical_socialist_drift = 0.01
+			political_power_gain = -0.01	
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_Make_concessions_to_proletarians"
+			add_popularity = {
+				ideology = syndicalist
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = radical_socialist
+				popularity = 0.05
+			}
+			add_to_variable = { GEA_indochina_stab = 1 } 
+			add_to_variable = { GEA_socialist_power = -2 }   
+			add_political_power = -30
+			custom_effect_tooltip = GEA_Make_concessions_to_proletarians_tt
+		}
+	}
+	GEA_Support_local_national_bourgeoisie = {#支持本地民族资产阶级
+		icon = Capitalist
+		cost = 35
+		allowed = { original_tag = GEA }
+		visible = {
+			has_completed_focus = GEA_Josias
+		}
+		days_remove = 60
+		days_re_enable = 120
+		ai_will_do = {
+			factor = 80
+		}
+		modifier = {
+			political_power_gain = -0.5
+			production_speed_industrial_complex_factor = 0.05
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_Make_concessions_to_proletarians"
+			add_to_variable = { GEA_indochina_stab = 1 }  
+			custom_effect_tooltip = GEA_Make_concessions_to_proletarians1_tt
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Support_local_national_bourgeoisie"
+			add_popularity = {
+				ideology = market_liberal
+				popularity = 0.03
+			}
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_to_variable = { GEA_nationalist_power = -5 }   
+			custom_effect_tooltip = GEA_Support_local_national_bourgeoisie_tt
+		}
+	}
+	GEA_we_need_soldier = {#加大征召力度
+		icon = generic_military
+		allowed = { original_tag = GEA }
+		days_remove = 120
+		days_re_enable = 180
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				has_manpower < 500000
+				factor = 30
+			}
+			modifier = {
+				has_manpower < 200000
+				factor = 80
+			}
+		}
+		custom_cost_text = GEA_we_need_soldier_cost_tt
+		custom_cost_trigger = {
+			command_power > 25 
+		}
+		modifier = {
+			political_power_gain = -0.01
+			training_time_army_factor = -0.05
+			conscription_factor = 0.05	
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_we_need_soldier"
+			add_manpower = 20000
+			add_command_power = -25
+			add_to_variable = { GEA_indochina_stab = -1 }  
+			add_to_variable = { GEA_indochina_control = 2 }
+			add_to_variable = { GEA_socialist_power = 10 }   
+			custom_effect_tooltip = GEA_we_need_soldier_tt
+		}
+	}
+	GEA_Develop_military_in_village = {#在乡村发展军警
+		icon = police
+		allowed = { original_tag = GEA }
+		days_remove = 30
+		days_re_enable = 90
+		ai_will_do = {
+			factor = 55
+		}
+		custom_cost_text = 200MP_400RIFLE
+		custom_cost_trigger = {
+			has_manpower > 200
+			has_equipment = { infantry_equipment > 400 }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_Develop_military_in_village"
+			add_manpower = -200
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -400
+				producer = GEA
+			}
+			add_to_variable = { GEA_indochina_control = 1 }
+			add_to_variable = { GEA_socialist_power = -5 }   
+			custom_effect_tooltip = GEA_Develop_military_in_village_tt
+		}
+	}
+	GEA_Killing_Viet_Cong = {#捕杀越共
+		icon = hand_grab
+		allowed = { original_tag = GEA }
+		days_remove = 120
+		days_re_enable = 180
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				has_country_flag = GEA_Heye_Appointed
+				factor = 100
+			}
+		}
+		custom_cost_text = 1000MP_1000RIFLE
+		custom_cost_trigger = {
+			has_manpower > 1000
+			has_equipment = { infantry_equipment > 1000 }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_Killing_Viet_Cong"
+			add_manpower = -1000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+				producer = GEA
+			}
+			add_to_variable = { GEA_indochina_stab = -1 }
+			add_to_variable = { GEA_indochina_control = 3 }
+			add_to_variable = { GEA_socialist_power = -15 }   
+			custom_effect_tooltip = GEA_Killing_Viet_Cong_tt
+		}
+	}
+	GEA_Lower_assembly = {#设立下级议会
+		icon = generic_flags
+		allowed = { original_tag = GEA }
+		cost = 50
+		available = {                           
+			custom_trigger_tooltip = {
+				tooltip = GEA_indochina_stab_has_1_or_less
+				check_variable = { GEA_indochina_stab < 2 }
+			}
+		}
+		days_remove = 30
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				has_country_flag = GEA_Mucke_Appointed
+				factor = 100
+			}
+			modifier = {
+				has_country_flag = GEA_Pyrmont_Appointed
+				factor = 50
+			}
+		}
+		modifier = {
+			political_power_gain = -0.15
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_Lower_assembly"
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.02
+			}
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = market_liberal
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.02
+			}
+			add_to_variable = { GEA_indochina_stab = 4 }  
+			add_to_variable = { GEA_indochina_control = -1 }
+			add_to_variable = { GEA_socialist_power = -5 }  
+			add_to_variable = { GEA_nationalist_power = -10 } 
+			custom_effect_tooltip = GEA_Lower_assembly_tt
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Lower_assembly"
+			add_stability = 0.1		
+		}
+	}
+	GEA_Abolish_ethnic_hierarchies = {#取消民族等级划分
+		icon = generic_agreement
+		allowed = { original_tag = GEA }
+		cost = 25
+		available = {                           
+			custom_trigger_tooltip = {
+				tooltip = GEA_indochina_stab_has_3_or_more
+				check_variable = { GEA_indochina_stab > 2 }
+			}
+		}
+		days_remove = 7
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				has_country_flag = GEA_Mucke_Appointed
+				factor = 100
+			}
+			modifier = {
+				has_country_flag = GEA_Pyrmont_Appointed
+				factor = 80
+			}
+		}
+		modifier = {
+			political_power_gain = -1
+			war_support_weekly = -0.01
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_Abolish_ethnic_hierarchies"
+			add_to_variable = { GEA_indochina_stab = 2 }  
+			add_to_variable = { GEA_indochina_control = 1 }
+			custom_effect_tooltip = GEA_Abolish_ethnic_hierarchies_tt
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Abolish_ethnic_hierarchies"
+			add_to_variable = { GEA_nationalist_power = -10 } 
+			add_stability = 0.05	
+		}
+	}
+	GEA_Expand_market_for_agricultural_products = {#为印支农产品打开销路
+		icon = generic_agriculture
+		allowed = { original_tag = GEA }
+		cost = 30
+		days_remove = 90
+		days_re_enable = 90
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				has_country_flag = GEA_Pyrmont_Appointed
+				factor = 110
+			}
+		}
+		modifier = {
+			political_power_gain = -0.5
+			min_export = 0.1
+			consumer_goods_factor = 0.05
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_Abolish_ethnic_hierarchies"
+			add_to_variable = { GEA_indochina_stab = 1 }  
+			custom_effect_tooltip = GEA_Make_concessions_to_proletarians_tt
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Abolish_ethnic_hierarchies"
+			add_stability = 0.02	
+		}
+	}
+	GEA_lower_anger = {#安抚印支愤怒
+		icon = hand_palm_down
+		allowed = { original_tag = GEA }
+		cost = 10
+		available = {                           
+			custom_trigger_tooltip = {
+				tooltip = GEA_indochina_stab_has_3_or_more
+				check_variable = { GEA_indochina_stab > 2 }
+			}
+		}
+		days_remove = 14
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_country_flag = GEA_Heye_Appointed
+				factor = 0
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_lower_anger"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_lower_anger"
+			add_to_variable = { GEA_socialist_power = -5 } 
+			custom_effect_tooltip = GEA_lower_anger_tt	
+		}
+	}
+	GEA_lower_anger1 = {#安抚印支愤怒
+		icon = hand_palm_down
+		allowed = { original_tag = GEA }
+		cost = 10
+		visible = {
+			check_variable = { GEA_indochina_stab > 6 }
+		}
+		available = {                           
+			custom_trigger_tooltip = {
+				tooltip = GEA_indochina_stab_has_7_or_more
+				check_variable = { GEA_indochina_stab > 6 }
+			}
+		}
+		days_remove = 14
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_country_flag = GEA_Heye_Appointed
+				factor = 0
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_lower_anger1"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_lower_anger1"
+			add_to_variable = { GEA_socialist_power = -10 } 
+			custom_effect_tooltip = GEA_lower_anger_tt1	
+		}
+	}
+	GEA_lower_anger2 = {#安抚印支愤怒
+		icon = hand_palm_down
+		allowed = { original_tag = GEA }
+		cost = 10
+		visible = {
+			check_variable = { GEA_indochina_stab > 9 }
+		}
+		available = {                           
+			custom_trigger_tooltip = {
+				tooltip = GEA_indochina_stab_has_10_or_more
+				check_variable = { GEA_indochina_stab > 9 }
+			}
+		}
+		days_remove = 14
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_country_flag = GEA_Heye_Appointed
+				factor = 0
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_lower_anger2"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_lower_anger2"
+			add_to_variable = { GEA_socialist_power = -20 } 
+			custom_effect_tooltip = GEA_lower_anger_tt2
+		}
+	}
+	GEA_671_bunker = {#强化东京防御
+		icon = fortress
+		allowed = { original_tag = GEA }
+		cost = 50
+		available = {
+			has_equipment = { infantry_equipment > 1000 }
+		}
+		visible = {
+			GEA = {
+				owns_state = 671
+			}
+		}	
+		days_remove = 30
+		days_re_enable = 720
+		ai_will_do = {
+			factor = 50
+		}
+		modifier = {
+			political_power_gain = -0.05
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_671_bunker"
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+				producer = GEA
+			}
+			add_to_variable = { GEA_indochina_control = 2 }
+			add_to_variable = { GEA_socialist_power = 5 } 
+			custom_effect_tooltip = GEA_671_bunker_tt
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_671_bunker"
+			671 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 4119
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker 
+					level = 2
+					province = 4075
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker 
+					level = 2
+					province = 10129
+					instant_build = yes
+				}
+			}
+		}
+	}
+	GEA_Generative_militia = {#在西贡征召临时民兵
+		icon = soldierly_discipline
+		allowed = { original_tag = GEA }
+		visible = {
+			owns_state = 286
+			check_variable = { GEA_indochina_control > 5 }
+		}
+		available = {  
+			owns_state = 286                               
+			custom_trigger_tooltip = {
+				tooltip = GEA_indochina_control_has_8_or_more
+				check_variable = { GEA_indochina_control > 7 }
+			}
+			has_war = yes
+			NOT = { has_country_flag = GEA_has_called_up_militia }
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 286
+			}
+		}
+		days_remove = 14
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 80
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_Generative_militia"
+			add_war_support = 0.05
+			set_country_flag = GEA_has_called_up_militia
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Generative_militia"
+			custom_effect_tooltip = GEA_Generative_militia_tt
+			hidden_effect = {
+			286 = {
+				create_unit = {
+					division = "division_template = \"Ostasiatische Miliztruppe\" start_experience_factor = 1"
+					owner = GEA
+				}
+				create_unit = {
+					division = "division_template = \"Ostasiatische Miliztruppe\" start_experience_factor = 1"
+					owner = GEA
+				}
+				create_unit = {
+					division = "division_template = \"Ostasiatische Miliztruppe\" start_experience_factor = 1"
+					owner = GEA
+				}
+				}
+			}	
+			clr_country_flag = GEA_has_called_up_militia
+		}
+	}	
+	GEA_Generative_militia1 = {#在东京征召临时民兵
+		icon = soldierly_discipline
+		allowed = { original_tag = GEA }
+		visible = {
+			owns_state = 671
+			check_variable = { GEA_indochina_control > 5 }
+		}
+		available = {  
+			owns_state = 671                               
+			custom_trigger_tooltip = {
+				tooltip = GEA_indochina_control_has_8_or_more
+				check_variable = { GEA_indochina_control > 7 }
+			}
+			has_war = yes
+			NOT = { has_country_flag = GEA_has_called_up_militia }
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 671
+			}
+		}
+		days_remove = 14
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 80
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_Generative_militia1"
+			add_war_support = 0.05
+			set_country_flag = GEA_has_called_up_militia
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Generative_militia1"
+			custom_effect_tooltip = GEA_Generative_militia1_tt
+			hidden_effect = {
+			671 = {
+				create_unit = {
+					division = "division_template = \"Ostasiatische Miliztruppe\" start_experience_factor = 1"
+					owner = GEA
+				}
+				create_unit = {
+					division = "division_template = \"Ostasiatische Miliztruppe\" start_experience_factor = 1"
+					owner = GEA
+				}
+				create_unit = {
+					division = "division_template = \"Ostasiatische Miliztruppe\" start_experience_factor = 1"
+					owner = GEA
+				}
+			}}
+			clr_country_flag = GEA_has_called_up_militia
+		}
+	}
+	GEA_Generative_militia2 = {#在东北征召临时民兵
+		icon = soldierly_discipline
+		allowed = { original_tag = GEA }
+		visible = {
+			owns_state = 857
+			check_variable = { GEA_indochina_control > 5 }
+		}
+		available = {    
+			owns_state = 857                       
+			custom_trigger_tooltip = {
+				tooltip = GEA_indochina_control_has_8_or_more
+				check_variable = { GEA_indochina_control > 7 }
+			}
+			has_war = yes
+			NOT = { has_country_flag = GEA_has_called_up_militia }
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 857
+			}
+		}
+		days_remove = 14
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 80
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_Generative_militia2"
+			add_war_support = 0.05
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Generative_militia2"
+			custom_effect_tooltip = GEA_Generative_militia2_tt
+			hidden_effect = {
+			857 = {
+				create_unit = {
+					division = "division_template = \"Ostasiatische Miliztruppe\" start_experience_factor = 1"
+					owner = GEA
+				}
+				create_unit = {
+					division = "division_template = \"Ostasiatische Miliztruppe\" start_experience_factor = 1"
+					owner = GEA
+				}
+				create_unit = {
+					division = "division_template = \"Ostasiatische Miliztruppe\" start_experience_factor = 1"
+					owner = GEA
+				}
+			}}
+		}
+	}	
+	GEA_Generative_militia3 = {#在东京征召正规军
+		icon = soldierly_discipline
+		allowed = { original_tag = GEA }
+		visible = {
+			owns_state = 671
+			check_variable = { GEA_indochina_control > 5 }
+		}
+		available = {    
+			owns_state = 671                       
+			custom_trigger_tooltip = {
+				tooltip = GEA_indochina_control_has_10
+				check_variable = { GEA_indochina_control > 9 }
+			}
+			has_war = yes
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 671
+			}
+		}
+		days_remove = 14
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 200
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_Generative_militia2"
+			add_war_support = 0.1
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Generative_militia2"
+			division_template = {
+				name = "Wie infanterie"
+				division_names_group = GEA_INF_01
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 2 y = 0 }
+					infantry = { x = 2 y = 1 }
+					infantry = { x = 2 y = 2 }
+					artillery_brigade = { x = 3 y = 0}
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+					artillery = { x = 0 y = 1 }
+					recon = { x = 0 y = 2 }
+				}
+			}
+			custom_effect_tooltip = GEA_Generative_militia3_tt
+			hidden_effect = {
+				671 = {
+					create_unit = {
+						division = "division_template = \"Wie infanterie\" start_experience_factor = 3"
+						owner = GEA
+					}
+					create_unit = {
+						division = "division_template = \"Wie infanterie\" start_experience_factor = 3"
+						owner = GEA
+					}
+				}
+			}
+		}
+	}
+	GEA_cancel_856_martial_law = {#撤销湄公河三角洲戒严令
+		icon = iron_fist
+		allowed = { original_tag = GEA }
+		visible = {
+			GEA = {
+				has_country_flag = GEA_martial_law_modifier_DONE	
+				owns_state = 856
+				856 = {
+					has_dynamic_modifier = { modifier = GEA_martial_law_modifier } 
+				}
+			}
+		}	
+		highlight_states = {
+			highlight_state_targets = {
+				state = 856
+			}
+		}
+		on_map_mode = map_only
+		ai_will_do = {
+			factor = 20
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_cancel_856_martial_law"
+			856 = { 
+				remove_dynamic_modifier = { modifier = GEA_martial_law_modifier } 
+			}
+			add_stability = -0.01		
+		}
+	}	
+	GEA_cancel_826_martial_law = {#撤销上丁戒严令
+		icon = iron_fist
+		allowed = { original_tag = GEA }
+		visible = {
+			GEA = {
+				has_country_flag = GEA_martial_law_modifier_DONE	
+				owns_state = 826
+				826 = {
+					has_dynamic_modifier = { modifier = GEA_martial_law_modifier } 
+				}
+			}
+		}	
+		highlight_states = {
+			highlight_state_targets = {
+				state = 826
+			}
+		}
+		days_remove = 3
+		on_map_mode = map_only
+		ai_will_do = {
+			factor = 20
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_cancel_826_martial_law"
+			826 = { 
+				remove_dynamic_modifier = { modifier = GEA_martial_law_modifier } 
+			}
+			add_stability = -0.01		
+		}
+	}	
+	GEA_cancel_827_martial_law = {#撤销安南戒严令
+		icon = iron_fist
+		allowed = { original_tag = GEA }
+		visible = {
+			GEA = {
+				has_country_flag = GEA_martial_law_modifier_DONE	
+				owns_state = 827
+				827 = {
+					has_dynamic_modifier = { modifier = GEA_martial_law_modifier } 
+				}
+			}
+		}	
+		highlight_states = {
+			highlight_state_targets = {
+				state = 827
+			}
+		}
+		days_remove = 3
+		on_map_mode = map_only
+		ai_will_do = {
+			factor = 20
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_cancel_827_martial_law"
+			827 = { 
+				remove_dynamic_modifier = { modifier = GEA_martial_law_modifier } 
+			}
+			add_stability = -0.01		
+		}
+	}
+	GEA_cancel_670_martial_law = {#撤销老挝戒严令
+		icon = iron_fist
+		allowed = { original_tag = GEA }
+		visible = {
+			GEA = {
+				has_country_flag = GEA_martial_law_modifier_DONE	
+				owns_state = 670
+				670 = {
+					has_dynamic_modifier = { modifier = GEA_martial_law_modifier } 
+				}
+			}
+		}	
+		highlight_states = {
+			highlight_state_targets = {
+				state = 670
+			}
+		}
+		days_remove = 3
+		ai_will_do = {
+			factor = 20
+		}
+		on_map_mode = map_only
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_cancel_670_martial_law"
+			670 = { 
+				remove_dynamic_modifier = { modifier = GEA_martial_law_modifier } 
+			}
+			add_stability = -0.01		
+		}
+	}
+	GEA_cancel_671_martial_law = {#撤销东京戒严令
+		icon = iron_fist
+		allowed = { original_tag = GEA }
+		visible = {
+			GEA = {
+				has_country_flag = GEA_martial_law_modifier_DONE	
+				owns_state = 671
+				671 = {
+					has_dynamic_modifier = { modifier = GEA_martial_law_modifier } 
+				}
+			}
+		}	
+		highlight_states = {
+			highlight_state_targets = {
+				state = 671
+			}
+		}
+		days_remove = 3
+		on_map_mode = map_only
+		ai_will_do = {
+			factor = 20
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_cancel_671_martial_law"
+			671 = { 
+				remove_dynamic_modifier = { modifier = GEA_martial_law_modifier } 
+			}
+			add_stability = -0.01		
+		}
+	}	
+	GEA_cancel_857_martial_law = {#撤销东北戒严令
+		icon = iron_fist
+		allowed = { original_tag = GEA }
+		visible = {
+			GEA = {
+				has_country_flag = GEA_martial_law_modifier_DONE	
+				owns_state = 857
+				857 = {
+					has_dynamic_modifier = { modifier = GEA_martial_law_modifier } 
+				}
+			}
+		}	
+		highlight_states = {
+			highlight_state_targets = {
+				state = 857
+			}
+		}
+		days_remove = 3
+		on_map_mode = map_only
+		ai_will_do = {
+			factor = 20
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_cancel_857_martial_law"
+			857 = { 
+				remove_dynamic_modifier = { modifier = GEA_martial_law_modifier } 
+			}
+			add_stability = -0.01		
+		}
+	}
+	GEA_cancel_286_martial_law = {#撤销西贡戒严令
+		icon = iron_fist
+		allowed = { original_tag = GEA }
+		visible = {
+			GEA = {
+				has_country_flag = GEA_martial_law_modifier_DONE	
+				owns_state = 286
+				286 = {
+					has_dynamic_modifier = { modifier = GEA_martial_law_modifier } 
+				}
+			}
+		}	
+		highlight_states = {
+			highlight_state_targets = {
+				state = 286
+			}
+		}
+		days_remove = 3
+		on_map_mode = map_only
+		ai_will_do = {
+			factor = 20
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_cancel_286_martial_law"
+			286 = { 
+				remove_dynamic_modifier = { modifier = GEA_martial_law_modifier } 
+			}
+			add_stability = -0.01		
+		}
+	}
+}
+
+GEA_indochina_schorner_decisions = {#舍尔纳决议
+	GEA_more_Rebel_bandit = {     
+		activation = { 
+			has_completed_focus = GEA_beautiful_revenge
+			check_variable = { GEA_indochina_schorner < 100 }
+		}                            
+		available = {                           
+			has_country_flag = GEA_Total_suppression_of_Indochina
+		}
+		priority = 100
+		is_good = no                        
+
+		days_mission_timeout = 120
+		timeout_effect = {                      
+			add_to_variable = { GEA_indochina_schorner = 10 }   
+			random_list = { 
+				25 = { 
+					random_owned_state = {
+						limit = {
+							is_controlled_by = ROOT
+							OR = {
+								state = 857
+								state = 671
+								state = 827
+								state = 670
+								state = 826
+								state = 286
+								state = 856
+							}
+						}
+						damage_building = {
+							type = infrastructure
+							damage = 0.8
+						}
+					}
+				} 
+				25 = { 
+					random_owned_state = {
+						limit = {
+							is_controlled_by = ROOT
+							OR = {
+								state = 857
+								state = 671
+								state = 827
+								state = 670
+								state = 826
+								state = 286
+								state = 856
+							}
+						}
+						damage_building = {
+							type = industrial_complex
+							damage = 0.6
+						}
+					}
+				} 
+				25 = { 
+					random_owned_state = {
+						limit = {
+							is_controlled_by = ROOT
+							OR = {
+								state = 857
+								state = 671
+								state = 827
+								state = 670
+								state = 826
+								state = 286
+								state = 856
+							}
+						}
+						damage_building = {
+							type = arms_factory
+							damage = 0.6
+						}
+					}
+				}
+				25 = { 
+					random_owned_state = {
+						limit = {
+							is_controlled_by = ROOT
+							OR = {
+								state = 857
+								state = 671
+								state = 827
+								state = 670
+								state = 826
+								state = 286
+								state = 856
+							}
+						}
+						damage_building = {
+							type = air_base
+							damage = 0.4
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {                     
+		}
+	}
+	GEA_send_them_to_factory_on = {
+		icon = Factory
+		visible = {
+			has_completed_focus = GEA_die_in_factory
+		}
+		days_re_enable = 60
+		ai_will_do = { factor = 5}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_send_them_to_factory_on"
+			add_manpower = -1000
+			add_to_variable = { factory_times = 1 } 
+			add_to_variable = { GEA_Defend_indochina_stability = -0.075 } 
+			add_to_variable = { GEA_Defend_indochina_army_conscription_factor = -0.05 } 
+			add_to_variable = { GEA_Defend_indochina_production_speed_buildings_factor = 0.05 } 
+			add_to_variable = { GEA_Defend_indochina_industrial_capacity_factory = 0.1 } 
+			custom_effect_tooltip = GEA_send_them_to_factory_on_tt
+		}
+	}
+	GEA_send_them_to_battlefield_on = {
+		icon = police
+		visible = {
+			has_completed_focus = GEA_die_in_battlefield
+		}
+		days_re_enable = 60
+		ai_will_do = { factor = 5}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_send_them_to_battlefield_on"
+			add_manpower = -1000
+			add_to_variable = { battlefield_times = 1 } 
+			add_to_variable = { GEA_Defend_indochina_stability = -0.075 } 
+			add_to_variable = { GEA_Defend_indochina_army_conscription_factor = 0.15 } 
+			add_to_variable = { GEA_Defend_indochina_monthly_population = -0.15 } 
+			custom_effect_tooltip = GEA_send_them_to_battlefield_on_tt
+		}
+	}
+	GEA_send_them_to_execution_ground_on = {
+		icon = brokencuffs
+		visible = {
+			has_completed_focus = GEA_die_in_execution_ground
+		}
+		days_re_enable = 60
+		ai_will_do = { factor = 5}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_send_them_to_execution_ground_on"
+			add_manpower = -1000
+			add_to_variable = { execution_ground_times = 1 } 
+			add_to_variable = { GEA_Defend_indochina_stability = -0.1 } 
+			add_to_variable = { GEA_Defend_indochina_resistance_decay = 0.10 } 
+			add_to_variable = { GEA_Defend_indochina_compliance_growth = 0.10 } 
+			add_to_variable = { GEA_Defend_indochina_required_garrison_factor = -0.05 } 
+			custom_effect_tooltip = GEA_send_them_to_execution_ground_on_tt
+		}
+	}
+	GEA_send_them_to_factory_off = {
+		icon = Factory
+		visible = {
+			has_completed_focus = GEA_die_in_factory
+			check_variable = { factory_times > 0 }
+		}
+		days_re_enable = 14
+		ai_will_do = { factor = 5}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_send_them_to_factory_off"
+			add_to_variable = { factory_times = -1 } 
+			add_to_variable = { GEA_Defend_indochina_stability = 0.075 } 
+			add_to_variable = { GEA_Defend_indochina_army_conscription_factor = 0.05 } 
+			add_to_variable = { GEA_Defend_indochina_production_speed_buildings_factor = -0.05 } 
+			add_to_variable = { GEA_Defend_indochina_industrial_capacity_factory = -0.1 } 
+			custom_effect_tooltip = GEA_send_them_to_factory_off_tt
+		}
+	}
+	GEA_send_them_to_battlefield_off = {
+		icon = police
+		visible = {
+			has_completed_focus = GEA_die_in_battlefield
+			check_variable = { battlefield_times > 0 }
+		}
+		days_re_enable = 14
+		ai_will_do = { factor = 5}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_send_them_to_battlefield_off"
+
+			add_to_variable = { factory_times = -1 } 
+			add_to_variable = { GEA_Defend_indochina_stability = 0.075 } 
+			add_to_variable = { GEA_Defend_indochina_army_conscription_factor = -0.15 } 
+			add_to_variable = { GEA_Defend_indochina_monthly_population = 0.15 } 
+			custom_effect_tooltip = GEA_send_them_to_battlefield_off_tt
+		}
+	}
+	GEA_send_them_to_execution_ground_off = {
+		icon = brokencuffs
+		visible = {
+			has_completed_focus = GEA_die_in_execution_ground
+			check_variable = { execution_ground_times > 0 }
+		}
+		days_re_enable = 14
+		ai_will_do = { factor = 5}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_send_them_to_execution_ground_off"
+			add_to_variable = { execution_ground_times = -1 } 
+			add_to_variable = { GEA_Defend_indochina_stability = 0.1 } 
+			add_to_variable = { GEA_Defend_indochina_resistance_decay = -0.10 } 
+			add_to_variable = { GEA_Defend_indochina_compliance_growth = -0.10 } 
+			add_to_variable = { GEA_Defend_indochina_required_garrison_factor = 0.05 } 
+			custom_effect_tooltip = GEA_send_them_to_execution_ground_off_tt
+		}
+	}
+	GEA_Integrate_inc_schorner = {
+		icon = eng_trade_unions_demand
+		visible = {
+			GEA = {
+				OR = {
+					owns_state = 857
+					owns_state = 671
+					owns_state = 827
+					owns_state = 670
+					owns_state = 826
+					owns_state = 286
+					owns_state = 856
+				}
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GEA_Integrate_inc_schorner_effect_tt
+				check_variable = { GEA_indochina_schorner < 5 }
+			} 
+		}
+		days_remove = 180
+		fire_only_once = yes
+		ai_will_do = { factor = 1000 }
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Integrate_inc_schorner target: [From.GetName]"
+			set_country_flag = GEA_Total_suppression_of_Indochina
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					OR = {
+						state = 857
+						state = 671
+						state = 827
+						state = 670
+						state = 826
+						state = 286
+						state = 856
+					}
+				}
+				add_core_of = GEA	
+			}
+		}
+	}
+	GEA_burn_forest = {#焚毁雨林
+		icon = fire
+		allowed = { original_tag = GEA }
+		cost = 20
+		days_remove = 30
+		visible = {
+			NOT = {country_exists = INC}
+			has_completed_focus = GEA_liquid_combustion_bomb
+		}
+		days_re_enable = 90
+		ai_will_do = {
+			factor = 30
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_burn_forest"
+			add_manpower = -252
+			add_stability = 0.01
+			add_to_variable = { GEA_indochina_schorner = -5 } 
+			custom_effect_tooltip = GEA_burn_forest_tt
+		}
+	}
+	GEA_Slaughter_the_village = {#屠戮村庄
+		icon = boot
+		allowed = { original_tag = GEA }
+		custom_cost_text = GEA_we_need_soldier_cost_tt
+		custom_cost_trigger = {
+			command_power > 25
+		}
+		days_remove = 30
+		visible = {
+			NOT = {country_exists = INC}
+			has_completed_focus = GEA_liquid_combustion_bomb
+		}
+		days_re_enable = 90
+		ai_will_do = {
+			factor = 30
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_Slaughter_the_village"
+			add_command_power = -25
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Slaughter_the_village"
+			add_manpower = -638
+			add_to_variable = { GEA_indochina_schorner = -10 } 
+			custom_effect_tooltip = GEA_Slaughter_the_village_tt
+		}
+	}
+	GEA_Expand_labor_camps = {#扩大苦役营
+		icon = slave
+		allowed = { original_tag = GEA }
+		cost = 30
+		days_remove = 90
+		visible = {
+			has_completed_focus = GEA_exterminate_base_areas
+		}
+		days_re_enable = 90
+		ai_will_do = {
+			factor = 30
+		}
+		modifier = {
+			production_speed_buildings_factor = 0.1
+			industrial_capacity_factory = 0.10
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Expand_labor_camps"
+			add_manpower = -798
+			add_to_variable = { GEA_indochina_schorner = -5 } 
+			custom_effect_tooltip = GEA_burn_forest_tt
+		}
+	}
+	GEA_Allowing_troops_to_plunder = {#纵容部队劫掠
+		icon = bandit
+		allowed = { original_tag = GEA }
+		custom_cost_text = GEA_Allowing_troops_to_plunder_cost_tt
+		custom_cost_trigger = {
+			command_power > 40
+		}
+		days_remove = 30
+		visible = {
+			NOT = {country_exists = INC}
+			has_completed_focus = GEA_leave_no_one
+		}
+		days_re_enable = 110
+		ai_will_do = {
+			factor = 30
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_Allowing_troops_to_plunder"
+			add_command_power = -40
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Allowing_troops_to_plunder"
+			
+			add_command_power = -40
+			add_manpower = -268
+			add_to_variable = { GEA_indochina_schorner = -10 } 
+			custom_effect_tooltip = GEA_Slaughter_the_village_tt
+		}
+	}
+	GEA_Burn_farmland = {#烧毁农田
+		icon = bandit
+		allowed = { original_tag = GEA }
+		cost = 20
+		days_remove = 60
+		visible = {
+			NOT = {country_exists = INC}
+			has_completed_focus = GEA_liquid_combustion_bomb
+		}
+		days_re_enable = 90
+		ai_will_do = {
+			factor = 30
+		}
+		modifier = {
+			monthly_population = -0.1
+			supply_consumption_factor = -0.08
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Burn_farmland"
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					OR = {
+						state = 857
+						state = 671
+						state = 827
+						state = 670
+						state = 826
+						state = 286
+						state = 856
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			add_to_variable = { GEA_indochina_schorner = -7.5 } 
+			custom_effect_tooltip = GEA_Burn_farmland_tt
+		}
+	}
+	GEA_Plunder_local_enterprises = {#掠夺不满企业
+		icon = hand_grab
+		allowed = { original_tag = GEA }
+		cost = 50
+		days_remove = 90
+		visible = {
+			NOT = {country_exists = INC}
+			has_completed_focus = GEA_exterminate_base_areas
+		}
+		days_re_enable = 120
+		ai_will_do = {
+			factor = 30
+		}
+		modifier = {
+			consumer_goods_factor = 0.1
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Plunder_local_enterprises"
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					OR = {
+						state = 857
+						state = 671
+						state = 827
+						state = 670
+						state = 826
+						state = 286
+						state = 856
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes 
+				}
+			}
+			add_to_variable = { GEA_indochina_schorner = -10 } 
+			custom_effect_tooltip = GEA_Slaughter_the_village_tt
+		}
+	}
+	GEA_Take_out_stronghold = {#铲除越盟残余窝点
+		icon = iron_fist
+		allowed = { original_tag = GEA }
+		custom_cost_text = GEA_we_need_soldier_cost_tt
+		custom_cost_trigger = {
+			command_power > 25
+		}
+		days_remove = 90
+		visible = {
+			NOT = {country_exists = INC}
+			has_completed_focus = GEA_exterminate_base_areas
+		}
+		days_re_enable = 120
+		ai_will_do = {
+			factor = 30
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_Take_out_stronghold"
+			add_command_power = -25
+			add_manpower = -30
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Plunder_local_enterprises"
+			add_popularity = {
+				ideology = national_populist
+				popularity = 0.015
+			}
+			add_to_variable = { GEA_indochina_schorner = -5 } 
+			custom_effect_tooltip = GEA_burn_forest_tt
+		}
+	}
+	GEA_expand_slaughter_in_the_South = {#在南方扩大屠杀
+		icon = martial_law
+		allowed = { original_tag = GEA }
+		custom_cost_text = GEA_Request_field_corps_cost_tt
+		custom_cost_trigger = {
+			command_power > 50
+		}
+		days_remove = 90
+		visible = {
+			NOT = {country_exists = INC}
+			has_completed_focus = GEA_leave_no_one
+		}
+		days_re_enable = 180
+		ai_will_do = {
+			factor = 30
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_expand_slaughter_in_the_South"
+			add_command_power = -50
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_expand_slaughter_in_the_South"
+			add_popularity = {
+				ideology = national_populist
+				popularity = 0.04
+			}
+			286 = {
+				add_manpower = -42475
+			}
+			856 = {
+				add_manpower = -35967
+			}
+			add_to_variable = { GEA_indochina_schorner = -10 } 
+			custom_effect_tooltip = GEA_Slaughter_the_village_tt
+		}
+	}
+}
+
+GEA_malaya_decisions = {#马来亚决议
+	GEA_develop_aa_in_singapore = {#在新加坡建立防空炮塔
+		icon = AA_small
+		allowed = { original_tag = GEA }
+		days_remove = 90
+		days_re_enable = 120
+		available = {
+			owns_state = 336
+			has_tech =  interwar_antiair
+		}
+		ai_will_do = {
+			factor = 30
+		}
+		modifier = {
+			political_power_gain = -0.1
+		}
+		custom_cost_text = 500RIFLE
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 500 }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_develop_aa_in_singapore"
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+				producer = GEA
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_develop_aa_in_singapore"
+			846 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 1
+					instant_build = yes 
+				}
+			}
+			add_to_variable = { GEA_singapore_development = 0.03 }  
+			custom_effect_tooltip = GEA_develop_aa_in_singapore_tt
+		}
+	}
+	GEA_Slum_renovation = {#翻新贫民窟
+		icon = Blueprints
+		allowed = { original_tag = GEA }
+		cost = 40
+		days_remove = 75
+		days_re_enable = 120
+		visible = {
+			check_variable = { renovation_times < 4 }
+		}
+		available = {
+			owns_state = 336
+			num_of_civilian_factories_available_for_projects > 1
+		}
+		ai_will_do = {
+			factor = 30
+		}
+		modifier = {
+			civilian_factory_use = 1
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_Slum_renovation"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Slum_renovation"
+			add_stability = 0.05
+			add_manpower = 2000
+			336 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			add_to_variable = { GEA_singapore_development = 0.03 }  
+			add_to_variable = { renovation_times = 1 }  
+			custom_effect_tooltip = GEA_Slum_renovation_tt
+		}
+	}
+	GEA_new_reserch_slot = {#在新加坡开设新研究院
+		icon = Book
+		allowed = { original_tag = GEA }
+		cost = 100
+		days_remove = 14
+		available = {
+			owns_state = 336
+			OR = {
+				has_completed_focus = GEA_economic_recovery
+				has_completed_focus = GEA_complete_militarization
+			}
+		}
+		days_re_enable = 720
+		ai_will_do = {
+			factor = 30
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_new_reserch_slot"
+			add_research_slot_until_six = yes
+			custom_effect_tooltip = JAP_research_slot_warning
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_new_reserch_slot"
+			add_to_variable = { GEA_singapore_development = 0.1 }  
+			custom_effect_tooltip = GEA_new_reserch_slot_tt
+		}
+	}
+	GEA_Expand_Singapore_port = {#扩大新加坡深水港
+		icon = generic_naval_base
+		cost = 100
+		allowed = { original_tag = GEA }
+		fire_only_once = yes
+		days_remove = 150
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+			owns_state = 336
+			NOT = {
+				has_idea = GEA_black_monday_idea2
+			}
+		}
+		modifier = {
+			political_power_gain = -0.1
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Expand_Singapore_port"
+			336 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes 
+					province = 12299
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes 
+					province = 12299
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes 
+				}
+			}
+			add_to_variable = { GEA_singapore_development = 0.06 }  
+			custom_effect_tooltip = GEA_Expand_Singapore_port_tt
+		}
+	}
+	GEA_Support_small_enterprises = {#扶持新加坡小微企业
+		icon = cash
+		cost = 50
+		allowed = { original_tag = GEA }
+		fire_only_once = yes
+		days_remove = 90
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+			owns_state = 336
+			OR = {
+				has_completed_focus = GEA_support_small_business
+				NOT = {
+					has_idea = GEA_black_monday_idea2
+				}
+			}
+		}
+		modifier = {
+			political_power_gain = -0.1
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Support_small_enterprises"
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_to_variable = { GEA_singapore_development = 0.05 }  
+			custom_effect_tooltip = GEA_Support_small_enterprises_tt
+		}
+	}
+	GEA_completion_of_Singapore_Development = {#宣布新加坡开发计划完成
+		allowed = { original_tag = GEA }
+		fire_only_once = yes
+		available = {
+			owns_state = 336
+			check_variable = { GEA_singapore_development > 0.95   }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		priority = 100
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_completion_of_Singapore_Development"
+			effect_tooltip = { set_province_name = { id = 12299 name = "大都会" } }
+			336 = {
+				set_state_category = nine
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes 
+				}
+				add_building_construction = {
+					
+					type = arms_factory 
+					level = 2
+					instant_build = yes 
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes 
+				}
+			}
+			add_stability = 0.05
+			add_political_power = 100
+		}
+	}
+	GEA_develop_malaya = {#开发马来亚
+		icon = cement_mixer
+		cost = 35
+		allowed = { original_tag = GEA }
+		days_remove = 120
+		days_re_enable = 150
+		ai_will_do = {
+			factor = 50
+		}
+		available = {owns_state = 846}
+		modifier = {
+			political_power_gain = -0.5
+			production_speed_buildings_factor = -0.05
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_develop_malaya"
+			846 = {
+				add_dynamic_modifier = { modifier = GEA_developing_porgram } 
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_develop_malaya"
+			846 = {
+				add_extra_state_shared_building_slots = 1
+				remove_dynamic_modifier = { modifier = GEA_developing_porgram } 
+			}
+			add_to_variable = { GEA_malaya_development = 0.05 }  
+			custom_effect_tooltip = GEA_develop_malaya_tt
+		}
+	}
+	GEA_New_infrastructure_programme = {#新基建计划
+		icon = road
+		cost = 40
+		allowed = { original_tag = GEA }
+		days_remove = 90
+		days_re_enable = 120
+		ai_will_do = {
+			factor = 30
+		}
+		available = {
+			owns_state = 846
+			OR = {
+				has_completed_focus = GEA_economic_development_of_Malaya
+				NOT = {
+					has_idea = GEA_black_monday_idea2
+				}
+			}
+		}
+		modifier = {
+			political_power_gain = -0.1
+			production_speed_buildings_factor = -0.02
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_New_infrastructure_programme"
+
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_New_infrastructure_programme"
+			846 = {
+				add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+				}
+			}	
+			add_to_variable = { GEA_malaya_development = 0.05 }  
+			custom_effect_tooltip = GEA_develop_malaya_tt
+		}
+	}
+	GEA_arms_factory_malaya = {#军工产业升级
+		icon = Factory
+		cost = 75
+		allowed = { original_tag = GEA }
+		days_remove = 120
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 30
+		}
+		available = {
+			owns_state = 846
+			OR = {
+				has_completed_focus = GEA_malayan_arsenal
+				has_completed_focus = GEA_economic_recovery
+			}
+		}
+		modifier = {
+			political_power_gain = -0.1
+			production_speed_buildings_factor = -0.05
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_arms_factory_malaya"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_arms_factory_malaya"
+			846 = {
+				add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+				}
+			}	
+			add_to_variable = { GEA_malaya_development = 0.1 }  
+			custom_effect_tooltip = GEA_arms_factory_malaya_tt
+		}
+	}
+	GEA_Population_migration = {#迁居计划
+		icon = Citizen
+		cost = 50
+		allowed = { original_tag = GEA }
+		days_remove = 150
+		days_re_enable = 360
+		ai_will_do = {
+			factor = 30
+		}
+		available = {
+			owns_state = 846
+			OR = {
+				has_completed_focus = GEA_land_grab
+				NOT = {
+					has_idea = GEA_black_monday_idea2
+				}
+			}
+		}
+		modifier = {
+			political_power_gain = -0.1
+			monthly_population = 0.05
+			non_core_manpower = 0.05
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_Population_migration"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Population_migration"
+			add_manpower = 7500
+			add_to_variable = { GEA_malaya_development = 0.075 }  
+			custom_effect_tooltip = GEA_Population_migration_tt
+		}
+	}
+	GEA_develop_aluminum_deposits = {
+		icon = aluminium
+
+		available = {
+			has_tech = excavation2
+			num_of_civilian_factories_available_for_projects > 2
+		}
+
+		visible = {
+			owns_state = 846
+			controls_state = 846
+			846 = {
+				NOT = { has_state_flag = johore_aluminium_developed }
+			}
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 846
+			}
+		}
+
+		cost = 25
+		days_remove = 60
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_develop_aluminum_deposits"
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_develop_aluminum_deposits"
+			846 = {
+				set_state_flag = johore_aluminium_developed
+				add_resource = {
+					type = aluminium
+					amount = 50
+				}
+			}
+			add_to_variable = { GEA_malaya_development = 0.1 }  
+			custom_effect_tooltip = GEA_arms_factory_malaya_tt
+		}
+	}
+	GEA_completion_of_malaya_Development = {#宣布马来亚开发计划完成
+		allowed = { original_tag = GEA }
+		fire_only_once = yes
+		available = {
+			owns_state = 846
+			check_variable = { GEA_malaya_development > 0.90   }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		priority = 99
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_completion_of_malaya_Development"
+			846 = {
+				set_state_category = seven
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					
+					type = industrial_complex
+					level = 2
+					instant_build = yes 
+				}
+				add_building_construction = {
+					type = arms_factory 
+					level = 1
+					instant_build = yes 
+				}
+			}
+			add_stability = 0.05
+			add_political_power = 75
+		}
+	}
+}
+
+GEA_Borneo_decisions = {#婆罗洲决议
+	GEA_blood_lumberyard = {#血汗伐木场
+		icon = wood
+		cost = 30
+		allowed = { original_tag = GEA }
+		days_remove = 90
+		days_re_enable = 120
+		available = {
+			OR = {
+				has_completed_focus = GEA_building_borneo
+				NOT = {
+					has_idea = GEA_black_monday_idea2
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 30
+		}
+		modifier = {
+			political_power_gain = -0.1
+			production_speed_buildings_factor = 0.1
+			weekly_manpower = -137
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_blood_lumberyard"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_blood_lumberyard"
+			random_state = {
+				limit = {
+					OR = {
+						333 = {
+							is_owned_and_controlled_by = ROOT
+						}
+						828 = {
+							is_owned_and_controlled_by = ROOT
+						}
+						334 = {
+							is_owned_and_controlled_by = ROOT
+						}
+						1016 = {
+							is_owned_and_controlled_by = ROOT
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+		}
+		add_to_variable = { GEA_Borneo_development = 0.05 }  
+		custom_effect_tooltip = GEA_blood_lumberyard_tt
+		}
+	}
+	GEA_attract_migration = {#吸引外来移民
+		icon = Citizen
+		cost = 25
+		allowed = { original_tag = GEA }
+		days_remove = 120
+		days_re_enable = 180
+		ai_will_do = {
+			factor = 30
+		}
+		available = {
+			OR = {
+				has_completed_focus = GEA_german_immigrants
+				NOT = {
+					has_idea = GEA_black_monday_idea2
+				}
+			}
+		}
+		modifier = {
+			political_power_gain = -0.1
+			weekly_manpower = 350
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_attract_migration"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_attract_migration"
+			add_manpower = 1000
+			add_to_variable = { GEA_Borneo_development = 0.05 }  
+			custom_effect_tooltip = GEA_blood_lumberyard_tt
+		}
+	}
+	GEA_more_mine = {#大力开采
+		icon = GEA_overexploitation
+		cost = 75
+		allowed = { original_tag = GEA }
+		days_remove = 120
+		days_re_enable = 360
+		ai_will_do = {
+			factor = 20
+		}
+		modifier = {
+			political_power_gain = -0.1
+			weekly_manpower = -274
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_more_mine"
+			if = {
+				limit = { owns_state = 333}
+				333 = { 
+					add_dynamic_modifier = { modifier = GEA_more_mine1 } 
+				}
+			}
+			if = {
+				limit = { owns_state = 334}
+				334 = { 
+					add_dynamic_modifier = { modifier = GEA_more_mine1 } 
+				}
+			}
+			if = {
+				limit = { owns_state = 828}
+				828 = { 
+					add_dynamic_modifier = { modifier = GEA_more_mine1 } 
+				}
+			}
+			if = {
+				limit = { owns_state = 1016}
+				1016 = { 
+					add_dynamic_modifier = { modifier = GEA_more_mine1 } 
+				}
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_more_mine"
+			add_to_variable = { GEA_Borneo_development = 0.10 }  
+			custom_effect_tooltip = GEA_more_mine_tt
+		}
+	}
+	GEA_Expanded_rubber_mining = {#扩大橡胶开采
+		icon = rubber
+
+		available = {
+			has_tech = excavation2
+			num_of_civilian_factories_available_for_projects > 3
+		}
+
+		visible = {
+			owns_state = 333
+			controls_state = 333
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 333
+			}
+		}
+		cost = 30
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 4
+		}
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_Expanded_rubber_mining"
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Expanded_rubber_mining"
+			333 = {
+				add_resource = {
+					type = rubber
+					amount = 46
+				}
+			}
+			add_to_variable = { GEA_Borneo_development = 0.05 }  
+			custom_effect_tooltip = GEA_blood_lumberyard_tt
+		}
+	}
+	GEA_develop_sarawak_oil = {
+		icon = oil
+
+		available = {
+			has_tech = excavation3
+			num_of_civilian_factories_available_for_projects > 2
+		}
+
+		visible = {
+			owns_state = 333
+			controls_state = 333
+			333 = {
+				NOT = { has_state_flag = sarawak_oil_developed }
+			}
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 333
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_develop_sarawak_oil"
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_develop_sarawak_oil"
+			333 = {
+				set_state_flag = sarawak_oil_developed
+				add_resource = {
+					type = oil
+					amount = 24
+				}
+			}
+			add_to_variable = { GEA_Borneo_development = 0.05 }  
+			custom_effect_tooltip = GEA_blood_lumberyard_tt
+		}
+	}	
+	GEA_Bulldoze_village = {
+		icon = Bulldozer
+		allowed = { original_tag = GEA }
+		days_remove = 90
+		days_re_enable = 360
+		ai_will_do = {
+			factor = 20
+		}
+		modifier = {
+			political_power_gain = -0.1
+			weekly_manpower = -274
+		}
+		custom_cost_text = GEA_Bulldoze_village_tt
+		custom_cost_trigger = {
+			has_political_power > 20
+			command_power > 60
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_Bulldoze_village"
+			add_political_power = -20
+			add_command_power = -60
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Bulldoze_village"
+			add_to_variable = { GEA_Borneo_development = 0.075 }  
+			custom_effect_tooltip = GEA_Bulldoze_village1_tt
+			if = {
+				limit = { owns_state = 333}
+				333 = { 
+					add_dynamic_modifier = { modifier = GEA_Bulldoze_village1 } 
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+			if = {
+				limit = { owns_state = 334}
+				334 = { 
+					add_dynamic_modifier = { modifier = GEA_Bulldoze_village1 } 
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+			if = {
+				limit = { owns_state = 828}
+				828 = { 
+					add_dynamic_modifier = { modifier = GEA_Bulldoze_village1 } 
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+			if = {
+				limit = { owns_state = 1016}
+				1016 = { 
+					add_dynamic_modifier = { modifier = GEA_Bulldoze_village1 } 
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+			add_political_power = 75
+		}
+	}	
+	GEA_Ensure_Borneo = {#确保婆罗洲
+		icon = shield
+		cost = 50
+		allowed = { original_tag = GEA }
+		days_remove = 90
+		fire_only_once = yes
+		visible = {
+			GEA = {
+				owns_state = 333
+				owns_state = 828
+				owns_state = 334
+				owns_state = 1016
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GEA_Ensure_Borneo_effect_tt
+				check_variable = { GEA_Borneo_development > 0.75 }
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		modifier = {
+			political_power_gain = -0.3
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_Ensure_Borneo"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Ensure_Borneo"
+			add_to_variable = { GEA_Borneo_development = 0.1 }  
+			custom_effect_tooltip = GEA_more_mine_tt
+			if = {
+				limit = { owns_state = 333}
+				333 = { 
+					add_compliance = 25
+				}
+			}
+			if = {
+				limit = { owns_state = 334}
+				334 = { 
+					add_compliance = 25
+				}
+			}
+			if = {
+				limit = { owns_state = 828}
+				828 = { 
+					add_compliance = 25
+				}
+			}
+			if = {
+				limit = { owns_state = 1016}
+				1016 = { 
+					add_compliance = 25
+				}
+			}
+			add_stability = 0.05
+			add_political_power = 50
+		}
+	}
+	GEA_Integrate_Borneo = {
+		icon = eng_trade_unions_demand
+		available = {
+			custom_trigger_tooltip ={
+				tooltip = GEA_Integrate_Borneo_effect_tt
+				check_variable = { GEA_Borneo_development > 0.9 }
+			} 
+		}
+		visible = {
+			GEA = {
+				owns_state = 333
+				owns_state = 828
+				owns_state = 334
+				owns_state = 1016
+			}
+		}
+
+		cost = 100
+		days_remove = 180
+		fire_only_once = yes
+		ai_will_do = { factor = 1000 }
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Integrate_Borneo target: [From.GetName]"
+			add_state_core = 334
+			add_state_core = 1016
+			333 = {
+				add_dynamic_modifier = { modifier = GEA_developing_porgram } 
+			}
+			828 = {
+				add_dynamic_modifier = { modifier = GEA_developing_porgram } 
+			}
+		}
+	}
+}
+
+GEA_Guinea_decisions = {#几内亚决议
+	GEA_more_gold = {#加大金矿开采力度
+		icon = GEA_overexploitation
+		cost = 50
+		allowed = { original_tag = GEA }
+		days_remove = 120
+		days_re_enable = 360
+		ai_will_do = {
+			factor = 20
+		}
+		available = {
+			owns_state = 757
+			num_of_civilian_factories_available_for_projects > 1
+		}
+		modifier = {
+			political_power_gain = -0.1
+			civilian_factory_use = 2
+			consumer_goods_factor = -0.1
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_more_gold"
+			757 = {
+				add_building_construction = {
+					type = industrial_complex 
+					level = 1
+					instant_build = yes 
+				}
+			}
+			add_to_variable = { GEA_Guinea_development = 0.075 }  
+			custom_effect_tooltip = GEA_more_gold_tt
+		}
+	}
+	GEA_Pioneering_New_Guinea = {#开拓新几内亚
+		icon = oasis
+		cost = 30
+		allowed = { original_tag = GEA }
+		days_remove = 90
+		days_re_enable = 150
+		ai_will_do = {
+			factor = 20
+		}
+		modifier = {
+			political_power_gain = -0.03
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_Pioneering_New_Guinea"
+			add_manpower = -1500
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Pioneering_New_Guinea"
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					OR = {
+						state = 843
+						state = 757
+						state = 669
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_to_variable = { GEA_Guinea_development = 0.05 }  
+			add_manpower = 1000
+			custom_effect_tooltip = GEA_develop_aa_in_William_port_tt
+		}
+	}
+	GEA_Expand_port1 = {#建设西南新几内亚港
+		icon = generic_naval_base
+		cost = 30
+		allowed = { original_tag = GEA }
+		days_remove = 90
+		days_re_enable = 120
+		ai_will_do = {
+			factor = 50
+		}
+		visible = {
+			owns_state = 843
+		}
+		available = {
+			owns_state = 843
+			has_completed_focus = GEA_relaunch_navy_program
+		}
+		modifier = {
+			political_power_gain = -0.05
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Expand_port1"
+			843 = {
+				add_building_construction = {
+					type = naval_base
+					level = 1
+					instant_build = yes 
+					province = 1629
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					instant_build = yes 
+					province = 1629
+				}
+			}
+			add_to_variable = { GEA_Guinea_development = 0.05 }  
+			custom_effect_tooltip = GEA_develop_aa_in_William_port_tt
+		}
+	}
+	GEA_Expand_William_port = {#扩建腓特烈威廉港
+		icon = generic_naval_base
+		cost = 75
+		allowed = { original_tag = GEA }
+		fire_only_once = yes
+		days_remove = 120
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+			owns_state = 757
+			has_completed_focus = GEA_relaunch_navy_program
+		}
+		modifier = {
+			political_power_gain = -0.1
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Expand_William_port"
+			757 = {
+				set_state_category = five
+				add_building_construction = {
+					type = naval_base
+					level = 4
+					instant_build = yes 
+					province = 12154
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes 
+					province = 12154
+				}
+			}
+			add_to_variable = { GEA_Guinea_development = 0.1 }  
+			custom_effect_tooltip = GEA_Expand_William_port_tt
+		}
+	}	
+	GEA_Expand_Rabaul = {#扩建拉包尔基地
+		icon = cement_mixer
+		cost = 50
+		allowed = { original_tag = GEA }
+		fire_only_once = yes
+		days_remove = 180
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+			owns_state = 737
+			num_of_civilian_factories_available_for_projects > 3
+		}
+		modifier = {
+			political_power_gain = -0.1
+			civilian_factory_use = 4
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Expand_Rabaul"
+			737 = {
+				set_state_category = five
+				add_building_construction = {
+					type = naval_base
+					level = 5
+					instant_build = yes 
+					province = 12154
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					instant_build = yes 
+					province = 12154
+				}
+				add_building_construction = {
+					type = bunker
+					level = 5
+					instant_build = yes 
+					province = 12154
+				}
+				add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes 
+				}
+			}
+			add_to_variable = { GEA_Guinea_development = 0.1 }  
+			custom_effect_tooltip = GEA_Expand_William_port_tt
+		}
+	}
+	GEA_develop_aa_in_William_port = {#在威廉港建立防空炮塔
+		icon = AA_small
+		allowed = { original_tag = GEA }
+		days_remove = 90
+		days_re_enable = 120
+		available = {
+			owns_state = 757
+			has_tech =  interwar_antiair
+		}
+		ai_will_do = {
+			factor = 30
+		}
+		modifier = {
+			political_power_gain = -0.1
+		}
+		custom_cost_text = 500RIFLE
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 500 }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_develop_aa_in_William_port"
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+				producer = GEA
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_develop_aa_in_William_port"
+			757 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes 
+				}
+			}
+			add_to_variable = { GEA_Guinea_development = 0.05 }  
+			custom_effect_tooltip = GEA_develop_aa_in_William_port_tt
+		}
+	}
+	GEA_build_railway_in_Guinea = {#修筑新几内亚铁路
+		icon = railroad
+		cost = 100
+		allowed = { original_tag = GEA }
+		days_remove = 100
+		fire_only_once = yes
+		visible = {
+			GEA = {
+				owns_state = 669
+				owns_state = 757
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		modifier = {
+			political_power_gain = -0.15
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_build_railway_in_Guinea"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_build_railway_in_Guinea"
+			add_to_variable = { GEA_Guinea_development = 0.10 }  
+			custom_effect_tooltip = GEA_Expand_William_port_tt
+			custom_effect_tooltip = GEA_tooltip_for_railway1
+			669 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					instant_build = yes 
+					province = 4509
+				}
+			}
+			hidden_effect = {
+				build_railway = {
+					level = 2
+					start_province = 4509
+					target_province = 12154
+				}
+			}
+		}
+	}
+	GEA_Integrate_Guinea = {
+		icon = eng_trade_unions_demand
+		available = {
+			custom_trigger_tooltip ={
+				tooltip = GEA_Integrate_Guinea_effect_tt
+				check_variable = { GEA_Guinea_development > 0.9 }
+			} 
+		}
+		visible = {
+			GEA = {
+				owns_state = 669
+				owns_state = 757
+				owns_state = 843
+			}
+		}
+		cost = 100
+		days_remove = 180
+		fire_only_once = yes
+		ai_will_do = { factor = 1000 }
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Integrate_Guinea target: [From.GetName]"
+			add_state_core = 669
+			add_state_core = 843
+			757 = {
+				add_dynamic_modifier = { modifier = GEA_developing_porgram } 
+			}
+			737 = {
+				add_dynamic_modifier = { modifier = GEA_developing_porgram } 
+			}
+		}
+	}
+}
+
+GEA_dei_decisions = {#东印度决议
+	GEA_Integrate_dei = {
+		icon = eng_trade_unions_demand
+		available = {
+			custom_trigger_tooltip ={
+				tooltip = GEA_Integrate_dei_effect_tt
+				check_variable = { GEA_dei_integration_degree > 0.9 }
+			} 
+		}
+		visible = {
+			GEA = {
+				owns_state = 1023
+				owns_state = 672
+				owns_state = 1022
+				owns_state = 1021
+				owns_state = 1020
+				owns_state = 673
+				owns_state = 335
+				owns_state = 1019
+				owns_state = 667
+				owns_state = 1018
+			}
+		}
+
+		cost = 100
+		days_remove = 200
+		fire_only_once = yes
+		ai_will_do = { factor = 1000 }
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Integrate_dei target: [From.GetName]"
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					OR = {
+						state = 1023
+						state = 672
+						state = 1022
+						state = 1021
+						state = 1020
+						state = 673
+						state = 335
+						state = 1019
+						state = 667
+						state = 1018
+					}
+				}
+				add_core_of = GEA	
+			}
+		}
+	}
+	GEA_Receive_Dutch_heritage = {#接收荷兰遗产
+		icon = generic_political_address
+		cost = 50
+		allowed = { original_tag = GEA }
+		days_remove = 120
+		fire_only_once = yes
+		available = {
+			DEI = {
+				NOT = {country_exists = yes}
+			}
+		}
+		ai_will_do = {
+			factor = 50
+		}
+		modifier = {
+			political_power_gain = -0.2
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_Receive_Dutch_heritage"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Receive_Dutch_heritage"
+			add_to_variable = { GEA_dei_integration_degree = 0.2 }  
+			custom_effect_tooltip = GEA_Receive_Dutch_heritage_tt
+			add_stability = 0.05
+			add_political_power = 75
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					OR = {
+						state = 1023
+						state = 672
+						state = 1022
+						state = 1021
+						state = 1020
+						state = 673
+						state = 335
+						state = 1019
+						state = 667
+						state = 1018
+					}
+				}
+				add_compliance = 20
+			}
+		}
+	}
+	GEA_Building_Batavia= {#建设巴达维亚
+		icon = cement_mixer
+		cost = 75
+		allowed = { original_tag = GEA }
+		fire_only_once = yes
+		days_remove = 90
+		ai_will_do = {
+			factor = 50
+		}
+		available = {
+			owns_state = 1020
+			NOT = {
+				has_idea = GEA_black_monday_idea2
+			}
+		}
+		modifier = {
+			political_power_gain = -0.05
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Building_Batavia"
+			1020 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes 
+					province = 4406
+				}
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes 
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes 
+				}
+			}
+			add_to_variable = { GEA_dei_integration_degree = 0.1 }  
+			custom_effect_tooltip = GEA_Building_Batavia_tt
+		}
+	}
+	GEA_rubber_mining_in_dei = {#扩大苏拉维西橡胶开采
+		icon = rubber
+
+		available = {
+			has_tech = excavation2
+			num_of_civilian_factories_available_for_projects > 4
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 333
+			}
+		}
+		cost = 35
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_rubber_mining_in_dei"
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_rubber_mining_in_dei"
+			673 = {
+				add_resource = {
+					type = rubber
+					amount = 56
+				}
+			}
+			add_to_variable = { GEA_dei_integration_degree = 0.1 }  
+			custom_effect_tooltip = GEA_Building_Batavia_tt
+		}
+	}
+	GEA_Develop_Sumatra = {
+		icon = road
+		cost = 100
+		days_remove = 150
+		fire_only_once = yes
+		ai_will_do = { factor = 20 }
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Develop_Sumatra"
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					OR = {
+						state = 1023
+						state = 672
+						state = 1022
+						state = 1021
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes 
+				}
+			}
+			672 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes 
+				}
+			}
+			add_to_variable = { GEA_dei_integration_degree = 0.1 }  
+			custom_effect_tooltip = GEA_Building_Batavia_tt	
+		}
+	}
+	GEA_Exterminate_local_culture = {#根除本地文化
+		icon = GEA_slave
+		cost = 80
+		days_remove = 180
+		fire_only_once = yes
+		visible = {
+			NOT = {
+				has_country_flag = GEA_Mucke_Appointed
+			}
+		}
+		ai_will_do = { factor = 20 }
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Exterminate_local_culture"
+			increase_ruling_party_popularity_by_10 = yes
+			add_political_power = 80
+			add_stability = 0.05
+			add_to_variable = { GEA_dei_integration_degree = 0.1 }  
+			custom_effect_tooltip = GEA_Building_Batavia_tt	
+		}
+	}
+	GEA_Resumption_of_compulsory_cultivation = {#恢复强制耕作
+		icon = farmer
+		cost = 35
+		days_remove = 120
+		days_re_enable = 150
+		visible = {
+			NOT = {
+				has_country_flag = GEA_Mucke_Appointed
+			}
+		}
+		ai_will_do = { factor = 20 }
+		modifier = {
+			consumer_goods_factor = -0.05
+			monthly_population = 0.1
+			supply_consumption_factor = -0.05
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Resumption_of_compulsory_cultivation"
+			add_stability = -0.03
+			add_to_variable = { GEA_dei_integration_degree = 0.05 }  
+			custom_effect_tooltip = GEA_Resumption_of_compulsory_cultivation_tt	
+		}
+	}
+	GEA_Education_popularization = {#普及教育
+		icon = book
+		cost = 30
+		days_remove = 120
+		days_re_enable = 150
+		visible = {
+			has_country_flag = GEA_Mucke_Appointed
+		}
+		ai_will_do = { factor = 20 }
+		modifier = {
+			research_speed_factor = 0.1
+			stability_weekly = 0.005
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Resumption_of_compulsory_cultivation"
+			add_to_variable = { GEA_dei_integration_degree = 0.05 }  
+			custom_effect_tooltip = GEA_Resumption_of_compulsory_cultivation_tt	
+		}
+	}
+	GEA_Grant_indigenous_citizenship = {#给予土著公民地位
+		icon = hand_out
+		cost = 75
+		days_remove = 180
+		fire_only_once = yes
+		visible = {
+			has_country_flag = GEA_Mucke_Appointed
+		}
+		ai_will_do = { factor = 20 }
+		modifier = {
+			political_power_gain = -0.1
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Grant_indigenous_citizenship"
+			add_stability = 0.1
+			add_war_support = 0.1
+			add_manpower = 5000
+			add_to_variable = { GEA_dei_integration_degree = 0.1 }  
+			custom_effect_tooltip = GEA_Building_Batavia_tt	
+		}
+	}
+}
+
+GEA_Thailand_decisions = {#暹罗决议
+	GEA_Integrate_sia = {
+		icon = eng_trade_unions_demand
+		available = {
+			custom_trigger_tooltip ={
+				tooltip = GEA_Integrate_sia_effect_tt
+				check_variable = { GEA_sia_integration_degree > 0.9 }
+			} 
+		}
+		visible = {
+			GEA = {
+				owns_state = 823
+				owns_state = 825
+				owns_state = 750
+				owns_state = 824
+				owns_state = 882
+				owns_state = 756
+				owns_state = 822
+				owns_state = 289
+				owns_state = 831
+				owns_state = 749
+				owns_state = 724
+				owns_state = 999
+				owns_state = 830
+				owns_state = 751
+			}
+		}
+
+		cost = 100
+		days_remove = 200
+		fire_only_once = yes
+		ai_will_do = { factor = 1000 }
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Integrate_sia target: [From.GetName]"
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					OR = {
+						state = 823
+						state = 825
+						state = 750
+				 		state = 824
+						state = 882
+				 		state = 756
+				 		state = 822
+				 		state = 289
+				 		state = 831
+				 		state = 749
+				 		state = 724
+				 		state = 999
+						state = 830
+				 		state = 751
+					}
+				}
+				add_core_of = GEA	
+			}
+		}
+	}
+	GEA_Recruit_collaborators_among_officers = {#吸纳军官中合作者
+		icon = generic_agreement
+		cost = 50
+		available = {
+			SIA = {
+				NOT = {country_exists = no}
+			}
+		}
+		days_remove = 30
+		fire_only_once = yes
+		ai_will_do = { factor = 1000 }
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Recruit_collaborators_among_officers"
+			SIA = {
+				if = {
+					limit = { has_unit_leader = 51410 }
+					random_unit_leader = {
+						limit = { has_id = 51410 }
+						set_nationality = GEA
+					}
+				}
+				if = {
+					limit = { has_unit_leader =  51402 }
+					random_unit_leader = {
+						limit = { has_id =  51402 }
+						set_nationality = GEA
+					}
+				}
+				if = {
+					limit = { has_unit_leader = 51405 }
+					random_unit_leader = {
+						limit = { has_id =  51405 }
+						set_nationality = GEA
+					}
+				}
+			}
+			add_to_variable = { GEA_sia_integration_degree = 0.15 }  
+			custom_effect_tooltip = GEA_Recruit_collaborators_among_officers_tt
+		}
+	}
+	GEA_King_and_Marionette = {#国王与提线木偶
+		icon = king
+		cost = 30
+		available = {
+			SIA = {
+				NOT = {country_exists = no}
+			}
+		}
+		days_remove = 30
+		fire_only_once = yes
+		ai_will_do = { factor = 1000 }
+		modifier = {
+			political_power_gain = -1
+			paternal_autocrat_drift = 0.03
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_King_and_Marionette"
+			add_popularity = {
+				ideology = paternal_autocrat 
+				popularity = 0.07
+			}
+			add_stability = 0.05
+			add_to_variable = { GEA_sia_integration_degree = 0.15 }  
+			custom_effect_tooltip = GEA_Recruit_collaborators_among_officers_tt
+		}
+	}
+	GEA_deal_with_sahaviriya = {#接手伟成发钢铁公司
+		icon = steel
+		cost = 50
+		available = {
+			owns_state = 289
+		}
+		days_remove = 90
+		fire_only_once = yes
+		ai_will_do = { factor = 1000 }
+		modifier = {
+			political_power_gain = -0.1
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_deal_with_sahaviriya"
+			289 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_resource = {
+				type = steel
+				amount = 20
+				state = 289 
+			}
+			add_to_variable = { GEA_sia_integration_degree = 0.1 }  
+			custom_effect_tooltip = GEA_deal_with_sahaviriya_tt
+		}
+	}
+	GEA_Bandit_suppression = {#剿匪行动
+		icon = cavalry
+		cost = 60
+		allowed = { original_tag = GEA }
+		days_remove = 180
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 20
+		}
+		custom_cost_text = 800MP_500RIFLE
+		custom_cost_trigger = {
+			has_manpower > 800
+			has_equipment = { infantry_equipment > 500 }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_Bandit_suppression"
+			add_manpower = -800
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+				producer = GEA
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Bandit_suppression"
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					OR = {
+						state = 756
+						state = 822
+						state = 831
+					}
+				}
+				add_compliance = 20
+			}
+			add_to_variable = { GEA_sia_integration_degree = 0.1 }  
+			add_manpower = 200
+			custom_effect_tooltip = GEA_deal_with_sahaviriya_tt
+		}
+	}
+	GEA_Purging_dissident_bureaucrats = {#清洗异见官僚
+		icon = boot
+		cost = 75
+		allowed = { original_tag = GEA }
+		days_remove = 120
+		days_re_enable = 180
+		ai_will_do = {
+			factor = 20
+		}
+		modifier = {daily_popularity_drift = 0.01}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_Purging_dissident_bureaucrats"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Purging_dissident_bureaucrats"
+			add_to_variable = { GEA_sia_integration_degree = 0.075 }  
+			add_manpower = -200
+			add_stability = 0.05
+			custom_effect_tooltip = GEA_Purging_dissident_bureaucrats_tt
+		}
+	}
+	GEA_Killing_socialist = {#扫荡社会主义者
+		icon = hand_grab
+		allowed = { original_tag = GEA }
+		days_remove = 120
+		days_re_enable = 180
+		ai_will_do = {
+			factor = 30
+		}
+		custom_cost_text = 1000MP_1000RIFLE
+		custom_cost_trigger = {
+			has_manpower > 1000
+			has_equipment = { infantry_equipment > 1000 }
+		}
+		modifier = {
+			totalist_drift = -0.01
+			syndicalist_drift = -0.01
+			radical_socialist_drift = -0.01
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_Killing_socialist"
+			add_manpower = -1000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+				producer = GEA
+			}
+			add_stability = 0.05
+			add_to_variable = { GEA_sia_integration_degree = 0.15 }  
+			custom_effect_tooltip = GEA_Recruit_collaborators_among_officers_tt
+		}
+	}
+	GEA_Integre_Siamese_police = {#整合暹罗警察
+		icon = brokencuffs
+
+		allowed = { original_tag = GEA }
+		days_remove = 120
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 30
+		}
+		modifier = {
+			political_power_gain = -0.04
+		}
+		custom_cost_text = GEA_Integre_Siamese_police_tt
+		custom_cost_trigger = {
+			has_political_power > 50
+			command_power > 75
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_Integre_Siamese_police"
+			add_political_power = -50
+			add_command_power = -75
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Integre_Siamese_police"
+			add_ideas = GEA_Integration_of_Siamese_police
+			add_to_variable = { GEA_sia_integration_degree = 0.1 }  
+			custom_effect_tooltip = GEA_deal_with_sahaviriya_tt
+		}
+	}
+	GEA_Expropriation_of_national_enterprises = {#征收企业
+		icon = factories
+		cost = 100
+		allowed = { original_tag = GEA }
+		days_remove = 150
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 30
+		}
+		modifier = {
+			political_power_gain = -0.03
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Expropriation_of_national_enterprises"
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					OR = {
+						state = 823
+						state = 825
+						state = 750
+				 		state = 824
+						state = 882
+				 		state = 756
+				 		state = 822
+				 		state = 289
+				 		state = 831
+				 		state = 749
+				 		state = 724
+				 		state = 999
+						state = 830
+				 		state = 751
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_to_variable = { GEA_sia_integration_degree = 0.1 }  
+			custom_effect_tooltip = GEA_deal_with_sahaviriya_tt
+		}
+	}
+}
+
+GEA_Burma_decisions = {#缅甸决议
+	GEA_Integrate_brm = {
+		icon = eng_trade_unions_demand
+		available = {
+			custom_trigger_tooltip ={
+				tooltip = GEA_Integrate_brm_effect_tt
+				check_variable = { GEA_brm_integration_degree > 0.9 }
+			} 
+		}
+		visible = {
+			GEA = {
+				owns_state = 701
+				owns_state = 790
+				owns_state = 72
+				owns_state = 640
+				owns_state = 288
+			}
+		}
+
+		cost = 75
+		days_remove = 150
+		fire_only_once = yes
+		ai_will_do = { factor = 1000 }
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Integrate_brm target: [From.GetName]"
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					OR = {
+						state = 701
+						state = 790
+						state = 72
+				 		state = 640
+						state = 288
+					}
+				}
+				add_core_of = GEA	
+			}
+		}
+	}
+	GEA_Integrate_military_command_structure = {#整合军事指挥体系
+		icon = police
+		cost = 75
+		available = {
+			BRM = {
+				NOT = {country_exists = no}
+			}
+		}
+		days_remove = 60
+		fire_only_once = yes
+		ai_will_do = { factor = 20 }
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Integrate_military_command_structure"
+			BRM = {
+				every_unit_leader = {
+					limit = { has_trait = politically_connected }
+					set_nationality = GEA
+				}
+			}
+			add_command_power = 50
+			add_to_variable = { GEA_brm_integration_degree = 0.15 }  
+			custom_effect_tooltip = GEA_Integrate_military_command_structure_tt
+		}
+	}
+	GEA_Change_German_governor = {#更换德国人总督
+		icon = ns_eagle
+		cost = 50
+		available = {
+			BRM = {
+				NOT = {country_exists = no}
+			}
+		}
+		days_remove = 60
+		fire_only_once = yes
+		ai_will_do = { factor = 20 }
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Change_German_governor"
+			increase_ruling_party_popularity_by_5 = yes
+			add_stability = 0.05
+			add_political_power = 100
+			add_to_variable = { GEA_brm_integration_degree = 0.10 }  
+			custom_effect_tooltip = GEA_Change_German_governor_tt
+		}
+	}
+	GEA_Restore_Queen_to_throne = {#扶女王重回王位
+		icon = crown
+		cost = 50
+		available = {
+			BRM = {
+				NOT = {country_exists = no}
+			}
+		}
+		days_remove = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 30 }
+		modifier = {
+			political_power_gain = -0.5
+			paternal_autocrat_drift = 0.02
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Restore_Queen_to_throne"
+			add_popularity = {
+				ideology = paternal_autocrat 
+				popularity = 0.04
+			}
+			add_stability = 0.05
+			add_to_variable = { GEA_brm_integration_degree = 0.10 }  
+			custom_effect_tooltip = GEA_Change_German_governor_tt
+		}
+	}
+	GEA_cooperate_with_maharaja = {#与王公合作
+		icon = hand_out
+		cost = 20
+		available = {
+			BRM = {
+				NOT = {country_exists = no}
+			}
+		}
+		days_remove = 100
+		fire_only_once = yes
+		ai_will_do = { factor = 30 }
+		modifier = {
+			political_power_gain = -0.01
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_cooperate_with_maharaja"
+			add_political_power = 40
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_offsite_building = { type = dockyard level = 1 }
+			increase_ruling_party_popularity_by_5 = yes
+			add_to_variable = { GEA_brm_integration_degree = 0.10 }  
+			custom_effect_tooltip = GEA_Change_German_governor_tt
+		}
+	}
+	GEA_Pro_german_propaganda = {#亲德宣传
+		icon = docu
+		cost = 50
+		available = {
+			BRM = {
+				NOT = {country_exists = no}
+			}
+		}
+		days_remove = 300
+		fire_only_once = yes
+		ai_will_do = { factor = 60 }
+		modifier = {
+			political_power_gain = -0.01
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Pro_german_propaganda"
+			add_stability = 0.05
+			increase_ruling_party_popularity_by_5 = yes
+			add_to_variable = { GEA_brm_integration_degree = 0.20 }  
+			custom_effect_tooltip = GEA_Pro_german_propaganda_tt
+		}
+	}
+	GEA_Conscription_of_militia = {#召集忠君派
+		icon = soldierly_discipline
+		available = {
+			OR = {
+				has_stability >  0.6
+				has_war_support > 0.4
+			}
+		}
+		days_re_enable = 360
+		ai_will_do = { factor = 60 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_Conscription_of_militia"
+			division_template = {
+				name = "Royal Bloodsworn Elite"
+				priority = 1
+				division_names_group = BRM_INF_01
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 2 y = 0 }
+					infantry = { x = 2 y = 1 }
+					infantry = { x = 2 y = 2 }
+					artillery_brigade = { x = 3 y = 0 }
+					artillery_brigade = { x = 3 y = 1 }
+					artillery_brigade = { x = 3 y = 2 }
+				}
+				support = {
+					artillery = { x = 0 y = 0 }
+					engineer = { x = 0 y = 1 }
+				}
+			}
+			72 = {
+				create_unit = {
+					division = "name = \"1. Royal Bloodsworn Guard\" division_template = \"Royal Bloodsworn Elite\" start_experience_factor = 1" 
+					owner = BRM
+				}
+			}
+			72 = {
+				create_unit = {
+					division = "name = \"2. Royal Bloodsworn Guard\" division_template = \"Royal Bloodsworn Elite\" start_experience_factor = 1" 
+					owner = BRM
+			}
+		}
+			add_to_variable = { GEA_brm_integration_degree = 0.05 }  
+			custom_effect_tooltip = GEA_Conscription_of_militia_tt
+		}
+	}
+	GEA_Tungsten_ore_development = {#仰光钨矿开发
+		icon = tungsten
+		available = {
+			has_tech = excavation1
+			num_of_civilian_factories_available_for_projects > 4
+		}
+		visible = {
+			owns_state = 288
+			controls_state = 288
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 288
+			}
+		}
+		cost = 30
+		days_remove = 60
+		modifier = {
+			civilian_factory_use = 5
+		}
+		fire_only_once = yes
+		ai_will_do = { factor = 40 }
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Tungsten_ore_development"
+			288 = {
+				add_resource = {
+					type = tungsten
+					amount = 62
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			add_to_variable = { GEA_sia_integration_degree = 0.10 }  
+			custom_effect_tooltip = GEA_Change_German_governor_tt
+		}
+	}
+}
+
+GEA_Philippines_decisions = {#菲律宾决议
+	GEA_Integrate_phi = {
+		icon = eng_trade_unions_demand
+		visible = {
+			GEA = {
+				OR = {
+					owns_state = 623
+					owns_state = 327
+					owns_state = 624
+					owns_state = 625
+					owns_state = 628
+					owns_state = 627
+					owns_state = 626
+				}
+			}
+		}
+		available = {
+			custom_trigger_tooltip ={
+				tooltip = GEA_Integrate_phi_effect_tt
+				check_variable = { GEA_phi_integration_degree > 0.9 }
+			} 
+		}
+		cost = 75
+		days_remove = 180
+		fire_only_once = yes
+		ai_will_do = { factor = 1000 }
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Integrate_phi target: [From.GetName]"
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					OR = {
+						state = 623
+						state = 624
+						state = 625
+						state = 626
+						state = 627
+						state = 628
+						state = 327
+					}
+				}
+				add_core_of = GEA	
+			}
+		}
+	}
+	GEA_Modeled_after_American_model = {#仿照美国模式
+		cost = 50
+		available = {
+			phi = {
+				exists = no
+			}
+		}
+		days_remove = 60
+		fire_only_once = yes
+		ai_will_do = { factor = 60 }
+		modifier = {
+			political_power_gain = -0.01
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Modeled_after_American_model"
+			add_political_power = 50
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					OR = {
+						state = 623
+						state = 624
+						state = 625
+						state = 626
+						state = 627
+						state = 628
+						state = 327
+					}
+				}
+				add_compliance = 30	
+			}
+			add_to_variable = { GEA_phi_integration_degree = 0.50 }  
+			custom_effect_tooltip = GEA_Modeled_after_American_model_tt
+		}
+	}
+	GEA_Building_Manila = {#建设马尼拉
+		icon = cement_mixer
+		cost = 50
+		allowed = { original_tag = GEA }
+		days_remove = 180
+		fire_only_once = yes
+		available = {
+			owns_state = 327
+			num_of_civilian_factories_available_for_projects > 6
+		}
+		ai_will_do = {
+			factor = 60
+		}
+		modifier = {
+			civilian_factory_use = 6
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 327
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Building_Manila"
+			327 = {
+				set_state_category = five
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory 
+					level = 2
+					instant_build = yes 
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes 
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+					province = 10265 
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 3
+					instant_build = yes
+					province = 10265 
+				}
+			}
+			add_to_variable = { GEA_phi_integration_degree = 0.20 }  
+			custom_effect_tooltip = GEA_Building_Manila_tt
+		}
+	}
+	GEA_Fortify_north = {#强化北方防御
+		icon = bunker
+		cost = 20
+		allowed = { original_tag = GEA }
+		days_remove = 120
+		fire_only_once = yes
+		available = {
+			owns_state = 623
+			num_of_civilian_factories_available_for_projects > 2
+		}
+		ai_will_do = {
+			factor = 30
+		}
+		modifier = {
+			civilian_factory_use = 3
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 623
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Fortify_north"
+			623 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+					province = 12213 
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 1
+					instant_build = yes
+					province = 1415
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = 10241 
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = 12213 
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = 4101 
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					instant_build = yes
+					province = 1415
+				}
+			}
+			add_to_variable = { GEA_phi_integration_degree = 0.15 }  
+			custom_effect_tooltip = GEA_Fortify_north_tt
+		}
+	}
+	GEA_Fortify_south = {#建设棉兰老
+		icon = bunker
+		cost = 20
+		allowed = { original_tag = GEA }
+		days_remove = 120
+		fire_only_once = yes
+		available = {
+			owns_state = 627
+			num_of_civilian_factories_available_for_projects > 2
+		}
+		ai_will_do = {
+			factor = 30
+		}
+		modifier = {
+			civilian_factory_use = 3
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 627
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Fortify_south"
+			627 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+					province = 4241
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 4
+					instant_build = yes
+					province = 4241 
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 1293 
+				}
+			}
+			add_to_variable = { GEA_phi_integration_degree = 0.15 }  
+			custom_effect_tooltip = GEA_Fortify_north_tt
+		}
+	}
+}
+
+GEA_Hawaii_decisions = {#夏威夷决议
+	GEA_Integrate_haw = {
+		icon = eng_trade_unions_demand
+		cost = 75
+		visible = {
+			GEA = {
+				OR = {
+					owns_state = 629
+					owns_state = 631
+					owns_state = 632
+					owns_state = 630
+					owns_state = 642
+					owns_state = 726
+				}
+			}
+		}
+
+		cost = 65
+		days_remove = 90
+		fire_only_once = yes
+		ai_will_do = { factor = 1000 }
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Integrate_haw target: [From.GetName]"
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					OR = {
+						state = 630
+						state = 629
+						state = 631
+						state = 632
+						state = 642
+						state = 726
+					}
+				}
+				add_core_of = GEA	
+			}
+		}
+	}
+	GEA_Building_haw = {#强化夏威夷防御
+		icon = bunker
+		cost = 30
+		allowed = { original_tag = GEA }
+		days_remove = 90
+		days_re_enable = 270
+		available = {
+			owns_state = 629
+			num_of_civilian_factories_available_for_projects > 1
+		}
+		ai_will_do = {
+			factor = 60
+		}
+		modifier = {
+			civilian_factory_use = 2
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 629
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Building_haw"
+			629 = {
+				add_building_construction = {
+					type = naval_base
+					level = 1
+					instant_build = yes
+					province = 12021 
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = 12021
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = 4180
+				}
+			}
+		}
+	}
+}
+
+GEA_indochina_war_decisions = {#印支战争
+	GEA_start_naval_blockade = {
+		icon = generic_naval
+		allowed = { original_tag = GEA }
+		visible = { INC = { has_idea = INC_internationale_support } }
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = { factor = 100 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_start_naval_blockade"
+			INC = { country_event = { id = viet.5 days = 3 } }
+		}
+	}
+
+	GEA_assault = {
+		icon = radio
+		allowed = { original_tag = GEA }
+		days_re_enable = 180
+		ai_will_do = { factor = 100 }
+		visible = {
+			has_completed_focus = GEA_prepare_for_assault
+		}
+		custom_cost_text = 2500RIFLE_300sup_40CP
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 2500 }
+			has_equipment = { support_equipment > 300 }
+			command_power > 40 
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_assault"
+			add_timed_idea = {idea = GEA_focus_attack days = 80}
+		}
+	}
+
+	GEA_toxic_gas = {
+		visible = {
+			has_completed_focus = GEA_weapons_of_mass_destruction
+		}
+		icon = bomb
+		cost = 50
+		allowed = { original_tag = GEA }
+		days_re_enable = 180
+		ai_will_do = { factor = 100 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_assault"
+			add_timed_idea = {idea = GEA_gas days = 180}
+		}
+	}
+
+	GEA_Activate_liquid_incendiary_bombs = {
+		visible = {
+			has_completed_focus = GEA_weapons_of_mass_destruction
+		}
+		icon = bomber
+		cost = 50
+		allowed = { original_tag = GEA }
+		days_re_enable = 180
+		ai_will_do = { factor = 100 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_Activate_liquid_incendiary_bombs"
+			add_timed_idea = {idea = GEA_Liquid_combustion_bomb days = 180}
+		}
+	}
+
+	GEA_shelling_on_Saigon = {
+		icon = generic_naval
+		allowed = { original_tag = GEA }
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = { factor = 100 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_shelling_on_Saigon"
+			add_war_support = 0.03
+			INC = { country_event = viet.80 }
+		}
+	}
+
+	GEA_suppress_Tonkin = {
+		icon = generic_ignite_civil_war
+		allowed = { original_tag = GEA }
+		available = { divisions_in_state = { state = 671 size > 2 } }
+		highlight_states = { highlight_state_targets = { state = 671 } }
+		cost = 10
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 200
+				divisions_in_state = {
+					state = 671
+					size > 2
+				}
+			}
+		}
+		days_re_enable = 120
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_suppress_Tonkin"
+			activate_mission = GEA_maintain_Tonkin_control
+		}
+	}
+
+	GEA_maintain_Tonkin_control = {
+		icon = generic_civil_support
+		allowed = { always = no }
+		activation = { always = no }
+		available = { always = no }
+		days_mission_timeout = 120
+		cancel_trigger = { divisions_in_state = { state = 671 size < 3 } }
+		highlight_states = {
+			highlight_state_targets = {
+				state = 671
+			}
+		}
+		cancel_trigger = { NOT = { has_war_with = INC } }
+		is_good = yes
+		complete_effect = { log = "[GetDateText]: [Root.GetName]: Decision GEA_maintain_Tonkin_control" }
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision timeout GEA_maintain_Tonkin_control"
+			custom_effect_tooltip = GEA_GEA_reinforce_police_tt
+			add_to_variable = { var = GEA_indochina_control value = 1 }
+		}
+	}
+
+	GEA_reinforce_police = {
+		icon = oppression
+		available = { has_equipment = { infantry_equipment > 250 } }
+		cost = 25
+		days_remove = 75
+		days_re_enable = 50
+		modifier = { political_power_gain = -0.25 }
+		visible = { INC = { check_variable = { guerilla_activity > 10 } } }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_reinforce_police"
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -250
+			}
+			add_manpower  = -1000
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_reinforce_police"
+			custom_effect_tooltip = GEA_GEA_reinforce_police_tt
+			add_to_variable = { var = GEA_indochina_control value = 1 }
+		}
+	}
+
+	GEA_Zeppelin_decision = {
+		allowed = { original_tag = GEA }
+		days_remove = 35
+		modifier = {
+			political_power_gain = -0.5
+			civilian_factory_use = 2
+		}
+		visible = { has_army_experience > 5 }
+		cost = 20
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_Zeppelin_decision"
+			add_manpower  = -500
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Zeppelin_decision"
+			add_equipment_to_stockpile = {
+				type = transport_plane_equipment_1
+				amount = 10
+			}
+			INC = {
+				add_war_support = -0.1
+			}
+		}
+	}
+
+	GEA_Fernspaher_decision = {
+		allowed = { original_tag = GEA }
+		available = { has_army_experience > 15 }
+		days_remove = 45
+		modifier = {
+			political_power_gain = -0.5
+			command_power_gain = -0.25
+		}
+		visible = { has_army_experience > 10 }
+		cost = 20
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_Fernspaher_decision"
+			add_manpower  = -8000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -250
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Fernspaher_decision"
+			set_technology = { paratroopers = 1 }
+			division_template = {
+				name = "Ostasiatische Fernspaher"
+				priority = 2
+				division_names_group = GEA_PAR_01
+				regiments = {
+					paratrooper = { x = 0 y = 0 }
+					paratrooper = { x = 0 y = 1 }
+					paratrooper = { x = 0 y = 2 }
+					paratrooper = { x = 1 y = 0 }
+					paratrooper = { x = 1 y = 1 }
+					paratrooper = { x = 1 y = 2 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+					recon = { x = 0 y = 1 }
+				}
+			}
+			random_owned_state = {
+				prioritize =  { 336 }
+				create_unit = {
+					division = "name = \"Fernspählehrbrigade 1'\" division_template = \"Ostasiatische Fernspaher\"  start_experience_factor = 0.8"
+					owner = GEA
+				}
+			}
+		}
+	}
+}
+
+GEA_colonial_decisions = {#帝国殖民事务部决议
+	GEA_steal_manpower_from_home = {
+		available = {
+			FROM = {
+				has_manpower > 25000
+			}
+		}
+		visible = {
+			NOT = {has_completed_focus = GEA_outpouring_of_aid}
+		}
+		targets = { GER }
+		target_trigger = {
+			is_subject_of = FROM
+		}
+
+		cost = 100
+		days_re_enable = 365
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_steal_manpower_from_home"
+			add_manpower = 25000
+			hidden_effect = {
+				FROM = {
+					country_event = {
+						id = Ostasien.200
+						days = 1
+					}
+				}
+			}
+		}
+	}
+	GEA_steal_manpower_from_home1 = {
+		available = {
+			FROM = {
+				has_manpower > 25000
+			}
+		}
+		visible = {
+			has_completed_focus = GEA_outpouring_of_aid
+		}
+		targets = { GER }
+		target_trigger = {
+			is_subject_of = FROM
+		}
+
+		cost = 50
+		days_re_enable = 180
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_steal_manpower_from_home1"
+			add_manpower = 25000
+			hidden_effect = {
+				FROM = {
+					country_event = {
+						id = Ostasien.200
+						days = 1
+					}
+				}
+			}
+		}
+	}
+
+	GEA_steal_guns_from_home = {
+		available = {
+			stockpile_ratio = {
+				archetype = infantry_equipment
+				ratio < 0.05
+			}
+			FROM = {
+				has_equipment = { infantry_equipment > 2499 }
+			}
+		}
+		targets = { GER }
+		target_trigger = {
+			is_subject_of = FROM
+		}
+		visible = {
+			NOT = {has_completed_focus = GEA_outpouring_of_aid}
+		}
+		cost = 50
+		days_re_enable = 365
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_steal_guns_from_home"
+			custom_effect_tooltip = GEA_receive_guns_from_home
+			hidden_effect = {
+				GER = {
+					country_event = {
+						id = Ostasien.201
+						days = 1
+					}
+				}
+			}
+		}
+	}
+
+	GEA_steal_guns_from_home1 = {
+		available = {
+			FROM = {
+				has_equipment = { infantry_equipment > 2499 }
+			}
+		}
+		visible = {
+			has_completed_focus = GEA_outpouring_of_aid
+		}
+		targets = { GER }
+		target_trigger = {
+			is_subject_of = FROM
+		}
+		cost = 25
+		days_re_enable = 180
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_steal_guns_from_home1"
+			custom_effect_tooltip = GEA_receive_guns_from_home
+			hidden_effect = {
+				GER = {
+					country_event = {
+						id = Ostasien.201
+						days = 1
+					}
+				}
+			}
+		}
+	}
+
+	GEA_steal_money_from_home = {
+		visible = {
+			has_completed_focus = GEA_outpouring_of_aid
+		}
+		targets = { GER }
+		target_trigger = {
+			is_subject_of = FROM
+		}
+		cost = 25
+		days_re_enable = 180
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_steal_money_from_home"
+			add_political_power = 100
+			GER = {
+				add_political_power = -100
+			}
+		}
+	}
+	GEA_ask_for_artillery = {
+		available = {
+			FROM = {
+				has_equipment = {
+					artillery_equipment > 300
+				}
+			}
+		}
+
+		targets = { GER }
+		target_trigger = {
+			is_subject_of = FROM
+		}
+		visible = {
+			has_completed_focus = GEA_outpouring_of_aid
+		}
+		cost = 50
+		days_re_enable = 180
+		days_remove = 60
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_ask_for_artillery"
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 300
+				producer = GER
+			}			
+			hidden_effect = {
+				FROM = {
+					country_event = {
+						id = Ostasien.201
+						days = 1
+					}
+				}
+			}
+		}
+	}
+	GEA_ask_for_truck = {
+		available = {
+			FROM = {
+				has_equipment = {
+					motorized_equipment > 300
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = GEA_outpouring_of_aid
+		}
+		targets = { GER }
+		target_trigger = {
+			is_subject_of = FROM
+		}
+
+		cost = 50
+		days_re_enable = 180
+		days_remove = 60
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_ask_for_truck"
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 300
+				producer = GER
+			}			
+			hidden_effect = {
+				FROM = {
+					country_event = {
+						id = Ostasien.201
+						days = 1
+					}
+				}
+			}
+		}
+	}
+	GEA_Demand_supplies = {
+		available = {
+			FROM = {
+				has_equipment = {
+					support_equipment > 499
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = GEA_outpouring_of_aid
+		}
+		targets = { GER }
+		target_trigger = {
+			is_subject_of = FROM
+		}
+
+		cost = 50
+		days_re_enable = 180
+		days_remove = 60
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Demand_supplies"
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 500
+				producer = GER
+			}			
+			hidden_effect = {
+				FROM = {
+					country_event = {
+						id = Ostasien.201
+						days = 1
+					}
+				}
+			}
+		}
+	}
+	GEA_Request_bureaucrat = {
+		visible = {
+			has_completed_focus = GEA_outpouring_of_aid
+		}
+		available = {
+			owns_state = 336
+		}
+		targets = { GER }
+		target_trigger = {
+			is_subject_of = FROM
+		}
+		cost = 20
+		days_re_enable = 200
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_Request_bureaucrat"
+			increase_ruling_party_popularity_by_5 = yes
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_command_power = 30
+		}
+	}
+	GEA_Request_field_corps = {
+		visible = {
+			has_completed_focus = GEA_outpouring_of_aid
+		}
+		targets = { GER }
+		target_trigger = {
+			is_subject_of = FROM
+		}
+		days_remove = 60
+		custom_cost_text = GEA_Request_field_corps_cost_tt
+		custom_cost_trigger = {
+			command_power > 50
+		}
+		days_re_enable = 360
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_Request_field_corps"
+			add_command_power = -50
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Request_field_corps"
+			division_template = {
+				name = "Wie infanterie"
+				division_names_group = GEA_INF_01
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 2 y = 0 }
+					infantry = { x = 2 y = 1 }
+					infantry = { x = 2 y = 2 }
+					artillery_brigade = { x = 3 y = 0}
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+					artillery = { x = 0 y = 1 }
+					recon = { x = 0 y = 2 }
+				}
+			}
+			336 = {
+				create_unit = {
+					division = "division_template = \"Wie infanterie\" start_experience_factor = 2"
+					owner = GEA
+				}
+			}
+		}
+	}
+}
+
+GEA_focus_china_decisions = {#支援八省
+	GEA_give_guns_to_lep = {
+		visible = {
+			has_completed_focus = GEA_second_expedition_to_China
+			country_exists = FROM
+			NOT = {
+				LEP = {
+					has_global_flag = LEP_victory
+				}
+			}
+		}
+		available = {
+			has_equipment = { infantry_equipment > 2499 }
+		}
+
+		targets = { LEP }
+		target_root_trigger = { has_completed_focus = GEA_second_expedition_to_China }
+
+		cost = 5
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_give_guns_to_lep"
+			custom_effect_tooltip = GEA_try_to_give_guns_to_LEP_tooltip
+			hidden_effect = {
+				FROM = { country_event = Ostasien.202 }
+			}
+		}
+	}
+
+	GEA_give_factories_to_lep = {
+		visible = {
+			country_exists = FROM
+			has_completed_focus = GEA_second_expedition_to_China
+			NOT = {
+				LEP = {
+					has_global_flag = LEP_victory
+				}
+			}
+		}
+		available = {
+			num_of_available_civilian_factories > 4
+			NOT = { has_country_flag = GEA_no_factory_lease }
+		}
+
+		targets = { LEP }
+		target_root_trigger = { has_completed_focus = GEA_second_expedition_to_China }
+
+		cost = 5
+		days_remove = 120
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 4
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_give_factories_to_lep"
+			custom_effect_tooltip = GEA_try_to_give_factories_to_LEP_tooltip
+			hidden_effect = {
+				FROM = { country_event = Ostasien.203 }
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_give_factories_to_lep"
+			add_war_support = 0.1
+			add_political_power = 100
+		}
+	}
+	GEA_Reaccept_lep_ports = {
+		visible = {
+			country_exists = LEP
+			has_completed_focus = GEA_second_expedition_to_China
+			LEP = {
+				has_global_flag = LEP_victory
+			}
+		}
+		available = {
+			owns_state = 803
+			owns_state = 1075
+			owns_state = 802
+		}
+		fire_only_once = yes
+		cost = 30
+		days_remove = 30
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Reaccept_lep_ports"
+
+			add_state_core = 803
+			add_state_core = 1075
+			add_state_core = 802
+		}
+	}
+	GEA_Take_over_embassy_city = {
+		visible = {
+			NOT = {
+				country_exists = LEC
+			}
+			has_completed_focus = GEA_Dissolution_of_lec
+		}
+		available = {
+			owns_state = 743
+			owns_state = 609
+			owns_state = 746
+			owns_state = 747
+			owns_state = 801
+			owns_state = 326
+		}
+		cost = 30
+		days_remove = 30
+		fire_only_once = yes
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Take_over_embassy_city"
+
+			add_state_core = 609
+			add_state_core = 743
+			add_state_core = 747
+			add_state_core = 746
+			add_state_core = 801
+			add_state_core = 326
+		}
+	}
+	GEA_Takeover_of_Macau = {
+		visible = {
+			NOT = {
+				POR = {
+					owns_state = 729
+				}
+			}
+			has_completed_focus = GEA_Capture_of_Macau
+		}
+		available = {
+			owns_state = 729
+		}
+		cost = 10
+		days_remove = 14
+		fire_only_once = yes
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Takeover_of_Macau"
+			add_state_core = 729
+		}
+	}
+	GEA_Take_over_Weihaiwei_and_Qingdao_again = {
+		visible = {
+			NOT = {
+				owns_state = 996
+				owns_state = 744
+			}
+		}
+		available = {
+			owns_state = 996
+			owns_state = 744
+		}
+		cost = 10
+		days_remove = 14
+		fire_only_once = yes
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Take_over_Weihaiwei_and_Qingdao_again"
+
+			add_state_core = 996
+			add_state_core = 744
+		}
+	}
+	GEA_Take_over_Guangzhou = {
+		visible = {
+			NOT = {
+				owns_state = 592
+			}
+		}
+		available = {
+			owns_state = 592
+		}
+		cost = 10
+		days_remove = 14
+		fire_only_once = yes
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Take_over_Guangzhou"
+			add_state_core = 592
+		}
+	}
+	GEA_Take_over_dalian = {
+		visible = {
+			NOT = {
+				owns_state =745
+			}
+		}
+		available = {
+			owns_state = 745
+		}
+		cost = 10
+		days_remove = 14
+		fire_only_once = yes
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Take_over_dalian"
+			add_state_core = 745
+		}
+	}
+	GEA_Smuggling_arms_to_warlords = {
+		visible = {
+			has_completed_focus = GEA_invest_china
+		}
+		days_remove = 30
+		days_re_enable = 120
+		custom_cost_text = 1000RIFLE
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 1000 }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_Smuggling_arms_to_warlords"
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+				producer = GEA
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Smuggling_arms_to_warlords"
+			add_political_power = 75
+			add_war_support = 0.03
+		}
+	}
+	GEA_Buy_labor = {
+		visible = {
+			has_completed_focus = GEA_invest_china
+		}
+		cost = 50
+		days_remove = 30
+		days_re_enable = 120
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Buy_labor"
+			add_manpower = 5000
+		}
+	}
+	GEA_Drug_smuggling = {
+		visible = {
+			has_completed_focus = GEA_invest_china
+		}
+		days_remove = 120
+		days_re_enable = 120
+		modifier = {
+			consumer_goods_factor = -0.2
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_Drug_smuggling"
+			add_stability = -0.05
+			add_political_power = -75
+		}
+	}
+}
+
+GEA_josias_decisions = {#约西亚斯乞讨决议
+	GEA_lose_influence = {     
+		activation = { NOT = { has_country_flag = GEA_finish_mission_1 }}                            
+		available = {                           
+			OR = {
+				has_country_flag = GEA_finish_mission_1
+				has_country_flag = GEA_finish_mission_2
+				has_country_flag = GEA_finish_mission_3
+				has_country_flag = GEA_finish_mission_4
+				has_country_flag = GEA_finish_mission_5
+				has_country_flag = GEA_finish_mission_6
+			}
+		}
+		priority = 100
+		is_good = no                        
+	
+		days_mission_timeout = 90
+		timeout_effect = {                      
+			add_to_variable = { GEA_josias_effect_political = -0.1 }   
+			add_to_variable = { GEA_josias_effect_economy = -0.1 }    
+			add_stability = -0.05  
+			custom_effect_tooltip = GEA_lose_influence_tt1
+		}
+		complete_effect = {                     
+		}
+	}
+	GEA_meet_with_politicians = {#与政要喝一杯
+		icon = GFX_decision_champagne_glass	
+		cost = 50
+		days_remove = 7
+		days_re_enable = 45
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_meet_with_politicians"
+			set_country_flag = GEA_finish_mission_1
+			hidden_effect = {
+				country_event = {
+				id = Ostasien.10000
+				days = 80
+				}
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_meet_with_politicians"
+			add_to_variable = { GEA_josias_effect_political = 0.10 }
+			custom_effect_tooltip = GEA_meet_with_politicians_tt
+		}
+	}
+	GEA_meet_with_colonial_department = {#渗透殖民事务部
+		icon = GFX_decision_colonial_department
+		cost = 100
+		days_remove = 7
+		days_re_enable = 90
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_meet_with_colonial_department"
+			set_country_flag = GEA_finish_mission_2
+			hidden_effect = {
+				country_event = {
+				id = Ostasien.10001
+				days = 80
+				}
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_meet_with_colonial_department"
+			add_to_variable = { GEA_josias_effect_political = 0.25 }
+			add_stability = 0.05
+			custom_effect_tooltip = GEA_meet_with_colonial_department_tt
+		}
+	}
+	GEA_meet_with_army = {#见见军中老友
+		icon = GFX_decision_GEA_army
+		days_remove = 7
+		days_re_enable = 90
+
+		custom_cost_text = GEA_meet_with_army_cost_tt
+		custom_cost_trigger = {
+			has_political_power > 25
+			command_power > 25 
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_meet_with_army"
+			set_country_flag = GEA_finish_mission_3
+			hidden_effect = {
+				add_command_power = -25
+				add_political_power = -25
+				country_event = {
+					id = Ostasien.10002
+					days = 80
+					}
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_meet_with_army"
+			add_to_variable = { GEA_josias_effect_political = 0.125 }
+			custom_effect_tooltip = GEA_meet_with_army_tt
+		}
+	}
+	GEA_meet_with_oligarch = {#跟寡头的商业协议
+		icon = GFX_decision_generic_agreement	
+		cost = 75
+		days_remove = 7
+		days_re_enable = 90
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_meet_with_oligarch"
+			set_country_flag = GEA_finish_mission_4
+			hidden_effect = {
+				country_event = {
+				id = Ostasien.10003
+				days = 80
+				}
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_meet_with_oligarch"
+			add_to_variable = { GEA_josias_effect_economy = 0.125 }
+			custom_effect_tooltip = GEA_meet_with_oligarch_tt
+			add_timed_idea = {idea = GEA_transfer_of_benefit days = 40}
+		}
+	}
+	GEA_acquiesce_in_overexploitation = {#默许过度开采
+		icon = GFX_decision_GEA_overexploitation
+		cost = 100
+		days_remove = 7
+		days_re_enable = 60
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_acquiesce_in_overexploitation"
+			set_country_flag = GEA_finish_mission_5
+			hidden_effect = {
+				country_event = {
+				id = Ostasien.10004
+				days = 80
+				}
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_acquiesce_in_overexploitation"
+			add_to_variable = { GEA_josias_effect_economy = 0.20 }
+			custom_effect_tooltip = GEA_acquiesce_in_overexploitation_tt
+			add_timed_idea = {idea = GEA_mine days = 90}
+		}
+	}
+	GEA_ask_for_manpower = {#“借调”人员
+		icon = GFX_decision_soldierly_discipline
+		days_remove = 7
+		days_re_enable = 90
+
+		custom_cost_text = GEA_ask_for_manpower_cost_tt
+		custom_cost_trigger = {
+			check_variable = { GEA_josias_effect_political > 0.075 }
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_ask_for_manpower"
+			add_to_variable = { GEA_josias_effect_political = -0.075 }
+			add_manpower = 3000
+			custom_effect_tooltip = GEA_ask_for_manpower_tt
+		}
+	}
+	GEA_ask_for_ordnance = {#“特批”军火
+		icon = GFX_decision_generic_motorized
+		days_remove = 7
+		days_re_enable = 120
+
+		custom_cost_text = GEA_ask_for_ordnance_cost_tt
+		custom_cost_trigger = {
+			check_variable = { GEA_josias_effect_political > 0.15 }
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_ask_for_ordnancer"
+			add_to_variable = { GEA_josias_effect_political = -0.15 }
+			random_list = { 50 = { 	add_equipment_to_stockpile = 
+									  { type = infantry_equipment
+										amount = 3500
+										producer = GER} } 
+							30 = { 	add_equipment_to_stockpile = 
+									  { type = artillery_equipment
+										amount = 300
+										producer = GER} } 
+							20 = { 	add_equipment_to_stockpile = 
+									  { type = support_equipment
+										amount = 500
+										producer = GER} }  }
+			custom_effect_tooltip = GEA_ask_for_ordnance_tt
+		}
+	}
+	GEA_loyal_officer = {#“提拔”官员
+		icon = GFX_decision_binoculars
+		days_remove = 7
+		days_re_enable = 90
+
+		custom_cost_text = GEA_loyal_officer_cost_tt
+		custom_cost_trigger = {
+			check_variable = { GEA_josias_effect_political > 0.1 }
+		}
+
+		visible = {
+			has_completed_focus = GEA_appointment_of_loyal_officers
+		}		
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_loyal_officer"
+			add_to_variable = { GEA_josias_effect_political = -0.10 }
+			add_political_power = 50
+			custom_effect_tooltip = GEA_loyal_officer_tt
+			add_timed_idea = {idea = GEA_officer days = 90}
+		}
+	}
+	GEA_attract_oligarchic_investment = {#跟寡头的商业协议
+		icon = GFX_decision_give_cash
+		days_remove = 7
+		days_re_enable = 90
+
+		custom_cost_text = GEA_attract_oligarchic_investment_cost_tt
+		custom_cost_trigger = {
+			check_variable = { GEA_josias_effect_economy > 0.15 }
+		}
+
+		visible = {
+			has_completed_focus = GEA_connection_with_companies
+		}		
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_attract_oligarchic_investment"
+			add_to_variable = { GEA_josias_effect_economy = -0.15 }
+			custom_effect_tooltip = GEA_attract_oligarchic_investment_tt
+			add_timed_idea = {idea = GEA_expand_investment days = 90}
+		}
+	}
+	GEA_build_railway = {#联络东亚联合铁路
+		icon = GFX_decision_railroad
+		days_remove = 7
+		days_re_enable = 120
+
+		custom_cost_text = GEA_build_railway_cost_tt
+		custom_cost_trigger = {
+			check_variable = { GEA_josias_effect_economy > 0.125 }
+		}
+
+		visible = {
+			has_completed_focus = GEA_connection_with_companies
+		}		
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_build_railway"
+			add_to_variable = { GEA_josias_effect_economy = -0.125 }
+			custom_effect_tooltip = GEA_build_railway_tt
+			add_timed_idea = {idea = GEA_railway days = 90}
+		}
+	}
+	GEA_get_donations = {#获取捐赠
+		icon = GFX_decision_factories
+		days_remove = 14
+		days_re_enable = 10
+
+		custom_cost_text = GEA_get_donations_cost_tt
+		custom_cost_trigger = {
+			check_variable = { GEA_josias_effect_economy > 0.20 }
+		}
+
+		visible = {
+			has_completed_focus = GEA_connection_with_companies
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_get_donations"
+			add_to_variable = { GEA_josias_effect_economy = -0.2 }
+			random_list = { 40 = { add_offsite_building = { type = industrial_complex level = 1 }} 
+  							30 = { add_offsite_building = { type = arms_factory  level = 1 }} 
+  							30 = { add_offsite_building = { type = dockyard  level = 1 }}}
+			custom_effect_tooltip = GEA_get_donations_tt
+		}
+	}
+	GEA_meet_maf = {#勾搭新殖民集团
+		icon = GFX_decision_GEA_Heydrich
+		cost = 30
+		fire_only_once = yes
+		ai_will_do = {
+			base = 200
+		}
+
+		visible = {
+			has_completed_focus = GEA_friends_in_MAF
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_meet_maf"
+			add_to_variable = { GEA_josias_effect_economy = 0.05 }
+			add_to_variable = { GEA_josias_effect_political = 0.05 }
+			custom_effect_tooltip = GEA_meet_maf_tt
+			set_country_flag = GEA_cooperate_with_maf
+			unlock_decision_tooltip = GEA_cover_financial_holes
+			unlock_decision_tooltip = GEA_get_rifle
+			unlock_decision_tooltip = GEA_get_slave
+			unlock_decision_tooltip = GEA_get_mine
+		}
+	}
+	GEA_cover_financial_holes = {#掩盖财政漏洞
+		icon = GFX_decision_investigation
+		cost = 100
+		days_re_enable = 360
+
+		visible = {
+			has_country_flag = GEA_cooperate_with_maf
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_cover_financial_holes"
+			set_country_flag = GEA_finish_mission_6
+			hidden_effect = {
+				country_event = {
+				id = Ostasien.10005
+				days = 80
+				}
+			}
+			add_to_variable = { GEA_josias_effect_economy = 0.15 }
+			add_to_variable = { GEA_josias_effect_political = 0.075 }
+			custom_effect_tooltip = GEA_cover_financial_holes_tt
+			MAF = {
+				add_political_power = 100
+			}
+		}
+	}
+	GEA_get_rifle = {#走私低价军火
+		icon = GFX_decision_hand_grab
+		days_re_enable = 180
+
+		visible = {
+			has_country_flag = GEA_cooperate_with_maf
+		}
+
+		custom_cost_text = GEA_get_rifle_cost_tt
+		custom_cost_trigger = {
+			has_political_power > 30
+			check_variable = { GEA_josias_effect_political > 0.1 }
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_get_rifle"
+			add_political_power = -30
+			add_to_variable = { GEA_josias_effect_political = -0.10 }
+			custom_effect_tooltip = GEA_get_rifle_tt
+			MAF = {
+				add_political_power = 30
+			}
+			add_equipment_to_stockpile = 
+				{ type = infantry_equipment
+				amount = 3000
+				producer = MAF
+			}
+		}
+	}	
+	GEA_get_slave = {#弄些奴隶
+		icon = GFX_decision_slave
+		days_re_enable = 180
+
+		visible = {
+			has_country_flag = GEA_cooperate_with_maf
+		}
+
+		custom_cost_text = GEA_get_slave_cost_tt
+		custom_cost_trigger = {
+			has_political_power > 20
+			check_variable = { GEA_josias_effect_political > 0.1 }
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_get_slave"
+			add_political_power = -20
+			add_to_variable = { GEA_josias_effect_political = -0.10 }
+			custom_effect_tooltip = GEA_get_rifle_tt
+			MAF = {
+				add_political_power = 20
+			}
+			add_manpower = 5000
+		}
+	}
+	GEA_get_mine = {#让渡矿井开采权
+		icon = GFX_decision_GEA_overexploitation
+		days_re_enable = 180
+
+		visible = {
+			has_country_flag = GEA_cooperate_with_maf
+		}
+		ai_will_do = {
+			base = 0
+		}		
+		custom_cost_text = GEA_get_mine_cost_tt
+		custom_cost_trigger = {
+			has_political_power > 100
+			check_variable = { GEA_josias_effect_political > 0.2 }
+			check_variable = { GEA_josias_effect_economy > 0.1 }
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_get_mine"
+			add_political_power = -100
+			add_to_variable = { GEA_josias_effect_political = -0.20 }
+			add_to_variable = { GEA_josias_effect_economy = -0.10 }
+			custom_effect_tooltip = GEA_get_mine_tt
+			MAF = {
+				add_political_power = 100
+				add_stability = 0.1
+				give_resource_rights = {
+					state = 539
+					receiver = GEA
+					}
+				give_resource_rights = {
+					state = 899
+					receiver = GEA
+					}
+				hidden_effect = {
+					add_offsite_building = { type = arms_factory level = 1 }
+				}
+			}
+		}
+	}
+}
+
+political_actions = {
+	GEA_schorner_decision = {
+		allowed = { tag = GER }
+		available = {
+			owns_state = 282
+			owns_state = 527
+			owns_state = 408
+			owns_state = 716
+			owns_state = 608
+			owns_state = 597
+			owns_state = 613
+			owns_state = 592
+			owns_state = 605
+			owns_state = 325
+			owns_state = 1072
+			owns_state = 604
+			owns_state = 322
+			owns_state = 288
+			owns_state = 289
+			owns_state = 985
+			owns_state = 327
+			owns_state = 439
+			owns_state = 431
+			owns_state = 427
+			owns_state = 1020
+			owns_state = 743
+		}
+		visible = {
+			has_completed_focus = GEA_my_ambitions
+		}
+		cost = 0
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_schorner_decision"
+			set_cosmetic_tag = GEA_schorner
+			GER = {
+				set_autonomy = {
+					target = GEA
+					autonomy_state = autonomy_free
+				}
+			}
+		}
+	}
+	GEA_take_east_asian_navy = {
+		icon = generic_naval
+		allowed = { tag = GER }
+		available = {
+			has_war = no
+			GEA = { has_war = no }
+		}
+		visible = {
+			GEA = {
+				is_subject_of = ROOT
+				is_ai = yes
+			}
+		}
+		cost = 0
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_take_east_asian_navy"
+			GEA = { transfer_navy = { target = ROOT } }
+		}
+	}
+	GEA_work_until_dead = {
+		icon = killgermoney
+		allowed = { tag = GEA }
+		visible = {
+			has_completed_focus = GEA_everyone_in_factory
+		}
+		cost = 50
+		days_remove = 120
+		days_re_enable = 180
+		modifier = {
+			production_speed_industrial_complex_factor = 0.05
+			production_speed_arms_factory_factor = 0.1
+			production_speed_dockyard_factor = 0.1
+			industrial_capacity_factory = 0.1
+			monthly_population = -0.05
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GEA_work_until_dead"
+			add_manpower = -2000
+		}
+	}
+	GEA_operation_valkyrie = {
+		icon = colonial_department
+		allowed = { tag = GEA }
+		visible = {
+			has_completed_focus = GEA_operation_Valkyrie
+		}
+		custom_cost_text = 5000RIFLE2000support
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 5000 }
+			has_equipment = { support_equipment > 2000 }
+			command_power > 50
+		}
+		days_remove = 180
+		days_re_enable = 180
+		modifier = {
+			breakthrough_factor = 0.15
+			no_supply_grace = 24
+			motorized_attack_factor = 0.15
+			army_armor_attack_factor = 0.1
+			army_speed_factor = 0.15
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_operation_valkyrie"
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -5000
+				producer = GEA
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = -2000
+				producer = GEA
+			}
+			add_command_power = -50
+		}
+	}
+	GEA_operation_Cerberus = {
+		icon = colonial_department
+		allowed = { tag = GEA }
+		visible = {
+			has_completed_focus = GEA_operation_cerberus
+		}
+		custom_cost_text = 5000RIFLE2000support
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 5000 }
+			has_equipment = { support_equipment > 2000 }
+			command_power > 50
+		}
+		days_remove = 180
+		days_re_enable = 180
+		modifier = {
+			army_org_factor = 0.05
+			breakthrough_factor = 0.1
+			army_attack_factor = 0.05
+			army_infantry_attack_factor = 0.1
+			army_artillery_attack_factor = 0.1
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_operation_Cerberus"
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -5000
+				producer = GEA
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = -2000
+				producer = GEA
+			}
+			add_command_power = -50
+		}
+	}
+	GEA_Operation_falkenhayn = {
+		icon = colonial_department
+		allowed = { tag = GEA }
+		visible = {
+			has_completed_focus = GEA_Operation_Falkenhayn
+		}
+		custom_cost_text = 5000RIFLE2000support
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 5000 }
+			has_equipment = { support_equipment > 2000 }
+			command_power > 50
+		}
+		days_remove = 180
+		days_re_enable = 180
+		modifier = {
+			army_org_factor = 0.1
+			army_attack_factor = 0.1
+			army_morale_factor = 0.2
+			planning_speed = 0.1
+			max_planning = 0.15
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_Operation_falkenhayn"
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -5000
+				producer = GEA
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = -2000
+				producer = GEA
+			}
+			add_command_power = -50
+		}
+	}
+	GEA_Operation_frederick = {
+		icon = colonial_department
+		allowed = { tag = GEA }
+		visible = {
+			has_completed_focus = GEA_Operation_Frederick
+		}
+		custom_cost_text = 5000RIFLE2000support
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 5000 }
+			has_equipment = { support_equipment > 2000 }
+			command_power > 50
+		}
+		days_remove = 180
+		days_re_enable = 180
+		modifier = {
+			army_org_factor = 0.15
+			army_attack_factor = 0.1
+			army_defence_factor = 0.1
+			army_morale_factor = 0.1
+			land_reinforce_rate = 0.075
+			army_bonus_air_superiority_factor = 0.10
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GEA_Operation_frederick"
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -5000
+				producer = GEA
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = -2000
+				producer = GEA
+			}
+			add_command_power = -50
+		}
+	}
+}

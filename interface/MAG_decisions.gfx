@@ -1,0 +1,14 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_decision_MAG_politics_decisions"
+		texturefile = "gfx/interface/decisions/MAG_politics_decisions.png"
+	}
+	spriteType = {
+		name = "GFX_decision_heydrich_decision"
+		texturefile = "gfx/interface/decisions/heydrich_decision.png"
+	}
+	spriteType = {
+		name = "GFX_decision_Knife"
+		texturefile = "gfx/interface/decisions/Knife.png"
+	}
+}

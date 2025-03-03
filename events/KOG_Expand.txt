@@ -1,0 +1,1455 @@
+﻿
+add_namespace = yun_kogexpand
+
+country_event = {
+	id = yun_kogexpand.1
+	title = yun_kogexpand.1.t 
+	desc = yun_kogexpand.1.d 
+	picture = KOG_event_niger_congo
+
+	is_triggered_only = yes
+	
+	option = {
+		name = yun_kogexpand.1.a
+		ai_will_do = {
+			factor = 100
+		}
+		add_ideas = idea_bantu_wild_ambition
+	}
+	option = {
+		name = yun_kogexpand.1.b
+		ai_will_do = {
+			factor = 0
+		}
+			set_country_flag = KOG_accept_bantu_dream
+			add_ideas = idea_bantu_wild_ambition
+			hidden_effect = {
+				country_event = {
+					id = yun_kogexpand.2
+					days = 15
+				}
+			}				
+	}
+}
+
+country_event = {
+	id = yun_kogexpand.2
+	title = yun_kogexpand.2.t 
+	desc = yun_kogexpand.2.d 
+	picture = GFX_report_event_KIK_mathenge
+
+	is_triggered_only = yes
+	
+	option = {
+		name = yun_kogexpand.2.a
+	}
+	option = {
+		name = yun_kogexpand.2.b
+		add_ideas = idea_mathengeism_influence
+	}
+}
+
+country_event = {
+	id = yun_kogexpand.3
+	title = yun_kogexpand.3.t 
+	desc = yun_kogexpand.3.d 
+	picture = GFX_report_event_african_diaspora
+
+	is_triggered_only = yes
+	
+	option = {
+		name = yun_kogexpand.3.a
+		add_ideas = idea_king_of_sa_af
+	}
+	option = {
+		name = yun_kogexpand.3.b
+		set_cosmetic_tag = KOG_BRA_United2
+		add_ideas = idea_king_of_sa_af
+	}
+	option = {
+		name = yun_kogexpand.3.c
+		trigger = {
+			has_completed_focus = KOG_Niger_Congo_Family
+		}
+		set_cosmetic_tag = KOG_BRA_United2
+		add_ideas = idea_king_of_sa_af
+		every_state = {
+			limit = { 
+				OR = { is_on_continent = africa  is_on_continent = south_america }
+			}
+			add_core_of = ROOT
+		}	
+	}	
+}
+
+country_event = { #筹备卡宾达集会
+	id = yun_kogexpand.4
+	title = yun_kogexpand.4.t 
+	desc = yun_kogexpand.4.d 
+	picture = KOG_POR_cabinda_city
+
+	is_triggered_only = yes
+	
+	option = { #发送邀请
+		name = yun_kogexpand.4.a
+		POR = { country_event = yun_kogexpand.5 }
+		BRA = { country_event = yun_kogexpand.5 }
+	}
+}
+
+country_event = { #邀请函
+	id = yun_kogexpand.5
+	title = yun_kogexpand.5.t 
+	desc = yun_kogexpand.5.d 
+	picture = KOG_POR_cabinda_city
+
+	is_triggered_only = yes
+	
+	option = {
+		name = yun_kogexpand.5.a
+		ai_chance = { 
+			factor = 50 
+			modifier = { 
+				factor = 100
+				OR = { 
+					has_government = national_populist
+					has_government = paternal_autocrat
+					has_government = social_conservative
+					has_government = authoritarian_democrat
+				}
+			}
+		}
+		if = {
+			limit = { tag = BRA }
+			KOG = {
+				country_event = {
+					id = yun_kogexpand.9
+					days = 5
+				}			
+			}
+		}	
+		else = {
+			KOG = {
+				country_event = {
+					id = yun_kogexpand.6
+					days = 3
+				}			
+			}			
+		}
+	}
+
+	option = {
+		name = yun_kogexpand.5.b
+		trigger = { tag = BRA }
+		ai_chance = { factor = 50 }
+		KOG = {
+			country_event = {
+				id = yun_kogexpand.7
+				days = 5
+			}	
+		}		
+	}
+}
+
+country_event = { #葡萄牙接受邀请
+	id = yun_kogexpand.6
+	title = yun_kogexpand.6.t 
+	desc = yun_kogexpand.6.d
+	picture = KOG_POR_duarte
+
+	is_triggered_only = yes
+	
+	option = {
+		name = yun_kogexpand.6.a
+		add_opinion_modifier = { target = POR modifier = KR_approves_of_govt }
+		POR = { add_opinion_modifier = { target = KOG modifier = KR_approves_of_govt } }
+	}
+}
+
+country_event = { #巴西拒绝参加集会
+	id = yun_kogexpand.7
+	title = yun_kogexpand.7.t 
+	desc = yun_kogexpand.7.d
+	picture = GFX_report_event_BRA_riodejaneiro
+
+	is_triggered_only = yes
+	
+	option = {
+		name = yun_kogexpand.7.a
+		add_opinion_modifier = { target = BRA modifier = KR_disapproves_of_govt }
+		POR = { add_opinion_modifier = { target = BRA modifier = KR_disapproves_of_govt } }
+		country_event = {
+			id = yun_kogexpand.8
+			days = 14
+		}
+	}
+}
+
+country_event = { #没有巴西的集会圆满成功
+	id = yun_kogexpand.8
+	title = yun_kogexpand.8.t 
+	desc = yun_kogexpand.8.d 
+	picture = GFX_Portugal_312
+
+	is_triggered_only = yes
+	
+	option = {
+		name = yun_kogexpand.8.a
+		add_opinion_modifier = { target = POR modifier = KR_close_allies }
+		POR = { 
+			add_opinion_modifier = { target = KOG modifier = KR_close_allies }
+			create_faction = "葡语国家共同体" 
+			add_to_faction = KOG
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = BRA
+		}
+	}
+}
+
+country_event = { #巴西同意参加集会
+	id = yun_kogexpand.9
+	title = yun_kogexpand.9.t 
+	desc = yun_kogexpand.9.d
+	picture = GFX_report_event_BRA_riodejaneiro
+
+	is_triggered_only = yes
+	
+	option = {
+		name = yun_kogexpand.9.a
+		add_opinion_modifier = { target = BRA modifier = small_increase }
+		BRA = { 
+			add_opinion_modifier = { target = KOG modifier = KR_pleased } 
+			add_opinion_modifier = { target = POR modifier = KR_pleased } 
+		}
+		country_event = {
+			id = yun_kogexpand.10
+			days = 14
+		}
+	}
+}
+
+country_event = { #卡宾达集会：开幕式
+	id = yun_kogexpand.10
+	title = yun_kogexpand.10.t 
+	desc = yun_kogexpand.10.d
+	picture = KOG_POR_cabinda_city
+
+	is_triggered_only = yes
+	
+	option = {
+		name = yun_kogexpand.10.a
+		POR = { add_political_power = 50 }
+		BRA = { add_political_power = 50 }
+		add_political_power = 50
+		country_event = {
+			id = yun_kogexpand.11
+			days = 1
+		}
+	}
+}
+
+country_event = { #卡宾达集会：文化合作
+	id = yun_kogexpand.11
+	title = yun_kogexpand.11.t 
+	desc = yun_kogexpand.11.d 
+
+	is_triggered_only = yes
+	
+	option = {
+		name = yun_kogexpand.11.a
+		POR = { 
+			add_political_power = 50 
+			add_manpower = 4500
+		}
+		BRA = {
+			add_political_power = 50 
+			add_manpower = 4500
+		}
+		add_political_power = 50
+		add_manpower = 4500
+		country_event = {
+			id = yun_kogexpand.12
+			days = 1
+		}
+	}
+}
+
+country_event = { #卡宾达集会：经济合作
+	id = yun_kogexpand.12
+	title = yun_kogexpand.12.t 
+	desc = yun_kogexpand.12.d 
+
+	is_triggered_only = yes
+	
+	option = {
+		name = yun_kogexpand.12.a
+		POR = { 
+			add_ideas = GAB_tourism2
+			give_resource_rights = {
+				state = 181
+				receiver = BRA
+			}
+			give_resource_rights = {
+				state = 181
+				receiver = KOG
+			}
+			random_owned_controlled_state = {
+				add_resource = {
+					type = steel
+					amount = 16
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}			
+		}
+		BRA = { 
+			add_ideas = GAB_tourism2
+			give_resource_rights = {
+				state = 497
+				receiver = POR
+			}
+			give_resource_rights = {
+				state = 497
+				receiver = KOG
+			}
+			random_owned_controlled_state = {
+				add_resource = {
+					type = rubber
+					amount = 32
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		random_owned_controlled_state = {
+			add_resource = {
+				type = rubber
+				amount = 8
+			}
+		}
+		random_owned_controlled_state = {
+			add_resource = {
+				type = oil
+				amount = 8
+			}
+		}
+		random_owned_controlled_state = {
+			add_resource = {
+				type = steel
+				amount = 8
+			}
+		}
+		random_owned_state = {
+			limit = {
+				free_building_slots = {
+					building = industrial_complex
+					size > 0
+					include_locked = yes
+				}
+				OR = {
+					is_in_home_area = yes
+					NOT = {
+						owner = {
+							any_owned_state = {
+								free_building_slots = {
+									building = industrial_complex
+									size > 0
+									include_locked = yes
+								}
+								is_in_home_area = yes
+							}
+						}
+					}
+				}
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		add_ideas = ECU_consumption
+		give_resource_rights = {
+			state = 928
+			receiver = POR
+		}
+		give_resource_rights = {
+			state = 928
+			receiver = BRA
+		}
+		country_event = {
+			id = yun_kogexpand.13
+			days = 1
+		}
+	}
+}
+
+country_event = { #卡宾达集会：政治合作
+	id = yun_kogexpand.13
+	title = yun_kogexpand.13.t 
+	desc = yun_kogexpand.13.d 
+
+	is_triggered_only = yes
+	
+	option = {
+		name = yun_kogexpand.13.a
+		add_political_power = -100 
+		POR = { add_political_power = -100 }
+		BRA = {
+			add_political_power = -100
+			country_event = {
+				id = yun_kogexpand.14
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = { #卡宾达集会：谋求葡语国家联合（发送给巴西）
+	id = yun_kogexpand.14
+	title = yun_kogexpand.14.t 
+	desc = yun_kogexpand.14.d 
+	picture = GFX_Portugal_312
+
+	is_triggered_only = yes
+	
+	option = {
+		name = yun_kogexpand.14.a
+		ai_chance = { factor = 50 }
+		KOG = { country_event = yun_kogexpand.15 }
+	}
+	option = {
+		name = yun_kogexpand.14.b
+		ai_chance = { factor = 50 }
+		add_opinion_modifier = { target = POR modifier = KR_outraged }
+		add_opinion_modifier = { target = KOG modifier = KR_outraged }
+		remove_ideas = GAB_tourism2
+		POR = {
+			remove_resource_rights = 497
+		}
+		KOG = { 
+			country_event = yun_kogexpand.16
+			remove_resource_rights = 497
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = KOG
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = POR
+		}	
+	}
+}
+
+country_event = { #卡宾达集会：圆满成功
+	id = yun_kogexpand.15
+	title = yun_kogexpand.15.t 
+	desc = yun_kogexpand.15.d 
+	picture = GFX_Portugal_312
+
+	is_triggered_only = yes
+	
+	option = {
+		name = yun_kogexpand.15.a
+		add_political_power = 100
+		add_stability = 0.2
+		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 5000 producer = POR }
+		add_equipment_to_stockpile = { type = support_equipment amount = 5000 producer = POR }
+		add_opinion_modifier = { target = POR modifier = large_increase }
+		add_opinion_modifier = { target = BRA modifier = large_increase }
+		BRA = { 
+			add_political_power = 100
+			add_stability = 0.2
+			add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 5000 producer = POR }
+			add_equipment_to_stockpile = { type = support_equipment amount = 5000 producer = POR }
+			add_opinion_modifier = { target = POR modifier = large_increase } 
+			add_opinion_modifier = { target = KOG modifier = large_increase } 
+		}
+		POR = { 
+			add_political_power = 100
+			add_stability = 0.2
+			add_opinion_modifier = { target = BRA modifier = large_increase } 
+			add_opinion_modifier = { target = KOG modifier = large_increase } 			
+			create_faction = "葡语国家共同体"
+			add_to_faction = KOG
+			add_to_faction = BRA
+		}
+		set_global_flag = KOG_Cabinda_Uniting
+	}
+}
+
+country_event = { #卡宾达集会：巴西代表愤怒离场
+	id = yun_kogexpand.16
+	title = yun_kogexpand.16.t 
+	desc = yun_kogexpand.16.d 
+	picture = GFX_report_event_BRA_riodejaneiro
+
+	is_triggered_only = yes
+	
+	option = {
+		name = yun_kogexpand.16.a
+		POR = { 
+			create_faction = "葡语国家共同体"
+			add_to_faction = KOG
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = BRA
+		}		
+	}
+}
+
+country_event = { #奥斯瓦尔德·安德拉德的《食人宣言》
+	id = yun_kogexpand.17
+	title = yun_kogexpand.17.t 
+	desc = yun_kogexpand.17.d
+	picture = GFX_report_event_BRA_andrade
+
+	is_triggered_only = yes
+	
+	option = {
+		name = yun_kogexpand.17.a
+		hidden_effect = {
+			country_event = {
+				id = yun_kogexpand.18
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = { #热带主义文化
+	id = yun_kogexpand.18
+	title = yun_kogexpand.18.t 
+	desc = yun_kogexpand.18.d 
+	picture = KOG_POR_tropicalismo_culture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = yun_kogexpand.18.a
+		add_stability = 0.1
+		hidden_effect = {
+			country_event = {
+				id = yun_kogexpand.19
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = { #吉尔贝托·弗雷雷的理论
+	id = yun_kogexpand.19
+	title = yun_kogexpand.19.t 
+	desc = yun_kogexpand.19.d 
+	picture = KOG_POR_lusotropicalism_freyre
+
+	is_triggered_only = yes
+	
+	option = {
+		name = yun_kogexpand.19.a
+		add_stability = 0.15
+		hidden_effect = {
+			country_event = {
+				id = yun_kogexpand.20
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = { #葡萄牙-热带命运体建构
+	id = yun_kogexpand.20
+	title = yun_kogexpand.20.t 
+	desc = yun_kogexpand.20.d 
+	picture = KOG_POR_lusotropicalism_realize
+
+	is_triggered_only = yes
+	
+	option = {
+		name = yun_kogexpand.20.a
+		add_ideas = POR_last_stand
+		inherit_technology = POR
+		set_capital = { state = 112 }
+		add_stability = -0.2
+		add_war_support = 0.2
+		add_popularity = {
+			ideology = national_populist
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = authoritarian_democrat
+			popularity = 0.2
+		}
+		add_popularity = {
+			ideology = social_conservative
+			popularity = 0.2
+		}
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.2
+		}
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.1
+		}
+		if = {
+			limit = { is_ai = yes }
+			POR = {
+				set_cosmetic_tag = KOG_POR_Tropical
+				annex_country = {
+					target = KOG
+					transfer_troops = yes
+				}	
+				annex_country = {
+					target = BRA
+					transfer_troops = yes
+				}			
+			}
+			BRA = {
+				every_unit_leader = {
+					set_nationality = POR
+				}
+			}
+			KOG = {
+				every_unit_leader = {
+					set_nationality = POR
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = BRA
+						is_claimed_by = BRA
+						is_owned_by = BRA
+						is_core_of = KOG
+						is_claimed_by = KOG
+						is_owned_by = KOG
+					}
+				}
+				add_core_of = POR
+			}						
+		}	
+		else = {
+			KOG = {
+				set_cosmetic_tag = KOG_POR_Tropical				
+				annex_country = {
+					target = POR
+					transfer_troops = yes
+				}	
+				annex_country = {
+					target = BRA
+					transfer_troops = yes
+				}
+				create_country_leader = {
+					name = "杜阿尔特二世"
+					desc = "POLITICS_DUARTE_BRAGANCA_DESC"
+					picture = "gfx/leaders/POR/Portrait_Portugal_Duarte_Nuno.png"
+					expire = "1.1.1"
+					ideology = autdem_lusotropicalism_subtype
+				}
+				create_country_leader = {
+					name = "杜阿尔特二世"
+					desc = "POLITICS_DUARTE_BRAGANCA_DESC"
+					picture = "gfx/leaders/POR/Portrait_Portugal_Duarte_Nuno.png"
+					expire = "1.1.1"
+					ideology = lusotropicalism_subtype
+				}
+				create_country_leader = {
+					name = "杜阿尔特二世"
+					desc = "POLITICS_DUARTE_BRAGANCA_DESC"
+					picture = "gfx/leaders/POR/Portrait_Portugal_Duarte_Nuno.png"
+					expire = "1.1.1"
+					ideology = natpop_lusotropicalism_subtype
+				}
+				create_country_leader = {
+					name = "杜阿尔特二世"
+					desc = "POLITICS_DUARTE_BRAGANCA_DESC"
+					picture = "gfx/leaders/POR/Portrait_Portugal_Duarte_Nuno.png"
+					expire = "1.1.1"
+					ideology = soccon_lusotropicalism_subtype
+				}			
+			}
+			POR = {
+				every_unit_leader = {
+					set_nationality = KOG
+				}
+			}
+			BRA = {
+				every_unit_leader = {
+					set_nationality = KOG
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = BRA
+						is_claimed_by = BRA
+						is_owned_by = BRA
+						is_core_of = KOG
+						is_claimed_by = KOG
+						is_owned_by = KOG
+						is_core_of = COG
+						is_core_of = GAB
+						is_core_of = CMR
+						is_core_of = CEA
+						is_core_of = ANG
+						is_core_of = NMB
+					}
+				}
+				add_core_of = KOG
+			}					
+		}
+		hidden_effect = {
+			country_event = {
+				id = yun_kogexpand.21
+				days = 3
+			}
+			add_state_core = 964
+			add_state_core = 541
+			add_state_core = 971
+			add_state_core = 660
+			add_state_core = 975
+			create_country_leader = {
+				name = "José Carlos Rates"
+				picture = "gfx/leaders/POR/Portrait_Portugal_Jose_Rates.png"
+				expire = "1.1.1"
+				ideology = natsynd_subtype
+			}
+			
+			create_country_leader = {
+				name = "Manuel Joaquim de Sousa"
+				picture = "gfx/leaders/Generic/Portrait_Europe_Generic_new_3.png"
+				expire = "1.1.1"
+				ideology = anarcho_syndicalist_subtype
+			}
+			
+			create_country_leader = {
+				name = "Amílcar Ramada Curto"
+				picture = "gfx/leaders/POR/Portrait_POR_Amilcar_Ramada_Curto.png"
+				expire = "1.1.1"
+				ideology = anarchism_subtype
+			}
+			
+			create_country_leader = {
+				name = "José Domingues dos Santos"
+				picture = "gfx/leaders/POR/Portrait_POR_José_Domingues_dos_Santos.png"
+				expire = "1.1.1"
+				ideology = social_democrat_subtype
+			}
+			
+			create_country_leader = {
+				name = "Liberato Pinto"
+				picture = "gfx/leaders/POR/Portrait_POR_Liberato_Pinto.png"
+				expire = "1.1.1"
+				ideology = social_liberal_subtype
+			}
+			
+			create_country_leader = {
+				name = "Antonio Granjo"
+				picture = "gfx/leaders/POR/Portrait_Portugal_Antonio_Granjo.png"
+				expire = "1.1.1"
+				ideology = market_liberal_subtype
+			}
+			set_party_name = {
+				ideology = totalist
+				name = "POR_totalist_party"
+				long_name = "POR_totalist_party_long"
+			}				
+			set_party_name = {
+				ideology = syndicalist
+				name = "POR_syndicalist_party"
+				long_name = "POR_syndicalist_party_long"
+			}		
+			set_party_name = {
+				ideology = radical_socialist
+				name = "POR_radical_socialist_party"
+				long_name = "POR_radical_socialist_party_long"
+			}		
+			set_party_name = {
+				ideology = social_democrat
+				name = "POR_social_democrat_party"
+				long_name = "POR_social_democrat_party_long"
+			}									
+			set_party_name = {
+				ideology = social_liberal
+				name = "POR_social_liberal_party"
+				long_name = "POR_social_liberal_party_long"
+			}
+			set_party_name = {
+				ideology = market_liberal
+				name = "POR_market_liberal_party"
+				long_name = "POR_market_liberal_party_long"
+			}					
+			set_party_name = {
+				ideology = social_conservative
+				name = "POR_social_conservative_party"
+				long_name = "POR_social_conservative_party_long"
+			}		
+			set_party_name = {
+				ideology = authoritarian_democrat
+				name = "POR_authoritarian_democrat_party"
+				long_name = "POR_authoritarian_democrat_party_long"
+			}	
+			set_party_name = {
+				ideology = paternal_autocrat
+				name = "POR_paternal_autocrat_party"
+				long_name = "POR_paternal_autocrat_party_long"
+			}
+			set_party_name = {
+				ideology = national_populist
+				name = "POR_national_populist_party"
+				long_name = "POR_national_populist_party_long"
+			}
+		}
+	}
+	option = {
+		name = yun_kogexpand.20.b
+		add_ideas = POR_last_stand
+		inherit_technology = POR
+		set_country_leader_ideology = natpop_lusotropicalism_subtype
+		country_event = yun_kogexpand.23
+		every_state = {
+			limit = {
+				OR = {
+					is_core_of = COG
+					is_core_of = GAB
+					is_core_of = CMR
+					is_core_of = CEA
+					is_core_of = ANG
+					is_core_of = NMB
+				}
+			}
+			add_core_of = KOG
+		}
+		POR = {
+			inherit_technology = CAN
+			set_cosmetic_tag = KOG_POR_Tropical
+			country_event = {
+				id = yun_kogexpand.21
+				days = 3
+			}
+			create_country_leader = {
+				name = "Duarte II"
+				desc = "POLITICS_DUARTE_BRAGANCA_DESC"
+				picture = "gfx/leaders/POR/Portrait_Portugal_Duarte_Nuno.png"
+				expire = "1.1.1"
+				ideology = autdem_lusotropicalism_subtype
+			}
+			create_country_leader = {
+				name = "Duarte II"
+				desc = "POLITICS_DUARTE_BRAGANCA_DESC"
+				picture = "gfx/leaders/POR/Portrait_Portugal_Duarte_Nuno.png"
+				expire = "1.1.1"
+				ideology = lusotropicalism_subtype
+			}
+			create_country_leader = {
+				name = "Duarte II"
+				desc = "POLITICS_DUARTE_BRAGANCA_DESC"
+				picture = "gfx/leaders/POR/Portrait_Portugal_Duarte_Nuno.png"
+				expire = "1.1.1"
+				ideology = natpop_lusotropicalism_subtype
+			}
+			create_country_leader = {
+				name = "Duarte II"
+				desc = "POLITICS_DUARTE_BRAGANCA_DESC"
+				picture = "gfx/leaders/POR/Portrait_Portugal_Duarte_Nuno.png"
+				expire = "1.1.1"
+				ideology = soccon_lusotropicalism_subtype
+			}
+		}
+		hidden_effect = {
+			add_state_core = 964
+			add_state_core = 541
+			add_state_core = 971
+			add_state_core = 660
+			add_state_core = 975
+		}
+	}
+}
+
+country_event = {#葡萄牙热带主义大主教
+	id = yun_kogexpand.21
+	title = yun_kogexpand.21.t 
+	desc = yun_kogexpand.21.d 
+	picture = KOG_POR_minister
+
+	is_triggered_only = yes
+	
+	option = {
+		name = yun_kogexpand.21.a
+		set_country_flag = LEADER_GUI_NOT_VISIBLE
+		set_country_flag = KXX_LEADER_GUI_VISIBLE
+		set_country_flag = KXX_DOUBLE_LEADER_GUI_VISIBLE
+		set_country_flag = KXX_USES_CUSTOM_TITLE
+		set_country_flag = KOG_Pedro_VII_VISIBLE
+		set_country_flag = POR_Antonio_Salazar_VISIBLE
+		clr_country_flag = BRA_Gilberto_de_Mello_Freyre_VISIBLE
+	}
+	option = {
+		name = yun_kogexpand.21.b
+		set_country_flag = LEADER_GUI_NOT_VISIBLE
+		set_country_flag = KXX_LEADER_GUI_VISIBLE
+		set_country_flag = KXX_DOUBLE_LEADER_GUI_VISIBLE
+		set_country_flag = KXX_USES_CUSTOM_TITLE		
+		set_country_flag = KOG_Pedro_VII_VISIBLE
+		set_country_flag = BRA_Gilberto_de_Mello_Freyre_VISIBLE
+		clr_country_flag = POR_Antonio_Salazar_VISIBLE
+	}
+}
+
+country_event = {#葡萄牙热带主义合并巴西
+	id = yun_kogexpand.22
+	title = yun_kogexpand.22.t 
+	desc = yun_kogexpand.22.d 
+    trigger = {
+		tag = KOG
+		501 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+		500 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+		499 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+		498 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+		has_completed_focus = KOG_Cabinda_Gathering
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = yun_kogexpand.22.a
+		set_global_flag = KOG_Cabinda_Uniting
+		set_cosmetic_tag = KOG_BRA_United
+		BRA = {
+			every_unit_leader = {
+				set_nationality = KOG
+			}
+		}
+		every_state = {
+			limit = {
+				OR = {
+					is_core_of = BRA
+					is_claimed_by = BRA
+					is_owned_by = BRA
+					is_core_of = COG
+					is_core_of = GAB
+					is_core_of = CMR
+					is_core_of = CEA
+					is_core_of = ANG
+					is_core_of = NMB
+				}
+			}
+			add_core_of = KOG
+		}
+		annex_country = {
+			target = BRA
+			transfer_troops = yes
+		}
+		add_state_core = 1036
+		add_state_core = 488
+		add_state_core = 1078
+		add_state_core = 1079
+		add_state_core = 687
+		add_state_core = 1039
+		add_state_core = 1308
+		add_state_core = 308
+		add_state_core = 309
+		add_state_core = 1038
+		add_state_core = 1309
+		add_state_core = 1037
+		add_state_core = 310
+		add_state_core = 971
+	}
+	option = {
+		name = yun_kogexpand.22.b
+		set_global_flag = KOG_Cabinda_Uniting
+		BRA = {	
+			add_state_core = 1036
+			add_state_core = 488
+			add_state_core = 1078
+			add_state_core = 1079
+			add_state_core = 687
+			add_state_core = 1039
+			add_state_core = 1308
+			add_state_core = 308
+			add_state_core = 309
+			add_state_core = 1038
+			add_state_core = 1309
+			add_state_core = 1037
+			add_state_core = 310			
+		}
+	}
+}
+
+country_event = {#主席国轮值
+	id = yun_kogexpand.23
+	title = yun_kogexpand.23.t 
+	desc = yun_kogexpand.23.d
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			country_event = { id = yun_kogexpand.23 days = 1460 } # 四年一轮值
+		}
+	}	
+
+	option = {
+		name = yun_kogexpand.23.a
+		trigger = {
+			country_exists = POR
+		}
+		POR = {
+			set_faction_leader = yes
+		}
+	}
+	option = {
+		name = yun_kogexpand.23.b
+		trigger = {
+			country_exists = BRA
+			is_subject = no
+		}
+		BRA = {
+			set_faction_leader = yes
+		}
+	}
+	option = {
+		name = yun_kogexpand.23.c
+		KOG = {
+			set_faction_leader = yes
+		}
+	}
+}
+
+country_event = {#处理西班牙
+	id = yun_kogexpand.24
+	title = yun_kogexpand.24.t
+	desc = yun_kogexpand.24.d
+
+	is_triggered_only = yes
+	
+	option = {
+		name = yun_kogexpand.24.a
+		hidden_effect = {
+			if = {
+				limit = { country_exists = POR }
+				POR = {
+					set_cosmetic_tag = FORM_IBE
+					annex_country = {
+						target = SPR
+						transfer_troops = yes
+					}
+					annex_country = {
+						target = CNT
+						transfer_troops = yes
+					}
+					annex_country = {
+						target = CAR
+						transfer_troops = yes
+					}
+					annex_country = {
+						target = BAS
+						transfer_troops = yes
+					}
+					annex_country = {
+						target = CAT
+						transfer_troops = yes
+					}
+					annex_country = {
+						target = GLC
+						transfer_troops = yes
+					}
+					SPR = {
+						every_unit_leader = {
+							set_nationality = POR
+						}
+					}
+					CAR = {
+						every_unit_leader = {
+							set_nationality = POR
+						}
+					}
+					BAS = {
+						every_unit_leader = {
+							set_nationality = POR
+						}
+					}
+					GLC = {
+						every_unit_leader = {
+							set_nationality = POR
+						}
+					}
+					every_state = {
+						limit = {
+							OR = {
+								is_core_of = SPR
+								is_core_of = CNT
+								is_core_of = CAR
+								is_core_of = BAS
+								is_core_of = CAT
+								is_core_of = GLC
+								}
+							}
+						add_core_of = POR
+					}		
+				}
+			}
+			else = {
+				annex_country = {
+					target = SPR
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = CNT
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = CAR
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = BAS
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = CAT
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = GLC
+					transfer_troops = yes
+				}
+				SPR = {
+					every_unit_leader = {
+						set_nationality = ROOT
+					}
+				}
+				CAR = {
+					every_unit_leader = {
+						set_nationality = ROOT
+					}
+				}
+				BAS = {
+					every_unit_leader = {
+						set_nationality = ROOT
+					}
+				}
+				GLC = {
+					every_unit_leader = {
+						set_nationality = POR
+					}
+				}
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = SPR
+							is_core_of = CNT
+							is_core_of = CAR
+							is_core_of = BAS
+							is_core_of = CAT
+							is_core_of = GLC
+							}
+						}
+					add_core_of = ROOT
+				}			
+			}			
+		}
+	}
+	option = {
+		name = yun_kogexpand.24.b
+		ESP = { 
+			transfer_state = 165
+			transfer_state = 940
+			transfer_state = 166
+			transfer_state = 167
+			transfer_state = 168
+			transfer_state = 177
+			transfer_state = 1313
+			add_state_core = 165
+			add_state_core = 940
+			add_state_core = 166
+			add_state_core = 167
+			add_state_core = 168
+			add_state_core = 177
+			add_state_core = 1313
+		}
+		NSP = { 
+			transfer_state = 172
+			transfer_state = 174
+			transfer_state = 176
+			transfer_state = 793
+			transfer_state = 951
+			transfer_state = 1081
+			add_state_core = 172
+			add_state_core = 174
+			add_state_core = 176
+			add_state_core = 793
+			add_state_core = 951
+			add_state_core = 1081
+		}
+		SSP = { 
+			transfer_state = 169
+			transfer_state = 170
+			transfer_state = 173
+			transfer_state = 795
+			transfer_state = 1316
+			add_state_core = 169
+			add_state_core = 170
+			add_state_core = 173
+			add_state_core = 795
+			add_state_core = 1316
+		}
+		CSP = { 
+			transfer_state = 41
+			transfer_state = 175
+			transfer_state = 1082
+
+			add_state_core = 41
+			add_state_core = 175
+			add_state_core = 1082
+		}
+		if = {
+			limit = { country_exists = POR }
+			POR = {
+				set_autonomy = { target = ESP autonomy_state = autonomous_territory }
+				set_autonomy = { target = NSP autonomy_state = autonomous_territory }
+				set_autonomy = { target = SSP autonomy_state = autonomous_territory }
+				set_autonomy = { target = CSP autonomy_state = autonomous_territory }
+				add_state_core = 171
+				transfer_state = 171
+				add_state_core = 118
+				transfer_state = 118
+			}
+		}
+		else = {
+			set_autonomy = { target = ESP autonomy_state = autonomous_territory }
+			set_autonomy = { target = NSP autonomy_state = autonomous_territory }
+			set_autonomy = { target = SSP autonomy_state = autonomous_territory }
+			set_autonomy = { target = CSP autonomy_state = autonomous_territory }
+			add_state_core = 171
+			add_state_core = 180
+			add_state_core = 181
+			add_state_core = 112
+			add_state_core = 179
+			add_state_core = 118
+			transfer_state = 171
+			transfer_state = 180
+			transfer_state = 181
+			transfer_state = 112
+			transfer_state = 179
+			transfer_state = 118
+		}
+	}
+	option = {
+		name = yun_kogexpand.24.c
+	}
+}
+
+country_event = {#萨拉查之死
+	id = yun_kogexpand.727
+	title = yun_kogexpand.727.t 
+	desc = yun_kogexpand.727.d 
+	picture = KOG_POR_salazar_death
+
+    trigger = {
+		has_country_flag = KOG_Pedro_VII_VISIBLE
+		has_country_flag = POR_Antonio_Salazar_VISIBLE
+		has_completed_focus = KOG_TRO_Salazar_Economics
+		has_stability < -0.5
+	}
+
+	fire_only_once = yes
+	
+	option = {
+		name = yun_kogexpand.727.a
+		set_country_flag = KOG_death_of_salazar
+		clr_country_flag = KXX_LEADER_GUI_VISIBLE
+		clr_country_flag = KXX_DOUBLE_LEADER_GUI_VISIBLE
+		create_country_leader = {
+			name = "混乱状态"
+			picture = "gfx/leaders/funny/Portrait_ZZZ_Anarchy.png"
+			expire = "1.1.1"
+			traits = {  }
+			ideology = cannibalism_proto_subtype
+			}
+		set_party_name = {
+			ideology = totalist
+			name = "KOG_POR_ERROR"
+			long_name = "KOG_POR_ERROR"
+		}				
+		set_party_name = {
+			ideology = syndicalist
+			name = "KOG_POR_ERROR"
+			long_name = "KOG_POR_ERROR"
+		}		
+		set_party_name = {
+			ideology = radical_socialist
+			name = "KOG_POR_ERROR"
+			long_name = "KOG_POR_ERROR"
+		}		
+		set_party_name = {
+			ideology = social_democrat
+			name = "KOG_POR_ERROR"
+			long_name = "KOG_POR_ERROR"
+		}										
+		set_party_name = {
+			ideology = social_liberal
+			name = "KOG_POR_ERROR"
+			long_name = "KOG_POR_ERROR"
+		}
+		set_party_name = {
+			ideology = market_liberal
+			name = "KOG_POR_ERROR"
+			long_name = "KOG_POR_ERROR"
+		}					
+		set_party_name = {
+			ideology = social_conservative
+			name = "KOG_POR_ERROR"
+			long_name = "KOG_POR_ERROR"
+		}		
+		set_party_name = {
+			ideology = authoritarian_democrat
+			name = "KOG_POR_ERROR"
+			long_name = "KOG_POR_ERROR"
+		}	
+		set_party_name = {
+			ideology = paternal_autocrat
+			name = "KOG_POR_ERROR"
+			long_name = "KOG_POR_ERROR"
+		}
+		set_party_name = {
+			ideology = national_populist
+			name = "KOG_POR_ERROR"
+			long_name = "KOG_POR_ERROR"
+		}
+		hidden_effect = {
+			remove_all_ministers = yes
+			every_country = {
+				limit = {
+					is_subject_of = KOG
+				}
+				end_puppet = PREV
+			}
+			KOG = {
+				every_owned_state = {
+					limit = { 
+						is_on_continent = europe
+					}
+					transfer_state_to = POR
+					remove_core_of = KOG
+				}
+				every_owned_state = {
+					limit = { 
+						OR = { 
+							is_on_continent = asia  
+							is_on_continent = india  
+							is_on_continent = middle_east 
+						}
+					}
+					transfer_state_to = POR
+					remove_core_of = KOG
+				}
+				every_owned_state = {
+					limit = {
+						OR = {
+						is_on_continent = south_america
+						is_on_continent = central_america
+						is_on_continent = north_america
+						}
+					}
+					transfer_state_to = BRA
+					remove_core_of = KOG
+				}
+			}		
+			leave_faction = yes
+			delete_unit = {}
+			load_focus_tree = persia_empty
+			set_cosmetic_tag = ZZZ
+			release = BRA
+			release = POR
+			add_ideas = absolutely_negative
+			add_ideas = yun_fatimah_punishment
+			BRA = {
+				set_politics = {
+					ruling_party = syndicalist
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = syndicalist
+					popularity = 0.5
+				}
+				create_country_leader = {
+					name = "Oswald de Andrade"
+					desc = "POLITICS_OSWALD_DE_ANDRADE_DESC"
+					picture = "gfx/leaders/BRA/Portrait_BRA_Oswald_de_Andrade.png"
+					expire = "1.1.1"
+					ideology = syn_cannibalism_subtype
+					traits = { smooth_talking_charmer }
+				}
+				complete_national_focus = BRA_the_counter_coup
+				complete_national_focus = BRA_syndicalist_alliance
+			}
+		}
+	}
+}

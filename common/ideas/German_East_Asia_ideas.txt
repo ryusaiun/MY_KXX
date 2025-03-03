@@ -1,0 +1,2559 @@
+ideas = {
+		country = {
+# starting ideas
+			GEA_colonial_question = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_colonial_question"}
+				picture = colonial_question
+				allowed = { always = no }
+				modifier = {
+					non_core_manpower = 0.05
+					resistance_growth = 0.1
+					required_garrison_factor = 0.1
+					resistance_decay = -0.05
+				}
+			}
+			GEA_admirality = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_admirality"}
+				picture = admirality
+				allowed = { always = no }
+				modifier = {
+					naval_doctrine_cost_factor = -0.1
+					weekly_manpower = 500
+				}
+			}
+	
+			GEA_Colonial_Nation = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_Colonial_Nation"}
+				picture = GER_colonial_government
+				allowed = { always = no }
+				modifier = {
+					ai_call_ally_desire_factor = -2000
+				}
+			}
+			GEA_AOG_profit_idea = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_AOG_profit_idea"}
+				picture = AOG_profits_idea
+				allowed = { always = no }
+				modifier = {
+					send_volunteer_size = 6
+				}
+			}
+#印支起义
+		GEA_military_police = {#战地宪兵
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_military_police"}
+				picture = LPD_fp_police_idea
+				allowed = { always = no }
+				modifier = {
+					max_command_power = 20
+					army_org_factor = 0.05
+					experience_gain_army_factor = -0.05
+					command_power_gain = 0.10
+					war_support_weekly = -0.005
+				}
+			}
+		GEA_military_police2 = {#战地宪兵
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_military_police2"}
+			picture = LPD_fp_police_idea
+			allowed = { always = no }
+			modifier = {
+				weekly_manpower = -83
+				max_command_power = 40
+				army_org_factor = 0.1
+				army_morale_factor = 0.05
+				command_power_gain = 0.20
+				war_support_factor = 0.05
+				war_support_weekly = -0.005
+			}
+		}
+		GEA_shu_si_yi_bo = {#殊死一搏
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_shu_si_yi_bo"}
+			picture = death_men
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.10
+				army_org_factor = 0.10
+				army_org_regain = 0.10
+				army_attack_factor = 0.02
+				war_support_factor = -0.10
+			}
+		}
+		GEA_vietcong_killer_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_vietcong_killer_idea"}
+			picture = FRA_scw_intervention_nationalists_focus
+			allowed = { always = no }
+			targeted_modifier = {
+				tag = INC
+				attack_bonus_against = 0.1
+			}
+		}
+#穆克
+		GEA_german_immigrant = {#德意志移民
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_german_immigrant"}
+			picture = immigrant_aid
+			allowed = { always = no }
+			modifier = {
+				weekly_manpower = 200
+				monthly_population = 0.10
+			}
+		}
+		GEA_colonial_question_mu = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_colonial_question_mu"}
+			picture = colonial_question
+			allowed = { always = no }
+			modifier = {
+				non_core_manpower = 0.10
+				resistance_growth = -0.05
+				compliance_growth = 0.05
+				resistance_decay = -0.05
+				required_garrison_factor = 0.10
+				authoritarian_democrat_drift = -0.01
+				paternal_autocrat_drift = -0.01
+				national_populist_drift = -0.01
+			}
+		}		
+		GEA_colonial_question_mu2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_colonial_question_mu2"}
+			picture = colonial_question
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.05
+				non_core_manpower = 0.10
+				resistance_growth = -0.10
+				compliance_growth = 0.10
+				resistance_decay = 0.05
+				required_garrison_factor = 0.10
+				authoritarian_democrat_drift = -0.02
+				paternal_autocrat_drift = -0.02
+				national_populist_drift = -0.02
+			}
+		}
+		GEA_colonial_question_mu3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_colonial_question_mu3"}
+			picture = colonial_question
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.05
+				non_core_manpower = 0.10
+				resistance_growth = -0.10
+				compliance_growth = 0.10
+				resistance_decay = 0.05
+				resistance_target = -0.05
+				required_garrison_factor = -0.10
+				compliance_growth_on_our_occupied_states = -0.10
+				authoritarian_democrat_drift = -0.02
+				paternal_autocrat_drift = -0.02
+				national_populist_drift = -0.02
+			}
+		}
+		GEA_colonial_question_mu4 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_colonial_question_mu4"}
+			picture = colonial_question
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.10
+				political_power_factor = 0.10
+				non_core_manpower = 0.15
+				resistance_growth = -0.10
+				compliance_growth = 0.1
+				mobilization_speed = 0.04
+				resistance_decay = 0.10
+				resistance_target = -0.05
+				required_garrison_factor = -0.10
+				compliance_growth_on_our_occupied_states = -0.10
+				authoritarian_democrat_drift = -0.02
+				paternal_autocrat_drift = -0.02
+				national_populist_drift = -0.02
+			}
+		}
+		GEA_colonial_question_mu5 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_colonial_question_mu5"}
+			picture = colonial_question
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.10
+				political_power_factor = 0.10
+				non_core_manpower = 0.10
+				resistance_growth = -0.10
+				compliance_growth = 0.1
+				resistance_decay = 0.10
+				resistance_target = -0.05
+				required_garrison_factor = -0.10
+				local_building_slots_factor = 0.1
+				local_resources_factor = 0.06
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				compliance_growth_on_our_occupied_states = -0.10
+				authoritarian_democrat_drift = -0.02
+				paternal_autocrat_drift = -0.02
+				national_populist_drift = -0.02
+			}
+		}
+		GEA_rong_he = {#民族融合
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_rong_he"}
+			picture = sentinels
+			allowed = { always = no }
+			modifier = {
+				political_power_cost = -0.10
+				stability_factor = 0.05
+				stability_weekly = 0.005
+			}
+		}
+		GEA_We_will_stay_here = {#我们将常驻于此
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_We_will_stay_here"}
+			picture = bloated_bureaucracy
+			allowed = { always = no }
+			modifier = {
+				production_lack_of_resource_penalty_factor = -0.1
+				production_factory_start_efficiency_factor = 0.03
+				local_manpower = 0.04
+				foreign_subversive_activites = -0.05
+				social_conservative_drift = 0.02
+			}
+		}
+		GEA_We_will_stay_here1 = {#我们将常驻于此
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_We_will_stay_here1"}
+			picture = bloated_bureaucracy
+			allowed = { always = no }
+			modifier = {
+				production_lack_of_resource_penalty_factor = -0.15
+				production_factory_start_efficiency_factor = 0.05
+				local_manpower = 0.1
+				foreign_subversive_activites = -0.05
+				social_conservative_drift = 0.02
+				stability_factor = 0.07
+				political_power_gain = 0.1
+			}
+		}
+		GEA_bing_yi_yao_qiu = {#兵役要求
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_bing_yi_yao_qiu"}
+			picture = SAF_native_service
+			allowed = { always = no }
+			modifier = {
+				conscription = 0.03
+				monthly_population = 0.2
+				local_manpower = 0.10
+			}
+		}
+		GEA_way_changed = {#改变行事方式
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_way_changed"}
+			picture = generic_scales
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.06
+				political_power_cost = -0.01
+				consumer_goods_factor = -0.04
+				production_speed_buildings_factor = 0.04
+				compliance_growth = 0.1
+			}
+		}
+		GEA_hellmuth_reform1 = {#赫尔穆特改革
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_hellmuth_reform1"}
+			picture = GEA_mucke_reform
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.15
+				local_manpower = 0.1
+				conscription = 0.01
+				conscription_factor = 0.2
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				stability_weekly = 0.005
+				war_support_weekly = 0.005
+				party_popularity_stability_factor = 0.15
+				local_building_slots_factor = 0.1
+				line_change_production_efficiency_factor = 0.4
+				production_speed_buildings_factor = 0.15
+				production_speed_industrial_complex_factor = 0.3
+			}
+		}
+		GEA_hellmuth_reform2 = {#赫尔穆特改革
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_hellmuth_reform2"}
+			picture = GEA_mucke_reform
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.1
+				local_resources_factor = 0.1
+				conscription = 0.01
+				conscription_factor = 0.1
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				stability_weekly = 0.007
+				required_garrison_factor = -0.15
+				production_speed_infrastructure_factor = 0.15
+				monthly_population = 0.4
+				production_factory_max_efficiency_factor = 0.2
+				production_factory_efficiency_gain_factor = 0.3
+			}
+		}
+		GEA_hellmuth_reform3 = {#赫尔穆特改革
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_hellmuth_reform3"}
+			picture = GEA_mucke_reform
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.4
+				local_resources_factor = 0.1
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				stability_weekly = 0.005
+				monthly_population = 0.2
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				defensive_war_stability_factor = 0.1
+				command_power_gain_mult = 0.1
+				conscription_factor = 0.2
+				industrial_capacity_factory = 0.3
+				production_speed_arms_factory_factor = 0.2
+			}
+		}
+#约西亚斯
+        GEA_ger_investment = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_ger_investment"}
+		    picture = ger_investment
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.05
+				industrial_capacity_factory = 0.1
+				production_factory_efficiency_gain_factor = 0.07
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.06			    
+			}			
+		}
+        GEA_focus_econ = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_focus_econ"}
+		    picture = focus_econ
+			allowed = { always = no }
+			modifier = {
+				production_speed_infrastructure_factor = 0.1
+				industrial_capacity_factory = 0.04
+	            economy_cost_factor = -0.2
+				industrial_concern_cost_factor = -0.2
+				production_speed_industrial_complex_factor = 0.12
+				production_speed_arms_factory_factor = 0.06
+			    production_speed_synthetic_refinery_factor = 0.07
+			}			
+		}	
+        GEA_focus_stab = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_focus_stab"}
+		    picture = focus_stab
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.1
+				stability_weekly = 0.005
+				political_power_factor = 0.05
+				resistance_target = -0.1
+				resistance_growth = -0.2
+				compliance_growth = 0.1
+			}			
+		}	
+        GEA_support_from_ger = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_support_from_ger"}
+		    picture = support_from_ger
+			allowed = { always = no }
+			modifier = {
+				research_speed_factor = 0.15
+				local_resources_factor = 0.1
+				production_speed_buildings_factor = 0.2
+				political_power_gain = 0.1
+				weekly_manpower = 1000
+			}			
+		}	
+        GEA_support_from_aog = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_support_from_aog"}
+		    picture = support_from_aog
+			allowed = { always = no }
+			modifier = {
+				compliance_growth = 0.15
+				mobilization_speed = 0.1
+				political_power_factor = 0.05
+			}			
+		}		
+        GEA_ger_oligopoly = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_ger_oligopoly"}
+		    picture = ger_oligopoly
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = -0.02
+				production_factory_max_efficiency_factor = 0.06
+				production_factory_efficiency_gain_factor = 0.15
+				consumer_goods_factor = -0.08				
+			}	
+		}
+		GEA_widen_trade_lines = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_widen_trade_lines"}
+			picture = widen_trade_lines
+			allowed = { always = no }
+			modifier = {
+				trade_opinion_factor = 0.3
+				research_speed_factor = 0.10
+				production_speed_buildings_factor = 0.05			
+			}
+		}
+		GEA_amend_law = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_amend_law"}
+			picture = amend_law
+			allowed = { always = no }
+			modifier = {
+				drift_defence_factor = 1
+				resistance_target = -0.1
+				resistance_decay = -0.05
+				political_power_gain = 0.05	
+				party_popularity_stability_factor = 0.05
+
+			}
+		}
+		GEA_little_welfare = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_little_welfare"}
+			picture = little_welfare
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = 0.1
+				stability_weekly = 0.005
+				resistance_target = -0.2
+				compliance_growth = 0.15
+			}
+		}
+		GEA_little_welfare1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_little_welfare1"}
+			picture = little_welfare1
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = 0.1
+				stability_weekly = 0.005
+				resistance_target = -0.2
+				compliance_growth = 0.15
+				non_core_manpower = 0.15	
+				political_power_gain = 0.25
+				mobilization_laws_cost_factor = -0.2
+			}
+		}
+#海耶
+		GEA_heye = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_heye"}
+			picture = heye
+			allowed = { always = no }
+
+			modifier = {
+				stability_factor = 0.1
+				stability_weekly = 0.005
+				compliance_growth = -0.1
+				starting_compliance = 0.15
+				conscription_factor = 0.05
+				surrender_limit = 0.2
+			}
+		}
+		GEA_heye1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_heye1"}
+			picture = heye
+			allowed = { always = no }
+			
+			modifier = {
+				stability_factor = 0.1
+				stability_weekly = 0.005
+				compliance_growth = -0.05
+				starting_compliance = 0.15
+				conscription_factor = 0.05
+				surrender_limit = 0.2
+				compliance_growth_on_our_occupied_states = 0.1
+				required_garrison_factor = -0.08
+				non_core_manpower = 0.06
+			}
+		}
+		GEA_heye2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_heye2"}
+			picture = heye
+			allowed = { always = no }
+			
+			modifier = {
+				stability_factor = 0.1
+				stability_weekly = 0.005
+				compliance_growth = -0.1
+				starting_compliance = 0.15
+				conscription_factor = 0.05
+				surrender_limit = 0.2
+				operative_slot = 1
+				intelligence_agency_defense = 1
+				agency_upgrade_time = -0.12
+				intel_network_gain_factor = 0.1
+			}
+		}
+		GEA_heye3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_heye3"}
+			picture = heye
+			allowed = { always = no }
+			
+			modifier = {
+				stability_factor = 0.1
+				stability_weekly = 0.005
+				compliance_growth = -0.05
+				starting_compliance = 0.15
+				conscription_factor = 0.05
+				surrender_limit = 0.2
+				compliance_growth_on_our_occupied_states = 0.1
+				required_garrison_factor = -0.08
+				non_core_manpower = 0.06
+				production_speed_arms_factory_factor = 0.1
+				monthly_population = -0.12
+				weekly_manpower = -234
+				industrial_capacity_factory = 0.08
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		GEA_heye4 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_heye4"}
+			picture = heye
+			allowed = { always = no }
+			
+			modifier = {
+				stability_factor = 0.1
+				stability_weekly = 0.005
+				compliance_growth = -0.1
+				starting_compliance = 0.15
+				conscription_factor = 0.05
+				surrender_limit = 0.2
+				operative_slot = 1
+				intelligence_agency_defense = 1
+				agency_upgrade_time = -0.12
+				intel_network_gain_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				monthly_population = -0.12
+				weekly_manpower = -234
+				industrial_capacity_factory = 0.08
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		GEA_rearmament= {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_rearmament"}
+			picture = GER_shield
+			allowed = { always = no }
+			
+			modifier = {
+				war_support_factor = 0.1
+				conscription_factor = 0.2
+				surrender_limit = 0.3
+				monthly_population = 0.1
+			}
+		}
+		GEA_rearmament1= {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_rearmament1"}
+			picture = GER_shield
+			allowed = { always = no }
+			
+			modifier = {
+				war_support_factor = 0.1
+				conscription_factor = 0.2
+				surrender_limit = 0.3
+				monthly_population = 0.1
+				army_core_attack_factor = 0.03
+				army_org_factor = 0.1
+				max_planning = 0.07
+			}
+		}
+		GEA_rearmament2= {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_rearmament2"}
+			picture = GER_shield
+			allowed = { always = no }
+			
+			modifier = {
+				war_support_factor = 0.15
+				conscription_factor = 0.3
+				surrender_limit = 0.3
+				monthly_population = 0.1
+				conscription = 0.015
+			}
+		}
+		GEA_governor_gaze_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_governor_gaze_idea"}
+			picture = governor_gaze_idea
+			allowed = { always = no }
+			
+			modifier = {
+				crypto_strength = 0.2
+				enemy_operative_detection_chance = 1
+				root_out_resistance_effectiveness_factor = 0.15
+				own_operative_detection_chance_factor = -0.1
+				decryption_power_factor = 0.05
+			}
+		}
+		GEA_labor_regulations = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_labor_regulations"}
+			picture = labor_regulations
+			allowed = { always = no }
+
+			
+			modifier = {
+				political_power_cost = 0.1
+				industrial_capacity_factory = 0.1
+				production_factory_max_efficiency_factor = 0.15
+				production_factory_efficiency_gain_factor = -0.1
+			}
+		}
+		GEA_labor_regulations1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_labor_regulations1"}
+			picture = labor_regulations
+			allowed = { always = no }
+			
+			modifier = {
+				political_power_cost = 0.13
+				industrial_capacity_factory = 0.25
+				production_factory_max_efficiency_factor = 0.25
+				production_factory_efficiency_gain_factor = -0.15
+				line_change_production_efficiency_factor = -0.05
+			}
+		}
+		GEA_focus_army = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_focus_army"}
+			picture = GEA_land_army
+			allowed = { always = no }
+			
+			modifier = {
+				experience_gain_army = 0.1
+				land_doctrine_cost_factor = -0.1
+				army_attack_factor = 0.05
+				army_org_factor = 0.05
+			}
+		}
+		GEA_focus_navy = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_focus_army"}
+			picture = GEA_navy
+			allowed = { always = no }
+			
+			modifier = {
+				experience_gain_navy = 0.1
+				navy_max_range_factor = 0.1
+				sortie_efficiency = 0.05
+				naval_speed_factor  = 0.05
+			}
+		}
+		GEA_focus_air = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_focus_army"}
+			picture = GEA_air_army_heye
+			allowed = { always = no }
+			
+			modifier = {
+				experience_gain_air = 0.1
+				army_bonus_air_superiority_factor = 0.1
+				air_accidents = -0.1
+				air_ace_generation_chance_factor  = 0.05
+			}
+		}
+		GEA_heye_rule1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_heye_rule1"}
+			picture = GEA_heye_rule
+			allowed = { always = no }
+			
+			modifier = {
+				war_support_factor = 0.05
+				mobilization_speed = 0.1
+				production_speed_arms_factory_factor = 0.1				 
+				training_time_army_factor = -0.08
+				max_command_power = 25
+			}
+		}
+		GEA_heye_rule2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_heye_rule2"}
+			picture = GEA_heye_rule
+			allowed = { always = no }
+			
+			modifier = {
+				war_support_factor = 0.1
+				mobilization_speed = 0.1
+				production_speed_arms_factory_factor = 0.1				 
+				training_time_army_factor = -0.1
+				max_command_power = 25
+				army_org_factor = 0.06
+				org_loss_when_moving = -0.04
+				conscription_factor = 0.1
+				surrender_limit = 0.2
+				line_change_production_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+		GEA_heye_rule3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_heye_rule2"}
+			picture = GEA_heye_rule
+			allowed = { always = no }
+			
+			modifier = {
+				war_support_factor = 0.2
+				mobilization_speed = 0.2
+				production_speed_arms_factory_factor = 0.1			 
+				training_time_army_factor = -0.15
+				max_command_power = 50
+				army_org_factor = 0.1
+				org_loss_when_moving = -0.1
+				conscription_factor = 0.15
+				surrender_limit = 0.5
+				line_change_production_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+				industrial_capacity_dockyard = 0.1
+			}
+		}
+#舍尔纳
+		GEA_fuck_inc = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_fuck_inc"}
+			picture = GER_imperial_pride_guns
+			allowed = { always = no }
+			
+			modifier = {
+				breakthrough_factor = 0.1
+				recon_factor = 0.2
+				land_reinforce_rate = 0.05
+			}
+			targeted_modifier = {
+				tag = INC
+				attack_bonus_against = 0.10
+				defense_bonus_against = 0.10   
+			}
+		}
+		GEA_Vigorously_suppress = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_Vigorously_suppress"}
+			picture = GEA_Vigorously_suppress
+			allowed = { always = no }
+			
+			modifier = {
+				resistance_target = -0.1
+				resistance_decay = 0.12
+				resistance_growth = -0.07
+				required_garrison_factor = -0.1
+			}
+		}
+		GEA_one_man_goverment = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_one_man_goverment"}
+			picture = GEA_schorner_rule
+			allowed = { always = no }
+			
+			modifier = {
+				political_power_factor = 0.2
+				war_support_weekly = 0.005
+				max_command_power = 50
+				mobilization_speed = 0.08
+				local_resources_factor = 0.04
+				production_speed_buildings_factor = 0.07
+			}
+		}
+		GEA_blood_eagle = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_blood_eagle"}
+			picture = GEA_blood_eagle
+			allowed = { always = no }
+			
+			modifier = {
+				stability_factor = 0.13
+				war_support_factor = 0.13
+				army_org_factor = 0.11
+				army_attack_factor = 0.07
+				army_defence_factor = 0.03
+				production_speed_bunker_factor = 0.1
+				experience_gain_army_factor = 0.18
+				army_morale_factor = 0.06
+				mobilization_laws_cost_factor = -1
+			}
+		}
+		GEA_schorner_ambition = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_schorner_ambition"}
+			picture = GEA_schorner_rule
+			allowed = { always = no }
+			
+			modifier = {
+				political_power_factor = 0.2
+				war_support_weekly = 0.02
+				max_command_power = 100
+				mobilization_speed = 0.20
+				local_resources_factor = 0.15
+				army_org_factor = 0.09
+				production_speed_buildings_factor = 0.15
+				consumer_goods_factor = -0.2
+				party_popularity_stability_factor = 0.25
+				research_speed_factor = 0.1
+				production_speed_arms_factory_factor = 0.2
+			}
+		}
+		GEA_schorner_army1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_schorner_army1"}
+			picture = GEA_schorner_army
+			allowed = { always = no }
+			
+			modifier = {
+				army_org_factor = 0.08
+				army_morale_factor = 0.11
+				land_reinforce_rate = 0.04
+				army_infantry_attack_factor = 0.06
+				army_infantry_defence_factor = 0.03
+				experience_loss_factor = -0.14
+				war_support_weekly = 0.005
+			}
+		}
+		GEA_schorner_army2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_schorner_army2"}
+			picture = GEA_schorner_army
+			allowed = { always = no }
+			
+			modifier = {
+				breakthrough_factor = 0.12
+				subversive_activites_upkeep = -0.2
+				recon_factor = 0.12
+				special_forces_cap = 0.15
+				modifier_army_sub_unit_elite_infantry_attack_factor = 0.08
+				modifier_army_sub_unit_elite_infantry_defence_factor = 0.08
+				modifier_army_sub_unit_elite_infantry_max_org_factor = 0.02
+			}
+		}
+		GEA_schorner_army3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_schorner_army3"}
+			picture = GEA_schorner_army
+			allowed = { always = no }
+			
+			modifier = {
+				army_org_factor = 0.08
+				army_morale_factor = 0.11
+				land_reinforce_rate = 0.04
+				army_infantry_attack_factor = 0.06
+				army_infantry_defence_factor = 0.03
+				experience_loss_factor = -0.14
+				war_support_weekly = 0.005
+				breakthrough_factor = 0.12
+				subversive_activites_upkeep = -0.2
+				recon_factor = 0.12
+				special_forces_cap = 0.15
+				modifier_army_sub_unit_elite_infantry_attack_factor = 0.08
+				modifier_army_sub_unit_elite_infantry_defence_factor = 0.08
+				modifier_army_sub_unit_elite_infantry_max_org_factor = 0.02
+			}
+		}
+#经济建设
+		GEA_new_mark = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_new_mark"}
+			picture = GER_goldstandard
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.06
+                stability_factor = 0.05			
+				global_building_slots_factor = 0.1					
+			}
+		}
+		GEA_payment1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_payment1"}
+			picture = HOL_mass_collectivisation
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = 0.1	
+				production_speed_buildings_factor = -0.03		
+				production_factory_max_efficiency_factor = -0.05			
+			}
+		}
+		GEA_payment2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_payment1"}
+			picture = HOL_mass_collectivisation
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = 0.1	
+				production_speed_buildings_factor = -0.03		
+				production_factory_max_efficiency_factor = -0.05	
+				war_support_factor = -0.05
+				war_support_weekly = -0.01
+				political_power_cost = 0.02		
+			}
+		}
+		GEA_tax = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_tax"}
+			picture = tax
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.09
+                political_power_gain = 0.1	
+				production_factory_efficiency_gain_factor = 0.15	
+                industrial_capacity_factory = 0.08			
+			}
+		}
+		GEA_efficient_gov = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_tax"}
+			picture = shadow_recruitment
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.05
+				stability_weekly = 0.005
+				mobilization_speed = 0.1		
+			}
+		}
+		GEA_legal_exploitation = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_tax"}
+			picture = legal_exploitation
+			allowed = { always = no }
+			modifier = {
+                industrial_capacity_factory = 0.10	
+				production_factory_efficiency_gain_factor = -0.06
+				production_factory_max_efficiency_factor = 0.15
+				political_power_factor = -0.11	
+			}
+		}
+		GEA_industrial_complex = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_industrial_complex"}
+			picture = industrial_complex
+			allowed = { always = no }
+			modifier = {
+				local_resources_factor = 0.1
+				local_building_slots_factor = 0.2
+				production_speed_buildings_factor = 0.05
+				production_speed_arms_factory_factor = 0.1
+				industrial_capacity_factory = 0.1
+
+			}
+		}
+		GEA_aog_investment = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_aog_investment"}
+			picture = ger_revive_the_kaiserreich
+			allowed = { always = no }
+			modifier = {
+				research_speed_factor = 0.05
+				industrial_capacity_factory = 0.1
+				production_speed_infrastructure_factor = 0.20
+				stability_factor = -0.05
+			}
+		}
+		GEA_expropriation_of_land = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_expropriation_of_land"}
+			picture = expropriation_of_land
+			allowed = { always = no }
+			modifier = {
+				production_speed_infrastructure_factor = 0.05
+				supply_consumption_factor = -0.1
+				attrition = -0.1
+				no_supply_grace = 24
+				monthly_population = -0.1
+			}
+		}
+		GEA_efficient_industry = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_efficient_industry"}
+			picture = workers_market
+			allowed = { always = no }
+			modifier = {
+				industrial_capacity_factory = 0.20
+				weekly_manpower = -200
+				political_power_gain = -0.02
+			}
+		}
+		GEA_best_of_colonies1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_best_of_colonies1"}
+			picture = best_of_colonies
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.10
+			}
+		}
+		GEA_best_of_colonies2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_best_of_colonies2"}
+			picture = best_of_colonies
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.10
+				supply_consumption_factor = -0.15
+				local_building_slots_factor = 0.1
+			}
+		}
+		GEA_best_of_colonies3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_best_of_colonies3"}
+			picture = best_of_colonies
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.10
+				local_resources_factor = 0.1
+				industrial_capacity_factory = 0.05
+			}
+		}
+		GEA_best_of_colonies4 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_best_of_colonies4"}
+			picture = best_of_colonies
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.10
+				repair_speed_factor = 0.2
+				industrial_capacity_dockyard = 0.15
+			}
+		}
+		GEA_best_of_colonies5 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_best_of_colonies5"}
+			picture = best_of_colonies
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.10
+				research_speed_factor = 0.1
+			}
+		}
+		GEA_best_of_colonies6 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_best_of_colonies6"}
+			picture = best_of_colonies
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.10
+				consumer_goods_factor = -0.15
+			}
+		}
+		GEA_best_of_colonies7 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_best_of_colonies7"}
+			picture = best_of_colonies
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.20
+				war_support_factor = 0.10
+			}
+		}
+		GEA_Extreme_exploitation = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_Extreme_exploitation"}
+			picture = Extreme_exploitation
+			allowed = { always = no }
+			modifier = {
+				production_factory_max_efficiency_factor = 0.15
+				industrial_capacity_factory = 0.05
+				weekly_manpower = -114
+			}
+		}
+		GEA_fordism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_fordism"}
+			picture = fordism
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.02
+				production_factory_efficiency_gain_factor = 0.13
+			}
+		}
+		GEA_corporate_economy1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_corporate_economy1"}
+			picture = corporate_economy
+			allowed = { always = no }
+			modifier = {
+				local_resources_factor = 0.1
+				min_export = -0.1
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		GEA_corporate_economy2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_corporate_economy2"}
+			picture = corporate_economy
+			allowed = { always = no }
+			modifier = {
+				local_resources_factor = 0.25
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		GEA_expropriation_enterprise = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_expropriation_enterprise"}
+			picture = expropriation_enterprise
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = 0.1
+				political_power_gain = 0.1
+				production_speed_buildings_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
+			}
+		}
+		GEA_secure_naval = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_secure_naval"}
+			picture = secure_naval
+			allowed = { always = no }
+			modifier = {
+				navy_screen_attack_factor = 0.1
+				naval_speed_factor = 0.05
+				convoy_escort_efficiency = 0.20
+				naval_detection = 0.10
+			}
+		}
+		GEA_our_iron_cross = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_our_iron_cross "}
+			picture = GER_victors_weltkrieg
+			allowed = { always = no }
+			modifier = {
+				war_support_factor = 0.20
+				mobilization_speed = 0.10
+				monthly_population = 0.10
+				conscription = 0.005
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+				resistance_target_on_our_occupied_states = 0.2
+			}
+		}
+		GEA_militarization1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_militarization1"}
+			picture = militarization1
+			allowed = { always = no }
+			modifier = {
+				war_support_factor = 0.15
+				consumer_goods_factor = 0.10
+				industrial_capacity_factory = 0.1
+				production_speed_arms_factory_factor = 0.10
+				production_speed_bunker_factor = 0.10
+				production_speed_buildings_factor = -0.05
+				min_export = -0.1
+				max_command_power = 30
+				conscription = 0.01
+			}
+		} 
+		GEA_militarization2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_militarization2"}
+			picture = militarization2
+			allowed = { always = no }
+			modifier = {
+				war_support_factor = 0.20
+				industrial_capacity_factory = 0.20
+				production_speed_arms_factory_factor = 0.20
+				production_speed_bunker_factor = 0.20
+				production_speed_dockyard_factor = 0.10
+				production_speed_buildings_factor = 0.10
+				max_command_power = 50
+				conscription = 0.01
+				conscription_factor = 0.20
+				mobilization_speed = 0.1
+				line_change_production_efficiency_factor = 0.2
+			}
+		} 
+#决议
+		GEA_transfer_of_benefit = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_transfer_of_benefit"}
+			picture = bloated_bureaucracy
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = 0.10
+				political_power_gain = -0.05
+			}
+		} 
+		GEA_expand_investment = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_expand_investment"}
+			picture = GRE_palaiokommatismos
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = 0.10	
+				production_factory_max_efficiency_factor = 0.05
+				industrial_capacity_factory = 0.1	
+			}
+		} 
+		GEA_mine = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_mine"}
+			picture = GEA_mine
+			allowed = { always = no }
+			modifier = {
+				local_resources_factor = -0.1
+				local_building_slots_factor = -0.05
+			}
+		} 
+		GEA_railway = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_railway"}
+			picture = GEA_railway
+			allowed = { always = no }
+			modifier = {
+				production_speed_infrastructure_factor = 0.15
+				production_speed_rail_way_factor = 0.2
+			}
+		} 
+		GEA_Integration_of_Siamese_police = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_Integration_of_Siamese_police"}
+			picture = brokencuffs
+			allowed = { always = no }
+			modifier = {
+				required_garrison_factor = -0.1
+				resistance_decay = 0.1
+			}
+		} 
+		GEA_focus_attack = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_focus_attack"}
+			picture = attack
+			allowed = { always = no }
+			modifier = {
+				max_planning = 0.1
+				army_attack_factor = 0.1
+				army_speed_factor = 0.05
+			}
+		} 
+		GEA_gas = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_gas"}
+			picture = generic_gas_idea
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				army_attack_factor = 0.1
+				breakthrough_factor = 0.1
+				army_morale_factor = -0.1
+			}
+		} 
+		GEA_Liquid_combustion_bomb = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_Liquid_combustion_bomb"}
+			picture = bomb
+			allowed = { always = no }
+			modifier = {
+				air_cas_efficiency = 0.1
+				air_bombing_targetting = 0.1
+				air_strategic_bomber_bombing_factor = 0.2
+			}
+		} 
+		GEA_Give_in_to_longshoremen = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_Give_in_to_longshoremen"}
+			picture = worker_guarantees
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.05
+				production_speed_dockyard_factor = -0.05
+				industrial_capacity_dockyard = -0.15
+			}
+		}
+#军事线
+		GEA_invest_arms_industry = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_invest_arms_industry" }
+			picture = ordnance
+			allowed = { always = no }
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				artillery_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				motorized_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				support_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+		}
+		GEA_invest_arms_industry2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_invest_arms_industry2 "}
+			picture = ordnance
+			allowed = { always = no }
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				artillery_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				motorized_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				support_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				armor = {
+					build_cost_ic = -0.20
+					instant = yes
+				}
+			}
+	    }
+		GEA_invest_arms_industry3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_invest_arms_industry3" }
+			picture = ordnance
+			allowed = { always = no }
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.2
+					instant = yes
+				}
+				artillery_equipment = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				motorized_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				support_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				armor = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+		}
+		GEA_Fire_coverage = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_Fire_coverage "}
+			picture = Fire_coverage
+			allowed = { always = no }
+			equipment_bonus = {
+				artillery_equipment = {
+					soft_attack = 0.10
+					hard_attack = 0.05
+					breakthrough = 0.05
+					instant = yes
+				}
+			}
+	    }
+		GEA_anti_tank = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_anti_tank "}
+			picture = anti_tank
+			allowed = { always = no }
+			equipment_bonus = {
+				anti_tank_equipment = {
+					soft_attack = 0.05
+					hard_attack = 0.15
+					ap_attack = 1
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+	    }
+		GEA_secret_army1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_secret_army1 "}
+			picture = secret_army
+			allowed = { always = no }
+			modifier = {
+				recon_factor = 0.1
+				special_forces_cap = 0.1
+				special_forces_no_supply_grace = 96
+				modifier_army_sub_unit_elite_infantry_attack_factor = 0.1
+				modifier_army_sub_unit_elite_infantry_defence_factor = 0.1
+				modifier_army_sub_unit_elite_infantry_max_org_factor = 0.05
+			}
+	    }
+#navy
+		GEA_admirality1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_admirality1"}
+			picture = admirality
+			allowed = { always = no }
+			equipment_bonus = {
+				convoy = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				submarine = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				destroyer = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				ship_hull_cruiser = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				capital_ship = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				ship_hull_heavy = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				carrier = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+			modifier = {
+				naval_doctrine_cost_factor = -0.1
+				weekly_manpower = 500
+
+			}
+		}
+		GEA_admirality2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_admirality2"}
+			picture = admirality
+			allowed = { always = no }
+			equipment_bonus = {
+				convoy = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				submarine = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				destroyer = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				ship_hull_cruiser = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				capital_ship = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				ship_hull_heavy = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				carrier = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+			modifier = {
+				naval_doctrine_cost_factor = -0.1
+				weekly_manpower = 500
+				carrier_capacity_penalty_reduction = -0.15
+				sortie_efficiency = 0.1
+				convoy_escort_efficiency = 0.10
+				naval_speed_factor = 0.05
+			}
+		}
+		GEA_admirality3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_admirality3"}
+			picture = admirality
+			allowed = { always = no }
+			equipment_bonus = {
+				convoy = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				submarine = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				destroyer = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				ship_hull_cruiser = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				capital_ship = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				ship_hull_heavy = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				carrier = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+			modifier = {
+				naval_doctrine_cost_factor = -0.1
+				weekly_manpower = 500
+				naval_hit_chance = 0.2
+				naval_coordination = 0.1
+				navy_max_range_factor = 0.10
+				naval_speed_factor = 0.1
+			}
+		}
+		GEA_admirality4 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_admirality4"}
+			picture = admirality
+			allowed = { always = no }
+			equipment_bonus = {
+				convoy = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				submarine = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				destroyer = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				ship_hull_cruiser = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				capital_ship = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				ship_hull_heavy = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				carrier = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+			modifier = {
+				naval_doctrine_cost_factor = -0.1
+				weekly_manpower = 500
+				carrier_capacity_penalty_reduction = -0.15
+				sortie_efficiency = 0.15
+				convoy_escort_efficiency = 0.15
+				naval_speed_factor = 0.05
+				navy_max_range_factor = 0.1
+				air_nav_efficiency = 0.05
+			}
+		}
+		GEA_admirality5 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_admirality5"}
+			picture = admirality
+			allowed = { always = no }
+			equipment_bonus = {
+				convoy = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				submarine = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				destroyer = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				ship_hull_cruiser = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				capital_ship = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				ship_hull_heavy = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				carrier = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+			modifier = {
+				naval_doctrine_cost_factor = -0.1
+				weekly_manpower = 500
+				naval_hit_chance = 0.2
+				naval_coordination = 0.1
+				navy_max_range_factor = 0.15
+				naval_speed_factor = 0.15
+				naval_damage_factor = 0.1
+				naval_critical_score_chance_factor = 0.05
+
+			}
+		}
+		GEA_submarine = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_submarine"}
+			picture = submarine
+			allowed = { always = no }
+			modifier = {
+				navy_max_range_factor = 0.1
+				convoy_raiding_efficiency_factor = 0.15
+				navy_submarine_detection_factor = 0.1
+			}
+		}
+		GEA_marine = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_marine"}
+			picture = marine
+			allowed = { always = no }
+			modifier = {
+				naval_invasion_capacity = 10
+				invasion_preparation = -0.15
+				amphibious_invasion = 0.1
+			}
+		}
+		GEA_marine1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_marine1"}
+			picture = marine
+			allowed = { always = no }
+			modifier = {
+				naval_invasion_capacity = 10
+				invasion_preparation = -0.15
+				amphibious_invasion = 0.1
+				navy_carrier_air_attack_factor = 0.1
+				positioning = 0.10
+				navy_anti_air_attack_factor = 0.05
+			}
+		}
+		GEA_repair_ship = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_repair_ship"}
+			picture = repair_ship
+			allowed = { always = no }
+			modifier = {
+				refit_speed = 0.25
+				naval_equipment_upgrade_xp_cost = -0.25
+				refit_ic_cost = -0.3
+			}
+		}
+		GEA_repair_ship1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_repair_ship"}
+			picture = repair_ship
+			allowed = { always = no }
+			modifier = {
+				refit_speed = 0.25
+				naval_equipment_upgrade_xp_cost = -0.25
+				refit_ic_cost = -0.3
+				repair_speed_factor = 0.3
+			}
+		}
+#air
+		GEA_air_support = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_air_support"}
+			picture = air_support
+			allowed = { always = no }
+			modifier = {
+				army_bonus_air_superiority_factor = 0.15
+				air_cas_present_factor = 0.1
+				air_attack_factor = 0.05
+				air_agility_factor = 0.05
+				experience_gain_air_factor = 0.1
+			}
+		}
+		GEA_air_army = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_air_army"}
+			picture = air_army
+			allowed = { always = no }
+			modifier = {
+				air_mission_efficiency = 0.15
+				air_strategic_bomber_bombing_factor = 0.1
+				air_weather_penalty = -0.1
+				air_range_factor = 0.1
+				experience_gain_air_factor = 0.1
+			}
+		}
+		GEA_air_support1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_air_support1"}
+			picture = air_support
+			allowed = { always = no }
+			research_bonus = {
+				air_equipment = 0.1
+			}
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				medium_plane_airframe = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				large_plane_airframe = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+			modifier = {
+				army_bonus_air_superiority_factor = 0.15
+				air_cas_present_factor = 0.1
+				air_attack_factor = 0.05
+				air_agility_factor = 0.05
+				experience_gain_air_factor = 0.1
+			}
+		}
+		GEA_air_army1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_air_army1"}
+			picture = air_army
+			allowed = { always = no }
+			research_bonus = {
+				air_equipment = 0.1
+			}
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				medium_plane_airframe = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				large_plane_airframe = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+			modifier = {
+				air_mission_efficiency = 0.15
+				air_strategic_bomber_bombing_factor = 0.1
+				air_weather_penalty = -0.1
+				air_range_factor = 0.1
+				experience_gain_air_factor = 0.1
+			}
+		}
+		GEA_air_support2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_air_support2"}
+			picture = air_support
+			allowed = { always = no }
+			research_bonus = {
+				air_equipment = 0.1
+			}
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				medium_plane_airframe = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				large_plane_airframe = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+			modifier = {
+				army_bonus_air_superiority_factor = 0.2
+				air_cas_present_factor = 0.1
+				air_attack_factor = 0.1
+				air_agility_factor = 0.05
+				experience_gain_air_factor = 0.2
+			}
+		}
+		GEA_air_army2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_air_army2"}
+			picture = air_army
+			allowed = { always = no }
+			research_bonus = {
+				air_equipment = 0.1
+			}
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				medium_plane_airframe = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				large_plane_airframe = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+			modifier = {
+				army_bonus_air_superiority_factor = 0.05
+				air_attack_factor = 0.05
+				air_mission_efficiency = 0.2
+				air_strategic_bomber_bombing_factor = 0.1
+				air_weather_penalty = -0.1
+				air_range_factor = 0.1
+				experience_gain_air_factor = 0.2
+			}
+		}
+		GEA_air_support3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_air_support3"}
+			picture = air_support
+			allowed = { always = no }
+			research_bonus = {
+				air_equipment = 0.1
+			}
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				medium_plane_airframe = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				large_plane_airframe = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+			modifier = {
+				army_bonus_air_superiority_factor = 0.15
+				air_cas_present_factor = 0.15
+				air_attack_factor = 0.05
+				air_agility_factor = 0.1
+				experience_gain_air_factor = 0.2
+			}
+		}
+		GEA_air_army3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_air_army3"}
+			picture = air_army
+			allowed = { always = no }
+			research_bonus = {
+				air_equipment = 0.1
+			}
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				medium_plane_airframe = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				large_plane_airframe = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+			modifier = {
+				air_mission_efficiency = 0.15
+				air_cas_present_factor = 0.05
+				air_strategic_bomber_bombing_factor = 0.1
+				air_weather_penalty = -0.15
+				air_range_factor = 0.15
+				experience_gain_air_factor = 0.2
+			}
+		}
+		GEA_air_support4 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_air_support4"}
+			picture = air_support
+			allowed = { always = no }
+			research_bonus = {
+				air_equipment = 0.1
+			}
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				medium_plane_airframe = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				large_plane_airframe = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+			modifier = {
+				army_bonus_air_superiority_factor = 0.2
+				air_cas_present_factor = 0.15
+				air_attack_factor = 0.10
+				air_agility_factor = 0.10
+				experience_gain_air_factor = 0.3
+			}
+		}
+		GEA_air_army4 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_air_army4"}
+			picture = air_army
+			allowed = { always = no }
+			research_bonus = {
+				air_equipment = 0.1
+			}
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				medium_plane_airframe = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				large_plane_airframe = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+			modifier = {
+				army_bonus_air_superiority_factor = 0.05
+				air_attack_factor = 0.05
+				air_mission_efficiency = 0.2
+				air_cas_present_factor = 0.05
+				air_strategic_bomber_bombing_factor = 0.1
+				air_weather_penalty = -0.15
+				air_range_factor = 0.15
+				experience_gain_air_factor = 0.3
+			}
+		}
+		GEA_air_support5 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_air_support5"}
+			picture = air_support
+			allowed = { always = no }
+			research_bonus = {
+				air_equipment = 0.1
+			}
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				medium_plane_airframe = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				large_plane_airframe = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+			modifier = {
+				army_bonus_air_superiority_factor = 0.2
+				air_cas_present_factor = 0.15
+				air_attack_factor = 0.10
+				air_agility_factor = 0.10
+				experience_gain_air_factor = 0.3
+				air_ace_generation_chance_factor = 0.15
+				ace_effectiveness_factor = 0.05
+			}
+		}
+		GEA_air_army5 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_air_army5"}
+			picture = air_army
+			allowed = { always = no }
+			research_bonus = {
+				air_equipment = 0.1
+			}
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				medium_plane_airframe = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				large_plane_airframe = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+			modifier = {
+				army_bonus_air_superiority_factor = 0.05
+				air_attack_factor = 0.05
+				air_mission_efficiency = 0.2
+				air_cas_present_factor = 0.05
+				air_strategic_bomber_bombing_factor = 0.1
+				air_weather_penalty = -0.15
+				air_range_factor = 0.15
+				experience_gain_air_factor = 0.3
+				air_ace_generation_chance_factor = 0.15
+				ace_effectiveness_factor = 0.05
+			}
+		}
+		GEA_air_support6 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_air_support6"}
+			picture = air_support
+			allowed = { always = no }
+			research_bonus = {
+				air_equipment = 0.1
+			}
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				medium_plane_airframe = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				large_plane_airframe = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+			modifier = {
+				army_bonus_air_superiority_factor = 0.2
+				air_cas_present_factor = 0.15
+				air_attack_factor = 0.10
+				air_agility_factor = 0.10
+				experience_gain_air_factor = 0.3
+				air_ace_generation_chance_factor = 0.15
+				ace_effectiveness_factor = 0.05
+				air_accidents_factor = -0.1
+				air_escort_efficiency = 0.1
+				air_intercept_efficiency = 0.1
+				air_detection = 0.05
+			}
+		}
+		GEA_air_army6 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_air_army6"}
+			picture = air_army
+			allowed = { always = no }
+			research_bonus = {
+				air_equipment = 0.1
+			}
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				medium_plane_airframe = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				large_plane_airframe = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+			modifier = {
+				army_bonus_air_superiority_factor = 0.05
+				air_attack_factor = 0.05
+				air_mission_efficiency = 0.2
+				air_cas_present_factor = 0.05
+				air_strategic_bomber_bombing_factor = 0.1
+				air_weather_penalty = -0.15
+				air_range_factor = 0.15
+				experience_gain_air_factor = 0.3
+				air_ace_generation_chance_factor = 0.15
+				ace_effectiveness_factor = 0.05
+				air_accidents_factor = -0.1
+				air_escort_efficiency = 0.1
+				air_intercept_efficiency = 0.1
+				air_detection = 0.05
+			}
+		}
+		GEA_air_support7 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_air_support7"}
+			picture = air_support
+			allowed = { always = no }
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				medium_plane_airframe = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				large_plane_airframe = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+			}
+			modifier = {
+				army_bonus_air_superiority_factor = 0.2
+				air_cas_present_factor = 0.15
+				air_attack_factor = 0.10
+				air_agility_factor = 0.10
+				experience_gain_air_factor = 0.4
+				air_ace_generation_chance_factor = 0.15
+				ace_effectiveness_factor = 0.05
+				air_accidents_factor = -0.1
+				air_escort_efficiency = 0.1
+				air_intercept_efficiency = 0.1
+				air_detection = 0.05
+			}
+		}
+		GEA_air_army7 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_air_army7"}
+			picture = air_army
+			allowed = { always = no }
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				medium_plane_airframe = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				large_plane_airframe = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+			modifier = {
+				army_bonus_air_superiority_factor = 0.05
+				air_attack_factor = 0.05
+				air_mission_efficiency = 0.2
+				air_cas_present_factor = 0.05
+				air_strategic_bomber_bombing_factor = 0.1
+				air_weather_penalty = -0.15
+				air_range_factor = 0.15
+				experience_gain_air_factor = 0.4
+				air_ace_generation_chance_factor = 0.15
+				ace_effectiveness_factor = 0.05
+				air_accidents_factor = -0.1
+				air_escort_efficiency = 0.1
+				air_intercept_efficiency = 0.1
+				air_detection = 0.05
+			}
+		}
+		GEA_Red_Baron = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_Red_Baron"}
+			picture = Red_Baron
+			allowed = { always = no }
+			modifier = {
+				air_ace_generation_chance_factor = 0.2
+				ace_effectiveness_factor = 0.1
+				experience_gain_air_factor = 0.1
+			}
+		}
+		GEA_large_bomb = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_large_bomb"}
+			picture = large_bomb
+			allowed = { always = no }
+			modifier = {
+				air_bombing_targetting = 0.15
+				air_strategic_bomber_bombing_factor = 0.10
+				air_range_factor = 0.1
+			}
+		}
+		GEA_navy_bomber = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_navy_bomber"}
+			picture = navy_bomber
+			allowed = { always = no }
+			equipment_bonus = {
+				cv_small_plane_airframe = {
+					naval_strike_attack = 0.10
+					naval_strike_targetting = 0.10
+					instant = yes
+				}
+			}
+			modifier = {
+				air_nav_efficiency = 0.05
+				naval_strike_targetting_factor = 0.05
+			}
+		}
+		GEA_navy_bomber1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_navy_bomber1"}
+			picture = navy_bomber
+			allowed = { always = no }
+			equipment_bonus = {
+				cv_small_plane_airframe = {
+					naval_strike_attack = 0.10
+					naval_strike_targetting = 0.10
+					instant = yes
+				}
+			}
+			modifier = {
+				air_nav_efficiency = 0.15
+				naval_strike_targetting_factor = 0.1
+			}
+		}
+#外交
+		GEA_fuck_jap = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_fuck_jap"}
+			picture = attack_jap
+			allowed = { always = no }
+			targeted_modifier = {
+				tag = jap
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+			modifier = {
+				spotting_chance = 0.1
+				navy_fuel_consumption_factor = -0.1
+			}
+		}
+		GEA_fuck_ast = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_fuck_ast"}
+			picture = attack_ast
+			allowed = { always = no }
+			targeted_modifier = {
+				tag = ast
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+			modifier = {
+				invasion_preparation = -0.1
+				amphibious_invasion = 0.1
+			}
+		}
+		GEA_fuck_kmt = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_fuck_kmt"}
+			picture = fuck_kmt
+			allowed = { always = no }
+			targeted_modifier = {
+				tag = chi
+				attack_bonus_against = 1
+				defense_bonus_against = 1
+				breakthrough_bonus_against = 0.5
+			}
+		}
+		GEA_fuck_kmt1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_fuck_kmt1"}
+			picture = fuck_kmt
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = 0.1
+				stability_factor = -0.1
+				war_support_factor = -0.05
+				min_export = -1
+			}
+		}
+		GEA_dui_ri_zhan_shi = {#对日战事
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_dui_ri_zhan_shi" }
+			picture = FNG_expel_japanese_bandits
+			allowed = { always = no }
+			modifier = {
+				surrender_limit = 0.10
+			}
+			targeted_modifier = {
+				tag = JAP
+				attack_bonus_against = 0.10
+				defense_bonus_against = 0.10   
+			}
+		}
+		GEA_Get_ready_for_battle = {#踏上滩涂
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_Get_ready_for_battle" }
+			picture = GEN_navy_decisive_bat
+			allowed = { always = no }
+			modifier = {
+				invasion_preparation = -0.15
+				amphibious_invasion = 0.1
+				navy_fuel_consumption_factor = -0.1 
+				planning_speed = 0.05
+				max_planning = 0.05
+			}
+		}
+#BM
+		GEA_black_monday_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_black_monday_idea"}
+			picture = great_depression
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.2
+				consumer_goods_factor = 0.2
+				production_factory_max_efficiency_factor = -0.15
+				industrial_capacity_factory = -0.15
+				production_speed_buildings_factor = -0.2
+				min_export = -0.3
+			}
+		}
+		GEA_black_monday_idea2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_black_monday_idea2"}
+			picture = great_depression
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.05
+				consumer_goods_factor = 0.1
+				production_factory_max_efficiency_factor = -0.05
+				industrial_capacity_factory = -0.05
+				production_speed_buildings_factor = -0.1
+				min_export = -0.1
+			}
+		} 
+		GEA_black_monday_idea3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_black_monday_idea3"}
+			picture = GEA_greece
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = -0.08
+				production_factory_max_efficiency_factor = 0.06
+				industrial_capacity_factory = 0.10
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		GEA_black_monday_idea4 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_black_monday_idea"}
+			picture = great_depression
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.15
+				war_support_factor = 0.10
+				consumer_goods_factor = 0.15
+				production_factory_max_efficiency_factor = -0.05
+				industrial_capacity_factory = -0.05
+				production_speed_arms_factory_factor = 0.05
+				production_speed_bunker_factor = 0.10
+				production_speed_buildings_factor = -0.1
+				min_export = -0.2
+			}
+		} 
+        GEA_collapsing_colonial_finances = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_collapsing_colonial_finances"}
+			picture = collapsing_colonial_finances
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.15
+                war_support_factor = -0.20
+				consumer_goods_factor = 0.10
+                experience_gain_army_factor = -0.2
+				experience_gain_navy_factor = -0.1
+				experience_gain_air_factor = -0.1
+			}
+		}
+		GEA_collapsing_colonial_finances2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_collapsing_colonial_finances2"}
+			picture = collapsing_colonial_finances2
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				consumer_goods_factor = 0.05
+                experience_gain_army_factor = -0.1
+			}
+		}
+		GEA_colonial_disaster_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_colonial_disaster_idea"}
+			picture = FRA_scw_intervention_republicans_focus
+			allowed = { always = no }
+			modifier = {
+				war_support_weekly = -0.005
+				stability_factor = -0.3
+				political_power_gain = -0.20
+				local_resources_factor = -0.15
+				army_morale_factor = -0.20
+			}
+		}
+		GEA_colonial_disaster_idea1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_colonial_disaster_idea1"}
+			picture = FRA_scw_intervention_republicans_focus
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.15
+				political_power_gain = -0.1
+				local_resources_factor = -0.1
+				army_morale_factor = -0.1
+			}
+		}
+		GEA_colonial_question1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_colonial_question1"}
+			picture = colonial_question
+			allowed = { always = no }
+			modifier = {
+				required_garrison_factor = 0.1
+				resistance_decay = -0.05
+				non_core_manpower = 0.20
+				mobilization_speed = 0.1
+				army_chief_cost_factor = -0.33
+				navy_chief_cost_factor = -0.33
+				air_chief_cost_factor = -0.33
+				high_command_cost_factor = -0.33
+				local_resources_factor = 0.1
+			}
+		}
+		GEA_falling_price_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_falling_price_idea"}
+			picture = great_depression
+			allowed = { always = no }
+			modifier = {
+				industrial_capacity_factory = -0.2
+				production_speed_buildings_factor = -0.1
+				production_factory_max_efficiency_factor = -0.1
+			}
+		}
+		GEA_conrol_price_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_conrol_price_idea"}
+			picture = great_depression
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = -0.10
+				min_export = -0.4
+			}
+		}
+		GEA_plantations_negotiation_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_plantations_negotiation_idea"}
+			picture = great_depression
+			allowed = { always = no }
+			modifier = {
+				industrial_capacity_factory = -0.1
+				min_export = -0.1
+			}
+		}
+	}
+#隐藏精神
+	hidden_ideas = {
+		GEA_fuck_jap1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_fuck_jap1"}
+			picture = attack_jap
+			allowed = { always = no }
+			modifier = {
+				navy_intel_decryption_bonus = -0.1
+				navy_screen_attack_factor = -0.05
+				navy_screen_defence_factor = -0.05
+				sortie_efficiency = -0.1
+			}
+		}
+		GEA_officer = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_officer"}
+			allowed = { always = no }
+			modifier = {
+				weekly_manpower = 100
+				stability_weekly = 0.005
+				political_power_gain = 0.05
+				authoritarian_democrat_drift = 0.01
+			}
+		}
+	}
+#### General ####
+	industrial_concern = {
+
+		GEA_Von_Tirpitz_University = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_Von_Tirpitz_University"}
+			allowed = { original_tag = GEA }
+			traits = { electronics_manufacturer }
+			modifier = { production_speed_radar_station_factor = 0.1 }
+			research_bonus = { electronics = 0.1 }
+		}
+		GEA_Deutsche_Samoa_Gesellschaft = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_Deutsche_Samoa_Gesellschaft"}
+			allowed = { original_tag = GEA }
+			traits = { industrial_manufacturer }
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+			}
+			research_bonus = { industry = 0.1 }
+		}
+		GEA_Schantung_Bergbaugesellschaft = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_Schantung_Bergbaugesellschaft"}
+			allowed = { original_tag = GEA }
+			traits = { industrial_manufacturer }
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+			}
+			research_bonus = { industry = 0.1 }
+		}
+		GEA_Boustead_Co = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_Boustead_Co"}
+			allowed = {original_tag = GEA }
+			traits = { chemical_producer }
+			modifier = { production_speed_synthetic_refinery_factor = 0.1 }
+			research_bonus = {
+				synth_resources = 0.1
+				industry = 0.1
+			}
+		}
+		East_Asia_krupp = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea East_Asia_krupp" }
+			picture = krupp
+			allowed = {original_tag = GEA }
+			traits = { industrial_manufacturer }
+			visible = {
+				NOT = { GEA = { has_completed_focus = GEA_invite_krupp } }
+			}
+			modifier = {
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.05
+			}
+			research_bonus = {
+				industry = 0.1
+			}
+		}
+		East_Asia_krupp1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea East_Asia_krupp1" }
+			picture = krupp
+			allowed = {original_tag = GEA  }
+			traits = { industrial_manufacturer }
+			visible = {
+				GEA = { has_completed_focus = GEA_invite_krupp}
+			}
+			modifier = {
+				production_speed_arms_factory_factor = 0.20
+				production_speed_industrial_complex_factor = 0.10
+			}
+			research_bonus = {
+				industry = 0.15
+				artillery = 0.1
+			}
+		}
+		Deutsche_East_Asia_Railway = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Deutsche_East_Asia_Railway" }
+			picture = Deutsche_East_Asia_Railway
+			allowed = {original_tag = GEA }
+			traits = { railroad_company }
+			visible = {
+				NOT = {GEA = { has_completed_focus = GEA_land_transport}}
+			}
+			modifier = {
+				production_speed_infrastructure_factor = 0.20
+				production_speed_rail_way_factor = 0.10
+			}
+			research_bonus = {
+				industry = 0.10
+			}
+		}
+		Deutsche_East_Asia_Railway1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Deutsche_East_Asia_Railway1" }
+			picture = Deutsche_East_Asia_Railway
+			allowed = {original_tag = GEA }
+			traits = {  railroad_company }
+			visible = {
+				GEA = { has_completed_focus = GEA_land_transport}
+			}
+			modifier = {
+				production_speed_infrastructure_factor = 0.25
+				production_speed_rail_way_factor = 0.20
+			}
+			research_bonus = {
+				industry = 0.15
+			}
+		}
+	}
+#### Weapons Manufacturer ####
+    materiel_manufacturer = {
+		designer = yes
+
+		GEA_Tonkin_Arsernal = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_Tonkin_Arsernal"}
+			allowed = { original_tag = GEA }
+			traits = { infantry_equipment_producer_assualt_1 }
+			research_bonus = { infantry_weapons = 0.1 }
+		}
+		GEA_Neu-Guinea-Kompagnie = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_Neu-Guinea-Kompagnie"}
+			allowed = { original_tag = GEA }
+			traits = { infantry_equipment_producer_offense_1 }
+			research_bonus = { infantry_weapons = 0.1 }
+		}
+
+		GEA_Opel = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_Opel"}
+			allowed = { original_tag = GEA }
+			traits = { motorised_equipment_producer_mass_2 }
+			research_bonus = { motorized_equipment = 0.05 }
+		}
+	}
+#### Heavy Equipment Manufacturer ####
+    tank_manufacturer = {
+		designer = yes
+
+		GEA_FMSR = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_FMSR"}
+			allowed = { original_tag = GEA }
+			traits = { small_tank_producer_offense_1 }
+			research_bonus = { armor = 0.05 }
+		}
+		GEA_Schantung_Eisenbahn_Gesellschaft = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_Schantung_Eisenbahn_Gesellschaft"}
+			allowed = { original_tag = GEA }
+			traits = { small_tank_producer_mass_0 }
+			research_bonus = { armor = 0.05 }
+		}
+		GEA_Chemin_de_fer_Transindochinois = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_Chemin_de_fer_Transindochinois"}
+			allowed = { original_tag = GEA }
+			traits = { small_tank_producer_defense_1 }
+			research_bonus = { armor = 0.05 }
+		}
+	}
+	naval_manufacturer = {
+		designer = yes
+
+		GEA_Norddeutscher_Lloyd = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_Norddeutscher_Lloyd"}
+			allowed = { original_tag = GEA }
+			traits = { small_ship_producer_mass_1 }
+			research_bonus = { naval_equipment = 0.05 }
+		}
+		GEA_Germaniawerft = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_Germaniawerft"}
+			allowed = { original_tag = GEA }
+			traits = { cruiser_producer_defense_2 } # Downgrade from Capital Ship to replace Saigon
+			research_bonus = { naval_equipment = 0.05 }
+		}
+	}
+	aircraft_manufacturer = {
+		designer = yes
+		GEA_Focke-Wulf = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_Focke-Wulf"}
+			allowed = { original_tag = GEA }
+			traits = { nav_cas_producer_defense_1 }
+			research_bonus = { air_equipment = 0.05 }
+		}
+
+		GEA_Malaiisch_Fluggesellschaft = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_Malaiisch_Fluggesellschaft"}
+			allowed = { original_tag = GEA }
+			traits = { bomber_producer_mass_1 }
+			research_bonus = { air_equipment = 0.05 }
+		}
+
+		GEA_Rumpler_Flugzeugwerke_Ostasien = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_Rumpler_Flugzeugwerke_Ostasien"}
+			allowed = { original_tag = GEA }
+			traits = { fighter_producer_offense_1 }
+			research_bonus = { air_equipment = 0.05 }
+		}
+	}	
+}
+
+
+
+
+
+
+

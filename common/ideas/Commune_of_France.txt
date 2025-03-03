@@ -1,0 +1,1660 @@
+ideas = {
+
+
+	country = {
+		FRA_quanli_jizhong = {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			 modifier = {
+				stability_factor = 0.1
+				conscription_factor = 0.15
+			 }
+
+		}
+
+		FRA_gongchan = {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.15
+				monthly_population = 0.3
+			}
+		}
+		FRA_gongren = {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				local_building_slots_factor = 0.1
+				consumer_goods_factor = -0.05
+				compliance_growth = 0.1
+			}
+		}
+		FRA_jishu = {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				research_speed_factor = 0.1
+				political_power_cost = 0.05
+			}
+
+		}
+		FRA_wunian = {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				industrial_capacity_factory = 0.2
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				conscription = -0.005
+			}
+		}
+		FRA_fama = {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				totalist_drift = 0.02
+				stability_weekly = 0.005
+				}
+		}
+		FRA_sha = {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				syndicalist_drift = -0.01
+				radical_socialist_drift = -0.01
+				social_democrat_drift = -0.01
+				stability_weekly = 0.005
+	}
+		}
+		FRA_meigong = {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				consumer_goods_factor = -0.05
+				stability_factor = 0.1
+			}
+		}
+		FRA_wansui = {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				army_org_factor = 0.05
+				surrender_limit = 0.1
+			}
+		}
+		FRA_liening = {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				stability_factor = 0.15
+				political_power_factor = 0.1
+			}
+		}
+		FRA_jiti = {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				min_export = -0.1
+				local_building_slots_factor = 0.2
+				consumer_goods_factor = -0.05
+			}
+		}
+		FRA_douzheng = {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				conscription = 0.03
+				drift_defence_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
+			}
+		}
+		FRA_zhen_geming = {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				army_attack_factor = 0.15
+				army_defence_factor = 0.1
+				planning_speed = 0.2
+				max_planning = -0.1
+			}
+		}
+		FRA_renmin = {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				training_time_army_factor = -0.1
+				conscription = 0.02
+				attrition = -0.15
+			}
+		}
+		FRA_dang = {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				consumer_goods_factor = --0.1
+				research_speed_factor = -0.05
+				local_resources_factor = 0.25
+				industrial_capacity_factory = 0.15
+			}
+		}
+		FRA_minzhu = {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				political_power_factor = 0.05
+				stability_weekly = 0.005
+			}
+		}
+		FRA_fa_ren = {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				social_democrat_drift = 0.03
+				radical_socialist_drift = 0.03
+				 syndicalist_drift = 0.03
+				
+			}
+		}
+		FRA_wen_he1= {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				consumer_goods_factor = -0.07
+				production_speed_buildings_factor = 0.25
+				
+			}
+		}
+		FRA_wen_he2= {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_speed_buildings_factor = 0.3
+				
+			}
+		}
+		FRA_ren_jun= {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				army_morale_factor = 0.1
+				land_reinforce_rate = 0.05
+				attrition = -0.25
+				
+			}
+		}
+		FRA_she_gong= {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				stability_factor = 0.2
+				war_support_factor = 0.2
+				consumer_goods_factor = -0.05
+				
+			}
+		}
+		FRA_zun_yan= {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				industrial_capacity_factory = 0.2
+				production_factory_efficiency_gain_factor = 0.15
+				
+			}
+		}
+		FRA_fa_nan= {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				war_support_weekly = 0.01
+				army_org_factor = 0.1
+				army_attack_factor = 0.2
+				army_defence_factor = 0.2
+				max_planning = 0.35
+				experience_loss_factor = -0.1
+				experience_gain_army_factor = 0.25
+				conscription = 0.05
+			}
+		}
+		FRA_feng_san= {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_factory_max_efficiency_factor = -0.1
+				production_factory_efficiency_gain_factor = 0.15
+				supply_consumption_factor = -0.05
+			}
+		}
+		FRA_nonggong= {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				local_resources_factor = 0.25
+				min_export = -0.15
+				consumer_goods_factor = -0.15
+			}
+		}
+		FRA_gong_hui= {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.3
+				production_speed_infrastructure_factor = 0.25
+			}
+		}
+		FRA_xie_gao = {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				stability_weekly = 0.005
+				production_speed_buildings_factor = 0.15
+			}
+		}
+		FRA_ma_qi = {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				production_factory_max_efficiency_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.1
+				war_support_weekly = 0.005
+				research_speed_factor = 0.1
+			}
+		}
+		FRA_hui_yi = {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				compliance_growth = 0.005
+				consumer_goods_factor = -0.05
+			}
+		}
+		FRA_feng_di = {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				surrender_limit = 0.1
+				conscription = 0.01
+				conscription_factor = 0.15
+				army_attack_factor = 0.05
+				army_defence_factor = 0.1
+				max_planning = 0.1
+				land_reinforce_rate = 0.05
+			}
+		}
+		FRA_quan_jiao = {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				research_speed_factor = 0.15
+				stability_factor = 0.15
+			}
+		}
+		FRA_wan_gong = {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				production_speed_industrial_complex_factor = 0.2
+				industrial_capacity_factory = 0.15
+			}
+		}
+		FRA_bao_nong = {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				monthly_population = 0.5
+				local_building_slots_factor = 0.25
+			}
+		}
+		FRA_an_quan = {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				attrition = -0.1
+				stability_weekly = 0.01
+				conscription_factor = 0.05 
+			}
+		}
+		FRA_jiang_jiao = {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				industrial_capacity_factory = 0.15
+				line_change_production_efficiency_factor = 0.2
+				production_factory_max_efficiency_factor = -0.1 
+				production_factory_efficiency_gain_factor = 0.15
+			}
+		}
+		FRA_liu_mang = {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				conscription_factor = 0.2
+			}
+		}
+		FRA_ren_dui = {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				conscription = 0.01
+				army_attack_factor = 0.15
+				army_defence_factor = 0.1
+				army_morale_factor = 0.2
+				army_org_factor = -0.05
+				recon_factor = 0.05
+			}
+		}
+		FRA_hu_zhu_yi = {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				stability_weekly = 0.005
+				monthly_population = 0.3
+				production_speed_buildings_factor = 0.15
+			}
+		}
+		FRA_gong_meng = {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				local_building_slots_factor = 0.2
+				consumer_goods_factor = -0.05
+			}
+		}
+		FRA_zhong_cheng = {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.
+				production_factory_start_efficiency_factor = 0.1
+			}	
+		}
+		FRA_tihuan = {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				industrial_capacity_factory = 0.25
+				consumer_goods_factor = -0.2
+			}	
+		}
+		FRA_zhu_xi = {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				army_org_factor = 0.2
+				conscription = 0.02
+				army_attack_factor = 0.2
+				army_defence_factor = 0.2
+				stability_factor = 0.15
+				land_reinforce_rate = 0.03
+			}	
+		}
+		FRA_aiguo = {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				army_attack_factor = 0.3
+				army_defence_factor = 0.3
+			}	
+		}
+		FRA_zuhe = {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				consumer_goods_factor = -0.05
+				min_export = -0.1
+				line_change_production_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.15
+				production_speed_buildings_factor = 0.2
+			}	
+		}
+		FRA_rendao = {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				political_power_gain = 0.1
+				stability_weekly = 0.005
+				research_speed_factor = 0.05
+			}	
+		}
+		FRA_wenhehua = {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				war_support_factor = -0.05
+				stability_factor = 0.2
+				command_power_gain = 0.3
+				compliance_growth = 0.1
+			}	
+		}
+		FRA_hui_min = {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				stability_weekly = 0.005
+				political_power_gain = 0.05
+			}	
+		}
+		FRA_fangong = {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				research_speed_factor = 0.05
+				war_support_weekly = 0.01
+				conscription = 0.02
+			}	
+		}
+		FRA_zhenghe = {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				consumer_goods_factor = -0.1
+				local_building_slots_factor = 0.1
+				monthly_population = 0.35
+			}	
+		}
+		FRA_zifa = {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				land_reinforce_rate = 0.05
+			    recon_factor = 0.15
+				local_building_slots_factor = 0.2
+	            production_speed_buildings_factor = 0.2
+				surrender_limit = 0.1
+			}	
+		}
+		FRA_xingeming = {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				attrition = -0.1
+	            army_org_factor = 0.2
+	            army_morale_factor = 0.15
+			}	
+		}
+		FRA_ai_jing = {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				army_core_attack_factor = 0.2
+				army_core_defence_factor = 0.2
+	            army_attack_factor = 0.15
+	            army_defence_factor = 0.15
+				mobilization_speed = 0.2
+				conscription_factor = 0.15
+	
+			}	
+		}
+		FRA_qishi = {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				industrial_capacity_factory = 0.2
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.2
+				local_building_slots_factor = 0.15
+				local_resources_factor = 0.15
+
+			}	
+		}
+		FRA_zanting = {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				political_power_gain = 0.1
+				stability_weekly = 0.015
+				conscription_factor = 0.05
+			}	
+		}
+		FRA_junguan = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				stability_factor = 0.1
+				conscription_factor = 0.1
+				research_speed_factor = 0.03
+			}	
+		}
+		FRA_jingdai = {
+			on_add = {
+
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				local_building_slots_factor = 0.2
+				production_speed_buildings_factor= 0.15
+			}	
+		}
+		FRA_qiangquan = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				industrial_capacity_factory = 0.2
+				industrial_capacity_dockyard = 0.2
+				production_factory_max_efficiency_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.15
+				consumer_goods_factor = -0.05
+				min_export = -0.2
+			}	
+		}
+		FRA_tuifan = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				war_support_factor = 0.05
+				stability_factor = 0.1
+			}	
+		}
+		FRA_minguo = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.1
+				war_support_weekly = 0.01
+			}	
+		}
+		FRA_guojun = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				command_power_gain = 0.25
+				war_support_weekly = 0.005
+				training_time_army_factor = -0.25
+				mobilization_speed = 0.1
+			}	
+		}
+		FRA_feiyang = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				consumer_goods_factor = -0.1
+				justify_war_goal_time = -0.5
+				conscription = 0.02
+				industrial_capacity_factory = 0.2
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+			}	
+		}
+		FRA_chongjian = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				stability_factor = 0.2
+			}	
+		}
+		
+		FRA_jundui = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				war_support_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				production_speed_arms_factory_factor = 0.25
+				political_power_gain = -0.05
+			}	
+		}
+		FRA_shi = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				army_attack_factor = 0.1
+				conscription = 0.01
+				army_org_factor = 0.1
+			}	
+		}
+		FRA_jinan1 = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				stability_factor = 0.05
+				max_command_power = 50
+			}	
+		}
+		FRA_jinan2 = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				stability_factor = 0.1
+				max_command_power = 100
+				production_speed_buildings_factor = 0.05
+				line_change_production_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.05
+			}	
+		}
+		FRA_jinan3 = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				stability_factor = 0.15
+				max_command_power = 120
+				production_speed_buildings_factor = 0.08
+				line_change_production_efficiency_factor = 0.15
+				industrial_capacity_factory = 0.1
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+				army_attack_factor = 0.05
+				army_defence_factor = 0.1
+				planning_speed = 0.25
+				max_planning = 0.1
+			}	
+		}
+		FRA_changtai1 = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.05
+			}	
+		}
+		FRA_changtai2 = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				stability_factor = 0.2
+				war_support_factor = 0.2
+				research_speed_factor = 0.15
+				conscription = 0.05
+				industrial_capacity_factory = 0.1
+				production_speed_buildings_factor = 0.1
+			}	
+		}
+		FRA_changtai3 = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				stability_factor = 0.3
+				war_support_factor = 0.35
+				research_speed_factor = 0.15
+				conscription = 0.07
+				industrial_capacity_factory = 0.15
+				production_speed_buildings_factor = 0.2
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				army_speed_factor = 0.2
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}	
+		}
+		FRA_faataman = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				war_support_factor =  = 0.05
+				min_export = -0.25
+				command_power_gain = 0.2
+			}	
+		}
+		FRA_caifu1 = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				production_speed_arms_factory_factor = 0.1
+				local_building_slots_factor = 0.2
+				consumer_goods_factor = -0.05
+			}	
+		}
+		FRA_caifu2 = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.01
+				production_speed_arms_factory_factor = 0.1
+				local_building_slots_factor = 0.2
+				consumer_goods_factor = -0.1
+				industrial_capacity_factory = 0.2
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.15
+			}	
+		}
+		FRA_falv1 = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.15
+			}	
+		}
+		FRA_falv2 = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				stability_factor = 0.2
+				war_support_factor = 0.2
+				stability_weekly = 0.005
+				war_support_weekly = 0.005
+			}	
+		}
+		FRA_gongyi1 = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				stability_factor = 0.05
+				research_speed_factor = 0.05
+			}	
+		}
+		FRA_gongyi2 = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				stability_factor = 0.1
+				research_speed_factor = 0.15
+				surrender_limit = 0.05
+			}	
+		}
+		FRA_meiyou = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				war_support_factor = 0.3
+				war_support_weekly = 0.01
+				non_core_manpower = 0.5
+				conscription_factor = 0.1
+				conscription = 0.03
+				army_attack_factor = 0.15
+				army_defence_factor = 0.1
+				max_planning = 0.25
+			}	
+		}
+		FRA_zhuanduan1 = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				war_support_factor = 0.1
+				max_command_power = 50
+			}	
+		}
+		FRA_zhuanduan2 = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				war_support_factor = 0.25
+				max_command_power = 100
+				training_time_army_factor = -0.15
+				production_speed_bunker_factor = 0.2
+			}	
+		}
+		FRA_zhuanduan3 = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				war_support_factor = 0.25
+				max_command_power = 100
+				training_time_army_factor = -0.2
+				production_speed_bunker_factor = 0.2
+				production_speed_arms_factory_factor = 0.2
+				conscription = 0.01
+			}	
+		}
+		FRA_zhuanduan4 = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				war_support_factor = 0.25
+				max_command_power = 100
+				training_time_army_factor = -0.2
+				production_speed_bunker_factor = 0.2
+				production_speed_arms_factory_factor = 0.2
+				conscription = 0.02
+				army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.2
+				land_reinforce_rate = 0.05
+			}	
+		}
+		FRA_duode1 = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				research_speed_factor = -0.05
+				stability_factor = -0.1
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = 0.2
+			}	
+		}
+		FRA_duode2 = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				research_speed_factor = -0.05
+				stability_factor = -0.1
+				industrial_capacity_factory = -0.1
+				monthly_population = -0.2
+				conscription_factor = 0.2
+				land_reinforce_rate = 0.1
+				industrial_capacity_dockyard = 0.2
+			}	
+		}
+		FRA_duode3 = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				research_speed_factor = -0.1
+				stability_factor = -0.1
+				industrial_capacity_factory = -0.1
+				monthly_population = -0.2
+				conscription_factor = 0.2
+				land_reinforce_rate = 0.1
+				production_factory_max_efficiency_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.1
+				industrial_capacity_dockyard = 0.2
+			}	
+		}
+		FRA_duode4 = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				research_speed_factor = -0.05
+				stability_factor = -0.1
+				industrial_capacity_factory = -0.1
+				monthly_population = -0.2
+				conscription_factor = 0.2
+				land_reinforce_rate = 0.15
+				production_factory_max_efficiency_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.1
+				army_attack_factor = 0.2
+				army_defence_factor = -0.05
+				army_org_factor = -0.1
+				army_morale_factor = 0.05
+				industrial_capacity_dockyard = 0.35
+			}	
+		}
+		FRA_chonghui1 = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				stability_factor = 0.1
+				political_power_gain = 0.2
+			}	
+		}
+		FRA_chonghui2 = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				stability_factor = 0.15
+				political_power_gain = 0.25
+				research_speed_factor = 0.1
+			}	
+		}
+		FRA_chonghui3 = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				stability_factor = 0.15
+				political_power_gain = 0.25
+				research_speed_factor = 0.1
+				production_speed_industrial_complex_factor = 0.2
+				resistance_target = -0.15
+			}	
+		}
+		FRA_chonghui4 = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				stability_factor = 0.15
+				political_power_gain = 0.25
+				research_speed_factor = 0.1
+				production_speed_industrial_complex_factor = 0.2
+				resistance_target = -0.15
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.1
+			}	
+		}
+		FRA_keguan1 = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				stability_factor = 0.1
+				political_power_gain = 0.2
+				research_speed_factor = 0.1
+			}	
+		}
+		FRA_keguan2 = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = -0.3
+				conscription_factor = -0.1
+				political_power_gain = 0.25
+				research_speed_factor = 0.2
+			}	
+		}
+		FRA_keguan3 = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				stability_factor = 0.2
+				war_support_factor = -0.3
+				conscription_factor = -0.1
+				political_power_gain = 0.25
+				research_speed_factor = 0.2
+				production_factory_max_efficiency_factor = 0.2
+				production_factory_efficiency_gain_factor = 0.25
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.2
+			}	
+		}
+		FRA_keguan4 = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				stability_factor = 0.2
+				war_support_factor = -0.3
+				conscription_factor = -0.1
+				political_power_gain = 0.25
+				research_speed_factor = 0.2
+				production_factory_max_efficiency_factor = 0.3
+				production_factory_efficiency_gain_factor = 0.3
+				industrial_capacity_factory = 0.2
+				industrial_capacity_dockyard = 0.25
+				consumer_goods_factor = -0.2
+				min_export = 0.5
+			}	
+		}
+		FRA_wending1 = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				stability_factor = 0.2
+				war_support_factor = 0.2				
+			}	
+		}
+		FRA_wending2 = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				stability_factor = 0.2
+				war_support_factor = 0.2
+				army_attack_factor = 0.1
+				army_speed_factor = 0.2				
+			}	
+		}
+		FRA_wending3 = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				stability_factor = 0.2
+				war_support_factor = 0.2
+				army_attack_factor = 0.15
+				army_speed_factor = 0.25
+				max_planning = -0.25
+				planning_speed = 0.15				
+			}	
+		}
+		FRA_wending4 = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				stability_factor = 0.2
+				war_support_factor = 0.2
+				army_attack_factor = 0.15
+				army_speed_factor = 0.25
+				max_planning = -0.25
+				planning_speed = 0.15
+				conscription_factor = 0.2
+				land_reinforce_rate = 0.03				
+			}	
+		}
+		FRA_hanwei1 = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				stability_factor = 0.2
+				war_support_factor = 0.05
+				consumer_goods_factor = -0.1
+				min_export = -0.2				
+			}	
+		}
+		FRA_hanwei2 = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				stability_factor = 0.2
+				war_support_factor = 0.1
+				consumer_goods_factor = -0.25
+				min_export = -0.45				
+			}	
+		}
+		FRA_pipan1 = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				political_power_gain = 0.25
+				research_speed_factor = 0.1			
+			}	
+		}
+		FRA_pipan2 = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				political_power_gain = 0.5
+				research_speed_factor = 0.25		
+			}	
+		}
+		FRA_jidujiao1 = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				conscription = 0.01
+				conscription_factor = 0.05		
+			}	
+		}
+		FRA_jidujiao2 = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				conscription = 0.015
+				conscription_factor = 0.1
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = -0.05		
+			}	
+		}
+		FRA_jidujiao3 = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				conscription = 0.015
+				conscription_factor = 0.1
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = -0.05
+				army_attack_factor = 0.05
+				production_speed_buildings_factor = 0.12
+
+			}	
+		}
+		FRA_buwanggeming1 = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				war_support_factor = 0.1
+				max_command_power = 25
+			}	
+		}
+		FRA_buwanggeming2 = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				war_support_factor = 0.15
+				max_command_power = 50
+				army_org_factor = 0.2
+				army_attack_factor = 0.15
+			}	
+		}
+		FRA_buwanggeming3 = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				war_support_factor = 0.15
+				max_command_power = 50
+				army_org_factor = 0.2
+				army_attack_factor = 0.15
+				conscription_factor = 0.15
+				conscription = 0.02
+			}	
+		}
+		FRA_renmingjun1 = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				political_power_gain = 0.2
+				stability_factor = 0.1
+			}	
+		}
+		FRA_renmingjun2 = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				political_power_gain = 0.2
+				stability_factor = 0.25
+				industrial_capacity_factory = 0.2
+				industrial_capacity_dockyard = 0.3
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+			}	
+		}
+		FRA_renmingjun3 = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				political_power_gain = 0.2
+				stability_factor = 0.25
+				industrial_capacity_factory = 0.2
+				industrial_capacity_dockyard = 0.3
+				production_factory_efficiency_gain_factor = 0.15
+				production_factory_max_efficiency_factor = 0.15
+				production_speed_buildings_factor = 0.2
+				consumer_goods_factor = -0.25
+			}	
+		}
+		FRA_qiangren = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				planning_speed = 0.2
+				max_planning = 0.2
+				experience_loss_factor = -0.1
+			}	
+		}
+		FRA_wenhepai = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				stability_factor = 0.05
+				research_speed_factor = 0.15
+			}	
+		}
+		FRA_rengongchang = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+			}	
+		}
+		FRA_fennu_jian = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				army_core_attack_factor = -0.1
+				army_core_defence_factor = -0.1
+				army_attack_factor = 0.15
+				army_defence_factor = 0.15
+				experience_loss_factor = 0.05
+			}	
+		}
+		FRA_hanweiyichan = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				mobilization_speed = 0.5
+				monthly_population = 0.35
+				conscription_factor = 0.15
+			}	
+		}
+		FRA_ziyou_hun = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				industrial_capacity_factory = 0.2
+				production_speed_buildings_factor = 0.15
+			}	
+		}
+		FRA_minzhujingshen = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				research_speed_factor = 0.1
+				stability_weekly = 0.005
+			}	
+		}
+		FRA_renminshehui = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				war_support_weekly = 0.005
+				stability_weekly = 0.005
+				min_export = -0.25
+			}	
+		}
+		FRA_chongchongchong = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				
+			}
+			targeted_modifier = {
+		tag = GER
+		attack_bonus_against = 0.15
+		defense_bonus_against = 0.05
+			}
+		}
+		FRA_songle = {
+			on_add = {
+			}
+			on_remove = {
+				
+			}
+			modifier = {
+				army_attack_factor = -0.1
+				army_defence_factor = -0.1
+				army_org_factor = -0.1
+				max_planning = -0.8
+			}	
+		}
+
+
+
+
+
+
+	}
+}
+	

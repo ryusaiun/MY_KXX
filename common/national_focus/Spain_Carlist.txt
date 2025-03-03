@@ -1,0 +1,8454 @@
+focus_tree = {
+	id = CAR_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = CAR
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 2400 y = 900 }
+
+
+	focus={
+		id=CAR_restauracion
+		icon=GFX_goal_carlist
+		x=2
+		y=0
+		available={
+		NOT = {
+			has_country_flag = Falangist_Win
+		}
+			OR={
+				custom_trigger_tooltip={
+					tooltip=CAR_won_election
+					has_country_flag=election_success
+				}
+				custom_trigger_tooltip={
+					tooltip=CAR_released_after_annexation
+					has_country_flag=released_after_annexation
+				}
+				AND={
+					custom_trigger_tooltip={
+						tooltip=SPR_civil_war_happened
+						has_global_flag=spanish_civil_war
+					}
+					NOT={
+						country_exists=SPR
+					}
+					NOT={
+						country_exists=CNT
+					}
+				}
+			}
+		}
+		cancel_if_invalid=yes
+		cost=10.00
+		ai_will_do={
+			factor=100
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_restauracion"
+			add_stability=0.05
+			set_country_flag=CAR_carlist_restoration
+			if={
+				limit={
+					has_global_flag=spanish_civil_war
+				}
+				country_event=sprc.320
+				else={
+					set_cosmetic_tag=CAR_kingdom
+				}
+			}
+			if={
+				limit={
+					has_idea=CAR_black_monday
+				}
+				swap_ideas={
+					remove_idea=CAR_black_monday
+					add_idea=CAR_recovering_economy
+				}
+			}
+			custom_effect_tooltip=CAR_remove_cores_SPR
+			custom_effect_tooltip=CAR_remove_cores_CNT
+			hidden_effect={
+				every_state={
+					limit={
+						OR={
+							is_core_of=SPR
+							is_core_of=CNT
+						}
+					}
+					if={
+						limit={
+							is_claimed_by=CAR
+						}
+						remove_claim_by=CAR
+					}
+					remove_core_of=SPR
+					remove_core_of=CNT
+					add_core_of=CAR
+				}
+				every_state={
+					limit={
+						is_claimed_by=SPR
+					}
+					remove_claim_by=SPR
+					if={
+						limit={
+							is_not_claim_or_core_of_ROOT=yes
+						}
+						add_claim_by=CAR
+					}
+				}
+				every_state={
+					limit={
+						is_claimed_by=CNT
+					}
+					remove_claim_by=CNT
+					if={
+						limit={
+							is_not_claim_or_core_of_ROOT=yes
+						}
+						add_claim_by=CAR
+					}
+				}
+				country_event=sprc.326
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_ANNEXATION
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+	focus={
+		id=CAR_dios
+		icon=GFX_goal_NYC_Under_God
+		x=0
+		y=1
+		prerequisite={focus=CAR_restauracion}
+		cost=7.00
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_dios"
+			add_ideas=CAR_holy_idea
+		}
+		search_filters={
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus={
+		id=CAR_patria
+		icon=GFX_goal_monarchism_black
+		x=0
+		y=3
+		prerequisite={focus=CAR_dios}
+		cost=10.00
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_patria"
+			swap_ideas={
+				remove_idea=CAR_holy_idea
+				add_idea=CAR_holy_idea2
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+	}
+	focus={
+		id=CAR_mending_the_rift
+		icon=GFX_goal_MEX_find_compromise
+		x=2
+		y=1
+		prerequisite={focus=CAR_restauracion}
+		cost=7.00
+		bypass={
+			NOT={
+				has_idea=SPR_social_breakdown
+			}
+		}
+		ai_will_do={
+			factor=30
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_mending_the_rift"
+			swap_ideas={
+				remove_idea=SPR_social_breakdown
+				add_idea=SPR_social_breakdown_2
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_MANPOWER
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_STABILITY
+		}
+	}
+	focus={
+		id=CAR_crush_opposition
+		icon=GFX_HUN_crush_your_enemies
+		x=1
+		y=2
+		prerequisite={focus=CAR_mending_the_rift}
+		mutually_exclusive={focus=CAR_reconcilliation }
+		cost=7.00
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_crush_opposition"
+			add_political_power=100
+			add_war_support=0.15
+		}
+		search_filters={
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus={
+		id=CAR_reconcilliation
+		icon=GFX_HUN_art_of_compromise
+		x=3
+		y=2
+		prerequisite={focus=CAR_mending_the_rift}
+		mutually_exclusive={focus=CAR_crush_opposition }
+		cost=7.00
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_reconcilliation"
+			add_political_power=100
+			add_stability=0.10
+		}
+		search_filters={
+			FOCUS_FILTER_STABILITY
+		}
+	}
+	focus={
+		id=CAR_call_for_unity
+		icon=GFX_goal_tfv_strengthen_commonwealth_ties
+		x=2
+		y=3
+		prerequisite={focus=CAR_crush_opposition focus=CAR_reconcilliation }
+		cost=7.00
+		bypass={
+			NOT={
+				has_idea=SPR_social_breakdown_2
+			}
+		}
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_call_for_unity"
+			swap_ideas={
+				remove_idea=SPR_social_breakdown_2
+				add_idea=SPR_social_breakdown_3
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_MANPOWER
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_STABILITY
+		}
+	}
+	focus={
+		id=CAR_rey
+		icon=GFX_goal_MEX_organic_monarchy
+		x=4
+		y=1
+		prerequisite={focus=CAR_restauracion}
+		cost=7.00
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_rey"
+			add_ideas=CAR_royal_idea
+			add_political_power=50
+			add_country_leader_trait=SPR_rey_leader_trait
+		}
+		search_filters={
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus={
+		id=CAR_furos
+		icon=GFX_goal_CZE_autonomy_bills
+		x=4
+		y=3
+		prerequisite={focus=CAR_rey}
+		cost=7.00
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_furos"
+			swap_ideas={
+				remove_idea=CAR_royal_idea
+				add_idea=CAR_royal_idea2
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+	}
+	focus={
+		id=CAR_national_catholicism
+		icon=GFX_goal_faith_and_state
+		x=1
+		y=4
+		prerequisite={focus=CAR_furos}
+		prerequisite={focus=CAR_call_for_unity}
+		prerequisite={focus=CAR_patria}
+		cost=7.00
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_national_catholicism"
+			swap_ideas={
+				remove_idea=CAR_holy_idea2
+				add_idea=CAR_holy_idea3
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_STABILITY
+		}
+	}
+	focus={
+		id=CAR_cortes_espanolas
+		icon=GFX_goal_POR_royal_edicts
+		x=3
+		y=4
+		prerequisite={focus=CAR_patria}
+		prerequisite={focus=CAR_call_for_unity}
+		prerequisite={focus=CAR_furos}
+		cost=7.00
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_cortes_espanolas"
+			swap_ideas={
+				remove_idea=CAR_royal_idea2
+				add_idea=CAR_royal_idea3
+			}
+			add_stability=0.10
+		}
+		search_filters={
+			FOCUS_FILTER_STABILITY
+		}
+	}
+	focus={
+		id=CAR_viva_el_rey
+		icon=GFX_goal_MEX_catholic_monarch
+		x=2
+		y=5
+		prerequisite={focus=CAR_national_catholicism}
+		prerequisite={focus=CAR_cortes_espanolas}
+		cost=8.00
+		bypass={
+			NOT={
+				has_idea=SPR_social_breakdown_3
+			}
+		}
+		ai_will_do={
+			factor=80
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_viva_el_rey"
+			remove_ideas=SPR_social_breakdown_3
+			add_stability=0.03
+			add_war_support=0.03
+		}
+		search_filters={
+			FOCUS_FILTER_WAR_SUPPORT
+			FOCUS_FILTER_STABILITY
+		}
+	}
+	focus={
+		id=CAR_rebuilding_the_economy
+		icon=GFX_BAY_REBUILD
+		x=12
+		y=0
+		cost=7.00
+		available={
+			OR = {
+				has_completed_focus = NFE_7
+				has_country_flag=CAR_carlist_restoration
+			}
+		}
+		ai_will_do={
+			factor=30
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_rebuilding_the_economy"
+			add_ideas=CAR_rebuilding_spain_idea
+			add_tech_bonus={
+				name=CAR_rebuilding_the_economy
+				bonus=1
+				uses=1
+				category=industry
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+	focus={
+		id=CAR_expand_railroads
+		icon=GFX_goal_OTT_Railroad
+		x=8
+		y=1
+		prerequisite={focus=CAR_rebuilding_the_economy}
+		cost=5.00
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_expand_railroads"
+			172={
+				if={
+					limit={
+						is_owned_by=CAR
+					}
+					add_building_construction={
+						type=infrastructure
+						level=2
+						instant_build=yes
+					}
+				}
+			}
+			176={
+				if={
+					limit={
+						is_owned_by=CAR
+					}
+					add_building_construction={
+						type=infrastructure
+						level=2
+						instant_build=yes
+					}
+				}
+			}
+			166={
+				if={
+					limit={
+						is_owned_by=CAR
+					}
+					add_building_construction={
+						type=infrastructure
+						level=2
+						instant_build=yes
+					}
+				}
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+	focus={
+		id=CAR_expand_air_ports
+		icon=GFX_goal_generic_airports
+		x=8
+		y=3
+		prerequisite={focus=CAR_expand_railroads}
+		cost=5.00
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_expand_air_ports"
+			176={
+				if={
+					limit={
+						is_owned_by=CAR
+					}
+					add_extra_state_shared_building_slots=1
+					add_building_construction={
+						type=air_base
+						level=2
+						instant_build=yes
+					}
+				}
+			}
+			167={
+				if={
+					limit={
+						is_owned_by=CAR
+					}
+					add_extra_state_shared_building_slots=1
+					add_building_construction={
+						type=air_base
+						level=2
+						instant_build=yes
+					}
+				}
+			}
+			169={
+				if={
+					limit={
+						is_owned_by=CAR
+					}
+					add_extra_state_shared_building_slots=1
+					add_building_construction={
+						type=air_base
+						level=2
+						instant_build=yes
+					}
+				}
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+	focus={
+		id=CAR_provincial_rebuilding
+		icon=GFX_BBR_build_industries
+		x=10
+		y=1
+		prerequisite={focus=CAR_rebuilding_the_economy}
+		cost=5.00
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_provincial_rebuilding"
+			add_tech_bonus={
+				name=CAR_provincial_rebuilding
+				bonus=1
+				uses=1
+				category=industry
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+	focus={
+		id=CAR_military_investements
+		icon=GFX_MON_army_money
+		x=9
+		y=2
+		prerequisite={focus=CAR_provincial_rebuilding}
+		prerequisite={focus=CAR_provincial_rebuilding}
+		cost=7.00
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_military_investements"
+			171={
+				if={
+					limit={
+						is_owned_by=CAR
+					}
+					add_extra_state_shared_building_slots=2
+					add_building_construction={
+						type=arms_factory
+						level=2
+						instant_build=yes
+					}
+				}
+			}
+			174={
+				if={
+					limit={
+						is_owned_by=CAR
+					}
+					add_extra_state_shared_building_slots=2
+					add_building_construction={
+						type=arms_factory
+						level=2
+						instant_build=yes
+					}
+				}
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+	focus={
+		id=CAR_comercial_investment
+		icon=GFX_goal_TEX_keynesian_economics
+		x=11
+		y=2
+		prerequisite={focus=CAR_provincial_rebuilding}
+		cost=7.00
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_comercial_investment"
+			172={
+				if={
+					limit={
+						is_owned_by=CAR
+					}
+					add_extra_state_shared_building_slots=2
+					add_building_construction={
+						type=industrial_complex
+						level=2
+						instant_build=yes
+					}
+				}
+			}
+			165={
+				if={
+					limit={
+						is_owned_by=CAR
+					}
+					add_extra_state_shared_building_slots=2
+					add_building_construction={
+						type=industrial_complex
+						level=2
+						instant_build=yes
+					}
+				}
+			}
+			173={
+				if={
+					limit={
+						is_owned_by=CAR
+					}
+					add_extra_state_shared_building_slots=2
+					add_building_construction={
+						type=industrial_complex
+						level=2
+						instant_build=yes
+					}
+				}
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+	focus={
+		id=CAR_electrification_program
+		icon=GFX_RUS_Rural_Electro
+		x=10
+		y=3
+		prerequisite={focus=CAR_military_investements}
+		prerequisite={focus=CAR_comercial_investment}
+		cost=5.00
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_electrification_program"
+			add_tech_bonus={
+				name=CAR_electrification_program
+				bonus=1
+				uses=2
+				category=electronics
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+	focus={
+		id=CAR_ley_general_educacion
+		icon=GFX_BEL_Catholic_Education
+		x=12
+		y=1
+		prerequisite={focus=CAR_rebuilding_the_economy}
+		cost=7.00
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_ley_general_educacion"
+			add_research_slot=1
+		}
+		search_filters={
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+	focus={
+		id=CAR_expand_real_academia
+		icon=GFX_goal_FIU_italian_school
+		x=12
+		y=3
+		prerequisite={focus=CAR_ley_general_educacion}
+		cost=7.00
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_expand_real_academia"
+			add_ideas=CAR_real_academia_idea
+		}
+		search_filters={
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+	focus={
+		id=CAR_create_ini
+		icon=GFX_GRU_ELECTRONICS_INDUSTRY
+		x=14
+		y=1
+		prerequisite={focus=CAR_rebuilding_the_economy}
+		cost=6.00
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_create_ini"
+			add_ideas=CAR_ini_idea
+		}
+	}
+	focus={
+		id=CAR_modern_agriculture
+		icon=GFX_goal_SZC_improvised_farming_machinery
+		x=13
+		y=2
+		prerequisite={focus=CAR_create_ini}
+		cost=7.00
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_modern_agriculture"
+			add_ideas=CAR_modern_agriculture_idea
+		}
+		search_filters={
+			FOCUS_FILTER_ARMY_BONUS
+			FOCUS_FILTER_MANPOWER
+		}
+	}
+	focus={
+		id=CAR_military_factories
+		icon=GFX_goal_Focus_Military_Mobilisation
+		x=15
+		y=2
+		prerequisite={focus=CAR_create_ini}
+		cost=7.00
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_military_factories"
+			170={
+				if={
+					limit={
+						is_owned_by=CAR
+					}
+					add_extra_state_shared_building_slots=2
+					add_building_construction={
+						type=arms_factory
+						level=2
+						instant_build=yes
+					}
+				}
+			}
+			169={
+				if={
+					limit={
+						is_owned_by=CAR
+					}
+					add_extra_state_shared_building_slots=2
+					add_building_construction={
+						type=arms_factory
+						level=2
+						instant_build=yes
+					}
+				}
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+	focus={
+		id=CAR_market_protections
+		icon=GFX_RUS_Reaffirm_Protectionism
+		x=14
+		y=3
+		prerequisite={focus=CAR_modern_agriculture}
+		prerequisite={focus=CAR_military_factories}
+		cost=5.00
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_market_protections"
+			add_political_power=100
+		}
+		search_filters={
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus={
+		id=CAR_labour_charter
+		icon=GFX_MAF_labor_charter
+		x=16
+		y=1
+		prerequisite={focus=CAR_rebuilding_the_economy}
+		cost=5.00
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_labour_charter"
+			add_tech_bonus={
+				name=CAR_labour_charter
+				bonus=1
+				uses=1
+				category=industry
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+	focus={
+		id=CAR_catholic_trade_unions
+		icon=GFX_goal_NFA_cargolic_unions
+		x=16
+		y=3
+		prerequisite={focus=CAR_labour_charter}
+		cost=6.00
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_catholic_trade_unions"
+			add_ideas=CAR_catholic_trade_unions_idea
+		}
+		search_filters={
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+	focus={
+		id=CAR_spanish_miracle
+		icon=GFX_GRU_german_industrial_miracle-4038
+		x=12
+		y=4
+		prerequisite={focus=CAR_expand_air_ports}
+		prerequisite={focus=CAR_electrification_program}
+		prerequisite={focus=CAR_expand_real_academia}
+		prerequisite={focus=CAR_market_protections}
+		prerequisite={focus=CAR_catholic_trade_unions}
+		cost=8.00
+		available={
+			has_idea=CAR_recovering_economy
+		}
+		ai_will_do={
+			factor=80
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_spanish_miracle"
+			remove_ideas=CAR_recovering_economy
+		}
+	}
+	focus={
+		id=CAR_join_entente
+		icon=GFX_goal_USA_reconcile_canada
+		x=52
+		y=0
+		mutually_exclusive={focus=CAR_foreign_focus }
+		available={
+			OR = {
+				has_completed_focus = NFE_7
+				AND = {
+					has_country_flag=CAR_carlist_restoration
+					is_in_faction=no
+					is_subject=no
+					has_war=no
+					NOT={
+						has_socialist_government=yes
+					}
+					OR={
+						CAN={
+							is_faction_leader=yes
+							NOT={
+								has_socialist_government=yes
+							}
+						}
+						GBR={
+							is_faction_leader=yes
+							NOT={
+								has_socialist_government=yes
+							}
+						}
+					}
+				}
+			}
+		}
+		cost=5.00
+		ai_will_do={
+			factor=50
+			modifier={
+				factor=0
+				OR={
+					has_game_rule={
+						rule=CAR_foreign_policy
+						option=CAR_MED_PACT
+					}
+					has_game_rule={
+						rule=CAR_foreign_policy
+						option=CAR_MED_PACT_ILLYRIA
+					}
+					has_game_rule={
+						rule=CAR_foreign_policy
+						option=CAR_MED_PACT_AUSTRIA
+					}
+				}
+			}
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_join_entente"
+			if={
+				limit={
+					CAN={
+						is_faction_leader=yes
+						NOT={
+							has_socialist_government=yes
+						}
+					}
+				}
+				CAN={
+					country_event=sprd.31
+				}
+				else={
+					GBR={
+						country_event=sprd.31
+					}
+				}
+			}
+		}
+	}
+	focus={
+		id=CAR_iberian_trade
+		icon=GFX_goal_portugal
+		x=50
+		y=1
+		prerequisite={focus=CAR_join_entente}
+		cost=5.00
+		ai_will_do={
+			factor=20
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_iberian_trade"
+			add_political_power=100
+			add_opinion_modifier={
+				target=POR
+				modifier=KR_approves_of_govt
+			}
+			reverse_add_opinion_modifier={
+				target=POR
+				modifier=KR_approves_of_govt
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus={
+		id=CAR_french_advisers
+		icon=GFX_NATFRA_conscription
+		x=52
+		y=1
+		prerequisite={focus=CAR_join_entente}
+		cost=5.00
+		ai_will_do={
+			factor=30
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_french_advisers"
+			add_ideas=CAR_french_advisers_idea
+		}
+	}
+	focus={
+		id=CAR_canadian_advisors
+		icon=GFX_goal_canada
+		x=54
+		y=1
+		prerequisite={focus=CAR_join_entente}
+		cost=5.00
+		ai_will_do={
+			factor=30
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_canadian_advisors"
+			add_ideas=CAR_canadian_advisors_idea
+		}
+		search_filters={
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+	focus={
+		id=CAR_latin_economic_union
+		icon=GFX_goal_MEX_open_markets_for_entente
+		x=51
+		y=2
+		prerequisite={focus=CAR_french_advisers}
+		prerequisite={focus=CAR_iberian_trade}
+		cost=5.00
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_latin_economic_union"
+			add_political_power=100
+			custom_effect_tooltip=CAR_economic_cooperation
+			hidden_effect={
+				add_opinion_modifier={
+					target=POR
+					modifier=mediterranean_economic_block
+				}
+				reverse_add_opinion_modifier={
+					target=POR
+					modifier=mediterranean_economic_block
+				}
+				POR={
+					add_ideas=CAR_economic_cooperation_idea
+				}
+				add_opinion_modifier={
+					target=NFA
+					modifier=mediterranean_economic_block
+				}
+				reverse_add_opinion_modifier={
+					target=NFA
+					modifier=mediterranean_economic_block
+				}
+				NFA={
+					add_ideas=CAR_economic_cooperation_idea
+				}
+				if={
+					limit={
+						SIC={
+							is_in_faction_with=CAN
+						}
+					}
+					add_opinion_modifier={
+						target=SIC
+						modifier=mediterranean_economic_block
+					}
+					reverse_add_opinion_modifier={
+						target=SIC
+						modifier=mediterranean_economic_block
+					}
+					SIC={
+						add_ideas=CAR_economic_cooperation_idea
+					}
+				}
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus={
+		id=CAR_joint_military_training
+		icon=GFX_goal_POR_portugese_youth
+		x=53
+		y=2
+		prerequisite={focus=CAR_french_advisers}
+		prerequisite={focus=CAR_canadian_advisors}
+		cost=5.00
+		ai_will_do={
+			factor=30
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_joint_military_training"
+			army_experience=25
+			air_experience=25
+			navy_experience=25
+		}
+		search_filters={
+			FOCUS_FILTER_NAVY_BONUS
+			FOCUS_FILTER_ARMY_BONUS
+			FOCUS_FILTER_AIRFORCE_BONUS
+		}
+	}
+	focus={
+		id=CAR_legion_espanola
+		icon=GFX_goal_SPA_Army
+		x=23
+		y=0
+		available={
+			OR = {
+				has_completed_focus = NFE_7
+				has_country_flag=CAR_carlist_restoration
+			}
+		}
+		cost=7.00
+		ai_will_do={
+			factor=30
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_legion_espanola"
+			army_experience=25
+			air_experience=25
+			navy_experience=25
+		}
+		search_filters={
+			FOCUS_FILTER_NAVY_BONUS
+			FOCUS_FILTER_ARMY_BONUS
+			FOCUS_FILTER_AIRFORCE_BONUS
+		}
+	}
+	focus={
+		id=CAR_modern_terrico
+		icon=GFX_goal_conquistador_legacy
+		x=20
+		y=1
+		prerequisite={focus=CAR_legion_espanola}
+		mutually_exclusive={focus=CAR_army_of_maneuver }
+		cost=6.00
+		ai_will_do={
+			factor=10
+			modifier={
+				factor=0
+				already_has_other_doctrine_SF=yes
+			}
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_modern_terrico"
+			add_doctrine_cost_reduction={
+				name=land_doc_bonus
+				cost_reduction=0.5
+				uses=1
+				category=land_doctrine
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+	focus={
+		id=CAR_requetes
+		icon=GFX_goal_KSV_unite_mercs
+		x=19
+		y=2
+		prerequisite={focus=CAR_modern_terrico}
+		cost=6.00
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_requetes"
+			add_ideas=CAR_requetes_idea
+		}
+		search_filters={
+			FOCUS_FILTER_ARMY_BONUS
+		}
+	}
+	focus={
+		id=CAR_artillery_effort
+		icon=GFX_goal_national_artillery
+		x=21
+		y=2
+		prerequisite={focus=CAR_modern_terrico}
+		cost=5.00
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_artillery_effort"
+			add_tech_bonus={
+				name=CAR_artillery_effort
+				bonus=0.5
+				uses=2
+				category=infantry_weapons
+				category=artillery
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+	focus={
+		id=CAR_guardia_civil
+		icon=GFX_goal_ATH_restructure_gendarmerie
+		x=20
+		y=3
+		prerequisite={focus=CAR_requetes}
+		prerequisite={focus=CAR_artillery_effort}
+		prerequisite={focus=CAR_requetes}
+		prerequisite={focus=CAR_artillery_effort}
+		cost=6.00
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_guardia_civil"
+			add_ideas=CAR_guardia_civil_idea
+		}
+		search_filters={
+			FOCUS_FILTER_ARMY_BONUS
+		}
+	}
+	focus={
+		id=CAR_devoted_officers
+		icon=GFX_goal_LPD_white_officer_primacy
+		x=23
+		y=2
+		prerequisite={focus=CAR_modern_terrico focus=CAR_army_of_maneuver }
+		cost=6.00
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_devoted_officers"
+			add_ideas=CAR_devoted_officers_idea
+		}
+		search_filters={
+			FOCUS_FILTER_ARMY_BONUS
+			FOCUS_FILTER_MANPOWER
+		}
+	}
+	focus={
+		id=CAR_word_of_god
+		icon=GFX_goal_TEX_radio_jesus
+		x=22
+		y=3
+		prerequisite={focus=CAR_devoted_officers}
+		cost=5.00
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_word_of_god"
+			add_tech_bonus={
+				name=CAR_word_of_god
+				bonus=1
+				uses=2
+				technology=radio
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+	focus={
+		id=CAR_mixed_brigades
+		icon=GFX_goal_generic_support_equipment
+		x=24
+		y=3
+		prerequisite={focus=CAR_devoted_officers}
+		cost=5.00
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_mixed_brigades"
+			add_tech_bonus={
+				name=CAR_mixed_brigades
+				bonus=1
+				uses=3
+				category=support_tech
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+	focus={
+		id=CAR_army_of_maneuver
+		icon=GFX_goal_generic_army_mobile_warfare
+		x=26
+		y=1
+		prerequisite={focus=CAR_legion_espanola}
+		mutually_exclusive={focus=CAR_modern_terrico }
+		cost=6.00
+		ai_will_do={
+			factor=1
+			modifier={
+				factor=0
+				already_has_other_doctrine_MW=yes
+			}
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_army_of_maneuver"
+			add_doctrine_cost_reduction={
+				name=land_doc_bonus
+				cost_reduction=0.5
+				uses=1
+				category=land_doctrine
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+	focus={
+		id=CAR_mechanized_effort
+		icon=GFX_focus_rus_motorised
+		x=25
+		y=2
+		prerequisite={focus=CAR_army_of_maneuver}
+		cost=6.00
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_mechanized_effort"
+			add_ideas=CAR_spanish_auto_industry
+			add_tech_bonus={
+				name=CAR_mechanized_effort
+				bonus=1
+				uses=1
+				category=cat_mechanized_equipment
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+	focus={
+		id=CAR_armored_cars
+		icon=GFX_goal_generic_armored_cars
+		x=27
+		y=2
+		prerequisite={focus=CAR_army_of_maneuver}
+		cost=6.00
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_armored_cars"
+			add_ideas=CAR_armored_cars_idea
+		}
+		search_filters={
+			FOCUS_FILTER_ARMY_BONUS
+		}
+	}
+	focus={
+		id=CAR_navarran_lancers
+		icon=GFX_goal_ATH_armored_steeds
+		x=26
+		y=3
+		prerequisite={focus=CAR_mechanized_effort}
+		prerequisite={focus=CAR_armored_cars}
+		cost=5.00
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_navarran_lancers"
+			swap_ideas={
+				remove_idea=CAR_armored_cars_idea
+				add_idea=CAR_tonk_idea
+			}
+			add_tech_bonus={
+				name=CAR_navarran_lancers
+				bonus=1
+				uses=3
+				category=armor
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+	focus={
+		id=CAR_a_catholic_army
+		icon=GFX_goal_TEX_focus_Cavalier_Identity
+		x=23
+		y=4
+		prerequisite={focus=CAR_word_of_god}
+		prerequisite={focus=CAR_mixed_brigades}
+		prerequisite={focus=CAR_guardia_civil focus=CAR_navarran_lancers }
+		cost=6.00
+		ai_will_do={
+			factor=30
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_a_catholic_army"
+			army_experience=25
+			add_doctrine_cost_reduction={
+				name=land_doc_bonus
+				cost_reduction=0.5
+				uses=1
+				category=land_doctrine
+			}
+			add_research_slot=1
+		}
+		search_filters={
+			FOCUS_FILTER_ARMY_BONUS
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+	focus={
+		id=CAR_armada_espanola
+		icon=GFX_goal_SPA_Navy
+		x=31
+		y=0
+		available={
+			OR = {
+				has_completed_focus = NFE_7
+				has_country_flag=CAR_carlist_restoration
+			}
+		}
+		cost=7.00
+		ai_will_do={
+			factor=30
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_armada_espanola"
+			navy_experience=10
+			add_doctrine_cost_reduction={
+				name=naval_doc_bonus
+				cost_reduction=0.5
+				uses=1
+				category=naval_doctrine
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_NAVY_BONUS
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+	focus={
+		id=CAR_upgrade_dockyards
+		icon=GFX_goal_NFA_merchant_marine
+		x=29
+		y=1
+		prerequisite={focus=CAR_armada_espanola}
+		cost=5.00
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_upgrade_dockyards"
+			add_ideas=ITA_merchant_marine_idea
+		}
+	}
+	focus={
+		id=CAR_devoted_captains
+		icon=GFX_goal_NEE_strength_in_the_lord
+		x=31
+		y=1
+		prerequisite={focus=CAR_armada_espanola}
+		cost=5.00
+		ai_will_do={
+			factor=30
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_devoted_captains"
+			navy_experience=25
+		}
+		search_filters={
+			FOCUS_FILTER_NAVY_BONUS
+		}
+	}
+	focus={
+		id=CAR_infanteria_de_marina
+		icon=GFX_HUN_marines
+		x=33
+		y=1
+		prerequisite={focus=CAR_armada_espanola}
+		cost=5.00
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_infanteria_de_marina"
+			add_tech_bonus={
+				name=CAR_infanteria_de_marina
+				bonus=1
+				uses=1
+				category=marine_tech
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+	focus={
+		id=CAR_grand_navy
+		icon=GFX_goal_generic_naval_fleet_in_being
+		x=30
+		y=2
+		prerequisite={focus=CAR_upgrade_dockyards}
+		prerequisite={focus=CAR_devoted_captains}
+		prerequisite={focus=CAR_infanteria_de_marina}
+		mutually_exclusive={focus=CAR_defend_the_coast }
+		cost=6.00
+		ai_will_do={
+			factor=10
+			modifier={
+				factor=0
+				already_has_other_doctrine_FIB=yes
+			}
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_grand_navy"
+			add_doctrine_cost_reduction={
+				name=naval_doc_bonus
+				cost_reduction=0.5
+				uses=2
+				category=naval_doctrine
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+	focus={
+		id=CAR_modern_galleons
+		icon=GFX_goal_generic_naval_battleship2
+		x=30
+		y=3
+		prerequisite={focus=CAR_grand_navy}
+		cost=5.00
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_modern_galleons"
+			add_tech_bonus={
+				name=CAR_modern_galleons
+				bonus=1
+				uses=1
+				category=ca_tech
+				category=bb_tech
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+	focus={
+		id=CAR_battle_cruisers_support
+		icon=GFX_goal_CRO_second_best_navy
+		x=29
+		y=4
+		prerequisite={focus=CAR_modern_galleons}
+		cost=5.00
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_battle_cruisers_support"
+			add_tech_bonus={
+				name=CAR_battle_cruisers_support
+				bonus=1
+				uses=2
+				category=ca_tech
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+	focus={
+		id=CAR_defend_the_coast
+		icon=GFX_goal_generic_coastal_navy2
+		x=32
+		y=2
+		prerequisite={focus=CAR_infanteria_de_marina}
+		prerequisite={focus=CAR_devoted_captains}
+		prerequisite={focus=CAR_upgrade_dockyards}
+		mutually_exclusive={focus=CAR_grand_navy }
+		cost=6.00
+		ai_will_do={
+			factor=10
+			modifier={
+				factor=0
+				already_has_other_doctrine_TI=yes
+			}
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_defend_the_coast"
+			navy_experience=10
+			add_doctrine_cost_reduction={
+				name=naval_doc_bonus
+				cost_reduction=0.5
+				uses=2
+				category=naval_doctrine
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_NAVY_BONUS
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+	focus={
+		id=CAR_coast_guard
+		icon=GFX_goal_generic_coastal_navy
+		x=32
+		y=3
+		prerequisite={focus=CAR_defend_the_coast}
+		cost=5.00
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_coast_guard"
+			add_tech_bonus={
+				name=CAR_coast_guard
+				bonus=1
+				uses=2
+				category=dd_tech
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+	focus={
+		id=CAR_cruiser_support
+		icon=GFX_goal_generic_naval_cruiser2
+		x=33
+		y=4
+		prerequisite={focus=CAR_coast_guard}
+		cost=5.00
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_cruiser_support"
+			add_tech_bonus={
+				name=CAR_cruiser_support
+				bonus=1
+				uses=2
+				category=cl_tech
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+	focus={
+		id=CAR_protect_our_colonies
+		icon=GFX_goal_NFA_colonial_pacification_campaign
+		x=31
+		y=4
+		prerequisite={focus=CAR_modern_galleons focus=CAR_coast_guard }
+		cost=5.00
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_protect_our_colonies"
+			290={
+				add_building_construction={
+					type=coastal_bunker
+					level=3
+					province=9945
+					instant_build=yes
+				}
+				add_building_construction={
+					type=coastal_bunker
+					level=3
+					province=12100
+					instant_build=yes
+				}
+			}
+			297={
+				add_building_construction={
+					type=coastal_bunker
+					level=3
+					province=1903
+					instant_build=yes
+				}
+			}
+			297={
+				add_building_construction={
+					type=bunker
+					level=2
+					province=8244
+					instant_build=yes
+				}
+			}
+			1318={
+				add_building_construction={
+					type=bunker
+					level=2
+					province=12857
+					instant_build=yes
+				}
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+	focus={
+		id=CAR_masters_of_the_sea
+		icon=GFX_MAF_naval_aerial_observation
+		x=31
+		y=5
+		prerequisite={focus=CAR_protect_our_colonies}
+		prerequisite={focus=CAR_battle_cruisers_support focus=CAR_cruiser_support }
+		cost=6.00
+		ai_will_do={
+			factor=30
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_masters_of_the_sea"
+			swap_ideas={
+				add_idea=CAR_rule_seas_idea
+				remove_idea=CAR_merchant_marine_idea
+			}
+			add_doctrine_cost_reduction={
+				name=naval_doc_bonus
+				cost_reduction=0.5
+				uses=1
+				category=naval_doctrine
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_NAVY_BONUS
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+	focus={
+		id=CAR_aviacion_legionaria
+		icon=GFX_goal_SPA_Airforce
+		x=38
+		y=0
+		available={
+			OR = {
+				has_completed_focus = NFE_7
+				has_country_flag=CAR_carlist_restoration
+			}
+		}
+		cost=7.00
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_aviacion_legionaria"
+			air_experience=10
+			add_doctrine_cost_reduction={
+				name=air_doc_bonus
+				cost_reduction=0.5
+				uses=1
+				category=air_doctrine
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_RESEARCH
+			FOCUS_FILTER_AIRFORCE_BONUS
+		}
+	}
+	focus={
+		id=CAR_upgrade_air_ports
+		icon=GFX_MON_improve_construction
+		x=36
+		y=1
+		prerequisite={focus=CAR_aviacion_legionaria}
+		cost=5.00
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_upgrade_air_ports"
+			175={
+				if={
+					limit={
+						is_owned_by=CAR
+					}
+					add_extra_state_shared_building_slots=1
+					add_building_construction={
+						type=air_base
+						level=2
+						instant_build=yes
+					}
+				}
+			}
+			169={
+				if={
+					limit={
+						is_owned_by=CAR
+					}
+					add_extra_state_shared_building_slots=1
+					add_building_construction={
+						type=air_base
+						level=2
+						instant_build=yes
+					}
+				}
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+	focus={
+		id=CAR_new_pilots
+		icon=GFX_MON_air_doctrines_II
+		x=38
+		y=1
+		prerequisite={focus=CAR_aviacion_legionaria}
+		cost=5.00
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_new_pilots"
+			air_experience=50
+			add_manpower=10000
+		}
+		search_filters={
+			FOCUS_FILTER_AIRFORCE_BONUS
+		}
+	}
+	focus={
+		id=CAR_aviation_industry
+		icon=GFX_goal_CZE_air_industry
+		x=40
+		y=1
+		prerequisite={focus=CAR_aviacion_legionaria}
+		cost=6.00
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_aviation_industry"
+			add_ideas=CAR_aviation_industry_idea
+		}
+		search_filters={
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+	focus={
+		id=CAR_air_supremecy
+		icon=GFX_goal_WCC_Bomb_Em_Back_into_the_stone_age
+		x=37
+		y=2
+		prerequisite={focus=CAR_upgrade_air_ports}
+		prerequisite={focus=CAR_new_pilots}
+		prerequisite={focus=CAR_aviation_industry}
+		mutually_exclusive={focus=CAR_army_air_support }
+		cost=6.00
+		ai_will_do={
+			factor=10
+			modifier={
+				factor=0
+				already_has_other_doctrine_SD=yes
+			}
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_air_supremecy"
+			add_doctrine_cost_reduction={
+				name=air_doc_bonus
+				cost_reduction=0.5
+				uses=2
+				category=air_doctrine
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+	focus={
+		id=CAR_fighters
+		icon=GFX_HUN_fighters
+		x=37
+		y=3
+		prerequisite={focus=CAR_air_supremecy}
+		cost=5.00
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_fighters"
+			add_tech_bonus={
+				name=CAR_fighters
+				bonus=0.5
+				uses=2
+				category=light_fighter
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+	focus={
+		id=CAR_army_air_support
+		icon=GFX_goal_USA_organic_air_support
+		x=39
+		y=2
+		prerequisite={focus=CAR_aviation_industry}
+		prerequisite={focus=CAR_new_pilots}
+		prerequisite={focus=CAR_upgrade_air_ports}
+		mutually_exclusive={focus=CAR_air_supremecy }
+		cost=6.00
+		ai_will_do={
+			factor=10
+			modifier={
+				factor=0
+				already_has_other_doctrine_BSP=yes
+			}
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_army_air_support"
+			add_doctrine_cost_reduction={
+				name=air_doc_bonus
+				cost_reduction=0.5
+				uses=2
+				category=air_doctrine
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+	focus={
+		id=CAR_bombers
+		icon=GFX_HUN_heavy_bombers
+		x=39
+		y=3
+		prerequisite={focus=CAR_army_air_support}
+		cost=5.00
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_bombers"
+			add_tech_bonus={
+				name=CAR_bombers
+				bonus=0.5
+				uses=2
+				category=tactical_bomber
+				category=cat_strategic_bomber
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+	focus={
+		id=CAR_voice_of_heaven
+		icon=GFX_goal_CZE_radar_research
+		x=36
+		y=4
+		prerequisite={focus=CAR_fighters focus=CAR_bombers }
+		cost=5.00
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_voice_of_heaven"
+			add_tech_bonus={
+				name=CAR_voice_of_heaven
+				bonus=1
+				uses=2
+				category=radar_tech
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+	focus={
+		id=CAR_paratroopers
+		icon=GFX_focus_generic_paratrooper
+		x=38
+		y=4
+		prerequisite={focus=CAR_fighters focus=CAR_bombers }
+		cost=5.00
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_paratroopers"
+			add_tech_bonus={
+				name=CAR_paratroopers
+				bonus=1
+				uses=1
+				category=para_tech
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+	focus={
+		id=CAR_colonial_air_ports
+		icon=GFX_MON_improve_airbases_in_mongolia
+		x=40
+		y=4
+		prerequisite={focus=CAR_fighters focus=CAR_bombers }
+		cost=5.00
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_colonial_air_ports"
+			290={
+				if={
+					limit={
+						is_owned_by=CAR
+					}
+					add_extra_state_shared_building_slots=1
+					add_building_construction={
+						type=air_base
+						level=2
+						instant_build=yes
+					}
+				}
+			}
+			699={
+				if={
+					limit={
+						is_owned_by=CAR
+					}
+					add_extra_state_shared_building_slots=1
+					add_building_construction={
+						type=air_base
+						level=2
+						instant_build=yes
+					}
+				}
+			}
+			1318={
+				if={
+					limit={
+						is_owned_by=CAR
+					}
+					add_extra_state_shared_building_slots=1
+					add_building_construction={
+						type=air_base
+						level=2
+						instant_build=yes
+					}
+				}
+			}
+			297={
+				if={
+					limit={
+						is_owned_by=CAR
+					}
+					add_extra_state_shared_building_slots=1
+					add_building_construction={
+						type=air_base
+						level=2
+						instant_build=yes
+					}
+				}
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+	focus={
+		id=CAR_rule_the_skies
+		icon=GFX_goal_SWE_medal_air
+		x=38
+		y=5
+		prerequisite={focus=CAR_voice_of_heaven}
+		prerequisite={focus=CAR_paratroopers}
+		prerequisite={focus=CAR_colonial_air_ports}
+		cost=6.00
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_rule_the_skies"
+			air_experience=50
+			add_doctrine_cost_reduction={
+				name=air_doc_bonus
+				cost_reduction=0.5
+				uses=2
+				category=air_doctrine
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_RESEARCH
+			FOCUS_FILTER_AIRFORCE_BONUS
+		}
+	}
+	focus={
+		id=CAR_foreign_focus
+		icon=GFX_goal_generic_mediterranean
+		x=45
+		y=0
+		mutually_exclusive={focus=CAR_join_entente }
+		cost=5
+		available={
+			OR = {
+				has_completed_focus = NFE_7
+				AND = {
+					is_subject=no
+					has_country_flag=CAR_carlist_restoration
+					is_in_faction=no
+				}
+			}
+		}
+		ai_will_do={
+			factor=50
+			modifier={
+				factor=0
+				has_game_rule={
+					rule=CAR_foreign_policy
+					option=CAR_ENTENTE
+				}
+			}
+			modifier={
+				factor=100
+				OR={
+					has_game_rule={
+						rule=CAR_foreign_policy
+						option=CAR_MED_PACT
+					}
+					has_game_rule={
+						rule=CAR_foreign_policy
+						option=CAR_MED_PACT_ILLYRIA
+					}
+					has_game_rule={
+						rule=CAR_foreign_policy
+						option=CAR_MED_PACT_AUSTRIA
+					}
+				}
+			}
+		}
+		completion_reward={
+			add_political_power=40
+			create_faction="Latin Union"
+			custom_effect_tooltip=COR_factions_tooltip
+		}
+	}
+	focus={
+		id=CAR_invite_italy
+		icon=GFX_SIC_confederation
+		x=46
+		y=1
+		prerequisite={focus=CAR_foreign_focus}
+		bypass={
+			NOT={
+				country_exists=SRD
+				country_exists=SIC
+				country_exists=PAP
+			}
+		}
+		available={
+			OR={
+				country_exists=SRD
+				country_exists=PAP
+				country_exists=SIC
+				SIC={
+					exists=yes
+					has_war=no
+					is_subject=no
+					NOT={
+						OR={
+							has_completed_focus=SIC_ride_the_tiger
+							has_completed_focus=SIC_mafia_takeover
+						}
+					}
+				}
+			}
+		}
+		cost=2
+		ai_will_do={
+			factor=25
+		}
+		completion_reward={
+			country_event={
+				id=carfor.409
+			}
+		}
+	}
+	focus={
+		id=CAR_invite_austria
+		icon=GFX_goal_austria
+		x=48
+		y=2
+		prerequisite={focus=CAR_foreign_focus}
+		mutually_exclusive={focus=CAR_invite_croatia }
+		available={
+			AUS={
+				has_war=no
+				is_subject=no
+				NOT={
+					has_socialist_government=yes
+				}
+			}
+		}
+		cost=2
+		ai_will_do={
+			factor=25
+			modifier={
+				factor=100
+				has_game_rule={
+					rule=CAR_foreign_policy
+					option=CAR_MED_PACT_AUSTRIA
+				}
+			}
+			modifier={
+				factor=0.2
+				has_game_rule={
+					rule=CAR_foreign_policy
+					option=CAR_MED_PACT_ILLYRIA
+				}
+			}
+		}
+		completion_reward={
+			country_event={
+				id=carfor.424
+			}
+		}
+	}
+	focus={
+		id=CAR_invite_croatia
+		icon=GFX_goal_illyria
+		x=46
+		y=2
+		prerequisite={focus=CAR_invite_italy}
+		mutually_exclusive={focus=CAR_invite_austria }
+		bypass={
+			CRO={
+				OR={
+					country_exists=no
+					has_socialist_government=yes
+				}
+			}
+			AUS={
+				OR={
+					country_exists=no
+					has_socialist_government=yes
+				}
+			}
+		}
+		available={
+			CRO={
+				has_war=no
+				is_subject=no
+				NOT={
+					has_socialist_government=yes
+				}
+				NOT={
+					has_idea=AUS_part_of_the_Empire
+				}
+			}
+		}
+		cost=2
+		ai_will_do={
+			factor=25
+			modifier={
+				factor=100
+				has_game_rule={
+					rule=CAR_foreign_policy
+					option=CAR_MED_PACT_ILLYRIA
+				}
+			}
+			modifier={
+				factor=0.2
+				has_game_rule={
+					rule=CAR_foreign_policy
+					option=CAR_MED_PACT_AUSTRIA
+				}
+			}
+		}
+		completion_reward={
+			country_event={
+				id=carfor.420
+			}
+		}
+	}
+	focus={
+		id=CAR_invite_portugal
+		icon=GFX_goal_portugal
+		x=42
+		y=2
+		prerequisite={focus=CAR_foreign_focus}
+		bypass={
+			NOT={
+				country_exists=POR
+			}
+		}
+		available={
+			POR={
+				has_war=no
+				is_subject=no
+				NOT={
+					has_government=radical_socialist
+					has_government=syndicalist
+					has_government=totalist
+				}
+			}
+		}
+		cost=2
+		ai_will_do={
+			factor=25
+		}
+		completion_reward={
+			country_event={
+				id=carfor.430
+			}
+		}
+	}
+	focus={
+		id=CAR_invite_brazil
+		icon=GFX_goal_AIB
+		x=42
+		y=3
+		prerequisite={focus=CAR_invite_portugal}
+		available={
+			BRA={
+				has_war=no
+				is_subject=no
+				has_government=national_populist
+			}
+			NOT={
+				has_country_flag=CAR_Tordesillas
+			}
+		}
+		cost=2
+		ai_will_do={
+			factor=25
+		}
+		completion_reward={
+			country_event={
+				id=carfor.448
+			}
+		}
+	}
+	focus={
+		id=CAR_invite_france
+		icon=GFX_goal_natfrance
+		x=44
+		y=1
+		prerequisite={focus=CAR_foreign_focus}
+		bypass={
+			NOT={
+				country_exists=NFA
+			}
+		}
+		available={
+			NFA={
+				is_subject=no
+				NOT={
+					has_government=radical_socialist
+					has_government=syndicalist
+					has_government=totalist
+				}
+			}
+		}
+		cost=2
+		ai_will_do={
+			factor=25
+		}
+		completion_reward={
+			country_event={
+				id=carfor.440
+			}
+		}
+	}
+	focus={
+		id=CAR_french_restoration
+		icon=GFX_goal_CAR_reconquista
+		x=44
+		y=2
+		prerequisite={focus=CAR_invite_france}
+		will_lead_to_war_with=FRA
+		bypass={
+			NOT={
+				country_exists=FRA
+			}
+		}
+		available={
+		}
+		cost=5
+		ai_will_do={
+			factor=0
+			modifier={
+				factor=10
+				has_global_flag=second_weltkrieg_has_started
+			}
+		}
+		completion_reward={
+			add_war_support=0.10
+			add_manpower=5000
+			add_ideas=CAR_end_the_reds_idea
+			create_wargoal={
+				type=annex_everything
+				target=FRA
+			}
+		}
+	}
+	focus={
+		id=CAR_strike_german_scum
+		icon=GFX_goal_MLT_fuck_germany
+		x=44
+		y=3
+		prerequisite={focus=CAR_french_restoration}
+		prerequisite={focus=CAR_invite_portugal}
+		bypass={
+			NOT={
+				country_exists=GEA
+			}
+			NOT={
+				country_exists=MOR
+			}
+		}
+		will_lead_to_war_with=GER
+		will_lead_to_war_with=MOR
+		will_lead_to_war_with=GEA
+		available={
+		}
+		cost=6
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			add_political_power=50
+			add_war_support=0.05
+			GER={
+				add_opinion_modifier={
+					target=CAR
+					modifier=large_decrease
+				}
+			}
+			GEA={
+				add_opinion_modifier={
+					target=CAR
+					modifier=large_decrease
+				}
+			}
+			create_wargoal={
+				type=annex_everything
+				target=MOR
+			}
+			add_state_claim=461
+			add_state_claim=462
+			add_state_claim=647
+			add_state_claim=646
+			add_state_claim=684
+		}
+	}
+	focus={
+		id=CAR_help_pope
+		icon=GFX_goal_accord_with_pope
+		x=46
+		y=3
+		prerequisite={focus=CAR_french_restoration}
+		prerequisite={focus=CAR_invite_croatia focus=CAR_invite_austria }
+		available={
+			SRI={
+				NOT={
+					owns_state=2
+				}
+			}
+		}
+		bypass={
+			NOT={
+				country_exists=PAP
+			}
+		}
+		cost=5
+		ai_will_do={
+			factor=10
+		}
+		completion_reward={
+			if={
+				limit={
+					country_exists=PAP
+				}
+				add_political_power=60
+				add_war_support=0.05
+				increase_ruling_party_popularity_by_5=yes
+				PAP={
+					add_equipment_to_stockpile={
+						type=infantry_equipment_1
+						amount=2500
+						producer=CAR
+					}
+					add_manpower=5000
+					add_opinion_modifier={
+						target=CAR
+						modifier=large_increase
+					}
+				}
+			}
+		}
+	}
+	focus={
+		id=CAR_plus_ultra
+		icon=GFX_CAR_plus_ultra
+		x=49
+		y=4
+		cost=7
+		available={
+			OR = {
+				AND = {
+					has_country_flag = Falangist_Win
+					has_completed_focus = NFE_7
+				}
+				AND = {
+					has_completed_focus=CAR_call_for_unity
+					OR={
+						has_completed_focus=CAR_help_pope
+						has_completed_focus=CAR_latin_economic_union
+					}
+				}
+			}
+		}
+		ai_will_do={
+			factor=0
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_plus_ultra"
+			add_political_power=100
+			add_war_support=0.05
+		}
+		search_filters={
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_ANNEXATION
+		}
+	}
+	focus={
+		id=CAR_cuban_gambit
+		icon=GFX_CAR_cuban_gambit
+		x=49
+		y=5
+		prerequisite={focus=CAR_plus_ultra}
+		cost=5.00
+		bypass={
+			owns_state=820
+			owns_state=315
+		}
+		ai_will_do={
+			factor=0
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_cuban_gambit"
+			add_political_power=25
+			820={
+				add_claim_by=CAR
+			}
+			818={
+				add_claim_by=CAR
+			}
+			315={
+				add_claim_by=CAR
+			}
+			country_event=sprc.330
+		}
+		search_filters={
+			FOCUS_FILTER_ANNEXATION
+		}
+	}
+	focus={
+		id=CAR_guantanamo_bay
+		icon=GFX_CAR_guantanamo_bay
+		x=49
+		y=6
+		prerequisite={focus=CAR_cuban_gambit}
+		cost=5.00
+		bypass={
+			owns_state=820
+			owns_state=315
+		}
+		ai_will_do={
+			factor=0
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_guantanamo_bay"
+			create_wargoal={
+				type=annex_everything
+				target=CUB
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_ANNEXATION
+		}
+	}
+	focus={
+		id=CAR_cuba_secured
+		icon=GFX_CAR_cuba_secured
+		x=49
+		y=7
+		prerequisite={focus=CAR_guantanamo_bay}
+		cost=5.00
+		available={
+			owns_state=820
+			owns_state=315
+		}
+		ai_will_do={
+			factor=0
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_cuba_secured"
+			add_political_power=100
+			820={
+				add_core_of=CAR
+			}
+			315={
+				add_core_of=CAR
+			}
+			IF={
+				limit={
+					owns_state=818
+				}
+				818={
+					add_core_of=CAR
+				}
+			}
+			country_event=sprc.335
+		}
+		search_filters={
+			FOCUS_FILTER_ANNEXATION
+		}
+	}
+	focus={
+		id=CAR_conquer_haiti
+		icon=GFX_CAR_conquer_haiti
+		x=47
+		y=8
+		prerequisite={focus=CAR_cuba_secured}
+		cost=7.00
+		bypass={
+			owns_state=318
+		}
+		ai_will_do={
+			factor=0
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_conquer_haiti"
+			create_wargoal={
+				type=annex_everything
+				target=HAI
+			}
+			318={
+				add_claim_by=CAR
+			}
+			add_war_support=0.025
+			add_stability=0.025
+		}
+		search_filters={
+			FOCUS_FILTER_ANNEXATION
+		}
+	}
+	focus={
+		id=CAR_conquer_puertorico
+		icon=GFX_CAR_conquer_puertorico
+		x=49
+		y=8
+		prerequisite={focus=CAR_cuba_secured}
+		cost=7.00
+		bypass={
+			owns_state=686
+		}
+		available={
+			686={
+				owner={
+					NOT={
+						tag=CAR
+						is_in_faction_with=CAR
+						is_subject_of=CAR
+					}
+				}
+			}
+		}
+		ai_will_do={
+			factor=0
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_conquer_california"
+			owner={
+				create_wargoal={
+					type=annex_everything
+					target=686.owner
+				}
+			}
+			686={
+				add_claim_by=CAR
+			}
+			1312={
+				add_claim_by=CAR
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_ANNEXATION
+		}
+	}
+	focus={
+		id=CAR_conquer_dominicanrepublic
+		icon=GFX_CAR_conquer_dominicanrepublic
+		x=51
+		y=8
+		prerequisite={focus=CAR_cuba_secured}
+		cost=7.00
+		bypass={
+			owns_state=319
+		}
+		ai_will_do={
+			factor=0
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_conquer_dominicanrepublic"
+			create_wargoal={
+				type=annex_everything
+				target=DOM
+			}
+			319={
+				add_claim_by=CAR
+			}
+			add_war_support=0.025
+			add_stability=0.025
+		}
+		search_filters={
+			FOCUS_FILTER_ANNEXATION
+		}
+	}
+	focus={
+		id=CAR_new_reconquista
+		icon=GFX_CAR_new_reconquista
+		x=49
+		y=9
+		prerequisite={focus=CAR_conquer_dominicanrepublic}
+		prerequisite={focus=CAR_conquer_haiti}
+		cost=7.00
+		available={
+			CAR={
+				owns_state=315
+				owns_state=319
+			}
+		}
+		ai_will_do={
+			factor=0
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_new_reconquista"
+			319={
+				add_core_of=CAR
+			}
+			686={
+				add_core_of=CAR
+			}
+			1312={
+				add_core_of=CAR
+			}
+			318={
+				add_core_of=CAR
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = Falangist_Win
+					}
+				}
+				set_cosmetic_tag=CAR_empire
+			}
+			add_political_power=200
+			custom_effect_tooltip=CAR_viceroy_tt
+			hidden_effect={
+				news_event={
+					id=worldnews.500
+					days=7
+				}
+				country_event={
+					id=carfor.471
+					days=14
+				}
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_ANNEXATION
+		}
+	}
+	focus={
+		id=CAR_conquer_mexico
+		icon=GFX_CAR_conquer_mexico
+		x=50
+		y=10
+		prerequisite={focus=CAR_new_reconquista}
+		cost=7.00
+		bypass={
+			MEX={
+				is_in_faction_with=CAR
+			}
+		}
+		ai_will_do={
+			factor=0
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_conquer_mexico"
+			create_wargoal={
+				type=annex_everything
+				target=MEX
+			}
+			every_state={
+				limit={
+					is_core_of=MEX
+				}
+				add_claim_by=CAR
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_ANNEXATION
+		}
+	}
+	focus={
+		id=CAR_conquer_centro
+		icon=GFX_CAR_conquer_centro
+		x=52
+		y=10
+		prerequisite={focus=CAR_new_reconquista}
+		cost=7.00
+		ai_will_do={
+			factor=0
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_conquer_centro"
+			create_wargoal={
+				type=annex_everything
+				target=PAN
+			}
+			create_wargoal={
+				type=annex_everything
+				target=CEN
+			}
+			create_wargoal={
+				type=annex_everything
+				target=COS
+			}
+			create_wargoal={
+				type=annex_everything
+				target=NIC
+			}
+			create_wargoal={
+				type=annex_everything
+				target=HON
+			}
+			create_wargoal={
+				type=annex_everything
+				target=ELS
+			}
+			create_wargoal={
+				type=annex_everything
+				target=GUA
+			}
+			set_country_flag=CAR_centro_wars_unlocked
+			every_state={
+				limit={
+					is_core_of=GUA
+				}
+				add_claim_by=CAR
+			}
+			every_state={
+				limit={
+					is_core_of=HON
+				}
+				add_claim_by=CAR
+			}
+			every_state={
+				limit={
+					is_core_of=ELS
+				}
+				add_claim_by=CAR
+			}
+			every_state={
+				limit={
+					is_core_of=NIC
+				}
+				add_claim_by=CAR
+			}
+			every_state={
+				limit={
+					is_core_of=COS
+				}
+				add_claim_by=CAR
+			}
+			every_state={
+				limit={
+					is_core_of=PAN
+				}
+				add_claim_by=CAR
+			}
+			hidden_effect={
+				311={
+					add_claim_by=CAR
+				}
+				1071={
+					add_claim_by=CAR
+				}
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_ANNEXATION
+		}
+	}
+	focus={
+		id=CAR_conquer_colombia
+		icon=GFX_CAR_conquer_colombia
+		x=46
+		y=10
+		prerequisite={focus=CAR_new_reconquista}
+		cost=7.00
+		ai_will_do={
+			factor=0
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_conquer_colombia"
+			create_wargoal={
+				type=annex_everything
+				target=COL
+			}
+			every_state={
+				limit={
+					is_core_of=COL
+				}
+				add_claim_by=CAR
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_ANNEXATION
+		}
+	}
+	focus={
+		id=CAR_conquer_venezuela
+		icon=GFX_CAR_conquer_venezuela
+		x=48
+		y=10
+		prerequisite={focus=CAR_new_reconquista}
+		cost=7.00
+		ai_will_do={
+			factor=0
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_conquer_venezuela"
+			create_wargoal={
+				type=annex_everything
+				target=VEN
+			}
+			every_state={
+				limit={
+					OR={
+						is_core_of=VEN
+						is_claimed_by=VEN
+					}
+				}
+				add_claim_by=CAR
+			}
+			hidden_effect={
+				695={
+					add_claim_by=CAR
+				}
+				691={
+					add_claim_by=CAR
+				}
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_ANNEXATION
+		}
+	}
+	focus={
+		id=CAR_conquer_ecuador
+		icon=GFX_CAR_conquer_ecuador
+		x=46
+		y=11
+		prerequisite={focus=CAR_conquer_colombia}
+		cost=7.00
+		ai_will_do={
+			factor=0
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_conquer_ecuador"
+			create_wargoal={
+				type=annex_everything
+				target=ECU
+			}
+			every_state={
+				limit={
+					is_core_of=ECU
+				}
+				add_claim_by=CAR
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_ANNEXATION
+		}
+	}
+	focus={
+		id=CAR_conquer_peru
+		icon=GFX_CAR_conquer_peru
+		x=48
+		y=11
+		prerequisite={focus=CAR_conquer_colombia}
+		cost=7.00
+		ai_will_do={
+			factor=0
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_conquer_ecuador"
+			create_wargoal={
+				type=annex_everything
+				target=PRU
+			}
+			every_state={
+				limit={
+					is_core_of=PRU
+				}
+				add_claim_by=CAR
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_ANNEXATION
+		}
+	}
+	focus={
+		id=CAR_conquer_bolivia
+		icon=GFX_CAR_conquer_bolivia
+		x=49
+		y=12
+		prerequisite={focus=CAR_conquer_peru}
+		cost=7.00
+		ai_will_do={
+			factor=0
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_conquer_bolivia"
+			create_wargoal={
+				type=annex_everything
+				target=BOL
+			}
+			create_wargoal={
+				type=annex_everything
+				target=PAR
+			}
+			every_state={
+				limit={
+					OR={
+						is_core_of=BOL
+						is_claimed_by=BOL
+					}
+				}
+				add_claim_by=CAR
+			}
+			855={
+				add_claim_by=CAR
+			}
+			1040={
+				add_claim_by=CAR
+			}
+			every_state={
+				limit={
+					is_core_of=PAR
+				}
+				add_claim_by=CAR
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_ANNEXATION
+		}
+	}
+	focus={
+		id=CAR_conquer_chile
+		icon=GFX_CAR_conquer_chile
+		x=47
+		y=12
+		prerequisite={focus=CAR_conquer_peru}
+		cost=7.00
+		ai_will_do={
+			factor=0
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_conquer_chile"
+			create_wargoal={
+				type=annex_everything
+				target=CHL
+			}
+			every_state={
+				limit={
+					is_core_of=CHL
+				}
+				add_claim_by=CAR
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_ANNEXATION
+		}
+	}
+	focus={
+		id=CAR_conquer_la_plata
+		icon=GFX_CAR_conquer_la_plata
+		x=48
+		y=13
+		prerequisite={focus=CAR_conquer_chile focus=CAR_conquer_bolivia }
+		cost=7.00
+		ai_will_do={
+			factor=0
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_conquer_la_plata"
+			create_wargoal={
+				type=annex_everything
+				target=ARG
+			}
+			create_wargoal={
+				type=annex_everything
+				target=URG
+			}
+			create_wargoal={
+				type=annex_everything
+				target=FOP
+			}
+			every_state={
+				limit={
+					is_core_of=ARG
+				}
+				add_claim_by=CAR
+			}
+			every_state={
+				limit={
+					is_core_of=FOP
+				}
+				add_claim_by=CAR
+			}
+			every_state={
+				limit={
+					is_core_of=URG
+				}
+				add_claim_by=CAR
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_ANNEXATION
+		}
+	}
+	focus={
+		id=CAR_conquer_yucatan
+		icon=GFX_CAR_conquer_yucatan
+		x=52
+		y=11
+		prerequisite={focus=CAR_conquer_centro}
+		cost=7.00
+		bypass={
+			MEX={
+				is_in_faction_with=CAR
+			}
+		}
+		ai_will_do={
+			factor=0
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_conquer_yucatan"
+			owner={
+				create_wargoal={
+					type=annex_everything
+					target=474.owner
+				}
+			}
+			474={
+				add_claim_by=CAR
+			}
+			1254={
+				add_claim_by=CAR
+			}
+			1255={
+				add_claim_by=CAR
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_ANNEXATION
+		}
+	}
+	focus={
+		id=CAR_conquer_florida
+		icon=GFX_CAR_conquer_florida
+		x=50
+		y=11
+		prerequisite={focus=CAR_conquer_mexico}
+		cost=7.00
+		ai_will_do={
+			factor=0
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_conquer_florida"
+			owner={
+				create_wargoal={
+					type=annex_everything
+					target=366.owner
+				}
+			}
+			custom_effect_tooltip=CAR_florida_tt
+			hidden_effect={
+				366={
+					add_claim_by=CAR
+				}
+				1171={
+					add_claim_by=CAR
+				}
+				1172={
+					add_claim_by=CAR
+				}
+				if={
+					limit={
+						MEX={
+							is_subject_of=CAR
+						}
+					}
+					366={
+						add_core_of=MEX
+					}
+					1171={
+						add_core_of=MEX
+					}
+					1172={
+						add_core_of=MEX
+					}
+				}
+				if={
+					limit={
+						MEX={
+							is_in_faction_with=CAR
+							NOT={
+								is_subject_of=CAR
+							}
+						}
+					}
+					366={
+						add_claim_by=MEX
+					}
+					1171={
+						add_claim_by=MEX
+					}
+					1172={
+						add_claim_by=MEX
+					}
+				}
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_ANNEXATION
+		}
+	}
+	focus={
+		id=CAR_conquer_california
+		icon=GFX_CAR_conquer_california
+		x=51
+		y=12
+		prerequisite={focus=CAR_conquer_florida focus=CAR_conquer_yucatan }
+		cost=7.00
+		ai_will_do={
+			factor=0
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_conquer_california"
+			owner={
+				create_wargoal={
+					type=annex_everything
+					target=797.owner
+				}
+			}
+			custom_effect_tooltip=CAR_california_tt
+			hidden_effect={
+				798={
+					add_claim_by=CAR
+				}
+				829={
+					add_claim_by=CAR
+				}
+				378={
+					add_claim_by=CAR
+				}
+				797={
+					add_claim_by=CAR
+				}
+				385={
+					add_claim_by=CAR
+				}
+				386={
+					add_claim_by=CAR
+				}
+				473={
+					add_claim_by=CAR
+				}
+				1332={
+					add_claim_by=CAR
+				}
+				471={
+					add_claim_by=CAR
+				}
+				740={
+					add_claim_by=CAR
+				}
+				1165={
+					add_claim_by=CAR
+				}
+				387={
+					add_claim_by=CAR
+				}
+				379={
+					add_claim_by=CAR
+				}
+				380={
+					add_claim_by=CAR
+				}
+				377={
+					add_claim_by=CAR
+				}
+				376={
+					add_claim_by=CAR
+				}
+				1157={
+					add_claim_by=CAR
+				}
+				1164={
+					add_claim_by=CAR
+				}
+				1166={
+					add_claim_by=CAR
+				}
+				833={
+					add_claim_by=CAR
+				}
+				375={
+					add_claim_by=CAR
+				}
+				1174={
+					add_claim_by=CAR
+				}
+				1096={
+					add_claim_by=CAR
+				}
+				1161={
+					add_claim_by=CAR
+				}
+				371={
+					add_claim_by=CAR
+				}
+				372={
+					add_claim_by=CAR
+				}
+				1156={
+					add_claim_by=CAR
+				}
+				373={
+					add_claim_by=CAR
+				}
+				1163={
+					add_claim_by=CAR
+				}
+				392={
+					add_claim_by=CAR
+				}
+				391={
+					add_claim_by=CAR
+				}
+				390={
+					add_claim_by=CAR
+				}
+				389={
+					add_claim_by=CAR
+				}
+				388={
+					add_claim_by=CAR
+				}
+				381={
+					add_claim_by=CAR
+				}
+				382={
+					add_claim_by=CAR
+				}
+				1150={
+					add_claim_by=CAR
+				}
+				1175={
+					add_claim_by=CAR
+				}
+				374={
+					add_claim_by=CAR
+				}
+				383={
+					add_claim_by=CAR
+				}
+				384={
+					add_claim_by=CAR
+				}
+				463={
+					add_claim_by=CAR
+				}
+				370={
+					add_claim_by=CAR
+				}
+				1173={
+					add_claim_by=CAR
+				}
+				if={
+					limit={
+						MEX={
+							is_subject_of=CAR
+						}
+					}
+					798={
+						add_core_of=MEX
+					}
+					829={
+						add_core_of=MEX
+					}
+					378={
+						add_core_of=MEX
+					}
+					797={
+						add_core_of=MEX
+					}
+					385={
+						add_core_of=MEX
+					}
+					386={
+						add_core_of=MEX
+					}
+					473={
+						add_core_of=MEX
+					}
+					1332={
+						add_core_of=MEX
+					}
+					471={
+						add_core_of=MEX
+					}
+					740={
+						add_core_of=MEX
+					}
+					1165={
+						add_core_of=MEX
+					}
+					387={
+						add_core_of=MEX
+					}
+					379={
+						add_core_of=MEX
+					}
+					380={
+						add_core_of=MEX
+					}
+					377={
+						add_core_of=MEX
+					}
+					376={
+						add_core_of=MEX
+					}
+					1157={
+						add_core_of=MEX
+					}
+					1164={
+						add_core_of=MEX
+					}
+					1166={
+						add_core_of=MEX
+					}
+					833={
+						add_core_of=MEX
+					}
+					375={
+						add_core_of=MEX
+					}
+					1174={
+						add_core_of=MEX
+					}
+					1096={
+						add_core_of=MEX
+					}
+					1161={
+						add_core_of=MEX
+					}
+					371={
+						add_core_of=MEX
+					}
+					372={
+						add_core_of=MEX
+					}
+					1156={
+						add_core_of=MEX
+					}
+					373={
+						add_core_of=MEX
+					}
+					1163={
+						add_core_of=MEX
+					}
+					392={
+						add_core_of=MEX
+					}
+					391={
+						add_core_of=MEX
+					}
+					390={
+						add_core_of=MEX
+					}
+					389={
+						add_core_of=MEX
+					}
+					388={
+						add_core_of=MEX
+					}
+					381={
+						add_core_of=MEX
+					}
+					382={
+						add_core_of=MEX
+					}
+					1150={
+						add_core_of=MEX
+					}
+					1175={
+						add_core_of=MEX
+					}
+					374={
+						add_core_of=MEX
+					}
+					383={
+						add_core_of=MEX
+					}
+					384={
+						add_core_of=MEX
+					}
+					463={
+						add_core_of=MEX
+					}
+					370={
+						add_core_of=MEX
+					}
+					1173={
+						add_core_of=MEX
+					}
+				}
+				if={
+					limit={
+						MEX={
+							is_in_faction_with=CAR
+							NOT={
+								is_subject_of=CAR
+							}
+						}
+					}
+					798={
+						add_claim_by=MEX
+					}
+					829={
+						add_claim_by=MEX
+					}
+					378={
+						add_claim_by=MEX
+					}
+					797={
+						add_claim_by=MEX
+					}
+					385={
+						add_claim_by=MEX
+					}
+					386={
+						add_claim_by=MEX
+					}
+					473={
+						add_claim_by=MEX
+					}
+					1332={
+						add_claim_by=MEX
+					}
+					471={
+						add_claim_by=MEX
+					}
+					740={
+						add_claim_by=MEX
+					}
+					1165={
+						add_claim_by=MEX
+					}
+					387={
+						add_claim_by=MEX
+					}
+					379={
+						add_claim_by=MEX
+					}
+					380={
+						add_claim_by=MEX
+					}
+					377={
+						add_claim_by=MEX
+					}
+					376={
+						add_claim_by=MEX
+					}
+					1157={
+						add_claim_by=MEX
+					}
+					1164={
+						add_claim_by=MEX
+					}
+					1166={
+						add_claim_by=MEX
+					}
+					833={
+						add_claim_by=MEX
+					}
+					375={
+						add_claim_by=MEX
+					}
+					1174={
+						add_claim_by=MEX
+					}
+					1096={
+						add_claim_by=MEX
+					}
+					1161={
+						add_claim_by=MEX
+					}
+					371={
+						add_claim_by=MEX
+					}
+					372={
+						add_claim_by=MEX
+					}
+					1156={
+						add_claim_by=MEX
+					}
+					373={
+						add_claim_by=MEX
+					}
+					1163={
+						add_claim_by=MEX
+					}
+					392={
+						add_claim_by=MEX
+					}
+					391={
+						add_claim_by=MEX
+					}
+					390={
+						add_claim_by=MEX
+					}
+					389={
+						add_claim_by=MEX
+					}
+					388={
+						add_claim_by=MEX
+					}
+					381={
+						add_claim_by=MEX
+					}
+					382={
+						add_claim_by=MEX
+					}
+					1150={
+						add_claim_by=MEX
+					}
+					1175={
+						add_claim_by=MEX
+					}
+					374={
+						add_claim_by=MEX
+					}
+					383={
+						add_claim_by=MEX
+					}
+					384={
+						add_claim_by=MEX
+					}
+					463={
+						add_claim_by=MEX
+					}
+					370={
+						add_claim_by=MEX
+					}
+					1173={
+						add_claim_by=MEX
+					}
+				}
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_ANNEXATION
+		}
+	}
+	focus={
+		id=CAR_conquer_the_philippines
+		icon=GFX_CAR_conquer_philippines
+		x=51
+		y=13
+		prerequisite={focus=CAR_conquer_california}
+		cost=7.00
+		ai_will_do={
+			factor=0
+		}
+		completion_reward={
+			log="[GetDateText]: [Root.GetName]: Focus CAR_conquer_philippines"
+			create_wargoal={
+				type=annex_everything
+				target=PHI
+			}
+			every_state={
+				limit={
+					is_core_of=PHI
+				}
+				add_claim_by=CAR
+			}
+		}
+		search_filters={
+			FOCUS_FILTER_ANNEXATION
+		}
+	}
+	focus={
+		id=NFE_1
+		icon = FE_Cover_the_sky_with_one_hand
+		x=67
+		y=0
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available = {
+			has_country_flag = Falangist_Win
+		}
+		bypass = {
+			has_country_flag = Falangist_Win
+			NOT = { country_exists = CNT }
+			NOT = { country_exists = SPR }
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_political_power = 150
+		add_manpower = 50000
+		add_stability = 0.05
+		}
+	}
+	focus={
+		id=NFE_2
+		icon = FE_Deployment_of_the_Falangist_militia
+		x=66
+		y=1
+		prerequisite={focus=NFE_1}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		bypass = {
+			NOT = { country_exists = CNT }
+			NOT = { country_exists = SPR }
+		}
+		completion_reward={
+		add_political_power = 200
+		division_template = {
+			name = "长枪军"
+			division_names_group = FE_NRARMY_01
+			regiments = {
+			infantry = { x = 0 y = 0 }
+			infantry = { x = 0 y = 1 }
+			infantry = { x = 0 y = 2 }
+			infantry = { x = 1 y = 0 }
+			infantry = { x = 1 y = 1 }
+			infantry = { x = 1 y = 2 }
+			infantry = { x = 2 y = 0 }
+			infantry = { x = 2 y = 1 }
+			infantry = { x = 2 y = 2 }
+			artillery_brigade = { x = 3 y = 0 }
+			artillery_brigade = { x = 3 y = 1 }
+			artillery_brigade = { x = 3 y = 2 }
+			}
+			support = {
+				engineer = { x = 0 y = 1 }
+			}
+			}
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"长枪军\" division_template = \"长枪军\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = CAR
+				}
+				create_unit = {
+					division = "name = \"长枪军\" division_template = \"长枪军\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = CAR
+				}
+				create_unit = {
+					division = "name = \"长枪军\" division_template = \"长枪军\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = CAR
+				}
+				create_unit = {
+					division = "name = \"长枪军\" division_template = \"长枪军\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = CAR
+				}
+			}
+		}
+	}
+	focus={
+		id=NFE_3
+		icon = FE_Ransom_for_the_military_industrial_complex
+		x=68
+		y=1
+		prerequisite={focus=NFE_1}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		bypass = {
+			NOT = { country_exists = CNT }
+			NOT = { country_exists = SPR }
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_political_power = -50
+			add_war_support = 0.1
+			random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=arms_factory
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction={
+					type=arms_factory
+					level=2
+					instant_build=yes
+				}
+			}
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=arms_factory
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction={
+					type=arms_factory
+					level=2
+					instant_build=yes
+				}
+			}
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=arms_factory
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction={
+					type=arms_factory
+					level=2
+					instant_build=yes
+				}
+			}
+		}
+	}
+	focus={
+		id=NFE_4
+		icon=JONS_conquista_el_pais
+		x=67
+		y=2
+		prerequisite={focus=NFE_2 focus=NFE_3 }
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		bypass = {
+			NOT = { country_exists = CNT }
+			NOT = { country_exists = SPR }
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_political_power = 200
+		add_ideas = NFE_Conquer_the_country
+		}
+	}
+	focus={
+		id=NFE_5
+		icon = FE_Meeting_with_the_King
+		x=66
+		y=3
+		prerequisite={focus=NFE_2}
+		prerequisite={focus=NFE_4}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		bypass = {
+			NOT = { country_exists = CNT }
+			NOT = { country_exists = SPR }
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_political_power = 150
+		random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"长枪军\" division_template = \"长枪军\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = CAR
+				}
+				create_unit = {
+					division = "name = \"长枪军\" division_template = \"长枪军\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = CAR
+				}
+				create_unit = {
+					division = "name = \"长枪军\" division_template = \"长枪军\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = CAR
+				}
+			}
+		}
+	}
+	focus={
+		id=NFE_6
+		icon = FE_Defend_the_front_line
+		x=68
+		y=3
+		prerequisite={focus=NFE_3}
+		prerequisite={focus=NFE_4}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		bypass = {
+			NOT = { country_exists = CNT }
+			NOT = { country_exists = SPR }
+		}
+		available = {
+			has_completed_focus = NFE_2
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_political_power = 150
+		random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"长枪军\" division_template = \"长枪军\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = CAR
+				}
+				create_unit = {
+					division = "name = \"长枪军\" division_template = \"长枪军\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = CAR
+				}
+				create_unit = {
+					division = "name = \"长枪军\" division_template = \"长枪军\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = CAR
+				}
+				create_unit = {
+					division = "name = \"长枪军\" division_template = \"长枪军\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = CAR
+				}
+				create_unit = {
+					division = "name = \"长枪军\" division_template = \"长枪军\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = CAR
+				}
+				create_unit = {
+					division = "name = \"长枪军\" division_template = \"长枪军\" start_experience_factor = 1 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = yes
+					owner = CAR
+				}
+			}
+		}
+	}
+	focus={
+		id=NFE_7
+		icon = FE_Victory_of_the_Falangists
+		x=67
+		y=4
+		prerequisite={focus=NFE_5}
+		prerequisite={focus=NFE_6}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available = {
+			NOT = { country_exists = CNT }
+			NOT = { country_exists = SPR }
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		remove_ideas = CAR_rally_carlists_idea
+		set_cosmetic_tag = FE_Provisional_Government2
+		remove_ideas = CAR_black_monday
+		every_state = {
+			limit = { is_core_of = SPR }
+			add_core_of = CAR
+			}
+		every_state = {
+			limit = { is_core_of = CNT }
+			add_core_of = CAR
+			}
+		set_capital = { state = 41 }
+		every_owned_state={
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus={
+		id=NFE_8
+		icon = GFX_goal_FIU_france_east
+		x=67
+		y=5
+		cost=6
+		ai_will_do={
+			factor=80
+		}
+		available = {
+			has_completed_focus = NFE_7
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		remove_ideas = SPR_social_breakdown
+		add_political_power = 200
+		add_stability = 0.03
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=industrial_complex
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction={
+					type=industrial_complex
+					level=2
+					instant_build=yes
+				}
+			}
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=industrial_complex
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction={
+					type=industrial_complex
+					level=2
+					instant_build=yes
+				}
+			}
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=industrial_complex
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction={
+					type=industrial_complex
+					level=2
+					instant_build=yes
+				}
+			}
+		}
+	}
+	focus={
+		id=NFE_9
+		icon = JONS_without_mercy
+		x=66
+		y=6
+		prerequisite={focus=NFE_8}
+		cost=6
+		ai_will_do={
+			factor=80
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_political_power = 200
+		add_stability = 0.05
+		add_popularity = { ideology = totalist popularity = -1 }
+		add_popularity = { ideology = syndicalist popularity = -1 }
+		add_popularity = { ideology = radical_socialist popularity = -1 }
+		add_popularity = { ideology = social_liberal popularity = -1 }
+		add_popularity = { ideology = market_liberal popularity = -1 }
+		add_popularity = { ideology = social_conservative popularity = -1 }
+		}
+	}
+	focus={
+		id=NFE_10
+		icon = JONS_a_terrible_price
+		x=68
+		y=6
+		prerequisite={focus=NFE_8}
+		cost=6
+		ai_will_do={
+			factor=80
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_political_power = 100
+		add_research_slot = 1
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=industrial_complex
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction={
+					type=industrial_complex
+					level=3
+					instant_build=yes
+				}
+			}
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=arms_factory
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction={
+					type=arms_factory
+					level=3
+					instant_build=yes
+				}
+			}
+		}
+	}
+	focus={
+		id=NFE_11
+		icon=GFX_goal_AUS_Gewerkschaftlicher_Wiederaufbau
+		x=65
+		y=7
+		prerequisite={focus=NFE_9}
+		cost=6
+		ai_will_do={
+			factor=80
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = NFE_Industrialization_of_the_country
+		}
+	}
+	focus={
+		id=NFE_12
+		icon=GFX_goal_ROM_We_Shall_Raise_Ourselves
+		x=67
+		y=7
+		prerequisite={focus=NFE_9}
+		prerequisite={focus=NFE_10}
+		cost=6
+		ai_will_do={
+			factor=80
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = NFE_Expand_the_church
+		}
+	}
+	focus={
+		id=NFE_13
+		icon=GFX_NEE_needy_farmers
+		x=69
+		y=7
+		prerequisite={focus=NFE_10}
+		cost=6
+		ai_will_do={
+			factor=80
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=industrial_complex
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction={
+					type=industrial_complex
+					level=1
+					instant_build=yes
+				}
+			}
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=industrial_complex
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction={
+					type=industrial_complex
+					level=1
+					instant_build=yes
+				}
+			}
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=industrial_complex
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction={
+					type=industrial_complex
+					level=1
+					instant_build=yes
+				}
+			}
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=industrial_complex
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction={
+					type=industrial_complex
+					level=1
+					instant_build=yes
+				}
+			}
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=industrial_complex
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction={
+					type=industrial_complex
+					level=1
+					instant_build=yes
+				}
+			}
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=industrial_complex
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction={
+					type=industrial_complex
+					level=1
+					instant_build=yes
+				}
+			}
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=industrial_complex
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction={
+					type=industrial_complex
+					level=1
+					instant_build=yes
+				}
+			}
+		}
+	}
+	focus={
+		id=NFE_14
+		icon = GFX_goal_BBR_sway_da_jews
+		x=64
+		y=8
+		prerequisite={focus=NFE_11}
+		cost=6
+		ai_will_do={
+			factor=80
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_manpower = -10000
+		add_political_power = 150
+		add_stability = 0.03
+		add_war_support = 0.003
+		}
+	}
+	focus={
+		id=NFE_15
+		icon = FE_Steady_Franco
+		x=66
+		y=8
+		prerequisite={focus=NFE_11}
+		prerequisite={focus=NFE_12}
+		cost=6
+		ai_will_do={
+			factor=50
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_political_power = 150
+		add_command_power = 200
+		add_war_support = 0.2
+		}
+	}
+	focus={
+		id=NFE_16
+		icon=GFX_goal_ROM_Oust_Foreign_Monarch
+		x=68
+		y=8
+		prerequisite={focus=NFE_12}
+		prerequisite={focus=NFE_13}
+		cost=6
+		ai_will_do={
+			factor=100
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		country_event = fe.12
+		}
+	}
+	focus={
+		id=NFE_17
+		icon=GFX_goal_BUL_mechanize_farming
+		x=70
+		y=8
+		prerequisite={focus=NFE_13}
+		cost=6
+		ai_will_do={
+			factor=80
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_political_power = 150
+		random_owned_controlled_state={
+				limit={
+					is_core_of=ROOT
+					is_in_home_area=yes
+				}
+				increase_state_category_by_two_levels=yes
+			}
+		random_owned_controlled_state={
+				limit={
+					is_core_of=ROOT
+					is_in_home_area=yes
+				}
+				increase_state_category_by_two_levels=yes
+			}
+		random_owned_controlled_state={
+				limit={
+					is_core_of=ROOT
+					is_in_home_area=yes
+				}
+				increase_state_category_by_two_levels=yes
+			}
+		random_owned_controlled_state={
+				limit={
+					is_core_of=ROOT
+					is_in_home_area=yes
+				}
+				increase_state_category_by_two_levels=yes
+			}
+		random_owned_controlled_state={
+				limit={
+					is_core_of=ROOT
+					is_in_home_area=yes
+				}
+				increase_state_category_by_two_levels=yes
+			}
+		random_owned_controlled_state={
+				limit={
+					is_core_of=ROOT
+					is_in_home_area=yes
+				}
+				increase_state_category_by_two_levels=yes
+			}
+		}
+	}
+	focus={
+		id=NFE_18
+		icon=GFX_goal_ROM_Break_Banks
+		x=65
+		y=9
+		prerequisite={focus=NFE_14}
+		prerequisite={focus=NFE_15}
+		cost=6
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_political_power = 100
+		add_stability = 0.03
+		add_research_slot = 1
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=industrial_complex
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction={
+					type=industrial_complex
+					level=1
+					instant_build=yes
+				}
+			}
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=industrial_complex
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction={
+					type=industrial_complex
+					level=1
+					instant_build=yes
+				}
+			}
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=industrial_complex
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction={
+					type=industrial_complex
+					level=1
+					instant_build=yes
+				}
+			}
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=industrial_complex
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction={
+					type=industrial_complex
+					level=1
+					instant_build=yes
+				}
+			}
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=industrial_complex
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction={
+					type=industrial_complex
+					level=1
+					instant_build=yes
+				}
+			}
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=industrial_complex
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction={
+					type=industrial_complex
+					level=1
+					instant_build=yes
+				}
+			}
+		}
+	}
+	focus={
+		id=NFE_19
+		icon=GFX_goal_NFA_Republican_National_Corporatism
+		x=67
+		y=9
+		prerequisite={focus=NFE_15}
+		prerequisite={focus=NFE_16}
+		cost=6
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = NFE_Spain_nationalism
+		}
+	}
+	focus={
+		id=NFE_20
+		icon = GFX_goal_portugal
+		x=69
+		y=9
+		prerequisite={focus=NFE_16}
+		prerequisite={focus=NFE_17}
+		cost=6
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		POR = {
+				country_event = fe.13
+			}
+		}
+	}
+	focus={
+		id=NFE_21
+		icon=GFX_goal_NFA_industrial_push_command
+		x=66
+		y=10
+		prerequisite={focus=NFE_18}
+		prerequisite={focus=NFE_19}
+		cost=6
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=industrial_complex
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction={
+					type=industrial_complex
+					level=1
+					instant_build=yes
+				}
+			}
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=arms_factory
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction={
+					type=arms_factory
+					level=1
+					instant_build=yes
+				}
+			}
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=industrial_complex
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction={
+					type=industrial_complex
+					level=1
+					instant_build=yes
+				}
+			}
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=arms_factory
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction={
+					type=arms_factory
+					level=1
+					instant_build=yes
+				}
+			}
+		}
+	}
+	focus={
+		id=NFE_22
+		icon = GFX_goal_NFA_Endless_Devotion_Patrie_Imperiale
+		x=68
+		y=10
+		prerequisite={focus=NFE_19}
+		prerequisite={focus=NFE_20}
+		cost=6
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		swap_ideas = {
+				remove_idea = NFE_Spain_nationalism
+				add_idea = NFE_Spain_nationalism1
+			}
+		}
+	}
+	focus={
+		id=NFE_23
+		icon = FE_Eternal_Spain
+		x=67
+		y=11
+		prerequisite={focus=NFE_21}
+		prerequisite={focus=NFE_22}
+		cost=6
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = NFE_Spain_is_eternal
+		}
+	}
+	focus={
+		id=NFE_24
+		icon=FE_A_new_path_for_the_Falangists
+		x=84
+		y=0
+		cost=0
+		ai_will_do={
+			factor=1
+		}
+		available={
+			has_country_flag=FE_NOM
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_political_power=150
+		}
+	}
+	focus={
+		id=NFE_25
+		icon=FE_The_Godfather_of_Anarchy
+		x=84
+		y=1
+		prerequisite={focus=NFE_24}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available = {
+			has_country_flag = CAR_anarchism_come2
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_political_power = 150
+		add_stability = 0.03
+		add_war_support = 0.03
+		add_manpower = 50000
+		}
+	}
+	focus={
+		id=NFE_26
+		icon=GFX_UKR_Work_With_Makhnovtsy
+		x=82
+		y=2
+		prerequisite={focus=NFE_25}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = NFE_Revolutionary_Command
+		}
+	}
+	focus={
+		id=NFE_27
+		icon=GFX_goal_WHR_Immolate_Monetary_System
+		x=84
+		y=2
+		prerequisite={focus=NFE_25}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_political_power = 200
+		add_stability = -0.05
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=industrial_complex
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction={
+					type=industrial_complex
+					level=1
+					instant_build=yes
+				}
+			}
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=arms_factory
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction={
+					type=arms_factory
+					level=1
+					instant_build=yes
+				}
+			}
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=industrial_complex
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction={
+					type=industrial_complex
+					level=1
+					instant_build=yes
+				}
+			}
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=arms_factory
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction={
+					type=arms_factory
+					level=1
+					instant_build=yes
+				}
+			}
+		}
+	}
+	focus={
+		id=NFE_28
+		icon=GFX_goal_FRA_parasite
+		x=86
+		y=2
+		prerequisite={focus=NFE_25}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_political_power = 100
+		add_ideas = NFE_Power_is_in_the_hands_of_the_people
+		}
+	}
+	focus={
+		id=NFE_29
+		icon=GFX_goal_WHR_Paint_Red_Cross_Black
+		x=83
+		y=3
+		prerequisite={focus=NFE_26}
+		prerequisite={focus=NFE_27}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_political_power = 150
+		add_ideas = NFE_red_cross
+		}
+	}
+	focus={
+		id=NFE_30
+		icon=FE_Anarchic_brothers
+		x=85
+		y=3
+		prerequisite={focus=NFE_27}
+		prerequisite={focus=NFE_28}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_manpower = 20000
+		add_ideas = NFE_Contacts
+		}
+	}
+	focus={
+		id=NFE_31
+		icon=GFX_goal_WHR_Groups_Revolutionary_Actives
+		x=83
+		y=4
+		prerequisite={focus=NFE_29}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		swap_ideas = {
+				remove_idea = NFE_Revolutionary_Command
+				add_idea = NFE_Revolutionary_Command1
+			}
+		}
+	}
+	focus={
+		id=NFE_32
+		icon=GFX_goal_WHR_Fair_Division_Labour
+		x=85
+		y=4
+		prerequisite={focus=NFE_30}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = NFE_justice
+		}
+	}
+	focus={
+		id=NFE_33
+		icon=GFX_goal_POL_Let_Soul_Go_Wild_There_Is_No_Hell
+		x=84
+		y=5
+		prerequisite={focus=NFE_31}
+		prerequisite={focus=NFE_32}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		swap_ideas = {
+				remove_idea = NFE_Revolutionary_Command1
+				add_idea = NFE_Revolutionary_Command2
+			}
+		}
+	}
+	focus={
+		id=NFE_34
+		icon=GFX_goal_SRI_Rouse_the_People
+		x=77
+		y=1
+		prerequisite={focus=NFE_24}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available = {
+			has_country_flag = CAR_totalist_come2
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_political_power = 150
+		add_stability = 0.03
+		add_war_support = 0.03
+		add_manpower = 50000
+		}
+	}
+	focus={
+		id=NFE_35
+		icon=GFX_goal_SRI_Squadrismo
+		x=75
+		y=2
+		prerequisite={focus=NFE_34}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = NFE_Socialist_Combat_Squad
+		}
+	}
+	focus={
+		id=NFE_36
+		icon=GFX_goal_SRI_Strengthen_the_Chairman
+		x=77
+		y=2
+		prerequisite={focus=NFE_34}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = NFE_Totalitarian_revolution
+		}
+	}
+	focus={
+		id=NFE_37
+		icon=GFX_goal_SRI_Ministry_of_Public_Security
+		x=79
+		y=2
+		prerequisite={focus=NFE_34}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = NFE_Revolutionary_Defense_Organization
+		}
+	}
+	focus={
+		id=NFE_38
+		icon=GFX_goal_FRA_militant_syn_corp
+		x=76
+		y=3
+		prerequisite={focus=NFE_35}
+		prerequisite={focus=NFE_36}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = NFE_Militant_Syndicalism
+		}
+	}
+	focus={
+		id=NFE_39
+		icon=GFX_goal_FRA_warrior_ethics
+		x=78
+		y=3
+		prerequisite={focus=NFE_36}
+		prerequisite={focus=NFE_37}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_manpower = -12000
+		add_stability = 0.05
+		add_war_support = 0.05
+		add_political_power = 200
+		}
+	}
+	focus={
+		id=NFE_40
+		icon=GFX_goal_FRA_reign_of_working_man
+		x=76
+		y=4
+		prerequisite={focus=NFE_38}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = NFE_Revolutionary_nationalism
+		}
+	}
+	focus={
+		id=NFE_41
+		icon=GFX_goal_SRI_Revolutionary_Commissars
+		x=78
+		y=4
+		prerequisite={focus=NFE_39}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		swap_ideas = {
+			remove_idea = NFE_Revolutionary_Defense_Organization
+			add_idea = NFE_Revolutionary_Defense_Organization1
+		}
+		}
+	}
+	focus={
+		id=NFE_42
+		icon=FE_Long_live_the_leader
+		x=77
+		y=5
+		prerequisite={focus=NFE_40}
+		prerequisite={focus=NFE_41}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = NFE_Eternal_Ruler
+		}
+	}
+	focus={
+		id=NFE_43
+		icon=GFX_goal_ROM_Send_Out_Greenshirts
+		x=91
+		y=1
+		prerequisite={focus=NFE_24}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available = {
+			has_country_flag = CAR_legionarism_come2
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_political_power = 150
+		add_stability = 0.03
+		add_war_support = 0.03
+		add_manpower = 50000
+		}
+	}
+	focus={
+		id=NFE_44
+		icon=GFX_goal_ROM_Second_Legionary_Victory
+		x=89
+		y=2
+		prerequisite={focus=NFE_43}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = NFE_Legionism
+		}
+	}
+	focus={
+		id=NFE_45
+		icon=GFX_goal_ROM_Expand_Hierarchy_Legion
+		x=91
+		y=2
+		prerequisite={focus=NFE_43}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = NFE_Iron_Guard_Legionism
+		}
+	}
+	focus={
+		id=NFE_46
+		icon=GFX_goal_ROM_Cult_Warrior
+		x=93
+		y=2
+		prerequisite={focus=NFE_43}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = NFE_Warrior_Worship
+		}
+	}
+	focus={
+		id=NFE_47
+		icon=GFX_goal_FRA_workingman_associations
+		x=90
+		y=3
+		prerequisite={focus=NFE_44}
+		prerequisite={focus=NFE_45}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_political_power = 200
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=industrial_complex
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction={
+					type=industrial_complex
+					level=2
+					instant_build=yes
+				}
+			}
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=industrial_complex
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction={
+					type=industrial_complex
+					level=2
+					instant_build=yes
+				}
+			}
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=infrastructure
+						size>0
+						include_locked=yes
+					}
+				}
+				add_building_construction={
+					type=infrastructure
+					level=2
+					instant_build=yes
+				}
+			}
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=infrastructure
+						size>0
+						include_locked=yes
+					}
+				}
+				add_building_construction={
+					type=infrastructure
+					level=2
+					instant_build=yes
+				}
+			}
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=infrastructure
+						size>0
+						include_locked=yes
+					}
+				}
+				add_building_construction={
+					type=infrastructure
+					level=2
+					instant_build=yes
+				}
+			}
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=infrastructure
+						size>0
+						include_locked=yes
+					}
+				}
+				add_building_construction={
+					type=infrastructure
+					level=2
+					instant_build=yes
+				}
+			}
+		}
+	}
+	focus={
+		id=NFE_48
+		icon=GFX_goal_ROM_Vanguard_Reaction
+		x=92
+		y=3
+		prerequisite={focus=NFE_45}
+		prerequisite={focus=NFE_46}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = NFE_Lead_by_example
+		}
+	}
+	focus={
+		id=NFE_49
+		icon=GFX_goal_ROM_Militarize_Cross_Brotherhoods
+		x=90
+		y=4
+		prerequisite={focus=NFE_47}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = NFE_Triple_Cross_Brotherhood
+		}
+	}
+	focus={
+		id=NFE_50
+		icon=GFX_goal_ROM_Alliance_With_Church
+		x=92
+		y=4
+		prerequisite={focus=NFE_48}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = NFE_The_Son_of_Christ
+		}
+	}
+	focus={
+		id=NFE_51
+		icon=GFX_goal_ROM_Spiritual_National_Guide
+		x=91
+		y=5
+		prerequisite={focus=NFE_49}
+		prerequisite={focus=NFE_50}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = NFE_Eternal_Ruler2
+		}
+	}
+	focus={
+		id=NFE_52
+		icon=GFX_goal_MEX_Shining_Stable_Red
+		x=88
+		y=7
+		cost=0
+		ai_will_do={
+			factor=1
+		}
+		available={
+			has_country_flag=FE_NOM
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_political_power=150
+		}
+	}
+	focus={
+		id=NFE_53
+		icon=FE_The_Falangists_remained_in_power
+		x=84
+		y=8
+		prerequisite={focus=NFE_52}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available = {
+			has_country_flag = CAR_falangist_win2
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_political_power = 150
+		add_stability = 0.03
+		add_war_support = 0.03
+		add_manpower = 50000
+		}
+	}
+	focus={
+		id=NFE_54
+		icon=GFX_goal_COR_Unions_Fair_Share
+		x=83
+		y=9
+		prerequisite={focus=NFE_53}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = NFE_The_Big_Uion
+		}
+	}
+	focus={
+		id=NFE_55
+		icon=GFX_goal_FRA_kill_the_eagle
+		x=85
+		y=9
+		prerequisite={focus=NFE_53}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_political_power = 100
+		add_stability = 0.05
+			set_party_name = {
+				ideology = totalist
+				long_name = WSU_NO_party_long
+				name = WSU_NO_party
+			}
+			set_party_name = {
+				ideology = radical_socialist
+				long_name = WSU_NO_party_long
+				name = WSU_NO_party
+			}
+		}
+	}
+	focus={
+		id=NFE_56
+		icon=GFX_GRU_National_Corporatism
+		x=84
+		y=10
+		prerequisite={focus=NFE_54}
+		prerequisite={focus=NFE_55}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		hidden_effect = {
+				country_event = {
+					id = fe.20
+					days = 10
+				}
+			}
+		add_ideas = NFE_National_Syndicate
+		}
+	}
+	focus={
+		id=NFE_57
+		icon=GFX_RUS_Partial_Nationalization
+		x=82
+		y=11
+		prerequisite={focus=NFE_56}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_political_power = 150
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=arms_factory
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction={
+					type=arms_factory
+					level=1
+					instant_build=yes
+				}
+			}
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=arms_factory
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction={
+					type=arms_factory
+					level=1
+					instant_build=yes
+				}
+			}
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=industrial_complex
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction={
+					type=industrial_complex
+					level=1
+					instant_build=yes
+				}
+			}
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=industrial_complex
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction={
+					type=industrial_complex
+					level=1
+					instant_build=yes
+				}
+			}
+		}
+	}
+	focus={
+		id=NFE_58
+		icon=GFX_goal_workers_rights
+		x=84
+		y=11
+		prerequisite={focus=NFE_56}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		swap_ideas = {
+				remove_idea = NFE_The_Big_Uion
+				add_idea = NFE_The_Big_Uion1
+			}
+		}
+	}
+	focus={
+		id=NFE_59
+		icon=GFX_goal_FRA_planisme
+		x=86
+		y=11
+		prerequisite={focus=NFE_56}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		swap_ideas = {
+				remove_idea = NFE_National_Syndicate
+				add_idea = NFE_National_Syndicate1
+			}
+		}
+	}
+	focus={
+		id=NFE_60
+		icon=GFX_goal_IRE_generic_construction
+		x=83
+		y=12
+		prerequisite={focus=NFE_57}
+		prerequisite={focus=NFE_58}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_political_power = 200
+		add_stability = 0.1
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=arms_factory
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction={
+					type=arms_factory
+					level=1
+					instant_build=yes
+				}
+			}
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=arms_factory
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction={
+					type=arms_factory
+					level=1
+					instant_build=yes
+				}
+			}
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=industrial_complex
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction={
+					type=industrial_complex
+					level=1
+					instant_build=yes
+				}
+			}
+		}
+	}
+	focus={
+		id=NFE_61
+		icon=GFX_focus_generic_authoritarian_government
+		x=85
+		y=12
+		prerequisite={focus=NFE_58}
+		prerequisite={focus=NFE_59}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = NFE_New_Government
+			hidden_effect = {
+				if = {
+					limit = {
+						has_government = national_populist
+						has_country_leader = {
+							name = "何塞·安东尼奥·德里维拉"
+							ruling_only = yes
+						}
+					}
+					country_event = fe.14
+				}
+			}
+		}
+	}
+	focus={
+		id=NFE_62
+		icon=GFX_goal_ROM_Country_As_Sun_In_Sky
+		x=84
+		y=13
+		prerequisite={focus=NFE_60}
+		prerequisite={focus=NFE_61}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		swap_ideas = {
+				remove_idea = NFE_New_Government
+				add_idea = NFE_New_Government1
+			}
+		}
+	}
+	focus={
+		id=NFE_63
+		icon=FE_Military_government
+		x=77
+		y=8
+		prerequisite={focus=NFE_52}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available = {
+			has_country_flag = CAR_The_Francisco_Franco_Win
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_political_power = 150
+		add_stability = 0.03
+		add_war_support = 0.03
+		add_manpower = 50000
+		}
+	}
+	focus={
+		id=NFE_64
+		icon=GFX_goal_NFA_Remove_Communards
+		x=76
+		y=9
+		prerequisite={focus=NFE_63}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available = {
+			has_country_leader = {
+				name = "弗朗西斯科·佛朗哥"
+				ruling_only = yes
+			}
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		hidden_effect = {
+			country_event = {
+				id = fe.18
+				days = 10
+			}
+		}
+		add_political_power = 200
+		add_stability = 0.05
+		add_popularity = { ideology = totalist popularity = -1 }
+		add_popularity = { ideology = syndicalist popularity = -1 }
+		add_popularity = { ideology = radical_socialist popularity = -1 }
+		add_popularity = { ideology = paternal_autocrat popularity = -1 }
+		add_popularity = { ideology = national_populist popularity = -1 }
+		set_party_name = {
+				ideology = totalist
+				long_name = WSU_NO_party_long
+				name = WSU_NO_party
+			}
+		set_party_name = {
+				ideology = syndicalist
+				long_name = WSU_NO_party_long
+				name = WSU_NO_party
+			}
+		set_party_name = {
+				ideology = radical_socialist
+				long_name = WSU_NO_party_long
+				name = WSU_NO_party
+			}
+		set_party_name = {
+				ideology = paternal_autocrat
+				long_name = WSU_NO_party_long
+				name = WSU_NO_party
+			}
+		set_party_name = {
+				ideology = national_populist
+				long_name = WSU_NO_party_long
+				name = WSU_NO_party
+			}
+		}
+	}
+	focus={
+		id=NFE_65
+		icon=GFX_goal_authoritarian
+		x=78
+		y=9
+		prerequisite={focus=NFE_63}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available = {
+			has_country_leader = {
+				name = "弗朗西斯科·佛朗哥"
+				ruling_only = yes
+			}
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = NFE_junta
+			hidden_effect = {
+				country_event = {
+					id = fe.15
+					days = 5
+				}
+			}
+		}
+	}
+	focus={
+		id=NFE_66
+		icon=FE_Meeting_with_the_King
+		x=77
+		y=10
+		prerequisite={focus=NFE_64}
+		prerequisite={focus=NFE_65}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available = {
+			has_country_leader = {
+				name = "弗朗西斯科·佛朗哥"
+				ruling_only = yes
+			}
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			hidden_effect = {
+				country_event = {
+					id = fe.17
+					days = 10
+				}
+			}
+			add_ideas = NFE_The_Kings_support
+		}
+	}
+	focus={
+		id=NFE_67
+		icon=GFX_goal_capitalist_system
+		x=75
+		y=11
+		prerequisite={focus=NFE_66}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "弗朗西斯科·佛朗哥"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "拉斐尔·桑切斯·马萨斯"
+					ruling_only = yes
+				}
+			}
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_ideas = NFE_Funding_Businesses
+		}
+	}
+	focus={
+		id=NFE_68
+		icon=GFX_HOL_crackdown_syndie
+		x=77
+		y=11
+		prerequisite={focus=NFE_66}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "弗朗西斯科·佛朗哥"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "拉斐尔·桑切斯·马萨斯"
+					ruling_only = yes
+				}
+			}
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		hidden_effect = {
+				country_event = {
+					id = fe.19
+					days = 10
+				}
+			}
+		swap_ideas = {
+				remove_idea = NFE_junta
+				add_idea = NFE_junta1
+			}
+		}
+	}
+	focus={
+		id=NFE_69
+		icon=GFX_BRY_Cooperate_With_Monasteries
+		x=79
+		y=11
+		prerequisite={focus=NFE_66}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		bypass = {
+			has_country_flag = CAR_Jose_Antonio_die
+			has_country_leader = {
+				name = "弗朗西斯科·佛朗哥"
+				ruling_only = yes
+			}
+		}
+		available = {
+			has_country_leader = {
+				name = "弗朗西斯科·佛朗哥"
+				ruling_only = yes
+			}
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			create_country_leader = {
+				name = "拉斐尔·桑切斯·马萨斯"
+				desc = ""
+				picture = "gfx/leaders/CAR/CNT_Rafael_Sanchez_Mazas.png"
+				expire = "1.1.1"
+				ideology = autdem_falangism
+			}
+			remove_ideas_with_trait = economy_minister
+			add_ideas = CAR_Rafael_Sanchez_Mazas_eco_npo
+		}
+	}
+	focus={
+		id=NFE_70
+		icon=GFX_goal_NFA_Mandatory_Work_Service
+		x=76
+		y=12
+		prerequisite={focus=NFE_67}
+		prerequisite={focus=NFE_68}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "弗朗西斯科·佛朗哥"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "拉斐尔·桑切斯·马萨斯"
+					ruling_only = yes
+				}
+			}
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		swap_ideas = {
+				remove_idea = NFE_Funding_Businesses
+				add_idea = NFE_Funding_Businesses1
+			}
+		}
+	}
+	focus={
+		id=NFE_71
+		icon=GFX_goal_FRA_Union_Mobilization
+		x=78
+		y=12
+		prerequisite={focus=NFE_68}
+		prerequisite={focus=NFE_69}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "弗朗西斯科·佛朗哥"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "拉斐尔·桑切斯·马萨斯"
+					ruling_only = yes
+				}
+			}
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_ideas = NFE_National_mobilization
+		}
+	}
+	focus={
+		id=NFE_72
+		icon=GFX_goal_ROM_Green_Tinted_Democracy
+		x=77
+		y=13
+		prerequisite={focus=NFE_70}
+		prerequisite={focus=NFE_71}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "弗朗西斯科·佛朗哥"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "拉斐尔·桑切斯·马萨斯"
+					ruling_only = yes
+				}
+			}
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		set_politics = {
+			ruling_party = authoritarian_democrat
+			elections_allowed = yes
+			name = CAR_Neo_authoritarian_democrat_party
+			long_name = CAR_Neo_authoritarian_democrat_party_long
+		}
+		swap_ideas = {
+				remove_idea = NFE_junta1
+				add_idea = NFE_junta2
+			}
+		}
+	}
+	focus={
+		id=NFE_73
+		icon=FE_Operation_Spain
+		x=92
+		y=8
+		prerequisite={focus=NFE_52}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available = {
+			has_country_flag = CAR_Morathism_Win
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_political_power = 150
+		add_stability = 0.03
+		add_war_support = 0.03
+		add_manpower = 50000
+		}
+	}
+	focus={
+		id=NFE_74
+		icon=GFX_goal_NFA_maurras_holds_on
+		x=91
+		y=9
+		prerequisite={focus=NFE_73}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_political_power = 200
+		add_ideas = NFE_maurrasianism
+		}
+	}
+	focus={
+		id=NFE_75
+		icon=GFX_goal_GRE_restore_the_monarchy
+		x=93
+		y=9
+		prerequisite={focus=NFE_73}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = NFE_king_back
+		}
+	}
+	focus={
+		id=NFE_76
+		icon=GFX_goal_NFA_3000000IQ_inspiration
+		x=92
+		y=10
+		prerequisite={focus=NFE_74}
+		prerequisite={focus=NFE_75}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		swap_ideas = {
+				remove_idea = NFE_maurrasianism
+				add_idea = NFE_maurrasianism1
+			}
+		}
+	}
+	focus={
+		id=NFE_77
+		icon=GFX_goal_bend_4_estates
+		x=90
+		y=11
+		prerequisite={focus=NFE_76}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_political_power = 200
+		add_manpower = -2000
+		add_stability = 0.05
+		add_war_support = 0.05
+		}
+	}
+	focus={
+		id=NFE_78
+		icon=GFX_goal_NFA_painting_bad
+		x=92
+		y=11
+		prerequisite={focus=NFE_76}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = NFE_traditionalism
+		}
+	}
+	focus={
+		id=NFE_79
+		icon=GFX_goal_NFA_Corporatism_Working_Man
+		x=94
+		y=11
+		prerequisite={focus=NFE_76}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_political_power = 100
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=industrial_complex
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction={
+					type=industrial_complex
+					level=1
+					instant_build=yes
+				}
+			}
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=industrial_complex
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction={
+					type=industrial_complex
+					level=1
+					instant_build=yes
+				}
+			}
+			random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=arms_factory
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction={
+					type=arms_factory
+					level=1
+					instant_build=yes
+				}
+			}
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=arms_factory
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction={
+					type=arms_factory
+					level=1
+					instant_build=yes
+				}
+			}
+		}
+	}
+	focus={
+		id=NFE_80
+		icon=GFX_goal_NFA_protective_inequality
+		x=91
+		y=12
+		prerequisite={focus=NFE_77}
+		prerequisite={focus=NFE_78}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		swap_ideas = {
+			remove_idea = NFE_maurrasianism1
+			add_idea = NFE_maurrasianism2
+		}
+		}
+	}
+	focus={
+		id=NFE_81
+		icon=GFX_goal_BEL_LP
+		x=93
+		y=12
+		prerequisite={focus=NFE_78}
+		prerequisite={focus=NFE_79}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = NFE_The_bondage_of_freedom
+		}
+	}
+	focus={
+		id=NFE_82
+		icon=GFX_goal_NFA_order_and_reason
+		x=92
+		y=13
+		prerequisite={focus=NFE_80}
+		prerequisite={focus=NFE_81}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			swap_ideas = {
+				remove_idea = NFE_traditionalism
+				add_idea = NFE_traditionalism1
+			}
+		}
+	}
+	focus={
+		id=TFE_1
+		icon=FE_Spain_Legion
+		x=99
+		y=8
+		prerequisite={focus=NFE_52}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available = {
+			has_country_flag = CAR_Tercio_de_Extranjeros_Win
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_political_power = 150
+		add_stability = 0.03
+		add_war_support = 0.03
+		add_manpower = 50000
+		}
+	}
+	focus={
+		id=TFE_2
+		icon=GFX_goal_KEN_peoples_army
+		x=98
+		y=9
+		prerequisite={focus=TFE_1}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = NFE_Songun_politics
+		}
+	}
+	focus={
+		id=TFE_3
+		icon=GFX_goal_CSA_peoples_military_academy
+		x=100
+		y=9
+		prerequisite={focus=TFE_1}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = NFE_Militar_Academy
+		}
+	}
+	focus={
+		id=TFE_4
+		icon=GFX_goal_CAN_militarism
+		x=99
+		y=10
+		prerequisite={focus=TFE_2}
+		prerequisite={focus=TFE_3}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		swap_ideas = {
+			remove_idea = NFE_Songun_politics
+			add_idea = NFE_Songun_politics1
+		}
+		}
+	}
+	focus={
+		id=TFE_5
+		icon=GFX_goal_CEA_curtail_colonial_capitalism
+		x=97
+		y=11
+		prerequisite={focus=TFE_4}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_political_power = 200
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=industrial_complex
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction={
+					type=industrial_complex
+					level=2
+					instant_build=yes
+				}
+			}
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=industrial_complex
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction={
+					type=industrial_complex
+					level=2
+					instant_build=yes
+				}
+			}
+			random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=arms_factory
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction={
+					type=arms_factory
+					level=2
+					instant_build=yes
+				}
+			}
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=arms_factory
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction={
+					type=arms_factory
+					level=2
+					instant_build=yes
+				}
+			}
+		}
+	}
+	focus={
+		id=TFE_6
+		icon=FE_Military_hierarchy
+		x=99
+		y=11
+		prerequisite={focus=TFE_4}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		swap_ideas = {
+			remove_idea = NFE_Songun_politics1
+			add_idea = NFE_Songun_politics2
+		}
+		}
+	}
+	focus={
+		id=TFE_7
+		icon=GFX_goal_BEL_Mandatory_Military_Service
+		x=101
+		y=11
+		prerequisite={focus=TFE_4}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = NFE_All_for_all
+		}
+	}
+	focus={
+		id=TFE_8
+		icon=GFX_MON_army_money
+		x=98
+		y=12
+		prerequisite={focus=TFE_5}
+		prerequisite={focus=TFE_6}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = NFE_Military_oriented_economy
+		}
+	}
+	focus={
+		id=TFE_9
+		icon=GFX_goal_BAN_army_for_strong
+		x=100
+		y=12
+		prerequisite={focus=TFE_6}
+		prerequisite={focus=TFE_7}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		swap_ideas = {
+			remove_idea = NFE_Militar_Academy
+			add_idea = NFE_Militar_Academy1
+		}
+		}
+	}
+	focus={
+		id=TFE_10
+		icon=GFX_goal_ALB_Liberation_Army
+		x=99
+		y=13
+		prerequisite={focus=TFE_8}
+		prerequisite={focus=TFE_9}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		swap_ideas = {
+			remove_idea = NFE_Songun_politics2
+			add_idea = NFE_Songun_politics3
+		}
+		}
+	}
+	focus={
+		id=TFE_11
+		icon=GFX_goal_COR_Champion_Womens_Three_Movements
+		x=88
+		y=15
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available = {
+			has_country_flag = FE_NOM
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_political_power = 150
+		}
+	}
+	focus={
+		id=TFE_12
+		icon=GFX_HUN_social_democracy
+		x=84
+		y=16
+		prerequisite={focus=TFE_11}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available = {
+			has_country_flag = CAR_javier_totalist
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_political_power = 150
+		add_stability = 0.03
+		add_war_support = 0.03
+		add_manpower = 50000
+		}
+	}
+	focus={
+		id=TFE_13
+		icon=FE_Suppression_of_Catalonia
+		x=82
+		y=17
+		prerequisite={focus=TFE_12}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_manpower = -20000
+		add_political_power = 200
+		add_stability = 0.05
+		add_war_support = 0.05
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=industrial_complex
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction={
+					type=industrial_complex
+					level=2
+					instant_build=yes
+				}
+			}
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=industrial_complex
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction={
+					type=industrial_complex
+					level=2
+					instant_build=yes
+				}
+			}
+		}
+	}
+	focus={
+		id=TFE_14
+		icon=GFX_goal_ALB_Remove_Squat
+		x=84
+		y=17
+		prerequisite={focus=TFE_12}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = NFE_Transform_the_Motherland
+		}
+	}
+	focus={
+		id=TFE_15
+		icon=FE_Indulge_Spain
+		x=86
+		y=17
+		prerequisite={focus=TFE_12}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=arms_factory
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction={
+					type=arms_factory
+					level=4
+					instant_build=yes
+				}
+			}
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=arms_factory
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction={
+					type=arms_factory
+					level=4
+					instant_build=yes
+				}
+			}
+		}
+	}
+	focus={
+		id=TFE_16
+		icon=GFX_UKR_Remember_Federalist_Legacy
+		x=83
+		y=18
+		prerequisite={focus=TFE_14}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = NFE_Socialist_Federalism
+		}
+	}
+	focus={
+		id=TFE_17
+		icon=GFX_goal_MEX_Neo-Latin_Renaissance
+		x=85
+		y=18
+		prerequisite={focus=TFE_14}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		779 = { add_core_of = ROOT }
+		28 = { add_core_of = ROOT } 
+		29 = { add_core_of = ROOT }
+		741 = { add_core_of = ROOT }
+		34 = { add_core_of = ROOT }
+		1100 = { add_core_of = ROOT }
+		783 = { add_core_of = ROOT }
+		39 = { add_core_of = ROOT }
+			#Spain
+			118 = { add_core_of = ROOT 
+				   }
+			41 = { add_core_of = ROOT 
+				   }
+			165 = { add_core_of = ROOT 
+				   }
+			166 = { add_core_of = ROOT 
+				   }
+			167 = { add_core_of = ROOT 
+				   }
+			168 = { add_core_of = ROOT 
+				   }
+			169 = { add_core_of = ROOT 
+				   }
+			170 = { add_core_of = ROOT 
+				   }
+			171 = { add_core_of = ROOT 
+				   }
+			172 = { add_core_of = ROOT 
+				   }
+			173 = { add_core_of = ROOT 
+				   }
+			174 = { add_core_of = ROOT 
+				   }
+			175 = { add_core_of = ROOT 
+				   }
+			176 = { add_core_of = ROOT 
+				   }
+			177 = { add_core_of = ROOT 
+				   }
+			178 = { add_core_of = ROOT 
+				   }
+			793 = { add_core_of = ROOT 
+				   }
+			940 = { add_core_of = ROOT 
+				   }
+			1313 = { add_core_of = ROOT 
+				   }
+			951 = { add_core_of = ROOT 
+				   }
+			1316 = { add_core_of = ROOT 
+				   }
+			290 = { add_core_of = ROOT 
+				   }
+			#Portugal
+			112 = { add_core_of = ROOT 
+				   }
+			179 = { add_core_of = ROOT 
+				   }
+			180 = { add_core_of = ROOT 
+				   }
+			181 = { add_core_of = ROOT 
+				   }
+			795 = { add_core_of = ROOT 
+				   }	
+			697 = { add_core_of = ROOT 
+				   }	
+			698 = { add_core_of = ROOT 
+				   }				
+			#lombardy
+			759 = { add_core_of = ROOT 
+				   }
+			160 = { add_core_of = ROOT 
+				   }
+			159 = { add_core_of = ROOT 
+				   }
+			#SRI
+			1003 = { add_core_of = ROOT 
+				   }
+			158 = { add_core_of = ROOT 
+				   }
+			838 = { add_core_of = ROOT 
+				   }
+			1004 = { add_core_of = ROOT 
+				   }
+			161 = { add_core_of = ROOT 
+				   }
+			162 = { add_core_of = ROOT 
+				   }
+			157 = { add_core_of = ROOT 
+				   }
+			1005 = { add_core_of = ROOT 
+				   }
+			1236 = { add_core_of = ROOT 
+				   }
+			764 = { add_core_of = ROOT 
+				   }
+			#two sicilies
+			742 = { add_core_of = ROOT 
+				   }
+			117 = { add_core_of = ROOT 
+				   }
+			837 = { add_core_of = ROOT 
+				   }
+			1006 = { add_core_of = ROOT 
+				   }
+			156 = { add_core_of = ROOT 
+				   }
+			115 = { add_core_of = ROOT 
+				   }
+			#sardinia
+			114 = { add_core_of = ROOT 
+				   }
+			1002 = { add_core_of = ROOT 
+				   }
+			#papal
+			2 = { add_core_of = ROOT 
+				   }
+			1149 = { add_core_of = ROOT 
+				   }				
+			#瑞士法语区
+			943 = { add_core_of = ROOT 
+					}
+			760 = { add_core_of = ROOT 
+					} 
+			761 = { add_core_of = ROOT 
+					} 
+			#France
+			1 = { add_core_of = ROOT 
+					} 
+			14 = { add_core_of = ROOT 
+				   }
+			15 = { add_core_of = ROOT 
+				   }
+			16 = { add_core_of = ROOT 
+				   }
+			17 = { add_core_of = ROOT 
+				   }
+			18 = { add_core_of = ROOT 
+				   }
+			19 = { add_core_of = ROOT 
+				   }
+			20 = { add_core_of = ROOT 
+				   }
+			21 = { add_core_of = ROOT 
+				   }
+			22 = { add_core_of = ROOT 
+				   }
+			23 = { add_core_of = ROOT 
+				   }
+			24 = { add_core_of = ROOT 
+				   }
+			25 = { add_core_of = ROOT 
+				   }
+			26 = { add_core_of = ROOT 
+				   }
+			27 = { add_core_of = ROOT 
+				   }
+			30 = { add_core_of = ROOT 
+				   }
+			31 = { add_core_of = ROOT 
+				   }
+			32 = { add_core_of = ROOT 
+				   }
+			33 = { add_core_of = ROOT 
+				   }
+			735 = { add_core_of = ROOT 
+				   }
+			785 = { add_core_of = ROOT 
+				   }
+			762 = { add_core_of = ROOT 
+				   }
+			763 = { add_core_of = ROOT 
+				   }
+			817 = { add_core_of = ROOT 
+				   }
+			984 = { add_core_of = ROOT 
+				   }
+			983 = { add_core_of = ROOT 
+				   }
+			980 = { add_core_of = ROOT 
+				   }
+			#romania
+			81 = { add_core_of = ROOT 
+				   }
+			46 = { add_core_of = ROOT 
+				   }
+			79 = { add_core_of = ROOT 
+				   }
+			78 = { add_core_of = ROOT 
+				   }
+			1222 = { add_core_of = ROOT 
+				   }
+			1320 = { add_core_of = ROOT 
+				   }
+			772 = { add_core_of = ROOT 
+				   }
+			82 = { add_core_of = ROOT 
+				   }
+			83 = { add_core_of = ROOT 
+				   }
+			84 = { add_core_of = ROOT 
+				   }
+			1112 = { add_core_of = ROOT 
+				   }
+			1113 = { add_core_of = ROOT 
+				   }
+			1114 = { add_core_of = ROOT 
+				   }
+			1115 = { add_core_of = ROOT 
+				   }
+			1116 = { add_core_of = ROOT 
+				   }
+			1117 = { add_core_of = ROOT 
+				   }
+			1118 = { add_core_of = ROOT 
+				   }
+			76 = { add_core_of = ROOT 
+				   }
+			80 = { add_core_of = ROOT 
+				   }
+			713 = { add_core_of = ROOT 
+				   }
+			789	= { add_core_of = ROOT 
+				   }
+		}
+	}
+	focus={
+		id=TFE_18
+		icon=GFX_GRU_Proclaim_Victory_Over_Spectre_Marx
+		x=84
+		y=19
+		prerequisite={focus=TFE_16}
+		prerequisite={focus=TFE_17}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		swap_ideas = {
+				remove_idea = NFE_Transform_the_Motherland
+				add_idea = NFE_Transform_the_Motherland1
+			}
+		}
+	}
+	focus={
+		id=TFE_19
+		icon=GFX_goal_FRA_social_free_market
+		x=83
+		y=20
+		prerequisite={focus=TFE_18}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = NFE_socialist_market_economy
+		}
+	}
+	focus={
+		id=TFE_20
+		icon=GFX_goal_portugal
+		x=85
+		y=20
+		prerequisite={focus=TFE_18}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			if = {
+				limit = {
+					POR = {
+						is_puppet_of = CAR
+					}
+				}
+				annex_country = { target = POR transfer_troops = yes }
+			}
+			if = {
+				limit = {
+					POR = {
+						NOT = {
+							is_puppet_of = CAR
+						}
+					}
+				}
+				create_wargoal = { target = POR type = annex_everything }
+			}
+		}
+	}
+	focus={
+		id=TFE_21
+		icon=GFX_goal_CSA_equality
+		x=82
+		y=21
+		prerequisite={focus=TFE_13}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_political_power = 200
+		add_stability = 0.1
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=industrial_complex
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction={
+					type=industrial_complex
+					level=4
+					instant_build=yes
+				}
+			}
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=arms_factory
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction={
+					type=arms_factory
+					level=4
+					instant_build=yes
+				}
+			}
+		}
+	}
+	focus={
+		id=TFE_22
+		icon=GFX_goal_FRA_revitalize_nationalism
+		x=84
+		y=21
+		prerequisite={focus=TFE_19}
+		prerequisite={focus=TFE_20}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		swap_ideas = {
+				remove_idea = NFE_Transform_the_Motherland1
+				add_idea = NFE_Transform_the_Motherland2
+			}
+		}
+	}
+	focus={
+		id=TFE_23
+		icon=FE_Generalissimo_of_Spain
+		x=86
+		y=21
+		prerequisite={focus=TFE_15}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_country_leader_trait = Generalissimo_of_Spain
+		}
+	}
+	focus={
+		id=TFE_24
+		icon=GFX_GRU_RED_PATRIOT
+		x=84
+		y=22
+		prerequisite={focus=TFE_21}
+		prerequisite={focus=TFE_22}
+		prerequisite={focus=TFE_23}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		create_wargoal = { target = ITA type = annex_everything }
+		create_wargoal = { target = BEL type = annex_everything }
+		create_wargoal = { target = SRI type = annex_everything }
+		create_wargoal = { target = SIC type = annex_everything }
+		create_wargoal = { target = PAP type = annex_everything }
+		create_wargoal = { target = SRD type = annex_everything }
+		create_wargoal = { target = FRA type = annex_everything }
+		create_wargoal = { target = LUX type = annex_everything }
+		create_wargoal = { target = GER type = annex_everything }
+		create_wargoal = { target = SWI type = annex_everything }
+		create_wargoal = { target = AUS type = annex_everything }
+		create_wargoal = { target = HUN type = annex_everything }
+		create_wargoal = { target = ROM type = annex_everything }
+		create_wargoal = { target = GAL type = annex_everything }
+		create_wargoal = { target = BUL type = annex_everything }
+		}
+	}
+	focus={
+		id=TFE_25
+		icon = GFX_goal_EGY_Islamic_Values
+		x=92
+		y=16
+		prerequisite={focus=TFE_11}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available = {
+			has_country_flag = CAR_mohamed_paternal_autocrat
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_political_power = 150
+		add_stability = 0.03
+		add_war_support = 0.03
+		add_manpower = 50000
+		}
+	}
+	focus={
+		id=TFE_26
+		icon = GFX_MOR_army
+		x=90
+		y=17
+		prerequisite={focus=TFE_25}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_political_power = 200
+		annex_country = { target = MOR transfer_troops = yes }
+		}
+	}
+	focus={
+		id=TFE_27
+		icon = GFX_goal_SOM_A_New_Sultanate
+		x=92
+		y=17
+		prerequisite={focus=TFE_25}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = NFE_Halal_thinking
+		}
+	}
+	focus={
+		id=TFE_28
+		icon=GFX_goal_AFG_islamic_revolution
+		x=94
+		y=17
+		prerequisite={focus=TFE_25}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=industrial_complex
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction={
+					type=industrial_complex
+					level=4
+					instant_build=yes
+				}
+			}
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=arms_factory
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction={
+					type=arms_factory
+					level=4
+					instant_build=yes
+				}
+			}
+		}
+	}
+	focus={
+		id=TFE_29
+		icon=GFX_UKR_Torch_Of_Democracy
+		x=91
+		y=18
+		prerequisite={focus=TFE_27}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			swap_ideas = {
+				remove_idea = NFE_Halal_thinking
+				add_idea = NFE_Halal_thinking1
+			}
+		}
+	}
+	focus={
+		id=TFE_30
+		icon=GFX_goal_CEA_islamic_clergy
+		x=93
+		y=18
+		prerequisite={focus=TFE_27}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = NFE_Revelation_of_Allah
+		}
+	}
+	focus={
+		id=TFE_31
+		icon=GFX_goal_backstab
+		x=92
+		y=19
+		prerequisite={focus=TFE_29}
+		prerequisite={focus=TFE_30}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = NFE_Bayonet_on_the_back
+		}
+	}
+	focus={
+		id=TFE_32
+		icon=GFX_goal_NFA_La_France_Enivree
+		x=91
+		y=20
+		prerequisite={focus=TFE_31}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		create_wargoal = { target = FRA type = annex_everything }
+			every_state = {
+				limit={ is_core_of = FRA}
+				add_core_of = CAR
+			}
+		}
+	}
+	focus={
+		id=TFE_33
+		icon=GFX_goal_CAN_britain_surrounded
+		x=93
+		y=20
+		prerequisite={focus=TFE_31}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		create_wargoal = { target = ENG type = annex_everything }
+			every_state = {
+				limit={ is_core_of = ENG}
+				add_core_of = CAR
+			}
+		}
+	}
+	focus={
+		id=TFE_34
+		icon=GFX_goal_COR_Repeal_15_Modify_14
+		x=90
+		y=21
+		prerequisite={focus=TFE_26}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_stability = 0.05
+		add_manpower = 20000
+		add_political_power = 200
+		}
+	}
+	focus={
+		id=TFE_35
+		icon=GFX_goal_SOM_Pious_State
+		x=92
+		y=21
+		prerequisite={focus=TFE_32}
+		prerequisite={focus=TFE_33}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		swap_ideas = {
+				remove_idea = NFE_Revelation_of_Allah
+				add_idea = NFE_Revelation_of_Allah1
+			}
+		}
+	}
+	focus={
+		id=TFE_36
+		icon=GFX_AFG_islam_number_one
+		x=94
+		y=21
+		prerequisite={focus=TFE_28}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=industrial_complex
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction={
+					type=industrial_complex
+					level=4
+					instant_build=yes
+				}
+			}
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=arms_factory
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction={
+					type=arms_factory
+					level=4
+					instant_build=yes
+				}
+			}
+		}
+	}
+	focus={
+		id=TFE_37
+		icon=GFX_TTR_Islamic_Order
+		x=92
+		y=22
+		prerequisite={focus=TFE_34}
+		prerequisite={focus=TFE_35}
+		prerequisite={focus=TFE_36}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		swap_ideas = {
+				remove_idea = NFE_Halal_thinking1
+				add_idea = NFE_Halal_thinking2
+			}
+		}
+	}
+	focus={
+		id=TFE_38
+		icon=GFX_goal_NFA_Cleanse_Rome
+		x=76
+		y=16
+		prerequisite={focus=TFE_11}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available = {
+			has_country_flag = CAR_javier_Rome
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_political_power = 150
+		add_stability = 0.03
+		add_war_support = 0.03
+		add_manpower = 50000
+		}
+	}
+	focus={
+		id=TFE_39
+		icon=GFX_goal_POR_Kingdom_Emblem
+		x=74
+		y=17
+		prerequisite={focus=TFE_38}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		declare_war_on = { target = POR type = annex_everything }
+			every_state = {
+				limit = { is_core_of = POR }
+				add_core_of = CAR
+			}
+		}
+	}
+	focus={
+		id=TFE_40
+		icon=GFX_HUN_unite_the_militias
+		x=76
+		y=17
+		prerequisite={focus=TFE_38}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = NFE_Imperial_Legion
+		}
+	}
+	focus={
+		id=TFE_41
+		icon=GFX_goal_TEX_christian_commonwealth
+		x=78
+		y=17
+		prerequisite={focus=TFE_38}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = NFE_The_Supreme_Christ
+		}
+	}
+	focus={
+		id=TFE_42
+		icon=GFX_goal_FIU_Four_Knights_Governor
+		x=75
+		y=18
+		prerequisite={focus=TFE_40}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = NFE_Imperial_Doges_Palace
+		}
+	}
+	focus={
+		id=TFE_43
+		icon=GFX_BAY_TAKE_NORTH_ITALY
+		x=77
+		y=18
+		prerequisite={focus=TFE_40}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		create_wargoal = { target = ITA type = annex_everything }
+		create_wargoal = { target = SRI type = annex_everything }
+		create_wargoal = { target = SRD type = annex_everything }
+		create_wargoal = { target = SIC type = annex_everything }
+		create_wargoal = { target = PAP type = annex_everything }
+			every_state = {
+				limit = { is_core_of = ITA }
+				add_core_of = CAR
+			}
+			every_state = {
+				limit = { is_core_of = SRI }
+				add_core_of = CAR
+			}
+			every_state = {
+				limit = { is_core_of = SRD }
+				add_core_of = CAR
+			}
+			every_state = {
+				limit = { is_core_of = SIC }
+				add_core_of = CAR
+			}
+			every_state = {
+				limit = { is_core_of = PAP }
+				add_core_of = CAR
+			}
+		}
+	}
+	focus={
+		id=TFE_44
+		icon=GFX_goal_NFA_certain_idea_of_france
+		x=76
+		y=19
+		prerequisite={focus=TFE_42}
+		prerequisite={focus=TFE_43}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		create_wargoal = { target = FRA type = annex_everything }
+			every_state = {
+				limit = { is_core_of = FRA }
+				add_core_of = CAR
+			}
+		}
+	}
+	focus={
+		id=TFE_45
+		icon=GFX_goal_NFE_second_egypt_campaign
+		x=75
+		y=20
+		prerequisite={focus=TFE_44}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		create_wargoal = { target = SWI type = annex_everything }
+			every_state = {
+				limit = { is_core_of = SWI }
+				add_core_of = CAR
+			}
+		create_wargoal = { target = AUS type = annex_everything }
+			every_state = {
+				limit = { is_core_of = AUS }
+				add_core_of = CAR
+			}
+		create_wargoal = { target = BEL type = annex_everything }
+			every_state = {
+				limit = { is_core_of = BEL }
+				add_core_of = CAR
+			}
+		create_wargoal = { target = CRE type = annex_everything }
+			every_state = {
+				limit = { is_core_of = CRE }
+				add_core_of = CAR
+			}
+		create_wargoal = { target = GER type = annex_everything }
+		42 = { add_core_of = CAR }
+		780 = { add_core_of = CAR }
+		50 = { add_core_of = CAR }
+		52 = { add_core_of = CAR }
+		53 = { add_core_of = CAR }
+		54 = { add_core_of = CAR }
+		741 = { add_core_of = CAR }
+		8 = { add_core_of = CAR }
+		753 = { add_core_of = CAR }
+		create_wargoal = { target = CRO type = annex_everything }
+			every_state = {
+				limit = { is_core_of = CRO }
+				add_core_of = CAR
+			}
+		create_wargoal = { target = SER type = annex_everything }
+			every_state = {
+				limit = { is_core_of = SER }
+				add_core_of = CAR
+			}
+		create_wargoal = { target = ALB type = annex_everything }
+			every_state = {
+				limit = { is_core_of = ALB }
+				add_core_of = CAR
+			}
+		create_wargoal = { target = BUL type = annex_everything }
+			every_state = {
+				limit = { is_core_of = BUL }
+				add_core_of = CAR
+			}
+		create_wargoal = { target = GRE type = annex_everything }
+			every_state = {
+				limit = { is_core_of = GRE }
+				add_core_of = CAR
+			}
+		create_wargoal = { target = TUR type = annex_everything }
+			every_state = {
+				limit = { is_core_of = TUR }
+				add_core_of = CAR
+			}
+		create_wargoal = { target = PAL type = annex_everything }
+			every_state = {
+				limit = { is_core_of = PAL }
+				add_core_of = CAR
+			}
+		}
+	}
+	focus={
+		id=TFE_46
+		icon=GFX_goal_PAL_Algerian_Refugees
+		x=77
+		y=20
+		prerequisite={focus=TFE_44}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		create_wargoal = { target = MOR type = annex_everything }
+			every_state = {
+				limit = { is_core_of = MOR }
+				add_core_of = CAR
+			}
+		create_wargoal = { target = TRP type = annex_everything }
+			every_state = {
+				limit = { is_core_of = TRP }
+				add_core_of = CAR
+			}
+		create_wargoal = { target = NFA type = annex_everything }
+			every_state = {
+				limit = { is_core_of = TUN }
+				add_core_of = CAR
+			}
+			every_state = {
+				limit = { is_core_of = ALG }
+				add_core_of = CAR
+			}
+		}
+	}
+	focus={
+		id=TFE_47
+		icon=GFX_goal_GRE_rome
+		x=74
+		y=21
+		prerequisite={focus=TFE_39}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=industrial_complex
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction={
+					type=industrial_complex
+					level=4
+					instant_build=yes
+				}
+			}
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=arms_factory
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction={
+					type=arms_factory
+					level=4
+					instant_build=yes
+				}
+			}
+		}
+	}
+	focus={
+		id=TFE_48
+		icon=GFX_goal_OTT_Integrate_Libya
+		x=76
+		y=21
+		prerequisite={focus=TFE_45}
+		prerequisite={focus=TFE_46}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		create_wargoal = { target = LBA type = annex_everything }
+			every_state = {
+				limit = { is_core_of = LBA }
+				add_core_of = CAR
+			}
+		create_wargoal = { target = TRP type = annex_everything }
+			every_state = {
+				limit = { is_core_of = TRP }
+				add_core_of = CAR
+			}
+		}
+	}
+	focus={
+		id=TFE_49
+		icon=GFX_goal_ITA_knights
+		x=78
+		y=21
+		prerequisite={focus=TFE_41}
+		cost=4
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		swap_ideas = {
+				remove_idea = NFE_The_Supreme_Christ
+				add_idea = NFE_The_Supreme_Christ1
+			}
+		}
+	}
+	focus={
+		id=TFE_50
+		icon=GFX_focus_rus_tsar_third_rome
+		x=76
+		y=22
+		prerequisite={focus=TFE_47}
+		prerequisite={focus=TFE_48}
+		prerequisite={focus=TFE_49}
+		cost=4
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		swap_ideas = {
+				remove_idea = NFE_Imperial_Legion
+				add_idea = NFE_Imperial_Legion1
+			}
+		set_cosmetic_tag = GRE_byzantium_rome
+		}
+	}
+	focus={
+		id=TFE_51
+		icon=FE_Uilleam_Uallas
+		x=100
+		y=16
+		prerequisite={focus=TFE_11}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available = {
+			has_country_flag = FE_visigothic_WIN
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_political_power = 150
+		add_stability = 0.03
+		add_war_support = 0.03
+		add_manpower = 50000
+		}
+	}
+	focus={
+		id=TFE_52
+		icon=FE_Celts
+		x=98
+		y=17
+		prerequisite={focus=TFE_51}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = NFE_Appeal_to_the_Celtics
+		}
+	}
+	focus={
+		id=TFE_53
+		icon=FE_Legacy_of_Galicia
+		x=100
+		y=17
+		prerequisite={focus=TFE_51}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_political_power = 200
+		add_manpower = 20000
+		add_stability = 0.05
+		add_research_slot = 1
+		declare_war_on = { target = POR type = annex_everything }
+			every_state = {
+				limit = { is_core_of = POR }
+				add_core_of = CAR
+			}
+		}
+	}
+	focus={
+		id=TFE_54
+		icon=FE_Abolition_of_the_Iberian_concept
+		x=102
+		y=17
+		prerequisite={focus=TFE_51}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_manpower = -10000
+		add_ideas = NFE_Suppression_of_the_Iberians
+		}
+	}
+	focus={
+		id=TFE_55
+		icon=FE_Celticization
+		x=99
+		y=18
+		prerequisite={focus=TFE_53}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_idea = NFE_Celticization
+		}
+	}
+	focus={
+		id=TFE_56
+		icon=FE_Abolition_of_Latin
+		x=101
+		y=18
+		prerequisite={focus=TFE_53}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_political_power = 250
+		add_manpower = 25000
+		add_stability = 0.1
+		add_research_slot = 1
+		}
+	}
+	focus={
+		id=TFE_57
+		icon=FE_Ahnenerbe
+		x=100
+		y=19
+		prerequisite={focus=TFE_55}
+		prerequisite={focus=TFE_56}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		swap_ideas = {
+				remove_idea = NFE_Celticization
+				add_idea = NFE_Celticization1
+			}
+		}
+	}
+	focus={
+		id=TFE_58
+		icon=FE_Destroy_Britain
+		x=99
+		y=20
+		prerequisite={focus=TFE_57}
+		cost=4
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		create_wargoal = { target = IRE type = annex_everything }
+			every_state = {
+				limit = { is_core_of = IRE }
+				add_core_of = CAR
+			}
+		create_wargoal = { target = ENG type = annex_everything }
+			every_state = {
+				limit = { is_core_of = ENG }
+				add_core_of = CAR
+			}
+		}
+	}
+	focus={
+		id=TFE_59
+		icon=FE_Heart_of_the_Empire
+		x=101
+		y=20
+		prerequisite={focus=TFE_57}
+		cost=4
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		create_wargoal = { target = FRA type = annex_everything }
+			every_state = {
+				limit = { is_core_of = FRA }
+				add_core_of = CAR
+			}
+		}
+	}
+	focus={
+		id=TFE_60
+		icon=FE_A_new_home_in_Spain
+		x=98
+		y=21
+		prerequisite={focus=TFE_52}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		swap_ideas = {
+				remove_idea = NFE_Appeal_to_the_Celtics
+				add_idea = NFE_Appeal_to_the_Celtics1
+			}
+		}
+	}
+	focus={
+		id=TFE_61
+		icon=FE_The_Blessing_of_Cu_Chulainn
+		x=100
+		y=21
+		prerequisite={focus=TFE_58}
+		prerequisite={focus=TFE_59}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		swap_ideas = {
+				remove_idea = NFE_Celticization1
+				add_idea = NFE_Celticization2
+			}
+		}
+	}
+	focus={
+		id=TFE_62
+		icon=FE_hierarchy
+		x=102
+		y=21
+		prerequisite={focus=TFE_54}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		swap_ideas = {
+				remove_idea = NFE_Suppression_of_the_Iberians
+				add_idea = NFE_Suppression_of_the_Iberians1
+			}
+		}
+	}
+	focus={
+		id=TFE_63
+		icon=FE_Visigothic_rebirth
+		x=100
+		y=22
+		prerequisite={focus=TFE_60}
+		prerequisite={focus=TFE_61}
+		prerequisite={focus=TFE_62}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		swap_ideas = {
+				remove_idea = NFE_Celticization2
+				add_idea = NFE_Celticization3
+			}
+		}
+	}
+	focus={
+		id=TFE_64
+		icon = FE_sindicatos_libres
+		x=98
+		y=1
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available = {
+			has_country_flag = FE_yellow_syndicalist_win
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_political_power = 150
+		add_stability = 0.03
+		add_war_support = 0.03
+		add_manpower = 50000
+		}
+	}
+	focus={
+		id=TFE_65
+		icon = GFX_goal_ALB_Cooperate_Chiefs_Capital
+		x=96
+		y=2
+		prerequisite={focus=TFE_64}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = NFE_Support_the_capitalists
+		}
+	}
+	focus={
+		id=TFE_66
+		icon = FE_Generalissimo_of_Spain
+		x=98
+		y=2
+		prerequisite={focus=TFE_64}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_country_leader_trait = The_supreme_king
+		}
+	}
+	focus={
+		id=TFE_67
+		icon = GFX_goal_COR_jewish_segregation
+		x=100
+		y=2
+		prerequisite={focus=TFE_64}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_manpower = -20000
+		add_political_power = 200
+		add_stability = 0.05
+		add_war_support = 0.05
+		}
+	}
+	focus={
+		id=TFE_68
+		icon=GFX_goal_FRA_federation_of_labor
+		x=97
+		y=3
+		prerequisite={focus=TFE_65}
+		prerequisite={focus=TFE_66}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_political_power = 200
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=arms_factory
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction={
+					type=arms_factory
+					level=2
+					instant_build=yes
+				}
+			}
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=industrial_complex
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction={
+					type=industrial_complex
+					level=2
+					instant_build=yes
+				}
+			}
+		random_owned_controlled_state={
+				prioritize={
+				}
+				limit={
+					free_building_slots={
+						building=industrial_complex
+						size>0
+						include_locked=yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction={
+					type=industrial_complex
+					level=2
+					instant_build=yes
+				}
+			}
+		}
+	}
+	focus={
+		id=TFE_69
+		icon=GFX_goal_CAN_Three_Strikes_Against_Colonial_Treachery
+		x=99
+		y=3
+		prerequisite={focus=TFE_66}
+		prerequisite={focus=TFE_67}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		add_ideas = NFE_Go_back_to_work
+		}
+	}
+	focus={
+		id=TFE_70
+		icon=GFX_goal_FRA_workers_and_peasants_party
+		x=97
+		y=4
+		prerequisite={focus=TFE_68}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		swap_ideas = {
+				remove_idea = NFE_Support_the_capitalists
+				add_idea = NFE_Support_the_capitalists1
+			}
+		}
+	}
+	focus={
+		id=TFE_71
+		icon=GFX_RUS_Syndical_Cooperative_Federation
+		x=99
+		y=4
+		prerequisite={focus=TFE_69}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		swap_ideas = {
+				remove_idea = NFE_Go_back_to_work
+				add_idea = NFE_Go_back_to_work1
+			}
+		}
+	}
+	focus={
+		id=TFE_72
+		icon=FE_Yellow_roses
+		x=98
+		y=5
+		prerequisite={focus=TFE_70}
+		prerequisite={focus=TFE_71}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		swap_ideas = {
+				remove_idea = NFE_Go_back_to_work1
+				add_idea = NFE_Go_back_to_work2
+			}
+		}
+	}
+}

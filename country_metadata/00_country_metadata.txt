@@ -1,0 +1,234 @@
+default = { # 成就背景图片
+	playthrough_stats_background = "GFX_playthrough_stats_bg_default"
+	career_profile_background = "GFX_career_profile_bg_default"
+}
+
+ENG = { # UOB
+	playthrough_stats_background = "GFX_playthrough_stats_bg_ENG"
+	career_profile_background = "GFX_career_profile_bg_ENG"
+}
+
+GER = { # Germany
+	playthrough_stats_background = "GFX_playthrough_stats_bg_GER"
+	career_profile_background = "GFX_career_profile_bg_GER"
+}
+
+JAP = { # Japan
+	playthrough_stats_background = "GFX_playthrough_stats_bg_JAP"
+	career_profile_background = "GFX_career_profile_bg_JAP"
+}
+
+USA = { # USA
+	playthrough_stats_background = "GFX_playthrough_stats_bg_USA"
+	career_profile_background = "GFX_career_profile_bg_USA"
+}
+
+AUS = { # Austria
+	playthrough_stats_background = "GFX_playthrough_stats_bg_AUS"
+	career_profile_background = "GFX_career_profile_bg_AUS"
+}
+
+CAN = { # Canada
+	playthrough_stats_background = "GFX_playthrough_stats_bg_CAN"
+	career_profile_background = "GFX_career_profile_bg_CAN"
+}
+
+IMP = { # Canada
+	playthrough_stats_background = "GFX_playthrough_stats_bg_CAN"
+	career_profile_background = "GFX_career_profile_bg_CAN"
+}
+
+FRA = { # COF
+	playthrough_stats_background = "GFX_playthrough_stats_bg_FRA"
+	career_profile_background = "GFX_career_profile_bg_FRA"
+}
+
+RUS = { # Russia
+	playthrough_stats_background = "GFX_playthrough_stats_bg_RUS"
+	career_profile_background = "GFX_career_profile_bg_RUS"
+}
+
+NFA = { # Nat France
+	playthrough_stats_background = "GFX_playthrough_stats_bg_NFA"
+	career_profile_background = "GFX_career_profile_bg_NFA"
+}
+
+TEX = { # Union State
+	playthrough_stats_background = "GFX_playthrough_stats_bg_TEX"
+	career_profile_background = "GFX_career_profile_bg_TEX"
+}
+
+CSA = { # Combined Syndicates
+	playthrough_stats_background = "GFX_playthrough_stats_bg_CSA"
+	career_profile_background = "GFX_career_profile_bg_CSA"
+}
+
+PSA = { # Pacific States
+	playthrough_stats_background = "GFX_playthrough_stats_bg_PSA"
+	career_profile_background = "GFX_career_profile_bg_PSA"
+}
+
+NEE = { # New England
+	playthrough_stats_background = "GFX_playthrough_stats_bg_NEE"
+	career_profile_background = "GFX_career_profile_bg_NEE"
+}
+
+ITA = { # Italian Rep.
+	playthrough_stats_background = "GFX_playthrough_stats_bg_ITA"
+	career_profile_background = "GFX_career_profile_bg_ITA"
+}
+
+SRI = { # Socialist Rep. of Italy
+	playthrough_stats_background = "GFX_playthrough_stats_bg_SRI"
+	career_profile_background = "GFX_career_profile_bg_SRI"
+}
+
+SIC = { # Two Sicilies
+	playthrough_stats_background = "GFX_playthrough_stats_bg_SIC"
+	career_profile_background = "GFX_career_profile_bg_SIC"
+}
+
+PAP = { # Papal State
+	playthrough_stats_background = "GFX_playthrough_stats_bg_PAP"
+	career_profile_background = "GFX_career_profile_bg_PAP"
+}
+
+TUR = { # Ottoman Empire/Turkey
+	playthrough_stats_background = "GFX_playthrough_stats_bg_TUR"
+	career_profile_background = "GFX_career_profile_bg_TUR"
+}
+
+ROM = { # Romania
+	playthrough_stats_background = "GFX_playthrough_stats_bg_ROM"
+	career_profile_background = "GFX_career_profile_bg_ROM"
+}
+
+BUL = { # Bulgaria
+	playthrough_stats_background = "GFX_playthrough_stats_bg_BUL"
+	career_profile_background = "GFX_career_profile_bg_BUL"
+}
+
+QIE = { # Qing/Zhili
+	playthrough_stats_background = "GFX_playthrough_stats_bg_QIE"
+	career_profile_background = "GFX_career_profile_bg_QIE"
+}
+
+FNG = { # Fengtian
+	playthrough_stats_background = "GFX_playthrough_stats_bg_FNG"
+	career_profile_background = "GFX_career_profile_bg_FNG"
+}
+
+SQI = { # Shandong
+	playthrough_stats_background = "GFX_playthrough_stats_bg_SQI"
+	career_profile_background = "GFX_career_profile_bg_SQI"
+}
+
+SHX = { # Shanxi
+	playthrough_stats_background = "GFX_playthrough_stats_bg_SHX"
+	career_profile_background = "GFX_career_profile_bg_SHX"
+}
+
+LEP = { # LEP/Nanjing
+	playthrough_stats_background = "GFX_playthrough_stats_bg_LEP"
+	career_profile_background = "GFX_career_profile_bg_LEP"
+}
+
+HNN = { # Hunan
+	playthrough_stats_background = "GFX_playthrough_stats_bg_HNN"
+	career_profile_background = "GFX_career_profile_bg_HNN"
+}
+
+GXC = { # Liangguang
+	playthrough_stats_background = "GFX_playthrough_stats_bg_GXC"
+	career_profile_background = "GFX_career_profile_bg_GXC"
+}
+
+YUN = { # Yunnan
+	playthrough_stats_background = "GFX_playthrough_stats_bg_YUN"
+	career_profile_background = "GFX_career_profile_bg_YUN"
+}
+
+SZC = { # Sichuan
+	playthrough_stats_background = "GFX_playthrough_stats_bg_SZC"
+	career_profile_background = "GFX_career_profile_bg_SZC"
+}
+
+XSM = { # Ma Clique
+	playthrough_stats_background = "GFX_playthrough_stats_bg_XSM"
+	career_profile_background = "GFX_career_profile_bg_XSM"
+}
+
+CHI = { # Left KMT
+	playthrough_stats_background = "GFX_playthrough_stats_bg_CHI"
+	career_profile_background = "GFX_career_profile_bg_CHI"
+}
+
+ANQ = { # Anhui Clique
+	playthrough_stats_background = "GFX_playthrough_stats_bg_ANQ"
+	career_profile_background = "GFX_career_profile_bg_ANQ"
+}
+
+SWE = { # Sweden
+	playthrough_stats_background = "GFX_playthrough_stats_bg_SWE"
+	career_profile_background = "GFX_career_profile_bg_SWE"
+}
+
+FIN = { # Finland
+	playthrough_stats_background = "GFX_playthrough_stats_bg_FIN"
+	career_profile_background = "GFX_career_profile_bg_FIN"
+}
+
+DEN = { # Denmark
+	playthrough_stats_background = "GFX_playthrough_stats_bg_DEN"
+	career_profile_background = "GFX_career_profile_bg_DEN"
+}
+
+NOR = { # Norway
+	playthrough_stats_background = "GFX_playthrough_stats_bg_NOR"
+	career_profile_background = "GFX_career_profile_bg_NOR"
+}
+
+BAT = { # UBD
+	playthrough_stats_background = "GFX_playthrough_stats_bg_BAT"
+	career_profile_background = "GFX_career_profile_bg_BAT"
+}
+
+ETS = { # East Turkestan
+	playthrough_stats_background = "GFX_playthrough_stats_bg_ETS"
+	career_profile_background = "GFX_career_profile_bg_ETS"
+}
+
+SIK = { # Xinjiang
+	playthrough_stats_background = "GFX_playthrough_stats_bg_SIK"
+	career_profile_background = "GFX_career_profile_bg_SIK"
+}
+
+KUM = { # Kumul Khanate
+	playthrough_stats_background = "GFX_playthrough_stats_bg_KUM"
+	career_profile_background = "GFX_career_profile_bg_KUM"
+}
+
+TIB = { # Tibet
+	playthrough_stats_background = "GFX_playthrough_stats_bg_TIB"
+	career_profile_background = "GFX_career_profile_bg_TIB"
+}
+
+MON = { # Mongolia
+	playthrough_stats_background = "GFX_playthrough_stats_bg_MON"
+	career_profile_background = "GFX_career_profile_bg_MON"
+}
+
+SER = { # Serbia
+	playthrough_stats_background = "GFX_playthrough_stats_bg_SER"
+	career_profile_background = "GFX_career_profile_bg_SER"
+}
+
+GRE = { # Greece
+	playthrough_stats_background = "GFX_playthrough_stats_bg_GRE"
+	career_profile_background = "GFX_career_profile_bg_GRE"
+}
+
+UKR = { # Ukraine
+	playthrough_stats_background = "GFX_playthrough_stats_bg_UKR"
+	career_profile_background = "GFX_career_profile_bg_UKR"
+}

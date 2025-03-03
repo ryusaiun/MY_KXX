@@ -1,0 +1,717 @@
+ideas = {
+	country = {
+		FIN_unsolwed_mysteries = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = -0.025
+				political_power_gain = -0.05
+			}
+			picture = fin_mysteries_unsolved
+		}
+	}
+	
+	country = {
+		FIN_paradise_lost = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				war_support_factor = -0.1
+				conscription_factor = -0.05
+				army_attack_factor = -0.05
+				army_defence_factor = -0.05
+			}
+			picture = fin_hyper_swastika_broken
+		}
+	}
+	
+	country = {
+		FIN_new_mejai = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription = 0.02
+				conscription_factor = 0.10
+				OUT_OF_SUPPLY_FACTOR = -0.06
+				training_time_factor = -0.08
+				max_planning = 0.05
+				pocket_penalty = -0.10
+				breakthrough_factor = 0.05
+			}
+			picture = fin_new_mejais
+		}
+	}
+	country = {
+		FIN_jesus_left_us = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_factor = 0.05
+				war_support_factor = 0.075
+				social_conservative_drift = -0.05
+				market_liberal_drift = -0.05
+				research_speed_factor = 0.05
+			}
+			picture = MEX_christero_war_idea
+		}
+	}
+	country = {
+		FIN_athon_the_supreme_god = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				global_building_slots_factor = 0.10
+				production_factory_max_efficiency_factor = 0.10
+				production_lack_of_resource_penalty_factor = -0.12
+				production_speed_buildings_factor = 0.05
+				
+			}
+			picture = athon
+		}
+	}
+	country = {
+		FIN_athon_the_supreme_god_2 = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				global_building_slots_factor = 0.15
+				production_factory_max_efficiency_factor = 0.10
+				production_lack_of_resource_penalty_factor = -0.12
+				production_speed_buildings_factor = 0.09
+				consumer_goods_factor = -0.10
+				production_speed_buildings_factor = 0.13
+				industrial_capacity_factory = 0.08
+				production_factory_start_efficiency_factor = 0.08
+			}
+			picture = athon
+		}
+	}
+	country = {
+		FIN_neon_genesis_idea = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_gain = -0.2
+				stability_factor = -0.13
+				industrial_capacity_factory = -0.08
+				industry_repair_factor = -0.15
+				max_command_power = 150
+				army_speed_factor = 0.05
+				ARMY_ATTACK_AGAINST_MAJOR_FACTOR = 0.08
+				army_attack_factor = 0.04
+				army_defence_factor = 0.08
+				justify_war_goal_time = -0.3
+			}
+			picture = neon_genesis
+		}
+	}
+	country = {
+		FIN_fury_of_seth = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				war_support_weekly = 0.02
+				army_attack_factor = 0.04
+				command_power_gain = 0.5
+				army_leader_start_attack_level = 1
+			}
+			picture = LIT_prophecy
+		}
+	}
+	country = {
+		FIN_fury_of_sehmeth = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				equipment_capture_factor = 0.07
+				army_core_attack_factor = 0.05
+				breakthrough_factor = 0.08
+				experience_loss_factor = -0.05
+			}
+			picture = AUS_rush_of_vengeance
+		}
+	}
+	country = {
+		FIN_worship_of_osiris = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				monthly_population = -0.13
+				weekly_manpower = 300
+				conscription = 0.02
+				conscription_factor = -0.1
+			}
+			picture = CAL_revelation
+		}
+	}
+	country = {
+		FIN_fury_of_mafdeth = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_defence_factor = 0.04
+				surrender_limit = 0.05
+				dig_in_speed = 3
+				army_speed_factor =0.07
+			}
+			picture = AZR_libs
+		}
+	}
+	country = {
+		FIN_isoah = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				political_power_gain = 0.05
+				monthly_population = 0.05
+				non_core_manpower = 0.10
+			}
+			picture = fin_isoah
+		}
+	}
+	country = {
+		FIN_new_finnish_language = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.05
+				stability_factor = -0.10
+				war_support_factor = 0.10
+				ARMY_INTEL_TO_OTHERS = -5
+				civilian_intel_to_others = -5
+				encryption_factor = 0.10
+				decryption_factor = 0.10
+			}
+			picture = Compulsory_education
+		}
+	}
+	country = {
+		FIN_amunra_spear = {
+			cancel = { has_country_flag = remove_idea }
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1 
+					reliability = 0.1
+					instant = yes
+				}
+			}
+			
+			picture = fin_hieroglyphy
+		}
+	}
+	
+	country = {
+		FIN_servants_of_aton = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				local_resources_factor = 0.08
+				industry_air_damage_factor = -0.07
+				conversion_cost_civ_to_mil_factor = -0.30
+				industrial_capacity_factory = 0.05
+				
+			}
+			picture = FRA_league_observer
+		}
+	}
+	
+	country = {
+		FIN_egyptian_methods_idea = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_arms_factory_factor = 0.08
+				production_speed_dockyard_factor = 0.1
+				equipment_conversion_speed = 0.05
+				monthly_population = -0.05
+				production_factory_max_efficiency_factor = -0.05
+				line_change_production_efficiency_factor = 0.07
+				production_factory_start_efficiency_factor = 0.10
+			}
+			picture = generic_lightbulb
+		}
+	}
+	country = {
+		FIN_egyptian_citizenship = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				resistance_target = -0.15
+				improve_relations_maintain_cost_factor = -0.10
+				compliance_growth = 0.10
+				resistance_damage_to_garrison = -0.2
+				required_garrison_factor = -0.10
+				enemy_operative_recruitment_chance = 0.10
+				foreign_subversive_activites = -0.5
+			}
+			picture = DKB_scythian_rebirth
+		}
+	}
+	
+	country = {
+		FIN_egyptian_musa_idea = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				max_planning = 0.10
+				planning_speed = 0.15
+				army_artillery_attack_factor = 0.075
+				army_artillery_defence_factor = 0.075
+			}
+			picture = fin_music
+		}
+	}
+	
+	country = {
+		FIN_french_musa_idea = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_org_factor = 0.05
+				army_attack_factor = 0.05
+				experience_gain_army_factor = 0.10
+				army_morale_factor = 0.075
+			}
+			picture = fin_music
+		}
+	}
+	
+	country = {
+		FIN_sacred_legions_idea = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				conscription_factor = 0.10
+				training_time_factor = -0.05
+				ARMY_ATTACK_AGAINST_MAJOR_FACTOR = 0.1
+				ARMY_DEFENCE_AGAINST_MAJOR_FACTOR = 0.1
+			}
+			picture = ELS_violent_history
+		}
+	}
+	
+	country = {
+		FIN_modern_swords_idea = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				industrial_capacity_factory = 0.05
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				artillery_equipment = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				support_equipment = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+			picture = generic_idea_RF_idea_crossed_swords
+		}
+	}
+	
+	country = {
+		FIN_army_of_egypt_idea = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				army_org_factor = 0.15
+				army_morale_factor = 0.1
+				industrial_capacity_factory = 0.025
+				training_time_factor = 0.05
+			}
+			
+			picture = generic_idea_RF_idea_resist
+		}
+	}
+	
+	country = {
+		FIN_osiris_gate_idea = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				production_speed_nuclear_reactor_factor = 0.2
+				monthly_population = -0.1
+			}
+			
+			picture = fin_isoah
+		}
+	}
+	
+	country = {
+		FIN_cosmic_terror = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				research_speed_factor = 0.10
+				stability_factor = -0.05
+			    army_attack_factor = 0.025
+			    army_org_factor = 0.06
+			}
+			
+			picture = KAV_riddle_of_time
+		}
+	}
+	
+	country = {
+		FIN_hyperborea_synthes = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				consumer_goods_factor = -0.10
+				industrial_capacity_factory = 0.10
+				production_speed_buildings_factor = 0.05
+				monthly_population = 0.25
+				political_power_factor = -0.2
+				production_lack_of_resource_penalty_factor = -0.1
+				industry_free_repair_factor = 0.1
+				production_speed_arms_factory_factor = 0.05
+				global_building_slots = 1
+			}
+			picture = FRA_hyperborean_ideal
+		}
+	}
+
+	country = {
+		FIN_egyptian_conscription_idea = {
+			cancel = { has_country_flag = remove_idea }
+			modifier = {
+				stability_factor = 0.10
+				production_factory_max_efficiency_factor = 0.06
+				army_core_defence_factor = 0.10
+				research_speed_factor = 0.05
+				consumer_goods_factor = -0.05
+			}
+			picture = CZE_education
+		}
+	}
+	country = {
+		FIN_homeland = {
+			allowed = { always = no }
+			modifier = {	
+				political_power_cost = 0.05
+				stability_weekly = -0.001
+				conscription_factor = 0.10
+			}
+			targeted_modifier = {
+				tag = EGY
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+			
+			picture = EGY_state_awqaf
+		}
+		}
+		country = {
+			FIN_homeland2 = {
+				allowed = { always = no }
+				modifier = {	
+					political_power_cost = -0.10
+					stability_weekly = 0.001
+					consumer_goods_factor = -0.15
+				army_core_defence_factor = 0.05
+				industrial_capacity_factory = 0.10
+				}
+				picture = EGY_state_awqaf
+			}
+			}
+	country = {
+			FIN_AND_EGY = {
+				allowed = { always = no }
+				modifier = {	
+					political_power_factor = 0.05
+				    stability_factor = 0.05
+					consumer_goods_factor = 0.03
+					national_populist_drift = 0.02
+					party_popularity_stability_factor = 0.10
+				}
+				
+				picture = EGY_promoting_pharaonism
+			}
+			}
+			country = {
+				FIN_nationmyth = {
+					allowed = { always = no }
+					modifier = {	
+						supply_consumption_factor = -0.075
+						army_attack_factor = 0.05
+						surrender_limit = 0.10
+						land_reinforce_rate = 0.03
+						war_stability_factor = 0.15
+				        command_power_gain_mult = 0.1
+				        mobilization_speed = 0.1
+					}
+					
+					picture = SER_slav_myth
+				}
+				}
+				country = {
+					FIN_cleanse = {
+						allowed = { always = no }
+						modifier = {	
+							weekly_manpower = -300
+				            stability_factor = -0.1
+				            political_power_cost = -0.1
+				            war_support_factor = 0.15
+						}
+						
+						picture = NFA_cleanse_rome
+					}
+					}
+					country = {
+						FIN_egy_culture = {
+							allowed = { always = no }
+							modifier = {	
+								political_power_gain = 0.08
+								economy_cost_factor = -0.15
+								trade_laws_cost_factor = -0.15
+								mobilization_laws_cost_factor = -0.15
+								resistance_growth_on_our_occupied_states = 0.2
+							}
+							
+							picture = ALB_house_of_slavery
+						}
+						}
+						country = {
+								FIN_eco = {
+									allowed = { always = no }
+									modifier = {	
+										weekly_manpower = -1200
+										stability_factor = -0.1
+										political_power_cost = -0.1
+										war_support_factor = 0.15
+									}
+									
+									picture = NFA_boom_eco
+								}
+								}
+								country = {
+									FIN_work = {
+										allowed = { always = no }
+										modifier = {	
+			                             stability_weekly = -0.002
+			                             consumer_goods_factor = 0.10
+			                             war_support_factor = -0.15
+										}
+										
+										picture = slave_economy
+									}
+									}
+									country = {
+										FIN_work_2 = {
+											allowed = { always = no }
+											modifier = {	
+											 stability_weekly = -0.005
+											 consumer_goods_factor = 0.15
+											 war_support_factor = -0.15
+											}
+											
+											picture = slave_economy
+										}
+										}
+										country = {
+											FIN_pyramid = {
+												allowed = { always = no }
+												modifier = {	
+													stability_factor = 0.07
+													war_support_factor = 0.04
+													research_speed_factor = 0.05
+													max_command_power_mult = 0.08
+													surrender_limit = 0.06
+													compliance_gain = 0.04
+													local_intel_to_enemies = -0.2
+													mobilization_speed = 0.15
+												}
+												
+												picture = YUG_unity_through_faith
+											}
+											}
+											country = {
+												FIN_origin = {
+													allowed = { always = no }
+													modifier = {	
+														political_power_gain = 0.08
+				                                        weekly_manpower = 150
+														economy_cost_factor = -0.15
+								                        trade_laws_cost_factor = -0.15
+									                    mobilization_laws_cost_factor = -0.15
+														experience_loss_factor = -0.15
+														SUPPLY_CONSUMPTION_FACTOR = -0.05
+														resistance_growth_on_our_occupied_states = 0.2
+													}
+													
+													picture = ALB_house_of_slavery
+												}
+												}
+												country = {
+													FIN_origin2 = {
+														allowed = { always = no }
+														modifier = {	
+															political_power_gain = 0.08
+															weekly_manpower = 150
+															economy_cost_factor = -0.15
+															trade_laws_cost_factor = -0.15
+															mobilization_laws_cost_factor = -0.15
+															experience_loss_factor = -0.15
+															SUPPLY_CONSUMPTION_FACTOR = -0.05
+															army_core_attack_factor = 0.10
+															army_core_defence_factor = 0.10
+															war_support_factor = 0.06
+															surrender_limit = 0.04
+															resistance_growth_on_our_occupied_states = 0.2
+														}
+														
+														picture = ALB_house_of_slavery
+													}
+													}
+													country = {
+														FIN_can = {
+															allowed = { always = no }
+															modifier = {	
+																army_org_factor = 0.025
+																land_doctrine_cost_factor = -0.10
+																max_training = 0.05
+																no_supply_grace = 36
+																experience_gain_army_unit_factor = 0.07
+															}
+															
+															picture = ZAM_british_army_hat_idea
+														}
+														}
+														country = {
+															FIN_sanction = {
+																allowed = { always = no }
+																modifier = {	
+																 industrial_capacity_factory = -0.05
+																 production_lack_of_resource_penalty_factor = 0.10
+																 production_factory_efficiency_gain_factor = -0.15
+																 consumer_goods_factor = 0.10
+																 production_speed_buildings_factor = -0.10
+																 min_export = -0.15
+																}
+																
+																picture = CAN_leauge_of_nations_sanctions_idea
+															}
+															}
+															country = {
+																FIN_ary = {
+																	allowed = { always = no }
+																	modifier = {	
+																	special_forces_min = 12
+																	land_night_attack = 0.05
+																	special_forces_no_supply_grace = 120
+																	river_crossing_factor = -0.10
+																	}
+																	
+																	picture = ALB_supreme_guidance
+																}
+																}
+																country = {
+																	FIN_back = {
+																		allowed = { always = no }
+																		modifier = {	
+																		org_loss_when_moving = -0.05
+																		army_fuel_capacity_factor = 0.10
+																		attrition = -0.06
+																		heat_attrition = -0.15
+																		recon_factor = 0.20
+																		}
+																		
+																		picture = ZAM_reforms_support_idea
+																	}
+																	}
+																	country = {
+																		FIN_god = {
+																			allowed = { always = no }
+																			modifier = {	
+																				experience_gain_army_factor = 0.15
+																				combat_width_factor = -0.05
+																				army_org_regain = 0.06
+																				terrain_penalty_reduction = 0.10
+																			}
+																			
+																			picture = MAD_collapsing_raj
+																		}
+																		}
+																		country = {
+																			FIN_god2 = {
+																				allowed = { always = no }
+																				modifier = {
+																					experience_gain_army_factor = 0.15
+																					combat_width_factor = -0.10
+																					army_org_regain = 0.06
+																					terrain_penalty_reduction = 0.10
+																					army_attack_speed_factor = 0.09
+																					max_dig_in = 5
+																					initiative_factor = 0.02
+																					army_infantry_attack_factor = 0.06	
+																				
+																				}
+																				
+																				picture = MAD_collapsing_raj
+																			}
+																			}
+																			country = {
+																				FIN_onlyathon = {
+																					allowed = { always = no }
+																					modifier = {
+																						drift_defence_factor = 0.13
+																						war_support_weekly = 0.03
+																						production_factory_efficiency_gain_factor = 0.10
+																						resistance_target_on_our_occupied_states = 0.15
+																						production_speed_industrial_complex_factor = 0.08
+																					}
+																					
+																					picture = JAP_repair_economy
+																				}
+																				}
+																				country = {
+																					FIN_athonarmy = {
+																						allowed = { always = no }
+																						modifier = {
+																							industrial_capacity_factory = 0.025
+																							production_speed_arms_factory_factor = 0.08
+																							equipment_upgrade_xp_cost = -0.25
+																							min_export = 0
+																							conversion_cost_mil_to_civ_factor = -0.30
+																						}
+																						
+																						picture = BBR_children_of_sun_idea
+																					}
+																					}
+																					country = {
+																						FIN_universe = {
+																							allowed = { always = no }
+																							modifier = {
+																								research_speed_factor = 0.10
+																								nuclear_production_factor = 0.15
+																								army_speed_factor = 0.05
+																								production_speed_buildings_factor = 0.06
+																							}
+																							
+																							picture = BBR_sat_ideagfx
+																						}
+																						}
+																						country = {
+																							FIN_tank = {
+																								allowed = { always = no }
+																								modifier = {
+																									mechanized_defence_factor = 0.075
+																									breakthrough_factor = 0.06
+																									army_fuel_consumption_factor = 0.05
+																									army_armor_attack_factor = 0.075
+																								}
+																								equipment_bonus = {
+																									armor = {
+																										build_cost_ic = -0.10
+																										armor_value = 0.06
+																										maximum_speed = -0.08
+																										instant = yes
+																									}
+																								}
+																								picture = NFA_tank_war
+																								}
+																								
+																								
+																							}
+																							country = {
+																								fin_GUARD1 = {
+																									allowed = { always = no }
+																									modifier = {
+																										army_speed_factor = 0.05
+																										experience_gain_army = 0.1
+																										army_org_factor = 0.15
+																										max_command_power = 50
+																										army_attack_factor = 0.05
+																									}
+																									
+																									picture = RUS_general_school
+																								}
+																								}
+																					
+
+				
+		
+	
+}

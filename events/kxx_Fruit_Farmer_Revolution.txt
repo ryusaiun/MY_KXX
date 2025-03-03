@@ -1,0 +1,5512 @@
+add_namespace = FruitFarmerRevolution
+add_namespace = CHP
+add_namespace = DOB
+add_namespace = PRO
+add_namespace = PDL
+
+country_event = {  #白粉病大流行
+	id = FruitFarmerRevolution.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.1 "}
+	title = FruitFarmerRevolution.1.t
+	desc = FruitFarmerRevolution.1.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+         
+
+	option = {
+		name = FruitFarmerRevolution.1.a
+		ai_chance = {
+			factor = 90
+		}   
+		add_timed_idea = {
+			idea = FRA_The_supply_of_wine_is_obstructed_1
+			days = 180
+		}
+		hidden_effect = {
+			country_event = { id = FruitFarmerRevolution.2 days = 365 }
+		}
+	}
+}
+
+country_event = {  #全国葡萄酒产量雪崩
+	id = FruitFarmerRevolution.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.1 "}
+	title = FruitFarmerRevolution.2.t
+	desc = FruitFarmerRevolution.2.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+         
+
+	option = {
+		name = FruitFarmerRevolution.2.a
+		ai_chance = {
+			factor = 90
+		}   
+		add_ideas = FRA_The_supply_of_wine_is_obstructed_2
+		hidden_effect = {
+			country_event = { id = FruitFarmerRevolution.3 days = 7 }
+		}
+	}
+}
+
+country_event = {   #葡萄根瘤蚜卷土重来！
+	id = FruitFarmerRevolution.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.1 "}
+	title = FruitFarmerRevolution.3.t
+	desc = FruitFarmerRevolution.3.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+         
+
+	option = {
+		name = FruitFarmerRevolution.3.a
+		ai_chance = {
+			factor = 90
+		}   
+		hidden_effect = {
+			country_event = { id = FruitFarmerRevolution.4 days = 7 }
+		}
+	}
+}
+
+country_event = {    #农业补贴？
+	id = FruitFarmerRevolution.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.1 "}
+	title = FruitFarmerRevolution.4.t
+	desc = FruitFarmerRevolution.4.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+         
+
+	option = {
+		name = FruitFarmerRevolution.4.a
+		ai_chance = {
+			factor = 90
+		}   
+		custom_effect_tooltip = FruitFarmerRevolution_1_tooltip
+		hidden_effect = {
+			country_event = { id = FruitFarmerRevolution.5 days = 7 }
+		}
+	}
+
+	option = {
+		name = FruitFarmerRevolution.4.b
+		ai_chance = {
+			factor = 90
+		} 
+		remove_ideas = FRA_The_supply_of_wine_is_obstructed_2
+		add_timed_idea = {
+			idea = FRA_The_supply_of_wine_is_obstructed_3
+			days = 365
+		}
+		custom_effect_tooltip = FruitFarmerRevolution_2_tooltip
+	}
+}
+
+country_event = {   #灾难扩散到勃艮第！
+	id = FruitFarmerRevolution.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.1 "}
+	title = FruitFarmerRevolution.5.t
+	desc = FruitFarmerRevolution.5.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+         
+
+	option = {
+		name = FruitFarmerRevolution.5.a
+		ai_chance = {
+			factor = 90
+		}   
+		hidden_effect = {
+			country_event = { id = FruitFarmerRevolution.6 days = 7 }
+		}
+	}
+
+	option = {
+		name = FruitFarmerRevolution.5.b
+		ai_chance = {
+			factor = 90
+		} 
+		set_country_flag = DOB_safe
+		hidden_effect = {
+			country_event = { id = FruitFarmerRevolution.6 days = 7 }
+		}
+		custom_effect_tooltip = FruitFarmerRevolution_3_tooltip
+	}
+}
+
+country_event = {   #灾难扩散到普罗旺斯！
+	id = FruitFarmerRevolution.6
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.1 "}
+	title = FruitFarmerRevolution.6.t
+	desc = FruitFarmerRevolution.6.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+         
+
+	option = {
+		name = FruitFarmerRevolution.6.a
+		ai_chance = {
+			factor = 90
+		}   
+		hidden_effect = {
+			country_event = { id = FruitFarmerRevolution.7 days = 7 }
+		}
+	}
+
+	option = {
+		name = FruitFarmerRevolution.6.b
+		ai_chance = {
+			factor = 90
+		} 
+		if = {
+			limit = {
+				has_country_flag = DOB_safe
+			}
+			clr_country_flag = DOB_safe
+			set_country_flag = DOBPRO_safe
+			hidden_effect = {
+				country_event = { id = FruitFarmerRevolution.7 days = 7 }
+			}
+			custom_effect_tooltip = FruitFarmerRevolution_4_tooltip
+		}
+		else = {
+			set_country_flag = PRO_safe
+			hidden_effect = {
+				country_event = { id = FruitFarmerRevolution.7 days = 7 }
+			}
+			custom_effect_tooltip = FruitFarmerRevolution_4_tooltip
+		}
+	}
+}
+
+country_event = {   #普瓦图农民骚动
+	id = FruitFarmerRevolution.7
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.1 "}
+	title = FruitFarmerRevolution.7.t
+	desc = FruitFarmerRevolution.7.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+         
+
+	option = {
+		name = FruitFarmerRevolution.7.a
+		ai_chance = {
+			factor = 90
+		}  
+		if = {
+			limit = {
+				has_country_flag = DOB_safe
+			}
+			hidden_effect = {
+				country_event = { id = FruitFarmerRevolution.9 days = 30 }
+			}
+		} 
+		if = {
+			limit = {
+				has_country_flag = PRO_safe
+			}
+			hidden_effect = {
+				country_event = { id = FruitFarmerRevolution.10 days = 30 }
+			}
+		} 
+		if = {
+			limit = {
+				has_country_flag = DOBPRO_safe
+			}
+			hidden_effect = {
+				country_event = { id = FruitFarmerRevolution.11 days = 30 }
+			}
+		} 
+		if = {
+			limit = {
+				or = {
+					NOT = {
+						has_country_flag = DOBPRO_safe
+						has_country_flag = PRO_safe
+						has_country_flag = DOB_safe
+					}
+				}
+				
+			}
+			hidden_effect = {
+				country_event = { id = FruitFarmerRevolution.8 days = 30 }
+			}
+		} 
+	}
+}
+
+country_event = {   #第二次果农革命
+	id = FruitFarmerRevolution.8
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.1 "}
+	title = FruitFarmerRevolution.8.t
+	desc = FruitFarmerRevolution.8.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+         
+
+	option = {
+		name = FruitFarmerRevolution.8.a
+		ai_chance = {
+			factor = 90
+		}   
+		CHP = {
+			CHP = { transfer_state = 18 }
+			CHP = { add_state_core = 18 }
+			hidden_effect = {		
+				create_faction = "果农同盟阵线"
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+				}
+			}
+		}
+
+		DOB = {
+			DOB = { transfer_state = 27 }
+			DOB = { add_state_core = 27 }
+			hidden_effect = {		
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+				}
+			}
+		}
+
+		PDL = {
+			PDL = { transfer_state = 14 }
+			PDL = { add_state_core = 14 }
+			PDL = { transfer_state = 23 }
+			PDL = { add_state_core = 23 }
+			PDL = { transfer_state = 983 }
+			PDL = { add_state_core = 983 }
+			hidden_effect = {		
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+				}
+			}
+		}
+
+		PRO = {
+			PRO = { transfer_state = 21 }
+			PRO = { add_state_core = 21 }
+			PRO = { transfer_state = 763 }
+			PRO = { add_state_core = 763 }
+			hidden_effect = {		
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+				}
+			}
+		} 
+		hidden_effect = {
+			CHP = { add_to_faction = DOB }
+			CHP = { add_to_faction = PRO }
+			CHP = { add_to_faction = PDL }
+			DOB = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			CHP = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			PDL = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			PRO = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			FRA = {
+				add_ideas = FRA_Fruit_Farmer_Revolution	
+				remove_ideas = FRA_The_supply_of_wine_is_obstructed_2
+			}
+			FRA = {
+				activate_mission = FRA_surviving_Farmer_Revolution
+			}
+		}	
+	}
+
+	option = {
+		name = FruitFarmerRevolution.8.b
+		ai_chance = {
+			factor = 90
+		}  
+		CHP = {
+			CHP = { transfer_state = 18 }
+			CHP = { add_state_core = 18 }
+			hidden_effect = {		
+				create_faction = "果农同盟阵线"
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+				}
+			}
+		}
+
+		DOB = {
+			DOB = { transfer_state = 27 }
+			DOB = { add_state_core = 27 }
+			hidden_effect = {		
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+				}
+			}
+		}
+
+		PDL = {
+			PDL = { transfer_state = 14 }
+			PDL = { add_state_core = 14 }
+			PDL = { transfer_state = 23 }
+			PDL = { add_state_core = 23 }
+			PDL = { transfer_state = 983 }
+			PDL = { add_state_core = 983 }
+			hidden_effect = {		
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+				}
+			}
+		}
+
+		PRO = {
+			PRO = { transfer_state = 21 }
+			PRO = { add_state_core = 21 }
+			PRO = { transfer_state = 763 }
+			PRO = { add_state_core = 763 }
+			hidden_effect = {		
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+				}
+			}
+		} 
+		hidden_effect = {
+			CHP = { add_to_faction = DOB }
+			CHP = { add_to_faction = PRO }
+			CHP = { add_to_faction = PDL }
+			DOB = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			CHP = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			PDL = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			PRO = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			FRA = {
+				add_ideas = FRA_Fruit_Farmer_Revolution	
+				remove_ideas = FRA_The_supply_of_wine_is_obstructed_2
+			}
+			FRA = {
+				activate_mission = FRA_surviving_Farmer_Revolution
+			}
+		}
+		CHP = { change_tag_from = FRA } 
+	}
+
+	option = {
+		name = FruitFarmerRevolution.8.c
+		ai_chance = {
+			factor = 90
+		}   
+		CHP = {
+			CHP = { transfer_state = 18 }
+			CHP = { add_state_core = 18 }
+			hidden_effect = {		
+				create_faction = "果农同盟阵线"
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+				}
+			}
+		}
+
+		DOB = {
+			DOB = { transfer_state = 27 }
+			DOB = { add_state_core = 27 }
+			hidden_effect = {		
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+				}
+			}
+		}
+
+		PDL = {
+			PDL = { transfer_state = 14 }
+			PDL = { add_state_core = 14 }
+			PDL = { transfer_state = 23 }
+			PDL = { add_state_core = 23 }
+			PDL = { transfer_state = 983 }
+			PDL = { add_state_core = 983 }
+			hidden_effect = {		
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+				}
+			}
+		}
+
+		PRO = {
+			PRO = { transfer_state = 21 }
+			PRO = { add_state_core = 21 }
+			PRO = { transfer_state = 763 }
+			PRO = { add_state_core = 763 }
+			hidden_effect = {		
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+				}
+			}
+		} 
+		hidden_effect = {
+			CHP = { add_to_faction = DOB }
+			CHP = { add_to_faction = PRO }
+			CHP = { add_to_faction = PDL }
+			DOB = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			CHP = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			PDL = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			PRO = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			FRA = {
+				add_ideas = FRA_Fruit_Farmer_Revolution	
+				remove_ideas = FRA_The_supply_of_wine_is_obstructed_2
+			}
+			FRA = {
+				activate_mission = FRA_surviving_Farmer_Revolution
+			}
+		}
+		DOB = { change_tag_from = FRA } 
+	}
+
+	option = {
+		name = FruitFarmerRevolution.8.e
+		ai_chance = {
+			factor = 90
+		}   
+		CHP = {
+			CHP = { transfer_state = 18 }
+			CHP = { add_state_core = 18 }
+			hidden_effect = {		
+				create_faction = "果农同盟阵线"
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+				}
+			}
+		}
+
+		DOB = {
+			DOB = { transfer_state = 27 }
+			DOB = { add_state_core = 27 }
+			hidden_effect = {		
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+				}
+			}
+		}
+
+		PDL = {
+			PDL = { transfer_state = 14 }
+			PDL = { add_state_core = 14 }
+			PDL = { transfer_state = 23 }
+			PDL = { add_state_core = 23 }
+			PDL = { transfer_state = 983 }
+			PDL = { add_state_core = 983 }
+			hidden_effect = {		
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+				}
+			}
+		}
+
+		PRO = {
+			PRO = { transfer_state = 21 }
+			PRO = { add_state_core = 21 }
+			PRO = { transfer_state = 763 }
+			PRO = { add_state_core = 763 }
+			hidden_effect = {		
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+				}
+			}
+		} 
+		hidden_effect = {
+			CHP = { add_to_faction = DOB }
+			CHP = { add_to_faction = PRO }
+			CHP = { add_to_faction = PDL }
+			DOB = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			CHP = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			PDL = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			PRO = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			FRA = {
+				add_ideas = FRA_Fruit_Farmer_Revolution	
+				remove_ideas = FRA_The_supply_of_wine_is_obstructed_2
+			}
+			FRA = {
+				activate_mission = FRA_surviving_Farmer_Revolution
+			}
+		}
+		PRO = { change_tag_from = FRA } 
+	}
+
+	option = {
+		name = FruitFarmerRevolution.8.f
+		ai_chance = {
+			factor = 90
+		}   
+		CHP = {
+			CHP = { transfer_state = 18 }
+			CHP = { add_state_core = 18 }
+			hidden_effect = {		
+				create_faction = "果农同盟阵线"
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+				}
+			}
+		}
+
+		DOB = {
+			DOB = { transfer_state = 27 }
+			DOB = { add_state_core = 27 }
+			hidden_effect = {		
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+				}
+			}
+		}
+
+		PDL = {
+			PDL = { transfer_state = 14 }
+			PDL = { add_state_core = 14 }
+			PDL = { transfer_state = 23 }
+			PDL = { add_state_core = 23 }
+			PDL = { transfer_state = 983 }
+			PDL = { add_state_core = 983 }
+			hidden_effect = {		
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+				}
+			}
+		}
+
+		PRO = {
+			PRO = { transfer_state = 21 }
+			PRO = { add_state_core = 21 }
+			PRO = { transfer_state = 763 }
+			PRO = { add_state_core = 763 }
+			hidden_effect = {		
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+				}
+			}
+		} 
+		hidden_effect = {
+			CHP = { add_to_faction = DOB }
+			CHP = { add_to_faction = PRO }
+			CHP = { add_to_faction = PDL }
+			DOB = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			CHP = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			PDL = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			PRO = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			FRA = {
+				add_ideas = FRA_Fruit_Farmer_Revolution	
+				remove_ideas = FRA_The_supply_of_wine_is_obstructed_2
+			}
+			FRA = {
+				activate_mission = FRA_surviving_Farmer_Revolution
+			}
+		}
+		PDL = { change_tag_from = FRA } 
+	}
+}
+
+country_event = {   #第二次果农革命
+	id = FruitFarmerRevolution.9
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.1 "}
+	title = FruitFarmerRevolution.8.t
+	desc = FruitFarmerRevolution.8.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+         
+
+	option = {
+		name = FruitFarmerRevolution.8.a
+		ai_chance = {
+			factor = 90
+		}   
+		CHP = {
+			CHP = { transfer_state = 18 }
+			CHP = { add_state_core = 18 }
+			hidden_effect = {		
+				create_faction = "果农同盟阵线"
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+				}
+			}
+		}
+
+		PDL = {
+			PDL = { transfer_state = 14 }
+			PDL = { add_state_core = 14 }
+			PDL = { transfer_state = 23 }
+			PDL = { add_state_core = 23 }
+			PDL = { transfer_state = 983 }
+			PDL = { add_state_core = 983 }
+			hidden_effect = {		
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+				}
+			}
+		}
+
+		PRO = {
+			PRO = { transfer_state = 21 }
+			PRO = { add_state_core = 21 }
+			PRO = { transfer_state = 763 }
+			PRO = { add_state_core = 763 }
+			hidden_effect = {		
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+				}
+			}
+		} 
+		hidden_effect = {
+			CHP = { add_to_faction = PRO }
+			CHP = { add_to_faction = PDL }
+			CHP = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			PDL = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			PRO = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			FRA = {
+				add_ideas = FRA_Fruit_Farmer_Revolution	
+				remove_ideas = FRA_The_supply_of_wine_is_obstructed_2
+			}
+			FRA = {
+				activate_mission = FRA_surviving_Farmer_Revolution
+			}
+		}	
+	}
+
+	option = {
+		name = FruitFarmerRevolution.8.b
+		ai_chance = {
+			factor = 90
+		}  
+		CHP = {
+			CHP = { transfer_state = 18 }
+			CHP = { add_state_core = 18 }
+			hidden_effect = {		
+				create_faction = "果农同盟阵线"
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+				}
+			}
+		}
+
+		PDL = {
+			PDL = { transfer_state = 14 }
+			PDL = { add_state_core = 14 }
+			PDL = { transfer_state = 23 }
+			PDL = { add_state_core = 23 }
+			PDL = { transfer_state = 983 }
+			PDL = { add_state_core = 983 }
+			hidden_effect = {		
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+				}
+			}
+		}
+
+		PRO = {
+			PRO = { transfer_state = 21 }
+			PRO = { add_state_core = 21 }
+			PRO = { transfer_state = 763 }
+			PRO = { add_state_core = 763 }
+			hidden_effect = {		
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+				}
+			}
+		} 
+		hidden_effect = {
+			CHP = { add_to_faction = PRO }
+			CHP = { add_to_faction = PDL }
+			CHP = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			PDL = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			PRO = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			FRA = {
+				add_ideas = FRA_Fruit_Farmer_Revolution	
+				remove_ideas = FRA_The_supply_of_wine_is_obstructed_2
+			}
+			FRA = {
+				activate_mission = FRA_surviving_Farmer_Revolution
+			}
+		}
+		CHP = { change_tag_from = FRA } 
+	}
+
+	option = {
+		name = FruitFarmerRevolution.8.e
+		ai_chance = {
+			factor = 90
+		}   
+		CHP = {
+			CHP = { transfer_state = 18 }
+			CHP = { add_state_core = 18 }
+			hidden_effect = {		
+				create_faction = "果农同盟阵线"
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+				}
+			}
+		}
+
+		PDL = {
+			PDL = { transfer_state = 14 }
+			PDL = { add_state_core = 14 }
+			PDL = { transfer_state = 23 }
+			PDL = { add_state_core = 23 }
+			PDL = { transfer_state = 983 }
+			PDL = { add_state_core = 983 }
+			hidden_effect = {		
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+				}
+			}
+		}
+
+		PRO = {
+			PRO = { transfer_state = 21 }
+			PRO = { add_state_core = 21 }
+			PRO = { transfer_state = 763 }
+			PRO = { add_state_core = 763 }
+			hidden_effect = {		
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+				}
+			}
+		} 
+		hidden_effect = {
+			CHP = { add_to_faction = PRO }
+			CHP = { add_to_faction = PDL }
+			CHP = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			PDL = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			PRO = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			FRA = {
+				add_ideas = FRA_Fruit_Farmer_Revolution	
+				remove_ideas = FRA_The_supply_of_wine_is_obstructed_2
+			}
+			FRA = {
+				activate_mission = FRA_surviving_Farmer_Revolution
+			}
+		}
+		PRO = { change_tag_from = FRA } 
+	}
+
+	option = {
+		name = FruitFarmerRevolution.8.f
+		ai_chance = {
+			factor = 90
+		}   
+		CHP = {
+			CHP = { transfer_state = 18 }
+			CHP = { add_state_core = 18 }
+			hidden_effect = {		
+				create_faction = "果农同盟阵线"
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+				}
+			}
+		}
+
+		PDL = {
+			PDL = { transfer_state = 14 }
+			PDL = { add_state_core = 14 }
+			PDL = { transfer_state = 23 }
+			PDL = { add_state_core = 23 }
+			PDL = { transfer_state = 983 }
+			PDL = { add_state_core = 983 }
+			hidden_effect = {		
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+				}
+			}
+		}
+
+		PRO = {
+			PRO = { transfer_state = 21 }
+			PRO = { add_state_core = 21 }
+			PRO = { transfer_state = 763 }
+			PRO = { add_state_core = 763 }
+			hidden_effect = {		
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PRO
+					}
+				}
+			}
+		} 
+		hidden_effect = {
+			CHP = { add_to_faction = PRO }
+			CHP = { add_to_faction = PDL }
+			CHP = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			PDL = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			PRO = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			FRA = {
+				add_ideas = FRA_Fruit_Farmer_Revolution	
+				remove_ideas = FRA_The_supply_of_wine_is_obstructed_2
+			}
+			FRA = {
+				activate_mission = FRA_surviving_Farmer_Revolution
+			}
+		}
+		PDL = { change_tag_from = FRA } 
+	}
+}
+
+country_event = {   #第二次果农革命
+	id = FruitFarmerRevolution.10
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.1 "}
+	title = FruitFarmerRevolution.8.t
+	desc = FruitFarmerRevolution.8.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+         
+
+	option = {
+		name = FruitFarmerRevolution.8.a
+		ai_chance = {
+			factor = 90
+		}   
+		CHP = {
+			CHP = { transfer_state = 18 }
+			CHP = { add_state_core = 18 }
+			hidden_effect = {		
+				create_faction = "果农同盟阵线"
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+				}
+			}
+		}
+
+		DOB = {
+			DOB = { transfer_state = 27 }
+			DOB = { add_state_core = 27 }
+			hidden_effect = {		
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+				}
+			}
+		}
+
+		PDL = {
+			PDL = { transfer_state = 14 }
+			PDL = { add_state_core = 14 }
+			PDL = { transfer_state = 23 }
+			PDL = { add_state_core = 23 }
+			PDL = { transfer_state = 983 }
+			PDL = { add_state_core = 983 }
+			hidden_effect = {		
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+				}
+			}
+		}
+
+		hidden_effect = {
+			CHP = { add_to_faction = DOB }
+			CHP = { add_to_faction = PDL }
+			DOB = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			CHP = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			PDL = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			FRA = {
+				add_ideas = FRA_Fruit_Farmer_Revolution	
+				remove_ideas = FRA_The_supply_of_wine_is_obstructed_2
+			}
+			FRA = {
+				activate_mission = FRA_surviving_Farmer_Revolution
+			}
+		}	
+	}
+
+	option = {
+		name = FruitFarmerRevolution.8.b
+		ai_chance = {
+			factor = 90
+		}  
+		CHP = {
+			CHP = { transfer_state = 18 }
+			CHP = { add_state_core = 18 }
+			hidden_effect = {		
+				create_faction = "果农同盟阵线"
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+				}
+			}
+		}
+
+		DOB = {
+			DOB = { transfer_state = 27 }
+			DOB = { add_state_core = 27 }
+			hidden_effect = {		
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+				}
+			}
+		}
+
+		PDL = {
+			PDL = { transfer_state = 14 }
+			PDL = { add_state_core = 14 }
+			PDL = { transfer_state = 23 }
+			PDL = { add_state_core = 23 }
+			PDL = { transfer_state = 983 }
+			PDL = { add_state_core = 983 }
+			hidden_effect = {		
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			CHP = { add_to_faction = DOB }
+			CHP = { add_to_faction = PDL }
+			DOB = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			CHP = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			PDL = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			FRA = {
+				add_ideas = FRA_Fruit_Farmer_Revolution	
+				remove_ideas = FRA_The_supply_of_wine_is_obstructed_2
+			}
+			FRA = {
+				activate_mission = FRA_surviving_Farmer_Revolution
+			}
+		}
+		CHP = { change_tag_from = FRA } 
+	}
+
+	option = {
+		name = FruitFarmerRevolution.8.c
+		ai_chance = {
+			factor = 90
+		}   
+		CHP = {
+			CHP = { transfer_state = 18 }
+			CHP = { add_state_core = 18 }
+			hidden_effect = {		
+				create_faction = "果农同盟阵线"
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+				}
+			}
+		}
+
+		DOB = {
+			DOB = { transfer_state = 27 }
+			DOB = { add_state_core = 27 }
+			hidden_effect = {		
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+				}
+			}
+		}
+
+		PDL = {
+			PDL = { transfer_state = 14 }
+			PDL = { add_state_core = 14 }
+			PDL = { transfer_state = 23 }
+			PDL = { add_state_core = 23 }
+			PDL = { transfer_state = 983 }
+			PDL = { add_state_core = 983 }
+			hidden_effect = {		
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+				}
+			}
+		}
+
+		hidden_effect = {
+			CHP = { add_to_faction = DOB }
+			CHP = { add_to_faction = PDL }
+			DOB = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			CHP = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			PDL = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			FRA = {
+				add_ideas = FRA_Fruit_Farmer_Revolution	
+				remove_ideas = FRA_The_supply_of_wine_is_obstructed_2
+			}
+			FRA = {
+				activate_mission = FRA_surviving_Farmer_Revolution
+			}
+		}
+		DOB = { change_tag_from = FRA } 
+	}
+
+	option = {
+		name = FruitFarmerRevolution.8.f
+		ai_chance = {
+			factor = 90
+		}   
+		CHP = {
+			CHP = { transfer_state = 18 }
+			CHP = { add_state_core = 18 }
+			hidden_effect = {		
+				create_faction = "果农同盟阵线"
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+				}
+			}
+		}
+
+		DOB = {
+			DOB = { transfer_state = 27 }
+			DOB = { add_state_core = 27 }
+			hidden_effect = {		
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = DOB
+					}
+				}
+			}
+		}
+
+		PDL = {
+			PDL = { transfer_state = 14 }
+			PDL = { add_state_core = 14 }
+			PDL = { transfer_state = 23 }
+			PDL = { add_state_core = 23 }
+			PDL = { transfer_state = 983 }
+			PDL = { add_state_core = 983 }
+			hidden_effect = {		
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+				}
+			}
+		}
+
+		hidden_effect = {
+			CHP = { add_to_faction = DOB }
+			CHP = { add_to_faction = PDL }
+			DOB = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			CHP = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			PDL = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			FRA = {
+				add_ideas = FRA_Fruit_Farmer_Revolution	
+				remove_ideas = FRA_The_supply_of_wine_is_obstructed_2
+			}
+			FRA = {
+				activate_mission = FRA_surviving_Farmer_Revolution
+			}
+		}
+		PDL = { change_tag_from = FRA } 
+	}
+}
+
+country_event = {   #第二次果农革命
+	id = FruitFarmerRevolution.11
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.1 "}
+	title = FruitFarmerRevolution.8.t
+	desc = FruitFarmerRevolution.8.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+         
+
+	option = {
+		name = FruitFarmerRevolution.8.a
+		ai_chance = {
+			factor = 90
+		}   
+		CHP = {
+			CHP = { transfer_state = 18 }
+			CHP = { add_state_core = 18 }
+			hidden_effect = {		
+				create_faction = "果农同盟阵线"
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+				}
+			}
+		}
+
+		PDL = {
+			PDL = { transfer_state = 14 }
+			PDL = { add_state_core = 14 }
+			PDL = { transfer_state = 23 }
+			PDL = { add_state_core = 23 }
+			PDL = { transfer_state = 983 }
+			PDL = { add_state_core = 983 }
+			hidden_effect = {		
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+				}
+			}
+		}
+
+		hidden_effect = {
+			CHP = { add_to_faction = PDL }
+			CHP = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			PDL = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			FRA = {
+				add_ideas = FRA_Fruit_Farmer_Revolution	
+				remove_ideas = FRA_The_supply_of_wine_is_obstructed_2
+			}
+			FRA = {
+				activate_mission = FRA_surviving_Farmer_Revolution
+			}
+		}	
+	}
+
+	option = {
+		name = FruitFarmerRevolution.8.b
+		ai_chance = {
+			factor = 90
+		}  
+		CHP = {
+			CHP = { transfer_state = 18 }
+			CHP = { add_state_core = 18 }
+			hidden_effect = {		
+				create_faction = "果农同盟阵线"
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+				}
+			}
+		}
+
+		PDL = {
+			PDL = { transfer_state = 14 }
+			PDL = { add_state_core = 14 }
+			PDL = { transfer_state = 23 }
+			PDL = { add_state_core = 23 }
+			PDL = { transfer_state = 983 }
+			PDL = { add_state_core = 983 }
+			hidden_effect = {		
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			CHP = { add_to_faction = PDL }
+			CHP = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			PDL = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			FRA = {
+				add_ideas = FRA_Fruit_Farmer_Revolution	
+				remove_ideas = FRA_The_supply_of_wine_is_obstructed_2
+			}
+			FRA = {
+				activate_mission = FRA_surviving_Farmer_Revolution
+			}
+		}
+		CHP = { change_tag_from = FRA } 
+	}
+
+	option = {
+		name = FruitFarmerRevolution.8.f
+		ai_chance = {
+			factor = 90
+		}   
+		CHP = {
+			CHP = { transfer_state = 18 }
+			CHP = { add_state_core = 18 }
+			hidden_effect = {		
+				create_faction = "果农同盟阵线"
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+				}
+			}
+		}
+
+		PDL = {
+			PDL = { transfer_state = 14 }
+			PDL = { add_state_core = 14 }
+			PDL = { transfer_state = 23 }
+			PDL = { add_state_core = 23 }
+			PDL = { transfer_state = 983 }
+			PDL = { add_state_core = 983 }
+			hidden_effect = {		
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = FRA
+				}
+				division_template = {
+					name = "农民武装"
+					priority = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+				}
+			}
+		}
+
+		hidden_effect = {
+			CHP = { add_to_faction = PDL }
+			CHP = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			PDL = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+			FRA = {
+				add_ideas = FRA_Fruit_Farmer_Revolution	
+				remove_ideas = FRA_The_supply_of_wine_is_obstructed_2
+			}
+			FRA = {
+				activate_mission = FRA_surviving_Farmer_Revolution
+			}
+		}
+		PDL = { change_tag_from = FRA } 
+	}
+}

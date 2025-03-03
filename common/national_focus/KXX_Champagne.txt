@@ -1,0 +1,429 @@
+focus_tree = {
+	id = Champagne
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = CHP
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 2000 y = 2000 }
+	
+	focus = {
+		id = CHP_The_Second_Fruit_Farmer_Revolution
+		icon = GFX_goal_FRA_peasant_commitees
+		prerequisite = {
+			
+		}
+		x = 15
+		y = 0
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			add_political_power = 100
+		}
+	}	
+
+	focus = {
+		id = CHP_Set_aside_disputes_and_jointly_resist_the_enemy
+		icon = GFX_goal_generic_army_high_command
+		prerequisite = {
+			focus = CHP_The_Second_Fruit_Farmer_Revolution
+		}
+		x = 0
+		y = 1
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		relative_position_id = CHP_The_Second_Fruit_Farmer_Revolution
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			add_opinion_modifier = {
+                target = PRO
+                modifier = CHP_jointly_resist_the_enemy
+        	}
+			add_opinion_modifier = {
+                target = DOB
+                modifier = CHP_jointly_resist_the_enemy
+        	}
+			add_opinion_modifier = {
+                target = PDL
+                modifier = CHP_jointly_resist_the_enemy
+        	}
+			hidden_effect = {
+				PRO = {
+					add_opinion_modifier = {
+						target = CHP
+						modifier = CHP_jointly_resist_the_enemy
+					}
+					add_opinion_modifier = {
+						target = DOB
+						modifier = CHP_jointly_resist_the_enemy
+					}
+					add_opinion_modifier = {
+						target = PDL
+						modifier = CHP_jointly_resist_the_enemy
+					}
+				}
+				DOB = {
+					add_opinion_modifier = {
+						target = CHP
+						modifier = CHP_jointly_resist_the_enemy
+					}
+					add_opinion_modifier = {
+						target = PRO
+						modifier = CHP_jointly_resist_the_enemy
+					}
+					add_opinion_modifier = {
+						target = PDL
+						modifier = CHP_jointly_resist_the_enemy
+					}
+				}
+				PDL = {
+					add_opinion_modifier = {
+						target = CHP
+						modifier = CHP_jointly_resist_the_enemy
+					}
+					add_opinion_modifier = {
+						target = PRO
+						modifier = CHP_jointly_resist_the_enemy
+					}
+					add_opinion_modifier = {
+						target = DOB
+						modifier = CHP_jointly_resist_the_enemy
+					}
+				}
+			}
+		}
+	}	
+
+	focus = {
+		id = CHP_Champagne_Fortification
+		icon = GFX_goal_generic_construct_military
+		prerequisite = {
+			focus = CHP_Set_aside_disputes_and_jointly_resist_the_enemy
+		}
+		x = -2
+		y = 2
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		relative_position_id = CHP_The_Second_Fruit_Farmer_Revolution
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			18 = {
+				add_building_construction = {
+					type = bunker
+					province = 6531
+					level = 4
+				}
+			}
+		}
+	}	
+
+	focus = {
+		id = CHP_Develop_a_defense_plan
+		icon = GFX_goal_CAN_Expand_Training_Facilities
+		prerequisite = {
+			focus = CHP_Set_aside_disputes_and_jointly_resist_the_enemy
+		}
+		x = 0
+		y = 2
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		relative_position_id = CHP_The_Second_Fruit_Farmer_Revolution
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			army_experience = 50
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+			PRO = {
+				army_experience = 50
+				add_doctrine_cost_reduction = {
+					name = land_doc_bonus
+					cost_reduction = 0.5
+					uses = 2
+					category = land_doctrine
+				}
+			}
+			DOB = {
+				army_experience = 50
+				add_doctrine_cost_reduction = {
+					name = land_doc_bonus
+					cost_reduction = 0.5
+					uses = 2
+					category = land_doctrine
+				}
+			}
+			PDL = {
+				army_experience = 50
+				add_doctrine_cost_reduction = {
+					name = land_doc_bonus
+					cost_reduction = 0.5
+					uses = 2
+					category = land_doctrine
+				}
+			}
+		}
+	}	
+
+	focus = {
+		id = CHP_ally_doriot
+		icon = GFX_goals_FRA_natjac_support
+		prerequisite = {
+			focus = CHP_Set_aside_disputes_and_jointly_resist_the_enemy
+		}
+		x = 2
+		y = 2
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		relative_position_id = CHP_The_Second_Fruit_Farmer_Revolution
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			add_ideas = FRA_natjac_support
+			PRO = {
+				add_ideas = FRA_natjac_support
+			}
+			DOB = {
+				add_ideas = FRA_natjac_support
+			}
+			PDL = {
+				add_ideas = FRA_natjac_support
+			}	
+		}
+	}	
+
+	focus = {
+		id = CHP_green_shirts
+		icon = GFX_goal_RUS_Green_Legionaries
+		prerequisite = {
+			focus = CHP_Champagne_Fortification
+		}
+		prerequisite = {
+			focus = CHP_Develop_a_defense_plan
+		}
+		prerequisite = {
+			focus = CHP_ally_doriot
+		}
+		x = -1
+		y = 3
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		relative_position_id = CHP_The_Second_Fruit_Farmer_Revolution
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			add_ideas = FRA_green_shirts
+			PRO = {
+				add_ideas = FRA_green_shirts
+			}
+			DOB = {
+				add_ideas = FRA_green_shirts
+			}
+			PDL = {
+				add_ideas = FRA_green_shirts
+			}	
+		}
+	}	
+
+	focus = {
+		id = CHP_Inspire_farmers_morale
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		prerequisite = {
+			focus = CHP_Champagne_Fortification
+		}
+		prerequisite = {
+			focus = CHP_Develop_a_defense_plan
+		}
+		prerequisite = {
+			focus = CHP_ally_doriot
+		}
+		x = 1
+		y = 3
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		relative_position_id = CHP_The_Second_Fruit_Farmer_Revolution
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			add_war_support = 0.15
+		}
+	}	
+
+	focus = {
+		id = CHP_Call_up_the_reserve_team
+		icon = GFX_goal_integrate_the_militia
+		prerequisite = {
+			focus = CHP_green_shirts
+		}
+		prerequisite = {
+			focus = CHP_Inspire_farmers_morale
+		}
+		x = -2
+		y = 4
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		relative_position_id = CHP_The_Second_Fruit_Farmer_Revolution
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			hidden_effect = {
+				division_template = {
+					name = "绿衫军"
+					priority = 1
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+						infantry = { x = 0 y = 7 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"绿衫军\" division_template = \"绿衫军\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"绿衫军\" division_template = \"绿衫军\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+					create_unit = {
+						division = "name = \"绿衫军\" division_template = \"绿衫军\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = CHP
+					}
+				}
+			}
+			custom_effect_tooltip = "三只精锐师将在香槟组建"
+		}
+	}	
+
+	focus = {
+		id = CHP_Training_frontline_officers
+		icon = GFX_JAPRECOVERY_commissars_of_the_revolution-248360
+		prerequisite = {
+			focus = CHP_green_shirts
+		}
+		prerequisite = {
+			focus = CHP_Inspire_farmers_morale
+		}
+		x = 0
+		y = 4
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		relative_position_id = CHP_The_Second_Fruit_Farmer_Revolution
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			add_ideas = CHP_Political_commissar			
+			DOB = {
+				add_ideas = CHP_Political_commissar
+			}
+			PDL = {
+				add_ideas = CHP_Political_commissar
+			}	
+		}
+	}	
+
+	focus = {
+		id = CHP_Rural_reconnaissance_network
+		icon = GFX_goal_FRA_Frontline_Recon
+		prerequisite = {
+			focus = CHP_green_shirts
+		}
+		prerequisite = {
+			focus = CHP_Inspire_farmers_morale
+		}
+		x = 2
+		y = 4
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		relative_position_id = CHP_The_Second_Fruit_Farmer_Revolution
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			FRA = {
+				add_war_support = -0.1
+				add_stability = -0.1
+			}
+		}
+	}	
+
+	focus = {
+		id = CHP_Haut_les_fourches
+		icon = GFX_goal_generic_peasant_strike
+		prerequisite = {
+			focus = CHP_Call_up_the_reserve_team
+		}
+		prerequisite = {
+			focus = CHP_Training_frontline_officers
+		}
+		prerequisite = {
+			focus = CHP_Rural_reconnaissance_network
+		}
+		x = 0
+		y = 5
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		relative_position_id = CHP_The_Second_Fruit_Farmer_Revolution
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			add_ideas = CHP_agrians
+			PRO = {
+				add_ideas = CHP_agrians
+			}
+			DOB = {
+				add_ideas = CHP_agrians
+			}
+			PDL = {
+				add_ideas = CHP_agrians
+			}	
+		}
+	}	
+
+	focus = {
+		id = CHP_Swearing_to_defend_the_dignity_of_fruit_farmers_to_the_death
+		icon = GFX_RUS_Peasant_Councils
+		prerequisite = {
+			focus = CHP_Haut_les_fourches
+		}
+		x = 0
+		y = 6
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		relative_position_id = CHP_The_Second_Fruit_Farmer_Revolution
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			add_political_power = 100
+		}
+	}	
+}

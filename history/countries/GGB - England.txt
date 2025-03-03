@@ -1,0 +1,498 @@
+﻿oob = "GGB_1936"
+
+starting_train_buffer = 2.0
+### Starting Technologies ###
+if = {
+	limit = { NOT = { has_dlc = "No Step Back" } }
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+		basic_heavy_tank = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+		improved_light_tank_chassis = 1
+		basic_heavy_tank_chassis = 1
+		engine_tech_1 = 1
+	}
+}
+set_technology = {
+	basic_train = 1
+	### General ###
+	electronic_mechanical_engineering = 1
+
+	### Infantry ###
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_trucks = 1
+	motorised_infantry = 1
+	tech_recon = 1
+	tech_engineers = 1
+	tech_mountaineers = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "GRU_air_bba"
+
+		set_technology = {
+			aa_lmg = 1
+			aa_cannon_1 = 1
+			engines_2 = 1
+			aircraft_construction = 1
+			early_bombs = 1
+			engines_1 = 1
+			iw_small_airframe = 1
+			basic_small_airframe = 1
+			iw_medium_airframe = 1
+			iw_large_airframe = 1
+			basic_medium_airframe = 1
+			basic_large_airframe = 1
+			air_torpedoe_1 = 1
+		}
+		GRU_BBA_air_variants = yes
+	else = {
+		set_air_oob = "GRU_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			fighter1 = 1
+			naval_bomber1 = 1
+			early_bomber = 1
+			strategic_bomber1 = 1
+			CAS1 = 1
+			cv_early_fighter = 1
+			cv_naval_bomber1 = 1
+			cv_CAS1 = 1
+		}
+	}
+}
+
+### Navy - MtG ###
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+
+	set_technology = {
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		panzerschiffe = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		cruiser_submarines = 1
+		early_ship_hull_carrier = 1
+		basic_ship_hull_carrier = 1
+		early_ship_hull_heavy = 1
+		basic_ship_hull_heavy = 1
+		ship_hull_super_heavy = 1
+		pre_dreadnoughts = 1
+		
+		basic_naval_mines = 1
+
+		## Modules##
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_medium_battery = 1
+		basic_heavy_battery = 1
+		basic_depth_charges = 1
+		basic_torpedo = 1
+		improved_ship_torpedo_launcher = 1
+		basic_cruiser_armor_scheme = 1
+		basic_heavy_armor_scheme = 1
+
+		### Transport ###
+		mtg_transport = 1
+	}
+}
+
+### Navy - Non MtG ###
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "Man the Guns"
+		}
+	}
+	set_technology = {
+		early_destroyer = 1
+		basic_destroyer = 1
+		early_light_cruiser = 1
+		basic_light_cruiser = 1
+		early_submarine = 1
+		basic_submarine = 1
+		early_heavy_cruiser = 1
+		basic_heavy_cruiser = 1
+		early_battlecruiser = 1
+		early_battleship = 1
+		basic_battleship = 1
+		heavy_battleship = 1
+		early_carrier = 1
+		basic_carrier = 1
+
+		### Transport ###
+		transport = 1
+	}
+}
+
+recruit_character = GRU_Oswald_Mosley
+
+create_field_marshal = {
+	name = GRU_general_BH_Liddel_Hart
+	portrait_path = "gfx/leaders/ENG/Portrait_England_BH_Liddel_Hart.png"
+	traits = {
+		offensive_doctrine
+		armor_officer
+		panzer_leader
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+}
+create_field_marshal = {
+	name = GRU_general_Bernard_Paget
+	portrait_path = "gfx/leaders/ENG/Portrait_England_Bernard_Paget.png"
+	traits = {
+		organizer
+		thorough_planner
+		infantry_leader
+		infantry_expert
+		old_guard
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 3
+}
+create_field_marshal = {# Билл Александр
+	name = GRU_general_Bill_Alexander
+	portrait_path = "gfx/leaders/ENG/Portrait_England_Bill_Alexander.png"
+	traits = {
+		career_officer
+		war_hero
+		brilliant_strategist
+		trickster
+	}
+	skill = 4
+	attack_skill = 5
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}
+create_field_marshal = {# Билл Александр
+	name = GRU_general_Ronald_Forbes_Adam
+	portrait_path = "gfx/leaders/ENG/Portrait_ENG_Ronald_Forbes_Adam.png"
+	traits = {
+		artillery_officer
+		defensive_doctrine
+		inflexible_strategist
+	}
+	skill = 4
+	attack_skill = 2
+	defense_skill = 5
+	planning_skill = 4
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = GRU_general_Clement_Armitage
+	portrait_path = "gfx/leaders/ENG/Portrait_England_Clement_Armitage.png"
+	traits = {
+		infantry_leader
+		artillery_officer
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {# Дэвид Стирлинг
+	name = GRU_general_David_Stirling
+	portrait_path = "gfx/leaders/ENG/Portrait_England_David_Stirling.png"
+	traits = {
+		infantry_officer
+		commando
+	}
+	skill = 3
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = GRU_general_George_Nathan
+	portrait_path = "gfx/leaders/ENG/Portrait_England_George_Nathan.png"
+	traits = {
+		politically_connected
+		commando
+		media_personality
+		hidden_sympathies
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = GRU_general_Giffard_Le_Quesne_Martel
+	portrait_path = "gfx/leaders/ENG/Portrait_England_Giffard_Le_Quesne_Martel.png"
+	traits = { panzer_leader }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = GRU_general_Jack_Jones
+	portrait_path = "gfx/leaders/ENG/Portrait_England_Jack_Jones.png"
+	traits = {
+		inflexible_strategist
+		infantry_officer
+		politically_connected
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = GRU_general_Kenneth_Anderson
+	portrait_path = "gfx/leaders/ENG/Portrait_England_Kenneth_Anderson.png"
+	traits = {
+		harsh_leader
+		infantry_leader
+	}
+	skill = 2
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {# Рэймонд Бриггс
+	name = GRU_general_Raymond_Briggs
+	portrait_path = "gfx/leaders/ENG/Portrait_England_Raymond_Briggs.png"
+	traits = {
+		panzer_leader
+		career_officer
+		infantry_officer
+	}
+	skill = 4
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 4
+}
+create_corps_commander = {# Уильям Готт
+	name = GRU_general_William_Gott
+	portrait_path = "gfx/leaders/ENG/Portrait_England_William_Gott.png"
+	traits = {
+		armor_officer
+		war_hero
+		inflexible_strategist
+		trait_engineer
+	}
+	skill = 4
+	attack_skill = 2
+	defense_skill = 5
+	planning_skill = 2
+	logistics_skill = 4
+}
+### Admirals ###
+create_navy_leader = {
+	name = GRU_general_Max_Horton
+	portrait_path = "gfx/leaders/ENG/Portrait_England_Max_Horton.png"
+	traits = { caustic_personality seawolf }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 3
+	maneuvering_skill = 3
+	coordination_skill = 3
+}
+create_navy_leader = {
+	name = GRU_general_Edward_Evans
+	portrait_path = "gfx/leaders/ENG/Portrait_England_Edward_Evans.png"
+	traits = { bold arctic_water_expert }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 3
+}
+create_navy_leader = {# Эдмунд Энстис
+	name = GRU_general_Edmund_Anstice
+	portrait_path = "gfx/leaders/ENG/Portrait_England_Edmund_Anstice.png"
+	traits = { air_controller }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	maneuvering_skill = 3
+	coordination_skill = 3
+}
+create_navy_leader = {
+	name = GRU_general_Arthur_Power
+	portrait_path = "gfx/leaders/ENG/Portrait_England_Arthur_Power.png"
+	traits = { gunnery_expert air_controller }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 3
+}
+create_navy_leader = {# Ричард Кейли
+	name = GRU_general_Richard_Cayley
+	portrait_path = "gfx/leaders/ENG/Portrait_England_Richard_Cayley.png"
+	traits = { seawolf }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 3
+	maneuvering_skill = 4
+	coordination_skill = 4
+}
+create_navy_leader = {# Джеффри Барнард
+	name = GRU_general_Geoffrey_Barnard
+	portrait_path = "gfx/leaders/ENG/Portrait_England_Geoffrey_Barnard.png"
+	traits = { superior_tactician }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	maneuvering_skill = 3
+	coordination_skill = 3
+}
+create_navy_leader = {# Энтони Фоллетт Пагсли
+	name = GRU_general_Anthony_Pugsley
+	portrait_path = "gfx/leaders/ENG/Portrait_England_Anthony_Pugsley.png"
+	traits = { spotter blockade_runner }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 4
+	maneuvering_skill = 3
+	coordination_skill = 4
+}
+create_navy_leader = {# Фрэнк Пеграм
+	name = GRU_general_Frank_Pegram
+	portrait_path = "gfx/leaders/ENG/Portrait_England_Frank_Pegram.png"
+	traits = { spotter }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 1
+	coordination_skill = 2
+}
+create_navy_leader = {# Роберт Дон Оливер
+	name = GRU_general_Robert_Oliver
+	portrait_path = "gfx/leaders/ENG/Portrait_England_Robert_Oliver.png"
+	traits = { blockade_runner }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 2
+}
+create_navy_leader = {# Джерард Бродмид Руп
+	name = GRU_general_Gerard_Roope
+	portrait_path = "gfx/leaders/ENG/Portrait_England_Gerard_Roope.png"
+	traits = { blockade_runner }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 4
+	maneuvering_skill = 3
+	coordination_skill = 4
+}
+create_navy_leader = {# Бернард Уорбертон-Ли
+	name = GRU_general_Bernard_Warburton
+	portrait_path = "gfx/leaders/ENG/Portrait_England_Bernard_Warburton.png"
+	traits = { ironside }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	maneuvering_skill = 3
+	coordination_skill = 3
+}
+create_navy_leader = {# Норман Дуглас Холбрук
+	name = GRU_general_Norman_Holbrook
+	portrait_path = "gfx/leaders/ENG/Portrait_England_Norman_Holbrook.png"
+	traits = { seawolf }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 3
+	maneuvering_skill = 4
+	coordination_skill = 4
+}
+create_navy_leader = {# Фредерик Джон Уокер
+	name = GRU_general_Frederic_Walker
+	portrait_path = "gfx/leaders/ENG/Portrait_England_Frederic_Walker.png"
+	traits = { spotter blockade_runner }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 4
+	maneuvering_skill = 3
+	coordination_skill = 4
+}
+create_navy_leader = {# Peter Gerald Charles Dickens
+	name = GRU_general_Peter_Dickens
+	portrait_path = "gfx/leaders/ENG/Portrait_England_Peter_Dickens.png"
+	traits = { ironside blockade_runner }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	maneuvering_skill = 2
+	coordination_skill = 3
+}
+create_navy_leader = {# Стивен Битти
+	name = GRU_general_Stephen_Beattie
+	portrait_path = "gfx/leaders/ENG/Portrait_England_Stephen_Beattie.png"
+	traits = { superior_tactician }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	maneuvering_skill = 3
+	coordination_skill = 3
+}
+create_navy_leader = {# Дональд Макинтайр
+	name = GRU_general_Donald_Macintyre
+	portrait_path = "gfx/leaders/ENG/Portrait_England_Donald_Macintyre.png"
+	traits = { blockade_runner superior_tactician }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	maneuvering_skill = 2
+	coordination_skill = 3
+}
+create_navy_leader = {
+	name = GRU_general_Katherine_Furse
+	portrait_path = "gfx/leaders/ENG/Portrait_England_Katherine_Furse.png"
+	traits = { spotter }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 3
+	coordination_skill = 4
+}
+
+create_navy_leader = {
+	name = GRU_general_Kenneth_Dewar
+	portrait_path = "gfx/leaders/ENG/Portrait_England_Kenneth_Dewar.png"
+	traits = { fleet_protector gunnery_expert }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	maneuvering_skill = 3
+	coordination_skill = 4
+}

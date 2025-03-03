@@ -1,0 +1,2209 @@
+#######################
+######## Kongo ########
+#######################
+
+focus_tree = {
+	id = kongo_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 100
+			tag = KOG
+		}
+	}
+	
+	continuous_focus_position = { x = 2450 y = 1100 }
+	
+	default = no
+	
+	#Economy
+	shared_focus = AFR_Nationalize_European_Companies
+	shared_focus = AFR_Work_with_Foreign_Mining_Concerns
+	shared_focus = COG_new_realities
+	
+	#Army
+	shared_focus = AFR_An_African_Army
+	shared_focus = AFR_Repair_Old_Planes
+	shared_focus = AFR_Using_old_Vessels
+	
+	# Intro #
+	
+	focus = {
+		id = KOG_manikongo_proclaimation
+		icon = GFX_goal_KOG_Manikongos_Proclamation
+		x = 8
+		y = 1
+		cost = 2
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			always = yes
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus KOG_manikongo_proclaimation"
+			custom_effect_tooltip = unlock_focuses
+		}
+	}
+	
+	focus = {
+		id = KOG_raid_german_armories
+		icon = GFX_MAF_supplement_schutztruppen
+		x = 1
+		y = 1
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { focus = KOG_manikongo_proclaimation }
+		relative_position_id = KOG_manikongo_proclaimation
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 2000 producer = MAF }
+			log = "[GetDateText]: [Root.GetName]: Focus KOG_manikongo_proclaimation"
+		}
+	}
+	
+	focus = {
+		id = KOG_against_false_despots
+		icon = GFX_goal_KOG_Against_False_Despots
+		x = -1
+		y = 1
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { focus = KOG_manikongo_proclaimation }
+		relative_position_id = KOG_manikongo_proclaimation
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		add_command_power = 30
+		add_manpower = 3000
+		add_timed_idea = {
+			idea = idea_KOG_united_one_kongo
+			days = 180
+		}
+		add_ideas = KOG_against_false_despots_idea
+			log = "[GetDateText]: [Root.GetName]: Focus KOG_manikongo_proclaimation"
+		}
+	}
+	
+	focus = {
+		id = KOG_question_lisbon
+		icon = GFX_goal_KOG_Our_Relationship_Lisbon
+		x = 0
+		y = 2
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { 
+		focus = KOG_against_false_despots
+		focus = KOG_raid_german_armories
+		}
+		relative_position_id = KOG_manikongo_proclaimation
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		country_event = kog.9
+			log = "[GetDateText]: [Root.GetName]: Focus KOG_manikongo_proclaimation"
+		}
+	}
+	
+	focus = {
+		id = KOG_request_portuguese_arms
+		icon = GFX_goal_CZE_imperial_arms
+		x = -1
+		y = 3
+		cost = 2
+		available_if_capitulated = yes
+		available = { has_country_flag = KOG_portugal_support }
+		mutually_exclusive = { focus = KOG_rally_the_homeland }
+		prerequisite = { focus = KOG_question_lisbon }
+		relative_position_id = KOG_manikongo_proclaimation
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 1500 producer = POR }
+		add_equipment_to_stockpile = { type = support_equipment amount = 250 producer = POR }
+		add_tech_bonus = {
+			name = infantry_weapons_bonus
+			bonus = 0.5
+			uses = 1
+			category = infantry_weapons
+		}
+			log = "[GetDateText]: [Root.GetName]: Focus KOG_manikongo_proclaimation"
+		}
+	}
+	
+	focus = {
+		id = KOG_angolan_cacadores
+		icon = GFX_goal_KOG_Call_Upon_Cacadores
+		x = -2
+		y = 4
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { focus = KOG_request_portuguese_arms }
+		relative_position_id = KOG_manikongo_proclaimation
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		army_experience = 50
+		division_template = {
+					name = "Divisão de Caçadores"
+					division_names_group = POR_CAC_01
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+					}
+					priority = 1
+				}
+		capital_scope = {
+				create_unit = {
+					division = "name = \"1a Caçadores de Angola\" division_template = \"Divisão de Caçadores\" start_experience_factor = 0.5"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"2a Caçadores de Angola\" division_template = \"Divisão de Caçadores\" start_experience_factor = 0.5"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"1a Caçadores de Angola\" division_template = \"Divisão de Caçadores\" start_experience_factor = 0.5"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"2a Caçadores de Angola\" division_template = \"Divisão de Caçadores\" start_experience_factor = 0.5"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"1a Caçadores de Angola\" division_template = \"Divisão de Caçadores\" start_experience_factor = 0.5"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"2a Caçadores de Angola\" division_template = \"Divisão de Caçadores\" start_experience_factor = 0.5"
+					owner = ROOT
+				}
+		}
+			log = "[GetDateText]: [Root.GetName]: Focus KOG_manikongo_proclaimation"
+		}
+	}
+	
+	focus = {
+		id = KOG_rally_the_homeland
+		icon = GFX_goal_KOG_Rally_Homeland
+		x = 1
+		y = 3
+		cost = 2
+		available_if_capitulated = yes
+		available = { has_country_flag = KOG_native_support }
+		mutually_exclusive = { focus = KOG_request_portuguese_arms }
+		prerequisite = { focus = KOG_question_lisbon }
+		relative_position_id = KOG_manikongo_proclaimation
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		add_war_support = 0.075
+		add_manpower = 4500
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 750 producer = COG }
+		division_template = {
+					name = "Bakongo Militia"
+					division_names_group = POR_CAC_01
+					regiments = {
+						militia = { x = 0 y = 0 }
+						militia = { x = 0 y = 1 }
+						militia = { x = 1 y = 0 }
+						militia = { x = 1 y = 1 }
+					}
+					priority = 1
+				}
+		capital_scope = {
+				create_unit = {
+					division = "name = \"Bakongo Militia\" division_template = \"Bakongo Militia\" start_experience_factor = 0.5"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Bakongo Militia\" division_template = \"Bakongo Militia\" start_experience_factor = 0.5"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Bakongo Militia\" division_template = \"Bakongo Militia\" start_experience_factor = 0.5"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Bakongo Militia\" division_template = \"Bakongo Militia\" start_experience_factor = 0.5"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Bakongo Militia\" division_template = \"Bakongo Militia\" start_experience_factor = 0.5"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Bakongo Militia\" division_template = \"Bakongo Militia\" start_experience_factor = 0.5"
+					owner = ROOT
+				}
+		}
+			log = "[GetDateText]: [Root.GetName]: Focus KOG_manikongo_proclaimation"
+		}
+	}
+	
+	focus = {
+		id = KOG_assert_independence
+		icon = GFX_goal_POR_flag_of_kongo
+		x = 2
+		y = 4
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { focus = KOG_rally_the_homeland }
+		relative_position_id = KOG_manikongo_proclaimation
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		add_command_power = 50
+		remove_ideas = KOG_reliance_on_portugal_idea
+		POR = { add_opinion_modifier = { target = KOG modifier = large_decrease } }
+			log = "[GetDateText]: [Root.GetName]: Focus KOG_manikongo_proclaimation"
+		}
+	}
+	
+	focus = {
+		id = KOG_manikongo_authority
+		icon = GFX_goal_KOG_Authority_Manikongo
+		x = 0
+		y = 4
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { 
+		focus = KOG_request_portuguese_arms
+		focus = KOG_rally_the_homeland
+		}
+		relative_position_id = KOG_manikongo_proclaimation
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		add_political_power = 125
+		add_stability = 0.06
+		add_war_support = 0.06
+		add_popularity = { ideology = paternal_autocrat popularity = 0.06 }
+		add_ideas = KOG_manikongo_authority_idea
+			log = "[GetDateText]: [Root.GetName]: Focus KOG_manikongo_proclaimation"
+		}
+	}
+	
+	focus = {
+		id = KOG_push_against_teke
+		icon = GFX_goal_KOG_Assault_Against_Anziku
+		x = 1
+		y = 5
+		cost = 2
+		available_if_capitulated = yes
+		available = {
+		KOG = {
+		has_war_with = TKE
+			}
+		}
+		bypass = {
+		OR = {
+		TKE = {
+		NOT = {
+		has_war_with = KOG
+			}
+		exists = no
+				}
+			}
+		}
+		prerequisite = { focus = KOG_manikongo_authority }
+		prerequisite = { 
+		focus = KOG_angolan_cacadores
+		focus = KOG_assert_independence
+		}
+		relative_position_id = KOG_manikongo_proclaimation
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		add_war_support = 0.10
+		add_timed_idea = {
+					idea = KOG_push_against_teke_idea
+					days = 75
+				}
+			log = "[GetDateText]: [Root.GetName]: Focus KOG_manikongo_proclaimation"
+		}
+	}
+	
+	focus = {
+		id = KOG_peace_with_the_madman
+		icon = GFX_goal_KOG_Peace_Madman
+		x = -1
+		y = 5
+		cost = 2
+		available_if_capitulated = yes
+		available = {
+		KOG = {
+		has_war_with = GAB
+			}
+		}
+		bypass = {
+		GAB = {
+		OR = {
+		NOT = {
+		has_war_with = KOG
+			}
+		exists = no
+				}
+			}
+		}
+		prerequisite = { focus = KOG_manikongo_authority }
+		prerequisite = { 
+		focus = KOG_angolan_cacadores
+		focus = KOG_assert_independence
+		}
+		relative_position_id = KOG_manikongo_proclaimation
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		GAB = {
+		country_event = {
+				id = kog.4
+				days = 7
+			}
+		}
+			log = "[GetDateText]: [Root.GetName]: Focus KOG_manikongo_proclaimation"
+		}
+	}
+	
+	focus = {
+		id = KOG_between_two_worlds
+		icon = GFX_goal_KOG_Kingdom_Between_Two_Worlds
+		x = 0
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+		NOT = {
+		OR = {
+		has_war_with = TKE
+		has_war_with = GAB
+				}
+			}
+		}
+		prerequisite = { focus = KOG_peace_with_the_madman }
+		prerequisite = { focus = KOG_push_against_teke }
+		relative_position_id = KOG_manikongo_proclaimation
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		remove_ideas = AFR_post_collapse_instability
+		country_event = kog.1
+			log = "[GetDateText]: [Root.GetName]: Focus KOG_manikongo_proclaimation"
+		}
+	}
+	
+	focus = {
+		id = KOG_portuguese_patronage
+		icon = GFX_goal_KOG_Continued_Portuguese_Patronage
+		x = -2
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		available = { always = no }
+		prerequisite = { focus = KOG_between_two_worlds }
+		mutually_exclusive = { focus = KOG_traditionalist_revival }
+		relative_position_id = KOG_manikongo_proclaimation
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		custom_effect_tooltip = unlock_focuses
+			log = "[GetDateText]: [Root.GetName]: Focus KOG_manikongo_proclaimation"
+		}
+	}
+	
+	focus = {
+		id = KOG_integralist_influences
+		icon = GFX_goal_KOG_Luso_Integralist_Influences
+		x = -5
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = KOG_portuguese_patronage }
+		bypass = { has_government = social_liberal }
+		relative_position_id = KOG_manikongo_proclaimation
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		swap_ideas = {
+				remove_idea = KOG_reliance_on_portugal_idea
+				add_idea = KOG_integralist_influences_idea
+		}
+		set_politics = {
+				ruling_party = national_populist
+				elections_allowed = no
+			}
+		add_popularity = { ideology = national_populist popularity = 0.1 }
+		hidden_effect = {
+		add_authdem_to_coalition = yes
+		add_pataut_to_coalition = yes
+		}
+			log = "[GetDateText]: [Root.GetName]: Focus KOG_manikongo_proclaimation"
+		}
+	}
+	
+	focus = {
+		id = KOG_legacy_of_afonso
+		icon = GFX_goal_KOG_Legacy_Dom_Alfonso
+		x = -6
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = KOG_integralist_influences }
+		bypass = { has_government = social_liberal }
+		relative_position_id = KOG_manikongo_proclaimation
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		swap_ideas = {
+				remove_idea = KOG_integralist_influences_idea
+				add_idea = KOG_legacy_of_afonso_idea
+		}
+		add_popularity = { ideology = national_populist popularity = 0.1 }
+		country_event = {
+				id = kog.14
+				days = 21
+		}
+			log = "[GetDateText]: [Root.GetName]: Focus KOG_manikongo_proclaimation"
+		}
+	}
+	
+	focus = {
+		id = KOG_portuguese_labor
+		icon = GFX_MAF_labor_charter
+		x = -4
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = KOG_integralist_influences }
+		bypass = { has_government = social_liberal }
+		relative_position_id = KOG_manikongo_proclaimation
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		add_offsite_building = { type = industrial_complex level = 2 }
+		POR = {
+		random_owned_state = {
+		prioritize = { 540 705 950 }
+		add_manpower = 2500
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		random_owned_state = {
+		prioritize = { 540 705 950 }
+		add_manpower = 2500
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+			log = "[GetDateText]: [Root.GetName]: Focus KOG_manikongo_proclaimation"
+		}
+	}
+	
+	focus = {
+		id = KOG_church_of_kongo
+		icon = GFX_goal_KOG_Catholic_Church_Kongo
+		x = -2
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = KOG_portuguese_patronage }
+		bypass = { has_government = social_liberal }
+		relative_position_id = KOG_manikongo_proclaimation
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		add_ideas = KOG_church_of_kongo_idea
+		country_event = {
+				id = kog.13
+				days = 14
+		}
+			log = "[GetDateText]: [Root.GetName]: Focus KOG_manikongo_proclaimation"
+		}
+	}
+	
+	focus = {
+		id = KOG_foreign_studies
+		icon = GFX_goal_PAN_Create_the_Universidad_de_Panama
+		x = -2
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = KOG_church_of_kongo }
+		bypass = { has_government = social_liberal }
+		relative_position_id = KOG_manikongo_proclaimation
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		add_research_slot = 1
+			log = "[GetDateText]: [Root.GetName]: Focus KOG_manikongo_proclaimation"
+		}
+	}
+	
+	focus = {
+		id = KOG_traditionalist_revival
+		icon = GFX_goal_KOG_Traditionalist_Revival
+		x = 2
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		available = { always = no }
+		prerequisite = { focus = KOG_between_two_worlds }
+		mutually_exclusive = { focus = KOG_portuguese_patronage }
+		relative_position_id = KOG_manikongo_proclaimation
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		custom_effect_tooltip = unlock_focuses
+			log = "[GetDateText]: [Root.GetName]: Focus KOG_manikongo_proclaimation"
+		}
+	}
+	
+	focus = {
+		id = KOG_bakongo_practices
+		icon = GFX_goal_KOG_Promote_Bakongo_Practices
+		x = 2
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = KOG_traditionalist_revival }
+		relative_position_id = KOG_manikongo_proclaimation
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		add_ideas = KOG_bakongo_practices_idea
+		increase_ruling_party_popularity_by_10 = yes
+		country_event = {
+				id = kog.12
+				days = 14
+		}
+			log = "[GetDateText]: [Root.GetName]: Focus KOG_manikongo_proclaimation"
+		}
+	}
+	
+	focus = {
+		id = KOG_tribalist_structures
+		icon = GFX_goal_LPD_tribal_autonomy
+		x = 5
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = KOG_traditionalist_revival }
+		relative_position_id = KOG_manikongo_proclaimation
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		add_ideas = KOG_tribalist_structures_idea
+			log = "[GetDateText]: [Root.GetName]: Focus KOG_manikongo_proclaimation"
+		}
+	}
+	
+	focus = {
+		id = KOG_masters_of_the_basin
+		icon = GFX_goal_KOG_Masters_Kongo_Basin
+		x = 6
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = KOG_tribalist_structures }
+		relative_position_id = KOG_manikongo_proclaimation
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		random_owned_controlled_state = {
+			add_resource = {
+				type = rubber
+				amount = 16
+			}
+		}
+		random_owned_controlled_state = {
+			add_resource = {
+				type = oil
+				amount = 12
+			}
+		}
+		random_owned_controlled_state = {
+			add_resource = {
+				type = steel
+				amount = 8
+			}
+		}
+		random_owned_state = { 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		add_ideas = KOG_masters_of_the_basin_idea
+			log = "[GetDateText]: [Root.GetName]: Focus KOG_manikongo_proclaimation"
+		}
+	}
+	
+	focus = {
+		id = KOG_fate_of_monarchy
+		icon = GFX_goal_KOG_Fate_House_Agua_Rosada
+		x = 4
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = KOG_tribalist_structures }
+		relative_position_id = KOG_manikongo_proclaimation
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		add_political_power = 100
+		add_command_power = 50
+		if = {
+		limit = {
+		has_government = social_liberal
+		}
+		increase_ruling_party_popularity_by_10 = yes
+		}
+		if = {
+		limit = {
+		NOT = {
+		has_government = social_liberal
+			}
+		}
+		country_event = kog.10
+		}
+			log = "[GetDateText]: [Root.GetName]: Focus KOG_manikongo_proclaimation"
+		}
+	}
+	
+	focus = {
+		id = KOG_native_universities
+		icon = GFX_DAH_Uni
+		x = 2
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = KOG_bakongo_practices }
+		relative_position_id = KOG_manikongo_proclaimation
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		add_research_slot = 1
+			log = "[GetDateText]: [Root.GetName]: Focus KOG_manikongo_proclaimation"
+		}
+	}
+	
+	focus = {
+		id = KOG_deal_for_mbanza_kongo
+		icon = GFX_goal_KOG_Negotiate_Mbanza_Kongo
+		x = -5
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+		hidden_trigger = {
+		NOT = {
+		has_country_flag = KOG_kasavubu_free_from_por
+			}
+		}
+		POR = {
+		owns_state = 914
+		owns_state = 916
+			}
+		}
+		prerequisite = { focus = KOG_legacy_of_afonso }
+		prerequisite = { focus = KOG_portuguese_labor }
+		bypass = { 
+			OR = { 
+			has_government = social_liberal
+			AND = {
+				owns_state = 914
+				owns_state = 916
+				}
+			}
+		}
+		relative_position_id = KOG_manikongo_proclaimation
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+		POR = {
+		country_event = {
+				id = kog.2
+				days = 7
+			}
+		}
+			log = "[GetDateText]: [Root.GetName]: Focus KOG_manikongo_proclaimation"
+		}
+	}
+
+	focus = {
+		id = KOG_Cabinda_Gathering
+		icon = GFX_goal_KOG_Cabinda_Gathering
+		x = -5
+		y = 11
+		cost = 5
+		available = {
+			has_government = national_populist
+			has_completed_focus = COG_new_realities
+			POR =  { has_government = national_populist }
+			BRA = { has_socialist_government = no }
+			914 = { is_owned_by = ROOT }
+		}
+		bypass = { 
+			has_government = social_liberal
+			has_government = social_democrat
+		}
+		available_if_capitulated = yes
+		prerequisite = { focus = KOG_deal_for_mbanza_kongo }
+		relative_position_id = KOG_manikongo_proclaimation
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			country_event = yun_kogexpand.4
+			KOG = {
+				overlord = {
+					set_autonomy = {
+						target = KOG
+						autonomy_state = autonomy_free
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = KOG_Wise_Men_of_Pindorama
+		icon = GFX_goal_KOG_Wise_Men_of_Pindorama
+		x = 0
+		y = 11
+		cost = 3
+		available = {
+			has_global_flag = KOG_Cabinda_Uniting
+		}
+		available_if_capitulated = no
+		relative_position_id = KOG_manikongo_proclaimation
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			country_event = {
+				id = yun_kogexpand.17
+				days = 3
+			}
+		}
+	}	
+
+	focus = {
+		id = KOG_TRO_Metaracial
+		icon = GFX_goal_POR_burden_empire
+		x = -1
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = KOG_Wise_Men_of_Pindorama }
+		relative_position_id = KOG_Wise_Men_of_Pindorama
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = KOG
+						is_in_faction_with = KOG
+					}
+				}
+				add_political_power = 50
+				add_ideas = KOG_TRO_identity_idea
+			}
+		}
+	}	
+
+	focus = {
+		id = KOG_TRO_Mutual_aid_system
+		icon = GFX_goal_KOG_TRO_Mutual_aid_system
+		x = 1
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = KOG_Wise_Men_of_Pindorama }
+		relative_position_id = KOG_Wise_Men_of_Pindorama
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = KOG
+						is_in_faction_with = KOG
+					}
+				}
+				add_research_slot = 2
+				add_offsite_building = { type = industrial_complex level = 10 }
+			}
+		}
+	}
+
+	focus = {
+		id = KOG_TRO_Citizenship
+		icon = GFX_goal_POR_autonomy
+		x = -2
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = KOG_TRO_Metaracial }
+		relative_position_id = KOG_Wise_Men_of_Pindorama
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = KOG
+						is_in_faction_with = KOG
+					}
+				}
+				add_political_power = 150
+				add_manpower = 50000
+				swap_ideas = {
+					remove_idea = KOG_TRO_identity_idea
+					add_idea = KOG_TRO_identity2_idea
+				}				
+			}
+		}
+	}	
+
+	focus = {
+		id = KOG_TRO_Salazar_Economics
+		icon = GFX_goal_KOG_TRO_Salazar_Economics
+		x = 0
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = KOG_TRO_Metaracial }
+		prerequisite = { focus = KOG_TRO_Mutual_aid_system }
+		relative_position_id = KOG_Wise_Men_of_Pindorama
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			custom_effect_tooltip = KOG_Salazar_Reconstruction_Start
+			every_country = {
+				limit = {
+					OR = {
+						tag = KOG
+						is_in_faction_with = KOG
+					}
+				}
+				add_ideas = idea_salazar_economy
+			}
+		}
+	}	
+	
+	focus = {
+		id = KOG_TRO_Allied_Forces
+		icon = GFX_goal_POR_knights_of_portugal
+		x = 2
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = KOG_TRO_Mutual_aid_system }
+		relative_position_id = KOG_Wise_Men_of_Pindorama
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = KOG
+						is_in_faction_with = KOG
+					}
+				}
+				add_offsite_building = { type = arms_factory level = 10 }
+				add_ideas = KOG_TRO_military_universal_idea
+				set_technology = { expanded_engineer_corps_tech = 1 popup = no }
+				set_technology = { improved_recon_units_tech = 1 popup = no }
+				add_doctrine_cost_reduction = {
+					category = battlefield_support_tree
+					uses = 2
+					cost_reduction = 1
+				}
+				add_doctrine_cost_reduction = {
+					name = land_doc_bonus
+					cost_reduction = 0.5
+					uses = 1
+					category = land_doctrine
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = KOG_TRO_Promote_family_values
+		icon = GFX_goal_COL_Traditional_Family_Roles
+		x = -1
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = KOG_TRO_Citizenship }
+		relative_position_id = KOG_Wise_Men_of_Pindorama
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			add_political_power = 125
+			add_manpower = 20000
+			add_war_support = 0.05
+			add_popularity = { ideology = national_populist popularity = 0.2 }	
+			add_popularity = { ideology = social_conservative popularity = 0.2 }
+			add_popularity = { ideology = authoritarian_democrat popularity = 0.2 }
+			add_popularity = { ideology = paternal_autocrat popularity = 0.2 }		
+		}
+	}
+
+	focus = {
+		id = KOG_TRO_Set_Sail
+		icon = GFX_goal_KOG_TRO_Set_Sail
+		x = 1
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOG_TRO_Allied_Forces }
+		relative_position_id = KOG_Wise_Men_of_Pindorama
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			if = { 
+				limit = {
+					has_dlc_mtg = yes
+				}
+				if = {
+					limit = { NOT = { has_tech = early_ship_hull_light } }
+					set_technology = { early_ship_hull_light = 1 }
+				}
+				if = {
+					limit = { NOT = { has_tech = early_ship_hull_cruiser } }
+					set_technology = { early_ship_hull_cruiser = 1 }
+				}
+				if = {
+					limit = { NOT = { has_tech = coastal_defense_ships } }
+					set_technology = { coastal_defense_ships = 1 }
+				}
+				if = {
+					limit = { NOT = { has_tech = coastal_defense_ships } }
+					set_technology = { coastal_defense_ships = 1 }
+				}
+				if = {
+					limit = { NOT = { has_tech = basic_naval_mines } }
+					set_technology = { basic_naval_mines = 1 }
+				}
+				if = {
+					limit = { NOT = { has_tech = basic_battery } }
+					set_technology = { basic_battery = 1 }
+				}
+				if = {
+					limit = { NOT = { has_tech = basic_torpedo } }
+					set_technology = { basic_torpedo = 1 }
+				}
+			}
+			else = {
+				if = {
+					limit = { NOT = { has_tech = early_destroyer } }
+					set_technology = { early_destroyer = 1 }
+				}
+				if = {
+					limit = { NOT = { has_tech = early_submarine } }
+					set_technology = { early_submarine = 1 }
+				}
+			}			
+			every_country = {
+				limit = {
+					OR = {
+						tag = KOG
+						is_in_faction_with = KOG
+					}
+				}
+				add_offsite_building = { type = dockyard level = 5 }
+				add_equipment_to_stockpile = {
+					type = convoy
+					amount = 500
+					producer = CAN
+				}
+				navy_experience = 50
+				add_ideas = KOG_TRO_navy_idea
+				add_ideas = KOG_TRO_navy_idea2
+				add_tech_bonus = {
+					category = cas_bomber
+					uses = 1
+					bonus = 1
+				}
+				add_tech_bonus = {
+					category = naval_bomber
+					uses = 1
+					bonus = 1
+				}
+				add_timed_idea = {
+					idea = KOG_rapid_naval_modernisation_idea
+					days = 365
+				}
+			}
+			custom_effect_tooltip = KOG_crazy_naval_plan
+			hidden_effect = {
+				112 = {
+					set_state_category = nine
+					add_building_construction = {
+						type = naval_base
+						level = 5
+						instant_build = yes 
+						province = 11805
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 5
+						instant_build = yes 
+						province = 11805
+					}
+					add_building_construction = {
+						type = bunker
+						level = 5
+						instant_build = yes 
+						province = 11805
+					}
+					add_building_construction = {
+						type = air_base
+						level = 5
+						instant_build = yes 
+					}
+				}
+				928 = {
+					set_state_category = five
+					add_building_construction = {
+						type = naval_base
+						level = 3
+						instant_build = yes 
+						province = 12975
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						instant_build = yes 
+						province = 12975
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						instant_build = yes 
+						province = 12975
+					}
+					add_building_construction = {
+						type = air_base
+						level = 3
+						instant_build = yes 
+					}
+				}
+				914 = {
+					set_state_category = seven
+					add_building_construction = {
+						type = naval_base
+						level = 5
+						instant_build = yes 
+						province = 2115
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 5
+						instant_build = yes 
+						province = 2115
+					}
+					add_building_construction = {
+						type = bunker
+						level = 5
+						instant_build = yes 
+						province = 2115
+					}
+					add_building_construction = {
+						type = air_base
+						level = 5
+						instant_build = yes 
+					}
+				}
+				500 = {
+					set_state_category = eight
+					add_building_construction = {
+						type = naval_base
+						level = 5
+						instant_build = yes 
+						province = 10980
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 5
+						instant_build = yes 
+						province = 10980
+					}
+					add_building_construction = {
+						type = bunker
+						level = 5
+						instant_build = yes 
+						province = 10980
+					}
+					add_building_construction = {
+						type = air_base
+						level = 5
+						instant_build = yes 
+					}
+				}
+				321 = {
+					set_state_category = seven
+					add_building_construction = {
+						type = naval_base
+						level = 3
+						instant_build = yes 
+						province = 1273
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						instant_build = yes 
+						province = 1273
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						instant_build = yes 
+						province = 1273
+					}
+					add_building_construction = {
+						type = air_base
+						level = 3
+						instant_build = yes 
+					}
+				}
+				729 = {
+					set_state_category = seven
+					add_building_construction = {
+						type = naval_base
+						level = 3
+						instant_build = yes 
+						province = 4189
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						instant_build = yes 
+						province = 4189
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						instant_build = yes 
+						province = 4189
+					}
+					add_building_construction = {
+						type = air_base
+						level = 3
+						instant_build = yes 
+					}
+				}	
+				950 = {
+					set_state_category = five
+					add_building_construction = {
+						type = naval_base
+						level = 1
+						instant_build = yes 
+						province = 8245
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 1
+						instant_build = yes 
+						province = 8245
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes 
+						province = 8245
+					}
+					add_building_construction = {
+						type = air_base
+						level = 1
+						instant_build = yes 
+					}
+				}								
+			}
+		}
+	}
+
+	focus = {
+		id = KOG_Portuguese_Tropicalismo
+		icon = GFX_goal_KOG_Portuguese_Tropicalismo
+		x = 0
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = KOG_TRO_Promote_family_values }
+		prerequisite = { focus = KOG_TRO_Set_Sail }
+		relative_position_id = KOG_Wise_Men_of_Pindorama
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			set_stability = 0.5
+			swap_ideas = {
+				remove_idea = KOG_TRO_identity2_idea
+				add_idea = KOG_TRO_Finalvent_idea
+			}
+		}
+	}
+
+	focus = {
+		id = KOG_Meridian_Side
+		icon = GFX_goal_KOG_Meridian_Side
+		x = -2
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = KOG_Portuguese_Tropicalismo }
+		relative_position_id = KOG_Wise_Men_of_Pindorama
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			add_stability = -0.1
+			add_war_support = -0.1
+		}
+	}	
+	focus = {
+		id = KOG_Attacking_Uruguay
+		icon = GFX_goal_uruguay
+		x = -2
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = KOG_Meridian_Side }
+		relative_position_id = KOG_Wise_Men_of_Pindorama
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			create_wargoal = { 
+				target = URG
+				type = annex_everything 
+			}
+			add_state_core = 300
+		}
+	}
+	
+	focus = {
+		id = KOG_Fate_of_Hispanic_America
+		icon = GFX_goal_NIC_Defend_Indo_Hispanic_Race
+		x = -2
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = KOG_Attacking_Uruguay }
+		relative_position_id = KOG_Wise_Men_of_Pindorama
+		ai_will_do = {
+			factor = 0
+		}
+		completion_reward = {
+			custom_effect_tooltip = KOG_attack_hispanic_america
+			hidden_effect = {
+				create_wargoal = { target = FOP type = annex_everything }
+				create_wargoal = { target = CHL type = annex_everything }
+				create_wargoal = { target = ARG type = annex_everything }
+				create_wargoal = { target = URG type = annex_everything }
+				create_wargoal = { target = PAR type = annex_everything }
+				create_wargoal = { target = BOL type = annex_everything }
+				create_wargoal = { target = BRA type = annex_everything }
+				create_wargoal = { target = PRU type = annex_everything }
+				create_wargoal = { target = ECU type = annex_everything }
+				create_wargoal = { target = COL type = annex_everything }
+				create_wargoal = { target = VEN type = annex_everything }
+				create_wargoal = { target = PAN type = annex_everything }
+				create_wargoal = { target = COS type = annex_everything }
+				create_wargoal = { target = NIC type = annex_everything }
+				create_wargoal = { target = HON type = annex_everything }
+				create_wargoal = { target = ELS type = annex_everything }
+				create_wargoal = { target = GUA type = annex_everything }
+				create_wargoal = { target = MEX type = annex_everything }
+				create_wargoal = { target = CUB type = annex_everything }
+				create_wargoal = { target = HAI type = annex_everything }
+				create_wargoal = { target = DOM type = annex_everything }	
+			}
+		}
+	}
+
+	focus = {
+		id = KOG_Caribbean_Sea
+		icon = GFX_goal_caribbean
+		x = -4
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = KOG_Meridian_Side }
+		relative_position_id = KOG_Wise_Men_of_Pindorama
+		ai_will_do = {
+			factor = 0
+		}
+		completion_reward = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = JAM
+						is_core_of = CUB
+						is_core_of = CAF
+					}
+				}
+				add_core_of = KOG
+			}
+		}
+	}	
+
+	focus = {
+		id = KOG_Challenging_Anglo_Hegemony
+		icon = GFX_goal_NEE_Turn_Away_From_Anglophilia
+		x = -4
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = KOG_Caribbean_Sea }
+		relative_position_id = KOG_Wise_Men_of_Pindorama
+		ai_will_do = {
+			factor = 0
+		}
+		completion_reward = {
+			create_wargoal = { 
+				target = CAF
+				type = annex_everything 
+			}
+			create_wargoal = { 
+				target = CAN
+				type = annex_everything 
+			}
+		}
+	}		
+		
+	focus = {
+		id = KOG_Dark_Continent
+		icon = GFX_goal_KOG_Dark_Continent
+		x = 0
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = KOG_Portuguese_Tropicalismo }
+		relative_position_id = KOG_Wise_Men_of_Pindorama
+		ai_will_do = {
+			factor = 80
+		}
+		completion_reward = {
+			add_stability = 0.1
+			add_war_support = 0.1
+		}
+	}	
+
+	focus = {
+		id = KOG_Mapa_cor_de_rosa
+		icon = GFX_goal_POR_pink_map
+		x = 0
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = KOG_Dark_Continent }
+		relative_position_id = KOG_Wise_Men_of_Pindorama
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			if = {
+				limit = { 
+					country_exists = POR
+					544 = { is_owned_and_controlled_by_ROOT_or_ally = yes } 
+				}
+				544 = { transfer_state_to = ROOT add_core_of = ROOT }
+			}
+			if = {
+				limit = { 
+					country_exists = POR
+					950 = { is_owned_and_controlled_by_ROOT_or_ally = yes } 
+				}
+				950 = { transfer_state_to = ROOT add_core_of = ROOT }
+			}
+			if = {
+				limit = { 
+					country_exists = POR
+					954 = { is_owned_and_controlled_by_ROOT_or_ally = yes } 
+				}
+				954 = { transfer_state_to = ROOT add_core_of = ROOT }
+			}
+			if = {
+				limit = { 
+					country_exists = POR
+					957 = { is_owned_and_controlled_by_ROOT_or_ally = yes } 
+				}
+				957 = { transfer_state_to = ROOT }
+			}
+			if = {
+				limit = { 
+					country_exists = POR
+					958 = { is_owned_and_controlled_by_ROOT_or_ally = yes } 
+				}
+				958 = { transfer_state_to = ROOT }
+			}
+			if = {
+				limit = { 
+					country_exists = POR
+					956 = { is_owned_and_controlled_by_ROOT_or_ally = yes } 
+				}
+				956 = { transfer_state_to = ROOT }
+			}
+			if = {
+				limit = { 
+					country_exists = POR
+					955 = { is_owned_and_controlled_by_ROOT_or_ally = yes } 
+				}
+				955 = { transfer_state_to = ROOT }
+			}
+			if = {
+				limit = { 
+					country_exists = POR
+					813 = { is_owned_and_controlled_by_ROOT_or_ally = yes } 
+				}
+				813 = { transfer_state_to = ROOT }
+			}
+			if = {
+				limit = { 
+					country_exists = POR
+					871 = { is_owned_and_controlled_by_ROOT_or_ally = yes } 
+				}
+				871 = { transfer_state_to = ROOT }
+			}
+			if = {
+				limit = { 
+					country_exists = POR
+					879 = { is_owned_and_controlled_by_ROOT_or_ally = yes } 
+				}
+				879 = { transfer_state_to = ROOT }
+			}
+			if = {
+				limit = { 
+					country_exists = POR
+					1183 = { is_owned_and_controlled_by_ROOT_or_ally = yes } 
+				}
+				1183 = { transfer_state_to = ROOT }
+			}
+			if = {
+				limit = { 
+					country_exists = POR
+					545 = { is_owned_and_controlled_by_ROOT_or_ally = yes } 
+				}
+				545 = { transfer_state_to = ROOT }
+			}
+			957 = {
+				add_claim_by = ROOT
+			}
+			958 = {
+				add_claim_by = ROOT
+			}
+			956 = {
+				add_claim_by = ROOT
+			}
+			955 = {
+				add_claim_by = ROOT
+			}
+			813 = {
+				add_claim_by = ROOT
+			}
+			871 = {
+				add_claim_by = ROOT
+			}
+			879 = {
+				add_claim_by = ROOT
+			}
+			1183 = {
+				add_claim_by = ROOT
+			}
+			545 = {
+				add_claim_by = ROOT
+			}
+		}
+	}	
+
+	focus = {
+		id = KOG_Cape_of_Storms
+		icon = GFX_patchingupthecracks
+		x = 0
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = KOG_Mapa_cor_de_rosa }
+		relative_position_id = KOG_Wise_Men_of_Pindorama
+		ai_will_do = {
+			factor = 0
+		}
+		completion_reward = {
+			create_wargoal = { 
+				target = NMB
+				type = annex_everything 
+			}
+			create_wargoal = { 
+				target = SAF
+				type = annex_everything 
+			}
+		}
+	}	
+
+	focus = {
+		id = KOG_Age_of_Rice_and_Salt
+		icon = GFX_goal_KOG_Age_of_Rice_and_Salt
+		x = 2
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = KOG_Portuguese_Tropicalismo }
+		relative_position_id = KOG_Wise_Men_of_Pindorama
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			add_stability = -0.15
+			add_war_support = -0.15
+		}
+	}
+	
+	focus = {
+		id = KOG_Sword_of_Islam
+		icon = GFX_goal_Unite_Arabia
+		x = 2
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = KOG_Age_of_Rice_and_Salt }
+		relative_position_id = KOG_Wise_Men_of_Pindorama
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			custom_effect_tooltip = KOG_attack_islam_goal
+			hidden_effect = {
+				create_wargoal = {
+					type = annex_everything
+					target = EGY
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = TUR
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = SAU
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = YEM
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = OMA
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = LBA
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = SOM
+				}							
+			}
+		}
+	}
+	
+	focus = {
+		id = KOG_Epic_of_Da_Gama
+		icon = GFX_PRF_new_india
+		x = 2
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = KOG_Sword_of_Islam }
+		relative_position_id = KOG_Wise_Men_of_Pindorama
+		ai_will_do = {
+			factor = 0
+		}
+		completion_reward = {
+			custom_effect_tooltip = KOG_attack_indian_goal
+			hidden_effect = {
+				create_wargoal = { 
+					target = DEH
+					type = annex_everything 
+				}
+				create_wargoal = { 
+					target = BHC
+					type = annex_everything 
+				}
+				create_wargoal = { 
+					target = PRF
+					type = annex_everything 
+				}
+				create_wargoal = { 
+					target = NEP
+					type = annex_everything 
+				}
+				create_wargoal = { 
+					target = BHU
+					type = annex_everything 
+				}
+				create_wargoal = { 
+					target = SKM
+					type = annex_everything 
+				}
+				create_wargoal = { 
+					target = AFG
+					type = annex_everything 
+				}
+				create_wargoal = { 
+					target = BRM
+					type = annex_everything 
+				}				
+			}
+		}
+	}
+	
+	focus = {
+		id = KOG_Dragons_Fall
+		icon = GFX_goal_VIN_dragons_roar_nonaggression_flames_life
+		x = 4
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = KOG_Age_of_Rice_and_Salt }
+		relative_position_id = KOG_Wise_Men_of_Pindorama
+		ai_will_do = {
+			factor = 0
+		}
+		completion_reward = {
+			custom_effect_tooltip = KOG_attack_china_goal
+			hidden_effect = {
+				create_wargoal = { 
+					target = QIE
+					type = annex_everything 
+				}
+				create_wargoal = { 
+					target = FNG
+					type = annex_everything 
+				}
+				create_wargoal = { 
+					target = CHI
+					type = annex_everything 
+				}
+				create_wargoal = { 
+					target = ANQ
+					type = annex_everything 
+				}
+				create_wargoal = { 
+					target = GXC
+					type = annex_everything 
+				}
+				create_wargoal = { 
+					target = SHX
+					type = annex_everything 
+				}
+				create_wargoal = { 
+					target = SQI
+					type = annex_everything 
+				}
+				create_wargoal = { 
+					target = XSM
+					type = annex_everything 
+				}
+				create_wargoal = { 
+					target = SZC
+					type = annex_everything 
+				}
+				create_wargoal = { 
+					target = YUN
+					type = annex_everything 
+				}
+				create_wargoal = { 
+					target = LEP
+					type = annex_everything 
+				}
+				create_wargoal = { 
+					target = SIK
+					type = annex_everything 
+				}
+				create_wargoal = { 
+					target = TIB
+					type = annex_everything 
+				}
+				create_wargoal = { 
+					target = MON
+					type = annex_everything 
+				}
+				create_wargoal = { 
+					target = TAN
+					type = annex_everything 
+				}				
+			}
+		}
+	}	
+
+	focus = {
+		id = KOG_Master_of_Zipangu
+		icon = GFX_goal_AFG_fuck_JAP
+		x = 4
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = KOG_Dragons_Fall }
+		relative_position_id = KOG_Wise_Men_of_Pindorama
+		ai_will_do = {
+			factor = 0
+		}
+		completion_reward = {
+			create_wargoal = { 
+				target = JAP
+				type = annex_everything 
+			}
+		}
+	}	
+	
+	focus = {
+		id = KOG_claims_of_greatness
+		icon = GFX_goal_LPD_militant_congo
+		x = 0
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+		focus = KOG_mouth_of_the_congo
+		}
+		relative_position_id = KOG_manikongo_proclaimation
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus KOG_claims_of_greatness"
+		swap_ideas = {
+				remove_idea = KOG_claims_of_greatness_idea
+				add_idea = KOG_claims_of_greatness_2_idea
+		}
+		custom_effect_tooltip = KOG_claims_of_greatness_tt
+		}
+	}
+	
+	focus = {
+		id = KOG_our_lost_brethren
+		icon = GFX_goal_BBR_Uniting_Diaspora
+		x = 4
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = KOG_fate_of_monarchy
+			focus = KOG_masters_of_the_basin
+		}
+		relative_position_id = KOG_manikongo_proclaimation
+		ai_will_do = {
+			factor = 0
+		}
+		completion_reward = {
+		add_ideas = idea_sa_kongo_people
+		every_state = {
+			limit = { is_core_of = BRA }
+			add_core_of = KOG
+		}
+		if = {
+			limit = { country_exists = BRA }
+			activate_targeted_decision = { target = BRA decision = KOG_attack_country }
+		}
+			log = "[GetDateText]: [Root.GetName]: Focus KOG_manikongo_proclaimation"
+		}
+	}
+	
+	focus = {
+		id = KOG_afro_bolivian_ties
+		icon = GFX_goal_KOG_Afro_Bolivian_Ties
+		x = 4
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+			BRA = {
+                exists = no
+			}
+		}
+		prerequisite = { focus = KOG_our_lost_brethren }
+		relative_position_id = KOG_manikongo_proclaimation
+		ai_will_do = {
+			factor = 0
+		}
+		completion_reward = {
+		if = {
+			limit = { country_exists = BOL }
+			activate_targeted_decision = { target = BOL decision = KOG_attack_country }
+		}
+		if = {
+			limit = {
+			country_exists = PRU
+			PRU = { owns_state = 302 }
+			}
+			activate_targeted_decision = { target = PRU decision = KOG_attack_country }
+		}
+		country_event = {
+				id = kog.15
+				days = 21
+		}
+			log = "[GetDateText]: [Root.GetName]: Focus KOG_manikongo_proclaimation"
+		}
+	}
+
+	focus = {
+		id = KOG_Bantu_Ambition
+		icon = GFX_goal_KOG_Bantu_Ambition
+		x = 6
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = KOG_fate_of_monarchy
+			focus = KOG_masters_of_the_basin
+		}
+		relative_position_id = KOG_manikongo_proclaimation
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			KOG = { 
+				country_event = yun_kogexpand.1
+			}
+		}
+	}
+	
+	focus = {
+		id = KOG_Niger_Congo_Family
+		icon = GFX_goal_KOG_Niger_Congo_Family
+		x = 6
+		y = 11
+		cost = 5
+		available = {
+			has_country_flag = KOG_accept_bantu_dream
+		}
+		available_if_capitulated = yes
+		prerequisite = { focus = KOG_Bantu_Ambition }
+		relative_position_id = KOG_manikongo_proclaimation
+		ai_will_do = {
+			factor = 0
+		}
+		completion_reward = {
+			every_country = {
+				limit = { is_in_array = { global.MAF_collapse_tags = THIS } }
+				ROOT = {
+				create_wargoal = {
+				type = annex_everything target = PREV
+						}
+					}
+				}
+				every_state = {
+				limit = { has_state_flag = MAF_claim }
+				KOG = {
+					add_state_core = PREV
+					}
+				}
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = LIB
+							is_core_of = SIE
+							is_core_of = GNA
+							is_core_of = SEN
+							is_core_of = MAL
+							is_core_of = BFA
+							is_core_of = NER
+							is_core_of = WAD
+							is_core_of = ANG
+							is_core_of = ZIM
+							is_core_of = MZB
+							is_core_of = BOT
+							is_core_of = SAF
+							is_core_of = SUD
+						}
+					}
+					add_core_of = KOG
+				}
+				add_state_core = 296
+				add_state_core = 297
+				add_state_core = 925
+				add_state_core = 708
+				add_state_core = 892
+				add_state_core = 85
+				add_state_core = 738			
+		}
+	}
+
+	focus = {
+		id = KOG_King_of_Two_Worlds
+		icon = GFX_goal_KOG_King_of_Two_Worlds
+		x = 5
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+			BRA = {
+                exists = no
+			}
+		}
+		prerequisite = { 
+			focus = KOG_Bantu_Ambition
+			focus = KOG_our_lost_brethren
+		}
+		relative_position_id = KOG_manikongo_proclaimation
+		ai_will_do = {
+			factor = 0
+		}
+		completion_reward = {
+			KOG = { 
+				country_event = yun_kogexpand.3
+			}
+		}
+	}	
+
+	focus = {
+		id = KOG_mouth_of_the_congo
+		icon = GFX_goal_KIV_take_leopoldville
+		x = 0
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+		focus = KOG_portuguese_patronage
+		focus = KOG_traditionalist_revival
+		}
+		relative_position_id = KOG_manikongo_proclaimation
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		unlock_decision_tooltip = KOG_unite_bas_congo
+			log = "[GetDateText]: [Root.GetName]: Focus KOG_manikongo_proclaimation"
+		}
+	}
+	
+	### Kasa-Vubu Coup ###
+	
+	focus = {
+		id = KOG_kasavubus_redoubt
+		icon = GFX_goal_KOG_Kasa_Vubus_Redoubt
+		x = 18
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		available = { has_government = social_liberal }
+		allow_branch = { has_government = social_liberal }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus KOG_manikongo_proclaimation"
+			custom_effect_tooltip = unlock_focuses
+		}
+	}
+	
+	focus = {
+		id = KOG_embrace_nationalist_faiths
+		icon = GFX_goal_KOG_Embrace_Nzambi_Mpungus_Light
+		x = -2
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		allow_branch = { has_government = social_liberal }
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOG_kasavubus_redoubt }
+		relative_position_id = KOG_kasavubus_redoubt
+		completion_reward = {
+		add_political_power = 125
+		add_stability = 0.1
+		add_war_support = 0.1
+		add_popularity = { ideology = social_liberal popularity = 0.1 }
+			log = "[GetDateText]: [Root.GetName]: Focus KOG_manikongo_proclaimation"
+		}
+	}
+	
+	focus = {
+		id = KOG_capitalist_reforms
+		icon = GFX_goal_KIV_equal_market
+		x = 2
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		allow_branch = { has_government = social_liberal }
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOG_kasavubus_redoubt }
+		relative_position_id = KOG_kasavubus_redoubt
+		completion_reward = {
+		random_owned_state = {
+		prioritize = { 914 916 928 }
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+			}
+		}
+		random_owned_state = { 
+		prioritize = { 914 916 928 }
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+		}
+		add_ideas = KOG_capitalist_reforms_idea
+			log = "[GetDateText]: [Root.GetName]: Focus KOG_manikongo_proclaimation"
+		}
+	}
+	
+	focus = {
+		id = KOG_enshrine_bakongo_nationalism
+		icon = GFX_goal_KOG_Enshrine_Bakongo_Nationalism
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		allow_branch = { has_government = social_liberal }
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOG_kasavubus_redoubt }
+		relative_position_id = KOG_kasavubus_redoubt
+		completion_reward = {
+		add_manpower = 5000
+		add_ideas = KOG_enshrine_bakongo_nationalism_idea
+		add_research_slot = 1
+			log = "[GetDateText]: [Root.GetName]: Focus KOG_manikongo_proclaimation"
+		}
+	}
+	
+	focus = {
+		id = KOG_crush_portuguese_influence
+		icon = GFX_goal_KOG_Crush_Portuguese_Influence
+		x = -1
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		allow_branch = { has_government = social_liberal }
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOG_embrace_nationalist_faiths }
+		prerequisite = { focus = KOG_enshrine_bakongo_nationalism }
+		relative_position_id = KOG_kasavubus_redoubt
+		completion_reward = {
+		add_political_power = 100
+		add_command_power = 50
+		add_war_support = 0.05
+		add_popularity = { ideology = social_liberal popularity = 0.1 }
+		add_manpower = -2500
+		add_popularity = { ideology = national_populist popularity = -0.25 }
+		POR = { add_opinion_modifier = { target = KOG modifier = large_decrease } }
+		if = {
+		limit = {
+		has_idea = KOG_reliance_on_portugal_idea
+		}
+		remove_ideas = KOG_reliance_on_portugal_idea
+		}
+		if = {
+		limit = {
+		has_idea = KOG_legacy_of_afonso_idea
+		}
+		remove_ideas = KOG_legacy_of_afonso_idea
+		}
+		if = {
+		limit = {
+		KOG = {
+		is_subject_of = POR
+			}
+		}
+		POR = {
+			end_puppet = KOG
+		}
+		leave_faction = yes
+		separate_peace_all_wars = yes
+		}
+		set_country_flag = KOG_kasavubu_free_from_por
+			log = "[GetDateText]: [Root.GetName]: Focus KOG_manikongo_proclaimation"
+		}
+	}
+	
+	focus = {
+		id = KOG_abako_constitutionalism
+		icon = GFX_goal_KOG_Constitutionalism_Under_ABAKO
+		x = 1
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		allow_branch = { has_government = social_liberal }
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = KOG_enshrine_bakongo_nationalism }
+		prerequisite = { focus = KOG_capitalist_reforms }
+		relative_position_id = KOG_kasavubus_redoubt
+		completion_reward = {
+		add_ideas = KOG_abako_constitutionalism_idea
+		country_event = {
+				id = kog.11
+				days = 28
+		}
+			log = "[GetDateText]: [Root.GetName]: Focus KOG_manikongo_proclaimation"
+		}
+	}
+}	
+	

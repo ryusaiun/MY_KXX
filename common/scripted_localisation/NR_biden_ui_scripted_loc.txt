@@ -1,0 +1,190 @@
+
+
+defined_text = {
+	name = NRGetHOGTitle  #定义按钮名字
+	text = {
+    trigger = {
+      tag = ROM
+	  has_idea = ROM_Gheorghe_Clime_hog_npo
+    }
+    localization_key = IO_OR_LEADER
+  }
+  text = {
+    trigger = {
+      tag = ROM
+	  has_idea = ROM_Mihai_Strescu_hog_tot
+    }
+    localization_key = COM_OR_LEADER
+  }
+  text = {
+    trigger = {
+      tag = BAY
+	  OR = {
+		has_idea = BAY_Paul_Nikolaus_Cossmann_hog_npo
+		has_idea = BAY_Fritz_Gerlich_hog_ade
+		has_idea = BAY_Hans_Erhard_hog_sco
+		}
+    }
+    localization_key = KZ_OR_LEADER
+  }
+  text = {
+    trigger = {
+      tag = MNT
+	  has_idea = MNT_Dracha_Mikhailovich_hog_npo
+    }
+    localization_key = PM_OR_LEADER
+  }
+}
+defined_text = {
+	name = NRGetFORHOGTitle  ##定义外交
+	text = {
+    trigger = {
+      tag = BAY
+	  OR = {
+		  has_idea = BAY_Paul_Nikolaus_Cossmann_hog_npo
+		  has_idea = BAY_Fritz_Gerlich_hog_ade
+		  has_idea = BAY_Hans_Erhard_hog_sco
+		}
+    }
+    localization_key = CH_OR_PM2
+  }
+  text = {
+    trigger = {
+      tag = ROM
+	  has_idea = ROM_Gheorghe_Clime_hog_npo
+    }
+    localization_key = IORM_OR_COMMANDER2
+  }
+  text = {
+    trigger = {
+      tag = ROM
+	  has_idea = ROM_Mihai_Strescu_hog_tot
+    }
+    localization_key = COM_OR_LEADER2
+  }
+  text = {
+    trigger = {
+      tag = MNT
+	  has_idea = MNT_Dracha_Mikhailovich_hog_npo
+    }
+    localization_key = COU_OR_LEADER2
+  }
+}
+
+defined_text = {
+	name = NRGetHeadDescription #定义副领袖介绍
+
+}
+
+defined_text = {
+	name = NRGetPrimeMinister  #定义副领袖名字
+  text = {
+    trigger = {
+      has_idea = ROM_Mihai_Strescu_hog_tot
+    }
+    localization_key = ROM_Mihai_Strescu_hog_tot
+  }
+  text = {
+    trigger = {
+      has_idea = BAY_Paul_Nikolaus_Cossmann_hog_npo
+    }
+    localization_key = BAY_Paul_Nikolaus_Cossmann_hog_npo
+  }
+  text = {
+    trigger = {
+      has_idea = ROM_Gheorghe_Clime_hog_npo
+    }
+    localization_key = ROM_Gheorghe_Clime_hog_npo
+  }
+  text = {
+    trigger = {
+      has_idea = BAY_Fritz_Gerlich_hog_ade
+    }
+    localization_key = BAY_Fritz_Gerlich_hog_ade
+  }
+  text = {
+    trigger = {
+      has_idea = BAY_Hans_Erhard_hog_sco
+    }
+    localization_key = BAY_Hans_Erhard_hog_sco
+  }
+  text = {
+    trigger = {
+      has_idea = MNT_Dracha_Mikhailovich_hog_npo
+    }
+    localization_key = MNT_Dracha_Mikhailovich_hog_npo
+  }
+}
+
+defined_text = {
+	name = NRGetPMPortrait   #定义图片
+	text = {
+    trigger = {
+      has_idea = ROM_Gheorghe_Clime_hog_npo
+    }
+    localization_key = "GFX_Portrait_Gheorghe_Clime"
+  }
+  text = {
+    trigger = {
+      has_idea = ROM_Mihai_Strescu_hog_tot
+    }
+    localization_key = "GFX_Portrait_Mihai_Strescu"
+  }
+  text = {
+    trigger = {
+      has_idea = BAY_Paul_Nikolaus_Cossmann_hog_npo
+    }
+    localization_key = "GFX_Portrait_Bavaria_Paul_Nikolaus_Cossmann"
+  }
+  text = {
+    trigger = {
+      has_idea = BAY_Fritz_Gerlich_hog_ade
+    }
+    localization_key = "GFX_Portrait_Fritz_Gerlich"
+  }
+  text = {
+    trigger = {
+      has_idea = BAY_Hans_Erhard_hog_sco
+    }
+    localization_key = "GFX_Portrait_Hans_Erhard"
+  }
+  text = {
+    trigger = {
+      has_idea = MNT_Dracha_Mikhailovich_hog_npo
+    }
+    localization_key = "GFX_Portrait_SER_Draza_Mihailovic"
+  }
+}
+
+defined_text = {
+	name = NRGetThirdLeaderTitle   #三头政府定义
+	text = {
+		trigger = {
+			NOT = {
+				NR_LEADER_GUI_USES_CUSTOM_TITLE = yes
+			}
+		}
+		localization_key = NR_NORMAL_FOR_TITLE
+	}
+	text = {
+		trigger = {
+			NR_LEADER_GUI_USES_CUSTOM_TITLE = yes
+		}
+		localization_key = NR_CUSTOM_FOR_TITLE
+	}
+}
+
+defined_text = {
+	name = NRGetThirdLeaderTitle  #第三领袖外交按钮
+	
+}
+
+defined_text = {
+	name = NRGetOtherPrimeMinister  #第三领袖名字
+	
+}
+
+defined_text = {
+	name = NRGetOtherPMPortrait  #第三领袖图片
+	
+}

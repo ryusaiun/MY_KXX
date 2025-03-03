@@ -1,0 +1,834 @@
+FE_league_solar_decisions_cat = {
+	FE_join_league_solar = {
+		ai_will_do = {
+			factor = 1
+		}
+		icon = GFX_decision_join_fra
+		available = {
+			has_completed_focus = FIN_french_vdohnoveniye
+			FIN = { has_war_with = ENG
+		}
+	}
+		priority = 10
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision BL_first_decision"
+			CAN = {
+				add_to_faction = ROOT
+			}
+		}
+	}
+}
+
+FE_titans_cat = {
+	FE_build_one_titan = {
+		ai_will_do = {
+			factor = 1
+		}
+		icon = GFX_decision_join_fra
+		available = {
+			has_completed_focus = FIN_war_churches
+			num_of_civilian_factories_available_for_projects > 2
+		}
+		modifier = {
+			civilian_factory_use = 3
+		}
+		priority = 10
+		days_re_enable = 10
+		days_remove = 90
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision BL_first_decision"
+			custom_effect_tooltip = FE_build_one_titan_tt
+			add_to_variable = { num_of_battle_temples_built = 1 }
+			add_to_variable = { egyptian_battle_temples_army_defence_factor = 0.05 }
+			add_to_variable = { egyptian_battle_temples_army_attack_factor = 0.05 }
+			add_to_variable = { egyptian_battle_temples_supply_consumption_factor = 0.05 }
+		}
+	}
+}
+
+
+FE_politics_cat = {
+	FE_rename_helsinki = {
+		ai_will_do = {
+			factor = 1
+		}
+		icon = GFX_decision_join_fra
+		available = {
+              has_completed_focus = FIN_pharaoh_of_finland
+		}
+		highlight_states = { 
+			highlight_state_targets = {
+				state = 840
+			}
+			highlight_provinces = {
+				11105
+			}
+		}
+		priority = 10
+		days_re_enable = 10
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision FE_rename_helsinki"
+			840 = { set_state_name = FIN_NEW_CAIRO_STATE }
+			set_province_name = { id = 11105 name = "FIN_NEW_CAIRO_PROVINCE" }
+			set_country_flag = fin_CAP
+		}
+	}
+}
+FE_PR = {
+	fe_p = {	
+		cost = 100
+		fire_only_once = yes
+		visible = {
+			has_country_flag = fe_start
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		icon = GFX_decision_join_fra
+		modifier = {
+	   	}
+		complete_effect = {  
+			add_ideas = FIN_work
+			custom_effect_tooltip = FIN_start
+			set_country_flag = fe_p_start
+		}
+		remove_effect = {
+		}
+	}
+	fe_p1 = {     
+		activation = {                         
+			has_country_flag = fe_p_start
+		}                                   
+		available = {      
+			is_puppet = yes
+		}
+		is_good = yes                     
+	
+		days_mission_timeout = 420
+		timeout_effect = {    
+			clr_country_flag = fe_p_start
+			clr_country_flag = fe_start   
+			set_country_flag = fe_done
+			country_event = {
+				id = shizo_finland.13
+			}
+		}
+		complete_effect = {                             
+		}
+	}
+	fe_p2 = {	
+		cost = 10
+		days_remove = 30
+		
+		fire_only_once = NO
+		days_re_enable = 5
+		available = { has_country_flag = fe_p_start
+		NOT = {
+			has_country_flag = FE_bulid
+		  }
+		 }
+		visible = {
+			has_country_flag = fe_p_start
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		modifier = {
+	   	}
+		complete_effect = {  
+			set_country_flag = FE_bulid
+			add_stability = -0.05
+            add_war_support = -0.05
+		}
+		remove_effect = {
+			add_days_mission_timeout = {
+				mission = fe_p1
+				days = -30
+				} 
+				clr_country_flag = FE_bulid
+		}
+	}
+	fe_p3 = {	
+		cost = 10
+		days_remove = 30
+		fire_only_once = no
+		days_re_enable = 5
+		available = { has_country_flag = fe_p_start
+		NOT = {
+			has_country_flag = FE_bulid
+		  }
+		 }
+		visible = {
+			has_country_flag = fe_p_start
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		modifier = {
+	   	}
+		complete_effect = {  
+			set_country_flag = FE_bulid
+			swap_ideas = {
+				remove_idea = FIN_work
+				add_idea = FIN_work_2
+			  }
+		}
+		remove_effect = {
+			clr_country_flag = FE_bulid
+			  add_days_mission_timeout = {
+				mission = fe_p1
+				days = -60
+				} 
+				hidden_effect = {
+				swap_ideas = {
+					remove_idea = FIN_work_2
+					add_idea = FIN_work
+				  }
+				}
+		}
+	}
+	fe_p4 = {	
+		cost = 10
+		days_remove = 30
+		days_re_enable = 5
+		fire_only_once = no
+		available = { has_country_flag = fe_p_start
+		NOT = {
+			has_country_flag = FE_bulid
+		  }
+		 }
+		visible = {
+			has_country_flag = fe_p_start
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		modifier = {
+			weekly_manpower = -200
+	   	}
+		complete_effect = {  
+		}
+		remove_effect = {
+			add_days_mission_timeout = {
+				mission = fe_p1
+				days = -40
+				} 
+			clr_country_flag = FE_bulid
+		}
+	}
+	fe_p5 = {	
+		cost = 10
+		days_remove = 30
+		days_re_enable = 5
+		fire_only_once = no
+		available = { has_country_flag = fe_p_start
+		NOT = {
+			has_country_flag = FE_bulid
+		  }
+		 }
+		visible = {
+			has_country_flag = fe_p_start
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		modifier = {
+			civilian_factory_use = 3 
+	   	}
+		complete_effect = {  
+			
+		}
+		remove_effect = {
+			add_days_mission_timeout = {
+				mission = fe_p1
+				days = -50
+				} 
+			clr_country_flag = FE_bulid
+		}
+	}
+}
+ FE_kill = {
+	fe_kill1 = {
+		
+		icon = GFX_decision_join_fra
+		
+		cost = 30
+		days_remove = 50
+		
+		fire_only_once = yes
+
+		available = { 
+				 has_full_control_of_state = 195
+		 }
+		ai_will_do = {
+			factor = 10
+		}
+		modifier = {
+			weekly_manpower = -500
+	   	}
+		complete_effect = {  
+			every_state = {
+				limit = {
+				  OR = {
+				State = 1328
+				  State = 195
+				  State = 208
+				  State = 1291
+				  State = 1288
+				  State = 209
+				  State = 1289
+				  State = 263
+				  State = 264
+				  State = 244
+				  State = 247
+				  State = 246
+				  State = 210
+				  State = 1287
+				  State = 1290
+				  State = 880
+				}
+			  }
+				add_manpower = -74153
+			  }
+			}
+		remove_effect = {
+			every_state = {
+				limit = {
+				  OR = {
+				  State = 263
+				  State = 195
+				  State = 247
+				  State = 209
+				}
+			  }
+				set_state_category = wasteland
+			  }
+			  set_country_flag = fe_kill_1
+		}
+	}
+	fe_kill2 = {
+		
+		icon = GFX_decision_join_fra
+		
+		cost = 30
+		days_remove = 60
+		
+		fire_only_once = yes
+
+		available = { 
+				  has_full_control_of_state = 219
+		 }
+		ai_will_do = {
+			factor = 10
+		}
+		modifier = {
+			weekly_manpower = -500
+	   	}
+		complete_effect = {  
+			every_state = {
+				limit = {
+				  OR = {
+				State = 755
+				  State = 243
+				  State = 242
+				  State = 205
+				  State = 219
+				  State = 253
+				  State = 252
+				  State = 1204
+				  State = 255
+				  State = 239
+				  State = 265
+				  State = 240
+				  State = 260
+				  State = 257
+				  State = 1205
+				  State = 254
+				  State = 258
+				  State = 1299
+				  State = 223
+				  State = 222
+				  State = 220
+				  State = 821
+				  State = 1299
+				  State = 223
+				  State = 1229
+				  State = 224
+
+
+				}
+			  }
+			  add_manpower = -95241
+			  }
+			}
+		remove_effect = {
+			every_state = {
+				limit = {
+				  OR = {
+				  State = 219
+				  State = 242
+				  State = 252
+				  State = 260
+				}
+			  }
+				set_state_category = wasteland
+			  }
+			  set_country_flag = fe_kill_2
+		}
+	}
+	fe_kill3 = {
+		
+		icon = GFX_decision_join_fra
+		
+		cost = 30
+		days_remove = 30
+		
+		fire_only_once = yes
+
+		available = { 
+				  has_full_control_of_state = 214
+
+		 }
+		ai_will_do = {
+			factor = 10
+		}
+		modifier = {
+			weekly_manpower = -500
+	   	}
+		complete_effect = {  
+			every_state = {
+				limit = {
+				  OR = {
+					State = 351
+					State = 248
+					State = 214
+					State = 262
+					State = 397
+					State = 400
+					State = 1193
+					State = 399
+					State = 651
+					State = 398
+					State = 581
+
+
+				}
+			  }
+			  add_manpower = -36549
+			  }
+			}
+		remove_effect = {
+			every_state = {
+				limit = {
+				  OR = {
+				  State = 214
+				  State = 400
+				}
+			  }
+				set_state_category = wasteland
+			  }
+			  set_country_flag = fe_kill_3
+		}
+	}
+	fe_kill4 = {
+		
+		icon = GFX_decision_join_fra
+		
+		cost = 30
+		days_remove = 40
+		
+		fire_only_once = yes
+
+		available = { 
+				  has_full_control_of_state = 217
+				  has_full_control_of_state = 1208
+
+		 }
+		ai_will_do = {
+			factor = 10
+		}
+		modifier = {
+			weekly_manpower = -500
+	   	}
+		complete_effect = {  
+			every_state = {
+				limit = {
+				  OR = {
+					State = 217
+					State = 236
+					State = 1224
+					State = 1207
+					State = 401
+					State = 251
+					State = 652
+					State = 1194
+					State = 1199
+					State = 249
+					State = 1198
+					State = 256
+					State = 1195
+					State = 573
+					State = 1208
+					State = 406
+					State = 250
+					State = 1197
+
+
+				}
+			  }
+			  add_manpower = -52884
+			  }
+			}
+		remove_effect = {
+			every_state = {
+				limit = {
+				  OR = {
+				  State = 214
+				  State = 400
+				}
+			  }
+				set_state_category = wasteland
+			  }
+			  set_country_flag = fe_kill_4
+		}
+	}
+}
+FE_core = {
+	fe_core1 = {
+		
+		icon = GFX_decision_join_fra
+		
+		cost = 30
+		days_remove = 50
+		
+		fire_only_once = yes
+
+		available = { 
+				 has_full_control_of_state = 195
+				 has_country_flag = fe_kill_1
+		 }
+		ai_will_do = {
+			factor = 10
+		}
+		modifier = {
+			stability_weekly = -0.005
+	   	}
+		complete_effect = {  
+			}
+		remove_effect = {
+			every_state = {
+				limit = {
+				  OR = {
+				State = 1328
+				  State = 195
+				  State = 208
+				  State = 1291
+				  State = 1288
+				  State = 209
+				  State = 1289
+				  State = 263
+				  State = 264
+				  State = 244
+				  State = 247
+				  State = 246
+				  State = 210
+				  State = 1287
+				  State = 1290
+				  State = 880
+				}
+			  }
+				add_core_of = FIN
+			  }
+			  set_country_flag = fe_core_1 
+		}
+	}
+	fe_core2 = {
+		
+		icon = GFX_decision_join_fra
+		
+		cost = 30
+		days_remove = 60
+		
+		fire_only_once = yes
+
+		available = { 
+				  has_full_control_of_state = 219
+				  has_country_flag = fe_kill_2
+		 }
+		ai_will_do = {
+			factor = 10
+		}
+		modifier = {
+			stability_weekly = -0.01
+	   	}
+		complete_effect = {  
+			}
+		remove_effect = {
+			every_state = {
+				limit = {
+				  OR = {
+				State = 755
+				  State = 243
+				  State = 242
+				  State = 205
+				  State = 219
+				  State = 253
+				  State = 252
+				  State = 1204
+				  State = 255
+				  State = 239
+				  State = 265
+				  State = 240
+				  State = 260
+				  State = 257
+				  State = 1205
+				  State = 254
+				  State = 258
+				  State = 1299
+				  State = 223
+				  State = 222
+				  State = 220
+				  State = 821
+				  State = 1299
+				  State = 223
+				  State = 1229
+				  State = 224
+
+
+				}
+			  }
+			  add_core_of = FIN
+			  }
+			  set_country_flag = fe_core_2
+		}
+	}
+	fe_core3 = {
+		
+		icon = GFX_decision_join_fra
+		
+		cost = 30
+		days_remove = 30
+		
+		fire_only_once = yes
+
+		available = { 
+				  has_full_control_of_state = 214
+				   has_country_flag = fe_kill_3
+
+		 }
+		ai_will_do = {
+			factor = 10
+		}
+		modifier = {
+			stability_weekly = -0.002
+	   	}
+		complete_effect = {  
+			
+			}
+		remove_effect = {
+			every_state = {
+				limit = {
+				  OR = {
+					State = 351
+					State = 248
+					State = 214
+					State = 262
+					State = 397
+					State = 400
+					State = 1193
+					State = 399
+					State = 651
+					State = 398
+					State = 581
+
+
+				}
+			  }
+			 add_core_of = FIN
+			  }
+			  set_country_flag = fe_core_3
+		}
+	}
+	fe_core4 = {
+		
+		icon = GFX_decision_join_fra
+		
+		cost = 30
+		days_remove = 40
+		
+		fire_only_once = yes
+
+		available = { 
+				  has_full_control_of_state = 217
+				  has_full_control_of_state = 1208
+				  has_country_flag = fe_kill_4
+
+		 }
+		ai_will_do = {
+			factor = 10
+		}
+		modifier = {
+			stability_weekly = -0.004
+	   	}
+		complete_effect = {  
+			
+			}
+		remove_effect = {
+			every_state = {
+				limit = {
+				  OR = {
+					State = 217
+					State = 236
+					State = 1224
+					State = 1207
+					State = 401
+					State = 251
+					State = 652
+					State = 1194
+					State = 1199
+					State = 249
+					State = 1198
+					State = 256
+					State = 1195
+					State = 573
+					State = 1208
+					State = 406
+					State = 250
+					State = 1197
+
+
+				}
+			  }
+			 add_core_of = FIN
+			  }
+			  set_country_flag = fe_core_4
+		}
+	}
+}
+fe_UNITY = {
+	fe_UNITY1 = {
+		ai_will_do = {
+			factor = 1
+		}
+		icon = hol_draw_up_staff_plans
+		cost = 10
+		days_remove = 45
+		available = {
+			owns_state = 141
+			NOT = { country_exists = SWE }
+	}
+		priority = 10
+		complete_effect = {  
+			every_state = {
+				limit = {
+				is_core_of = SWE
+				}
+			  }
+			  add_manpower = -3082
+			  }
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision BL_first_decision"
+			every_state = {
+				limit = {
+				is_core_of = SWE
+			  }
+			 add_core_of = FIN
+			  }
+		}
+	}
+	fe_UNITY2 = {
+		ai_will_do = {
+			factor = 1
+		}
+		icon = hol_draw_up_staff_plans
+		cost = 10
+		days_remove = 45
+		available = {
+			owns_state = 110
+			NOT = { country_exists = NOR }
+	}
+		priority = 10
+		complete_effect = {  
+			every_state = {
+				limit = {
+				is_core_of = NOR
+				}
+			  }
+			  add_manpower = -2821
+			  }
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision BL_first_decision"
+			every_state = {
+				limit = {
+				is_core_of = NOR
+			  }
+			 add_core_of = FIN
+			  }
+		}
+	}
+	fe_UNITY3 = {
+		ai_will_do = {
+			factor = 1
+		}
+		icon = hol_draw_up_staff_plans
+		cost = 10
+		days_remove = 45
+		available = {
+			owns_state = 37
+			NOT = { country_exists = DEN }
+	}
+		priority = 10
+		complete_effect = {  
+			every_state = {
+				limit = {
+				is_core_of = DEN
+				}
+			  }
+			  add_manpower = -1873
+			  }
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision BL_first_decision"
+			every_state = {
+				limit = {
+				is_core_of = DEN
+			  }
+			 add_core_of = FIN
+			  }
+		}
+		}
+	fe_UNITY4 = {
+		ai_will_do = {
+			factor = 1
+		}
+		icon = hol_draw_up_staff_plans
+		cost = 10
+		days_remove = 45
+		available = {
+			owns_state = 100
+			NOT = { country_exists = ICE }
+	}
+		priority = 10
+		complete_effect = {  
+			every_state = {
+				limit = {
+				is_core_of = ICE
+				}
+			  }
+			  add_manpower = -872
+			  }
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision BL_first_decision"
+			every_state = {
+				limit = {
+				is_core_of = ICE
+			  }
+			 add_core_of = FIN
+			  }
+		}
+	}
+}

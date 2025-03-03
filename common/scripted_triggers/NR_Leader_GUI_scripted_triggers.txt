@@ -1,0 +1,49 @@
+NR_uses_leader_gui = {
+	OR = {
+		AND = {
+			tag = GRU
+			has_country_flag = GRU_GOEBB_GORING_VISIBLE
+			NOT = {
+				has_country_flag = GRU_pm_is_hos
+			}
+		}
+
+		GRU_has_leader_GUI = yes
+		GGB_has_leader_GUI = yes
+		IBR_has_leader_GUI = yes
+		ITT_has_leader_GUI = yes
+		MNT_has_leader_GUI = yes
+		ALB_has_leader_GUI = yes
+		IEA_has_leader_GUI = yes
+		###
+		VYT_has_leader_GUI = yes
+		GSV_has_leader_GUI = yes
+		GGL_has_leader_GUI = yes
+		MUR_has_leader_GUI = yes
+		SUG_has_leader_GUI = yes
+		RRV_has_leader_GUI = yes
+		AMR_has_leader_GUI = yes
+		MGD_has_leader_GUI = yes
+		SHE_has_leader_GUI = yes
+
+		has_country_flag = NR_LEADER_GUI_VISIBLE
+	}
+	NOT = {
+		has_country_flag = NR_LEADER_GUI_NOT_VISIBLE
+	}
+}
+
+NR_uses_double_leader_gui = {
+	OR = {
+		has_country_flag = NR_DOUBLE_LEADER_GUI_VISIBLE
+		has_idea_with_trait = land_marshal_of_liv_ord
+	}
+}
+
+NR_LEADER_GUI_USES_CUSTOM_TITLE = {
+	OR = {
+		has_country_flag = NR_USES_CUSTOM_TITLE
+		has_idea_with_trait = land_marshal_of_liv_ord
+		has_idea_with_trait = minister_for_ulster_affairs 
+	}
+}

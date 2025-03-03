@@ -1,0 +1,170 @@
+
+ideas = {
+
+#### Head of Government ####
+	head_of_government = {
+		NFA_Roger_Nimier_hog_rso = {
+			allowed = { original_tag = NFA }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+		
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CAL_Yoshizawa_Kenkichi_hog_npo"
+			}
+			traits = {
+				head_of_government
+				radical_socialist
+				hog_respected_war_hero
+			}
+			cancel_if_invalid = yes
+		}
+		NFA_Jacques_Renouvin_hog_tot = {
+			allowed = { original_tag = NFA }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+		
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CAL_Kichisaburo_Nomura_for_npo"
+			}
+			traits = {
+				head_of_government
+				totalist
+				hog_respected_war_hero
+			}
+			cancel_if_invalid = yes
+		}
+		
+	}
+	
+	#### Foreign Minister ####
+	person_of_influence = {
+		NFA_Rene_Lambert_for_rso = {
+			allowed = { original_tag = NFA }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+		
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CAL_Kichisaburo_Nomura_for_npo"
+			}
+			traits = {
+				foreign_minister
+				radical_socialist
+				for_great_compromiser
+			}
+			cancel_if_invalid = yes
+		}
+		NFA_Georges_Paul_Wagner_for_tot = {
+			allowed = { original_tag = NFA }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+		
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CAL_Yoshizawa_Kenkichi_hog_npo"
+			}
+			traits = {
+				foreign_minister
+				totalist
+				for_ideological_crusader
+			}
+			cancel_if_invalid = yes
+		}
+		
+		
+	### Economy Minister ##
+	NFA_Pierre_Schaeffer_eco_rso = {
+			allowed = { original_tag = NFA }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+		
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CAL_Kishi_Nobusuke_eco_npo"
+			}
+			traits = {
+				economy_minister
+				radical_socialist
+				eco_planned_economy_proponent
+			}
+			cancel_if_invalid = yes
+		}
+		NFA_Nicolas_Kayanakis_eco_tot = {
+			allowed = { original_tag = NFA }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+		
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CAL_Kishi_Nobusuke_eco_npo"
+			}
+			traits = {
+				economy_minister
+				totalist
+				eco_air_superiority_proponent 
+			}
+			cancel_if_invalid = yes
+		}
+		
+	### Security Minister ###
+	NFA_Jean_Marc_Bourquin_sec_rso = {
+			allowed = { original_tag = NFA }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+		
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CAL_Koichi_Ono_sec_npo"
+			}
+			traits = {
+				security_minister
+				radical_socialist
+				for_ideological_crusader
+			}
+			cancel_if_invalid = yes
+		}
+		NFA_Maurice_Clavel_sec_tot = {
+			allowed = { original_tag = NFA }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+		
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea CAL_Kishi_Nobusuke_eco_npo"
+			}
+			traits = {
+				security_minister
+				totalist
+				sec_socialist_novelist
+			}
+			cancel_if_invalid = yes
+		}
+		
+	}
+}

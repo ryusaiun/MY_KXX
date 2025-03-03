@@ -1,0 +1,342 @@
+scripted_gui = {
+
+	GEA_MAP_DECISION_UI = {
+		context_type = decision_category
+		parent_window_token = topbar
+		window_name = "GEA_map_gui_game"
+
+		ai_check = {
+			always = no
+		}
+
+		triggers = {
+			Burma_Map_visible = {
+				BRM = {
+					OR = {
+						is_in_faction_with = GER
+						exists = yes
+					}
+					NOT = {
+						has_socialist_government = yes
+					}
+				}
+			}
+			Burma_soc_Map_visible = {
+				BRM = {
+					AND = {
+						has_socialist_government = yes
+						exists = yes
+					}
+				}
+			}
+			Burma_ger_Map_visible = {
+				GEA = {
+					OR = {
+						owns_state = 701
+						owns_state = 790
+						owns_state = 72
+						owns_state = 640
+						owns_state = 288
+					}
+				}
+			}
+			DEI_Map_visible = {
+				DEI = {
+					OR = {
+						is_in_faction_with = GER
+						exists = yes
+					}
+				}
+			}
+			DEI_ger_Map_visible = {
+				GEA = {
+					OR = {
+						owns_state = 1023
+						owns_state = 672
+						owns_state = 1022
+						owns_state = 1021
+						owns_state = 1020
+						owns_state = 673
+						owns_state = 335
+						owns_state = 1019
+						owns_state = 667
+						owns_state = 1018
+					}
+				}
+			}
+			GER_Guinea_Map_visible = {
+				GEA = {
+					owns_state = 757
+					NOT ={
+						owns_state = 669
+						owns_state = 843
+					}
+				}
+			}
+			Guinea_Map_visible = {
+				GEA = {
+					owns_state = 757
+					owns_state = 669
+					owns_state = 843
+				}
+			}
+			HOL_Guinea_Map_visible = {
+				DEI = {
+					OR = {
+						is_in_faction_with = GER
+						exists = yes
+					}
+					owns_state = 669
+					owns_state = 843
+				}
+			}
+			Indochina_Map_visible = {
+				GEA = {
+					NOT = {
+						has_country_flag = GEA_bloody_ferdinand_Appointed
+					}
+					OR = {
+						owns_state = 857
+						owns_state = 671
+						owns_state = 827
+						owns_state = 670
+						owns_state = 826
+						owns_state = 286
+						owns_state = 856
+					}
+				}
+			}
+			Indochina_inc_Map_visible = {
+				INC = {
+					owns_state = 857
+					owns_state = 671
+					owns_state = 827
+					owns_state = 670
+					owns_state = 826
+					owns_state = 286
+					owns_state = 856
+				}
+			}
+			Indochina_schorner_Map_visible = {
+				GEA = {
+					has_country_flag = GEA_bloody_ferdinand_Appointed
+					OR = {
+						owns_state = 857
+						owns_state = 671
+						owns_state = 827
+						owns_state = 670
+						owns_state = 826
+						owns_state = 286
+						owns_state = 856
+					}
+				}
+			}
+			Indochina_vin_Map_visible = {
+				VIN = {
+					AND = {
+						is_in_faction_with = GER
+						exists = yes
+					}
+				}
+			}
+			Malaya_Map_visible = {
+				GEA = {
+					owns_state = 846
+				}
+			}
+			North_Borneo_Map_visible = {
+				GEA = {
+					owns_state = 333
+					owns_state = 828
+					NOT ={
+						owns_state = 334
+						owns_state = 1016
+					}
+				}
+			}
+			Philippines_Map_visible = {
+				PHI = {
+					OR = {
+						is_in_faction_with = GER
+						exists = yes
+					}
+					NOT = {
+						has_socialist_government = yes
+					}
+				}
+			}
+			Philippines_soc_Map_visible = {
+				PHI = {
+					AND = {
+						has_socialist_government = yes
+						exists = yes
+					}
+				}
+			}
+			Philippines_ger_Map_visible = {
+				GEA = {
+					OR = {
+						owns_state = 623
+						owns_state = 327
+						owns_state = 624
+						owns_state = 625
+						owns_state = 628
+						owns_state = 627
+						owns_state = 626
+					}
+				}
+			}
+			South_Borneo_Map_visible = {
+				DEI = {
+					OR = {
+						is_in_faction_with = GER
+						exists = yes
+					}
+					owns_state = 334
+					owns_state = 1016
+				}
+			}
+			Borneo_Map_visible = {
+				GEA = {
+					owns_state = 333
+					owns_state = 828
+					owns_state = 334
+					owns_state = 1016
+				}
+			}
+			Thailand_Map_visible = {
+				SIA = {
+					OR = {
+						is_in_faction_with = GER
+						exists = yes
+					}
+					NOT = {
+						has_global_flag = SIA_CONSTITUTION_GIVEN_SYNDIE
+					}
+				}
+			}
+			Thailand_soc_Map_visible = {
+				SIA = {
+					AND = {
+						exists = yes
+						has_global_flag = SIA_CONSTITUTION_GIVEN_SYNDIE
+					}
+				}
+			}
+			Thailand_ger_Map_visible = {
+				GEA = {
+					OR = {
+						owns_state = 823
+						owns_state = 825
+						owns_state = 750
+						owns_state = 824
+						owns_state = 882
+						owns_state = 756
+						owns_state = 822
+						owns_state = 289
+						owns_state = 831
+						owns_state = 749
+						owns_state = 724
+						owns_state = 999
+						owns_state = 830
+						owns_state = 751
+					}
+				}
+			}
+			whiteline_visible = {
+				GEA = {
+					exists = yes
+				}
+			}
+			Hawaii_Map_visible = {
+				HAW = {
+					exists = yes
+				}
+			}
+			Hawaii_usa_Map_visible = {
+				OR = {
+					USA = {
+						owns_state = 629
+					}
+					COR = {
+						owns_state = 629
+					}
+					CSA = {
+						owns_state = 629
+					}
+					NEE = {
+						owns_state = 629
+					}
+					CAL = {
+						owns_state = 629
+					}
+					TEX = {
+						owns_state = 629
+					}
+					TXS = {
+						owns_state = 629
+					}
+					NYC = {
+						owns_state = 629
+					}
+					WCC = {
+						owns_state = 629
+					}
+				}
+			}
+			Hawaii_ger_Map_visible = {
+				GEA = {
+					owns_state = 629
+				}
+			}
+		}
+		
+		visible = {
+			OR = {
+				tag = GEA
+			}
+		}
+
+		effects = {
+			Burma_ger_Map_click = {
+				Burma_ger_click_effect = yes
+			}
+			DEI_ger_Map_click = {
+				DEI_ger_click_effect = yes
+			}
+			GER_Guinea_Map_click = {
+				GER_Guinea_click_effect = yes
+			}
+			Guinea_Map_click = {
+				Guinea_click_effect = yes
+			}
+			Indochina_Map_click = {
+				Indochina_click_effect = yes
+			}
+			Indochina_schorner_Map_click = {
+				Indochina_schorner_click_effect = yes
+			}
+			Indochina_vin_Map_click = {
+				Indochina_vin_click_effect = yes
+			}
+			Malaya_Map_click = {
+				Malaya_click_effect = yes
+			}
+			North_Borneo_Map_click = {
+				North_Borneo_click_effect = yes
+			}
+			Borneo_Map_click = {
+				Borneo_click_effect = yes
+			}
+			Philippines_ger_Map_click = {
+				Philippines_ger_click_effect = yes
+			}
+			Thailand_ger_Map_click = {
+				Thailand_ger_click_effect = yes
+			}
+			Hawaii_ger_Map_click = {
+				Hawaii_ger_click_effect = yes
+			}
+		}
+	}
+}

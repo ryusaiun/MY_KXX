@@ -1,0 +1,21 @@
+scripted_gui = {
+	GRU_gb_pm_hryak = {
+		context_type = player_context
+		parent_window_token = politics_tab
+		window_name = "gru_pm_gui"
+
+		ai_check = {
+			always = no
+		}
+
+		triggers = {
+			gru_pm_button_visible = {
+			    has_country_flag = GRU_GOEBB_GORING_VISIBLE
+			}
+		}
+
+		visible = {
+			has_country_flag = GRU_GOEBB_GORING_VISIBLE
+		}
+	}
+}

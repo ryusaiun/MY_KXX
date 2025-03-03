@@ -1,0 +1,14 @@
+famine_serious_kxx = {
+	icon = "GFX_idea_famine_kxx_icon"
+	enable = { always = no }
+	local_manpower = -1
+	resistance_growth = -1
+	resistance_decay = -1
+	compliance_gain = -100
+}
+city_of_light = {
+	icon = "GFX_decision_hol_draw_up_staff_plans"
+	enable = { always = no }
+	local_building_slots = 3
+	state_production_speed_buildings_factor = 0.25
+}

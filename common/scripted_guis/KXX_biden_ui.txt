@@ -1,0 +1,1015 @@
+scripted_gui = {
+	KXX_view_pm = {
+		context_type = player_context
+		parent_window_token = politics_tab
+		window_name = "KXX_joe_biden_gui"
+
+		ai_check = {
+			always = no
+		}
+
+		triggers = {
+			KXX_pm_frame_visible = {
+				OR = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = KXX_HOG_second_veiw
+					has_country_flag = KXX_HOG_third_veiw
+					has_country_flag = KXX_HOG_gru_veiw
+				}
+				NOT = {
+					has_country_flag = KXX_pm_is_hos
+				}
+			}
+			KXX_leader_button_visible = {
+				KXX_uses_leader_gui = yes
+			}
+			KXX_second_leader_button_visible = {
+				KXX_uses_double_leader_gui = yes
+			}
+			KXX_third_leader_button_visible = {
+				KXX_uses_third_leader_gui = yes
+			}
+			KXX_gru_leader_button_visible = {
+				KXX_uses_gru_leader_gui = yes
+			}
+
+			#小黄副元首
+			Ernst_Rhoem_visible = {   #罗姆
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = GRU_GOEBB_ROEM_VISIBLE
+				}
+			}
+			Gregor_Strasser_visible = { #施特拉塞
+				AND = {
+					has_country_flag = KXX_HOG_gru_veiw
+					has_country_flag = GRU_Gregor_Strasser_VISIBLE
+				}
+			}
+			Albert_Speer_visible = { #阿尔伯特·施佩尔
+				AND = {
+					has_country_flag = KXX_HOG_third_veiw
+					has_country_flag = GRU_Albert_Speer_VISIBLE
+				}
+			}
+			Horst_Wessel_visible = { #威塞尔
+				AND = {
+					has_country_flag = KXX_HOG_second_veiw
+					has_country_flag = GRU_Horst_Wessel_VISIBLE
+				}
+			}
+
+			#刚果&葡萄牙
+			Duarte_II_visible = {  #杜阿尔特二世
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = POR_Duarte_II_VISIBLE
+				}
+			}
+			Pedro_VII_visible = {  #佩德罗七世
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = KOG_Pedro_VII_VISIBLE
+				}
+			}
+			Gilberto_de_Mello_Freyre_visible = { #吉尔贝托·德·梅洛·弗雷雷
+				AND = {
+					has_country_flag = KXX_HOG_second_veiw
+					has_country_flag = BRA_Gilberto_de_Mello_Freyre_VISIBLE
+				}
+			}
+			Antonio_Salazar_visible = { #安东尼奥·萨拉查
+				AND = {
+					has_country_flag = KXX_HOG_second_veiw
+					has_country_flag = POR_Antonio_Salazar_VISIBLE
+				}
+			}
+			Oswald_de_Andrade_visible = { #奥斯瓦尔德·德·安德拉德
+				AND = {
+					has_country_flag = KXX_HOG_second_veiw
+					has_country_flag = BRA_Oswald_de_Andrade_VISIBLE
+				}
+			}
+
+
+			###杜克洛
+     		Maurice_Thorez_visible = {   #多列士
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = FRA_Maurice_Thorez_VISIBLE
+				}
+			}
+			Jacques_Doriot_visible = {   #多里奥
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = FRA_Jacques_Doriot_VISIBLE
+				}
+			}
+
+			###丹麦
+			Max_Arildskov_visible = {   #马克斯·阿里斯克乌
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = DEN_Max_Arildskov_VISIBLE
+				}
+			}
+
+			#法兰西公社
+			Andre_Chaumet_visible = {   #安德烈·肖梅
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = FRA_Andre_Chaumet_VISIBLE
+				}
+			}
+			Simone_Weil_visible = {   #西蒙娜·威尔
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = FRA_Simone_Weil_VISIBLE
+				}
+			}
+			Jesus_Weil_visible = {   #吾主耶稣
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = FRA_Jesus_Weil_VISIBLE
+				}
+			}
+			N_Jose_Antonio_visible = { #何塞·安东尼奥（拿破仑傀儡）
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = NPL_Jose_Antonio_VISIBLE
+				}
+			}	
+
+			#国法
+			Roger_Nimier_visible = {   #罗杰·内米尔
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = NFA_Roger_Nimier_visible
+				}
+			}
+			Nicolas_Kayanakis_visible = {   #尼古拉斯·卡亚纳基斯
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = NFA_Nicolas_Kayanakis_visible
+				}
+			}	
+
+			#西俄革
+			Georgy_Zhukov_visible = {  #朱可夫
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = WRS_Georgy_Zhukov_VISIBLE
+				}
+			}
+			Mikhail_Tukhachevskiy_visible = {   #图哈
+				AND = {
+					has_country_flag = KXX_HOG_second_veiw
+					has_country_flag = WRS_Mikhail_Tukhachevskiy_VISIBLE
+				}
+			}
+
+			#法国复兴政府
+			Robert_Brasillach_visible = {   #布拉西拉赫
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = FRG_Robert_Brasillach_VISIBLE
+				}
+			}
+			Charles_Nogues_visible = {   #诺盖斯
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = FRG_Charles_Nogues_VISIBLE
+				}
+			}
+			Xavier_Vallat_visible = {   #瓦拉
+				AND = {
+					has_country_flag = KXX_HOG_second_veiw
+					has_country_flag = FRG_Xavier_Vallat_VISIBLE
+				}
+			}
+
+			#波兰
+			Alfred_Lampe_visible = {    #阿尔弗雷德·兰佩
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = POL_Alfred_Lampe_VISIBLE
+				}
+			}
+			Adolf_Warski_visible = {     #阿道夫·瓦尔斯基
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = POL_Adolf_Warski_VISIBLE
+				}
+			}
+			Julian_Leszczyński_visible = {     #尤利安·莱什琴斯基
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = POL_Julian_Leszczyński_VISIBLE
+				}
+			}
+			Stanislaw_Dubois_visible = {     #斯坦尼斯瓦夫·杜波依斯
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = POL_Stanislaw_Dubois_VISIBLE
+				}
+			}
+			Kazimierz_Zakrzewski_visible = {     #卡兹米尔兹·扎克耶夫斯基
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = POL_Kazimierz_Zakrzewski_VISIBLE
+				}
+			}
+			Michal_Kalecki_visible = {     #米哈尔·卡莱斯基
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = POL_Michal_Kalecki_VISIBLE
+				}
+			}
+			Oskar_Lange_visible = {     #奥斯卡·兰格
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = POL_Oskar_Lange_VISIBLE
+				}
+			}
+			Jozef_Chacinski_visible = {     #约瑟夫·查辛斯基
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = POL_Jozef_Chacinski_VISIBLE
+				}
+			}
+			Norbert_Barlicki_visible = {     #诺伯特·巴列奇
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = POL_Norbert_Barlicki_VISIBLE
+				}
+			}
+			Stanislaw_Mikolajczyk_visible = {     #斯坦尼斯瓦夫·米科瓦伊奇克
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = POL_Stanislaw_Mikolajczyk_VISIBLE
+				}
+			}
+			Walery_Slawek_visible = {     #瓦莱雷·斯瓦韦克
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = POL_Walery_Slawek_VISIBLE
+				}
+			}
+			Roman_Dmowski_visible = {     #罗曼·德莫夫斯基
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = POL_Roman_Dmowski_VISIBLE
+				}
+			}
+			Antoni_Ciszak_visible = {     #安东尼·西扎克
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = POL_Antoni_Ciszak_VISIBLE
+				}
+			}
+			Eugeniusz_Kwiatkowski_visible = {     #尤金乌斯·克维亚特科夫斯基
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = POL_Eugeniusz_Kwiatkowski_VISIBLE
+				}
+			}
+			Julian_Tuwim_visible = {     #朱利安·图文姆
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = POL_Julian_Tuwim_VISIBLE
+				}
+			}
+			Wladyslaw_Gomulka_visible = {     #瓦迪斯瓦夫·哥穆尔卡
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = POL_Wladyslaw_Gomulka_VISIBLE
+				}
+			}
+			Jozef_Niecko_visible = {     #约瑟夫·涅茨科
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = POL_Jozef_Niecko_VISIBLE
+				}
+			}
+			Stefan_Wyszynski_visible = {     #斯特凡·维辛斯基
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = POL_Stefan_Wyszynski_VISIBLE
+				}
+			}
+			Odrodzenia_Polski_visible = {     #波兰复兴联盟
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = POL_Odrodzenia_Polski_VISIBLE
+				}
+			}
+			Wewnetrzny_Krag_visible = {     #核心集团
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = POL_Wewnetrzny_Krag_VISIBLE
+				}
+			}
+			Jan_Hempel_visible = {     #扬·亨佩尔
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = POL_Jan_Hempel_VISIBLE
+				}
+			}
+			Adam_Doboszynski_visible = {     #亚当·多罗申斯基
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = POL_Adam_Doboszynski_VISIBLE
+				}
+			}
+			Zgromadzenie_Lechickie_visible = {     #莱西亚议会
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = POL_Zgromadzenie_Lechickie_VISIBLE
+				}
+			}
+			Forty_Four_visible = {     #第四位救世主
+				AND = {
+					has_country_flag = KXX_HOG_second_veiw
+					has_country_flag = POL_Forty_Four_VISIBLE
+				}
+			}
+			Christ_King_visible = {     #吾王基督
+				AND = {
+					has_country_flag = KXX_HOG_second_veiw
+					has_country_flag = POL_Christ_King_VISIBLE
+				}
+			}
+			Jezus_Lechia_visible = {     #莱希亚的耶稣
+				AND = {
+					has_country_flag = KXX_HOG_second_veiw
+					has_country_flag = POL_Jezus_Lechia_VISIBLE
+				}
+			}
+			
+
+			#民族与革命
+			Oleksander_Shumsky_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_second_veiw
+					has_idea = UKR_Oleksander_Shumsky_sec_rso
+				}
+			}
+
+			Stepan_Bandera2_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					OR = {
+						has_country_leader = {
+							name = "西蒙·彼得留拉"
+							ruling_only = yes
+						}
+						has_country_leader = {
+							name = "沃洛基米尔·契赫夫斯基"
+							ruling_only = yes
+						}
+						has_country_leader = {
+							name = "帕利夫·德米特罗"
+							ruling_only = yes
+						}
+						has_country_leader = {
+							name = "德米特罗·列维茨基"
+							ruling_only = yes
+						}
+					}
+				}
+			}
+			Stepan_Bandera_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					OR = {
+						has_country_leader = {
+							name = "涅斯托尔·马赫诺"
+							ruling_only = yes
+						}
+						has_country_leader = {
+							name = "瓦西里·沙赫赖"
+							ruling_only = yes
+						}
+						has_country_leader = {
+							name = "亚历山大·舒姆斯基"
+							ruling_only = yes
+						}
+					}
+				}
+			}
+			Shukevich_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = WSU_Roman_Shukhevych_hog_pau
+				}
+			}
+			Vasyl_Kuk_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = WSU_Vasyl_Kuk_hog_tot
+				}
+			}
+			Dmitri_Dontsov_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = WSU_Dmytro_Dontsov_hog_npo
+				}
+			}
+			Juan_Laguia_Lliteras_visible = {  #胡安·拉吉亚·利利塔斯
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = CAR_Juan_Laguia_Lliteras_hog_syn
+				}
+			}
+			Javier_I_visible = {  #哈维尔一世
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					OR = {
+						has_idea = CAR_Francisco_Franco_Bahamonde_hog_ade
+						has_idea = CAR_Eugenio_Montes_hog_npo
+					}
+				}
+			}
+			Jose_Antonio_visible = {   #何塞·安东尼奥
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = CAR_Jose_Antonio_Primo_de_Rivera_hog_pau
+					
+				}
+			}
+			Mihai_Strescu_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = ROM_Mihai_Strescu_hog_tot
+					
+				}
+			}
+			Gheorghe_Clime_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = ROM_Gheorghe_Clime_hog_npo
+					
+				}
+			}
+			Nikolaus_Cossmann_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = BAY_Paul_Nikolaus_Cossmann_hog_npo
+					
+				}
+			}
+			Hans_Erhard_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = BAY_Hans_Erhard_hog_sco
+					
+				}
+			}
+			Fritz_Gerlich_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = BAY_Fritz_Gerlich_hog_ade
+					
+				}
+			}
+			Draza_Mihailovic_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = MNT_Dracha_Mikhailovich_hog_npo
+				}
+			}
+
+
+			### 日本 ###
+			
+			Abe_Iso_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Abe_Iso_hog_sde
+				}
+			}
+			
+			Katayama_Tetsu_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Katayama_Tetsu_hog_sde
+				}
+			}
+			
+			Machida_Chuji_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Machida_Chuji_hog_mli
+				}
+			}
+			
+			Hamaguchi_Osachi_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Hamaguchi_Osachi_hog_mli
+				}
+			}
+			
+			Ugaki_Kazushige_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Ugaki_Kazushige_hog_mli
+				}
+			}
+			
+			Inukai_Tsuyoshi_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Inukai_Tsuyoshi_hog_sco
+				}
+			}
+			
+			Suzuki_Kisaburo_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Suzuki_Kisaburo_hog_sco
+				}
+			}
+			
+			Mizuno_Rentaro_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Mizuno_Rentaro_hog_sco
+				}
+			}
+			
+			Yoshizawa_Kenkichi_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Yoshizawa_Kenkichi_hog_sco
+				}
+			}
+			
+			Hatoyama_Ichiro_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Hatoyama_Ichiro_hog_sco
+				}
+			}
+			
+			Adachi_Kenzo_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Adachi_Kenzo_hog_ade
+				}
+			}
+			
+			Maeda_Yonezo_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Maeda_Yonezo_hog_ade
+				}
+			}
+			
+			Hiranuma_Kiichiro_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Hiranuma_Kiichiro_hog_pau
+				}
+			}
+			
+			Hayashi_Senjuro_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Hayashi_Senjuro_hog_pau
+				}
+			}
+			
+			Tojo_Hideki_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Tojo_Hideki_hog_pau
+				}
+			}
+			
+			Nagata_Tetsuzan_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Nagata_Tetsuzan_hog_pau
+				}
+			}
+			
+			Konoe_Fumimaro_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Konoe_Fumimaro_hog_npo
+				}
+			}
+			
+			Araki_Sadao_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Araki_Sadao_hog_npo
+				}
+			}
+			
+			Kuhara_Fusanosuke_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Kuhara_Fusanosuke_hog_npo
+				}
+			}
+			
+			####红龙日本####
+			
+			Jotaro_Kawakami_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_jotaro_kawakami_hog_sde
+				}
+			}
+			Yamamoto_Kenzo_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Yamamoto_Kenzo_hog_sde
+					
+				}
+			}
+			
+			Katayama_Tetsu_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Katayama_Tetsu_hog_sde
+				}
+			}
+			
+			Seigo_Nakano_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					OR = {
+					has_idea = JAP_Nakano_Seigo_hog_tot
+					has_idea = JAP_Nakano_Seigo_hog_npo
+					}
+				}
+			}
+			
+			Saito_Takao_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_saito_takao_hog_sli
+				}
+			}
+			
+			Inejiro_Asanuma_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_inejiro_asanuma_hog_rso
+				}
+			}
+			
+			Katsumaro_Akamatsu_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Katsumaro_Akamatsu_hog_tot
+				}
+			}
+			
+			Kokkai_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Kokkai_hog_ade
+				}
+			}
+			
+			Giro_Senoo_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Giro_Senoo_hog_rso
+				}
+			}
+			
+			Yoshio_Kodama_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Yoshio_Kodama_hog_pau
+				}
+			}
+			
+			Tatsuo_Tsukui_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Tatsuo_Tsukui_hog_tot
+				}
+			}
+			
+			Kanji_Ishiwara_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Kanji_Ishiwara_hog_npo
+				}
+			}
+			Nissho_Inoue_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Nissho_Inoue_hog_npo
+				}
+			}
+			
+			Okawa_Shumei_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Okawa_Shumei_hog_npo
+				}
+			}
+			
+			Ikki_Kita_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Kita_Ikki_hog_tot
+				}
+			}
+			Ryohei_Uchida_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Ryohei_Uchida_hog_npo
+				}
+			}
+			
+			Toyama_Mitsuru_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Toyama_Mitsuru_hog_npo
+				}
+			}
+			
+			Onisaburo_Deguchi_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Onisaburo_Deguchi_hog_npo
+				}
+			}
+			
+			Kingoro_Hashimoto_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Kingoro_Hashimoto_hog_tot
+				}
+			}
+			Kozaburo_Tachibana_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Kozaburo_Tachibana_hog_npo
+				}
+			}
+			
+			Iwane_Matsui_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Iwane_Matsui_hog_npo
+				}
+			}
+			
+			Ryutaro_Nagai_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Ryutaro_Nagai_hog_sli
+				}
+			}
+			
+			Chikuhei_Nakajima_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Chikuhei_Nakajima_hog_sco
+				}
+			}
+			Bin_Akao_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Bin_Akao_hog_npo
+				}
+			}
+			
+			Akira_Kazami_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Akira_Kazami_hog_ade
+				}
+			}
+			
+			Josei_Toda_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Josei_Toda_hog_sde
+				}
+			}
+			
+			Tsunesaburo_Makiguchi_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Tsunesaburo_Makiguchi_hog_tot
+				}
+			}
+			Rikizo_Hirano_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Hirano_Rikizo_hog_tot
+				}
+			}
+			
+			Sumihisa_Ikeda_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Sumihisa_Ikeda_hog_tot
+				}
+			}
+			
+			Aso_Hisashi_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Aso_Hisashi_hog_tot
+				}
+			}
+			
+			Yoshikuru_Yamana_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Yoshikuru_Yamana_hog_tot
+				}
+			}
+			
+			Zaibatsu_Council_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = JAP_Zaibatsu_Council_hog_pau
+				}
+			}
+
+			KXX_pm_name_visible = {
+				has_country_flag = KXX_HOG_veiw
+			}
+			
+			KXX_second_pm_name_visible = {
+				has_country_flag = KXX_HOG_second_veiw
+			}
+
+			KXX_third_pm_name_visible = {
+				has_country_flag = KXX_HOG_third_veiw
+			}
+
+			KXX_gru_pm_name_visible = {
+				has_country_flag = KXX_HOG_gru_veiw
+			}
+		}
+
+		visible = {
+			KXX_uses_leader_gui = yes
+		}
+		
+		effects = {
+			KXX_leader_button_click = {
+				if = {
+					limit = {
+						has_country_flag = KXX_HOG_veiw
+					}
+					clr_country_flag = KXX_HOG_veiw
+					else = {
+						set_country_flag = KXX_HOG_veiw
+					}
+				}
+				if = {
+					limit = {
+						has_country_flag = KXX_HOG_second_veiw
+					}
+					clr_country_flag = KXX_HOG_second_veiw
+				}
+				if = {
+					limit = {
+						has_country_flag = KXX_HOG_third_veiw
+					}
+					clr_country_flag = KXX_HOG_third_veiw
+				}
+				if = {
+					limit = {
+						has_country_flag = KXX_HOG_gru_veiw
+					}
+					clr_country_flag = KXX_HOG_gru_veiw
+				}
+			}
+			
+			KXX_second_leader_button_click = {
+				if = {
+					limit = {
+						has_country_flag = KXX_HOG_second_veiw
+					}
+					clr_country_flag = KXX_HOG_second_veiw
+					else = {
+						set_country_flag = KXX_HOG_second_veiw
+					}
+				}
+				if = {
+					limit = {
+						has_country_flag = KXX_HOG_veiw
+					}
+					clr_country_flag = KXX_HOG_veiw
+				}
+				if = {
+					limit = {
+						has_country_flag = KXX_HOG_third_veiw
+					}
+					clr_country_flag = KXX_HOG_third_veiw
+				}
+				if = {
+					limit = {
+						has_country_flag = KXX_HOG_gru_veiw
+					}
+					clr_country_flag = KXX_HOG_gru_veiw
+				}
+			}
+
+			KXX_third_leader_button_click = {
+				if = {
+					limit = {
+						has_country_flag = KXX_HOG_third_veiw
+					}
+					clr_country_flag = KXX_HOG_third_veiw
+					else = {
+						set_country_flag = KXX_HOG_third_veiw
+					}
+				}
+				if = {
+					limit = {
+						has_country_flag = KXX_HOG_veiw
+					}
+					clr_country_flag = KXX_HOG_veiw
+				}
+				if = {
+					limit = {
+						has_country_flag = KXX_HOG_gru_veiw
+					}
+					clr_country_flag = KXX_HOG_gru_veiw
+				}
+				if = {
+					limit = {
+						has_country_flag = KXX_HOG_second_veiw
+					}
+					clr_country_flag = KXX_HOG_second_veiw
+				}
+			}
+
+			KXX_gru_leader_button_click = {
+				if = {
+					limit = {
+						has_country_flag = KXX_HOG_gru_veiw
+					}
+					clr_country_flag = KXX_HOG_gru_veiw
+					else = {
+						set_country_flag = KXX_HOG_gru_veiw
+					}
+				}
+				if = {
+					limit = {
+						has_country_flag = KXX_HOG_veiw
+					}
+					clr_country_flag = KXX_HOG_veiw
+				}
+				if = {
+					limit = {
+						has_country_flag = KXX_HOG_second_veiw
+					}
+					clr_country_flag = KXX_HOG_second_veiw
+				}
+				if = {
+					limit = {
+						has_country_flag = KXX_HOG_third_veiw
+					}
+					clr_country_flag = KXX_HOG_third_veiw
+				}
+			}
+		}
+	}
+}
+
+scripted_gui = {
+	KXX_FOR_view_pm = {
+		context_type = selected_country_context
+		parent_window_token = selected_country_view_diplomacy
+		window_name = "KXX_for_joe_biden_gui"
+
+		ai_check = {
+			always = no
+		}
+
+		triggers = {
+			KXX_for_leader_button_visible = {
+				KXX_uses_leader_gui = yes
+			}
+			
+			KXX_for_second_leader_button_visible = {
+				KXX_uses_double_leader_gui = yes
+			}
+
+			KXX_for_third_leader_button_visible = {
+				KXX_uses_third_leader_gui = yes
+			}
+
+			KXX_for_gru_leader_button_visible = {
+				KXX_uses_gru_leader_gui = yes
+			}
+		}	
+	}
+}

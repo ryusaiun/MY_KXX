@@ -1,0 +1,238 @@
+﻿capital = 64
+
+oob = "GRU_1936"
+
+starting_train_buffer = 2.0
+### Starting Technologies ###
+if = {
+	limit = { NOT = { has_dlc = "No Step Back" } }
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+		basic_heavy_tank = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+		improved_light_tank_chassis = 1
+		basic_heavy_tank_chassis = 1
+		engine_tech_1 = 1
+	}
+}
+set_technology = {
+	basic_train = 1
+	### General ###
+	electronic_mechanical_engineering = 1
+
+	### Infantry ###
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_trucks = 1
+	motorised_infantry = 1
+	tech_recon = 1
+	tech_engineers = 1
+	tech_mountaineers = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "GRU_air_bba"
+
+		set_technology = {
+			aa_lmg = 1
+			aa_cannon_1 = 1
+			engines_2 = 1
+			aircraft_construction = 1
+			early_bombs = 1
+			engines_1 = 1
+			iw_small_airframe = 1
+			basic_small_airframe = 1
+			iw_medium_airframe = 1
+			iw_large_airframe = 1
+			basic_medium_airframe = 1
+			basic_large_airframe = 1
+			air_torpedoe_1 = 1
+		}
+		GRU_BBA_air_variants = yes
+	else = {
+		set_air_oob = "GRU_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			fighter1 = 1
+			naval_bomber1 = 1
+			early_bomber = 1
+			strategic_bomber1 = 1
+			CAS1 = 1
+			cv_early_fighter = 1
+			cv_naval_bomber1 = 1
+			cv_CAS1 = 1
+		}
+	}
+}
+
+### Navy - MtG ###
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+
+	set_technology = {
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		panzerschiffe = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		cruiser_submarines = 1
+		early_ship_hull_carrier = 1
+		basic_ship_hull_carrier = 1
+		early_ship_hull_heavy = 1
+		basic_ship_hull_heavy = 1
+		ship_hull_super_heavy = 1
+		pre_dreadnoughts = 1
+		
+		basic_naval_mines = 1
+
+		## Modules##
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_medium_battery = 1
+		basic_heavy_battery = 1
+		basic_depth_charges = 1
+		basic_torpedo = 1
+		improved_ship_torpedo_launcher = 1
+		basic_cruiser_armor_scheme = 1
+		basic_heavy_armor_scheme = 1
+
+		### Transport ###
+		mtg_transport = 1
+	}
+}
+
+### Navy - Non MtG ###
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "Man the Guns"
+		}
+	}
+	set_technology = {
+		early_destroyer = 1
+		basic_destroyer = 1
+		early_light_cruiser = 1
+		basic_light_cruiser = 1
+		early_submarine = 1
+		basic_submarine = 1
+		early_heavy_cruiser = 1
+		basic_heavy_cruiser = 1
+		early_battlecruiser = 1
+		early_battleship = 1
+		basic_battleship = 1
+		heavy_battleship = 1
+		early_carrier = 1
+		basic_carrier = 1
+
+		### Transport ###
+		transport = 1
+	}
+}
+
+set_research_slots = 3
+set_convoys = 100
+
+set_politics = {
+	ruling_party = authoritarian_democrat
+	last_election = "1888.6.15"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	totalist = 0
+	radical_socialist = 0
+	syndicalist = 0
+	social_democrat = 10
+	social_liberal = 3
+	market_liberal = 2
+	social_conservative = 12
+	authoritarian_democrat = 62
+	paternal_autocrat = 7
+	national_populist = 4
+}
+
+recruit_character = GRU_Sekula_Drljevic
+recruit_character = GRU_Georgios_Kosmidis
+recruit_character = GRU_Midhat_Frasheri
+recruit_character = GRU_Moncef_Bey
+recruit_character = GRU_Farouk
+recruit_character = GRU_al_Husayni
+recruit_character = GRU_Gaylani
+recruit_character = GRU_Abdulazis_Ibn_Saud
+recruit_character = GRU_Ali_Nasser_Al_Qardai
+recruit_character = GRU_Said_Ibn_Taimur
+recruit_character = GRU_Kurt_Schuhmacher
+recruit_character = GRU_Erich_Honecker
+recruit_character = GRU_Wilhelm_III
+recruit_character = GRU_Rupprecht
+recruit_character = GRU_Konrad_Adenauer
+recruit_character = GRU_Karl_Artelt
+recruit_character = GRU_SAX_George
+recruit_character = GRU_Rupprecht_Bayern
+recruit_character = GRU_Duke_of_Bavaria
+recruit_character = GRU_Friedrich_Viktor_von_Hohenzollern
+recruit_character = GRU_Franz_Joseph
+recruit_character = GRU_Friedrich_Wilhelm
+recruit_character = GRU_JohaanLudwig
+recruit_character = GRU_Erwin_von_Witzleben
+recruit_character = GRU_Karl_Donitz
+recruit_character = GRU_denmark_occupation
+recruit_character = GRU_Felix_Yusupov
+recruit_character = GRU_Andrey_Vlasov_eff_rm
+recruit_character = GRU_ZKDR
+recruit_character = GRU_FAUD
+recruit_character = GRU_NMKF
+recruit_character = GRU_Franz_Bluecher
+recruit_character = GRU_Mittelafrika_Wilhelm_II
+recruit_character = GRU_Mittelafrika_Wilhelm_III
+recruit_character = GRU_Joseph_Goebbels
+recruit_character = GRU_Ernst_Rhoem
+recruit_character = GRU_Paul_Lensch
+recruit_character = GRU_Wilhelm_Pieck
+recruit_character = GRU_Ernst_Thalmann
+recruit_character = GRU_Karl_Liebknecht
+recruit_character = GRU_Rudolf_Rocker
+recruit_character = GRU_no_freedom
+recruit_character = GRU_Gustav_Krupp
+recruit_character = GRU_Rudolf_Hess
+recruit_character = GRU_Hinrich_Lohse
+recruit_character = GRU_Heinrich_Laufenberg
+recruit_character = GRU_Paul_Levi
+recruit_character = GRU_Gustav_Noske
+recruit_character = GRU_Friedrich_Meinecke
+recruit_character = GRU_Gustav_Stresemann
+recruit_character = GRU_Heinrich_Bruning
+recruit_character = GRU_Schlange_Schoningen
+recruit_character = GRU_Alfred_Hugenberg
+recruit_character = GRU_Moeller_van_den_Bruck
+recruit_character = GRU_Hans_Huttig
+recruit_character = GRU_Karl_Vonheldoff
+recruit_character = GRU_Siegfried_Muller
+recruit_character = GRU_Philipp_Bouhler
+recruit_character = GRU_Wolfgang_Schenc
+recruit_character = GRU_Alfred_rosenberg
+recruit_character = GRU_HYP_sevn
+recruit_character = GRU_Avraham_Stern
+recruit_character = GRU_Mirsaid_Sultangaliev
+
+recruit_character = GRU_wehrmacht_command

@@ -1,0 +1,196 @@
+CNT_balance_of_power_category = {
+	CNT_hunt_down_fe = {
+		icon = GFX_decision_oppression
+	
+	visible = {
+		has_completed_focus = FE_JONS46
+		NOT = {
+		has_completed_focus = FE_JONS2
+		}
+		NOT = {
+		has_completed_focus = FE_JONS63
+		}
+		NOT = {
+		has_completed_focus = FE_JONS47
+		}
+	}
+		allowed = {
+			TAG = CNT
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+		days_remove =  = 20
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CNT_hunt_down_fe"
+		}
+		remove_effect = {
+		log = "[GetDateText]: [Root.GetName]: Decision remove CNT_hunt_down_fe"
+			add_power_balance_value = {
+				id = CNT_political_military_balance
+				value = -0.1
+				tooltip_side = CNT_bop_left_side
+			}
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -250
+				}
+			}
+		}
+	}
+	
+	CNT_hunt_down_jons = {
+		icon = GFX_decision_oppression
+		allowed = {
+			TAG = CNT
+		}
+		
+	
+		visible = {
+		has_completed_focus = FE_JONS46
+		NOT = {
+		has_completed_focus = FE_JONS2
+		}
+		NOT = {
+		has_completed_focus = FE_JONS63
+		}
+		NOT = {
+		has_completed_focus = FE_JONS47
+		}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		days_remove =  = 20
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CNT_hunt_down_jons"
+		}
+		remove_effect = {
+		log = "[GetDateText]: [Root.GetName]: Decision remove CNT_hunt_down_jons"
+			add_power_balance_value = {
+				id = CNT_political_military_balance
+				value = 0.1
+				tooltip_side = CNT_bop_right_side
+			}
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -250
+				}
+			}
+		}
+	}	
+}
+FE_JONS_to_war = {
+	the_war_to_nationa_france = {
+
+		icon = war_to_national_france
+
+		ai_will_do = {
+			factor = 0
+		}
+		
+		cost =  50
+		
+		visible = {
+		NOT = {
+		has_country_flag = is_war_to_france
+		}
+		has_completed_focus = FE_JONS35
+		}
+		
+		fire_only_once = no
+		days_remove = 30
+
+		remove_effect = {
+		set_country_flag = is_war_to_france
+			CNT = {
+				limit = {
+					AND = {
+						NOT = { is_puppet_of = ROOT }
+						NOT = { is_in_faction_with = ROOT }
+					}
+				}
+				declare_war_on = { target = NFA type = take_state }
+			}
+		}
+	}
+	the_war_to_germany = {
+
+		icon = war_to_germany
+
+		ai_will_do = {
+			factor = 0
+		}
+		
+		cost =  50
+		
+		visible = {
+		NOT = {
+		has_country_flag = is_war_to_germany
+		}
+		has_completed_focus = FE_JONS35
+		}
+		
+		fire_only_once = no
+		days_remove = 30
+
+		remove_effect = {
+			CNT = {
+			set_country_flag = is_war_to_germany
+				limit = {
+					AND = {
+						NOT = { is_puppet_of = ROOT }
+						NOT = { is_in_faction_with = ROOT }
+					}
+				}
+				declare_war_on = { target = GER type = take_state }
+			}
+		}
+	}
+	the_war_to_ruassian = {
+
+		icon = war_to_ruassian
+
+		ai_will_do = {
+			factor = 0
+		}
+		
+		cost =  50
+		
+		visible = {
+		NOT = {
+		has_country_flag = is_war_to_ruassian
+		}
+		has_completed_focus = FE_JONS35
+		if = {
+			RUS = {
+				NOT =  {
+				has_government = totalist
+				has_government = syndicalist
+				has_government = radical_socialist
+				has_government = social_democrat
+				}
+			}
+		}
+		}
+		
+		fire_only_once = no
+		days_remove = 30
+
+		remove_effect = {
+		set_country_flag = is_war_to_ruassian
+			CNT = {
+				limit = {
+					AND = {
+						NOT = { is_puppet_of = ROOT }
+						NOT = { is_in_faction_with = ROOT }
+					}
+				}
+				declare_war_on = { target = RUS type = take_state }
+			}
+		}
+	}
+}

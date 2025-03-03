@@ -1,0 +1,181 @@
+guiTypes = {
+	containerWindowType =  {
+		name = "NR_joe_biden_gui"
+		position = { x = 10 y = 44 }
+		size = { width = 170 height = 260 }
+		orientation = upper_left
+		
+		iconType = {
+			name = "Juan_Laguia_Lliteras" 
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_Juan_Laguia_Lliteras"
+		}
+		iconType = {
+			name = "Ramiro_Ledesma_Ramos" 
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_Ledesma"
+		}
+		iconType = {
+			name = "Oleksander_Shumsky" 
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_Oleksander_Shumsky"
+		}
+		iconType = {
+			name = "Stepan_Bandera2" 
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_Stepan_Bandera2"
+		}
+		iconType = {
+			name = "Stepan_Bandera" 
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_Stepan_Bandera"
+		}
+		iconType = {
+			name = "Shukevich" 
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_Shukevich"
+		}
+		iconType = {
+			name = "Vasyl_Kuk" 
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_Vasyl_Kuk"
+		}
+		iconType = {
+			name = "Dmitri_Dontsov" 
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_UKR_Dmitri_Dontsov"
+		}
+		iconType = {
+			name = "Jose_Antonio" 
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_SPA_Jose_Antonio_RF"
+		}
+		iconType = {
+			name = "Javier_I" 
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_Javier_I"
+		}
+		iconType = {
+			name = "Gheorghe_Clime" 
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_Gheorghe_Clime"
+		}
+		iconType = {
+			name = "Mihai_Strescu" 
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_Mihai_Strescu"
+		}
+		iconType = {
+			name = "Nikolaus_Cossmann" 
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_Bavaria_Paul_Nikolaus_Cossmann"
+		}
+		iconType = {
+			name = "Hans_Erhard" 
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_Hans_Erhard"
+		}
+		iconType = {
+			name = "Fritz_Gerlich" 
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_Fritz_Gerlich"
+		}
+		
+		iconType = {
+			name = "Draza_Mihailovic" 
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_SER_Draza_Mihailovic"
+		}
+		
+		iconType = {
+			name = "NR_pm_frame"
+			quadTextureSprite ="GFX_pol_leader_frame"
+			position = { x = 0 y = 0 }
+			pdx_tooltip = "NRGUIHEADNAME"
+		}
+
+		buttonType = {
+			name = "NR_leader_button"
+			quadTextureSprite ="GFX_HOS_button"
+			position = { x = 155 y = 230 }
+			pdx_tooltip = "NR_HOS_OR_HOG"
+		}
+		
+		buttonType = {
+			name = "NR_second_leader_button"
+			quadTextureSprite ="GFX_HOS_button"
+			position = { x = 155 y = 205 }
+			pdx_tooltip = "NR_HOS_OR_HOG"
+		}
+		
+		instantTextboxType = {
+			name = "NR_pm_name"
+			position = { x = 8 y = 226 }
+			font = "hoi_18mbs"
+			text = "[NRGetPrimeMinister]"
+			pdx_tooltip = "NRGUIHEADNAME"
+			maxWidth = 155
+			maxHeight = 20
+			format = center
+			vertical_alignment = center
+		}	
+		
+		instantTextboxType = {
+			name = "NR_second_pm_name"
+			position = { x = 8 y = 226 }
+			font = "hoi_18mbs"
+			text = "[NRGetOtherPrimeMinister]"
+			pdx_tooltip = "NRGUIHEADNAME"
+			maxWidth = 155
+			maxHeight = 20
+			format = center
+			vertical_alignment = center
+		}	
+	}
+}
+guiTypes = {
+	containerWindowType = {
+		name = "NR_for_joe_biden_gui"
+		position = { x = 130 y = 255 }
+		
+		IconType = {
+			name = "NR_for_leader_button"
+			position = { x = 0 y = 0}
+			spriteType = "GFX_HOS_button"
+			pdx_tooltip = "NRGetSecondLEADER"
+		}
+	
+		IconType = {
+			name = "NR_for_second_leader_button"
+			position = { x = 0 y = 28}
+			spriteType = "GFX_HOS_button"
+			pdx_tooltip = "NRGetThirdLEADER"
+		}
+	}
+
+	containerWindowType = {
+		name = "for_gru_pm_gui"
+		position = { x = 130 y = 282 }
+		
+		IconType = {
+			name = "gru_pm_button"
+			position = { x = 0 y = 0}
+			spriteType = "GFX_GRU_pm_button"
+			pdx_tooltip = "CAN_GRU_PM_GOE"
+		}
+	}
+}
+
+guiTypes = {
+	containerWindowType = {
+		name = "gru_pm_gui"
+		position = { x = 165 y = 245 }
+		
+		IconType = {
+			name = "gru_pm_button"
+			position = { x = 0 y = 0}
+			spriteType = "GFX_GRU_pm_button"
+			pdx_tooltip = "CAN_GRU_PM_GOE"
+		}
+	}
+}

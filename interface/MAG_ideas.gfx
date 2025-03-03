@@ -1,0 +1,56 @@
+spriteTypes = {	
+	#国家精神
+	spriteType = {
+		name = "GFX_idea_Heydrich_Projects"
+		texturefile = "gfx/interface/ideas/mag/MAG_Heydrich_Projects.png"
+	}
+	spriteType = {
+		name = "GFX_idea_four_years_plan"
+		texturefile = "gfx/interface/ideas/mag/MAG_four_years_plan.png"
+	}
+	spriteType = {
+		name = "GFX_idea_Heydrich_rule"
+		texturefile = "gfx/interface/ideas/mag/MAG_Heydrich_rule.png"
+	}
+	spriteType = {
+		name = "GFX_idea_sailor_home"
+		texturefile = "gfx/interface/ideas/mag/MAG_sailor_home.png"
+	}
+	spriteType = {
+		name = "GFX_idea_goering_influence"
+		texturefile = "gfx/interface/ideas/mag/MAG_goering_influence.png"
+	}
+	spriteType = {
+		name = "GFX_idea_rapid_germanization"
+		texturefile = "gfx/interface/ideas/mag/MAG_rapid_germanization.png"
+	}
+	spriteType = {
+		name = "GFX_idea_arbeit_macht_frei"
+		texturefile = "gfx/interface/ideas/mag/MAG_arbeit_macht_frei.png"
+	}
+	spriteType = {
+		name = "GFX_idea_Night_and_fog"
+		texturefile = "gfx/interface/ideas/mag/MAG_Night_and_fog.png"
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_logo_KX_MAG"
+		texturefile = "gfx/interface/ideas/mag/MAG_agency_logo_KX_madagaskar.png"
+		noOfFrames = 2
+	}
+	SpriteType = {
+		name = "GFX_idea_MAG_plundering_of_jewish_property"
+		texturefile = "gfx/interface/ideas/MAG_plundering_of_jewish_property.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_MAG_army_for_the_liberation_of_africa"
+		texturefile = "gfx/interface/ideas/MAG_army_for_the_liberation_of_africa.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_MAG_the_more_the_merrier"
+		texturefile = "gfx/interface/ideas/MAG_the_more_the_merrier.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_MAG_constantly_improve_something"
+		texturefile = "gfx/interface/ideas/MAG_constantly_improve_something.png"
+	}
+}

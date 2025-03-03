@@ -1,0 +1,160 @@
+SpriteTypes = {
+	spriteType = {
+		name = "GFX_idea_POR_Hegemon_africa"
+		texturefile = "gfx/interface/ideas/POR_Hegemon_africa.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_EGY_Anti-Colonialist_Behemoth"
+		texturefile = "gfx/interface/goals/NE_EGY/Anti-Colonialist_Behemoth.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_EGY_No_to_White_Saviors"
+		texturefile = "gfx/interface/goals/NE_EGY/No_to_White_Saviors.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_EGY_Heaven_Smiles_to_the_Peaceful"
+		texturefile = "gfx/interface/goals/NE_EGY/Heaven_Smiles_to_the_Peaceful.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_EGY_Shield_of_the_Middle_East"
+		texturefile = "gfx/interface/goals/NE_EGY/Shield_of_the_Middle_East.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_EGY_Unity_Aganist_Colonialism"
+		texturefile = "gfx/interface/goals/NE_EGY/Unity_Aganist_Colonialism.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_EGY_Protect_Africa"
+		texturefile = "gfx/interface/goals/NE_EGY/Protect_Africa.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_EGY_Aganist_the_Tetuon"
+		texturefile = "gfx/interface/goals/NE_EGY/Aganist_the_Tetuon.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_EGY_Scientific_Cooperation"
+		texturefile = "gfx/interface/goals/NE_EGY/Scientific_Cooperation.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_EGY_Join_The_Soviet_Struggle"
+		texturefile = "gfx/interface/goals/NE_EGY/Join_The_Soviet_Struggle.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_EGY_Join_the_internationale"
+		texturefile = "gfx/interface/goals/NE_EGY/Join_the_internationale.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_EGY_Arabia_on_the_World_Stage"
+		texturefile = "gfx/interface/goals/NE_EGY/Arabia_on_the_World_Stage.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_EGY_Arabs_United"
+		texturefile = "gfx/interface/goals/NE_EGY/Arabs_United_Forever.png"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_EGY_Special_Military_Operation"
+		texturefile = "gfx/interface/goals/NE_EGY/Special_Military_Operations.png"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_EGY_Noble_Unity_of_our_People"
+		texturefile = "gfx/interface/goals/NE_EGY/Noble_Unity_of_our_People.png"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_EGY_Take_care_of_CasaBlanca"
+		texturefile = "gfx/interface/goals/NE_EGY/Take_care_of_CasaBlanca.png"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_EGY_Demands_to_the_French"
+		texturefile = "gfx/interface/goals/NE_EGY/Demands_to_the_French.png"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_EGY_Hand_of_Diplomacy"
+		texturefile = "gfx/interface/goals/NE_EGY/Hand_of_Diplomacy.png"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_EGY_Torch_Guiding_the_Arabi"
+		texturefile = "gfx/interface/goals/NE_EGY/Torch_Guiding_the_Arabi.png"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_EGY_Destabilization_of_Suez_Canal"
+		texturefile = "gfx/interface/goals/NE_EGY/Destabilization_of_Suez_Canal.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_EGY_Denounce_German_Colonialism"
+		texturefile = "gfx/interface/goals/NE_EGY/Denounce_German_Colonialism.png"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_EGY_Dealing_with_Western_Colonizers"
+		texturefile = "gfx/interface/goals/NE_EGY/Dealing_with_Western_Colonizers.png"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_EGY_Model_anti_Colonialism"
+		texturefile = "gfx/interface/goals/NE_EGY/Model_anti-Colonialism.png"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_EGY_Take_Care_of_the_Arabs"
+		texturefile = "gfx/interface/goals/NE_EGY/Take_Care_of_the_Arabs.png"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_EGY_All_Ruling_Baath"
+		texturefile = "gfx/interface/goals/NE_EGY/All_Ruling_Baath.png"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_EGY_Dealing_with_Krauts"
+		texturefile = "gfx/interface/goals/NE_EGY/Dealing_with_Krauts.png"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_EGY_Day_after_Day_Its_glories_Multiply"
+		texturefile = "gfx/interface/goals/NE_EGY/Day_after_Day_Its_glories_Multiply.png"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_EGY_Arab_Economic_Model"
+		texturefile = "gfx/interface/goals/NE_EGY/Arab_Economic_Model.png"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_EGY_Destroy_The_Royality"
+		texturefile = "gfx/interface/goals/NE_EGY/Destroy_The_Royality.png"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_EGY_Arab_Socialism"
+		texturefile = "gfx/interface/goals/NE_EGY/Arab_Soicalism.png"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_EGY_New_Arab_Way_of_Life"
+		texturefile = "gfx/interface/goals/NE_EGY/New_Arab_Way_of_Life.png"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_EGY_Dream_of_Arab_Unity"
+		texturefile = "gfx/interface/goals/NE_EGY/Dream_of_Arab_Unity.png"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_EGY_Invest_In_Arabi_Education"
+		texturefile = "gfx/interface/goals/NE_EGY/Invest_In_Arabi_Education.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_EGY_Hijab_Act"
+		texturefile = "gfx/interface/goals/NE_EGY/Hijab_Act.png"
+	}
+	
+}

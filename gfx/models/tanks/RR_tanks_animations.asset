@@ -1,0 +1,53 @@
+animation = {
+	name = "tigris_moving_animation"
+	file = "tigris_moving.anim"
+}
+animation = {
+	name = "tigris_attack_animation"
+	file = "tigris_attack.anim"
+}
+animation = {
+	name = "tigris_idle_animation"
+	file = "tigris_idle.anim"
+}
+animation = {
+	name = "geo_38t_idle_animation"
+	file = "geo_38t_idle.anim"
+}
+animation = {
+	name = "geo_38t_move_animation"
+	file = "geo_38t_move.anim"
+}
+animation = {
+	name = "geo_38t_attack_animation"
+	file = "geo_38t_attack.anim"
+}
+animation = {
+	name = "geo_panzer4_attack_animation"
+	file = "geo_panzer4_attack.anim"
+}
+animation = {
+	name = "geo_panzer3_idle_animation"
+	file = "geo_panzer3_idle.anim"
+}
+animation = {
+	name = "geo_panzer3_move_animation"
+	file = "geo_panzer3_move.anim"
+}
+animation = {
+	name = "geo_panzer3_attack_animation"
+	file = "geo_panzer3_attack.anim"
+}
+
+animation = {
+	name = "GRU_medium_armor_0_idle_animation"
+	file = "GER_medium_armor_0_idle.anim"
+}
+animation = {
+	name = "GRU_medium_armor_0_moving_animation"
+	file = "GER_medium_armor_0_moving.anim"
+}
+animation = {
+	name = "GRU_medium_armor_0_attack_animation"
+	file = "GER_medium_armor_0_attack.anim"
+}

@@ -1,0 +1,670 @@
+add_namespace = Yun_UGR
+
+country_event = { #阿克苏的布尔什维克教团
+	id = Yun_UGR.1
+	title = Yun_UGR.1.t
+	desc = Yun_UGR.1.d
+	picture = GFX_report_event_CHI_SJ
+	fire_only_once = yes
+	trigger = {
+		tag = ETS
+		date > 1939.9.1
+	}
+
+	option = {
+		name = Yun_UGR.1.a
+		ai_chance = {
+			factor = 10
+		}
+		add_stability = 0.1
+		add_manpower = -1000
+	}
+
+    option = {
+		name = Yun_UGR.1.b
+		ai_chance = {
+			factor = 90
+		}
+        add_stability = -0.1
+		hidden_effect = {
+			country_event = {
+				id = Yun_UGR.2
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = { #推翻东突
+	id = Yun_UGR.2
+	title = Yun_UGR.2.t
+	desc = Yun_UGR.2.d
+	
+	picture = GFX_report_event_CHI_JSGGWC
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = Yun_UGR.2.a
+		set_politics = {
+			ruling_party = radical_socialist
+		}
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.5
+		}
+		if = {
+			limit = {
+				country_exists = CHI
+			}
+			CHI = {
+			set_autonomy = { target = ETS autonomy_state = kr_governorate }
+			}
+			ETS = {
+				add_ideas = idea_CHI_SIK_mad_recover_power
+				add_ideas = idea_CHI_SIK_destroy_mongolia
+				add_ideas = internationale_support
+				add_ideas = CHI_march_of_the_volunteers_idea
+				add_ideas = CHI_NRA_army_organisation_idea
+				add_ideas = CHI_mac_idea3
+				add_ideas = CHI_cic_idea
+				add_ideas = CHI_nra_jiangfu_idea5
+				add_ideas = CHI_institute_of_revolutionary_practice_idea
+				add_ideas = CHI_devastated_national_econ5_idea
+				add_ideas = CHI_war_of_resistance_idea			
+			}
+		}
+		else = {
+			CHI = {
+				annex_country = {
+					target = ETS
+					transfer_troops = yes
+				}
+				change_tag_from = ROOT
+			}
+		}
+		set_cosmetic_tag = SIK_Li_Mutharifu
+		create_country_leader = {
+			name = "鲁特甫拉·穆塔里甫"
+			desc = ""
+			picture = "gfx/leaders/SIK/Portrait_China_Li_Mutharifu.png"
+			expire = "1965.1.1"
+			ideology = radsoc_tridemism_subtype
+		}
+		add_stability = 0.15
+		hidden_effect = {
+			if = {
+				limit = {
+					country_exists = CHI
+				}
+				ETS = {
+					every_unit_leader = {
+						set_nationality = ZZZ
+					}
+				}
+				remove_all_ministers = yes
+				create_country_leader = {
+					name = "鲁特甫拉·穆塔里甫"
+					desc = ""
+					picture = "gfx/leaders/SIK/Portrait_China_Li_Mutharifu.png"
+					expire = "1965.1.1"
+					ideology = totalist_subtype
+				}
+				create_country_leader = {
+					name = "鲁特甫拉·穆塔里甫"
+					desc = ""
+					picture = "gfx/leaders/SIK/Portrait_China_Li_Mutharifu.png"
+					expire = "1965.1.1"
+					ideology = syndicalist_subtype
+				}
+				create_country_leader = {
+					name = "鲁特甫拉·穆塔里甫"
+					desc = ""
+					picture = "gfx/leaders/SIK/Portrait_China_Li_Mutharifu.png"
+					expire = "1965.1.1"
+					ideology = social_democrat_subtype
+				}
+				set_party_name = { 
+					ideology = totalist 
+					long_name = SIK_Uyghur_Spark_Party_long
+					name = SIK_Uyghur_Spark_Party
+				}
+				set_party_name = { 
+					ideology = radical_socialist 
+					long_name = SIK_Uyghur_Spark_Party_long
+					name = SIK_Uyghur_Spark_Party
+				}
+				set_party_name = { 
+					ideology = syndicalist
+					long_name = SIK_Uyghur_Spark_Party_long
+					name = SIK_Uyghur_Spark_Party
+				}
+				set_party_name = { 
+					ideology = social_democrat
+					long_name = SIK_Uyghur_Spark_Party_long
+					name = SIK_Uyghur_Spark_Party
+				}
+				country_event = {
+					id = Yun_UGR.4
+					days = 14
+				}
+				country_event = {
+					id = Yun_UGR.5
+					days = 3
+				}					
+			}
+			else = {
+				NSW = {
+					country_event = {
+						id = Yun_UGR.6
+						days = 3
+					}
+				}
+			}		
+		}
+	}
+}
+
+country_event = { #换意识形态
+	id = Yun_UGR.3
+	title = Yun_UGR.3.t
+	desc = Yun_UGR.3.d
+	
+	picture = GFX_report_event_CHI_XFD
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = Yun_UGR.3.a
+		ai_chance = {
+			factor = 70
+		}
+	}
+
+    option = {
+		name = Yun_UGR.3.b
+		ai_chance = {
+			factor = 20
+		}
+		set_country_leader_ideology = radsoc_mayakovskyism_subtype
+	}
+
+	option = {
+		name = Yun_UGR.3.c
+		ai_chance = {
+			factor = 10
+		}
+        set_country_leader_ideology = lu_xun_thought_subtype
+	}
+
+	option = {
+		name = Yun_UGR.3.e
+		ai_chance = {
+			factor = 10
+		}
+        set_country_leader_ideology = authcom_subtype
+		set_politics = {
+			ruling_party = totalist
+		}
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.5
+		}
+	}
+
+}
+
+country_event = { #选举
+	id = Yun_UGR.4
+	title = Yun_UGR.4.t
+	desc = Yun_UGR.4.d
+	
+	picture = GFX_report_event_CHI_guodakaimu
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = Yun_UGR.4.a
+		ai_chance = {
+			factor = 10
+		}
+		country_event = {
+			id = Yun_UGR.3
+			days = 3
+		}
+	}
+
+    option = {
+		name = Yun_UGR.4.b
+		ai_chance = {
+			factor = 45
+		}
+		create_country_leader = {
+			name = "包尔汉·沙希迪"
+			desc = "POLITICS_BURHAN_SHAHIDI_DESC"
+			picture = "gfx/leaders/SIK/Portrait_SIK_Burhan_Shahidi.png"
+			expire = "1965.1.1"
+			ideology = new_democrat_subtype
+		}
+		create_country_leader = {
+			name = "包尔汉·沙希迪"
+			desc = "POLITICS_BURHAN_SHAHIDI_DESC"
+			picture = "gfx/leaders/SIK/Portrait_SIK_Burhan_Shahidi.png"
+			expire = "1965.1.1"
+			ideology = socdem_tridemism_subtype
+		}
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.2
+		}
+		set_party_name = { 
+			ideology = totalist 
+			long_name = SIK_Minzhu_Lianhe_Party_long
+			name = SIK_Minzhu_Lianhe_Party
+		}
+		set_party_name = { 
+			ideology = radical_socialist 
+			long_name = SIK_Minzhu_Lianhe_Party_long
+			name = SIK_Minzhu_Lianhe_Party
+		}
+		set_party_name = { 
+			ideology = syndicalist
+			long_name = SIK_Minzhu_Lianhe_Party_long
+			name = SIK_Minzhu_Lianhe_Party
+		}
+		set_party_name = { 
+			ideology = social_democrat
+			long_name = SIK_Minzhu_Lianhe_Party_long
+			name = SIK_Minzhu_Lianhe_Party
+		}
+		hidden_effect = {
+			create_country_leader = {
+				name = "赛福鼎·艾孜则"
+				desc = ""
+				picture = "gfx/leaders/SIK/Portrait_China_Saifuddin_Azizi.png"
+				expire = "1965.1.1"
+				ideology = tot_tridemism_subtype
+			}		
+		}
+	}
+
+	option = {
+		name = Yun_UGR.4.c
+		ai_chance = {
+			factor = 45
+		}
+		create_country_leader = {
+			name = "赛福鼎·艾孜则"
+			desc = ""
+			picture = "gfx/leaders/SIK/Portrait_China_Saifuddin_Azizi.png"
+			expire = "1965.1.1"
+			ideology = tot_tridemism_subtype
+		}
+		set_politics = {
+			ruling_party = totalist
+		}
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.5
+		}
+		set_party_name = { 
+			ideology = totalist 
+			long_name = SIK_Minzhu_Lianhe_Party_long
+			name = SIK_Minzhu_Lianhe_Party
+		}
+		set_party_name = { 
+			ideology = radical_socialist 
+			long_name = SIK_Minzhu_Lianhe_Party_long
+			name = SIK_Minzhu_Lianhe_Party
+		}
+		set_party_name = { 
+			ideology = syndicalist
+			long_name = SIK_Minzhu_Lianhe_Party_long
+			name = SIK_Minzhu_Lianhe_Party
+		}
+		set_party_name = { 
+			ideology = social_democrat
+			long_name = SIK_Minzhu_Lianhe_Party_long
+			name = SIK_Minzhu_Lianhe_Party
+		}
+		hidden_effect = {
+			create_country_leader = {
+				name = "包尔汉·沙希迪"
+				desc = "POLITICS_BURHAN_SHAHIDI_DESC"
+				picture = "gfx/leaders/SIK/Portrait_SIK_Burhan_Shahidi.png"
+				expire = "1965.1.1"
+				ideology = new_democrat_subtype
+			}
+			create_country_leader = {
+				name = "包尔汉·沙希迪"
+				desc = "POLITICS_BURHAN_SHAHIDI_DESC"
+				picture = "gfx/leaders/SIK/Portrait_SIK_Burhan_Shahidi.png"
+				expire = "1965.1.1"
+				ideology = socdem_tridemism_subtype
+			}
+		}
+	}
+
+}
+
+country_event = { #收编军官
+	id = Yun_UGR.5
+	title = Yun_UGR.5.t
+	desc = Yun_UGR.5.d
+	
+	picture = GFX_report_event_CHI_55shi
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = Yun_UGR.5.a
+		create_corps_commander = {
+			name = "Ma Shaowu"
+			desc = "POLITICS_MA_SHAOWU_DESC"
+			portrait_path = "gfx/leaders/SIK/SIK_ma_shaowu_army.png"
+			traits = { old_guard politically_connected harsh_leader irregulars_officer trickster }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+		}
+		create_corps_commander = {
+			name = "Niu Shi"
+			portrait_path = "gfx/leaders/SIK/SIK_niu_shi.png"
+			traits = { war_hero trait_cautious light_infantry_officer trait_mountaineer }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 1
+		}
+		create_corps_commander = {
+			name = "Zhang Peiyuan"
+			portrait_path = "gfx/leaders/SIK/SIK_zhang_peiyuan.png"
+			traits = { cavalry_officer harsh_leader trait_reckless }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+		create_corps_commander = {
+			name = "Yang Feixia"
+			portrait_path = "gfx/leaders/SIK/SIK_yang_feixia.png"
+			traits = { career_officer engineer_officer organizer }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 3
+		}
+		create_corps_commander = {
+			name = "Ma Zhongying"
+			desc = "POLITICS_XSM_MA_ZHONGYING_ARMY_DESC"
+			portrait_path = "gfx/leaders/XSM/Portrait_XSM_Ma_Zhongying.png"
+			traits = { cavalry_officer trait_reckless harsh_leader trickster }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 2
+		}
+		create_corps_commander = {
+			name = "Burhan Shahidi"
+			desc = "POLITICS_BURHAN_SHAHIDI_DESC"
+			portrait_path = "gfx/leaders/SIK/Portrait_SIK_Burhan_Shahidi.png"
+			traits = { cavalry_officer trait_cautious irregulars_officer trickster }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+		create_field_marshal = {
+			name = "Saifuddin Azizi"
+			portrait_path = "gfx/leaders/SIK/Portrait_China_Saifuddin_Azizi.png"
+			traits = { trait_reckless inspirational_leader infantry_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		create_field_marshal = {
+			name = "Wang Zhen"
+			portrait_path = "gfx/leaders/SIK/Portrait_China_Wang_Zhen.png"
+			traits = { brilliant_strategist aggressive_assaulter inspirational_leader skilled_staffer expert_delegator }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 3
+		}
+		create_corps_commander = {
+			name = "Liu Zhidan"
+			portrait_path = "gfx/leaders/XSM/Portrait_XSM_Liu_Zhidan.png"
+			traits = { cavalry_officer }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+}
+
+country_event = { #流亡迪化
+	id = Yun_UGR.6
+	title = Yun_UGR.6.t
+	desc = Yun_UGR.6.d
+	
+	picture = GFX_report_event_CHI_55shi
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = Yun_UGR.6.a
+		if = {
+			limit = { 
+				CHI = { 
+					NOT = {
+						has_country_flag = CHI_phase_two_begins_flag
+					}
+				}
+			}
+			CHI = { 
+				complete_national_focus = CHI_first_congress_focus
+				complete_national_focus = CHI_second_national_congress
+				set_country_flag = CHI_phase_two_begins_flag	
+				set_country_flag = CHI_phase_three_begins_flag
+			}
+		}
+		CHI = {
+			set_cosmetic_tag = CHI_SIK_exile
+			country_event = Yun_UGR.5
+			add_manpower = 50000
+			add_political_power = 2000
+			add_ideas = idea_CHI_SIK_mad_recover_power
+			add_ideas = idea_CHI_SIK_destroy_mongolia
+			add_ideas = gru_zhanshipeijizhi
+			add_ideas = gru_pingfan
+			add_ideas = gru_beishuiyizhan
+			add_ideas = FRA_empower_rifleman_idea
+			add_ideas = FRA_mass_production_idea		
+			division_template = {
+				name = "Revolutionary militia"
+				division_names_group = GRU_rev_mil
+				is_locked = yes
+				regiments = {
+					irregular_infantry = { x = 0 y = 0 }
+					irregular_infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					irregular_infantry = { x = 1 y = 0 }
+					irregular_infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					militia = { x = 2 y = 0 }
+					militia = { x = 2 y = 1 }
+					militia = { x = 2 y = 2 }
+					militia = { x = 3 y = 0 }
+					militia = { x = 3 y = 1 }
+					militia = { x = 3 y = 2 }
+				}
+				support = {
+					recon = { x = 0 y = 0 }
+					engineer = { x = 0 y = 1 }
+					artillery = { x = 0 y = 2 }
+				}
+				priority = 1
+			}
+			random_owned_state = {
+				prioritize =  { 50 }
+				create_unit = {
+					division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+					owner = CHI
+				}
+				create_unit = {
+					division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+					owner = CHI
+				}
+				create_unit = {
+					division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+					owner = CHI
+				}
+				create_unit = {
+					division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+					owner = CHI
+				}
+				create_unit = {
+					division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+					owner = CHI
+				}
+				create_unit = {
+					division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+					owner = CHI
+				}
+			}
+			random_owned_state = {
+				prioritize =  { 55 }
+				create_unit = {
+					division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+					owner = CHI
+				}
+				create_unit = {
+					division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+					owner = CHI
+				}
+				create_unit = {
+					division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+					owner = CHI
+				}
+				create_unit = {
+					division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+					owner = CHI
+				}
+				create_unit = {
+					division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+					owner = CHI
+				}
+				create_unit = {
+					division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+					owner = CHI
+				}
+				create_unit = {
+					division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+					owner = CHI
+				}
+				create_unit = {
+					division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+					owner = CHI
+				}
+				create_unit = {
+					division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+					owner = CHI
+				}
+			}
+			random_owned_state = {
+				prioritize =  { 57 }
+				create_unit = {
+					division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+					owner = CHI
+				}
+				create_unit = {
+					division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+					owner = CHI
+				}
+				create_unit = {
+					division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+					owner = CHI
+				}
+				create_unit = {
+					division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+					owner = CHI
+				}
+				create_unit = {
+					division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+					owner = CHI
+				}
+				create_unit = {
+					division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+					owner = CHI
+				}
+				create_unit = {
+					division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+					owner = CHI
+				}
+			}
+			random_owned_state = {
+				prioritize =  { 56 }
+				create_unit = {
+					division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+					owner = CHI
+				}
+				create_unit = {
+					division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+					owner = CHI
+				}
+				create_unit = {
+					division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+					owner = CHI
+				}
+				create_unit = {
+					division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+					owner = CHI
+				}
+				create_unit = {
+					division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+					owner = CHI
+				}
+				create_unit = {
+					division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+					owner = CHI
+				}
+				create_unit = {
+					division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+					owner = CHI
+				}
+				create_unit = {
+					division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+					owner = CHI
+				}
+			}
+		}
+		every_state = {
+			limit = { 
+				OR = {
+					is_claimed_by = FNG
+					is_claimed_by = QIE
+					is_core_of = FNG
+					is_core_of = QIE
+				}
+			}
+			add_core_of = CHI
+		}
+	}
+}

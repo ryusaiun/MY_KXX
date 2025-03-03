@@ -1,0 +1,13 @@
+###OOB File for GEA.txt
+units = {
+	fleet = {
+		name = "Flotte verstärkung"
+		naval_base = 12299 ###Change to proper province number
+		task_force = {
+			name = "Flotte verstärkung"
+			location = 12299
+            ship = { name = "SMS Wrangel" definition = heavy_cruiser equipment = { ship_hull_cruiser_panzerschiff = { amount = 1 owner = GEA version_name = "Prinz Eugen Class" } } } 
+            ship = { name = "SMS Daun" definition = heavy_cruiser equipment = { ship_hull_cruiser_panzerschiff = { amount = 1 owner = GEA version_name = "Prinz Eugen Class" } } }
+		}
+	}
+}

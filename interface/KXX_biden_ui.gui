@@ -1,0 +1,814 @@
+guiTypes = {
+	containerWindowType =  {
+		name = "KXX_joe_biden_gui"
+		position = { x = 10 y = 44 }
+		size = { width = 170 height = 260 }
+		orientation = upper_left
+		
+		############民族与革命#############
+		
+		
+		iconType = {
+			name = "Juan_Laguia_Lliteras" 
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_Juan_Laguia_Lliteras"
+		}
+		iconType = {
+			name = "Oleksander_Shumsky" 
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_Oleksander_Shumsky"
+		}
+		iconType = {
+			name = "Stepan_Bandera2" 
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_Stepan_Bandera2"
+		}
+		iconType = {
+			name = "Stepan_Bandera" 
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_Stepan_Bandera"
+		}
+		iconType = {
+			name = "Shukevich" 
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_Shukevich"
+		}
+		iconType = {
+			name = "Vasyl_Kuk" 
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_Vasyl_Kuk"
+		}
+		iconType = {
+			name = "Dmitri_Dontsov" 
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_UKR_Dmitri_Dontsov"
+		}
+		iconType = {
+			name = "Jose_Antonio" 
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_SPA_Jose_Antonio_RF"
+		}
+		iconType = {
+			name = "Javier_I" 
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_Javier_I"
+		}
+		iconType = {
+			name = "Gheorghe_Clime" 
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_Gheorghe_Clime"
+		}
+		iconType = {
+			name = "Mihai_Strescu" 
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_Mihai_Strescu"
+		}
+		iconType = {
+			name = "Nikolaus_Cossmann" 
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_Bavaria_Paul_Nikolaus_Cossmann"
+		}
+		iconType = {
+			name = "Hans_Erhard" 
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_Hans_Erhard"
+		}
+		iconType = {
+			name = "Fritz_Gerlich" 
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_Fritz_Gerlich"
+		}
+		
+		iconType = {
+			name = "Draza_Mihailovic" 
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_SER_Draza_Mihailovic"
+		}
+		
+		#################法公社杜克洛########################
+		
+		iconType = { #
+		    name = "Jacques_Doriot"
+		    position = { x = 8 y = 10 }
+		    spriteType = "GFX_Portrait_France_Jacques_Doriot"
+    	}
+		iconType = { #
+			name = "Maurice_Thorez"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_France_Maurice_Thorez"
+		}
+		###################拿破仑傀儡##########################		
+		iconType = { #
+		    name = "N_Jose_Antonio"
+		    position = { x = 8 y = 10 }
+		    spriteType = "GFX_Portrait_NPL_Jose_Antonio"
+    	}
+		###################刚果&葡萄牙##########################
+		iconType = { #
+		    name = "Duarte_II"
+		    position = { x = 8 y = 10 }
+		    spriteType = "GFX_Portrait_POR_Duarte_II"
+    	}
+		iconType = { #
+		    name = "Pedro_VII"
+		    position = { x = 8 y = 10 }
+		    spriteType = "GFX_Portrait_KOG_Pedro_VII"
+    	}
+		iconType = { #
+		    name = "Gilberto_de_Mello_Freyre"
+		    position = { x = 8 y = 10 }
+		    spriteType = "GFX_Portrait_BRA_Gilberto_de_Mello_Freyre"
+    	}
+		iconType = { #
+		    name = "Antonio_Salazar"
+		    position = { x = 8 y = 10 }
+		    spriteType = "GFX_Portrait_POR_Antonio_Salazar"
+    	}
+		iconType = { #
+		    name = "Oswald_de_Andrade"
+		    position = { x = 8 y = 10 }
+		    spriteType = "GFX_Portrait_BRA_Oswald_de_Andrade"
+    	}
+		
+		##################法公社##############################
+		
+		iconType = { #
+			name = "Andre_Chaumet"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_FRA_Andre_Chaumet"
+		}
+		iconType = { #
+			name = "Simone_Weil"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_FRA_Simone_Weil"
+		}
+		iconType = { #
+			name = "Jesus_Weil"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_FRA_MY_Lord_Jesus"
+		}
+		
+		##################丹麦##################################
+		iconType = { #
+			name = "Max_Arildskov"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_DEN_Max_Arildskov"
+		}
+		
+		##################国法##################################
+		
+		iconType = { #
+			name = "Roger_Nimier"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_NFA_Roger_Nimier"
+		}
+		iconType = { #
+			name = "Nicolas_Kayanakis"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_NFA_Nicolas_Kayanakis"
+		}
+		
+		##################波兰##################################
+		
+		iconType = { #
+			name = "Alfred_Lampe"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_POL_Alfred_Lampe"
+		}
+		iconType = { #
+			name = "Adolf_Warski"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_POL_Adolf_Warski"
+		}
+		iconType = { #
+			name = "Julian_Leszczyński"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_POL_Julian"
+		}
+		iconType = { #
+			name = "Stanislaw_Dubois"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_POL_Stanislaw_Dubois"
+		}
+		iconType = { #
+			name = "Kazimierz_Zakrzewski"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_POL_Kazimierz_Zakrzewski"
+		}
+		iconType = { #
+			name = "Michal_Kalecki"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_POL_Michal_Kalecki"
+		}
+		iconType = { #
+			name = "Oskar_Lange"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_POL_Oskar_Lange"
+		}
+		iconType = { #
+			name = "Jozef_Chacinski"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_POL_Jozef_Chacinski"
+		}
+		iconType = { #
+			name = "Norbert_Barlicki"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_POL_Norbert_Barlicki"
+		}
+		iconType = { #
+			name = "Stanislaw_Mikolajczyk"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_POL_Stanislaw_Mikolajczyk"
+		}
+		iconType = { #
+			name = "Walery_Slawek"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_POL_Walery_Slawek"
+		}
+		iconType = { #
+			name = "Roman_Dmowski"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_POL_Roman_Dmowski"
+		}
+		iconType = { #
+			name = "Antoni_Ciszak"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_POL_Antoni_Ciszak"
+		}
+		iconType = { #
+			name = "Eugeniusz_Kwiatkowski"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_POL_Eugeniusz_Kwiatkowski"
+		}
+		iconType = { #
+			name = "Julian_Tuwim"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_POL_Julian_Tuwim"
+		}
+		iconType = { #
+			name = "Wladyslaw_Gomulka"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_POL_Wladyslaw_Gomulka"
+		}
+		iconType = { #
+			name = "Jozef_Niecko"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_POL_Jozef_Niecko"
+		}
+		iconType = { #
+			name = "Stefan_Wyszynski"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_POL_Stefan_Wyszynski"
+		}
+		iconType = { #
+			name = "Odrodzenia_Polski"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_POL_Odrodzenia_Polski"
+		}
+		iconType = { #
+			name = "Wewnetrzny_Krag"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_POL_Wewnetrzny_Krag"
+		}
+		iconType = { #
+			name = "Adam_Doboszynski"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_POL_Adam_Doboszynski"
+		}
+		iconType = { #
+			name = "Jan_Hempel"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_POL_Jan_Hempel"
+		}
+		iconType = { #
+			name = "Zgromadzenie_Lechickie"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_POL_Zgromadzenie_Lechickie"
+		}
+		iconType = { #
+			name = "Forty_Four"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_POL_Forty_Four"
+		}
+		iconType = { #
+			name = "Christ_King"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_POL_Christ_King"
+		}
+		iconType = { #
+			name = "Jezus_Lechia"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_POL_Jezus_Lechia"
+		}
+		
+		#####################小黄##################################
+		
+		iconType = { #
+			name = "Ernst_Rhoem"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_GRU_Ernst_Rhoem"
+		}
+		
+		iconType = { #
+			name = "Gregor_Strasser"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_GRU_Gregor_Strasser"
+		}
+		
+		iconType = { #
+			name = "Horst_Wessel"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_GRU_Horst_Wessel"
+		}
+		
+		iconType = { #
+			name = "Albert_Speer"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_GRU_Albert_Speer"
+		}
+		
+		################法国复兴政府################################
+		
+		iconType = { #
+			name = "Robert_Brasillach"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_FRG_Robert_Brasillach"
+		}
+		iconType = { #
+			name = "Charles_Nogues"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_FRG_Charles_Nogues"
+		}
+		iconType = { #
+			name = "Xavier_Vallat"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_FRG_Xavier_Vallat"
+		}
+		
+		####################西俄革##################################
+		
+		iconType = { #
+			name = "Georgy_Zhukov"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_WRS_Georgy_Zhukov"
+		}
+		
+		iconType = { #
+			name = "Mikhail_Tukhachevskiy"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_WRS_Mikhail_Tukhachevskiy"
+		}
+		
+		####################日本&红龙日本###############################
+			
+		iconType = { #
+			name = "Abe_Iso"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Abe_Iso"
+		}
+			
+		iconType = { #
+			name = "Katayama_Tetsu"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Tetsu_Katayama_RD"
+		}
+			
+		iconType = { #
+			name = "Machida_Chuji"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Machida_Chuji"
+		}
+		
+		iconType = { #
+			name = "Hamaguchi_Osachi"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Hamaguchi_Osachi"
+		}
+		
+		iconType = { #
+			name = "Ugaki_Kazushige"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Kazushige_Ugaki"
+		}
+		
+		iconType = { #
+			name = "Inukai_Tsuyoshi"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Inukai_Tsuyoshi"
+		}
+		
+		iconType = { #
+			name = "Suzuki_Kisaburo"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Suzuki_Kisaburo"
+		}
+		
+		iconType = { #
+			name = "Mizuno_Rentaro"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Mizuno_Rentaro"
+		}
+			
+		iconType = { #
+			name = "Yoshizawa_Kenkichi"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Kenkichi_Yoshizawa"
+		}
+		
+		iconType = { #
+			name = "Hatoyama_Ichiro"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Hatoyama_Ichiro"
+		}
+			
+		iconType = { #
+			name = "Adachi_Kenzo"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Adachi_Kenzo"
+		}
+			
+		iconType = { #
+			name = "Maeda_Yonezo"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Maeda_Yonezo"
+		}
+				
+		iconType = { #
+			name = "Hiranuma_Kiichiro"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Hiranuma_Kiichiro"
+		}
+					
+		iconType = { #
+			name = "Hayashi_Senjuro"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Senjuro_Hayashi"
+		}
+					
+		iconType = { #
+			name = "Tojo_Hideki"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Hideki_Tojo"
+		}
+					
+		iconType = { #
+			name = "Nagata_Tetsuzan"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Nagata_Tetsuzan"
+		}
+
+		iconType = { #
+			name = "Konoe_Fumimaro"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Konoe_Fumimaro"
+		}
+		
+		iconType = { #
+			name = "Araki_Sadao"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Sadao_Araki"
+		}
+			
+		iconType = { #
+			name = "Kuhara_Fusanosuke"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Fusanosuke_Kuhara"
+		}
+		
+		iconType = { #
+			name = "Jotaro_Kawakami"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Jotaro_Kawakami"
+		}
+		
+		iconType = { #
+			name = "Yamamoto_Kenzo"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Yamamoto_Kenzo"
+		}
+		
+		iconType = { #
+			name = "Katayama_Tetsu"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Katayama_Tetsu"
+		}
+		
+		iconType = { #
+			name = "Seigo_Nakano"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Seigo_Nakano"
+		}
+		
+		iconType = { #
+			name = "Saito_Takao"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Saito_Takao"
+		}
+		
+		iconType = { #
+			name = "Inejiro_Asanuma"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Inejiro_Asanuma"
+		}
+		
+		iconType = { #
+			name = "Katsumaro_Akamatsu"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Katsumaro_Akamatsu"
+		}
+		
+		iconType = { #
+			name = "Yoshio_Kodama"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Yoshio_Kodama"
+		}
+		
+		iconType = { #
+			name = "Tatsuo_Tsukui"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Tatsuo_Tsukui"
+		}
+		
+		iconType = { #
+			name = "Kingoro_Hashimoto"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Kingoro_Hashimoto"
+		}
+		
+		iconType = { #
+			name = "Okawa_Shumei"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Okawa_Shumei"
+		}
+		
+		iconType = { #
+			name = "Ikki_Kita"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Ikki_Kita"
+		}
+		
+		iconType = { #
+			name = "Ryohei_Uchida"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Ryohei_Uchida"
+		}
+		
+		iconType = { #
+			name = "Toyama_Mitsuru"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Toyama_Mitsuru"
+		}
+		
+		iconType = { #
+			name = "Onisaburo_Deguchi"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Onisaburo_Deguchi"
+		}
+		
+		iconType = { #
+			name = "Kozaburo_Tachibana"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Kozaburo_Tachibana"
+		}
+		iconType = { #
+			name = "Iwane_Matsui"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Iwane_Matsui"
+		}
+		
+		iconType = { #
+			name = "Ryutaro_Nagai"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Ryutaro_Nagai"
+		}
+		iconType = { #
+			name = "Chikuhei_Nakajima"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Chikuhei_Nakajima"
+		}
+		iconType = { #
+			name = "Bin_Akao"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Bin_Akao"
+		}
+		
+		iconType = { #
+			name = "Giro_Senoo"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Giro_Senoo"
+		}
+		iconType = { #
+			name = "Kanji_Ishiwara"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Kanji_Ishiwara"
+		}
+		iconType = { #
+			name = "Nissho_Inoue"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Nissho_Inoue"
+		}
+		
+		iconType = { #
+			name = "Akira_Kazami"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Akira_Kazami"
+		}
+		
+		iconType = { #
+			name = "Josei_Toda"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Josei_Toda"
+		}
+		
+		iconType = { #
+			name = "Tsunesaburo_Makiguchi"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Tsunesaburo_Makiguchi"
+		}
+		
+		iconType = { #
+			name = "Rikizo_Hirano"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Rikizo_Hirano"
+		}
+		
+		iconType = { #
+			name = "Sumihisa_Ikeda"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Sumihisa_Ikeda"
+		}
+		
+		iconType = { #
+			name = "Aso_Hisashi"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Aso_Hisashi"
+		}
+		
+		iconType = { #
+			name = "Yoshikuru_Yamana"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Yoshikuru_Yamana"
+		}
+		
+		iconType = { #
+			name = "Zaibatsu_Council"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Zaibatsu_Council"
+		}
+		
+		iconType = { #
+			name = "Rikizo_Hirano"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_JAP_Rikizo_Hirano"
+		}
+		
+		
+		
+		iconType = {
+			name = "KXX_pm_frame"
+			quadTextureSprite ="GFX_pol_leader_frame"
+			position = { x = 0 y = 0 }
+			pdx_tooltip = "KXXGUIHEADNAME"
+		}
+
+		buttonType = {
+			name = "KXX_leader_button"
+			quadTextureSprite ="GFX_HOS_button"
+			position = { x = 155 y = 230 }
+			pdx_tooltip = "KXX_HOS_OR_HOG"
+		}
+		
+		buttonType = {
+			name = "KXX_second_leader_button"
+			quadTextureSprite ="GFX_HOS_button"
+			position = { x = 155 y = 205 }
+			pdx_tooltip = "KXX_HOS_OR_HOG2"
+		}
+		
+		buttonType = {
+			name = "KXX_third_leader_button"
+			quadTextureSprite ="GFX_HOS_button"
+			position = { x = 155 y = 180 }
+			pdx_tooltip = "KXX_HOS_OR_HOG3"
+		}
+		
+		#####特殊领袖分区
+		buttonType = {
+			name = "KXX_gru_leader_button"
+			quadTextureSprite ="GFX_KXX_pm_button"
+			position = { x = 155 y = 155 }
+			pdx_tooltip = "KXX_gru_OR_HOG"
+		}
+		
+		instantTextboxType = {
+			name = "KXX_pm_name"
+			position = { x = 8 y = 226 }
+			font = "hoi_18mbs"
+			text = "[KXXGetPrimeMinister]"
+			pdx_tooltip = "KXXGUIHEADNAME"
+			maxWidth = 155
+			maxHeight = 20
+			format = center
+			vertical_alignment = center
+		}	
+		
+		instantTextboxType = {
+			name = "KXX_second_pm_name"
+			position = { x = 8 y = 226 }
+			font = "hoi_18mbs"
+			text = "[KXXGetOtherPrimeMinister]"
+			pdx_tooltip = "KXXsecondGUIHEADNAME"
+			maxWidth = 155
+			maxHeight = 20
+			format = center
+			vertical_alignment = center
+		}	
+		
+		instantTextboxType = {
+			name = "KXX_third_pm_name"
+			position = { x = 8 y = 226 }
+			font = "hoi_18mbs"
+			text = "[KXXGetthirdPrimeMinister]"
+			pdx_tooltip = "KXXthirdGUIHEADNAME"
+			maxWidth = 155
+			maxHeight = 20
+			format = center
+			vertical_alignment = center
+		}	
+		
+		###特殊领袖分区
+		instantTextboxType = {
+			name = "KXX_gru_pm_name"
+			position = { x = 8 y = 226 }
+			font = "hoi_18mbs"
+			text = "[KXXGetgruMinister]"
+			pdx_tooltip = "KXXgruGUIHEADNAME"
+			maxWidth = 155
+			maxHeight = 20
+			format = center
+			vertical_alignment = center
+		}	
+	}
+}
+guiTypes = {
+	containerWindowType = {
+		name = "KXX_for_joe_biden_gui"
+		position = { x = 130 y = 255 }
+		
+		IconType = {
+			name = "KXX_for_leader_button"
+			position = { x = 0 y = 0}
+			spriteType = "GFX_HOS_button"
+			pdx_tooltip = "KXXGetSecondLEADER"
+		}
+	
+		IconType = {
+			name = "KXX_for_second_leader_button"
+			position = { x = 0 y = 28}
+			spriteType = "GFX_HOS_button"
+			pdx_tooltip = "KXXGetThirdLEADER"
+		}
+		
+		IconType = {
+			name = "KXX_for_third_leader_button"
+			position = { x = 0 y = -28}
+			spriteType = "GFX_HOS_button"
+			pdx_tooltip = "KXXGetfourthLEADER"
+		}
+		
+		
+		###特殊领袖分区
+		IconType = {
+			name = "KXX_for_gru_leader_button"
+			position = { x = 0 y = -56}
+			spriteType = "GFX_KXX_pm_button"
+			pdx_tooltip = "KXXGetgruLEADER"
+		}
+	}
+
+	containerWindowType = {
+		name = "for_gru_pm_gui"
+		position = { x = 130 y = 282 }
+		
+		IconType = {
+			name = "gru_pm_button"
+			position = { x = 0 y = 0}
+			spriteType = "GFX_GRU_pm_button"
+			pdx_tooltip = "CAN_GRU_PM_GOE"
+		}
+	}
+}
+
+guiTypes = {
+	containerWindowType = {
+		name = "gru_pm_gui"
+		position = { x = 165 y = 245 }
+		
+		IconType = {
+			name = "gru_pm_button"
+			position = { x = 0 y = 0}
+			spriteType = "GFX_GRU_pm_button"
+			pdx_tooltip = "CAN_GRU_PM_GOE"
+		}
+	}
+}

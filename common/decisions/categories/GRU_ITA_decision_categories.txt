@@ -1,0 +1,7 @@
+ITT_puppet_decisions = {
+	icon = GFX_decision_italy_flag
+	allowed = { tag = ITT }
+	visible = {
+		has_global_flag = goebb_itt_add
+	}
+}

@@ -1,0 +1,218 @@
+scripted_gui = {
+	GRU_view_pm = {
+		context_type = player_context
+		parent_window_token = politics_tab
+		window_name = "GRU_joe_biden_gui"
+
+		ai_check = {
+			always = no
+		}
+
+		triggers = {
+			GRU_pm_frame_visible = {
+				OR = {
+					has_country_flag = GRU_HOG_veiw
+					has_country_flag = GRU_HOG_second_veiw
+				}
+				NOT = {
+					has_country_flag = GRU_pm_is_hos
+				}
+			}
+			GRU_leader_button_visible = {
+				GRU_uses_leader_gui = yes
+			}
+			GRU_second_leader_button_visible = {
+				GRU_uses_double_leader_gui = yes
+			}
+
+			Ernst_Rhoem_visible = {
+				AND = {
+					has_country_flag = GRU_HOG_veiw
+					has_country_flag = GRU_GOEBB_ROEM_VISIBLE
+				}
+			}
+			GRU_Heinrich_Himmler_visible = {
+				AND = {
+					has_country_flag = GRU_HOG_veiw
+					has_country_flag = GRU_GOEBB_HIMMLER_VISIBLE
+				}
+			}
+			Albert_Speer_visible = {
+				AND = {
+					has_country_flag = GRU_HOG_veiw
+					has_country_flag = GRU_GOEBB_SPEER_VISIBLE
+				}
+			}
+			Hermann_Goering_visible = {
+				AND = {
+					has_country_flag = GRU_HOG_veiw
+					has_country_flag = GRU_GOEBB_GORING_VISIBLE
+				}
+			}
+			Rosa_Luxenburg_visible = {
+				AND = {
+					has_country_flag = GRU_HOG_veiw
+					has_country_flag = GRU_LIEBK_ROSA_VISIBLE
+				}
+			}
+			###
+			Britain_Charles_III_visible = {
+				AND = {
+					has_country_flag = GRU_HOG_veiw
+					has_country_flag = GRU_ENG_VISIBLE
+				}
+			}
+			Antonio_Salazar_visible = {
+				AND = {
+					has_country_flag = GRU_HOG_veiw
+					has_country_flag = GRU_IBR_VISIBLE
+				}
+			}
+			Victor_Emmanuel_III_visible = {
+				AND = {
+					has_country_flag = GRU_HOG_veiw
+					has_country_flag = GRU_ITT_VISIBLE
+				}
+			}
+			IEA_Victor_Emmanuel_III_visible = {
+				AND = {
+					has_country_flag = GRU_HOG_veiw
+					has_country_flag = GRU_IEA_VISIBLE
+				}
+			}
+			MNT_king_michael_visible = {
+				AND = {
+					has_country_flag = GRU_HOG_veiw
+					has_country_flag = GRU_MNT_VISIBLE
+				}
+			}
+			GRU_SER_Otto_visible = {
+				AND = {
+					has_country_flag = GRU_HOG_veiw
+					has_country_flag = GRU_SER_VISIBLE
+				}
+			}
+			###
+			Pyotr_Wrangel_Tsar_visible = {
+				AND = {
+					has_country_flag = GRU_HOG_veiw
+					has_country_flag = GRU_VYT_VISIBLE
+				}
+			}
+			Grigol_Ordzhonikikdze_visible = {
+				AND = {
+					has_country_flag = GRU_HOG_veiw
+					has_country_flag = STALIN_ORDZ_VISIBLE
+				}
+			}
+			Carl_Gustaf_Mannerheim_visible = {
+				AND = {
+					has_country_flag = GRU_HOG_veiw
+					has_country_flag = GRU_MUR_VISIBLE
+				}
+			}
+			Aleksandr_Yegorov_visible = {
+				AND = {
+					has_country_flag = GRU_HOG_veiw
+					has_country_flag = SUG_triumvirate
+				}
+			}
+			Bronislav_Kaminski_visible = {
+				AND = {
+					has_country_flag = GRU_HOG_veiw
+					has_country_flag = GRU_RRV_VISIBLE
+				}
+			}
+			Konstantin_Rodzaevsky_visible = {
+				AND = {
+					has_country_flag = GRU_HOG_veiw
+					has_country_flag = GRU_AMR_VISIBLE
+				}
+			}
+			Diterikhs_visible = {
+				AND = {
+					has_country_flag = GRU_HOG_veiw
+					has_country_flag = GRU_MGD_VISIBLE
+				}
+			}
+			SHE_Regency_visible = {
+				AND = {
+					has_country_flag = GRU_HOG_veiw
+					has_country_flag = GRU_SHE_VISIBLE
+				}
+			}
+			
+			GRU_pm_name_visible = {
+				has_country_flag = GRU_HOG_veiw
+			}
+			
+			GRU_second_pm_name_visible = {
+				has_country_flag = GRU_HOG_second_veiw
+			}
+		}
+
+		visible = {
+			GRU_uses_leader_gui = yes
+		}
+		
+		effects = {
+			GRU_leader_button_click = {
+				if = {
+					limit = {
+						has_country_flag = GRU_HOG_veiw
+					}
+					clr_country_flag = GRU_HOG_veiw
+					else = {
+						set_country_flag = GRU_HOG_veiw
+					}
+				}
+				if = {
+					limit = {
+						has_country_flag = GRU_HOG_second_veiw
+					}
+					clr_country_flag = GRU_HOG_second_veiw
+				}
+			}
+			
+			GRU_second_leader_button_click = {
+				if = {
+					limit = {
+						has_country_flag = GRU_HOG_second_veiw
+					}
+					clr_country_flag = GRU_HOG_second_veiw
+					else = {
+						set_country_flag = GRU_HOG_second_veiw
+					}
+				}
+				if = {
+					limit = {
+						has_country_flag = GRU_HOG_veiw
+					}
+					clr_country_flag = GRU_HOG_veiw
+				}
+			}
+		}
+	}
+}
+
+scripted_gui = {
+	GRU_FOR_view_pm = {
+		context_type = selected_country_context
+		parent_window_token = selected_country_view_diplomacy
+		window_name = "GRU_for_joe_biden_gui"
+
+		ai_check = {
+			always = no
+		}
+
+		triggers = {
+			GRU_for_leader_button_visible = {
+				GRU_uses_leader_gui = yes
+			}
+			
+			GRU_for_second_leader_button_visible = {
+				GRU_uses_double_leader_gui = yes
+			}
+		}	
+	}
+}

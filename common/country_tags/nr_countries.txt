@@ -1,0 +1,9 @@
+###########
+### NR ###
+KXX = "countries/KXX.txt"
+SXO = "countries/SXO.txt"
+HES = "countries/HES.txt"
+POM = "countries/POM.txt"
+SIL = "countries/SIL.txt"
+RRM = "countries/RRM.txt"
+#### GFX storage only - These tags should always be at the end of this list

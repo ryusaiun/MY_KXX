@@ -1,0 +1,9 @@
+POL_counciliary2 = {
+	color = rgb { 227 66 52 }
+	color_ui = rgb { 227 66 52 }
+}
+
+POL_slav_fed = {
+	color = rgb { 220 20 60 }
+	color_ui = rgb { 220 20 60 }
+}

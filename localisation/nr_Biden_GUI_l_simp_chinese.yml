@@ -1,0 +1,8 @@
+﻿l_simp_chinese:
+ NRGUIHOSNAME:0 "§Y[ROOT.GetLeader]§!\n--------------\n[THIS.GetLeaderDescription]"
+ NR_NORMAL_FOR_TITLE:0 "[NRGetFORHOGTitle]"
+ NR_CUSTOM_FOR_TITLE:0 "[NRGetThirdLeaderTitle]"
+ NR_HOS_OR_HOG:0 "[NRGetHOGTitle]"
+ NRGUIHOGNAME:0 "§Y[ROOT.NRGetPrimeMinister]§!\n--------------\n[THIS.NRGetHeadDescription]"
+ NRGetSecondLEADER:0 "[NRGetFORHOGTitle]\n\n\n\n\n\n\n\n £[NRGetPMPortrait]\n\n\n\n\n\n\n\n\n §Y[NRGetPrimeMinister]§!\n [THIS.NRGetHeadDescription]"
+ NRGetThirdLEADER:0 "[NRGetThirdLeaderTitle]\n\n\n\n\n\n\n\n £[NRGetOtherPMPortrait]\n\n\n\n\n\n\n\n\n §Y[NRGetOtherPrimeMinister]§!\n [THIS.NRGetHeadDescription]"

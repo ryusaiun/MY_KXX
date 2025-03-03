@@ -1,0 +1,3613 @@
+### SRI Ideas
+
+ideas = {
+
+	##############
+	# Country ideas
+	##############
+	country = {
+		CNT_rally_anarchists_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CNT_rally_anarchists_idea"}
+			available = { has_global_flag = spanish_civil_war }
+			allowed = { always = no }
+            modifier = {
+				war_support_factor = 0.20
+				surrender_limit = 0.15
+			}
+			picture = SCW_SWF_fervor
+		}
+		CNT_rally_anarchists_idea1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CNT_rally_anarchists_idea1"}
+			available = { has_global_flag = spanish_civil_war }
+			name = 无政府影响消退
+			allowed = { always = no }
+            modifier = {
+				war_support_factor = 0.20
+				political_power_factor = 0.1
+				political_power_gain = 0.1
+			}
+			picture = SCW_SWF_fervor
+		}
+		CNT_domestic_focus = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CNT_domestic_focus"}
+			allowed = { always = no }
+            modifier = {
+				stability_factor = 0.10
+			}
+			picture = generic_pp_unity_bonus
+		}
+
+		CNT_industrial_focus = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CNT_industrial_focus"}
+			allowed = { always = no }
+            modifier = {
+				production_speed_buildings_factor = 0.10
+			}
+			picture = generic_production_bonus
+		}
+
+		CNT_helping_hand_focus = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CNT_helping_hand_focus"}
+			allowed = { always = no }
+            modifier = {
+				local_resources_factor = 0.1
+				global_building_slots_factor = 0.2
+				production_factory_max_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.1
+			}
+			picture = generic_production_bonus
+		}
+
+		CNT_military_focus = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CNT_military_focus"}
+			allowed = { always = no }
+            modifier = {
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+			picture = advisors_spain_socialist
+		}
+
+		CNT_militia_focus = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CNT_militia_focus"}
+			allowed = { always = no }
+            modifier = {
+				conscription = 0.05
+			}
+			picture = UoB_militia_idea
+		}
+
+		CNT_radio_focus = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CNT_radio_focus"}
+			allowed = { always = no }
+            modifier = {
+				stability_factor = 0.10
+			}
+			picture = UoB_militia_idea
+		}
+
+		CNT_propaganda_focus = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CNT_propaganda_focus"}
+			allowed = { always = no }
+            modifier = {
+				land_reinforce_rate = 0.02
+				army_morale_factor = 0.10
+				war_support_factor = 0.10
+			}
+			picture = generic_morale_bonus
+		}
+
+		CNT_army_innovation_focus = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CNT_army_innovation_focus"}
+			allowed = { always = no }
+            modifier = {
+				land_doctrine_cost_factor = -0.10
+				naval_doctrine_cost_factor = -0.10
+				air_doctrine_cost_factor = -0.10
+			}
+			picture = generic_research_bonus
+		}
+
+		CNT_foreign_focus = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CNT_foreign_focus"}
+			allowed = { always = no }
+            modifier = {
+				justify_war_goal_time = -0.1
+				war_support_factor = 0.05
+			}
+			picture = generic_morale_bonus
+		}
+		CNT_advisors_france = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CNT_advisors_france"}
+			available = { country_exists = FRA }
+			allowed = { always = no }
+            modifier = {
+				army_org_factor = 0.08
+				max_planning = 0.08
+				planning_speed = 0.08
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+			picture = advisors_france
+		}
+		CNT_advisors_england = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CNT_advisors_england"}
+			available = { country_exists = ENG }
+			allowed = { always = no }
+            modifier = {
+				army_org_factor = 0.08
+				max_planning = 0.1
+				planning_speed = 0.1
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+			picture = advisors_england
+		}
+		CNT_advisors_italysoc = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CNT_advisors_italysoc"}
+			available = { country_exists = SRI }
+			allowed = { always = no }
+            modifier = {
+				army_org_factor = 0.04
+				max_planning = 0.04
+				planning_speed = 0.04
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+			picture = advisors_italysoc
+		}
+		CNT_advisors_soviet = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CNT_advisors_soviet"}
+			available = { soviets_exist = yes }
+			allowed = { always = no }
+            modifier = {
+				army_org_factor = 0.05
+				max_planning = 0.05
+				planning_speed = 0.05
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+			picture = advisors_soviet
+		}
+		
+		CNT_monarchist_resistance = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CNT_monarchist_resistance" }
+			picture = SPR_political_violence
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.15
+				political_power_gain = -0.15
+			}
+		}
+		
+		# Political
+		SWF_spanism_socialism = {
+			name = SWF_socialism
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SWF_spanism_socialism" }
+			picture = generic_radical_socialist_revolution
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = -0.05
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		SWF_spanism_socialism1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SWF_spanism_socialism1" }
+			name = SWF_socialism
+			picture = generic_radical_socialist_revolution
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = -0.05
+				production_factory_max_efficiency_factor = 0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		SWF_spanism_socialism2 = {#clerical
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SWF_spanism_socialism2" }
+			name = SWF_socialism
+			picture = generic_radical_socialist_revolution
+			allowed = { always = no }
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				war_support_factor = 0.1
+			}
+		}
+		SWF_spanism_socialism3 = {#women
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SWF_spanism_socialism3" }
+			name = SWF_socialism
+			picture = generic_radical_socialist_revolution
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = -0.05
+				production_factory_max_efficiency_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				conscription_factor = 0.15
+			}
+		}
+		SWF_spanism_socialism4 = {#clerical women
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SWF_spanism_socialism4" }
+			name = SWF_socialism
+			picture = generic_radical_socialist_revolution
+			allowed = { always = no }
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				war_support_factor = 0.1
+				conscription_factor = 0.15
+			}
+		}
+		SWF_spanism_socialism5 = {#strong gov
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SWF_spanism_socialism5" }
+			name = SWF_socialism
+			picture = generic_radical_socialist_revolution
+			allowed = { always = no }
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				war_support_factor = 0.1
+				conscription_factor = 0.15
+				stability_factor = 0.10
+			}
+		}
+		SWF_spanism_socialism6 = {#final
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SWF_spanism_socialism6" }
+			name = SWF_beacon
+			picture = SPR_torchbearers_of_tomorrow
+			allowed = { always = no }
+			modifier = {
+				production_factory_max_efficiency_factor = 0.15
+				production_speed_buildings_factor = 0.15
+				war_support_factor = 0.1
+				conscription_factor = 0.15
+				stability_factor = 0.2
+			}
+		}
+		SWF_anarchism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SWF_anarchism" }
+			name = SWF_anarchism
+			picture = SPR_anarchist_society
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.1
+				production_factory_start_efficiency_factor = 0.1
+			}
+		}
+		SWF_anarchism1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SWF_anarchism1" }
+			name = SWF_anarchism
+			picture = SPR_anarchist_society
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.1
+				production_factory_start_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.1
+			}
+		}
+		SWF_anarchism2 = {#clerical
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SWF_anarchism2" }
+			name = SWF_anarchism
+			picture = SPR_anarchist_society
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = 0.05
+				production_factory_start_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.1
+				war_support_factor = 0.1
+			}
+		}
+		SWF_anarchism3 = {#women
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SWF_anarchism3" }
+			name = SWF_anarchism
+			picture = SPR_anarchist_society
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.1
+				production_factory_start_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.1
+				conscription_factor = 0.15
+			}
+		}
+		SWF_anarchism4 = {#clerical women
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SWF_anarchism4" }
+			name = SWF_anarchism
+			picture = SPR_anarchist_society
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = 0.05
+				production_factory_start_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.1
+				war_support_factor = 0.1
+				conscription_factor = 0.15
+			}
+		}
+		SWF_anarchism5 = {#social rev
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SWF_anarchism5" }
+			name = SWF_anarchism
+			picture = SPR_anarchist_society
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.05
+				production_factory_start_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.1
+				war_support_factor = 0.1
+				conscription_factor = 0.15
+				consumer_goods_factor = -0.1
+			}
+		}
+		SWF_anarchism6 = {#final
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SWF_anarchism6" }
+			name = SWF_beacon
+			picture = SPR_torchbearers_of_tomorrow
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.1
+				production_factory_start_efficiency_factor = 0.15
+				industrial_capacity_factory = 0.15
+				war_support_factor = 0.15
+				conscription_factor = 0.15
+				consumer_goods_factor = -0.15
+			}
+		}
+		JONS_keep_cnt = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_keep_cnt" }
+			name = JONS_keep_cnt
+			picture = CNT_keep_cnt
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.5
+				weekly_manpower = 5000
+				trade_laws_cost_factor = -0.5
+				economy_cost_factor = -0.5
+				max_command_power = 9999
+			}
+		}
+		JONS_keep_cnt_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_keep_cnt_1" }
+			name = JONS_keep_cnt_1
+			picture = CNT_keep_cnt
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 1
+				stability_weekly = 0.005
+				weekly_manpower = 7000
+				trade_laws_cost_factor = -0.5
+				economy_cost_factor = -0.5
+				max_command_power = 9999
+				
+			}
+		}
+		JONS_keep_cnt_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_keep_cnt_2" }
+			name = JONS_keep_cnt_2
+			picture = CNT_keep_cnt
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 10
+				stability_weekly = 0.005
+				weekly_manpower = 7000
+				trade_laws_cost_factor = -0.5
+				economy_cost_factor = -0.5
+				max_command_power = 9999
+				drift_defence_factor = 1.0
+				conscription = 0.01
+				research_speed_factor = 0.35
+				
+			}
+		}
+		JONS_the_blue_coats = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_the_blue_coats" }
+			name = JONS_the_blue_coats
+			picture = CNT_the_blue_coats
+			allowed = { always = no }
+			modifier = {
+			army_attack_against_minor_factor = 0.3
+			army_defence_against_minor_factor = 0.3
+			army_core_attack_factor = 0.15
+			army_core_defence_factor = 0.15
+			army_org_factor = 0.3
+			army_morale_factor = -0.1
+			}
+		}
+		JONS_the_blue_coats_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_the_blue_coats_1" }
+			name = JONS_the_blue_coats_1
+			picture = CNT_the_blue_coats
+			allowed = { always = no }
+			modifier = {
+			army_attack_against_minor_factor = 0.5
+			army_defence_against_minor_factor = 0.5
+			army_core_attack_factor = 0.2
+			army_core_defence_factor = 0.2
+			army_org_factor = 0.3
+			army_morale_factor = 0.2
+			}
+		}
+		JONS_the_blue_coats_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_the_blue_coats_2" }
+			name = JONS_the_blue_coats_2
+			picture = CNT_the_blue_coats
+			allowed = { always = no }
+			modifier = {
+			army_attack_factor = 0.5
+			army_defence_factor = 0.5
+			army_core_attack_factor = 0.2
+			army_core_defence_factor = 0.2
+			army_org_factor = 0.3
+			army_morale_factor = 0.2
+			training_time_factor = -0.3
+			training_time_army_factor = -0.3
+			winter_attrition_factor  = -0.5
+			heat_attrition_factor  = -0.5
+			org_loss_when_moving = -0.5
+			max_organisation = 20
+			}
+		}
+		JONS_the_blue_coats_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_the_blue_coats_3" }
+			name = JONS_the_blue_coats_3
+			picture = CNT_the_blue_coats
+			allowed = { always = no }
+			modifier = {
+			army_attack_factor = 0.5
+			army_defence_factor = 0.5
+			army_core_attack_factor = 0.2
+			army_core_defence_factor = 0.2
+			army_org_factor = 0.3
+			army_morale_factor = 0.2
+			training_time_factor = -0.3
+			training_time_army_factor = -0.3
+			winter_attrition_factor  = -0.5
+			heat_attrition_factor  = -0.5
+			org_loss_when_moving = -0.5
+			max_organisation = 20
+			experience_gain_army_unit_factor = 0.5
+			experience_gain_factor = 1
+			command_abilities_cost_factor = -0.5
+			high_command_cost_factor = -0.5
+			out_of_supply_factor = -0.5
+			}
+		}
+		JONS_the_blue_coats_4 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_the_blue_coats_4" }
+			name = JONS_the_blue_coats_4
+			picture = CNT_the_blue_coats
+			allowed = { always = no }
+			modifier = {
+			army_attack_factor = 0.5
+			army_defence_factor = 0.5
+			army_core_attack_factor = 0.2
+			army_core_defence_factor = 0.2
+			army_org_factor = 0.3
+			army_morale_factor = 0.2
+			training_time_factor = -0.3
+			training_time_army_factor = -0.3
+			winter_attrition_factor  = -0.5
+			heat_attrition_factor  = -0.5
+			org_loss_when_moving = -0.5
+			max_organisation = 20
+			experience_gain_army_unit_factor = 0.5
+			experience_gain_factor = 1
+			command_abilities_cost_factor = -0.5
+			high_command_cost_factor = -0.5
+			out_of_supply_factor = -0.5
+			army_armor_attack_factor = 0.3
+			army_armor_defence_factor = 0.3
+			army_artillery_attack_factor = 0.3
+			army_artillery_defence_factor = 0.3
+			}
+		}
+		JONS_class_warfare = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_class_warfare" }
+			name = JONS_class_warfare
+			picture = CNT_class_warfare
+			allowed = { always = no }
+			modifier = {
+			stability_weekly = 0.005
+			consumer_goods_factor = -0.2
+			production_speed_buildings_factor = 0.5
+			industrial_capacity_factory = 0.4
+			research_speed_factor = 0.2
+			}
+		}
+		JONS_class_warfare_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_class_warfare_1" }
+			name = JONS_class_warfare_1
+			picture = CNT_class_warfare
+			allowed = { always = no }
+			modifier = {
+			stability_weekly = 0.005
+			consumer_goods_factor = -0.25
+			production_speed_buildings_factor = 0.5
+			industrial_capacity_factory = 0.4
+			research_speed_factor = 0.2
+			}
+		}
+		JONS_syndicalist_trade_unions = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_syndicalist_trade_unions" }
+			name = JONS_syndicalist_trade_unions
+			picture = CNT_syndicalist_trade_unions
+			allowed = { always = no }
+			modifier = {
+			political_power_factor = 0.05
+			research_speed_factor = 0.2
+			conscription = 0.05
+			opinion_gain_monthly_same_ideology_factor = 1.0
+			mobilization_speed = 2
+			surrender_limit = 0.01
+			}
+		}
+		JONS_syndicalist_trade_unions_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_syndicalist_trade_unions_1" }
+			name = JONS_syndicalist_trade_unions_1
+			picture = CNT_syndicalist_trade_unions
+			allowed = { always = no }
+			modifier = {
+			political_power_factor = 0.05
+			research_speed_factor = 0.3
+			conscription = 0.05
+			opinion_gain_monthly_same_ideology_factor = 1.0
+			mobilization_speed = 2
+			surrender_limit = 0.01
+			 global_building_slots_factor = 1
+			 conversion_cost_civ_to_mil_factor= -0.5
+			 conversion_cost_mil_to_civ_factor = -0.5
+			}
+		}
+		JONS_syndicalist_trade_unions_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_syndicalist_trade_unions_2" }
+			name = JONS_syndicalist_trade_unions_2
+			picture = CNT_syndicalist_trade_unions
+			allowed = { always = no }
+			modifier = {
+			political_power_factor = 0.05
+			research_speed_factor = 0.3
+			conscription = 0.05
+			opinion_gain_monthly_same_ideology_factor = 1.0
+			mobilization_speed = 2
+			surrender_limit = 0.01
+			global_building_slots_factor = 1
+			conversion_cost_civ_to_mil_factor= -0.5
+			conversion_cost_mil_to_civ_factor = -0.5
+			production_factory_max_efficiency_factor = 1
+			production_factory_efficiency_gain_factor = 1
+			ine_change_production_efficiency_factor = 1
+			 
+			}
+		}
+		JONS_syndicalist_trade_unions_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_syndicalist_trade_unions_3" }
+			name = JONS_syndicalist_trade_unions_3
+			picture = CNT_syndicalist_trade_unions
+			allowed = { always = no }
+			modifier = {
+			political_power_factor = 0.05
+			research_speed_factor = 0.3
+			conscription = 0.05
+			opinion_gain_monthly_same_ideology_factor = 1.0
+			mobilization_speed = 2
+			surrender_limit = 0.01
+			global_building_slots_factor = 1
+			conversion_cost_civ_to_mil_factor= -0.5
+			conversion_cost_mil_to_civ_factor = -0.5
+			production_factory_max_efficiency_factor = 1
+			production_factory_efficiency_gain_factor = 1
+			ine_change_production_efficiency_factor = 1
+			local_manpower = 0.15
+			required_garrison_factor = -0.3
+			resistance_growth = -0.3
+			weekly_manpower = 1500
+			 
+			}
+		}
+		JONS_nationalist = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_nationalist" }
+			name = JONS_nationalist
+			picture = CNT_nationalist
+			allowed = { always = no }
+			modifier = {
+			army_core_attack_factor = 0.15
+			army_core_defence_factor = 0.15
+			army_attack_factor = 0.05
+			army_defence_factor = 0.05
+			}
+		}
+		JONS_nationalist_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_nationalist_1" }
+			name = JONS_nationalist_1
+			picture = CNT_nationalist
+			allowed = { always = no }
+			modifier = {
+			army_core_attack_factor = 0.20
+			army_core_defence_factor = 0.30
+			army_attack_factor = 0.1
+			army_defence_factor = 0.1
+			}
+		}
+		JONS_nationalist_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_nationalist_2" }
+			name = JONS_nationalist_2
+			picture = CNT_nationalist
+			allowed = { always = no }
+			modifier = {
+			army_core_attack_factor = 0.30
+			army_core_defence_factor = 0.30
+			army_attack_factor = 0.2
+			army_defence_factor = 0.2
+			}
+		}
+		JONS_nationalist_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_nationalist_3" }
+			name = JONS_nationalist_3
+			picture = CNT_nationalist
+			allowed = { always = no }
+			modifier = {
+			army_core_attack_factor = 0.30
+			army_core_defence_factor = 0.30
+			army_attack_factor = 0.2
+			army_defence_factor = 0.2
+			motorized_attack_factor = 0.1
+			motorized_defence_factor = 0.1
+			mechanized_attack_factor = 0.1
+			mechanized_defence_factor = 0.1
+			army_artillery_defence_factor = 0.1
+			army_artillery_attack_factor = 0.15
+			army_armor_attack_factor = 0.2
+			army_armor_defence_factor = 0.2
+			special_forces_attack_factor = 0.2
+    		special_forces_defence_factor = 0.2
+			cavalry_attack_factor = 0.2
+   			cavalry_defence_factor = 0.2
+			}
+		}
+		JONS_collectivism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_collectivism" }
+			name = JONS_collectivism
+			picture = CNT_collectivism
+			allowed = { always = no }
+			modifier = {
+			local_resources_factor = 1
+			consumer_goods_factor = -0.2
+			industrial_capacity_factory = 0.1
+			production_speed_buildings_factor = 2
+			refit_ic_cost = -0.5
+			industrial_capacity_dockyard = 0.5
+			repair_speed_factor = 0.2
+			coordination_bonus = 0.2
+			land_reinforce_rate	= 0.25
+			local_supplies = 1
+			}
+		}
+		JONS_social_security = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_social_security" }
+			name = JONS_social_security
+			picture = CNT_social_security
+			allowed = { always = no }
+			modifier = {
+			weekly_manpower = 2000
+			conscription = 0.01
+			conscription_factor = 0.1
+			mobilization_speed = 0.5
+			}
+		}
+		JONS_social_security_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_social_security_1" }
+			name = JONS_social_security_1
+			picture = CNT_social_security
+			allowed = { always = no }
+			modifier = {
+			weekly_manpower = 2000
+			conscription = 0.02
+			conscription_factor = 0.2
+			mobilization_speed = 0.7
+			}
+		}
+		JONS_social_security_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_social_security_2" }
+			name = JONS_social_security_2
+			picture = CNT_social_security
+			allowed = { always = no }
+			modifier = {
+			weekly_manpower = 4000
+			conscription = 0.03
+			conscription_factor = 0.3
+			mobilization_speed = 1
+			war_support_weekly = 0.01
+			stability_weekly = 0.01
+			}
+		}
+		JONS_social_security_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_social_security_3" }
+			name = JONS_social_security_3
+			picture = CNT_social_security
+			allowed = { always = no }
+			modifier = {
+			weekly_manpower = 4000
+			conscription = 0.03
+			conscription_factor = 0.3
+			mobilization_speed = 1.5
+			war_support_weekly = 0.03
+			stability_weekly = 0.03
+			army_strength_factor = 0.5
+			}
+		}
+		JONS_supervisory_committee = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_supervisory_committee" }
+			name = JONS_supervisory_committee
+			picture = CNT_supervisory_committee
+			allowed = { always = no }
+			modifier = {
+			intelligence_agency_defense = 0.5
+			resistance_growth = -0.2
+			operation_cost = -0.1
+			operative_slot = 2
+			new_operative_slot_bonus = 3
+			own_operative_detection_chance_factor = -0.1
+			enemy_operative_detection_chance_factor = 0.2
+			}
+		}
+		JONS_supervisory_committee_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_supervisory_committee_1" }
+			name = JONS_supervisory_committee_1
+			picture = CNT_supervisory_committee
+			allowed = { always = no }
+			modifier = {
+			intelligence_agency_defense = 0.7
+			resistance_growth = -0.3
+			operation_cost = -0.2
+			operative_slot = 3
+			new_operative_slot_bonus = 4
+			own_operative_detection_chance_factor = -0.2
+			enemy_operative_detection_chance_factor = 0.3
+			}
+		}
+		JONS_supervisory_committee_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_supervisory_committee_2" }
+			name = JONS_supervisory_committee_2
+			picture = CNT_supervisory_committee
+			allowed = { always = no }
+			modifier = {
+			intelligence_agency_defense = 1
+			resistance_growth = -0.5
+			operation_cost = -0.5
+			operative_slot = 5
+			new_operative_slot_bonus = 7
+			own_operative_detection_chance_factor = -0.4
+			enemy_operative_detection_chance_factor = 0.5
+			}
+		}
+		JONS_supervisory_committee_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_supervisory_committee_3" }
+			name = JONS_supervisory_committee_3
+			picture = CNT_supervisory_committee
+			allowed = { always = no }
+			modifier = {
+			intelligence_agency_defense = 1
+			resistance_growth = -0.7
+			operation_cost = -0.7
+			operative_slot = 6
+			new_operative_slot_bonus = 7
+			own_operative_detection_chance_factor = -0.5
+			enemy_operative_detection_chance_factor = 0.5
+			enemy_operative_capture_chance_factor = 0.5
+			civilian_intel_to_others = -50
+			army_intel_to_others = -50
+			navy_intel_to_others = -50
+			airforce_intel_to_others = -50
+			}
+		}
+		JONS_break_the_chains = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_break_the_chains" }
+			name = JONS_break_the_chains
+			picture = CNT_break_the_chains
+			allowed = { always = no }
+			modifier = {
+			industrial_capacity_factory = 0.5
+			production_factory_max_efficiency_factor = 0.5
+			production_factory_efficiency_gain_factor = 0.5
+			line_change_production_efficiency_factor = 0.5
+			consumer_goods_factor = -0.3
+			industry_air_damage_factor = -0.5
+			conversion_cost_civ_to_mil_factor= -0.5
+			conversion_cost_mil_to_civ_factor = -0.5
+			}
+		}
+		JONS_unstable_two_headed_government = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_unstable_two_headed_government" }
+			name = JONS_unstable_two_headed_government
+			picture = CNT_unstable_two_headed_government
+			allowed = { always = no }
+			modifier = {
+			political_power_gain = -0.5
+			industrial_capacity_factory = -0.2
+			production_factory_max_efficiency_factor = -0.2
+			production_factory_efficiency_gain_factor = -0.2
+			consumer_goods_factor = 0.2
+			research_speed_factor = -0.3
+			army_attack_factor = -0.2
+			army_defence_factor = -0.2
+			}
+		}
+		JONS_unstable_two_headed_government_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_unstable_two_headed_government_1" }
+			name = JONS_unstable_two_headed_government_1
+			picture = CNT_unstable_two_headed_government
+			allowed = { always = no }
+			modifier = {
+			political_power_gain = -0.5
+			industrial_capacity_factory = -0.2
+			production_factory_max_efficiency_factor = -0.2
+			production_factory_efficiency_gain_factor = -0.2
+			consumer_goods_factor = 0.2
+			research_speed_factor = -0.3
+			army_attack_factor = 0.2
+			army_defence_factor = 0.2
+			}
+		}
+		JONS_unstable_two_headed_government_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_unstable_two_headed_government_2" }
+			name = JONS_unstable_two_headed_government_2
+			picture = CNT_unstable_two_headed_government
+			allowed = { always = no }
+			modifier = {
+			political_power_gain = -0.5
+			industrial_capacity_factory = -0.2
+			production_factory_max_efficiency_factor = 0.2
+			production_factory_efficiency_gain_factor = 0.2
+			consumer_goods_factor = -0.1
+			research_speed_factor = 0.2
+			army_attack_factor = 0.2
+			army_defence_factor = 0.2
+			}
+		}
+		JONS_unstable_two_headed_government_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_unstable_two_headed_government_3" }
+			name = JONS_unstable_two_headed_government_3
+			picture = CNT_unstable_two_headed_government
+			allowed = { always = no }
+			modifier = {
+			political_power_gain = 0.5
+			industrial_capacity_factory = 0.2
+			production_factory_max_efficiency_factor = 0.2
+			production_factory_efficiency_gain_factor = 0.2
+			consumer_goods_factor = 0.2
+			research_speed_factor = 0.3
+			army_attack_factor = 0.3
+			army_core_defence_factor = 0.3
+			command_power_gain = 0.4
+			command_abilities_cost_factor = -0.5
+			high_command_cost_factor = -0.4
+			theorist_cost_factor = -0.3
+			trade_laws_cost_factor  = -0.3
+			economy_cost_factor = -0.3
+			mobilization_laws_cost_factor = -0.3
+			materiel_manufacturer_cost_factor = -0.5
+			}
+		}
+		JONS_limited_secularization = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_limited_secularization" }
+			name = JONS_limited_secularization
+			picture = CNT_limited_secularization
+			allowed = { always = no }
+			modifier = {
+			stability_weekly = 0.002
+			war_support_weekly = 0.002
+			conscription = 0.015
+			mobilization_speed = 1
+			army_core_attack_factor = 0.15
+			army_core_defence_factor = 0.15
+			}
+		}
+		JONS_limited_secularization_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_limited_secularization_1" }
+			name = JONS_limited_secularization_1
+			picture = CNT_limited_secularization
+			allowed = { always = no }
+			modifier = {
+			stability_weekly = 0.005
+			war_support_weekly = 0.005
+			conscription = 0.03
+			mobilization_speed = 1.5
+			army_core_attack_factor = 0.3
+			army_core_defence_factor = 0.3
+			experience_gain_army = 3
+			experience_gain_army_unit_factor = 0.5
+			}
+		}
+		JONS_the_blue_coats_fe = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_the_blue_coats_1" }
+			name = JONS_the_blue_coats_1
+			picture = CNT_the_blue_coats
+			allowed = { always = no }
+			modifier = {
+			army_attack_against_minor_factor = 0.5
+			army_defence_against_minor_factor = 0.5
+			army_core_attack_factor = 0.2
+			army_core_defence_factor = 0.2
+			army_org_factor = 0.3
+			army_morale_factor = 0.2
+			}
+		}
+		JONS_free_church_school = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_free_church_school" }
+			name = JONS_free_church_school
+			picture = CNT_free_church_school
+			allowed = { always = no }
+			modifier = {
+			political_power_gain = 0.1
+			weekly_manpower = 1500
+			industrial_capacity_factory = 0.15
+			production_factory_max_efficiency_factor = 0.15
+			consumer_goods_factor = -0.3
+			industry_air_damage_factor = -0.5
+			training_time_factor = -0.2
+			}
+		}
+		JONS_free_church_school_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_free_church_school_1" }
+			name = JONS_free_church_school_1
+			picture = CNT_free_church_school
+			allowed = { always = no }
+			modifier = {
+			production_speed_arms_factory_factor = 1
+			production_speed_industrial_complex_factor = 1
+			political_power_gain = 0.3
+			weekly_manpower = 2500
+			industrial_capacity_factory = 0.3
+			production_factory_max_efficiency_factor = 0.3
+			consumer_goods_factor = -0.35
+			industry_air_damage_factor = -0.55
+			training_time_factor = -0.25
+			}
+		}
+		JONS_christian_syndicalism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_christian_syndicalism" }
+			name = JONS_christian_syndicalism
+			picture = CNT_christian_syndicalism
+			allowed = { always = no }
+			modifier = {
+			weekly_manpower = 500
+			industry_research = 0.15
+			electronics_research = 0.15
+			nuclear_research = 0.15
+			naval_equipment_research = 0.35
+			infantry_weapons_research = 0.35
+			local_resources_factor = 0.25
+			industry_repair_factor = 0.25
+			}
+		}
+		JONS_christian_syndicalism_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_christian_syndicalism_1" }
+			name = JONS_christian_syndicalism_1
+			picture = CNT_christian_syndicalism
+			allowed = { always = no }
+			modifier = {
+			weekly_manpower = 1500
+			industry_research = 0.35
+			electronics_research = 0.35
+			nuclear_research = 0.35
+			naval_equipment_research = 0.35
+			infantry_weapons_research = 0.35
+			local_manpower = 0.15
+			local_resources = 0.2
+			local_factories = 0.5
+			local_resources_factor = 0.25
+			industry_repair_factor = 0.25
+			}
+		}
+		JONS_the_spanish_dream = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_the_spanish_dream" }
+			name = JONS_the_spanish_dream
+			picture = CNT_the_spanish_dream
+			allowed = { always = no }
+			modifier = {
+			motorized_attack_factor = 0.2
+			motorized_defence_factor = 0.2
+			mechanized_attack_factor = 0.2
+			mechanized_defence_factor = 0.2
+			army_artillery_defence_factor = 0.1
+			army_artillery_attack_factor = 0.1
+			army_armor_attack_factor = 0.1
+			army_armor_defence_factor = 0.1
+			cavalry_attack_factor = 0.2
+			cavalry_defence_factor = 0.2
+			consumer_goods_factor = -0.3
+			}
+		}
+		JONS_the_spanish_dream_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_the_spanish_dream_1" }
+			name = JONS_the_spanish_dream_1
+			picture = CNT_the_spanish_dream
+			allowed = { always = no }
+			modifier = {
+			motorized_attack_factor = 0.2
+			motorized_defence_factor = 0.2
+			mechanized_attack_factor = 0.2
+			mechanized_defence_factor = 0.2
+			army_artillery_defence_factor = 0.1
+			army_artillery_attack_factor = 0.1
+			army_armor_attack_factor = 0.1
+			army_armor_defence_factor = 0.1
+			cavalry_attack_factor = 0.2
+			cavalry_defence_factor = 0.2
+			consumer_goods_factor = -0.3
+			industrial_capacity_factory = 0.3
+			production_factory_max_efficiency_factor = 0.3
+			production_factory_efficiency_gain_factor = 0.3
+			line_change_production_efficiency_factor = 0.5
+			research_speed_factor = 0.4
+			conscription = 0.08
+			stability_factor = 0.3
+			war_support_factor = 0.3
+			}
+		}
+		JONS_christian_militia = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_christian_militia" }
+			name = JONS_christian_militia
+			picture = CNT_christian_militia
+			allowed = { always = no }
+			modifier = {
+			army_attack_against_minor_factor = 0.35
+			army_defence_against_minor_factor = 0.35
+			army_core_attack_factor = 0.15
+			army_core_defence_factor = 0.15
+			army_org_factor = 0.35
+			army_morale_factor = 0.3
+			}
+		}
+		JONS_christian_militia_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_christian_militia_1" }
+			name = JONS_christian_militia_1
+			picture = CNT_christian_militia
+			allowed = { always = no }
+			modifier = {
+			army_attack_against_minor_factor = 0.5
+			army_defence_against_minor_factor = 0.5
+			army_core_attack_factor = 0.25
+			army_core_defence_factor = 0.25
+			army_org_factor = 0.5
+			army_morale_factor = 0.35
+			army_artillery_defence_factor = 0.15
+			army_artillery_attack_factor = 0.15
+			army_armor_attack_factor = 0.2
+			army_armor_defence_factor = 0.2
+			}
+		}
+		JONS_incomplete_agrarian_reform = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_incomplete_agrarian_reform" }
+			name = JONS_incomplete_agrarian_reform
+			picture = CNT_incomplete_agrarian_reform
+			allowed = { always = no }
+			modifier = {
+			stability_weekly = 0.005
+			consumer_goods_factor = -0.15
+			production_speed_buildings_factor = 0.35
+			production_factory_max_efficiency_factor = 0.25
+			line_change_production_efficiency_factor = 0.2
+			industrial_capacity_factory = 0.35
+			research_speed_factor = 0.15
+			}
+		}
+		JONS_incomplete_agrarian_reform_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_incomplete_agrarian_reform_1" }
+			name = JONS_incomplete_agrarian_reform_1
+			picture = CNT_incomplete_agrarian_reform
+			allowed = { always = no }
+			modifier = {
+			stability_weekly = 0.005
+			consumer_goods_factor = -0.25
+			production_speed_buildings_factor = 0.4
+			production_factory_max_efficiency_factor = 0.25
+			line_change_production_efficiency_factor = 0.2
+			industrial_capacity_factory = 0.4
+			research_speed_factor = 0.2
+			}
+		}
+		JONS_christian_unions = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_christian_unions" }
+			name = JONS_christian_unions
+			picture = CNT_christian_unions
+			allowed = { always = no }
+			modifier = {
+			political_power_factor = 0.035
+			research_speed_factor = 0.35
+			conscription = 0.035
+			opinion_gain_monthly_same_ideology_factor = 1.0
+			mobilization_speed = 2
+			surrender_limit = 0.01
+			global_building_slots_factor = 0.75
+			conversion_cost_civ_to_mil_factor= -0.35
+			conversion_cost_mil_to_civ_factor = -0.35
+			}
+		}
+		JONS_statue_of_god = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_statue_of_god" }
+			name = JONS_statue_of_god
+			picture = CNT_statue_of_god
+			allowed = { always = no }
+			modifier = {
+			army_core_attack_factor = 0.15
+			army_core_defence_factor = 0.15
+			industrial_capacity_factory = 0.2
+			production_factory_max_efficiency_factor = 0.2
+			production_factory_efficiency_gain_factor = 0.2
+			line_change_production_efficiency_factor = 0.2
+			}
+		}
+		JONS_statue_of_god_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_statue_of_god_1" }
+			name = JONS_statue_of_god_1
+			picture = CNT_statue_of_god
+			allowed = { always = no }
+			modifier = {
+			army_core_attack_factor = 0.2
+			army_core_defence_factor = 0.2
+			industrial_capacity_factory = 0.25
+			production_factory_max_efficiency_factor = 0.25
+			production_factory_efficiency_gain_factor = 0.25
+			line_change_production_efficiency_factor = 0.25
+			army_attack_factor = 0.15
+			army_defence_factor = 0.15
+			supply_consumption_factor = 0.2
+			attrition = 0.2
+			}
+		}
+		JONS_statue_of_god_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_statue_of_god_1" }
+			name = JONS_statue_of_god_1
+			picture = CNT_statue_of_god
+			allowed = { always = no }
+			modifier = {
+			army_core_attack_factor = 0.2
+			army_core_defence_factor = 0.2
+			industrial_capacity_factory = 0.25
+			production_factory_max_efficiency_factor = 0.25
+			production_factory_efficiency_gain_factor = 0.25
+			line_change_production_efficiency_factor = 0.25
+			army_attack_factor = 0.25
+			army_defence_factor = 0.25
+			supply_consumption_factor = -0.3
+			attrition = -0.3
+			army_speed_factor = 0.35
+			combat_width_factor = -0.3
+			}
+		}
+		JONS_free_church_school_fe1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_free_church_school_fe1" }
+			name = JONS_free_church_school_fe1
+			picture = CNT_free_church_school
+			allowed = { always = no }
+			modifier = {
+			political_power_gain = 0.1
+			weekly_manpower = 1500
+			industrial_capacity_factory = 0.15
+			production_factory_max_efficiency_factor = 0.15
+			consumer_goods_factor = -0.3
+			industry_air_damage_factor = -0.5
+			training_time_factor = -0.2
+			}
+		}
+		JONS_free_church_school_fe2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_free_church_school_fe2" }
+			name = JONS_free_church_school_fe2
+			picture = CNT_free_church_school
+			allowed = { always = no }
+			modifier = {
+			political_power_gain = 0.15
+			weekly_manpower = 3000
+			industrial_capacity_factory = 0.2
+			production_factory_max_efficiency_factor = 0.3
+			consumer_goods_factor = -0.35
+			industry_air_damage_factor = -1
+			training_time_factor = -0.3
+			}
+		}
+		JONS_labor_reform = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_labor_reform" }
+			name = JONS_labor_reform
+			picture = CNT_labor_reform
+			allowed = { always = no }
+			modifier = {
+			industrial_capacity_factory = 0.15
+			production_factory_max_efficiency_factor = 0.15
+			production_factory_efficiency_gain_factor = 0.15
+			line_change_production_efficiency_factor = 0.15
+			global_building_slots_factor = 0.25
+			conversion_cost_civ_to_mil_factor= -0.25
+			conversion_cost_mil_to_civ_factor = -0.25
+			industry_air_damage_factor = -0.50
+			}
+		}
+		JONS_labor_reform_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_labor_reform_1" }
+			name = JONS_labor_reform_1
+			picture = CNT_labor_reform
+			allowed = { always = no }
+			modifier = {
+			industrial_capacity_factory = 0.25
+			production_factory_max_efficiency_factor = 0.25
+			production_factory_efficiency_gain_factor = 0.25
+			line_change_production_efficiency_factor = 0.25
+			global_building_slots_factor = 0.25
+			conversion_cost_civ_to_mil_factor= -0.25
+			conversion_cost_mil_to_civ_factor = -0.25
+			industry_air_damage_factor = -0.50
+			}
+		}
+		JONS_labor_reform_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_labor_reform_2" }
+			name = JONS_labor_reform_2
+			picture = CNT_labor_reform
+			allowed = { always = no }
+			modifier = {
+			industrial_capacity_factory = 0.35
+			production_factory_max_efficiency_factor = 0.35
+			production_factory_efficiency_gain_factor = 0.35
+			line_change_production_efficiency_factor = 0.35
+			global_building_slots_factor = 0.5
+			conversion_cost_civ_to_mil_factor= -0.25
+			conversion_cost_mil_to_civ_factor = -0.25
+			industry_air_damage_factor = -0.65
+			consumer_goods_factor = 0.15
+			production_speed_buildings_factor = 0.5
+			research_speed_factor = 0.25
+			}
+		}
+		JONS_national_christianity = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_national_christianity" }
+			name = JONS_national_christianity
+			picture = CNT_national_christianity
+			allowed = { always = no }
+			modifier = {
+			army_core_attack_factor = 0.2
+			army_core_defence_factor = 0.2
+			industrial_capacity_factory = 0.15
+			production_factory_max_efficiency_factor = 0.2
+			production_factory_efficiency_gain_factor = 0.2
+			line_change_production_efficiency_factor = 0.2
+			political_power_gain = 0.15
+			weekly_manpower = 3000
+			stability_weekly = 0.005
+			war_support_weekly = 0.005
+			}
+		}
+		JONS_national_and_revolution = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_national_and_revolution" }
+			name = JONS_national_and_revolution
+			picture = CNT_national_and_revolution
+			allowed = { always = no }
+			modifier = {
+			army_core_attack_factor = 0.2
+			army_core_defence_factor = 0.2
+			army_speed_factor = 0.25
+			army_morale_factor = 0.35
+			army_org_factor = 0.35
+			supply_consumption_factor = -0.5
+			attrition = -0.35
+			winter_attrition_factor  = -0.5
+			heat_attrition_factor  = -0.5
+			acclimatization_cold_climate_gain_factor = 0.5
+			acclimatization_hot_climate_gain_factor  = 0.5
+			out_of_supply_factor = -0.3
+			army_core_attack_factor = 0.2
+			army_core_defence_factor = 0.2
+			army_artillery_defence_factor = 0.2
+			army_artillery_attack_factor = 0.2
+			army_armor_attack_factor = 0.2
+			army_armor_defence_factor = 0.2
+			motorized_attack_factor = 0.2
+			motorized_defence_factor = 0.2
+			mechanized_attack_factor = 0.2
+			mechanized_defence_factor = 0.2
+			cavalry_attack_factor = 0.2
+			cavalry_defence_factor = 0.2
+			industrial_capacity_factory = 0.25
+			production_factory_max_efficiency_factor = 0.25
+			production_factory_efficiency_gain_factor = 0.25
+			line_change_production_efficiency_factor = 0.25
+			}
+		}
+	NJONS_Conquer_the_country = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Conquer_the_country" }
+			name = 征服国家
+			picture = ALB_thousand_voices
+			allowed = { always = no }
+			modifier = {
+			war_support_factor = 0.07
+			stability_factor = 0.07
+			army_attack_factor = 0.05
+			army_defence_factor = 0.05
+			army_core_attack_factor = 0.05
+			army_core_defence_factor = 0.05
+			}
+		}
+	NJONS_Avant-garde_artistry = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Avant-garde_artistry" }
+			name = 艺术先锋主义
+			picture = ALB_pelasagians
+			allowed = { always = no }
+			modifier = {
+			political_power_factor = 0.2
+			political_power_gain = 0.1
+			stability_weekly = 0.003
+			war_support_weekly = 0.003
+			}
+		}
+	NJONS_Avant-garde_artistry1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Avant-garde_artistry1" }
+			name = 艺术先锋主义
+			picture = ALB_pelasagians
+			allowed = { always = no }
+			modifier = {
+			political_power_factor = 0.25
+			political_power_gain = 0.15
+			stability_weekly = 0.005
+			war_support_weekly = 0.005
+			research_speed_factor = 0.1
+			local_resources_factor = 0.15
+			}
+		}
+	NJONS_Avant-garde_artistry2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Avant-garde_artistry2" }
+			name = 艺术先锋主义
+			picture = ALB_pelasagians
+			allowed = { always = no }
+			modifier = {
+			political_power_factor = 0.25
+			political_power_gain = 0.2
+			stability_weekly = 0.005
+			war_support_weekly = 0.005
+			research_speed_factor = 0.15
+			mobilization_speed = 0.2
+			local_resources_factor = 0.15
+			conscription = 0.05
+			conscription_factor = 0.15
+			}
+		}
+	NJONS_Avant-garde_artistry3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Avant-garde_artistry3" }
+			name = 艺术先锋主义
+			picture = ALB_pelasagians
+			allowed = { always = no }
+			modifier = {
+			political_power_factor = 0.3
+			political_power_gain = 0.25
+			stability_weekly = 0.005
+			war_support_weekly = 0.005
+			research_speed_factor = 0.2
+			mobilization_speed = 0.3
+			local_resources_factor = 0.2
+			conscription = 0.05
+			conscription_factor = 0.2
+			}
+		}
+	NJONS_Artistic_diversity = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Artistic_diversity" }
+			name = 艺术多元
+			picture = generic_mutual_aid
+			allowed = { always = no }
+			modifier = {
+			consumer_goods_factor = -0.15
+			research_speed_factor = 0.1
+			resistance_decay = 0.2
+			required_garrison_factor = -0.1
+			industrial_capacity_factory = 0.2
+			}
+		}
+	NJONS_Artistic_diversity1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Artistic_diversity1" }
+			name = 未来之先锋
+			picture = generic_mutual_aid
+			allowed = { always = no }
+			modifier = {
+			consumer_goods_factor = -0.15
+			research_speed_factor = 0.1
+			resistance_decay = 0.2
+			required_garrison_factor = -0.1
+			industrial_capacity_factory = 0.2
+			local_building_slots_factor = 0.2
+			production_speed_buildings_factor = 0.15
+			drift_defence_factor = 0.5
+			fuel_gain_factor = 0.2
+			fuel_gain_factor_from_states = 0.2
+			}
+		}
+	NJONS_Cult_of_reason = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Artistic_diversity" }
+			name = 崇而不信
+			picture = generic_migration
+			allowed = { always = no }
+			modifier = {
+			production_resource_need_factor = -0.1
+			dig_in_speed_factor = 0.1
+			army_attack_speed_factor = 0.2
+			org_loss_at_low_org_factor = -0.2
+			terrain_penalty_reduction = 0.2
+			}
+		}
+	NJONS_Universal_Declaration = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Universal_Declaration" }
+			name = 再生主义宣言
+			picture = generic_phoenix
+			allowed = { always = no }
+			modifier = {
+			army_attack_factor = 0.15
+			army_defence_factor = 0.1
+			army_speed_factor = 0.15
+			pocket_penalty = -0.1
+			consumer_goods_factor = -0.2
+			army_armor_defence_factor = 0.1
+			}
+		}
+	NJONS_Small_government = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Small_government" }
+			name = 小政府
+			picture = government
+			allowed = { always = no }
+			modifier = {
+			political_power_factor = 0.12
+			stability_factor = -0.2
+			initiative_factor = 0.2
+			planning_speed = 0.15
+			breakthrough_factor = 0.05
+			}
+		}
+	NJONS_reason = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_reason" }
+			name = 理性主义
+			picture = soviet_enlightenment
+			allowed = { always = no }
+			modifier = {
+			land_reinforce_rate = 0.2
+			military_leader_cost_factor = -0.50
+			army_leader_start_level = 2
+			acclimatization_hot_climate_gain_factor = 0.2
+			acclimatization_cold_climate_gain_factor = 0.2
+			no_supply_grace = 24
+			}
+		}
+	NJONS_army = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_army" }
+			name = 革命陆军
+			picture = GEN_army_core
+			allowed = { always = no }
+			modifier = {
+			army_attack_factor = 0.03
+			army_defence_factor = 0.03
+			}
+		}
+	NJONS_army1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_army1" }
+			name = 革命陆军
+			picture = GEN_army_core
+			allowed = { always = no }
+			modifier = {
+			army_attack_factor = 0.03
+			army_defence_factor = 0.03
+			army_org_factor = 0.15
+			army_morale_factor = 0.2
+			}
+		}
+	NJONS_army2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_army2" }
+			name = 革命陆军
+			picture = GEN_army_core
+			allowed = { always = no }
+			modifier = {
+			army_attack_factor = 0.03
+			army_defence_factor = 0.03
+			army_core_defence_factor = 0.02
+			army_core_attack_factor = 0.02
+			army_org_factor = 0.15
+			army_morale_factor = 0.2
+			}
+		}
+	NJONS_economy = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_economy" }
+			name = 西班牙经济
+			picture = SPR_republican_army
+			allowed = { always = no }
+			modifier = {
+			consumer_goods_factor = -0.2
+			production_speed_buildings_factor = 0.1
+			production_speed_arms_factory_factor = 0.1
+			production_speed_industrial_complex_factor = 0.1
+			industrial_capacity_factory = 0.1
+			}
+		}
+	NJONS_Anti_Germany = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Anti_Germany" }
+			name = 反德
+			picture = GER_imperial_pride_guns
+			allowed = { always = no }
+			modifier = {
+			war_support_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = GER
+				defense_bonus_against = 0.1
+			}
+		}
+	NJONS_Anti_imperialism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Anti_imperialism" }
+			name = 反帝
+			picture = CAN_french_flames
+			allowed = { always = no }
+			modifier = {
+			war_support_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = CAN
+				attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = CAN
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = NFA
+				attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = NFA
+				defense_bonus_against = 0.1
+			}
+		}
+		NJONS_Anti_imperialism1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Anti_imperialism1" }
+			name = 反帝
+			picture = CAN_french_flames
+			allowed = { always = no }
+			modifier = {
+			war_support_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = CAN
+				attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = CAN
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = NFA
+				attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = NFA
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = RUS
+				attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = RUS
+				defense_bonus_against = 0.1
+			}
+		}
+		NJONS_great_revolution = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_great_revolution" }
+			name = 大革命
+			picture = Revolt_against_modern_world
+			allowed = { always = no }
+			modifier = {
+			stability_weekly = 0.002
+			war_support_weekly = 0.002
+			totalist_drift = 0.005
+			political_power_gain = 0.2
+			attrition = -0.12
+			}
+		}
+		NJONS_great_revolution1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_great_revolution1" }
+			name = 大革命
+			picture = Revolt_against_modern_world
+			allowed = { always = no }
+			modifier = {
+			stability_weekly = 0.003
+			war_support_weekly = 0.003
+			political_power_factor = 0.15
+			totalist_drift = 0.007
+			political_power_gain = 0.25
+			attrition = -0.15
+			}
+		}
+		NJONS_great_revolution2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_great_revolution2" }
+			name = 大革命
+			picture = Revolt_against_modern_world
+			allowed = { always = no }
+			modifier = {
+			stability_weekly = 0.003
+			war_support_weekly = 0.003
+			political_power_factor = 0.15
+			totalist_drift = 0.007
+			political_power_gain = 0.25
+			attrition = -0.15
+			research_speed_factor = 0.15
+			}
+		}
+		NJONS_Social_reforms = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Social_reforms" }
+			name = 社会改革
+			picture = TEX_start_economic_revival
+			allowed = { always = no }
+			modifier = {
+			political_power_gain = 0.2
+			conscription = 0.05
+			conscription_factor = 0.1
+			industrial_capacity_factory = 0.1
+			}
+		}
+		NJONS_Social_reforms1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Social_reforms1" }
+			name = 社会改革
+			picture = TEX_start_economic_revival
+			allowed = { always = no }
+			modifier = {
+			political_power_gain = 0.2
+			conscription = 0.07
+			conscription_factor = 0.12
+			industrial_capacity_factory = 0.12
+			production_factory_max_efficiency_factor = 0.1
+			production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+		NJONS_keep_cnt = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_keep_cnt" }
+			name = CNT的遗产
+			picture = CNT_keep_cnt
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.1
+				army_armor_attack_factor = 0.1
+				weekly_manpower = 3000
+				trade_laws_cost_factor = -0.5
+				economy_cost_factor = -0.5
+				max_command_power = 1000
+				
+			}
+		}
+		NJONS_planned_economy = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_planned_economy" }
+			name = 计划经济
+			picture = NOR_planned_economy
+			allowed = { always = no }
+			modifier = {
+			consumer_goods_factor = -0.2
+			production_speed_buildings_factor = 0.1
+			line_change_production_efficiency_factor = 0.1
+			industrial_capacity_factory = 0.1
+			production_factory_max_efficiency_factor = 0.1
+			production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+		NJONS_planned_economy1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_planned_economy1" }
+			name = 计划经济
+			picture = NOR_planned_economy
+			allowed = { always = no }
+			modifier = {
+			consumer_goods_factor = -0.35
+			production_speed_buildings_factor = 0.12
+			line_change_production_efficiency_factor = 0.15
+			industrial_capacity_factory = 0.15
+			production_factory_max_efficiency_factor = 0.15
+			production_factory_efficiency_gain_factor = 0.15
+			}
+		}
+		NJONS_constitution = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_constitution" }
+			name = 宪法
+			picture = ALB_constitution
+			allowed = { always = no }
+			modifier = {
+			political_power_factor = 0.15
+			political_power_gain = 0.15
+			army_armor_defence_factor = 0.15
+			army_chief_cost_factor = -0.25
+			}
+		}
+		NJONS_nationalist = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_nationalist" }
+			name = 西班牙民族主义
+			picture = CNT_nationalist
+			allowed = { always = no }
+			modifier = {
+			army_core_attack_factor = 0.15
+			army_core_defence_factor = 0.15
+			army_attack_factor = 0.1
+			army_defence_factor = 0.1
+			}
+		}
+		NJONS_nationalist1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_nationalist1" }
+			name = 西班牙民族主义
+			picture = CNT_nationalist
+			allowed = { always = no }
+			modifier = {
+			army_infantry_attack_factor = 0.1
+			army_infantry_defence_factor = 0.1
+			army_core_attack_factor = 0.15
+			army_core_defence_factor = 0.15
+			army_attack_factor = 0.15
+			army_defence_factor = 0.15
+			land_reinforce_rate = 0.15
+			}
+		}
+		NJONS_The_Anarchist_Revolution = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_The_Anarchist_Revolution" }
+			name = 无政府主义革命
+			picture = FRA_idea_revenge
+			allowed = { always = no }
+			modifier = {
+			stability_weekly = 0.003
+			war_support_weekly = 0.003
+			army_attack_factor = 0.03
+			army_defence_factor = 0.03
+			}
+		}
+		NJONS_The_Anarchist_Revolution1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_The_Anarchist_Revolution1" }
+			name = 无政府主义革命
+			picture = FRA_idea_revenge
+			allowed = { always = no }
+			modifier = {
+			stability_weekly = 0.003
+			war_support_weekly = 0.003
+			army_attack_factor = 0.03
+			army_defence_factor = 0.07
+			army_core_defence_factor = 0.07
+			production_speed_bunker_factor = 0.2
+			}
+		}
+		NJONS_The_Anarchist_Revolution2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_The_Anarchist_Revolution2" }
+			name = 无政府主义革命
+			picture = FRA_idea_revenge
+			allowed = { always = no }
+			modifier = {
+			stability_weekly = 0.005
+			war_support_weekly = 0.005
+			army_attack_factor = 0.05
+			army_defence_factor = 0.07
+			army_core_defence_factor = 0.07
+			production_speed_bunker_factor = 0.2
+			consumer_goods_factor = -0.2
+			}
+		}
+		NJONS_Free_Country = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Free_Country" }
+			name = 自由乡土
+			picture = BBR_free_thought_societies
+			allowed = { always = no }
+			modifier = {
+			political_power_factor = 0.1
+			political_power_gain = 0.1
+			conscription = 0.03
+			monthly_population = 0.2
+			}
+		}
+		NJONS_Free_Country1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Free_Country1" }
+			name = 自由乡土
+			picture = BBR_free_thought_societies
+			allowed = { always = no }
+			modifier = {
+			political_power_factor = 0.25
+			political_power_gain = 0.25
+			conscription = 0.07
+			monthly_population = 0.4
+			army_attack_factor = 0.2
+			army_attack_speed_factor = 0.2
+			army_speed_factor = 0.2
+			}
+		}
+		NJONS_Godless_land = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Godless_land" }
+			name = 无神之地
+			picture = CNT_limited_secularization
+			allowed = { always = no }
+			modifier = {
+			political_power_factor = 0.1
+			political_power_gain = 0.1
+			consumer_goods_factor = -0.2
+			drift_defence_factor = 0.5
+			}
+		}
+		NJONS_There_is_no_oppression = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_There_is_no_oppression" }
+			name = 消除资本
+			picture = wealth_cap
+			allowed = { always = no }
+			modifier = {
+			war_support_factor = 0.1
+			stability_factor = 0.1
+			local_building_slots_factor = 0.15
+			production_speed_buildings_factor = 0.1
+			}
+		}
+		NJONS_There_is_no_oppression1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_There_is_no_oppression1" }
+			name = 无主之地
+			picture = CNT_incomplete_agrarian_reform
+			allowed = { always = no }
+			modifier = {
+			war_support_factor = 0.15
+			stability_factor = 0.15
+			local_building_slots_factor = 0.2
+			production_speed_buildings_factor = 0.15
+			attrition = -0.2
+			supply_consumption_factor = -0.2
+			}
+		}
+		NJONS_There_is_no_oppression2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_There_is_no_oppression2" }
+			name = 无主之地
+			picture = CNT_incomplete_agrarian_reform
+			allowed = { always = no }
+			modifier = {
+			war_support_factor = 0.15
+			stability_factor = 0.15
+			local_building_slots_factor = 0.2
+			production_speed_buildings_factor = 0.15
+			attrition = -0.2
+			supply_consumption_factor = -0.2
+			generate_wargoal_tension = -0.5
+			justify_war_goal_time = -0.3
+			army_attack_speed_factor = 0.1
+			}
+		}
+		NJONS_Reborn_from_the_ashes = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Reborn_from_the_ashes" }
+			name = 浴火重生
+			picture = generic_phoenix
+			allowed = { always = no }
+			modifier = {
+			army_speed_factor = 0.15
+			pocket_penalty = -0.1
+			consumer_goods_factor = -0.2
+			army_speed_factor = 0.1
+			}
+		}
+		NJONS_Commune_economy = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Commune_economy" }
+			name = 公社经济
+			picture = BBR_communal_econ
+			allowed = { always = no }
+			modifier = {
+			line_change_production_efficiency_factor = 0.1
+			industrial_capacity_factory = 0.1
+			production_factory_max_efficiency_factor = 0.1
+			production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+		NJONS_Commune_economy1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Commune_economy1" }
+			name = 公社经济
+			picture = BBR_communal_econ
+			allowed = { always = no }
+			modifier = {
+			line_change_production_efficiency_factor = 0.15
+			industrial_capacity_factory = 0.15
+			production_factory_max_efficiency_factor = 0.15
+			production_factory_efficiency_gain_factor = 0.15
+			research_speed_factor = 0.15
+			production_speed_buildings_factor = 0.05
+			}
+		}
+		NJONS_black_army = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_black_army" }
+			name = 西班牙黑军
+			picture = black_legion
+			allowed = { always = no }
+			modifier = {
+			cavalry_attack_factor = 0.2
+			cavalry_defence_factor = 0.15
+			army_artillery_attack_factor = 0.1
+			initiative_factor = 0.2
+			land_reinforce_rate = -0.1
+			pocket_penalty = -0.1
+			}
+		}
+		NJONS_black_army1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_black_army1" }
+			name = 西班牙黑军
+			picture = black_legion
+			allowed = { always = no }
+			modifier = {
+			cavalry_attack_factor = 0.2
+			cavalry_defence_factor = 0.2
+			army_artillery_attack_factor = 0.15
+			initiative_factor = 0.25
+			land_reinforce_rate = -0.15
+			pocket_penalty = -0.1
+			}
+		}
+		NJONS_Restricting_the_Church = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Restricting_the_Church" }
+			name = 限制教会
+			picture = CNT_limited_secularization
+			allowed = { always = no }
+			modifier = {
+			political_power_factor = 0.1
+			political_power_gain = 0.1
+			consumer_goods_factor = -0.2
+			drift_defence_factor = 0.5
+			}
+		}
+		NJONS_National_Union_of_Syndicalism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_National_Union_of_Syndicalism" }
+			name = 工团主义全国联盟
+			picture = generic_syndicalist_revolution
+			allowed = { always = no }
+			modifier = {
+			political_power_factor = 0.2
+			political_power_gain = 0.2
+			production_factory_max_efficiency_factor = 0.1
+			production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+		NJONS_National_Union_of_Syndicalism1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_National_Union_of_Syndicalism1" }
+			name = 工团主义全国联盟
+			picture = generic_syndicalist_revolution
+			allowed = { always = no }
+			modifier = {
+			political_power_factor = 0.2
+			political_power_gain = 0.2
+			production_factory_max_efficiency_factor = 0.15
+			production_factory_efficiency_gain_factor = 0.15
+			line_change_production_efficiency_factor = 0.15
+			industrial_capacity_factory = 0.15
+			}
+		}
+		NJONS_National_Union_of_Syndicalism2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_National_Union_of_Syndicalism2" }
+			name = 工团主义全国联盟
+			picture = generic_syndicalist_revolution
+			allowed = { always = no }
+			modifier = {
+			political_power_factor = 0.25
+			political_power_gain = 0.25
+			production_factory_max_efficiency_factor = 0.2
+			production_factory_efficiency_gain_factor = 0.2
+			line_change_production_efficiency_factor = 0.2
+			industrial_capacity_factory = 0.2
+			research_speed_factor = 0.2
+			}
+		}
+		NJONS_Decentralization = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Decentralization" }
+			name = 权力下放
+			picture = decentralized_planning
+			allowed = { always = no }
+			modifier = {
+			political_power_factor = 0.2
+			political_power_gain = 0.2
+			stability_factor = 0.15
+			stability_weekly = 0.005
+			war_support_weekly = 0.005
+			war_support_factor = 0.15
+			}
+		}
+		NJONS_social_security = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_social_security" }
+			name = 社会保障
+			picture = economic_security_bill
+			allowed = { always = no }
+			modifier = {
+			consumer_goods_factor = -0.2
+			monthly_population = 0.4
+			conscription = 0.05
+			conscription_factor = 0.2
+			}
+		}
+		NJONS_social_security1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_social_security1" }
+			name = 社会保障
+			picture = economic_security_bill
+			allowed = { always = no }
+			modifier = {
+			consumer_goods_factor = -0.3
+			monthly_population = 0.4
+			conscription = 0.07
+			conscription_factor = 0.2
+			winter_attrition_factor = -0.2
+			heat_attrition_factor = -0.2
+			}
+		}
+		NJONS_social_security2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_social_security2" }
+			name = 社会保障
+			picture = economic_security_bill
+			allowed = { always = no }
+			modifier = {
+			consumer_goods_factor = -0.3
+			monthly_population = 0.4
+			conscription = 0.07
+			conscription_factor = 0.2
+			winter_attrition_factor = -0.2
+			heat_attrition_factor = -0.2
+			terrain_penalty_reduction = 0.2
+			production_speed_buildings_factor = 0.2
+			production_speed_arms_factory_factor = 0.2
+			production_speed_industrial_complex_factor = 0.2
+			}
+		}
+		NJONS_Class_warfare = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Class_warfare" }
+			name = 阶级斗争
+			picture = ALB_rejuvenation_classes
+			allowed = { always = no }
+			modifier = {
+			political_power_factor = 0.2
+			political_power_gain = 0.15
+			army_core_attack_factor = 0.05
+			army_core_defence_factor = 0.05
+			}
+		}
+		NJONS_Class_warfare1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Class_warfare1" }
+			name = 阶级斗争
+			picture = ALB_rejuvenation_classes
+			allowed = { always = no }
+			modifier = {
+			line_change_production_efficiency_factor = 0.1
+			industrial_capacity_factory = 0.1
+			political_power_factor = 0.2
+			political_power_gain = 0.2
+			army_core_attack_factor = 0.05
+			army_core_defence_factor = 0.05
+			}
+		}
+		NJONS_Communist_youth_league = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Communist_youth_league" }
+			name = 共产主义青年团
+			picture = ALB_youth_leagues
+			allowed = { always = no }
+			modifier = {
+			army_attack_factor = 0.05
+			army_defence_factor = 0.05
+			army_org_factor = 0.1
+			army_morale_factor = 0.1
+			}
+		}
+		NJONS_Communist_youth_league1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Communist_youth_league1" }
+			name = 共产主义青年团
+			picture = ALB_youth_leagues
+			allowed = { always = no }
+			modifier = {
+			army_attack_factor = 0.1
+			army_defence_factor = 0.1
+			army_org_factor = 0.1
+			army_morale_factor = 0.1
+			conscription = 0.05
+			conscription_factor = 0.1
+			}
+		}
+		NJONS_Communist_youth_league2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Communist_youth_league2" }
+			name = 共产主义青年团
+			picture = ALB_youth_leagues
+			allowed = { always = no }
+			modifier = {
+			army_attack_factor = 0.12
+			army_defence_factor = 0.12
+			army_org_factor = 0.12
+			army_morale_factor = 0.12
+			conscription = 0.05
+			drift_defence_factor = 1
+			conscription_factor = 0.1
+			totalist_drift = 0.03
+			}
+		}
+		NJONS_Mass_education = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Mass_education" }
+			name = 大众教育
+			picture = ALB_cultural_ideological_revolution
+			allowed = { always = no }
+			modifier = {
+			research_speed_factor = 0.2
+			local_resources_factor = 0.15
+			repair_speed_factor = 0.2
+			}
+		}
+		NJONS_Our_government = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Our_government" }
+			name = 人民政府
+			picture = government
+			allowed = { always = no }
+			modifier = {
+			political_power_factor = 0.2
+			political_power_gain = 0.2
+			stability_factor = 0.1
+			stability_weekly = 0.007
+			war_support_factor = 0.1
+			}
+		}
+		NJONS_Union_of_workers_and_peasants = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Union_of_workers_and_peasants" }
+			name = 工农联盟
+			picture = worker_coops
+			allowed = { always = no }
+			modifier = {
+			production_speed_buildings_factor = 0.15
+			local_building_slots_factor = 0.1
+			industrial_capacity_factory = 0.15
+			production_factory_max_efficiency_factor = 0.2
+			production_factory_efficiency_gain_factor = 0.2
+			}
+		}
+		NJONS_Union_of_workers_and_peasants1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Union_of_workers_and_peasants1" }
+			name = 工农联盟
+			picture = worker_coops
+			allowed = { always = no }
+			modifier = {
+			production_speed_buildings_factor = 0.15
+			local_building_slots_factor = 0.1
+			industrial_capacity_factory = 0.15
+			production_speed_industrial_complex_factor = 0.2
+			production_factory_max_efficiency_factor = 0.2
+			production_factory_efficiency_gain_factor = 0.2
+			consumer_goods_factor = -0.3
+			}
+		}
+		NJONS_Vanguard_of_the_revolution = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Vanguard_of_the_revolution" }
+			name = 革命先锋
+			picture = ALB_vanguard_reborn_leninism
+			allowed = { always = no }
+			modifier = {
+			army_attack_speed_factor = 0.2
+			army_speed_factor = 0.2
+			initiative_factor = 0.2
+			generate_wargoal_tension = -0.5
+			justify_war_goal_time = -0.2
+			}
+		}
+		NJONS_Vanguard_of_the_revolution1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Vanguard_of_the_revolution1" }
+			name = 革命先锋
+			picture = ALB_vanguard_reborn_leninism
+			allowed = { always = no }
+			modifier = {
+			totalist_drift = 0.05
+			army_attack_speed_factor = 0.25
+			army_speed_factor = 0.25
+			initiative_factor = 0.25
+			generate_wargoal_tension = -0.5
+			justify_war_goal_time = -0.2
+			}
+		}
+		NJONS_Vanguard_of_the_revolution2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Vanguard_of_the_revolution2" }
+			name = 革命先锋
+			picture = ALB_vanguard_reborn_leninism
+			allowed = { always = no }
+			modifier = {
+			totalist_drift = 0.8
+			army_attack_speed_factor = 0.25
+			political_power_factor = 0.1
+			political_power_gain = 0.1
+			army_speed_factor = 0.25
+			initiative_factor = 0.25
+			generate_wargoal_tension = -0.7
+			justify_war_goal_time = -0.3
+			}
+		}
+		NJONS_Vanguard_of_the_revolution3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Vanguard_of_the_revolution3" }
+			name = 革命先锋
+			picture = ALB_vanguard_reborn_leninism
+			allowed = { always = no }
+			modifier = {
+			totalist_drift = 0.1
+			army_attack_speed_factor = 0.3
+			political_power_factor = 0.15
+			political_power_gain = 0.15
+			army_speed_factor = 0.3
+			initiative_factor = 0.25
+			pocket_penalty = -0.1
+			generate_wargoal_tension = -0.7
+			justify_war_goal_time = -0.3
+			}
+		}
+		NJONS_New_Revolutionism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_New_Revolutionism" }
+			name = 新革命主义
+			picture = ALB_vanguard_reborn_leninism
+			allowed = { always = no }
+			modifier = {
+			national_populist_drift = -0.02
+			stability_weekly = 0.005
+			supply_factor = 0.1
+			}
+		}
+		NJONS_New_Revolutionism1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_New_Revolutionism1" }
+			name = 新革命主义
+			picture = ALB_vanguard_reborn_leninism
+			allowed = { always = no }
+			modifier = {
+			national_populist_drift = -0.05
+			stability_weekly = 0.01
+			supply_factor = 0.15
+			COMBAT_WIDTH_FACTOR = -0.1
+			}
+		}
+		NJONS_Full_syndication = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Full_syndication" }
+			name = 全面工团化
+			picture = soc_confederacy
+			allowed = { always = no }
+			modifier = {
+			production_factory_start_efficiency_factor = 0.1
+			production_speed_buildings_factor = 0.1
+			repair_speed_industrial_complex_factor = 0.1
+			repair_speed_arms_factory_factor = 0.1
+			}
+		}
+		NJONS_Full_syndication1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Full_syndication1" }
+			name = 全面工团化
+			picture = soc_confederacy
+			allowed = { always = no }
+			modifier = {
+			production_factory_start_efficiency_factor = 0.15
+			production_speed_buildings_factor = 0.15
+			repair_speed_industrial_complex_factor = 0.15
+			repair_speed_arms_factory_factor = 0.15
+			}
+		}
+		NJONS_Full_syndication2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Full_syndication2" }
+			name = 全面工团化
+			picture = soc_confederacy
+			allowed = { always = no }
+			modifier = {
+			production_factory_start_efficiency_factor = 0.15
+			production_speed_buildings_factor = 0.15
+			repair_speed_industrial_complex_factor = 0.15
+			repair_speed_arms_factory_factor = 0.15
+			INDUSTRY_REPAIR_FACTOR = 0.1
+			LAND_NIGHT_ATTACK = 0.05
+			}
+		}
+		NJONS_National_Movement_for_Change = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_National_Movement_for_Change" }
+			name = 国家变革运动
+			picture = republican_military
+			allowed = { always = no }
+			modifier = {
+			drift_defence_factor = 0.2
+			send_volunteer_size = 2
+			defensive_war_stability_factor = 0.2
+			}
+		}
+		NJONS_National_Movement_for_Change1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_National_Movement_for_Change1" }
+			name = 国家变革运动
+			picture = republican_military
+			allowed = { always = no }
+			modifier = {
+			drift_defence_factor = 0.25
+			send_volunteer_size = 2
+			defensive_war_stability_factor = 0.2
+			training_time_army_factor = -0.1
+			LOCAL_INTEL_TO_ENEMIES = -0.2
+			DIG_IN_SPEED_FACTOR =0.1
+			}
+		}
+		NJONS_National_Movement_for_Change2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_National_Movement_for_Change2" }
+			name = 国家变革运动
+			picture = republican_military
+			allowed = { always = no }
+			modifier = {
+			drift_defence_factor = 0.5
+			send_volunteer_size = 2
+			defensive_war_stability_factor = 0.2
+			training_time_army_factor = -0.1
+			LOCAL_INTEL_TO_ENEMIES = -0.3
+			DIG_IN_SPEED_FACTOR = 0.1
+			ARMY_ATTACK_FACTOR = 0.05
+			}
+		}
+		NJONS_National_Movement_for_Change3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_National_Movement_for_Change3" }
+			name = 国家变革运动
+			picture = republican_military
+			allowed = { always = no }
+			modifier = {
+			drift_defence_factor = 0.5
+			send_volunteer_size = 5
+			defensive_war_stability_factor = 0.3
+			training_time_army_factor = -0.15
+			LOCAL_INTEL_TO_ENEMIES = -0.35
+			DIG_IN_SPEED_FACTOR = 0.15
+			ARMY_ATTACK_FACTOR = 0.05
+			}
+		}
+		NJONS_National_Movement_for_Change4 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_National_Movement_for_Change4" }
+			name = 国家变革运动
+			picture = republican_military
+			allowed = { always = no }
+			modifier = {
+			drift_defence_factor = 0.5
+			send_volunteer_size = 5
+			defensive_war_stability_factor = 0.3
+			training_time_army_factor = -0.15
+			LOCAL_INTEL_TO_ENEMIES = -0.5
+			DIG_IN_SPEED_FACTOR = 0.2
+			ARMY_ATTACK_FACTOR = 0.05
+			RECON_FACTOR = 0.15
+			NAVAL_INVASION_PREPARATION = 0.1
+			DDITIONAL_SLOTS_CAP = 0.1
+			}
+		}
+		NJONS_New_Nationism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_New_Nationism" }
+			name = 新民族主义
+			picture = CSA_empire_of_sin_idea
+			allowed = { always = no }
+			modifier = {
+			production_speed_arms_factory_factor = 0.1
+			production_speed_industrial_complex_factor = 0.1
+			local_building_slots_factor = 0.1
+			train_tech_research = 0.1
+			}
+		}
+		NJONS_New_Nationism1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_New_Nationism1" }
+			name = 新民族主义
+			picture = CSA_empire_of_sin_idea
+			allowed = { always = no }
+			modifier = {
+			production_speed_arms_factory_factor = 0.15
+			production_speed_industrial_complex_factor = 0.15
+			local_building_slots_factor = 0.15
+			train_tech_research = 0.12
+			AIR_FIGHTER_ACE_CHANCE = 0.2
+			}
+		}
+		NJONS_Eliminate_idealism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Eliminate_idealism" }
+			name = 剔除理想主义
+			picture = everything_is_fine
+			allowed = { always = no }
+			modifier = {
+			drift_defence_factor = 0.2
+			MOBILIZATION_SPEED = 0.1
+			FORTIFICATION_COLLATERAL_CHANCE = 0.1
+			}
+		}
+		NJONS_Eliminate_idealism1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Eliminate_idealism1" }
+			name = 剔除理想主义
+			picture = everything_is_fine
+			allowed = { always = no }
+			modifier = {
+			drift_defence_factor = 0.35
+			MOBILIZATION_SPEED = 0.15
+			FORTIFICATION_COLLATERAL_CHANCE = 0.15
+			}
+		}
+		NJONS_ultranationalism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_ultranationalism" }
+			name = 极端民族主义
+			picture = great_sprint_forward
+			allowed = { always = no }
+			modifier = {
+			research_speed_factor = 0.1
+			war_support_weekly = 0.005
+			consumer_goods_factor = -0.1
+			}
+		}
+		NJONS_ultranationalism1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_ultranationalism1" }
+			name = 极端民族主义
+			picture = great_sprint_forward
+			allowed = { always = no }
+			modifier = {
+			research_speed_factor = 0.15
+			war_support_weekly = 0.005
+			consumer_goods_factor = -0.16
+			tactic_relentless_assault_preferred_weight_factor = 0.1
+			terrain_penalty_reduction = 0.1
+			}
+		}
+		NJONS_ultranationalism2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_ultranationalism2" }
+			name = 极端民族主义
+			picture = great_sprint_forward
+			allowed = { always = no }
+			modifier = {
+			research_speed_factor = 0.15
+			war_support_weekly = 0.005
+			consumer_goods_factor = -0.16
+			tactic_relentless_assault_preferred_weight_factor = 0.1
+			terrain_penalty_reduction = 0.1
+			national_populist_drift = 0.02
+			WOUNDED_CHANCE_FACTOR = -0.1
+			MAX_FUEL_ADD = 0.2
+			}
+		}
+		NJONS_ultranationalism3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_ultranationalism3" }
+			name = 极端民族主义
+			picture = great_sprint_forward
+			allowed = { always = no }
+			modifier = {
+			political_power_factor = 0.1
+			research_speed_factor = 0.15
+			war_support_weekly = 0.007
+			consumer_goods_factor = -0.2
+			tactic_relentless_assault_preferred_weight_factor = 0.15
+			terrain_penalty_reduction = 0.15
+			national_populist_drift = 0.02
+			WOUNDED_CHANCE_FACTOR = -0.12
+			MAX_FUEL_ADD = 0.2
+			}
+		}
+		NJONS_ultranationalism4 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_ultranationalism4" }
+			name = 极端民族主义
+			picture = great_sprint_forward
+			allowed = { always = no }
+			modifier = {
+			political_power_factor = 0.12
+			research_speed_factor = 0.2
+			war_support_weekly = 0.007
+			consumer_goods_factor = -0.25
+			tactic_relentless_assault_preferred_weight_factor = 0.3
+			terrain_penalty_reduction = 0.3
+			national_populist_drift = 0.02
+			WOUNDED_CHANCE_FACTOR = -0.12
+			MAX_FUEL_ADD = 0.2
+			}
+		}
+		NJONS_anti_revolution = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_anti_revolution" }
+			name = 反对赤色
+			picture = COR_fire_eaters
+			allowed = { always = no }
+			modifier = {
+			army_attack_factor = 0.05
+			stability_weekly = 0.002
+			pocket_penalty = -0.1
+			}
+		}
+		NJONS_anti_revolution1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_anti_revolution1" }
+			name = 反对赤色
+			picture = COR_fire_eaters
+			allowed = { always = no }
+			modifier = {
+			army_attack_factor = 0.05
+			stability_weekly = 0.005
+			pocket_penalty = -0.15
+			totalist_drift = -0.02
+			}
+		}
+		NJONS_Class_collaboration = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Class_collaboration" }
+			name = 阶级协作
+			picture = class_collaboration
+			allowed = { always = no }
+			modifier = {
+			production_speed_arms_factory_factor = 0.1
+			production_speed_industrial_complex_factor = 0.1
+			line_change_production_efficiency_factor = 0.1
+			}
+		}
+		NJONS_Class_collaboration1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Class_collaboration1" }
+			name = 阶级协作
+			picture = class_collaboration
+			allowed = { always = no }
+			modifier = {
+			production_speed_arms_factory_factor = 0.15
+			production_speed_industrial_complex_factor = 0.15
+			line_change_production_efficiency_factor = 0.15
+			ARMY_SPEED_FACTOR = 0.05
+			REQUIRED_GARRISON_FACTOR = -0.1
+			}
+		}
+		NJONS_Class_collaboration2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Class_collaboration2" }
+			name = 阶级协作
+			picture = class_collaboration
+			allowed = { always = no }
+			modifier = {
+			production_speed_arms_factory_factor = 0.15
+			production_speed_industrial_complex_factor = 0.15
+			line_change_production_efficiency_factor = 0.15
+			ARMY_SPEED_FACTOR = 0.05
+			REQUIRED_GARRISON_FACTOR = -0.15
+			production_speed_buildings_factor = 0.1
+			industrial_concern_cost_factor = -0.1
+			}
+		}
+		NJONS_anti_communism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_anti_communism" }
+			name = 反共
+			picture = NFA_against_communards
+			allowed = { always = no }
+			modifier = {
+			totalist_drift = -0.02
+			production_speed_buildings_factor = 0.1
+			consumer_goods_factor = -0.1
+			}
+		}
+		NJONS_anti_communism1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_anti_communism1" }
+			name = 反共
+			picture = NFA_against_communards
+			allowed = { always = no }
+			modifier = {
+			totalist_drift = -0.05
+			production_speed_buildings_factor = 0.15
+			consumer_goods_factor = -0.15
+			}
+		}
+		NJONS_anti_right = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_anti_right" }
+			name = 反右
+			picture = anti_mafia_campaign
+			allowed = { always = no }
+			modifier = {
+			production_speed_industrial_complex_factor = 0.1
+			ORG_LOSS_WHEN_MOVING = -0.1
+			national_populist_drift = -0.02
+			paternal_autocrat_drift = -0.02
+			authoritarian_democrat_drift = -0.02
+			social_conservative_drift = -0.02
+			market_liberal_drift = -0.02
+			social_liberal_drift = -0.02
+			social_democrat_drift = -0.02
+			}
+		}
+		NJONS_anti_right1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_anti_right1" }
+			name = 反右
+			picture = anti_mafia_campaign
+			allowed = { always = no }
+			modifier = {
+			production_speed_industrial_complex_factor = 0.1
+			ORG_LOSS_WHEN_MOVING = -0.1
+			resistance_target = -0.1
+			cas_damage_reduction = 0.1
+			national_populist_drift = -0.02
+			paternal_autocrat_drift = -0.02
+			authoritarian_democrat_drift = -0.02
+			social_conservative_drift = -0.02
+			market_liberal_drift = -0.02
+			social_liberal_drift = -0.02
+			social_democrat_drift = -0.02
+			}
+		}
+		NJONS_Martial_law_throughout_the_country = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Martial_law_throughout_the_country" }
+			name = 全国戒严令
+			picture = kommon_law
+			allowed = { always = no }
+			modifier = {
+			stability_weekly = 0.002
+			attrition = -0.1
+			local_org_regain = 0.1
+			}
+		}
+		NJONS_Martial_law_throughout_the_country1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Martial_law_throughout_the_country1" }
+			name = 全国戒严令
+			picture = kommon_law
+			allowed = { always = no }
+			modifier = {
+			stability_weekly = 0.005
+			attrition = -0.12
+			local_org_regain = 0.12
+			conscription = 0.05
+			mobilization_speed = 0.2
+			}
+		}
+		NJONS_Ecology = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Ecology" }
+			name = 生态主义
+			picture = beauty_of_siberia
+			allowed = { always = no }
+			modifier = {
+			local_building_slots_factor = 0.1
+			production_speed_buildings_factor = -0.1
+			industrial_capacity_factory = 0.05
+			}
+		}
+		NJONS_Ecology1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Ecology1" }
+			name = 生态主义
+			picture = beauty_of_siberia
+			allowed = { always = no }
+			modifier = {
+			local_building_slots_factor = 0.1
+			production_speed_buildings_factor = -0.1
+			industrial_capacity_factory = 0.1
+			industrial_capacity_dockyard = 0.1
+			nuclear_production_factor = 0.05
+			}
+		}
+		NJONS_Ecology2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Ecology2" }
+			name = 生态主义
+			picture = beauty_of_siberia
+			allowed = { always = no }
+			modifier = {
+			local_building_slots_factor = 0.2
+			production_speed_buildings_factor = -0.12
+			industrial_capacity_factory = 0.15
+			industrial_capacity_dockyard = 0.15
+			navy_fuel_consumption_factor = -0.2
+			army_fuel_consumption_factor = -0.2
+			air_fuel_consumption_factor = -0.2
+			nuclear_production_factor = 0.05
+			}
+		}
+		NJONS_eugenics = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_eugenics" }
+			name = 优生学
+			picture = COR_by_people_for_people
+			allowed = { always = no }
+			modifier = {
+			conscription = -0.1
+			army_attack_factor = 0.1
+			army_defence_factor = 0.1
+			}
+		}
+		NJONS_Malthusianism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Malthusianism" }
+			name = 马尔萨斯主义
+			picture = army_cooperation
+			allowed = { always = no }
+			modifier = {
+			conscription_factor = -0.1
+			breakthrough_factor = 0.1
+			org_loss_when_moving = -0.1
+			no_supply_grace = 120
+			}
+		}
+		NJONS_Malthusianism1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Malthusianism1" }
+			name = 马尔萨斯主义
+			picture = army_cooperation
+			allowed = { always = no }
+			modifier = {
+			conscription = -0.05
+			conscription_factor = -0.1
+			breakthrough_factor = 0.15
+			org_loss_when_moving = -0.15
+			POLITICAL_POWER_GAIN = 0.1
+			no_supply_grace = 120
+			}
+		}
+		NJONS_Work_Movement = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Work_Movement" }
+			name = 工人运动
+			picture = generic_syndicalist_worker
+			allowed = { always = no }
+			modifier = {
+			production_factory_max_efficiency_factor = 0.05
+			production_factory_efficiency_gain_factor = 0.05
+			production_factory_start_efficiency_factor = 0.05
+			}
+		}
+		NJONS_Work_Movement1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Work_Movement1" }
+			name = 工人运动
+			picture = generic_syndicalist_worker
+			allowed = { always = no }
+			modifier = {
+			production_factory_max_efficiency_factor = 0.1
+			production_factory_efficiency_gain_factor = 0.1
+			production_factory_start_efficiency_factor = 0.1
+			consumer_goods_expected_value = -0.1
+			}
+		}
+		NJONS_National_struggle = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_National_struggle" }
+			name = 民族斗争
+			picture = ALB_nationalization
+			allowed = { always = no }
+			modifier = {
+			resistance_target = -0.1
+			resistance_decay = 0.1
+			resistance_growth = -0.1
+			compliance_starting_value = 0.2
+			required_garrison_factor = -0.1
+			}
+		}
+		NJONS_National_struggle1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_National_struggle1" }
+			name = 民族斗争
+			picture = ALB_nationalization
+			allowed = { always = no }
+			modifier = {
+			resistance_target = -0.15
+			resistance_decay = 0.15
+			resistance_growth = -0.15
+			compliance_starting_value = 0.2
+			required_garrison_factor = -0.15
+			}
+		}
+		NJONS_Decriminalization_of_sexual_minorities = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Decriminalization_of_sexual_minorities" }
+			name = 性少数除罪化
+			picture = work_camps
+			allowed = { always = no }
+			modifier = {
+			local_org_regain = 0.1
+			army_org_factor = 0.1
+			supply_factor = 0.1
+			army_strength_factor = 0.1
+			}
+		}
+		NJONS_Decriminalization_of_sexual_minorities1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Decriminalization_of_sexual_minorities1" }
+			name = 性少数除罪化
+			picture = work_camps
+			allowed = { always = no }
+			modifier = {
+			local_org_regain = 0.15
+			army_org_factor = 0.15
+			supply_factor = 0.15
+			army_strength_factor = 0.15
+			research_speed_factor = 0.15
+			local_resources_factor = 0.1
+			}
+		}
+		NJONS_Against_collectivism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Against_collectivism" }
+			name = 反对集体主义
+			picture = nationalization_of_cows
+			allowed = { always = no }
+			modifier = {
+			stability_weekly = 0.002
+			cas_damage_reduction = 0.1
+			planning_speed = 0.1
+			}
+		}
+		NJONS_Against_collectivism1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Against_collectivism1" }
+			name = 反对集体主义
+			picture = nationalization_of_cows
+			allowed = { always = no }
+			modifier = {
+			stability_weekly = 0.005
+			cas_damage_reduction = 0.15
+			planning_speed = 0.15
+			army_strength_factor = 0.1
+			political_power_factor = 0.2
+			}
+		}
+		NJONS_Godwins_Wish = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Godwins_Wish" }
+			name = 戈德温之愿
+			picture = Godwins_Wish
+			allowed = { always = no }
+			modifier = {
+			consumer_goods_factor = -0.1
+			terrain_penalty_reduction = 0.1
+			production_speed_buildings_factor = 0.1
+			drift_defence_factor = 0.2
+			}
+		}
+		NJONS_Godwins_Wish1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Godwins_Wish1" }
+			name = 戈德温之愿
+			picture = Godwins_Wish
+			allowed = { always = no }
+			modifier = {
+			consumer_goods_factor = -0.15
+			terrain_penalty_reduction = 0.15
+			production_speed_buildings_factor = 0.15
+			drift_defence_factor = 0.3
+			political_power_gain = 0.2
+			}
+		}
+		NJONS_Follow_Proudhon = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Follow_Proudhon" }
+			name = 追随蒲鲁东
+			picture = Follow_Proudhon
+			allowed = { always = no }
+			modifier = {
+			army_speed_factor = 0.1
+			conscription = 0.1
+			mobilization_speed = 0.1
+			army_leader_start_level = 1
+			}
+		}
+		NJONS_Follow_Proudhon1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Follow_Proudhon1" }
+			name = 追随蒲鲁东
+			picture = Follow_Proudhon
+			allowed = { always = no }
+			modifier = {
+			army_speed_factor = 0.15
+			conscription = 0.15
+			mobilization_speed = 0.15
+			consumer_goods_expected_value = -0.1
+			dig_in_speed_factor = 0.1
+			army_leader_start_level = 1
+			}
+		}
+		NJONS_Empowering_Parliaments = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Empowering_Parliaments" }
+			name = 赋权议会
+			picture = partially_planned
+			allowed = { always = no }
+			modifier = {
+			political_power_factor = 0.1
+			political_power_gain = 0.1
+			stability_weekly = 0.005		
+			}
+		}
+		NJONS_Empowering_Parliaments1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Empowering_Parliaments1" }
+			name = 赋权议会
+			picture = partially_planned
+			allowed = { always = no }
+			modifier = {
+			political_power_factor = 0.15
+			political_power_gain = 0.15
+			stability_weekly = 0.005
+			mobilization_laws_cost_factor = -0.2
+			social_democrat_drift = 0.03
+			social_liberal_drift = 0.02
+			syndicalist_drift = 0.04
+			}
+		}
+		NJONS_The_big_leagues = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_The_big_leagues" }
+			name = 大联盟
+			picture = BBR_all_for_the_party_idea
+			allowed = { always = no }
+			modifier = {
+			army_attack_factor = 0.05
+			army_defence_factor = 0.05
+			pocket_penalty = -0.1
+			research_speed_factor = 0.1
+			}
+		}
+		NJONS_The_big_leagues1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_The_big_leagues1" }
+			name = 大联盟
+			picture = BBR_all_for_the_party_idea
+			allowed = { always = no }
+			modifier = {
+			army_attack_factor = 0.05
+			army_defence_factor = 0.05
+			pocket_penalty = -0.1
+			research_speed_factor = 0.1
+			production_speed_buildings_factor = 0.1
+			send_volunteer_size = 5
+			}
+		}
+		NJONS_The_big_leagues2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_The_big_leagues2" }
+			name = 大联盟
+			picture = BBR_all_for_the_party_idea
+			allowed = { always = no }
+			modifier = {
+			army_attack_factor = 0.08
+			army_defence_factor = 0.08
+			pocket_penalty = -0.15
+			research_speed_factor = 0.15
+			production_speed_buildings_factor = 0.15
+			send_volunteer_size = 5
+			}
+		}
+		NJONS_Clean_up_the_portal = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Clean_up_the_portal" }
+			name = 清理门户
+			picture = NFA_cleanse_rome
+			allowed = { always = no }
+			modifier = {
+			stability_weekly = 0.005
+			war_support_weekly = 0.005
+			breakthrough_factor = 0.08
+			land_reinforce_rate = 0.08
+			}
+		}
+		NJONS_Clean_up_the_portal1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Clean_up_the_portal1" }
+			name = 黑色国际主义
+			picture = FRA_phalanstere
+			allowed = { always = no }
+			modifier = {
+			stability_weekly = 0.005
+			war_support_weekly = 0.005
+			breakthrough_factor = 0.1
+			land_reinforce_rate = 0.1
+			army_attack_speed_factor = 0.2
+			grant_medal_cost_factor = -0.1
+			}
+		}
+		NJONS_Clean_up_the_portal2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Clean_up_the_portal3" }
+			name = 黑色国际主义
+			picture = FRA_phalanstere
+			allowed = { always = no }
+			modifier = {
+			stability_weekly = 0.005
+			war_support_weekly = 0.005
+			breakthrough_factor = 0.12
+			land_reinforce_rate = 0.12
+			army_attack_speed_factor = 0.25
+			grant_medal_cost_factor = -0.15
+			offensive_war_stability_factor = 0.2
+			}
+		}
+		NJONS_Righteous_people_in_society = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Righteous_people_in_society" }
+			name = 社会义士
+			picture = generic_personality_cult
+			allowed = { always = no }
+			modifier = {
+			conscription = 0.05
+			consumer_goods_expected_value = -0.1
+			consumer_goods_factor = -0.1
+			}
+		}
+		NJONS_Righteous_people_in_society1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Righteous_people_in_society1" }
+			name = 社会义士
+			picture = generic_personality_cult
+			allowed = { always = no }
+			modifier = {
+			conscription = 0.1
+			consumer_goods_expected_value = -0.15
+			consumer_goods_factor = -0.15
+			research_speed_factor = 0.1
+			repair_speed_rail_way_factor = 0.2
+			}
+		}
+		NJONS_Power_is_in_the_hands_of_the_people = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_Power_is_in_the_hands_of_the_people" }
+			name = 警惕愚蠢
+			picture = cnav_power_projection_icon
+			allowed = { always = no }
+			modifier = {
+			political_power_factor = 0.1
+			political_power_gain = 0.1
+			stability_weekly = 0.005
+			war_support_weekly = 0.005
+			attrition = -0.1
+			}
+		}
+		NJONS_Power_is_in_the_hands_of_the_people1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_Power_is_in_the_hands_of_the_people1" }
+			name = 警惕愚蠢
+			picture = cnav_power_projection_icon
+			allowed = { always = no }
+			modifier = {
+			political_power_factor = 0.15
+			political_power_gain = 0.15
+			stability_weekly = 0.005
+			war_support_weekly = 0.005
+			attrition = -0.1
+			army_attack_factor = 0.05
+			army_defence_factor = 0.05
+			}
+		}
+		NJONS_Power_is_in_the_hands_of_the_people2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JONS_Power_is_in_the_hands_of_the_people2" }
+			name = 警惕愚蠢
+			picture = cnav_power_projection_icon
+			allowed = { always = no }
+			modifier = {
+			political_power_factor = 0.2
+			political_power_gain = 0.2
+			stability_weekly = 0.007
+			war_support_weekly = 0.007
+			attrition = -0.15
+			army_attack_factor = 0.05
+			army_defence_factor = 0.05
+			army_core_defence_factor = 0.05
+			}
+		}
+		NJONS_Countering_extremism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Countering_extremism" }
+			name = 反极端主义
+			picture = HOL_negotiating_with_extremists
+			allowed = { always = no }
+			modifier = {
+			totalist_drift = -0.02
+			training_time_army_factor = -0.2
+			drift_defence_factor = 0.3
+			army_leader_start_level = 2
+			attrition = -0.1
+			}
+		}
+		NJONS_Countering_extremism1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Countering_extremism1" }
+			name = 反极端主义
+			picture = HOL_negotiating_with_extremists
+			allowed = { always = no }
+			modifier = {
+			totalist_drift = -0.05
+			training_time_army_factor = -0.25
+			drift_defence_factor = 0.4
+			army_leader_start_level = 2
+			attrition = -0.15
+			}
+		}
+		NJONS_Emancipation_of_women = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Emancipation_of_women" }
+			name = 解放妇女
+			picture = TEX_protect_pioneer_women
+			allowed = { always = no }
+			modifier = {
+			conscription_factor = 0.2
+			non_core_manpower = 0.2
+			mobilization_speed = 0.2
+			}
+		}
+		NJONS_Emancipation_of_women1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Emancipation_of_women1" }
+			name = 真正的解放者
+			picture = TEX_protect_pioneer_women
+			allowed = { always = no }
+			modifier = {
+			conscription_factor = 0.2
+			non_core_manpower = 0.2
+			mobilization_speed = 0.2
+			industrial_capacity_factory = 0.1
+			production_factory_start_efficiency_factor = 0.1
+			reassignment_duration_factor = -0.1
+			}
+		}
+		NJONS_Emancipate_the_petty_traders = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Emancipate_the_petty_traders" }
+			name = 解放小商贩
+			picture = free_trade
+			allowed = { always = no }
+			modifier = {
+			industrial_capacity_factory = 0.05
+			production_factory_efficiency_gain_factor = 0.05
+			production_speed_buildings_factor = 0.05
+			production_speed_industrial_complex_factor = 0.05
+			}
+		}
+		NJONS_Emancipate_the_petty_traders1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Emancipate_the_petty_traders1" }
+			name = 解放小商贩
+			picture = free_trade
+			allowed = { always = no }
+			modifier = {
+			stability_weekly = 0.003
+			industrial_capacity_factory = 0.1
+			production_factory_efficiency_gain_factor = 0.1
+			production_speed_buildings_factor = 0.1
+			production_speed_industrial_complex_factor = 0.1
+			}
+		}
+		NJONS_Emancipate_the_petty_traders2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Emancipate_the_petty_traders2" }
+			name = 解放小商贩
+			picture = free_trade
+			allowed = { always = no }
+			modifier = {
+			stability_weekly = 0.005
+			industrial_capacity_factory = 0.15
+			production_factory_efficiency_gain_factor = 0.15
+			production_speed_buildings_factor = 0.15
+			production_speed_industrial_complex_factor = 0.15
+			consumer_goods_expected_value = -0.1
+			consumer_goods_factor = -0.1
+			}
+		}
+		NJONS_Tolerance_of_private_ownership = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Tolerance_of_private_ownership" }
+			name = 容忍私有制
+			picture = private_defence_forces
+			allowed = { always = no }
+			modifier = {
+			consumer_goods_expected_value = -0.1
+			consumer_goods_factor = -0.1
+			economy_cost_factor = -0.3
+			}
+		}
+		NJONS_Tolerance_of_private_ownership1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Tolerance_of_private_ownership1" }
+			name = 容忍私有制
+			picture = private_defence_forces
+			allowed = { always = no }
+			modifier = {
+			consumer_goods_expected_value = -0.22
+			consumer_goods_factor = -0.22
+			economy_cost_factor = -0.3
+			production_speed_infrastructure_factor = 0.1
+			}
+		}
+		NJONS_five_year_plan = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_five_year_plan" }
+			name = 五年计划
+			picture = ALB_five_year_plan
+			allowed = { always = no }
+			modifier = {
+			local_building_slots_factor = 0.1
+			production_speed_buildings_factor = 0.1
+			production_speed_nuclear_reactor_factor = 0.1
+			production_speed_dockyard_factor = 0.1
+			}
+		}
+		NJONS_five_year_plan1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_five_year_plan1" }
+			name = 五年计划
+			picture = ALB_five_year_plan
+			allowed = { always = no }
+			modifier = {
+			local_building_slots_factor = 0.1
+			production_speed_buildings_factor = 0.1
+			production_speed_nuclear_reactor_factor = 0.1
+			production_speed_arms_factory_factor = 0.1
+			production_speed_industrial_complex_factor = 0.1
+			production_speed_synthetic_refinery_factor = 0.1
+			production_speed_dockyard_factor = 0.1
+			}
+		}
+		NJONS_Hyper_industrialized = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Hyper_industrialized" }
+			name = 超工业化
+			picture = centralist_gdc
+			allowed = { always = no }
+			modifier = {
+			local_building_slots_factor = 0.1
+			production_speed_buildings_factor = 0.1
+			production_speed_nuclear_reactor_factor = 0.1
+			production_speed_arms_factory_factor = 0.1
+			production_speed_industrial_complex_factor = 0.1
+			production_speed_synthetic_refinery_factor = 0.1
+			production_speed_dockyard_factor = 0.1
+			}
+		}
+		NJONS_The_evils_of_anarchy = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_The_evils_of_anarchy" }
+			name = 无政府之弊端
+			picture = democratic_centralism_1
+			allowed = { always = no }
+			modifier = {
+			radical_socialist_drift = -0.05
+			political_power_factor = 0.1
+			}
+		}
+		NJONS_The_evils_of_anarchy1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_The_evils_of_anarchy1" }
+			name = 无政府之弊端
+			picture = democratic_centralism_1
+			allowed = { always = no }
+			modifier = {
+			radical_socialist_drift = -0.05
+			totalist_drift = 0.05
+			political_power_factor = 0.1
+			political_power_gain = 0.1
+			}
+		}
+		NJONS_The_evils_of_anarchy2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_The_evils_of_anarchy2" }
+			name = 无政府之弊端
+			picture = democratic_centralism_1
+			allowed = { always = no }
+			modifier = {
+			radical_socialist_drift = -0.05
+			totalist_drift = 0.05
+			stability_weekly = 0.005
+			political_power_factor = 0.15
+			political_power_gain = 0.15
+			}
+		}
+		NJONS_Industrial_improvements = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Industrial_improvements" }
+			name = 工业改善
+			picture = agro_industrial_army
+			allowed = { always = no }
+			modifier = {
+			production_speed_buildings_factor = 0.1
+			production_speed_industrial_complex_factor = 0.1
+			production_speed_infrastructure_factor = 0.1
+			}
+		}
+		NJONS_Industrial_improvements1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Industrial_improvements1" }
+			name = 工业改善
+			picture = agro_industrial_army
+			allowed = { always = no }
+			modifier = {
+			production_speed_buildings_factor = 0.15
+			production_speed_industrial_complex_factor = 0.15
+			production_speed_infrastructure_factor = 0.15
+			production_factory_efficiency_gain_factor = 0.1
+			production_factory_start_efficiency_factor = 0.1
+			}
+		}
+		NJONS_State_regulation = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_State_regulation" }
+			name = 国家调控
+			picture = LIB_broken_center
+			allowed = { always = no }
+			modifier = {
+			consumer_goods_expected_value = -0.1
+			consumer_goods_factor = -0.1
+			economy_cost_factor = -0.2
+			}
+		}
+		NJONS_State_regulation1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_State_regulation1" }
+			name = 国家调控
+			picture = LIB_broken_center
+			allowed = { always = no }
+			modifier = {
+			consumer_goods_expected_value = -0.15
+			consumer_goods_factor = -0.15
+			economy_cost_factor = -0.25
+			production_speed_buildings_factor = 0.1
+			industrial_capacity_factory = 0.1
+			}
+		}
+		NJONS_New_Economic_Policy = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_New_Economic_Policy" }
+			name = 新经济政策
+			picture = LIB_broken_center
+			allowed = { always = no }
+			modifier = {
+			consumer_goods_expected_value = -0.1
+			consumer_goods_factor = -0.1
+			economy_cost_factor = -0.1
+			research_speed_factor = 0.1
+			}
+		}
+		NJONS_New_Economic_Policy1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_New_Economic_Policy1" }
+			name = 新经济政策
+			picture = LIB_broken_center
+			allowed = { always = no }
+			modifier = {
+			consumer_goods_expected_value = -0.15
+			consumer_goods_factor = -0.15
+			economy_cost_factor = -0.15
+			production_speed_buildings_factor = 0.1
+			industrial_capacity_factory = 0.1
+			research_speed_factor = 0.12
+			}
+		}
+		NJONS_New_Economic_Policy2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_New_Economic_Policy2" }
+			name = 新经济政策
+			picture = LIB_broken_center
+			allowed = { always = no }
+			modifier = {
+			consumer_goods_expected_value = -0.2
+			consumer_goods_factor = -0.2
+			economy_cost_factor = -0.2
+			production_speed_buildings_factor = 0.15
+			industrial_capacity_factory = 0.15
+			research_speed_factor = 0.15
+			}
+		}
+		NJONS_Socialism_in_development = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Socialism_in_development" }
+			name = 发展中的社会主义
+			picture = ALB_socialisms_orchard
+			allowed = { always = no }
+			modifier = {
+			local_building_slots_factor = 0.1
+			production_speed_buildings_factor = 0.05
+			production_speed_industrial_complex_factor = 0.1
+			production_speed_infrastructure_factor = 0.1
+			}
+		}
+		NJONS_Revolution_forever = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Revolution_forever" }
+			name = 永远的革命
+			picture = FRA_idea_revenge
+			allowed = { always = no }
+			modifier = {
+			totalist_drift = 0.2
+			war_support_factor = 0.2
+			consumer_goods_factor = -0.1
+			industrial_capacity_factory = 0.1
+			army_attack_factor = 0.1
+			army_defence_factor = 0.1
+			}
+		}
+		NJONS_Revolution_forever1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Revolution_forever1" }
+			name = 永远的革命
+			picture = FRA_idea_revenge
+			allowed = { always = no }
+			modifier = {
+			totalist_drift = 0.2
+			war_support_factor = 0.2
+			consumer_goods_factor = -0.2
+			industrial_capacity_factory = 0.2
+			army_attack_factor = 0.15
+			army_defence_factor = 0.15
+			}
+		}
+		NJONS_Revolution_forever2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Revolution_forever2" }
+			name = 永远的革命
+			picture = FRA_idea_revenge
+			allowed = { always = no }
+			modifier = {
+			totalist_drift = 0.2
+			war_support_factor = 0.2
+			consumer_goods_factor = -0.25
+			industrial_capacity_factory = 0.25
+			army_speed_factor = 0.1
+			justify_war_goal_time = -0.2
+			army_attack_factor = 0.15
+			army_defence_factor = 0.15
+			}
+		}
+		NJONS_Against_capitalism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Against_capitalism" }
+			name = 反对资本主义
+			picture = centralised_syndicalism
+			allowed = { always = no }
+			modifier = {
+			market_liberal_drift = -0.1
+			social_liberal_drift = -0.1
+			social_conservative_drift = -0.1
+			authoritarian_democrat_drift = -0.1
+			paternal_autocrat_drift = -0.1
+			national_populist_drift = -0.1
+			army_attack_factor = 0.1
+			army_core_defence_factor = 0.1
+			}
+		}
+		NJONS_Against_capitalism1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Against_capitalism1" }
+			name = 反帝反资
+			picture = centralised_syndicalism
+			allowed = { always = no }
+			modifier = {
+			market_liberal_drift = -0.1
+			social_liberal_drift = -0.1
+			social_conservative_drift = -0.1
+			authoritarian_democrat_drift = -0.1
+			paternal_autocrat_drift = -0.1
+			national_populist_drift = -0.1
+			army_attack_factor = 0.1
+			army_core_defence_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = NFA
+				attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = NFA
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = CAN
+				attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = CAN
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = AUS
+				attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = AUS
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = GER
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = RUS
+				attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = RUS
+				defense_bonus_against = 0.1
+			}
+		}
+		NJONS_Women_can_hold_up_half_the_sky = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Women_can_hold_up_half_the_sky" }
+			name = 妇女能顶半边天
+			picture = TEX_protect_pioneer_women
+			allowed = { always = no }
+			modifier = {
+			line_change_production_efficiency_factor = 0.1
+			conscription_factor = 0.2
+			industrial_capacity_factory = 0.1
+			production_factory_max_efficiency_factor = 0.1
+			production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+		NJONS_Women_can_hold_up_half_the_sky1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Women_can_hold_up_half_the_sky1" }
+			name = 妇女能顶半边天
+			picture = TEX_protect_pioneer_women
+			allowed = { always = no }
+			modifier = {
+			line_change_production_efficiency_factor = 0.15
+			conscription_factor = 0.2
+			industrial_capacity_factory = 0.15
+			production_factory_max_efficiency_factor = 0.15
+			production_factory_efficiency_gain_factor = 0.15
+			}
+		}
+		NJONS_Women_can_hold_up_half_the_sky2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Women_can_hold_up_half_the_sky2" }
+			name = 妇女能顶半边天
+			picture = TEX_protect_pioneer_women
+			allowed = { always = no }
+			modifier = {
+			line_change_production_efficiency_factor = 0.2
+			conscription_factor = 0.2
+			radical_socialist_drift = 0.05
+			industrial_capacity_factory = 0.2
+			production_factory_max_efficiency_factor = 0.2
+			production_factory_efficiency_gain_factor = 0.2
+			send_volunteer_size = 10
+			}
+		}
+		NJONS_Develop_a_planned_economy = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Develop_a_planned_economy" }
+			name = 集权化
+			picture = partially_planned
+			allowed = { always = no }
+			modifier = {
+			production_factory_start_efficiency_factor = 0.10
+			production_speed_buildings_factor = 0.10
+			repair_speed_industrial_complex_factor = 0.10
+			repair_speed_arms_factory_factor = 0.10
+			}
+		}
+		NJONS_Develop_a_planned_economy1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_Develop_a_planned_economy1" }
+			name = 集权化
+			picture = partially_planned
+			allowed = { always = no }
+			modifier = {
+			production_factory_start_efficiency_factor = 0.15
+			production_speed_buildings_factor = 0.15
+			repair_speed_industrial_complex_factor = 0.15
+			repair_speed_arms_factory_factor = 0.15
+			production_speed_arms_factory_factor = 0.1
+			}
+		}
+		NJONS_revolution = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_revolution" }
+			name = 革命
+			picture = Revolt_against_modern_world
+			allowed = { always = no }
+			modifier = {
+			stability_weekly = 0.002
+			war_support_weekly = 0.002
+			totalist_drift = 0.005
+			political_power_gain = 0.2
+			attrition = -0.12
+			}
+		}
+		NJONS_revolution1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_revolution1" }
+			name = 革命
+			picture = Revolt_against_modern_world
+			allowed = { always = no }
+			modifier = {
+			stability_weekly = 0.003
+			war_support_weekly = 0.003
+			political_power_factor = 0.15
+			totalist_drift = 0.007
+			political_power_gain = 0.25
+			attrition = -0.15
+			}
+		}
+		NJONS_revolution2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_revolution2" }
+			name = 革命
+			picture = Revolt_against_modern_world
+			allowed = { always = no }
+			modifier = {
+			stability_weekly = 0.003
+			war_support_weekly = 0.003
+			political_power_factor = 0.15
+			totalist_drift = 0.007
+			political_power_gain = 0.25
+			attrition = -0.15
+			research_speed_factor = 0.15
+			}
+		}
+		NJONS_NThere_is_no_oppression = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_NThere_is_no_oppression" }
+			name = 废除私有制
+			picture = wealth_cap
+			allowed = { always = no }
+			modifier = {
+			war_support_factor = 0.1
+			stability_factor = 0.1
+			local_building_slots_factor = 0.15
+			production_speed_buildings_factor = 0.1
+			}
+		}
+		NJONS_NThere_is_no_oppression1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_NThere_is_no_oppression1" }
+			name = 废除私有制
+			picture = CNT_incomplete_agrarian_reform
+			allowed = { always = no }
+			modifier = {
+			war_support_factor = 0.15
+			stability_factor = 0.15
+			local_building_slots_factor = 0.2
+			production_speed_buildings_factor = 0.15
+			attrition = -0.2
+			supply_consumption_factor = -0.2
+			}
+		}
+		NJONS_communist_army = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_communist_army" }
+			name = 工农自卫队
+			picture = army_of_militias
+			allowed = { always = no }
+			modifier = {
+			army_attack_factor = 0.05
+			army_defence_factor = 0.05
+			army_core_defence_factor = 0.05
+			army_org_factor = 0.15
+			army_morale_factor = 0.2
+			}
+		}
+		NJONS_communist_army1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NJONS_communist_army1" }
+			name = 工农自卫队
+			picture = army_of_militias
+			allowed = { always = no }
+			modifier = {
+			army_attack_factor = 0.08
+			army_defence_factor = 0.08
+			army_core_defence_factor = 0.05
+			army_core_attack_factor = 0.05
+			political_power_factor = 0.1
+			political_power_gain = 0.1
+			army_org_factor = 0.2
+			army_morale_factor = 0.2
+			}
+		}
+	}
+}

@@ -1,0 +1,406 @@
+focus_tree = {
+	id = gru_VKB
+	continuous_focus_position = { x = 2700 y = 300 }
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BAL
+		}
+	}
+	focus = {
+		id = VK_FOCUS_BALTENLAND_START_COLONIZING
+		icon = VKB_COLONIZE
+		relative_position_id = VK_FOCUS_SHARED_ESTABLISH_VK
+		x = 0
+		y = 3
+		allow_branch = {
+			has_country_flag = IS_BAL 
+		}
+		cost = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_BALTENLAND_START_COLONIZING"
+			1091 = {
+				add_core_of = BAL
+			}
+
+			set_province_name = { id = 11234 name = GRU_name_province_11234 }
+			210 = { set_state_name = GRU_name_state_210 }
+			set_province_name = { id = 14715 name = GRU_name_province_14715 }
+			1288 = { set_state_name = GRU_name_state_1288 }
+
+			swap_ideas = {
+				remove_idea = VK_COLONY_ONE
+				add_idea = VK_COLONY_TWO
+			}
+		}
+		prerequisite = { focus = VK_FOCUS_SHARED_MORE_SETTLERS  }
+		prerequisite = { focus = VK_FOCUS_SHARED_OUR_OWN_RR  }
+		prerequisite = { focus = VK_FOCUS_SHARED_ENSLAVE_NATIVES  }
+	}
+	focus = {
+		id = VK_FOCUS_BALTEN_COLONIZE_TWO
+		icon = VKB_COLONIZE_ONE
+		relative_position_id = VK_FOCUS_BALTENLAND_START_COLONIZING
+		x = -2
+		y = 1
+		available = {
+			BAL = {
+				OR = {
+					BAL = {
+						controls_state = 12
+					}
+					any_other_country = {
+						is_subject_of = BAL
+						controls_state = 12
+					}
+				}
+				OR = {
+					BAL = {
+						controls_state = 191
+					}
+					any_other_country = {
+						is_subject_of = BAL
+						controls_state = 191
+					}
+				}
+				OR = {
+					BAL = {
+						controls_state = 13
+					}
+					any_other_country = {
+						is_subject_of = BAL
+						controls_state = 13
+					}
+				}
+				OR = {
+					BAL = {
+						controls_state = 190
+					}
+					any_other_country = {
+						is_subject_of = BAL
+						controls_state = 190
+					}
+				}
+				OR = {
+					BAL = {
+						controls_state = 189
+					}
+					any_other_country = {
+						is_subject_of = BAL
+						controls_state = 189
+					}
+				}
+				OR = {
+					BAL = {
+						controls_state = 11
+					}
+					any_other_country = {
+						is_subject_of = BAL
+						controls_state = 11
+					}
+				}
+				OR = {
+					BAL = {
+						controls_state = 655
+					}
+					any_other_country = {
+						is_subject_of = BAL
+						controls_state = 655
+					}
+				}
+				OR = {
+					BAL = {
+						controls_state = 1329
+					}
+					any_other_country = {
+						is_subject_of = BAL
+						controls_state = 1329
+					}
+				}
+			}
+		}
+		cost = 6
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_BALTEN_COLONIZE_TWO"
+
+			every_state = {
+				limit = {
+					OR = {
+						state = 12
+				        state = 191
+				        state = 13
+				        state = 190
+				        state = 189
+				        state = 11
+				        state = 655
+				        state = 1329
+				        state = 1091
+					}
+				}
+				BAL = {
+					add_state_core = PREV
+					transfer_state = PREV
+				}
+			}
+		}
+		prerequisite = { focus = VK_FOCUS_BALTENLAND_START_COLONIZING  }
+	}
+	focus = {
+		id = VK_FOCUS_BALTEN_COLONIZE_THREE
+		icon = VKB_COLONIZE_TWO
+		relative_position_id = VK_FOCUS_BALTENLAND_START_COLONIZING
+		x = 0
+		y = 1
+		available = {
+			BAL = {
+				OR = {
+					BAL = {
+						controls_state = 209
+					}
+					any_other_country = {
+						is_subject_of = BAL
+						controls_state = 209
+					}
+				}
+				OR = {
+					BAL = {
+						controls_state = 880
+					}
+					any_other_country = {
+						is_subject_of = BAL
+						controls_state = 880
+					}
+				}
+				OR = {
+					BAL = {
+						controls_state = 207
+					}
+					any_other_country = {
+						is_subject_of = BAL
+						controls_state = 207
+					}
+				}
+				OR = {
+					BAL = {
+						controls_state = 96
+					}
+					any_other_country = {
+						is_subject_of = BAL
+						controls_state = 96
+					}
+				}
+				OR = {
+					BAL = {
+						controls_state = 94
+					}
+					any_other_country = {
+						is_subject_of = BAL
+						controls_state = 94
+					}
+				}
+				OR = {
+					BAL = {
+						controls_state = 1295
+					}
+					any_other_country = {
+						is_subject_of = BAL
+						controls_state = 1295
+					}
+				}
+				OR = {
+					BAL = {
+						controls_state = 204
+					}
+					any_other_country = {
+						is_subject_of = BAL
+						controls_state = 204
+					}
+				}
+				OR = {
+					BAL = {
+						controls_state = 206
+					}
+					any_other_country = {
+						is_subject_of = BAL
+						controls_state = 206
+					}
+				}
+				OR = {
+					BAL = {
+						controls_state = 1294
+					}
+					any_other_country = {
+						is_subject_of = BAL
+						controls_state = 1294
+					}
+				}
+				OR = {
+					BAL = {
+						controls_state = 1287
+					}
+					any_other_country = {
+						is_subject_of = BAL
+						controls_state = 1287
+					}
+				}
+				OR = {
+					BAL = {
+						controls_state = 1290
+					}
+					any_other_country = {
+						is_subject_of = BAL
+						controls_state = 1290
+					}
+				}
+			}
+		}
+		cost = 6
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_BALTEN_COLONIZE_THREE"
+			
+			every_state = {
+				limit = {
+					OR = {
+						state = 209
+				        state = 880
+				        state = 207
+				        state = 96
+				        state = 94
+				        state = 1295
+				        state = 204
+				        state = 206
+				        state = 1294
+				        state = 1287
+				        state = 1290
+					}
+				}
+				BAL = {
+					add_state_core = PREV
+					transfer_state = PREV
+				}
+			}
+		}
+		prerequisite = { focus = VK_FOCUS_BALTENLAND_START_COLONIZING  }
+	}
+	focus = {
+		id = VK_FOCUS_BALTEN_COLONIZE_FOUR
+		icon = VKB_COLONIZE_THREE
+		relative_position_id = VK_FOCUS_BALTENLAND_START_COLONIZING
+		x = 2
+		y = 1
+		available = {
+			BAL = {
+				OR = {
+					BAL = {
+						controls_state = 1288
+					}
+					any_other_country = {
+						is_subject_of = BAL
+						controls_state = 1288
+					}
+				}
+				OR = {
+					BAL = {
+						controls_state = 1289
+					}
+					any_other_country = {
+						is_subject_of = BAL
+						controls_state = 1289
+					}
+				}
+				OR = {
+					BAL = {
+						controls_state = 1291
+					}
+					any_other_country = {
+						is_subject_of = BAL
+						controls_state = 1291
+					}
+				}
+				OR = {
+					BAL = {
+						controls_state = 210
+					}
+					any_other_country = {
+						is_subject_of = BAL
+						controls_state = 210
+					}
+				}
+				OR = {
+					BAL = {
+						controls_state = 755
+					}
+					any_other_country = {
+						is_subject_of = BAL
+						controls_state = 755
+					}
+				}
+				OR = {
+					BAL = {
+						controls_state = 1087
+					}
+					any_other_country = {
+						is_subject_of = BAL
+						controls_state = 1087
+					}
+				}
+				OR = {
+					BAL = {
+						controls_state = 243
+					}
+					any_other_country = {
+						is_subject_of = BAL
+						controls_state = 243
+					}
+				}
+			}
+		}
+		cost = 6
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_BALTEN_COLONIZE_FOUR"
+			
+			every_state = {
+				limit = {
+					OR = {
+						state = 1289
+				        state = 1291
+				        state = 210
+				        state = 755
+				        state = 1288
+				        state = 1087
+				        state = 243
+					}
+				}
+				BAL = {
+					add_state_core = PREV
+					transfer_state = PREV
+				}
+			}
+		}
+		prerequisite = { focus = VK_FOCUS_BALTENLAND_START_COLONIZING  }
+	}
+	focus = {
+		id = VK_FOCUS_BALTENLAND_COLONIZED
+		icon = VKB_COLONIZED
+		relative_position_id = VK_FOCUS_BALTENLAND_START_COLONIZING
+		
+		x = 0
+		y = 2
+
+		cost = 5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_BALTENLAND_COLONIZED"
+			swap_ideas = {
+				remove_idea = VK_COLONY_TWO
+				add_idea = VK_COLONY_THREE
+			}
+			set_country_flag = Germanized_VKB
+		}
+		prerequisite = { focus = VK_FOCUS_BALTEN_COLONIZE_TWO  }
+		prerequisite = { focus = VK_FOCUS_BALTEN_COLONIZE_THREE  }
+		prerequisite = { focus = VK_FOCUS_BALTEN_COLONIZE_FOUR  }
+	}
+	shared_focus = VK_FOCUS_SHARED_ESTABLISH_VK
+	#shared_focus = GRU_formation_of_the_nva
+}

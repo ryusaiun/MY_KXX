@@ -1,0 +1,255 @@
+ideas = {
+	country = {
+        idea_KOG_united_one_kongo = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea idea_KOG_united_one_kongo" }
+			name = idea_KOG_united_one_kongo
+			picture = bantu_wild_ambition
+			allowed = { always = no }
+			modifier = {
+				ai_focus_aggressive_factor = 0.25
+				minimum_training_level = -0.2
+				war_support_factor = 0.2
+				army_attack_factor = 0.10
+				army_defence_factor = 0.10
+				stability_factor = -0.3
+				consumer_goods_factor = 0.15
+				weekly_manpower = 10000
+				conscription = 0.5
+				attrition = -0.15
+			}
+		}
+	}
+	country = {
+        idea_bantu_wild_ambition = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea idea_bantu_wild_ambition" }
+			name = idea_bantu_wild_ambition
+			picture = bantu_wild_ambition
+			allowed = { always = no }
+			modifier = {
+				justify_war_goal_time = -0.5
+                generate_wargoal_tension = -0.3
+				stability_factor = -0.15
+				army_attack_factor = 0.15
+				conscription_factor = 0.3
+			}
+		}
+	}
+
+	country = {
+        idea_sa_kongo_people = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: idea_sa_kongo_people" }
+			name = idea_sa_kongo_people
+			picture = sa_kongo_people
+			allowed = { always = no }
+			modifier = {
+				training_time_army_factor = -0.08
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				mobilization_speed = 0.1
+				no_supply_grace = 48
+				stability_factor = -0.2
+			}
+		}
+	}	
+
+	country = {
+        idea_mathengeism_influence = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: idea_mathengeism_influence" }
+			name = idea_mathengeism_influence
+			picture = mathengeism_influence
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.1
+				national_populist_drift = 0.01
+				MONTHLY_POPULATION = 0.05
+				recruitable_population_factor = 0.065
+				army_core_attack_factor = 0.125
+				war_support_factor = -0.1
+				industrial_capacity_factory = 0.065
+				supply_consumption_factor = -0.045
+			}
+		}
+	}
+
+	country = {
+        idea_salazar_economy = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea idea_salazar_economy" }
+			name = idea_salazar_economy
+			picture = salazar_economy
+			allowed = { always = no }
+			modifier = {
+				industrial_capacity_factory = 0.2
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				consumer_goods_factor = -0.1
+				stability_factor = -0.1			
+				political_power_factor = 0.15
+				production_speed_buildings_factor = 0.05
+				global_building_slots_factor = 0.2
+				research_speed_factor = 0.2
+				stability_weekly_factor = -0.01
+				war_support_weekly = -0.01
+			}
+		}
+	}
+
+	country = {
+		idea_king_of_sa_af = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea idea_king_of_sa_af"}
+			allowed = { always = no }
+			picture = king_of_sa_af
+			modifier = {
+				political_power_gain = 0.5
+				stability_factor = 0.5
+				resistance_target = -0.2
+				monthly_population = 0.3
+				conscription_factor = 0.15
+				local_resources_factor = 0.15
+				industrial_capacity_factory = 0.15
+			}
+		}	
+	}	
+
+	country = {
+		KOG_TRO_navy_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOG_TRO_navy_idea"}
+			allowed = { always = no }
+			picture = portuguese_combined_fleet
+			modifier = {
+				production_speed_naval_base_factor = 0.5
+				production_speed_dockyard_factor = 0.5
+				naval_doctrine_cost_factor = -0.3
+			}
+			equipment_bonus = {
+				convoy = {
+					build_cost_ic = -0.40
+					instant = yes
+				}
+				submarine = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				destroyer = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				ship_hull_cruiser = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				capital_ship = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				ship_hull_heavy = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+			}
+		}		
+	}
+
+	country = {
+		KOG_TRO_navy_idea2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KOG_TRO_navy_idea2"}
+			picture = portuguese_glory
+			allowed = { always = no }
+			modifier = {
+				naval_coordination = 0.15
+				experience_gain_navy_factor = 0.10
+				navy_screen_attack_factor = 0.1
+				navy_capital_ship_attack_factor = 0.1
+				navy_submarine_attack_factor  = 0.1
+				navy_max_range_factor = 0.1
+				invasion_preparation = -0.5
+			}
+		}
+	}
+	country = {
+		KOG_rapid_naval_modernisation_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SHX_rapid_naval_modernisation_idea" }
+			picture = liberty_ships_focus
+			allowed = { always = no }
+			modifier = {
+				production_speed_dockyard_factor = 1.5
+				stability_weekly_factor = -0.02
+				war_support_weekly = -0.02
+			}
+		}
+	}
+	country = {
+		KOG_TRO_military_universal_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SHX_rapid_naval_modernisation_idea" }
+			picture = FLN_european_brigade
+			allowed = { always = no }
+			modifier = {
+				political_power_cost = 0.2
+				war_support_weekly = -0.02
+				army_infantry_attack_factor = 0.15
+				army_infantry_defence_factor = 0.10
+				breakthrough_factor = 0.15
+				experience_loss_factor = -0.20
+				army_org_factor = 0.10
+				army_morale_factor = 0.10
+				max_planning_factor = 0.30
+				training_time_army_factor = -0.08
+				mobilization_speed = 0.1
+				no_supply_grace = 72
+			}
+		}
+	}
+	country = {
+		KOG_TRO_identity_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SHX_rapid_naval_modernisation_idea" }
+			picture = KOG_TRO_identity
+			allowed = { always = no }
+			modifier = {
+				political_power_cost = 0.5
+				local_non_core_manpower = 0.2
+				weekly_manpower = 100
+				stability_weekly_factor = -0.1
+				add_stability = -0.2
+			}
+		}
+	}
+	country = {
+		KOG_TRO_identity2_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SHX_rapid_naval_modernisation_idea" }
+			picture = KOG_TRO_identity
+			allowed = { always = no }
+			modifier = {
+				political_power_cost = 0.2
+				local_non_core_manpower = 0.2
+				weekly_manpower = 250
+				stability_weekly_factor = 0.01
+				add_stability = -0.1
+				war_support_weekly = 0.02
+				mobilization_speed = 0.2
+				conscription_factor	= 0.10
+				conscription = 0.05
+			}
+		}
+	}
+	country = {
+		KOG_TRO_Finalvent_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SHX_rapid_naval_modernisation_idea" }
+			picture = lusotropicalism_glory
+			allowed = { always = no }
+			modifier = {
+				political_power_cost = 0.15
+				consumer_goods_factor = 0.1
+				conversion_cost_mil_to_civ_factor = -0.10
+				weekly_manpower = 500
+				stability_weekly_factor = 0.01
+				local_non_core_manpower = 0.2
+				war_support_weekly = 0.02
+				monthly_population = 0.05
+				conscription_factor	= 0.15
+				conscription = 0.1
+				recruitable_population_factor = 0.10
+			}
+		}
+	}
+}

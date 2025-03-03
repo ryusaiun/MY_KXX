@@ -1,0 +1,526 @@
+
+
+defined_text = {
+	name = GRUGetHOGTitle
+
+	text = {
+		trigger = {
+			has_country_flag = GRU_GOEBB_ROEM_VISIBLE
+		}
+		localization_key = GOEBB_OR_RHOEM
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_GOEBB_HIMMLER_VISIBLE
+		}
+		localization_key = GOEBB_OR_HIMML
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_GOEBB_SPEER_VISIBLE
+		}
+		localization_key = GOEBB_OR_SPEER
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_LIEBK_ROSA_VISIBLE
+		}
+		localization_key = KARL_OR_ROSA
+	}
+	###
+	text = {
+		trigger = {
+			has_country_flag = GRU_ENG_VISIBLE
+		}
+		localization_key = KING_OR_LDR
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_IBR_VISIBLE
+		}
+		localization_key = FRANCO_OR_SALAZAR
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_ITT_VISIBLE
+		}
+		localization_key = DUCE_OR_EM
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_IEA_VISIBLE
+		}
+		localization_key = DUCE_OR_EM_3
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_MNT_VISIBLE
+		}
+		localization_key = KING_OR_LDR
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_SER_VISIBLE
+		}
+		localization_key = NED_OR_OTTO
+	}
+	###
+	text = {
+		trigger = {
+			has_country_flag = GRU_VYT_VISIBLE
+		}
+		localization_key = KING_OR_BR
+	}
+	text = {
+		trigger = {
+			has_country_flag = STALIN_ORDZ_VISIBLE
+		}
+		localization_key = STALIN_OR_ORDZ
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_MUR_VISIBLE
+		}
+		localization_key = KING_OR_PRM
+	}
+	text = {
+		trigger = {
+			has_country_flag = SUG_triumvirate
+		}
+		localization_key = TRIUMVIR_GENERAL
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_RRV_VISIBLE
+		}
+		localization_key = VLASOV_OR_BRON
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_AMR_VISIBLE
+		}
+		localization_key = VOSN_OR_RODZ
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_MGD_VISIBLE
+		}
+		localization_key = ANDRE_OR_DITR
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_SHE_VISIBLE
+		}
+		localization_key = SHE_SWTH
+	}
+}
+defined_text = {
+	name = GRUGetThirdLeaderTitle
+	text = {
+		trigger = {
+			NOT = {
+				GRU_LEADER_GUI_USES_CUSTOM_TITLE = yes
+			}
+		}
+		localization_key = GRU_NORMAL_FOR_TITLE
+	}
+	text = {
+		trigger = {
+			GRU_LEADER_GUI_USES_CUSTOM_TITLE = yes
+		}
+		localization_key = GRU_CUSTOM_FOR_TITLE
+	}
+}
+defined_text = {
+	name = GRUGetFORHOGTitle
+
+	text = {
+		trigger = {
+			has_country_flag = GRU_GOEBB_ROEM_VISIBLE
+		}
+		localization_key = GOEBB_OR_RHOEM_2
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_GOEBB_HIMMLER_VISIBLE
+		}
+		localization_key = GOEBB_OR_HIMML_2
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_GOEBB_SPEER_VISIBLE
+		}
+		localization_key = GOEBB_OR_SPEER_2
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_LIEBK_ROSA_VISIBLE
+		}
+		localization_key = KARL_OR_ROSA_2
+	}
+	###
+	text = {
+		trigger = {
+			has_country_flag = GRU_ENG_VISIBLE
+		}
+		localization_key = KING_OR_LDR2
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_IBR_VISIBLE
+		}
+		localization_key = FRANCO_OR_SALAZAR_2
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_ITT_VISIBLE
+		}
+		localization_key = DUCE_OR_EM_2
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_IEA_VISIBLE
+		}
+		localization_key = DUCE_OR_EM_4
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_MNT_VISIBLE
+		}
+		localization_key = KING_OR_LDR22
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_SER_VISIBLE
+		}
+		localization_key = NED_OR_OTTO_2
+	}
+	###
+	text = {
+		trigger = {
+			has_country_flag = GRU_VYT_VISIBLE
+		}
+		localization_key = KING_OR_BR2
+	}
+	text = {
+		trigger = {
+			has_country_flag = STALIN_ORDZ_VISIBLE
+		}
+		localization_key = STALIN_OR_ORDZ_2
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_MUR_VISIBLE
+		}
+		localization_key = KING_OR_PRM2
+	}
+	text = {
+		trigger = {
+			has_country_flag = SUG_triumvirate
+		}
+		localization_key = TRIUMVIR_GENERAL2
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_RRV_VISIBLE
+		}
+		localization_key = VLASOV_OR_BRON2
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_AMR_VISIBLE
+		}
+		localization_key = VOSN_OR_RODZ_2
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_MGD_VISIBLE
+		}
+		localization_key = ANDRE_OR_DITR_2
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_SHE_VISIBLE
+		}
+		localization_key = SHE_SWTH_2
+	}
+}
+
+defined_text = {
+	name = GRUGetHeadDescription
+
+	text = {
+		trigger = {
+			has_country_flag = GRU_GOEBB_ROEM_VISIBLE
+		}
+		localization_key = GRU_Ernst_Rhoem_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_GOEBB_HIMMLER_VISIBLE
+		}
+		localization_key = GRU_Heinrich_Himmler_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_GOEBB_SPEER_VISIBLE
+		}
+		localization_key = GRU_Albert_Speer_desc
+	}
+}
+
+defined_text = {
+	name = GetGRU_HRYAK_PMPortrait
+	text = {
+		trigger = {
+			has_country_flag = GRU_GOEBB_GORING_VISIBLE
+		}
+		localization_key = GFX_Portrait_GRU_Hermann_Goering
+	}
+}
+defined_text = {
+	name = Get_HRYAK_PM
+	text = {
+		trigger = {
+			has_country_flag = GRU_GOEBB_GORING_VISIBLE
+		}
+		localization_key = GRU_Hermann_Goering
+	}
+}
+
+defined_text = {
+	name = GRUGetPrimeMinister
+
+	### GRU
+	text = {
+		trigger = {
+			has_country_flag = GRU_GOEBB_ROEM_VISIBLE
+		}
+		localization_key = GRU_LC_ROEM
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_GOEBB_HIMMLER_VISIBLE
+		}
+		localization_key = GRU_LC_HIMMLER
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_GOEBB_SPEER_VISIBLE
+		}
+		localization_key = GRU_LC_SPEER
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_LIEBK_ROSA_VISIBLE
+		}
+		localization_key = GRU_LC_ROSA
+	}
+	###
+	text = {
+		trigger = {
+			has_country_flag = GRU_ENG_VISIBLE
+		}
+		localization_key = GRU_LC_ENG
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_IBR_VISIBLE
+		}
+		localization_key = GRU_LC_IBR
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_ITT_VISIBLE
+		}
+		localization_key = GRU_LC_ITT
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_IEA_VISIBLE
+		}
+		localization_key = GRU_LC_IEA
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_MNT_VISIBLE
+		}
+		localization_key = GRU_LC_MNT
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_SER_VISIBLE
+		}
+		localization_key = GRU_LC_SER
+	}
+	###
+	text = {
+		trigger = {
+			has_country_flag = GRU_VYT_VISIBLE
+		}
+		localization_key = GRU_LC_VYT
+	}
+	text = {
+		trigger = {
+			has_country_flag = STALIN_ORDZ_VISIBLE
+		}
+		localization_key = GRU_LC_ORDZ
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_MUR_VISIBLE
+		}
+		localization_key = GRU_LC_MUR
+	}
+	text = {
+		trigger = {
+			has_country_flag = SUG_triumvirate
+		}
+		localization_key = GRU_LC_triumvirate
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_RRV_VISIBLE
+		}
+		localization_key = GRU_LC_RRV
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_AMR_VISIBLE
+		}
+		localization_key = GRU_LC_AMR
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_MGD_VISIBLE
+		}
+		localization_key = GRU_LC_MGD
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_SHE_VISIBLE
+		}
+		localization_key = GRU_LC_SHE
+	}
+	text = {
+		trigger = {
+			has_country_flag = STALIN_MOLOTOV_VISIBLE
+		}
+		localization_key = GRU_LC_MOLOTOV
+	}
+}
+
+defined_text = {
+	name = GRUGetPMPortrait
+
+	text = {
+		trigger = {
+			has_country_flag = GRU_GOEBB_ROEM_VISIBLE
+		}
+		localization_key = GFX_Portrait_GRU_Ernst_Rhoem
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_GOEBB_HIMMLER_VISIBLE
+		}
+		localization_key = GFX_Portrait_GRU_Heinrich_Himmler
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_GOEBB_SPEER_VISIBLE
+		}
+		localization_key = GFX_Portrait_GRU_Albert_Speer
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_LIEBK_ROSA_VISIBLE
+		}
+		localization_key = GFX_Portrait_GRU_Rosa_Luxenburg
+	}
+	###
+	text = {
+		trigger = {
+			has_country_flag = GRU_ENG_VISIBLE
+		}
+		localization_key = GFX_Portrait_GGB_Britain_Charles_III
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_IBR_VISIBLE
+		}
+		localization_key = GFX_Portrait_IBR_Antonio_Salazar
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_ITT_VISIBLE
+		}
+		localization_key = GFX_Portrait_ITT_Victor_Emmanuel_III
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_IEA_VISIBLE
+		}
+		localization_key = GFX_Portrait_IEA_Victor_Emmanuel_III
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_MNT_VISIBLE
+		}
+		localization_key = GFX_Portrait_MNT_king_michael
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_SER_VISIBLE
+		}
+		localization_key = GFX_Portrait_GRU_Otto
+	}
+	###
+	text = {
+		trigger = {
+			has_country_flag = GRU_VYT_VISIBLE
+		}
+		localization_key = GFX_Portrait_VYT_Pyotr_Wrangel_Tsar
+	}
+	text = {
+		trigger = {
+			has_country_flag = STALIN_ORDZ_VISIBLE
+		}
+		localization_key = GFX_Portrait_Grigol_Ordzhonikikdze
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_MUR_VISIBLE
+		}
+		localization_key = GFX_Portrait_Carl_Gustaf_Mannerheim
+	}
+	text = {
+		trigger = {
+			has_country_flag = SUG_triumvirate
+		}
+		localization_key = GFX_Portrait_Aleksandr_Yegorov
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_RRV_VISIBLE
+		}
+		localization_key = GFX_Portrait_Bronislav_Kaminski
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_AMR_VISIBLE
+		}
+		localization_key = GFX_Portrait_Konstantin_Rodzaevsky
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_MGD_VISIBLE
+		}
+		localization_key = GFX_Portrait_Diterikhs
+	}
+	text = {
+		trigger = {
+			has_country_flag = GRU_SHE_VISIBLE
+		}
+		localization_key = GFX_Portrait_SHE_Regency
+	}
+}

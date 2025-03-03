@@ -1,0 +1,88 @@
+
+POR_iberia_cat = {
+	icon = border_conflicts
+	#picture = GFX_decision_cat_picture_ger_case_anton
+
+	allowed = {
+		original_tag = POR
+		POR = {
+		}
+	}
+	visible = {
+		has_completed_focus = POR_trumph
+	}
+}
+
+POR_SA_cat = {
+	icon = GFX_decision_category_military_operation
+	#picture = GFX_decision_cat_picture_ger_case_anton
+
+	allowed = {
+		original_tag = POR
+	}
+	visible = {
+		has_completed_focus = POR_trumph
+	}
+}
+
+
+POR_empire_cat = {
+	icon = GFX_decision_category_military_operation
+	picture = GFX_decision_cat_picture_ger_case_anton
+
+	allowed = {
+		original_tag = POR
+	}
+	visible = {
+		has_completed_focus = POR_trumph
+	}
+}
+
+POR_SEA_cat = {
+	icon = GFX_decision_category_military_operation
+	picture = GFX_decision_cat_suez_canal
+
+	allowed = {
+		original_tag = POR
+	}
+	visible = {
+		has_completed_focus = POR_trumph
+	}
+}
+
+POR_OIL_cat = {
+	icon = army_reform
+	picture = GFX_decision_cat_picture_generic_border_conflicts
+
+	allowed = {
+		original_tag = POR
+	}
+	visible = {
+		has_completed_focus = POR_trumph
+	}
+}
+
+POR_china_cat = {
+	icon = GFX_decision_category_qing_hall
+	picture = GFX_decision_cat_picture_chinese_troops
+
+	allowed = {
+		original_tag = POR
+	}
+	visible = {
+		has_completed_focus = POR_trumph
+	}
+}
+
+POR_rivals_cat = {
+	icon = GFX_decision_category_patriotic
+	#picture = GFX_decision_cat_suez_canal
+
+	allowed = {
+		original_tag = POR
+	}
+	visible = {
+		has_completed_focus = POR_trumph
+	}
+}
+

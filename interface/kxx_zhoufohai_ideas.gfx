@@ -1,0 +1,20 @@
+spriteTypes = {
+	
+	### SubIdeologies ###
+	spriteType = {
+		name = "GFX_idea_chi_gaizupaizhengtong"
+		texturefile = "gfx/interface/ideas/LKMT_ideas/CHI_GFDG.png"
+	}
+	spriteType = {
+		name = "GFX_idea_chi_fohaiquanwei"
+		texturefile = "gfx/interface/ideas/LKMT_ideas/CHI_MXSHGM.png"
+	}
+	spriteType = {
+		name = "GFX_idea_chi_fohaiquanwei_2"
+		texturefile = "gfx/interface/ideas/LKMT_ideas/CHI_MXSHGM.png"
+	}
+	spriteType = {
+		name = "GFX_idea_chi_yiguandao"
+		texturefile = "gfx/interface/ideas/LKMT_ideas/SQI_honored_master.tga"
+	}
+}

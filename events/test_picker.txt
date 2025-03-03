@@ -1,0 +1,140 @@
+﻿
+add_namespace = test_picker
+
+country_event = {
+	id = test_picker.1
+	title = test_picker.1.t 
+	desc = test_picker.1.d 
+
+	is_triggered_only = yes
+	
+	option = {
+		name = test_picker.1.a
+		set_country_leader_ideology = ikki_kita_thought_subtype
+	}
+	option = {
+		name = test_picker.1.b
+		set_country_leader_ideology = okawa_shumei_thought_subtype
+	}
+	option = {
+		name = test_picker.1.c
+		set_country_leader_ideology = doroism_subtype
+	}
+	option = {
+		name = test_picker.1.e
+		set_country_leader_ideology = revisionist_sorelianism_subtype
+	}
+	option = {
+		name = test_picker.1.f
+		set_country_leader_ideology = marxism_leninism_banderaism_subtype
+	}
+	option = {
+		name = test_picker.1.g
+		set_country_leader_ideology = rightkxxism_subtype
+	}
+	option = {
+		name = test_picker.1.h
+		create_country_leader = {
+			name = "混乱状态"
+			picture = "gfx/leaders/funny/Portrait_ZZZ_Anarchy.png"
+			expire = "1.1.1"
+			traits = {  }
+			ideology = cannibalism_proto_subtype
+			}
+		set_party_name = {
+			ideology = totalist
+			name = "KOG_POR_ERROR"
+			long_name = "KOG_POR_ERROR"
+		}				
+		set_party_name = {
+			ideology = syndicalist
+			name = "KOG_POR_ERROR"
+			long_name = "KOG_POR_ERROR"
+		}		
+		set_party_name = {
+			ideology = radical_socialist
+			name = "KOG_POR_ERROR"
+			long_name = "KOG_POR_ERROR"
+		}		
+		set_party_name = {
+			ideology = social_democrat
+			name = "KOG_POR_ERROR"
+			long_name = "KOG_POR_ERROR"
+		}										
+		set_party_name = {
+			ideology = social_liberal
+			name = "KOG_POR_ERROR"
+			long_name = "KOG_POR_ERROR"
+		}
+		set_party_name = {
+			ideology = market_liberal
+			name = "KOG_POR_ERROR"
+			long_name = "KOG_POR_ERROR"
+		}					
+		set_party_name = {
+			ideology = social_conservative
+			name = "KOG_POR_ERROR"
+			long_name = "KOG_POR_ERROR"
+		}		
+		set_party_name = {
+			ideology = authoritarian_democrat
+			name = "KOG_POR_ERROR"
+			long_name = "KOG_POR_ERROR"
+		}	
+		set_party_name = {
+			ideology = paternal_autocrat
+			name = "KOG_POR_ERROR"
+			long_name = "KOG_POR_ERROR"
+		}
+		set_party_name = {
+			ideology = national_populist
+			name = "KOG_POR_ERROR"
+			long_name = "KOG_POR_ERROR"
+		}
+		set_politics = {
+			ruling_party = national_populist
+			elections_allowed = no
+		}
+	}
+}
+
+country_event = {
+	id = test_picker.2
+	title = test_picker.2.t 
+	desc = test_picker.2.d 
+
+	is_triggered_only = yes
+	
+	option = {
+		name = test_picker.2.a
+		create_country_leader = {
+			name = "Maud Gonne"
+			picture = "gfx/leaders/IRE/Maud_Gonne.png"
+			expire = "1.1.1"
+			traits = {  }
+			ideology = tot_pan_celticism_subtype
+			}	
+		set_party_name = {
+			ideology = totalist
+			name = "盎凯社会信用联盟"
+			long_name = "盎凯社会信用联盟"
+		}
+	}
+	option = {
+		name = test_picker.2.b
+		set_cosmetic_tag = FRA_acephale
+		create_country_leader = {
+			name = "乔治·巴塔耶"
+			desc = "POLITICS_GEORGES_BATAILLE_DESC"
+			picture = "gfx/leaders/FRA/Portrait_FRA_Georges_Bataille.png"
+			expire = "1.1.1"
+			ideology = surrealist_eroticism_subtype
+		}
+		set_party_name = {
+			ideology = radical_socialist
+			long_name = FRA_acephale_group_long
+			name = FRA_acephale_group
+		}
+		set_province_name = { id = 11506 name = "“太阳”"}
+	}
+}

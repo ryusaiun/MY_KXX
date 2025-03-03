@@ -1,0 +1,48 @@
+leader_traits = {
+
+	WCC_american_pompey = { 
+		random = no
+		stability_factor = 0.1
+		political_power_factor = 0.05
+		authoritarian_democrat_drift = 0.01
+	}
+	WCC_new_sulla = { 
+		random = no
+		political_power_gain = 0.09
+		local_resources_factor = 0.03
+		mobilization_laws_cost_factor = -0.5
+		trade_laws_cost_factor  = -0.5
+		economy_cost_factor = -0.5
+	}
+	WCC_caesar_heir = { 
+		random = no
+		war_support_factor = 0.1
+		production_speed_arms_factory_factor = 0.03
+		paternal_autocrat_drift = 0.03
+	}
+
+	hog_Air_force_hero = {
+		air_range_factor = 0.04
+		air_ace_generation_chance_factor = 0.03
+		experience_gain_air_factor = 0.05
+
+		random = no
+	}
+
+	hog_hardline_segregationist = {
+		stability_factor = -0.01
+		conscription_factor = -0.02
+		political_power_factor = 0.04
+
+		random = no
+	}
+
+	sec_natural_resource_developer = {
+		political_power_gain = -0.03
+		local_building_slots_factor = 0.05
+		local_resources_factor = 0.08
+		
+		random = no
+	}	
+}
+	

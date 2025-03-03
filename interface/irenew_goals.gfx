@@ -1,0 +1,42 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_goal1"
+		textureFile = "gfx/interface/goals/Red_Ireland/goal1.png"
+	}
+	spriteType = {
+		name = "GFX_goal2"
+		textureFile = "gfx/interface/goals/Red_Ireland/goal2.png"
+	}
+	spriteType = {
+		name = "GFX_goal3"
+		textureFile = "gfx/interface/goals/Red_Ireland/goal3.png"
+	}
+	spriteType = {
+		name = "GFX_goal4"
+		textureFile = "gfx/interface/goals/Red_Ireland/goal4.png"
+	}
+	spriteType = {
+		name = "GFX_goal5"
+		textureFile = "gfx/interface/goals/Red_Ireland/goal5.png"
+	}
+	spriteType = {
+		name = "GFX_goal6"
+		textureFile = "gfx/interface/goals/Red_Ireland/goal6.png"
+	}
+	spriteType = {
+		name = "GFX_goal7"
+		textureFile = "gfx/interface/goals/Red_Ireland/goal7.png"
+	}
+	spriteType = {
+		name = "GFX_goal8"
+		textureFile = "gfx/interface/goals/Red_Ireland/goal8.png"
+	}
+	spriteType = {
+		name = "GFX_goal9"
+		textureFile = "gfx/interface/goals/Red_Ireland/goal9.png"
+	}
+	spriteType = {
+		name = "GFX_goal10"
+		textureFile = "gfx/interface/goals/Red_Ireland/goal10.png"
+	}
+}

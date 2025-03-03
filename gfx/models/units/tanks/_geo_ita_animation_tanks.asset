@@ -1,0 +1,35 @@
+
+animation = {
+	name = "geo_m13_idle_animation"
+	file = "geo_m13_idle.anim"
+}
+
+animation = {
+	name = "geo_m13_move_animation"
+	file = "geo_m13_move.anim"
+}
+
+animation = {
+	name = "geo_m13_attack_animation"
+	file = "geo_m13_attack.anim"
+}
+
+animation = {
+	name = "geo_p75_idle_animation"
+	file = "geo_p75_idle.anim"
+}
+
+animation = {
+	name = "geo_p75_move_animation"
+	file = "geo_p75_move.anim"
+}
+
+animation = {
+	name = "geo_p75_attack_animation"
+	file = "geo_p75_attack.anim"
+}
+
+animation = {
+	name = "geo_l6_attack_animation"
+	file = "geo_l6_attack.anim"
+}

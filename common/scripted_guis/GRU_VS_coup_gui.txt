@@ -1,0 +1,616 @@
+scripted_gui = {
+	VS_coup_ui = {
+		context_type = decision_category
+		window_name = "GRU_VS_coup_window_GUI"
+
+		visible = {
+			tag = GRU
+			has_country_flag = roem_act_ds_coup
+		}
+
+		triggers = {
+			GRU_coup_progressbar_visible = {
+				check_variable = { VS_coup_prss_rev_var > 0 }
+			}
+			phase_icon_1_visible = {
+				check_variable = { VS_coup_prss_rev < 0.7 }
+			}
+			phase_text_1_visible = {
+				check_variable = { VS_coup_prss_rev < 0.7 }
+			}
+			phase_icon_1_active_visible = {
+				NOT = { check_variable = { VS_coup_prss_rev < 0.7 } }
+			}
+			phase_text_1_active_visible = {
+				NOT = { check_variable = { VS_coup_prss_rev < 0.7 } }
+			}
+			phase_icon_2_visible = {
+				check_variable = { VS_coup_prss_rev < 0.85 }
+			}
+			phase_text_2_visible = {
+				check_variable = { VS_coup_prss_rev < 0.85 }
+			}
+			phase_icon_2_active_visible = {
+				NOT = { check_variable = { VS_coup_prss_rev < 0.85 } }
+			}
+			phase_text_2_active_visible = {
+				NOT = { check_variable = { VS_coup_prss_rev < 0.85 } }
+			}
+			phase_icon_3_visible = {
+				check_variable = { VS_coup_prss_rev < 1 }
+			}
+			phase_text_3_visible = {
+				check_variable = { VS_coup_prss_rev < 1 }
+			}
+			phase_icon_3_active_visible = {
+				NOT = { check_variable = { VS_coup_prss_rev < 1 } }
+			}
+			phase_text_3_active_visible = {
+				NOT = { check_variable = { VS_coup_prss_rev < 1 } }
+			}
+
+			VS_map_reg_50_visible = {
+				50 = { is_owned_and_controlled_by = GRU }
+			}
+			VS_map_reg_52_visible = {
+				52 = { is_owned_and_controlled_by = GRU }
+			}
+			VS_map_reg_53_visible = {
+				53 = { is_owned_and_controlled_by = GRU }
+			}
+			VS_map_reg_780_visible = {
+				780 = { is_owned_and_controlled_by = GRU }
+			}
+			VS_map_reg_54_visible = {
+				54 = { is_owned_and_controlled_by = GRU }
+			}
+			VS_map_reg_65_visible = {
+				65 = { is_owned_and_controlled_by = GRU }
+			}
+			VS_map_reg_66_visible = {
+				66 = { is_owned_and_controlled_by = GRU }
+			}
+			VS_map_reg_68_visible = {
+				68 = { is_owned_and_controlled_by = GRU }
+			}
+			VS_map_reg_63_visible = {
+				63 = { is_owned_and_controlled_by = GRU }
+			}
+			VS_map_reg_64_visible = {
+				64 = { is_owned_and_controlled_by = GRU }
+			}
+			VS_map_reg_60_visible = {
+				60 = { is_owned_and_controlled_by = GRU }
+			}
+			VS_map_reg_62_visible = {
+				62 = { is_owned_and_controlled_by = GRU }
+			}
+			VS_map_reg_61_visible = {
+				61 = { is_owned_and_controlled_by = GRU }
+			}
+			VS_map_reg_58_visible = {
+				58 = { is_owned_and_controlled_by = GRU }
+			}
+			VS_map_reg_59_visible = {
+				59 = { is_owned_and_controlled_by = GRU }
+			}
+			VS_map_reg_56_visible = {
+				56 = { is_owned_and_controlled_by = GRU }
+			}
+			VS_map_reg_57_visible = {
+				57 = { is_owned_and_controlled_by = GRU }
+			}
+			VS_map_reg_55_visible = {
+				55 = { is_owned_and_controlled_by = GRU }
+			}
+		}
+		properties = {
+			VS_coup_p_bar_blackfront = {
+				frame = VS_p_bar_up_blackfront
+			}
+			VS_coup_p_bar_goebb = {
+				frame = VS_p_bar_up_goebbels
+			}
+			GRU_coup_progressbar = {
+				frame = VS_coup_prss_rev_var
+			}
+			indicator_icon = {
+				x = VS_coup_prss_rev_indc_var
+			}
+			indicator_value_text = {
+				x = VS_coup_prss_rev_indc_var
+			}
+			phase_icon_1_visible = {
+				check_variable = { VS_coup_prss_rev < 0.7 }
+			}
+			phase_text_1_visible = {
+				check_variable = { VS_coup_prss_rev < 0.7 }
+			}
+			phase_icon_1_active_visible = {
+				NOT = { check_variable = { VS_coup_prss_rev < 0.7 } }
+			}
+			phase_text_1_active_visible = {
+				NOT = { check_variable = { VS_coup_prss_rev < 0.7 } }
+			}
+			phase_icon_2_visible = {
+				check_variable = { VS_coup_prss_rev < 0.85 }
+			}
+			phase_text_2_visible = {
+				check_variable = { VS_coup_prss_rev < 0.85 }
+			}
+			phase_icon_2_active_visible = {
+				NOT = { check_variable = { VS_coup_prss_rev < 0.85 } }
+			}
+			phase_text_2_active_visible = {
+				NOT = { check_variable = { VS_coup_prss_rev < 0.85 } }
+			}
+			phase_icon_3_visible = {
+				check_variable = { VS_coup_prss_rev < 1 }
+			}
+			phase_text_3_visible = {
+				check_variable = { VS_coup_prss_rev < 1 }
+			}
+			phase_icon_3_active_visible = {
+				NOT = { check_variable = { VS_coup_prss_rev < 1 } }
+			}
+			phase_text_3_active_visible = {
+				NOT = { check_variable = { VS_coup_prss_rev < 1 } }
+			}
+			###
+			
+			VS_map_reg_50 = {
+				image = "[GFX_VS_map_reg_50]"
+				frame = 50.VS_Map_frame
+			}
+			VS_map_reg_52 = {
+				image = "[GFX_VS_map_reg_52]"
+				frame = 52.VS_Map_frame
+			}
+			VS_map_reg_53 = {
+				image = "[GFX_VS_map_reg_53]"
+				frame = 53.VS_Map_frame
+			}
+			VS_map_reg_780 = {
+				image = "[GFX_VS_map_reg_780]"
+				frame = 780.VS_Map_frame
+			}
+			VS_map_reg_54 = {
+				image = "[GFX_VS_map_reg_54]"
+				frame = 54.VS_Map_frame
+			}
+			VS_map_reg_65 = {
+				image = "[GFX_VS_map_reg_65]"
+				frame = 65.VS_Map_frame
+			}
+			VS_map_reg_66 = {
+				image = "[GFX_VS_map_reg_66]"
+				frame = 66.VS_Map_frame
+			}
+			VS_map_reg_68 = {
+				image = "[GFX_VS_map_reg_68]"
+				frame = 68.VS_Map_frame
+			}
+			VS_map_reg_63 = {
+				image = "[GFX_VS_map_reg_63]"
+				frame = 63.VS_Map_frame
+			}
+			VS_map_reg_64 = {
+				image = "[GFX_VS_map_reg_64]"
+				frame = 64.VS_Map_frame
+			}
+			VS_map_reg_60 = {
+				image = "[GFX_VS_map_reg_60]"
+				frame = 60.VS_Map_frame
+			}
+			VS_map_reg_62 = {
+				image = "[GFX_VS_map_reg_62]"
+				frame = 62.VS_Map_frame
+			}
+			VS_map_reg_61 = {
+				image = "[GFX_VS_map_reg_61]"
+				frame = 61.VS_Map_frame
+			}
+			VS_map_reg_58 = {
+				image = "[GFX_VS_map_reg_58]"
+				frame = 58.VS_Map_frame
+			}
+			VS_map_reg_59 = {
+				image = "[GFX_VS_map_reg_59]"
+				frame = 59.VS_Map_frame
+			}
+			VS_map_reg_56 = {
+				image = "[GFX_VS_map_reg_56]"
+				frame = 56.VS_Map_frame
+			}
+			VS_map_reg_57 = {
+				image = "[GFX_VS_map_reg_57]"
+				frame = 57.VS_Map_frame
+			}
+			VS_map_reg_55 = {
+				image = "[GFX_VS_map_reg_55]"
+				frame = 55.VS_Map_frame
+			}
+		}
+		effects = {
+			VS_map_reg_50_click = {
+				set_country_flag = dec_reg_50
+
+				clr_country_flag = dec_reg_52
+				clr_country_flag = dec_reg_53
+				clr_country_flag = dec_reg_54
+				clr_country_flag = dec_reg_65
+				clr_country_flag = dec_reg_66
+				clr_country_flag = dec_reg_780
+				clr_country_flag = dec_reg_68
+				clr_country_flag = dec_reg_63
+				clr_country_flag = dec_reg_64
+				clr_country_flag = dec_reg_60
+				clr_country_flag = dec_reg_62
+				clr_country_flag = dec_reg_61
+				clr_country_flag = dec_reg_58
+				clr_country_flag = dec_reg_59
+				clr_country_flag = dec_reg_56
+				clr_country_flag = dec_reg_57
+				clr_country_flag = dec_reg_55
+			}
+			VS_map_reg_52_click = {
+				set_country_flag = dec_reg_52
+
+				clr_country_flag = dec_reg_50
+				clr_country_flag = dec_reg_53
+				clr_country_flag = dec_reg_54
+				clr_country_flag = dec_reg_65
+				clr_country_flag = dec_reg_66
+				clr_country_flag = dec_reg_780
+				clr_country_flag = dec_reg_68
+				clr_country_flag = dec_reg_63
+				clr_country_flag = dec_reg_64
+				clr_country_flag = dec_reg_60
+				clr_country_flag = dec_reg_62
+				clr_country_flag = dec_reg_61
+				clr_country_flag = dec_reg_58
+				clr_country_flag = dec_reg_59
+				clr_country_flag = dec_reg_56
+				clr_country_flag = dec_reg_57
+				clr_country_flag = dec_reg_55
+			}
+			VS_map_reg_53_click = {
+				set_country_flag = dec_reg_53
+
+				clr_country_flag = dec_reg_50
+				clr_country_flag = dec_reg_52
+				clr_country_flag = dec_reg_54
+				clr_country_flag = dec_reg_65
+				clr_country_flag = dec_reg_66
+				clr_country_flag = dec_reg_780
+				clr_country_flag = dec_reg_68
+				clr_country_flag = dec_reg_63
+				clr_country_flag = dec_reg_64
+				clr_country_flag = dec_reg_60
+				clr_country_flag = dec_reg_62
+				clr_country_flag = dec_reg_61
+				clr_country_flag = dec_reg_58
+				clr_country_flag = dec_reg_59
+				clr_country_flag = dec_reg_56
+				clr_country_flag = dec_reg_57
+				clr_country_flag = dec_reg_55
+			}
+			VS_map_reg_780_click = {
+				set_country_flag = dec_reg_780
+
+				clr_country_flag = dec_reg_50
+				clr_country_flag = dec_reg_52
+				clr_country_flag = dec_reg_53
+				clr_country_flag = dec_reg_54
+				clr_country_flag = dec_reg_65
+				clr_country_flag = dec_reg_66
+				clr_country_flag = dec_reg_68
+				clr_country_flag = dec_reg_63
+				clr_country_flag = dec_reg_64
+				clr_country_flag = dec_reg_60
+				clr_country_flag = dec_reg_62
+				clr_country_flag = dec_reg_61
+				clr_country_flag = dec_reg_58
+				clr_country_flag = dec_reg_59
+				clr_country_flag = dec_reg_56
+				clr_country_flag = dec_reg_57
+				clr_country_flag = dec_reg_55
+			}
+			VS_map_reg_54_click = {
+				set_country_flag = dec_reg_54
+
+				clr_country_flag = dec_reg_50
+				clr_country_flag = dec_reg_52
+				clr_country_flag = dec_reg_53
+				clr_country_flag = dec_reg_65
+				clr_country_flag = dec_reg_66
+				clr_country_flag = dec_reg_780
+				clr_country_flag = dec_reg_68
+				clr_country_flag = dec_reg_63
+				clr_country_flag = dec_reg_64
+				clr_country_flag = dec_reg_60
+				clr_country_flag = dec_reg_62
+				clr_country_flag = dec_reg_61
+				clr_country_flag = dec_reg_58
+				clr_country_flag = dec_reg_59
+				clr_country_flag = dec_reg_56
+				clr_country_flag = dec_reg_57
+				clr_country_flag = dec_reg_55
+			}
+			VS_map_reg_65_click = {
+				set_country_flag = dec_reg_65
+
+				clr_country_flag = dec_reg_50
+				clr_country_flag = dec_reg_52
+				clr_country_flag = dec_reg_53
+				clr_country_flag = dec_reg_54
+				clr_country_flag = dec_reg_66
+				clr_country_flag = dec_reg_780
+				clr_country_flag = dec_reg_68
+				clr_country_flag = dec_reg_63
+				clr_country_flag = dec_reg_64
+				clr_country_flag = dec_reg_60
+				clr_country_flag = dec_reg_62
+				clr_country_flag = dec_reg_61
+				clr_country_flag = dec_reg_58
+				clr_country_flag = dec_reg_59
+				clr_country_flag = dec_reg_56
+				clr_country_flag = dec_reg_57
+				clr_country_flag = dec_reg_55
+			}
+			VS_map_reg_66_click = {
+				set_country_flag = dec_reg_66
+
+				clr_country_flag = dec_reg_50
+				clr_country_flag = dec_reg_52
+				clr_country_flag = dec_reg_53
+				clr_country_flag = dec_reg_54
+				clr_country_flag = dec_reg_65
+				clr_country_flag = dec_reg_780
+				clr_country_flag = dec_reg_68
+				clr_country_flag = dec_reg_63
+				clr_country_flag = dec_reg_64
+				clr_country_flag = dec_reg_60
+				clr_country_flag = dec_reg_62
+				clr_country_flag = dec_reg_61
+				clr_country_flag = dec_reg_58
+				clr_country_flag = dec_reg_59
+				clr_country_flag = dec_reg_56
+				clr_country_flag = dec_reg_57
+				clr_country_flag = dec_reg_55
+			}
+
+			VS_map_reg_68_click = {
+				set_country_flag = dec_reg_68
+
+				clr_country_flag = dec_reg_50
+				clr_country_flag = dec_reg_52
+				clr_country_flag = dec_reg_53
+				clr_country_flag = dec_reg_54
+				clr_country_flag = dec_reg_65
+				clr_country_flag = dec_reg_66
+				clr_country_flag = dec_reg_780
+				clr_country_flag = dec_reg_63
+				clr_country_flag = dec_reg_64
+				clr_country_flag = dec_reg_60
+				clr_country_flag = dec_reg_62
+				clr_country_flag = dec_reg_61
+				clr_country_flag = dec_reg_58
+				clr_country_flag = dec_reg_59
+				clr_country_flag = dec_reg_56
+				clr_country_flag = dec_reg_57
+				clr_country_flag = dec_reg_55
+			}
+			VS_map_reg_63_click = {
+				set_country_flag = dec_reg_63
+
+				clr_country_flag = dec_reg_50
+				clr_country_flag = dec_reg_52
+				clr_country_flag = dec_reg_53
+				clr_country_flag = dec_reg_54
+				clr_country_flag = dec_reg_65
+				clr_country_flag = dec_reg_66
+				clr_country_flag = dec_reg_780
+				clr_country_flag = dec_reg_68
+				clr_country_flag = dec_reg_64
+				clr_country_flag = dec_reg_60
+				clr_country_flag = dec_reg_62
+				clr_country_flag = dec_reg_61
+				clr_country_flag = dec_reg_58
+				clr_country_flag = dec_reg_59
+				clr_country_flag = dec_reg_56
+				clr_country_flag = dec_reg_57
+				clr_country_flag = dec_reg_55
+			}
+			VS_map_reg_64_click = {
+				set_country_flag = dec_reg_64
+
+				clr_country_flag = dec_reg_50
+				clr_country_flag = dec_reg_52
+				clr_country_flag = dec_reg_53
+				clr_country_flag = dec_reg_54
+				clr_country_flag = dec_reg_65
+				clr_country_flag = dec_reg_66
+				clr_country_flag = dec_reg_780
+				clr_country_flag = dec_reg_68
+				clr_country_flag = dec_reg_63
+				clr_country_flag = dec_reg_60
+				clr_country_flag = dec_reg_62
+				clr_country_flag = dec_reg_61
+				clr_country_flag = dec_reg_58
+				clr_country_flag = dec_reg_59
+				clr_country_flag = dec_reg_56
+				clr_country_flag = dec_reg_57
+				clr_country_flag = dec_reg_55
+			}
+			VS_map_reg_60_click = {
+				set_country_flag = dec_reg_60
+
+				clr_country_flag = dec_reg_50
+				clr_country_flag = dec_reg_52
+				clr_country_flag = dec_reg_53
+				clr_country_flag = dec_reg_54
+				clr_country_flag = dec_reg_65
+				clr_country_flag = dec_reg_66
+				clr_country_flag = dec_reg_780
+				clr_country_flag = dec_reg_68
+				clr_country_flag = dec_reg_63
+				clr_country_flag = dec_reg_64
+				clr_country_flag = dec_reg_62
+				clr_country_flag = dec_reg_61
+				clr_country_flag = dec_reg_58
+				clr_country_flag = dec_reg_59
+				clr_country_flag = dec_reg_56
+				clr_country_flag = dec_reg_57
+				clr_country_flag = dec_reg_55
+			}
+			VS_map_reg_62_click = {
+				set_country_flag = dec_reg_62
+
+				clr_country_flag = dec_reg_50
+				clr_country_flag = dec_reg_52
+				clr_country_flag = dec_reg_53
+				clr_country_flag = dec_reg_54
+				clr_country_flag = dec_reg_65
+				clr_country_flag = dec_reg_66
+				clr_country_flag = dec_reg_780
+				clr_country_flag = dec_reg_68
+				clr_country_flag = dec_reg_63
+				clr_country_flag = dec_reg_64
+				clr_country_flag = dec_reg_60
+				clr_country_flag = dec_reg_61
+				clr_country_flag = dec_reg_58
+				clr_country_flag = dec_reg_59
+				clr_country_flag = dec_reg_56
+				clr_country_flag = dec_reg_57
+				clr_country_flag = dec_reg_55
+			}
+			VS_map_reg_61_click = {
+				set_country_flag = dec_reg_61
+
+				clr_country_flag = dec_reg_50
+				clr_country_flag = dec_reg_52
+				clr_country_flag = dec_reg_53
+				clr_country_flag = dec_reg_54
+				clr_country_flag = dec_reg_65
+				clr_country_flag = dec_reg_66
+				clr_country_flag = dec_reg_780
+				clr_country_flag = dec_reg_68
+				clr_country_flag = dec_reg_63
+				clr_country_flag = dec_reg_64
+				clr_country_flag = dec_reg_60
+				clr_country_flag = dec_reg_62
+				clr_country_flag = dec_reg_58
+				clr_country_flag = dec_reg_59
+				clr_country_flag = dec_reg_56
+				clr_country_flag = dec_reg_57
+				clr_country_flag = dec_reg_55
+			}
+			VS_map_reg_58_click = {
+				set_country_flag = dec_reg_58
+
+				clr_country_flag = dec_reg_50
+				clr_country_flag = dec_reg_52
+				clr_country_flag = dec_reg_53
+				clr_country_flag = dec_reg_54
+				clr_country_flag = dec_reg_65
+				clr_country_flag = dec_reg_66
+				clr_country_flag = dec_reg_780
+				clr_country_flag = dec_reg_68
+				clr_country_flag = dec_reg_63
+				clr_country_flag = dec_reg_64
+				clr_country_flag = dec_reg_60
+				clr_country_flag = dec_reg_62
+				clr_country_flag = dec_reg_61
+				clr_country_flag = dec_reg_59
+				clr_country_flag = dec_reg_56
+				clr_country_flag = dec_reg_57
+				clr_country_flag = dec_reg_55
+			}
+			VS_map_reg_59_click = {
+				set_country_flag = dec_reg_59
+
+				clr_country_flag = dec_reg_50
+				clr_country_flag = dec_reg_52
+				clr_country_flag = dec_reg_53
+				clr_country_flag = dec_reg_54
+				clr_country_flag = dec_reg_65
+				clr_country_flag = dec_reg_66
+				clr_country_flag = dec_reg_780
+				clr_country_flag = dec_reg_68
+				clr_country_flag = dec_reg_63
+				clr_country_flag = dec_reg_64
+				clr_country_flag = dec_reg_60
+				clr_country_flag = dec_reg_62
+				clr_country_flag = dec_reg_61
+				clr_country_flag = dec_reg_58
+				clr_country_flag = dec_reg_56
+				clr_country_flag = dec_reg_57
+				clr_country_flag = dec_reg_55
+			}
+			VS_map_reg_56_click = {
+				set_country_flag = dec_reg_56
+
+				clr_country_flag = dec_reg_50
+				clr_country_flag = dec_reg_52
+				clr_country_flag = dec_reg_53
+				clr_country_flag = dec_reg_54
+				clr_country_flag = dec_reg_65
+				clr_country_flag = dec_reg_66
+				clr_country_flag = dec_reg_780
+				clr_country_flag = dec_reg_68
+				clr_country_flag = dec_reg_63
+				clr_country_flag = dec_reg_64
+				clr_country_flag = dec_reg_60
+				clr_country_flag = dec_reg_62
+				clr_country_flag = dec_reg_61
+				clr_country_flag = dec_reg_58
+				clr_country_flag = dec_reg_59
+				clr_country_flag = dec_reg_57
+				clr_country_flag = dec_reg_55
+			}
+			VS_map_reg_57_click = {
+				set_country_flag = dec_reg_57
+
+				clr_country_flag = dec_reg_50
+				clr_country_flag = dec_reg_52
+				clr_country_flag = dec_reg_53
+				clr_country_flag = dec_reg_54
+				clr_country_flag = dec_reg_65
+				clr_country_flag = dec_reg_66
+				clr_country_flag = dec_reg_780
+				clr_country_flag = dec_reg_68
+				clr_country_flag = dec_reg_63
+				clr_country_flag = dec_reg_64
+				clr_country_flag = dec_reg_60
+				clr_country_flag = dec_reg_62
+				clr_country_flag = dec_reg_61
+				clr_country_flag = dec_reg_58
+				clr_country_flag = dec_reg_59
+				clr_country_flag = dec_reg_56
+				clr_country_flag = dec_reg_55
+			}
+			VS_map_reg_55_click = {
+				set_country_flag = dec_reg_55
+
+				clr_country_flag = dec_reg_50
+				clr_country_flag = dec_reg_52
+				clr_country_flag = dec_reg_53
+				clr_country_flag = dec_reg_54
+				clr_country_flag = dec_reg_65
+				clr_country_flag = dec_reg_66
+				clr_country_flag = dec_reg_780
+				clr_country_flag = dec_reg_68
+				clr_country_flag = dec_reg_63
+				clr_country_flag = dec_reg_64
+				clr_country_flag = dec_reg_60
+				clr_country_flag = dec_reg_62
+				clr_country_flag = dec_reg_61
+				clr_country_flag = dec_reg_58
+				clr_country_flag = dec_reg_59
+				clr_country_flag = dec_reg_56
+				clr_country_flag = dec_reg_57
+			}
+		}
+	}
+}

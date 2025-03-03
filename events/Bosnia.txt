@@ -1,0 +1,437 @@
+﻿###################
+# Bosnia Events
+###################
+
+add_namespace = bosnia_independence
+
+country_event = {
+	id = bosnia_independence.1
+    title = bosnia_independence.1.t
+    desc = bosnia_independence.1.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = bosnia_independence.1.a
+	}
+	option = { 
+		name = bosnia_independence.1.b
+		BOS = {
+		transfer_state = 1142
+		transfer_state = 1141
+		transfer_state = 1143
+		transfer_state = 104
+		transfer_state = 1145
+		change_tag_from = CRO
+		}
+		BOS = {
+		get_current_government_type = yes
+		}
+		AUS = {
+		puppet = BOS
+		}
+		BOS = {
+		restore_previous_government_type = yes
+		}
+	}
+}
+country_event = {
+	id = bosnia_independence.2
+    title = bosnia_independence.2.t
+    desc = bosnia_independence.2.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = bosnia_independence.2.a
+		hidden_effect =  {
+			country_event = {
+				id = bosnia_independence.3
+				days = 10
+			}
+		}
+	}
+}
+country_event = {
+	id = bosnia_independence.3
+	picture = GFX_HSP
+    title = bosnia_independence.3.t
+    desc = bosnia_independence.3.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = bosnia_independence.3.a
+		hidden_effect =  {
+			country_event = {
+				id = bosnia_independence.4
+				days = 10
+			}
+		}
+	}
+}
+country_event = {
+	id = bosnia_independence.4
+	picture = GFX_HDP
+    title = bosnia_independence.4.t
+    desc = bosnia_independence.4.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = bosnia_independence.4.a
+		hidden_effect =  {
+			country_event = {
+				id = bosnia_independence.5
+				days = 10
+			}
+		}
+	}
+}
+country_event = {
+	id = bosnia_independence.5
+	picture = GFX_NSDP
+    title = bosnia_independence.5.t
+    desc = bosnia_independence.5.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = bosnia_independence.5.a
+		hidden_effect =  {
+			country_event = {
+				id = bosnia_independence.6
+				days = 10
+			}
+		}
+	}
+}
+country_event = {
+	id = bosnia_independence.6
+	picture = GFX_HSCP
+    title = bosnia_independence.6.t
+    desc = bosnia_independence.6.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = bosnia_independence.6.a
+		hidden_effect =  {
+			country_event = {
+				id = bosnia_independence.7
+				days = 10
+			}
+		}
+	}
+}
+country_event = {
+	id = bosnia_independence.7
+	picture = GFX_HDP
+    title = bosnia_independence.7.t
+    desc = bosnia_independence.7.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = bosnia_independence.7.a
+		ai_will_do = {
+			factor = 0
+		}
+		set_country_flag = The_election_is_over
+		set_country_flag = Republican_National_Union_victory
+		set_politics = {
+			ruling_party = social_conservative
+			elections_allowed = yes
+			election_frequency = 48
+		}
+		remove_ideas_with_trait = head_of_government
+		add_ideas = BOS_Mehmed_Spaho_hog_sco
+		remove_ideas_with_trait = economy_minister
+		add_ideas = BOS_Barisa_Smoljan_eco_sco
+		remove_ideas_with_trait = foreign_minister
+		add_ideas = BOS_Jovan_Ducic_for_sco
+		remove_ideas_with_trait = security_minister
+		add_ideas = BOS_Halid_beg_Hrasnica_sec_sco
+	}
+	option = { 
+		name = bosnia_independence.7.b
+		ai_will_do = {
+			factor = 100
+		}
+		set_country_flag = The_election_is_over
+		set_country_flag = Social_Democratic_Labour_Party_victory
+		set_politics = {
+			ruling_party = social_democrat
+			elections_allowed = yes
+			election_frequency = 48
+		}
+		add_popularity = { ideology = social_democrat popularity = 0.45 }
+		remove_ideas_with_trait = economy_minister
+		add_ideas = BOS_Mehmed_Spaho_eco_sco
+		remove_ideas_with_trait = foreign_minister
+		add_ideas = BOS_Ivo_Andric_for_sli
+		remove_ideas_with_trait = security_minister
+		add_ideas = BOS_Nurija_Pozderac_sec_sde
+	}
+	option = { 
+		name = bosnia_independence.7.c
+		ai_will_do = {
+			factor = 100
+		}
+		set_country_flag = The_election_is_over
+		set_country_flag = national_party_victory
+		set_politics = {
+			ruling_party = social_liberal
+			elections_allowed = yes
+			election_frequency = 48
+		}
+		add_popularity = { ideology = social_liberal popularity = 0.45 }
+		remove_ideas_with_trait = economy_minister
+		add_ideas = BOS_Mehmed_Spaho_eco_sco
+		remove_ideas_with_trait = foreign_minister
+		add_ideas = BOS_Ivo_Andric_for_sli
+		remove_ideas_with_trait = security_minister
+		add_ideas = BOS_Ivo_Andric_sec_sli
+	}
+	option = { 
+		name = bosnia_independence.7.e
+		ai_will_do = {
+			factor = 100
+		}
+		set_country_flag = The_election_is_over
+		set_country_flag = liberal_party_victory
+		set_politics = {
+			ruling_party = market_liberal
+			elections_allowed = yes
+			election_frequency = 48
+		}
+		add_popularity = { ideology = market_liberal popularity = 0.45 }
+		remove_ideas_with_trait = economy_minister
+		add_ideas = BOS_Dimitrije_Mitrinovic_eco_mli
+		remove_ideas_with_trait = foreign_minister
+		add_ideas = BOS_Ivo_Andric_for_sli
+		remove_ideas_with_trait = security_minister
+		add_ideas = BOS_Ivo_Andric_sec_sli
+	}
+	option = { 
+		name = bosnia_independence.7.f
+		ai_will_do = {
+			factor = 0
+		}
+		set_politics = {
+			ruling_party = paternal_autocrat
+			elections_allowed = yes
+			election_frequency = 48
+		}
+		add_popularity = { ideology = paternal_autocrat popularity = 0.45 }
+		remove_ideas_with_trait = head_of_government
+		add_ideas = BOS_Dzafer_beg_Kulenovic_hog_pau
+	}
+}
+country_event = {
+	id = bosnia_independence.8
+    title = bosnia_independence.8.t
+    desc = bosnia_independence.8.d
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = bosnia_independence.8.a
+		add_stability = 0.05
+	}
+}
+country_event = {
+	id = bosnia_independence.9
+    title = bosnia_independence.9.t
+    desc = bosnia_independence.9.d
+	
+	trigger = {
+	tag = BOS
+	syndicalist > 0.15
+	NOT = {
+	has_government = syndicalist
+	}
+    }
+	
+	option = { 
+		name = bosnia_independence.9.a
+		add_stability = -0.05
+	}
+	option = { 
+		name = bosnia_independence.9.b
+		add_popularity = { ideology = syndicalist popularity = 0.20 }
+	}
+}
+country_event = {
+	id = bosnia_independence.10
+    title = bosnia_independence.10.t
+    desc = bosnia_independence.10.d
+	
+	trigger = {
+	tag = BOS
+	syndicalist > 0.32
+	NOT = {
+	has_government = syndicalist
+	}
+    }
+
+	option = { 
+		name = bosnia_independence.10.a
+		set_politics = {
+			ruling_party = syndicalist
+			elections_allowed = no
+		}
+		remove_ideas_with_trait = head_of_government
+		add_ideas = BOS_Djuro_Pucar_hog_syn
+		remove_ideas_with_trait = economy_minister
+		add_ideas = BOS_Avdo_Humo_eco_syn
+		remove_ideas_with_trait = foreign_minister
+		add_ideas = BOS_Veselin_Maslesa_for_syn
+		remove_ideas_with_trait = security_minister
+		add_ideas = BOS_Dzemal_Bijedic_sec_syn
+		add_popularity = { ideology = syndicalist popularity = 0.2 }
+		FRA = {
+		add_to_faction = BOS
+		}
+	}
+}
+country_event = {
+	id = bosnia_independence.12
+    title = bosnia_independence.12.t
+    desc = bosnia_independence.12.d
+	picture = GFX_decision_Croatian_Revolu_ionary_Movement
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = bosnia_independence.12.a
+		add_manpower = -20000
+	}
+	option = { 
+		name = bosnia_independence.12.b
+		hidden_effect =  {
+			country_event = {
+				id = bosnia_independence.11
+				days = 10
+			}
+		}
+	}
+
+}
+country_event = {
+	id = bosnia_independence.11
+    title = bosnia_independence.11.t
+    desc = bosnia_independence.11.d
+	picture = GFX_decision_Croatian_Revolu_ionary_Movement
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = bosnia_independence.11.a
+		ai_will_do = {
+			factor = 0
+		}
+		set_politics = {
+			ruling_party = paternal_autocrat
+			elections_allowed = no
+			name = BOS_UST_gov_party
+			long_name = BOS_UST_gov_party_long
+		}
+		set_party_name = {
+			ideology = totalist
+			long_name = BOS_UST_gov_party_long
+			name = BOS_UST_gov_party
+		}
+		set_party_name = {
+			ideology = national_populist
+			long_name = BOS_UST_gov_party_long
+			name = BOS_UST_gov_party
+		}
+		set_cosmetic_tag = CRO_Croatian_Revolutionary_Movement
+		create_country_leader = {
+			name = "Jure Francetić"
+			picture = "gfx/leaders/BOS/Portrait_Jure_Francetic.png"
+			expire = "1.1.1"
+			ideology = junta_subtype 
+		}
+		create_country_leader = {
+			name = "Jure Francetić"
+			picture = "gfx/leaders/BOS/Portrait_Jure_Francetic.png"
+			expire = "1.1.1"
+			ideology = ustase_subtype 
+		}
+		create_country_leader = {
+			name = "Ante Ciliga"
+			picture = "gfx/leaders/BOS/Portrait_Ante_Ciligae.png"
+			expire = "1.1.1"
+			ideology = red_ustase_subtype 
+		}
+		add_popularity = { ideology = paternal_autocrat popularity = 0.45 }
+		BOS = {
+		OVERLORD =  {
+		end_puppet = ROOT
+		}
+		leave_faction = yes
+		add_stability = -0.3
+		}
+	}
+}
+country_event = {
+	id = bosnia_independence.13
+    title = bosnia_independence.13.t
+    desc = bosnia_independence.13.d
+	picture = GFX_decision_Croatian_Revolu_ionary_Movement
+	
+    is_triggered_only = yes
+
+	option = { 
+		name = bosnia_independence.13.a
+		BOS =  {
+		set_politics = {
+			ruling_party = totalist
+			elections_allowed = no
+		}
+		}
+		BOS = {
+		remove_ideas_with_trait = head_of_government
+		add_ideas = BOS_Jure_Francetic_hog_npo
+		remove_ideas_with_trait = economy_minister
+		add_ideas = BOS_Rafael_Boban_eco_npo
+		remove_ideas_with_trait = foreign_minister
+		add_ideas = BOS_Vjekoslav_Luburic_for_npo
+		remove_ideas_with_trait = security_minister
+		add_ideas = BOS_Slavko_Kvaternik_sec_npo
+		}
+		BOS = {
+			set_popularities = {
+			totalist = 50
+			national_populist = 50
+			}
+		}
+	}
+	option = { 
+		name = bosnia_independence.13.b
+		BOS =  {
+		set_politics = {
+			ruling_party = national_populist
+			elections_allowed = no
+		}
+		}
+		BOS = {
+		remove_ideas_with_trait = head_of_government
+		add_ideas = BOS_Ante_Ciliga_hog_tot
+		remove_ideas_with_trait = economy_minister
+		add_ideas = BOS_Duro_Dakovic_eco_tot
+		remove_ideas_with_trait = foreign_minister
+		add_ideas = BOS_Andrija_Hebrang_for_tot
+		remove_ideas_with_trait = security_minister
+		add_ideas = BOS_Pavle_Gregoric_sec_tot
+		}
+		BOS = {
+			set_popularities = {
+			totalist = 50
+			national_populist = 50
+			}
+		}
+	}
+}

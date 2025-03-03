@@ -1,0 +1,1466 @@
+focus_tree = {
+	id = HUN_GRU_focus
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = HNG
+		}
+	}
+
+	reset_on_civilwar = no
+	default = no
+
+###Army Focuses###
+	###New National Army
+	focus = {
+		id = HUN_new_national_army_RM
+		text = HUN_new_national_army
+		icon = GFX_HUN_new_national_army
+		cost = 8.0
+		x = 4
+		y = 4
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HUN_new_national_army_RM"
+			army_experience = 25
+			add_war_support = 0.025
+		}
+	}
+	###The Open Steppe
+	focus = {
+		id = HUN_open_steppe_RM
+		text = HUN_open_steppe
+		icon = GFX_HUN_open_steppe
+		cost = 8.0
+		prerequisite = { focus = HUN_new_national_army_RM }
+		mutually_exclusive = {
+			focus = HUN_black_army_RM
+			focus = HUN_hordes_of_the_east_RM
+		}
+		relative_position_id = HUN_new_national_army_RM
+		x = -6
+		y = 1
+
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HUN_open_steppe_RM"
+			army_experience = 25
+			add_doctrine_cost_reduction = {
+	name = land_doc_bonus
+	cost_reduction = 0.5
+	uses = 1
+	category = land_doctrine
+			}
+		}
+	}
+	###A Fleet Horse
+	focus = {
+		id = HUN_a_fleet_horse_RM
+		text = HUN_a_fleet_horse
+		icon = GFX_HUN_fleet_horse
+		cost = 8.0
+		prerequisite = { focus = HUN_open_steppe_RM }
+		relative_position_id = HUN_open_steppe_RM
+		x = -1
+		y = 1
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HUN_a_fleet_horse_RM"
+			if = {
+				limit = {
+					NOT = {
+						has_tech = motorised_infantry
+					}
+				}
+				add_tech_bonus = {
+					name = motorised_bonus
+					bonus = 1
+					uses = 1
+					technology = motorised_infantry
+				}
+			}
+			add_doctrine_cost_reduction = {
+	name = land_doc_bonus
+	cost_reduction = 0.5
+	uses = 1
+	category = land_doctrine
+			}
+			add_ideas = HUN_mobile_army_idea
+		}
+	}
+	###Falcons At Your Wrist
+	focus = {
+		id = HUN_falcon_wrist_RM
+		text = HUN_falcon_wrist
+		icon = GFX_HUN_falcon_wrist
+		cost = 8.0
+		prerequisite = { focus = HUN_open_steppe_RM }
+		relative_position_id = HUN_open_steppe_RM
+		x = 1
+		y = 1
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HUN_falcon_wrist_RM"
+			add_tech_bonus = {
+				name = infantry_bonus
+				bonus = 1
+				uses = 2
+				category = infantry_weapons
+				category = artillery
+			}
+			add_tech_bonus = {
+				name = support_bonus
+				bonus = 1
+				uses = 1
+				category = support_tech
+			}
+		}
+	}
+	###Wind in Your Hair
+	focus = {
+		id = HUN_wind_hair_RM
+		text = HUN_wind_hair
+		icon = GFX_HUN_wind_in_your_hair
+		cost = 8.0
+		prerequisite = { focus = HUN_a_fleet_horse_RM }
+		prerequisite = { focus = HUN_falcon_wrist_RM }
+		relative_position_id = HUN_falcon_wrist_RM
+		x = -1
+		y = 1
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HUN_wind_hair_RM"
+			add_tech_bonus = {
+				name = tank_bonus
+				bonus = 1
+				uses = 1
+				category = armor
+			}
+			add_tech_bonus = {
+				name = GER_para
+				bonus = 1
+				uses = 1
+				category = para_tech
+			}
+			IF = {
+				limit = {
+					has_idea = HUN_mobile_army_idea
+				}
+				swap_ideas = {
+					remove_idea = HUN_mobile_army_idea
+					add_idea = HUN_mobile_army_idea_2
+				}
+			}
+		}
+	}
+	###Crush Your Enemies
+	focus = {
+		id = HUN_crush_your_enemies_RM
+		text = HUN_crush_your_enemies
+		icon = GFX_HUN_crush_your_enemies
+		cost = 8.0
+		prerequisite = { focus = HUN_wind_hair_RM }
+		relative_position_id = HUN_wind_hair_RM
+		x = 0
+		y = 1
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HUN_crush_your_enemies_RM"
+			add_tech_bonus = {
+				name = tank_bonus
+				bonus = 0.5
+				uses = 2
+				category = armor
+			}
+			add_tech_bonus = {
+				name = mech_bonus
+				bonus = 1
+				uses = 1
+				category = cat_mechanized_equipment
+			}
+		}
+	}
+	###See Them Driven Before You
+	focus = {
+		id = HUN_driven_before_you_RM
+		text = HUN_driven_before_you
+		icon = GFX_HUN_driven_before_you
+		cost = 8.0
+		prerequisite = { focus = HUN_crush_your_enemies_RM }
+		relative_position_id = HUN_crush_your_enemies_RM
+		x = 0
+		y = 1
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HUN_driven_before_you_RM"
+			add_tech_bonus = {
+				name = tank_bonus
+				bonus = 0.5
+				uses = 2
+				category = armor
+			}
+			add_doctrine_cost_reduction = {
+	name = land_doc_bonus
+	cost_reduction = 0.5
+	uses = 1
+	category = land_doctrine
+			}
+		}
+	}
+	###Language Training
+	focus = {
+		id = HUN_language_training_RM
+		text = HUN_language_training
+		icon = GFX_HUN_army_language_training
+		cost = 8.0
+		prerequisite = { 
+			focus = HUN_new_national_army_RM
+		}
+		relative_position_id = HUN_new_national_army_RM
+		x = -3
+		y = 2
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HUN_language_training_RM"
+			remove_ideas = HUN_army_slavic_idea
+			add_war_support = 0.05
+			add_timed_idea = { idea = HUN_language_training_idea days = 450 }
+		}
+	}
+	###Magyar Cserkészszövetség
+	focus = {
+		id = HUN_magyar_scout_association_RM
+		text = HUN_magyar_scout_association
+		icon = GFX_HUN_magyar_scouts
+		cost = 8.0
+		prerequisite = { focus = HUN_language_training_RM }
+		relative_position_id = HUN_language_training_RM
+		x = 0
+		y = 1
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HUN_magyar_scout_association_RM"
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				technology = tech_special_forces
+			}
+		}
+	}
+	###Logistics Initiative
+	focus = {
+		id = HUN_logistics_initiative_RM
+		text = HUN_logistics_initiative
+		icon = GFX_HUN_logistics
+		cost = 8.0
+		prerequisite = { focus = HUN_magyar_scout_association_RM }
+		relative_position_id = HUN_magyar_scout_association_RM
+		x = 0
+		y = 1
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HUN_logistics_initiative_RM"
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 2
+				category = electronics
+			}
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	###The Black Army
+	focus = {
+		id = HUN_black_army_RM
+		text = HUN_black_army
+		icon = GFX_HUN_black_army
+		cost = 8.0
+		prerequisite = { focus = HUN_new_national_army_RM }
+		mutually_exclusive = {
+			focus = HUN_open_steppe_RM
+			focus = HUN_hordes_of_the_east_RM
+		}
+		relative_position_id = HUN_new_national_army_RM
+		x = 0
+		y = 1
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HUN_black_army_RM"
+			army_experience = 25
+			add_ideas = HUN_black_army_idea
+			add_doctrine_cost_reduction = {
+	name = land_doc_bonus
+	cost_reduction = 0.5
+	uses = 1
+	category = land_doctrine
+			}
+		}
+	}
+	###Foreign Advisors
+	focus = {
+		id = HUN_foreign_advisors_RM
+		text = HUN_foreign_advisors
+		icon = GFX_HUN_foreign_army_advisors
+		cost = 8.0
+		prerequisite = { focus = HUN_black_army_RM }
+		relative_position_id = HUN_black_army_RM
+		x = 0
+		y = 1
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HUN_foreign_advisors_RM"
+			add_ideas = HUN_foreign_advisors_idea
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			add_tech_bonus = {
+				name = infantry_bonus
+				bonus = 1
+				uses = 2
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+	###Only the Best
+	focus = {
+		id = HUN_only_the_best_RM
+		text = HUN_only_the_best
+		icon = GFX_HUN_only_the_best
+		cost = 8.0
+		prerequisite = { focus = HUN_foreign_advisors_RM }
+		relative_position_id = HUN_foreign_advisors_RM
+		x = 0
+		y = 1
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HUN_only_the_best_RM"
+			add_ideas = HUN_only_the_best_idea
+			add_tech_bonus = {
+				name = infantry_bonus
+				bonus = 1
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+			add_tech_bonus = {
+				name = support_bonus
+				bonus = 1
+				uses = 1
+				category = support_tech
+			}
+		}
+	}
+	###Thunder and Lightning
+	focus = {
+		id = HUN_thunder_and_lightning_RM
+		text = HUN_thunder_and_lightning
+		icon = GFX_HUN_thunder_and_lightning
+		cost = 8.0
+		prerequisite = { focus = HUN_only_the_best_RM }
+		relative_position_id = HUN_only_the_best_RM
+		x = -1
+		y = 1
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HUN_thunder_and_lightning_RM"
+			add_tech_bonus = {
+				name = infantry_bonus
+				bonus = 1
+				uses = 2
+				category = artillery
+			}
+		}
+	}
+	###Mechanical Hussars
+	focus = {
+		id = HUN_mechanical_hussars_RM
+		text = HUN_mechanical_hussars
+		icon = GFX_HUN_mechanical_hussars
+		cost = 8.0
+		prerequisite = { focus = HUN_only_the_best_RM }
+		relative_position_id = HUN_only_the_best_RM
+		x = 1
+		y = 1
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HUN_mechanical_hussars_RM"
+			if = {
+				limit = {
+					NOT = {
+						has_tech = motorised_infantry
+					}
+				}
+				add_tech_bonus = {
+					name = motorised_bonus
+					bonus = 1
+					uses = 1
+					technology = motorised_infantry
+				}
+			}
+			add_tech_bonus = {
+				name = mech_bonus
+				bonus = 1
+				uses = 1
+				category = cat_mechanized_equipment
+			}
+		}
+	}
+	###Legacy of Gorlice-Tarnow
+	focus = {
+		id = HUN_gorlice_tarnow_RM
+		text = HUN_gorlice_tarnow
+		icon = GFX_HUN_gorlice_tarnow
+		cost = 8.0
+		prerequisite = { focus = HUN_thunder_and_lightning_RM }
+		prerequisite = { focus = HUN_mechanical_hussars_RM }
+		relative_position_id = HUN_mechanical_hussars_RM
+		x = -1
+		y = 1
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HUN_gorlice_tarnow_RM"
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			IF = {
+				limit = {
+					has_idea = HUN_black_army_idea
+				}
+				swap_ideas = {
+					remove_idea = HUN_black_army_idea
+					add_idea = HUN_black_army_idea_2
+				}
+			}
+		}
+	}
+	###Unified Army Recruitment
+	focus = {
+		id = HUN_army_recruitment_RM
+		text = HUN_army_recruitment
+		icon = GFX_HUN_unified_army_recruitment
+		cost = 8.0
+		prerequisite = { 
+			focus = HUN_new_national_army_RM
+		}
+		relative_position_id = HUN_new_national_army_RM
+		x = 3
+		y = 2
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HUN_army_recruitment_RM"
+			add_ideas = HUN_unified_recruitment_idea
+		}
+	}
+	###Revive Military Funding
+	focus = {
+		id = HUN_military_funding_RM
+		text = HUN_military_funding
+		icon = GFX_HUN_revive_military_funding
+		cost = 8.0
+		prerequisite = { focus = HUN_army_recruitment_RM }
+		relative_position_id = HUN_army_recruitment_RM
+		x = 0
+		y = 1
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HUN_military_funding_RM"
+			154 = {
+				if = {
+					limit = { is_owned_and_controlled_by = HNG }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	###New Warfighting Technology
+	focus = {
+		id = HUN_new_technology_RM
+		text = HUN_new_technology
+		icon = GFX_HUN_new_warfighting_technology
+		cost = 8.0
+		prerequisite = { focus = HUN_military_funding_RM }
+		relative_position_id = HUN_military_funding_RM
+		x = 0
+		y = 1
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HUN_new_technology_RM"
+			155 = {
+				if = {
+					limit = { is_owned_and_controlled_by = HNG }
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			add_research_slot = 1
+			swap_ideas = {
+				remove_idea = HUN_unified_recruitment_idea
+				add_idea = HUN_unified_recruitment_idea_2
+			}
+		}
+	}
+	###Hordes of the East
+	focus = {
+		id = HUN_hordes_of_the_east_RM
+		text = HUN_hordes_of_the_east
+		icon = GFX_HUN_hordes_of_the_east
+		cost = 8.0
+		prerequisite = { focus = HUN_new_national_army_RM }
+		mutually_exclusive = {
+			focus = HUN_open_steppe_RM
+			focus = HUN_black_army_RM
+		}
+		relative_position_id = HUN_new_national_army_RM
+		x = 6
+		y = 1
+		
+		available = {
+			has_country_flag = hungarian_army_flag
+			OR = {
+				has_government = totalist
+				has_government = national_populist
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HUN_hordes_of_the_east_RM"
+			army_experience = 25
+			add_doctrine_cost_reduction = {
+	name = land_doc_bonus
+	cost_reduction = 0.5
+	uses = 1
+	category = land_doctrine
+			}
+		}
+	}
+	###Expanding the Definition of Volunteer
+	focus = {
+		id = HUN_definition_of_volunteer_RM
+		text = HUN_definition_of_volunteer
+		icon = GFX_HUN_volunteers
+		cost = 8.0
+		prerequisite = { focus = HUN_hordes_of_the_east_RM }
+		relative_position_id = HUN_hordes_of_the_east_RM
+		x = -1
+		y = 1
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HUN_definition_of_volunteer_RM"
+			add_ideas = HUN_more_volunteers_idea
+			add_political_power = -70
+		}
+	}
+	###Quality of Quantity
+	focus = {
+		id = HUN_quality_of_quantity_RM
+		text = HUN_quality_of_quantity
+		icon = GFX_HUN_quality_of_quantity
+		cost = 8.0
+		prerequisite = { focus = HUN_hordes_of_the_east_RM }
+		relative_position_id = HUN_hordes_of_the_east_RM
+		x = 1
+		y = 1
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HUN_quality_of_quantity_RM"
+			add_ideas = HUN_quality_quantity_idea
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			add_tech_bonus = {
+				name = infantry_bonus
+				bonus = 1
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+	###Commissars
+	focus = {
+		id = HUN_commissars_RM
+		text = HUN_commissars
+		icon = GFX_HUN_commissars
+		cost = 8.0
+		prerequisite = { focus = HUN_quality_of_quantity_RM }
+		prerequisite = { focus = HUN_definition_of_volunteer_RM }
+		relative_position_id = HUN_quality_of_quantity_RM
+		x = -1
+		y = 1
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HUN_commissars_RM"
+			add_ideas = HUN_commissars_idea
+			add_stability = 0.02
+			add_tech_bonus = {
+				name = support_bonus
+				bonus = 1
+				uses = 1
+				category = support_tech
+				technology = tech_military_police 
+			}
+			add_tech_bonus = {
+				name = infantry_bonus
+				bonus = 1
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}	
+	###Metal or Mettle?
+	focus = {
+		id = HUN_metal_mettle_RM
+		text = HUN_metal_mettle
+		icon = GFX_HUN_mettle_metal
+		cost = 8.0
+		prerequisite = { focus = HUN_commissars_RM }
+		relative_position_id = HUN_commissars_RM
+		x = 0
+		y = 1
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HUN_metal_mettle_RM"
+			IF = {
+				limit = {
+					has_idea = HUN_quality_quantity_idea
+				}
+				swap_ideas = {
+					remove_idea = HUN_quality_quantity_idea
+					add_idea = HUN_quality_quantity_idea_2
+				}
+			}
+			add_tech_bonus = {
+				name = infantry_bonus
+				bonus = 1
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+			43 = {
+				if = {
+					limit = { is_owned_and_controlled_by = HNG }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	###Do You Want To Live Forever?
+	focus = {
+		id = HUN_live_forever_RM
+		text = HUN_live_forever
+		icon = GFX_HUN_want_to_live_forever
+		cost = 8.0
+		prerequisite = { focus = HUN_metal_mettle_RM }
+		relative_position_id = HUN_metal_mettle_RM
+		x = 0
+		y = 1
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HUN_live_forever_RM"
+			add_ideas = HUN_suicidal_charge
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+###Hungarian Airforce Focuses###	
+	###Magyar Légierő
+	focus = {
+		id = HUN_airforce_focus_RM
+		text = HUN_airforce_focus
+		icon = GFX_HUN_magyar_airforce
+		cost = 5.0
+		x = 1
+		y = 10
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HUN_airforce_focus_RM"
+			air_experience = 40
+		}
+	}
+	###The Raptors
+	focus = {
+		id = HUN_close_air_support_RM
+		text = HUN_close_air_support
+		icon = GFX_HUN_magyar_raptors
+		cost = 8.0
+		prerequisite = { focus = HUN_airforce_focus_RM }
+		relative_position_id = HUN_airforce_focus_RM
+		mutually_exclusive = { focus = HUN_strategic_destruction_RM }
+		x = -2
+		y = 1
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HUN_close_air_support_RM"
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.55
+				uses = 3
+				category = air_doctrine
+			}
+		}
+	}
+	###Wrath of God
+	focus = {
+		id = HUN_strategic_destruction_RM
+		text = HUN_strategic_destruction
+		icon = GFX_HUN_wrath_of_god
+		cost = 8.0
+		prerequisite = { focus = HUN_airforce_focus_RM }
+		relative_position_id = HUN_airforce_focus_RM
+		mutually_exclusive = { focus = HUN_close_air_support_RM }
+		x = 2
+		y = 1
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HUN_strategic_destruction_RM"
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.55
+				uses = 3
+				category = air_doctrine
+			}
+		}
+	}
+	###Aviation Experts
+	focus = {
+		id = HUN_foreign_flyers_RM
+		text = HUN_foreign_flyers
+		icon = GFX_HUN_aviation_experts
+		cost = 8.0
+		prerequisite = { 
+			focus = HUN_strategic_destruction_RM
+			focus = HUN_close_air_support_RM
+		}
+		relative_position_id = HUN_airforce_focus_RM
+		x = -1
+		y = 2
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HUN_foreign_flyers_RM"
+			air_experience = 20
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+	###Budaörs & Debrecen
+	focus = {
+		id = HUN_expand_airports_RM
+		text = HUN_expand_airports
+		icon = GFX_HUN_debrecen_budaors
+		cost = 8.0
+		prerequisite = { 
+			focus = HUN_strategic_destruction_RM
+			focus = HUN_close_air_support_RM
+		}
+		relative_position_id = HUN_airforce_focus_RM
+		x = 1
+		y = 2
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HUN_expand_airports_RM"
+			154 = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			43 = {
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	###Light Bomber Trials
+	focus = {
+		id = HUN_light_bombers_RM
+		text = HUN_light_bombers
+		icon = GFX_HUN_light_bombers
+		cost = 8.0
+		prerequisite = { focus = HUN_close_air_support_RM }
+		prerequisite = { 
+			focus = HUN_expand_airports_RM
+			focus = HUN_foreign_flyers_RM 
+		}
+		relative_position_id = HUN_airforce_focus_RM
+		x = -2
+		y = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HUN_light_bombers_RM"
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 0.55
+				uses = 2
+				category = cas_bomber
+			}
+		}
+	}
+	###Fighter Trials
+	focus = {
+		id = HUN_fighter_trials_RM
+		text = HUN_fighter_trials
+		icon = GFX_HUN_fighters
+		cost = 8.0
+		prerequisite = { 
+			focus = HUN_close_air_support_RM
+			focus = HUN_strategic_destruction_RM
+		}
+		prerequisite = { 
+			focus = HUN_expand_airports_RM
+			
+		}
+		prerequisite = {
+			focus = HUN_foreign_flyers_RM 
+		}
+		relative_position_id = HUN_airforce_focus_RM
+		x = 0
+		y = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HUN_fighter_trials_RM"
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 0.55
+				uses = 2
+				category = light_fighter
+				category = cat_heavy_fighter
+			}
+		}
+	}
+	###Heavy Bomber Trials
+	focus = {
+		id = HUN_heavy_bombers_RM
+		text = HUN_heavy_bombers
+		icon = GFX_HUN_heavy_bombers
+		cost = 8.0
+		prerequisite = { focus = HUN_strategic_destruction_RM }
+		prerequisite = { 
+			focus = HUN_expand_airports_RM
+			focus = HUN_foreign_flyers_RM 
+		}
+		relative_position_id = HUN_airforce_focus_RM
+		x = 2
+		y = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HUN_heavy_bombers_RM"
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 0.55
+				uses = 2
+				category = cat_strategic_bomber
+			}
+		}
+	}
+###Hungarian Navy Focuses###
+	###Magyar Haditengerészet
+	focus = {
+		id = HUN_navy_focus_RM
+		text = HUN_navy_focus
+		icon = GFX_HUN_navy
+		cost = 8.0
+		x = 8
+		y = 10
+		
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HUN_navy_focus_RM"
+			navy_experience = 25
+		}
+	}
+	###Trade Wars in the Adriatic
+	focus = {
+		id = HUN_trade_interdiction_RM
+		text = HUN_trade_interdiction
+		icon = GFX_HUN_trade_war
+		cost = 8.0
+		prerequisite = { focus = HUN_navy_focus_RM }
+		mutually_exclusive = { focus = HUN_large_navy_RM }
+		relative_position_id = HUN_navy_focus_RM
+		x = -1
+		y = 1
+		
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HUN_trade_interdiction_RM"
+			add_doctrine_cost_reduction = {
+				name = AUS_flexible_navy
+				cost_reduction = 0.5
+				uses = 3
+				technology = convoy_interdiction_ti
+				technology = unrestricted_submarine_warfare
+				technology = wolfpacks
+				technology = advanced_submarine_warfare
+				technology = combined_operations_raiding
+			}
+		}
+	}
+	###Fight for the Mediterranean
+	focus = {
+		id = HUN_large_navy_RM
+		text = HUN_large_navy
+		icon = GFX_HUN_battle_mediterranean
+		cost = 8.0
+		prerequisite = { focus = HUN_navy_focus_RM }
+		mutually_exclusive = { focus = HUN_trade_interdiction_RM }
+		relative_position_id = HUN_navy_focus_RM
+		x = 1
+		y = 1
+		
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HUN_large_navy_RM"
+			add_doctrine_cost_reduction = {
+				name = AUS_flexible_navy
+				cost_reduction = 0.5
+				uses = 3
+				category = fleet_in_being_tree
+			}
+		}
+	}
+	###Destroyers and Patrolships
+	focus = {
+		id = HUN_destroyers_RM
+		text = HUN_destroyers
+		icon = GFX_HUN_patrolboats
+		cost = 8.0
+		prerequisite = { focus = HUN_trade_interdiction_RM }
+		relative_position_id = HUN_trade_interdiction_RM
+		x = 0
+		y = 1
+		
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HUN_destroyers_RM"
+			navy_experience = 25
+			add_tech_bonus = {
+				name = cr_bonus
+				bonus = 1
+				uses = 1
+				category = dd_tech
+				category = cl_tech
+			}
+		}
+	}
+	###Ironclads Again
+	focus = {
+		id = HUN_battleships_RM
+		text = HUN_battleships
+		icon = GFX_HUN_ironclads
+		cost = 8.0
+		prerequisite = { focus = HUN_large_navy_RM }
+		relative_position_id = HUN_large_navy_RM
+		x = 0
+		y = 1
+		
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HUN_battleships_RM"
+			navy_experience = 25
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1
+				uses = 1
+				category = bb_tech
+				category = shbb_tech
+			}
+		}
+	}
+	###Pola Marine Base
+	focus = {
+		id = HUN_pola_marine_base_RM
+		text = HUN_pola_marine_base
+		icon = GFX_HUN_pola_base
+		cost = 8.0
+		prerequisite = { 
+			focus = HUN_large_navy_RM
+			focus = HUN_destroyers_RM
+		}
+		relative_position_id = HUN_navy_focus_RM
+		x = 2
+		y = 3
+		
+		available = { 1144 = { is_owned_and_controlled_by = HNG } }
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HUN_pola_marine_base_RM"
+			1144 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					province = 11735
+					instant_build = yes
+				}
+			}
+		}
+	}
+	###Cattaro Marine Base
+	focus = {
+		id = HUN_cattaro_base_RM
+		text = HUN_cattaro_base
+		icon = GFX_HUN_catarro_base
+		cost = 8.0
+		prerequisite = { 
+			focus = HUN_large_navy_RM
+			focus = HUN_destroyers_RM
+		}
+		relative_position_id = HUN_navy_focus_RM
+		x = -2
+		y = 3
+		
+		available = { 105 = { is_owned_and_controlled_by = HNG } }
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HUN_cattaro_base_RM"
+			105 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					province = 9809
+					instant_build = yes
+				}
+			}
+		}
+	}
+	###Shore Bombardment
+	focus = {
+		id = HUN_shore_bombardment_RM
+		text = HUN_shore_bombardment
+		icon = GFX_HUN_marines
+		cost = 8.0
+		prerequisite = { 
+			focus = HUN_large_navy_RM
+			focus = HUN_destroyers_RM
+		}
+		relative_position_id = HUN_navy_focus_RM
+		x = 0
+		y = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HUN_shore_bombardment_RM"
+			add_tech_bonus = {
+				name = marines_bonus
+				bonus = 1
+				uses = 1
+				category = marine_tech
+			}
+		}
+	}
+}
+

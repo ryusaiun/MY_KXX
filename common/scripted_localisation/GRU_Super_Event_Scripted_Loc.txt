@@ -1,0 +1,91 @@
+defined_text = { #SUPER EVENT TITLES
+	name = GRU_get_super_event_title
+
+	text = { 
+        trigger = {
+            has_global_flag = ger_civl
+        }
+        localization_key = "SPEVNT_ger_civl"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = greater_germanic_state_goebbels
+        }
+        localization_key = "GFX_SPEVNT_greater_germanic_state_goebbels"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = endsieg_goebbels
+        }
+        localization_key = "GFX_SPEVNT_endsieg_goebbels"
+    }
+}
+
+defined_text = { #SUPER EVENT QUOTES
+	name = GRU_get_superevent_quote
+
+	text = { 
+        trigger = {
+            has_global_flag = ger_civl
+        }
+        localization_key = "SPEVNT_ger_civl_TEXT"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = greater_germanic_state_goebbels
+        }
+        localization_key = "GFX_SPEVNT_greater_germanic_state_goebbels_TEXT"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = endsieg_goebbels
+        }
+        localization_key = "GFX_SPEVNT_endsieg_goebbels_TEXT"
+    }
+}
+
+defined_text = { #SUPER EVENT REMARKS
+	name = GRU_get_superevent_remark
+
+	text = { 
+        trigger = {
+            has_global_flag = ger_civl
+        }
+        localization_key = "SPEVNT_ger_civl_REMARK"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = greater_germanic_state_goebbels
+        }
+        localization_key = "GFX_SPEVNT_greater_germanic_state_goebbels_REMARK"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = endsieg_goebbels
+        }
+        localization_key = "GFX_SPEVNT_endsieg_goebbels_REMARK"
+    }
+}
+
+defined_text = { #SUPER EVENT DESCS
+	name = GRU_get_superevent_desc
+
+	text = { 
+        trigger = {
+            has_global_flag = ger_civl
+        }
+        localization_key = "SPEVNT_ger_civl_DESC"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = greater_germanic_state_goebbels
+        }
+        localization_key = "GFX_SPEVNT_greater_germanic_state_goebbels_DESC"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = endsieg_goebbels
+        }
+        localization_key = "GFX_SPEVNT_endsieg_goebbels_DESC"
+    }
+}

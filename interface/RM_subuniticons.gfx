@@ -1,0 +1,77 @@
+spriteTypes = {
+	spriteType = { 
+		name = "GFX_unit_RR_1_medium_armor_icon_medium"								
+		textureFile = "gfx/interface/counters/divisions_large/RR_1_medium_armor_icon.png"
+	}
+	spriteType = { 
+		name = "GFX_unit_RR_1_medium_armor_icon_medium_white"
+		textureFile = "gfx/interface/counters/divisions_small/unit_RR_1_medium_armor_icon_small.png"
+	}
+	spriteType = {
+		name = "GFX_unit_RR_1_medium_armor_icon_small"
+		texturefile = "gfx/texticons/unit_RR_1_medium_armor_icon_small.png"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
+	spriteType = { 
+		name = "GFX_unit_RR_2_medium_armor_icon_medium"								
+		textureFile = "gfx/interface/counters/divisions_large/RR_2_medium_armor_icon.png"
+	}
+	spriteType = { 
+		name = "GFX_unit_RR_2_medium_armor_icon_medium_white"
+		textureFile = "gfx/interface/counters/divisions_small/unit_RR_2_medium_armor_icon_small.png"
+	}
+	spriteType = {
+		name = "GFX_unit_RR_2_medium_armor_icon_small"
+		texturefile = "gfx/texticons/unit_RR_2_medium_armor_icon_small.png"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
+	spriteType = { 
+		name = "GFX_unit_RR_3_medium_armor_icon_medium"								
+		textureFile = "gfx/interface/counters/divisions_large/RR_3_medium_armor_icon.png"
+	}
+	spriteType = { 
+		name = "GFX_unit_RR_3_medium_armor_icon_medium_white"
+		textureFile = "gfx/interface/counters/divisions_small/unit_RR_3_medium_armor_icon_small.png"
+	}
+	spriteType = {
+		name = "GFX_unit_RR_3_medium_armor_icon_small"
+		texturefile = "gfx/texticons/unit_RR_3_medium_armor_icon_small.png"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
+	spriteType = { 
+		name = "GFX_unit_RR_1_motorized_icon_medium"								
+		textureFile = "gfx/interface/counters/divisions_large/RR_1_motorized_icon.png"
+	}
+	spriteType = { 
+		name = "GFX_unit_RR_1_motorized_icon_medium_white"
+		textureFile = "gfx/interface/counters/divisions_small/unit_RR_1_motorized_icon_small.png"
+	}
+	spriteType = {
+		name = "GFX_unit_RR_1_motorized_icon_small"
+		texturefile = "gfx/texticons/unit_RR_1_motorized_icon_small.png"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
+	spriteType = { 
+		name = "GFX_unit_RR_Werwolf_icon_medium"								
+		textureFile = "gfx/interface/counters/divisions_large/RR_Werwolf.png"
+	}
+	spriteType = {
+		name = "GFX_unit_RR_Werwolf_icon_medium_white"
+		texturefile = "gfx/interface/counters/divisions_small/RR_Werwolf_icon_small.png"
+		noOfFrames = 2
+	}
+	spriteType = {
+      name = "GFX_unit_RR_Werwolf_icon_small"
+      texturefile = "gfx/texticons/unit_RR_Werwolf_texticon_icon_small.png "
+      legacy_lazy_load = no
+      noOfFrames = 2		
+    }	
+}

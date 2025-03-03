@@ -1,0 +1,34 @@
+add_namespace = zhinan
+country_event = { #红德追加路线指南
+	id = zhinan.2
+	title = zhinan.2.t
+	desc = zhinan.2.d
+	picture = GFX_report_event_generic_diplomacy1
+
+	is_triggered_only = yes
+	option = { #Yes
+		name = guides.1000.b
+	}
+}
+country_event = { #波兰追加路线指南
+	id = zhinan.3
+	title = zhinan.3.t
+	desc = zhinan.3.d
+	picture = GFX_report_event_generic_diplomacy1
+
+	is_triggered_only = yes
+	option = { #Yes
+		name = guides.1000.b
+	}
+}
+country_event = { #加拿大路线指南
+	id = zhinan.7
+	title = zhinan.7.t
+	desc = zhinan.7.d
+	picture = GFX_report_event_generic_diplomacy1
+
+	is_triggered_only = yes
+	option = { #Yes
+		name = guides.1000.b
+	}
+}

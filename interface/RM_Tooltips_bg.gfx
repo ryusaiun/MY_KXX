@@ -1,0 +1,92 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_tt_50"
+		texturefile = "gfx/interface/gui/regions/tooltips/tt_50.jpg"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_tt_52"
+		texturefile = "gfx/interface/gui/regions/tooltips/tt_52.jpg"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_tt_53"
+		texturefile = "gfx/interface/gui/regions/tooltips/tt_53.jpg"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_tt_780"
+		texturefile = "gfx/interface/gui/regions/tooltips/tt_780.jpg"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_tt_54"
+		texturefile = "gfx/interface/gui/regions/tooltips/tt_54.jpg"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_tt_65"
+		texturefile = "gfx/interface/gui/regions/tooltips/tt_65.jpg"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_tt_66"
+		texturefile = "gfx/interface/gui/regions/tooltips/tt_66.jpg"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_tt_68"
+		texturefile = "gfx/interface/gui/regions/tooltips/tt_68.jpg"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_tt_63"
+		texturefile = "gfx/interface/gui/regions/tooltips/tt_63.jpg"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_tt_64"
+		texturefile = "gfx/interface/gui/regions/tooltips/tt_64.jpg"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_tt_60"
+		texturefile = "gfx/interface/gui/regions/tooltips/tt_60.jpg"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_tt_62"
+		texturefile = "gfx/interface/gui/regions/tooltips/tt_62.jpg"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_tt_61"
+		texturefile = "gfx/interface/gui/regions/tooltips/tt_61.jpg"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_tt_58"
+		texturefile = "gfx/interface/gui/regions/tooltips/tt_58.jpg"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_tt_59"
+		texturefile = "gfx/interface/gui/regions/tooltips/tt_59.jpg"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_tt_56"
+		texturefile = "gfx/interface/gui/regions/tooltips/tt_56.jpg"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_tt_57"
+		texturefile = "gfx/interface/gui/regions/tooltips/tt_57.jpg"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_tt_55"
+		texturefile = "gfx/interface/gui/regions/tooltips/tt_55.jpg"
+		legacy_lazy_load = no
+	}
+}

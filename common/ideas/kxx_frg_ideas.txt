@@ -1,0 +1,1089 @@
+ideas = {
+	country = {
+
+
+		#果农革命
+
+		FRA_The_supply_of_wine_is_obstructed_1 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = KUB_wine
+			modifier = {
+				consumer_goods_factor = 0.2
+			}
+		}
+
+		FRA_The_supply_of_wine_is_obstructed_2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = KUB_wine
+			modifier = {
+				consumer_goods_factor = 0.3
+			}
+		}
+
+		FRA_The_supply_of_wine_is_obstructed_3 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = KUB_wine
+			modifier = {
+				consumer_goods_factor = 0.4
+			}
+		}
+
+		CHP_agrians = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = NFA_agrarian_paternalism
+			modifier = {
+				party_popularity_stability_factor = 0.15
+				political_power_gain = 0.1
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				local_building_slots_factor = 0.2
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+				army_speed_factor = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		CHP_Political_commissar = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = communal_democracy
+			modifier = {
+				army_infantry_attack_factor = 0.12
+				army_infantry_defence_factor = 0.12
+				army_org_factor = 0.12
+				army_morale_factor = 0.12
+			}
+		}
+
+		PRO_Federation_1 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = laissez_faire
+			modifier = {
+				stability_factor = 0.3
+			}
+		}
+
+		PRO_Federation_2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = laissez_faire
+			modifier = {
+				stability_factor = 0.2
+			}
+		}
+
+		PRO_Federation_3 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = laissez_faire
+			modifier = {
+				stability_factor = 0.1
+			}
+		}
+
+		PRO_Federation_4 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = laissez_faire
+			modifier = {
+				stability_factor = -0.1
+			}
+		}
+
+		PRO_Federation_5 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = laissez_faire
+			modifier = {
+				stability_factor = -0.2
+			}
+		}
+
+		PRO_fish = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = AST_oversized_fleet
+			modifier = {
+				consumer_goods_factor = -0.15
+			}
+		}
+
+		PRO_supply_line = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = GEN_navy_logistics
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		PDL_claustrales = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = SRI_sanfedisti
+			modifier = {
+				monthly_population = 0.2
+			}
+		}
+
+		PDL_Loire_swamp = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = AST_maori
+			modifier = {
+				supply_consumption_factor = -0.12
+				breakthrough_factor = 0.12
+				recon_factor = 0.12
+			}
+		}
+
+		FRA_Fruit_Farmer_Revolution = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_Fruit_Farmer_Revolution"}
+			available = {
+				has_war_with = CHP
+			}		
+			picture = FRG_large_tear
+			modifier = {
+				ai_call_ally_desire_factor = -1000
+				ai_join_ally_desire_factor = -1000
+			}
+		}
+		#公社可能派
+		FRA_student_scholarships = {
+			visible = {
+				always = yes
+			}
+			picture = generic_research_bonus
+
+			modifier = {
+				research_speed_factor = 0.15
+			}
+		}
+		FRA_marketization_1 = {
+			visible = {
+				always = yes
+			}
+			picture = laissez_faires_economy
+
+			modifier = {
+				local_resources_factor = 0.12
+				consumer_goods_factor = 0.05
+			}
+		}
+		FRA_marketization_2 = {
+			visible = {
+				always = yes
+			}
+			picture = laissez_faires_economy
+
+			modifier = {
+				local_resources_factor = 0.45
+				line_change_production_efficiency_factor = 0.2
+				consumer_goods_factor = 0.1
+			}
+		}
+		FRA_marketization_3 = {
+			visible = {
+				always = yes
+			}
+			picture = HOL_syndicalist_neutrality
+
+			modifier = {
+				local_resources_factor = 0.15
+				production_factory_max_efficiency_factor = 0.35
+				production_factory_efficiency_gain_factor = 0.35
+				consumer_goods_factor = 0.05
+			}
+		}
+		FRA_Lighthouse_of_Democratic_Society = {
+			visible = {
+				always = yes
+			}
+			picture = syndie_republic
+
+			modifier = {
+				
+				consumer_goods_factor = -0.4
+				political_power_gain = 0.1
+				war_support_weekly = 0.01
+				stability_factor = 0.3
+			}
+		}
+		FRA_Between_possibility_and_impossibility = {
+			visible = {
+				always = yes
+			}
+			picture = GER_praise_marx
+
+			modifier = {
+				send_volunteer_size = 4
+				command_power_gain = 0.01
+				max_command_power = 200
+			}
+		}
+		FRA_The_third_road = {
+			visible = {
+				always = yes
+			}
+			picture = GUA_appease_socialists
+
+			modifier = {
+				monthly_population = 0.35
+				local_building_slots_factor = 0.2
+				consumer_goods_factor = -0.24
+			}
+		}
+		FRA_Still_moving_forward_in_the_midst_of_confusion = {
+			visible = {
+				always = yes
+			}
+			picture = NFA_empire_of_people
+
+			modifier = {
+				research_speed_factor = 0.24
+				production_speed_buildings_factor = 0.3
+				production_speed_nuclear_reactor_factor = 0.3
+				production_speed_arms_factory_factor = 0.3
+				production_speed_industrial_complex_factor = 0.3
+				production_speed_synthetic_refinery_factor = 0.3
+				production_speed_dockyard_factor = 0.3
+				production_speed_bunker_factor = 0.3
+				production_speed_infrastructure_factor = 0.3
+			}
+		}
+		FRA_public_expenditure = {
+			visible = {
+				always = yes
+			}
+			picture = LEC_staggering_reserves
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.15
+				consumer_goods_factor = 0.1
+			}
+		}
+		FRA_Workers_and_entrepreneurs = {
+			visible = {
+				always = yes
+			}
+			picture = generic_mutual_aid
+
+			modifier = {
+				production_speed_infrastructure_factor = 0.2
+				stability_weekly = 0.01
+				consumer_goods_factor = -0.2
+			}
+		}
+		FRA_social_welfare = {
+			visible = {
+				always = yes
+			}
+			picture = freedom_from_want_2
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
+				consumer_goods_factor = 0.05
+			}
+		}
+		#公社内战前置
+		FRG_large_tear = {
+			visible = {
+				always = yes
+			}
+			picture = FRG_large_tear
+
+			modifier = {
+				war_support_factor = -0.4
+				stability_factor = -0.4
+			}
+		}
+		FRG_crime_problem_peace = {
+			picture = NYC_mob_cooperation_idea
+			allowed = { always = yes }
+			modifier = {
+				political_power_cost = 0.4
+				consumer_goods_factor = 0.1
+				production_speed_buildings_factor = -0.1
+			}
+		}
+
+		#法国复兴政府
+
+		FRG_independence_war = {
+			available = {
+				has_war_with = FRA
+			}		
+			modifier = {
+				conscription_factor = 0.5
+				army_core_defence_factor = 0.5
+				army_core_attack_factor = 0.5
+				army_org_factor = 0.3
+				army_org_regain = 0.3				
+				industrial_capacity_factory = 0.5
+				unit_limit_bonus = 50				
+			}
+			picture = HOL_unemployed_conscription
+		}
+
+		FRG_desperate_attempt = {
+			available = {
+				has_war_with = FRA
+			}		
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				army_speed_factor = 0.1
+			}
+			picture = NFA_milice_state
+		}
+
+		FRG_organic_republic = {
+			visible = {
+				always = yes
+			}	
+			modifier = {
+				stability_factor = 0.15
+				political_power_cost = -0.18
+				war_stability_factor = 0.12
+				resistance_decay = 0.2
+				production_factory_max_efficiency_factor = 0.2
+			}
+			picture = NFA_organic_republic
+		}
+
+		FRG_theory_milieu = {
+			visible = {
+				always = yes
+			}
+			modifier = {
+				party_popularity_stability_factor = 0.2
+				consumer_goods_factor = -0.25
+				production_factory_max_efficiency_factor = 0.2
+				war_support_factor = 0.2
+				command_power_gain_mult = 0.15
+			}
+			picture = NFA_just_millieu
+		}
+
+		FRG_Blood_Water = { #复合神经毒气
+			visible = {
+				always = yes
+			}
+			modifier = {
+				breakthrough_factor = 1
+			}
+			picture = FRG_Blood_Water
+		}
+
+		FRG_lager = { #社会大撕裂
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UBR_lager"}
+			picture = UBR_lager
+			modifier = {
+				industrial_capacity_factory = 0.3
+				recruitable_population_factor = -0.3
+			}
+		}
+
+		FRG_A_chaotic_government = { #一团乱麻的政府
+			
+			visible = {
+				always = yes
+			}
+
+            picture = FRG_A_chaotic_government
+	
+			modifier = {
+            	stability_factor =  -0.2
+			}
+		}
+
+		FRG_New_French_Man = { #法兰西精神
+			
+			visible = {
+				always = yes
+			}
+
+            picture = FRG_New_French_Man
+	
+			modifier = {
+            	training_time_army_factor = -0.2
+				army_morale_factor = 0.1
+				conscription  = 0.05
+			}
+		}
+
+		FRG_Bitter_Revanchism = { #复仇热情
+			visible = {
+				always = yes
+			}
+            picture = FRG_Bitter_Revanchism
+			modifier = {
+				war_support_factor = 0.10
+			}
+			targeted_modifier = { 
+				tag = GER 
+				attack_bonus_against = 0.15
+			}
+		}
+
+		FRG_Bitter_Revanchism_2 = { #复仇热情2
+			visible = {
+				always = yes
+			}
+			picture = FRG_Bitter_Revanchism
+			modifier = {
+				war_support_factor = 0.25
+			}
+			targeted_modifier = { 
+				tag = GER 
+				attack_bonus_against = 0.25
+				defense_bonus_against = 0.25
+			}
+			targeted_modifier = { 
+				tag = AUS 
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+			}
+		}
+
+		FRG_Carolingian_Legacy = { #忠诚的军队
+			visible = {
+				always = yes
+			}
+            picture = FRG_Carolingian_Legacy
+			modifier = {
+				army_attack_factor = 0.15
+				army_defence_factor = 0.15
+			}
+		}
+
+		FRG_New_French_State = { #新法兰西
+			visible = {
+				always = yes
+			}
+            picture = FRG_New_French_State
+			modifier = {
+				industrial_capacity_factory = 0.3
+				production_factory_max_efficiency_factor = 0.25
+				production_factory_efficiency_gain_factor = 0.25
+				line_change_production_efficiency_factor = 0.25
+			}
+		}
+
+		FRG_jiatingfunu = { #家庭妇女
+			allowed = { always = no }
+            modifier = {
+				monthly_population = 0.3
+			}
+			picture = UoB_women_soldiers
+		}
+
+		FRG_Technocratic_hegemony = { #技术官僚霸权
+			allowed = { always = no }
+            modifier = {
+				monthly_population = 0.1
+				industrial_capacity_factory = 0.15
+				production_factory_max_efficiency_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.15
+			}
+			picture = CSA_forged_techno_utopian_ideas
+		}
+
+		FRG_media_regulation_act_idea = {# 受操纵的媒体
+			allowed = { always = no }
+			picture = media_regulation
+			modifier = {
+				political_power_gain = 0.08
+				stability_weekly = 0.003
+				encryption_factor = 0.03
+				max_command_power = 40
+			}
+		}
+
+		FRG_mJoan_of_Arc_Legacy = {#贞德的遗产
+			allowed = { always = no }
+			picture = NFA_jean_cult
+			modifier = {
+				army_core_defence_factor = 0.2
+				army_core_attack_factor = 0.2
+			}
+		}
+
+		FRG_Supporting_the_Service_Economy_1 = {#支持服务经济
+			allowed = { always = no }
+			picture = absinthe_legalized
+			modifier = {
+				monthly_population = 0.1
+			}
+		}
+
+		FRG_Supporting_the_Service_Economy_2 = {#支持服务经济
+			allowed = { always = no }
+			picture = absinthe_legalized
+			modifier = {
+				monthly_population = 0.15
+				consumer_goods_factor = -0.12
+			}
+		}
+
+		FRG_Supporting_the_Service_Economy_3 = {#垄断市场
+			allowed = { always = no }
+			picture = absinthe_legalized
+			modifier = {
+				monthly_population = 0.2
+				consumer_goods_factor = -0.25
+			}
+		}
+
+		FRG_Supporting_the_Service_Economy_4 = {#国家的支柱
+			allowed = { always = no }
+			picture = absinthe_legalized
+			modifier = {
+				monthly_population = 0.3
+				consumer_goods_factor = -0.35
+			}
+		}
+
+		FRG_Supporting_the_Service_Economy_5 = {#白骨垒垒，堆积成塔
+			allowed = { always = no }
+			picture = kommon_law
+			modifier = {
+				monthly_population = -0.2
+				consumer_goods_factor = 0.5
+				production_factory_max_efficiency_factor = 0.5
+				production_factory_efficiency_gain_factor = 0.5
+			}
+		}
+
+		FRG_personal_charisma = {#个人魅力
+			allowed = { always = no }
+			picture = freedom_from_want
+			modifier = {
+				drift_defence_factor = 0.2
+				conscription = 0.03
+				conscription_factor = 0.03
+			}
+		}
+
+		FRG_zhongzukexueweiyuanhui = { #种族科学委员会
+			allowed = { always = no }
+            modifier = {
+				stability_factor = -0.2
+				monthly_population = -0.1
+				army_attack_factor = 0.15
+				army_defence_factor = 0.15
+			}
+			picture = GER_red_cross
+		}
+
+		FRG_Genetic_Fertility_Permit = { #基因生育许可
+			allowed = { always = no }
+            modifier = {
+				conscription = -0.03
+				conscription_factor = -0.03
+				industrial_capacity_factory = 0.1
+			}
+			picture = FRG_Genetic_Fertility_Permit
+		}
+
+		FRG_survival_of_the_fittest_1 = { #优胜劣汰
+			allowed = { always = no }
+            modifier = {
+				monthly_population = -0.2
+				army_org_factor = 0.15
+				army_morale_factor = 0.15
+			}
+			picture = FRG_survival_of_the_fittest
+		}
+
+		FRG_survival_of_the_fittest_2 = { #优胜劣汰
+			allowed = { always = no }
+            modifier = {
+				monthly_population = -0.4
+				army_org_factor = 0.35
+				army_morale_factor = 0.35
+				
+			}
+			picture = FRG_survival_of_the_fittest
+		}
+		
+		FRG_survival_of_the_fittest_3 = { #优胜劣汰
+			allowed = { always = no }
+            modifier = {
+				monthly_population = -0.99
+				army_org_factor = 0.75
+				army_morale_factor = 0.75
+				army_attack_factor = 0.5
+				army_defence_factor = 0.5
+				army_speed_factor = 0.5
+				experience_loss_factor = -0.4
+				attrition = -0.5
+				acclimatization_hot_climate_gain_factor = 0.4
+				acclimatization_cold_climate_gain_factor = 0.4
+			}
+			picture = FRG_survival_of_the_fittest
+		}
+
+		FRG_Non_mandatory_sterilization = { #非强制绝育
+			allowed = { always = no }
+            modifier = {
+				monthly_population = -0.1
+				stability_factor = 0.2
+			}
+			picture = FRG_survival_of_the_fittest
+		}
+
+		FRG_Manipulate_the_brain = { #恶魔的诱惑
+			allowed = { always = no }
+            modifier = {
+				production_factory_max_efficiency_factor = -0.15
+				production_factory_efficiency_gain_factor = -0.15
+				consumer_goods_factor = -0.15
+			}		
+			picture = FRG_Manipulate_the_brain
+		}
+
+		FRG_Affordable_and_cost_effective_food = { #物美价廉的商品
+			allowed = { always = no }
+            modifier = {
+				consumer_goods_factor = -0.25
+			}		
+			picture = the_gas_beer_and_retail_tax
+		}
+
+		FRG_lol_fucking_conscript_everyone = { #意识形态狂热
+			allowed = { always = no }
+            modifier = {
+				stability_factor = -0.10
+            	conscription_factor = 0.10
+			}
+			picture = FRG_lol_fucking_conscript_everyone
+		}
+
+		FRG_Class_Struggle = { #强调阶级斗争
+			allowed = { always = no }
+            modifier = {
+				political_power_gain = 0.2
+				war_support_factor = 0.12	
+			}
+			picture = FRG_Class_Struggle
+		}
+
+		FRG_Church_Fund = { #教会基金
+			allowed = { always = no }
+            modifier = {
+				consumer_goods_factor = -0.2
+			}
+			picture = generic_coins
+		}
+
+		FRG_Church_Education = { #教会深入教育
+			allowed = { always = no }
+            modifier = {
+				research_speed_factor = 0.15
+			}
+			picture = civil_service_expansion
+		}
+
+		FRG_family_relations = { #重申家庭关系
+			allowed = { always = no }
+            modifier = {
+				conscription = 0.03
+				conscription_factor = 0.03
+			}
+			picture = NFA_fraternal_france
+		}
+
+		FRG_Travail_idea = { #劳动
+			allowed = { always = no }
+            modifier = {
+				production_factory_max_efficiency_factor = 0.5
+				production_factory_efficiency_gain_factor = 0.5
+			}
+			picture = FRA_neo_sans_culottes
+		}
+
+		FRG_Famille_idea = { #家庭
+			allowed = { always = no }
+            modifier = {
+				monthly_population = 0.5
+			}
+			picture = FRA_supremacy
+		}
+
+		FRG_Patrie_idea = { #祖国
+			allowed = { always = no }
+            modifier = {
+				army_attack_factor = 0.3
+				army_defence_factor = 0.3
+				army_speed_factor = 0.3
+			}
+			picture = FRA_communard_spirit
+		}
+
+		FRG_Build_a_high_wall_idea = { #心之壁垒
+			allowed = { always = no }
+            modifier = {
+				foreign_subversive_activites = -0.4
+				encryption_factor = 0.5
+				crypto_strength = 5
+				enemy_operative_capture_chance_factor = 1
+				nemy_operative_detection_chance_factor = 1
+				enemy_operative_harmed_time_factor = 1
+				enemy_operative_intel_extraction_rate = -1
+				enemy_spy_negative_status_factor = 1
+			}
+			picture = FRG_Build_a_high_wall_idea
+		}
+
+		FRG_Expand_the_Intelligence_Department_idea = { #无所争议的权威
+			allowed = { always = no }
+            modifier = {
+				operative_slot = 3
+				army_attack_factor = -0.15
+				army_defence_factor = -0.15
+				crypto_strength = 5
+				decryption_power_factor = 0.4
+				intel_from_combat_factor = 0.3
+			}
+			picture = recruitment_campaign
+		}
+
+		FRG_Shadow_Governments_idea_1 = { #阴影之国
+			allowed = { always = no }
+            modifier = {
+				operative_slot = 2
+				agency_upgrade_time = -0.45
+				intel_network_gain_factor = 0.45
+				intelligence_agency_defense = 0.2
+				airforce_intel_factor = 0.2
+				army_intel_factor = 0.2
+				civilian_intel_factor = 0.2
+				navy_intel_factor = 0.2
+				intel_from_operatives_factor = 0.2
+				intelligence_agency_defense = 0.2
+				decryption_power_factor = 0.3
+			}
+			picture = FRG_Shadow_Governments_idea
+		}
+
+		FRG_Shadow_Governments_idea_2 = { #阴影之国
+			allowed = { always = no }
+            modifier = {
+				operative_slot = 4
+				agency_upgrade_time = -0.9
+				intel_network_gain_factor = 0.9
+				intelligence_agency_defense = 0.5
+				airforce_intel_factor = 0.5
+				army_intel_factor = 0.5
+				civilian_intel_factor = 0.5
+				navy_intel_factor = 0.5
+				intel_from_operatives_factor = 0.5
+				intelligence_agency_defense = 0.5
+				decryption_power_factor = 0.6
+			}
+			picture = FRG_Shadow_Governments_idea
+		}
+
+		FRG_stop = { #嘘！
+			allowed = { always = no }
+            modifier = {
+				stability_factor = -0.1
+			}
+			picture = FRG_Shadow_Governments_idea
+		}
+
+		FRG_Protection_fee_1 = { #保护费
+			allowed = { always = no }
+            modifier = {
+				stability_factor = -0.1
+				consumer_goods_factor = -0.2
+			}
+			picture = NYC_garbage_gangster
+		}
+
+		FRG_Protection_fee_2 = { #保护费
+			allowed = { always = no }
+            modifier = {
+				stability_factor = -0.2
+				consumer_goods_factor = -0.4
+			}
+			picture = NYC_garbage_gangster
+		}
+
+		FRG_Nighttime_curfew_idea = { #夜间守望者
+			allowed = { always = no }
+            modifier = {
+				stability_factor = 0.2
+				production_factory_max_efficiency_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.15
+			}
+			picture = great_army
+		}
+
+		FRG_combat_crime_idea = { #打击犯罪
+			allowed = { always = no }
+            modifier = {
+				stability_factor = 0.15
+				consumer_goods_factor = 0.1
+				defensive_war_stability_factor = 0.12
+			}
+			picture = GFX_idea_PAN_gunpic
+		}
+
+		FRG_Militarization_of_Police_Force_idea_1 = { #全面武装
+			allowed = { always = no }
+            modifier = {
+				army_core_defence_factor = 0.2
+				army_core_attack_factor = 0.2
+				army_speed_factor = 0.1
+			}
+			picture = generic_demonstrations
+		}
+		FRG_Militarization_of_Police_Force_idea_2 = { #全面武装
+			allowed = { always = no }
+            modifier = {
+				army_core_defence_factor = 0.2
+				army_core_attack_factor = 0.2
+				army_speed_factor = 0.2
+				supply_consumption_factor = 0.2
+				breakthrough_factor = 0.2
+				no_supply_grace = 48
+			}
+			picture = generic_demonstrations
+		}
+
+		FRG_Expand_the_treasury_idea = { #充足的经费
+			allowed = { always = no }
+            modifier = {
+				consumer_goods_factor = -0.2
+			}
+			picture = generic_coins
+		}
+
+		FRG_Order_idea = { #秩序
+			allowed = { always = no }
+            modifier = {
+				stability_factor = 0.1
+				stability_weekly = 0.02
+				army_attack_factor = 0.2
+				army_defence_factor = 0.2
+			}
+			picture = GER_election_representation
+		}
+
+		FRG_peace_idea = { #和平
+			allowed = { always = no }
+            modifier = {
+				consumer_goods_factor = -0.25
+				production_factory_max_efficiency_factor = 0.25
+				production_factory_efficiency_gain_factor = 0.25
+			}
+			picture = GER_election_representation
+		}
+
+		FRG_economic_policy_idea = { #黑市社会主义
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_Capone_economic_policy_idea4"}
+			picture = department_of_production
+			allowed = { always = no }
+            modifier = {
+				production_speed_buildings_factor = 0.15
+				industrial_capacity_factory = 0.125
+				production_factory_max_efficiency_factor = 0.175
+				production_lack_of_resource_penalty_factor = -0.095
+				production_factory_efficiency_gain_factor = 0.1
+				party_popularity_stability_factor = 0.65
+				local_resources_factor = 0.125
+				research_speed_factor = 0.075
+			}
+		}
+
+		FRG_economic_policy_idea_2 = { #黑市社会主义
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_Capone_economic_policy_idea4"}
+			picture = department_of_production
+			allowed = { always = no }
+            modifier = {
+				production_speed_buildings_factor = 0.2
+				industrial_capacity_factory = 0.15
+				production_factory_max_efficiency_factor = 0.2
+				production_lack_of_resource_penalty_factor = -0.1
+				production_factory_efficiency_gain_factor = 0.15
+				party_popularity_stability_factor = 0.9
+				local_resources_factor = 0.15
+				research_speed_factor = 0.1
+				consumer_goods_factor = -0.1
+			}
+		}
+
+		FRG_Wine_smuggling_idea = { #葡萄酒走私
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_Capone_economic_policy_idea4"}
+			picture = KUB_wine
+			allowed = { always = no }
+            modifier = {
+				consumer_goods_factor = -0.2
+			}
+		}
+
+		FRG_Poor_people_feeding_facilities_idea = { #黑帮福利之国
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_Capone_economic_policy_idea4"}
+			picture = popular_socialism
+			allowed = { always = no }
+            modifier = {
+				consumer_goods_factor = 0.25
+				stability_weekly = 0.0095
+				monthly_population = 0.75
+				political_power_gain = 0.15
+				production_speed_industrial_complex_factor = 0.1
+				stability_factor = 0.15
+			}
+		}
+
+		FRG_robbing_the_rich_idea = { #劫富....
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_Capone_economic_policy_idea4"}
+			picture = social_dividends
+			allowed = { always = no }
+            modifier = {
+				consumer_goods_factor = -0.15
+				consumer_goods_expected_value = -0.15
+				industry_free_repair_factor = 0.15
+				stability_weekly = 0.01
+				war_support_weekly = 0.01
+				trade_opinion_factor = 0.25
+				monthly_population = 0.2
+			}
+		}
+
+		FRG_robbing_the_rich_idea_2 = { #与济贫.....
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_Capone_economic_policy_idea4"}
+			picture = social_dividends
+			allowed = { always = no }
+            modifier = {
+				consumer_goods_factor = -0.3
+				consumer_goods_expected_value = -0.3
+				industry_free_repair_factor = 0.3
+				stability_weekly = 0.02
+				war_support_weekly = 0.02
+				trade_opinion_factor = 0.5
+				monthly_population = 0.4
+			}
+		}
+
+		FRG_A_Beating_Heart_For_France_1 = { #法兰西之心在悸动
+			
+			visible = {
+				always = yes
+			}
+            picture = PB_FRA_SP_Heart
+	
+			modifier = {
+				production_speed_industrial_complex_factor = 0.12
+                production_speed_arms_factory_factor = 0.12
+			}
+		}
+		FRG_A_Beating_Heart_For_France_2 = {
+			
+			visible = {
+				always = yes
+			}
+
+            picture = PB_FRA_SP_Heart
+	
+			modifier = {
+				production_speed_industrial_complex_factor = 0.15
+                production_speed_arms_factory_factor = 0.15
+				line_change_production_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+		FRG_A_Beating_Heart_For_France_3 = {
+			
+			visible = {
+				always = yes
+			}
+
+            picture = PB_FRA_SP_Heart
+			
+	
+			modifier = {
+				production_speed_industrial_complex_factor = 0.2
+                production_speed_arms_factory_factor = 0.2
+				line_change_production_efficiency_factor = 0.15
+				production_factory_max_efficiency_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.15
+			}
+		}
+		FRG_A_Beating_Heart_For_France_4 = {
+			
+			visible = {
+				always = yes
+			}
+
+            picture = PB_FRA_SP_Heart
+			
+	
+			modifier = {
+				production_speed_industrial_complex_factor = 0.25
+                production_speed_arms_factory_factor = 0.25
+				line_change_production_efficiency_factor = 0.2
+				production_factory_max_efficiency_factor = 0.2
+				production_factory_efficiency_gain_factor = 0.2
+				experience_loss_factor = -0.05
+				attrition = -0.1
+				mobilization_speed = 0.1
+			}
+		}
+		FRG_A_Beating_Heart_For_France_5 = {
+			
+			visible = {
+				always = yes
+			}
+
+            picture = PB_FRA_SP_Heart
+			
+	
+			modifier = {
+				production_speed_industrial_complex_factor = 0.3
+                production_speed_arms_factory_factor = 0.3
+				line_change_production_efficiency_factor = 0.25
+				production_factory_max_efficiency_factor = 0.25
+				production_factory_efficiency_gain_factor = 0.25
+				experience_loss_factor = -0.1
+				attrition = -0.2
+				mobilization_speed = 0.2
+				no_supply_grace = 48
+			}
+		}
+
+		FRG_A_Beating_Heart_For_France_6 = {
+			
+			visible = {
+				always = yes
+			}
+
+            picture = PB_FRA_SP_Heart
+			
+	
+			modifier = {
+				production_speed_industrial_complex_factor = 0.4
+                production_speed_arms_factory_factor = 0.4
+				line_change_production_efficiency_factor = 0.35
+				production_factory_max_efficiency_factor = 0.35
+				production_factory_efficiency_gain_factor = 0.35
+				experience_loss_factor = -0.2
+				attrition = -0.3
+				mobilization_speed = 0.3
+				no_supply_grace = 96
+			}
+		}
+	}
+}

@@ -1,0 +1,7 @@
+spriteTypes = {
+
+	spriteType  = {
+		name = "GFX_WCC_hearst"
+		texturefile = "gfx/event_pictures/GFX_WCC_hearst.png"
+	}
+}

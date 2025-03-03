@@ -1,0 +1,560 @@
+﻿oob = "IBR_1936"
+
+starting_train_buffer = 2.0
+### Starting Technologies ###
+if = {
+	limit = { NOT = { has_dlc = "No Step Back" } }
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+		basic_heavy_tank = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+		improved_light_tank_chassis = 1
+		basic_heavy_tank_chassis = 1
+		engine_tech_1 = 1
+	}
+}
+set_technology = {
+	basic_train = 1
+	### General ###
+	electronic_mechanical_engineering = 1
+
+	### Infantry ###
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_trucks = 1
+	motorised_infantry = 1
+	tech_recon = 1
+	tech_engineers = 1
+	tech_mountaineers = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "GRU_air_bba"
+
+		set_technology = {
+			aa_lmg = 1
+			aa_cannon_1 = 1
+			engines_2 = 1
+			aircraft_construction = 1
+			early_bombs = 1
+			engines_1 = 1
+			iw_small_airframe = 1
+			basic_small_airframe = 1
+			iw_medium_airframe = 1
+			iw_large_airframe = 1
+			basic_medium_airframe = 1
+			basic_large_airframe = 1
+			air_torpedoe_1 = 1
+		}
+		GRU_BBA_air_variants = yes
+	else = {
+		set_air_oob = "GRU_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			fighter1 = 1
+			naval_bomber1 = 1
+			early_bomber = 1
+			strategic_bomber1 = 1
+			CAS1 = 1
+			cv_early_fighter = 1
+			cv_naval_bomber1 = 1
+			cv_CAS1 = 1
+		}
+	}
+}
+
+### Navy - MtG ###
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+
+	set_technology = {
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		panzerschiffe = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		cruiser_submarines = 1
+		early_ship_hull_carrier = 1
+		basic_ship_hull_carrier = 1
+		early_ship_hull_heavy = 1
+		basic_ship_hull_heavy = 1
+		ship_hull_super_heavy = 1
+		pre_dreadnoughts = 1
+		
+		basic_naval_mines = 1
+
+		## Modules##
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_medium_battery = 1
+		basic_heavy_battery = 1
+		basic_depth_charges = 1
+		basic_torpedo = 1
+		improved_ship_torpedo_launcher = 1
+		basic_cruiser_armor_scheme = 1
+		basic_heavy_armor_scheme = 1
+
+		### Transport ###
+		mtg_transport = 1
+	}
+}
+
+### Navy - Non MtG ###
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "Man the Guns"
+		}
+	}
+	set_technology = {
+		early_destroyer = 1
+		basic_destroyer = 1
+		early_light_cruiser = 1
+		basic_light_cruiser = 1
+		early_submarine = 1
+		basic_submarine = 1
+		early_heavy_cruiser = 1
+		basic_heavy_cruiser = 1
+		early_battlecruiser = 1
+		early_battleship = 1
+		basic_battleship = 1
+		heavy_battleship = 1
+		early_carrier = 1
+		basic_carrier = 1
+
+		### Transport ###
+		transport = 1
+	}
+}
+
+recruit_character = GRU_Franco_Bahamonde
+
+### Field Marshals ###
+create_field_marshal = {
+	name = GRU_general_Sanjurjo_Sacanell
+	portrait_path = "gfx/leaders/SPR/Portrait_SPR_Sanjurjo_Sacanell.png"
+	traits = {
+		politically_connected
+		logistics_wizard
+		old_guard
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+### Corps Commanders ###
+create_corps_commander = {
+	name = GRU_general_Franco_Bahamonde
+	portrait_path = "gfx/leaders/SPR/Portrait_SPR_Franco_Bahamonde.png"
+	traits = {
+		politically_connected
+		infantry_leader
+	}
+	skill = 3
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = GRU_general_Alonso_Vega
+	portrait_path = "gfx/leaders/SPR/Portrait_SPR_Alonso_Vega.png"
+	traits = {
+		trickster
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = GRU_general_Asensio_Cabanillas
+	portrait_path = "gfx/leaders/SPR/Portrait_SPR_Asensio_Cabanillas.png"
+	traits = { }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = GRU_general_Davila_Arrondo
+	portrait_path = "gfx/leaders/SPR/Portrait_SPR_Davila_Arrondo.png"
+	traits = {
+		organizer
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = GRU_general_Miguel_Cabanellas
+	portrait_path = "gfx/leaders/SPR/Portrait_SPR_Miguel_Cabanellas_Ferrer.png"
+	traits = {
+		old_guard
+		infantry_officer
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = GRU_general_Borbon_y_de_la_Torre
+	portrait_path = "gfx/leaders/SPR/Portrait_SPR_de_Borbon_y_de_la_Torre.png"
+	traits = {
+		politically_connected
+		trait_cautious
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = GRU_general_Goded_Llopis
+	portrait_path = "gfx/leaders/SPR/Portrait_SPR_Goded_Llopis.png"
+	traits = { }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = GRU_general_Martinez_Anido
+	portrait_path = "gfx/leaders/SPR/Portrait_SPR_Martinez_Anido.png"
+	traits = {
+		old_guard
+		organizer
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = GRU_general_Juan_Cierva
+	portrait_path = "gfx/leaders/SPR/Portrait_SPR_Juan_Cierva.png"
+	traits = {
+	politically_connected
+	air_commander
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = GRU_general_Damaso_Berenguer
+	portrait_path = "gfx/leaders/SPR/Portrait_SPR_Damaso_Berenguer_Fuste.png"
+	traits = {
+		old_guard
+		organizer
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = GRU_general_Jose_Millan_Astray
+	portrait_path = "gfx/leaders/SPR/Portrait_SPR_Jose_Millan_Astray.png"
+	traits = {
+		media_personality
+		war_hero
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = GRU_general_Emilio_Luyando
+	portrait_path = "gfx/leaders/SPR/Portrait_SPR_Emilio_Luyando.png"
+	traits = {}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = GRU_general_Leopoldo_Saro_Marin
+	portrait_path = "gfx/leaders/SPR/Portrait_SPR_Leopoldo_Saro_Marin.png"
+	traits = {
+	politically_connected
+	trait_cautious
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+### Admirals ###
+create_navy_leader = {
+	name = GRU_general_Estrada_Arnais
+	portrait_path = "gfx/leaders/SPR/Portrait_SPR_Estrada_Arnais.png"
+	traits = { }
+	skill = 1
+	maneuvering_skill = 1
+	defense_skill = 1
+	attack_skill = 1
+	coordination_skill = 1
+}
+create_navy_leader = {
+	name = GRU_general_Juan_Cervera_Valderrama
+	portrait_path = "gfx/leaders/SPR/Portrait_SPR_Juan_Cervera_Valderrama.png"
+	traits = { }
+	skill = 1
+	maneuvering_skill = 1
+	defense_skill = 1
+	attack_skill = 1
+	coordination_skill = 1
+}
+create_navy_leader = {
+	name = GRU_general_Manuel_Vierna_Belando
+	portrait_path = "gfx/leaders/SPR/Portrait_SPR_Manuel_Vierna_Belando.png"
+	traits = { }
+	skill = 1
+	maneuvering_skill = 1
+	defense_skill = 1
+	attack_skill = 1
+	coordination_skill = 1
+}
+create_navy_leader = {
+	name = GRU_general_Salvador_Moreno_Fernandez
+	portrait_path = "gfx/leaders/SPR/Portrait_SPR_Salvador_Moreno_Fernandez.png"
+	traits = { }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+					### Field Marshals ###
+create_field_marshal = {
+	name = GRU_general_Norton_Matos
+	portrait_path = "gfx/leaders/POR/Portrait_POR_Norton_Matos.png"
+	traits = {
+		old_guard
+		career_officer
+		defensive_doctrine
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+### Corps Commanders ###
+create_corps_commander = {
+	name = GRU_general_Alves_Rocadas
+	portrait_path = "gfx/leaders/POR/Portrait_POR_Alves_Rocadas.png"
+	traits = {
+	old_guard
+	inflexible_strategist
+	fortress_buster
+	}
+	skill = 3
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = GRU_general_Antonio_Carmona
+	portrait_path = "gfx/leaders/POR/Portrait_Portugal_Antonio_Carmona.png"
+	traits = {
+		old_guard
+		politically_connected
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = GRU_general_Castro_Bilstein_Menezes
+	portrait_path = "gfx/leaders/POR/Portrait_POR_Castro_Bilstein_Menezes.png"
+	traits = {
+	trait_cautious
+	old_guard
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = GRU_general_Costa_Lopes_sa_Silva
+	portrait_path = "gfx/leaders/POR/Portrait_POR_Costa_Lopes_sa_Silva.png"
+	traits = {
+	infantry_officer
+	brilliant_strategist
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = GRU_general_Garcia_Rosado
+	portrait_path = "gfx/leaders/POR/Portrait_POR_Garcia_Rosado.png"
+	traits = {
+	war_hero
+	old_guard
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = GRU_general_Franca_Borges
+	portrait_path = "gfx/leaders/POR/Portrait_POR_Franca_Borges.png"
+	traits = {
+	infantry_officer
+	career_officer
+	jungle_rat
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = GRU_general_Barros_Basto
+	portrait_path = "gfx/leaders/POR/Portrait_POR_Barros_Basto.png"
+	traits = {
+	trait_cautious
+	politically_connected
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = GRU_general_Joao_Aguas
+	portrait_path = "gfx/leaders/POR/Portrait_POR_Joao_Aguas.png"
+	traits = {
+	politically_connected
+	infantry_officer
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = GRU_general_Joao_Almeida
+	portrait_path = "gfx/leaders/POR/Portrait_POR_Joao_Almeida.png"
+	traits = {
+	war_hero
+	politically_connected
+	}
+	skill = 2
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = GRU_general_de_Freitas
+	portrait_path = "gfx/leaders/POR/Portrait_Portugal_de_Freitas.png"
+	traits = {
+	war_hero
+	career_officer
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+### Admirals ###
+create_navy_leader = {
+	name = GRU_general_Torres_de_Bettencourt
+	portrait_path = "gfx/leaders/POR/Portrait_POR_Torres_de_Bettencourt.png"
+	traits = {
+		blockade_runner
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 1
+	coordination_skill = 2
+}
+create_navy_leader = {
+	name = GRU_general_Joao_Castro
+	portrait_path = "gfx/leaders/POR/Portrait_Portugal_Joao_Castro.png"
+	traits = {
+		old_guard_navy
+		superior_tactician
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+create_navy_leader = {
+	name = GRU_general_Manuel_Rodrigues
+	portrait_path = "gfx/leaders/POR/Portrait_POR_Manuel_Rodrigues.png"
+	traits = { }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+create_navy_leader = {
+	name = GRU_general_Americo_Thomaz
+	portrait_path = "gfx/leaders/POR/Portrait_POR_Americo_Thomaz.png"
+	traits = { }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}

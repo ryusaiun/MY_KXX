@@ -1,0 +1,16 @@
+#Mod Traits#
+leader_traits = {
+
+	machine_trait = { 
+		type = land
+		trait_type = personality_trait
+		modifier = {
+			command_abilities_cost_factor = -0.1
+			promote_cost_factor = 0.2
+			army_org_factor = 0.05
+		}
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+}

@@ -1,0 +1,1380 @@
+ITT_puppet_decisions = {
+	ITT_puppet_decisions_mnt = {
+		icon = hand_grab
+
+		ai_will_do = { factor = 2000 }
+
+		fire_only_once = yes
+		visible = {
+			has_global_flag = goebb_itt_add
+		}
+		days_remove = 7
+		available = {
+			tag = ITT
+			AND = {
+				OR = {
+					ITT = {
+						controls_state = 105
+					}
+					any_other_country = {
+						is_subject_of = ITT
+						controls_state = 105
+					}
+					any_other_country = {
+						is_in_faction_with = GRU
+						controls_state = 105
+					}
+				}
+				OR = {
+					ITT = {
+						controls_state = 1270
+					}
+					any_other_country = {
+						is_subject_of = ITT
+						controls_state = 1270
+					}
+					any_other_country = {
+						is_in_faction_with = GRU
+						controls_state = 1270
+					}
+				}
+			}
+		}
+		remove_effect = {
+			hidden_effect = {
+				every_state = {
+			    	limit = {
+			    		OR = {
+			    	        state = 105
+				            state = 1270
+			    		}
+			    	}
+			    	MNT = {
+			    		add_state_core = PREV
+			    		transfer_state = PREV
+			    	}
+			    }
+				every_state = {
+			    	limit = {
+			    		OR = {
+					        state = 105
+				            state = 1270
+			    		}
+			    	}
+					add_state_core = PREV
+			    	remove_core_of = ITT
+			    }
+				set_autonomy = { target = MNT autonomy_state = RM_triumvirate }
+				MNT = {
+					transfer_state = 105
+
+					inherit_technology = ITT
+
+					set_capital = { state = 105 }
+					set_research_slots = 5
+					add_equipment_to_stockpile = { type = convoy amount = 150 }
+
+					add_manpower = 60000
+				    add_equipment_to_stockpile = { type = train_equipment_1 amount = 25 }
+				    add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 4000 }
+				    add_equipment_to_stockpile = { type = support_equipment amount = 150 }
+				    add_equipment_to_stockpile = { type = artillery_equipment amount = 55 }
+				    add_equipment_to_stockpile = { type = anti_tank_equipment amount = 500 }
+				    add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 200 }
+
+					add_ideas = limited_conscription
+					add_ideas = limited_exports
+					add_ideas = war_economy
+
+					set_politics = { ruling_party = national_populist elections_allowed = no }
+                    add_popularity = { ideology = national_populist popularity = 1 }
+
+					set_party_name = { ideology = totalist long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = syndicalist long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = radical_socialist long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = social_democrat long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = social_liberal long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = market_liberal long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = social_conservative long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = authoritarian_democrat long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = paternal_autocrat long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+
+                    create_country_leader = {
+                    	name = GRU_Sekula_Drljevic
+						desc = "MNT_POPOVIC_DESC"
+                    	picture = "gfx/leaders/MNT/Portrait_MNT_Sekula_Drljevic.png"
+                    	expire = "1.1.1"
+                    	ideology = crnogoroslavlje_subtype
+                    }
+
+					country_event = rotermorgen_itt.1
+
+					set_country_flag = GRU_MNT_VISIBLE
+			        set_country_flag = GRU_LEADER_GUI_VISIBLE
+
+					set_cosmetic_tag = goebb_mnt
+					set_global_flag = goebb_mnt_add
+				}
+				GRU = { add_to_faction = MNT }
+			}
+		}
+	}
+	ITT_puppet_decisions_gre = {
+		icon = hand_grab
+
+		ai_will_do = { factor = 2000 }
+
+		fire_only_once = yes
+		visible = {
+			has_global_flag = goebb_itt_add
+		}
+		days_remove = 7
+		available = {
+			tag = ITT
+			AND = {
+				OR = {
+					ITT = {
+						controls_state = 47
+					}
+					any_other_country = {
+						is_subject_of = ITT
+						controls_state = 47
+					}
+				}
+			}
+		}
+		remove_effect = {
+			hidden_effect = {
+				every_owned_state = {
+			    	limit = {
+			    		OR = {
+			    	        state = 186
+				            state = 47
+				            state = 939
+							state = 768
+				            state = 185
+				            state = 1076
+			    		}
+			    	}
+			    	GRE = {
+			    		add_state_core = PREV
+			    		transfer_state = PREV
+			    	}
+			    }
+				every_state = {
+			    	limit = {
+			    		OR = {
+					        state = 186
+				            state = 47
+				            state = 939
+							state = 768
+				            state = 185
+				            state = 1076
+			    		}
+			    	}
+					add_state_core = PREV
+			    	remove_core_of = ITT
+			    }
+				set_autonomy = { target = GRE autonomy_state = RM_triumvirate }
+				GRE = {
+					transfer_state = 47
+
+					inherit_technology = ITT
+
+					set_capital = { state = 47 }
+					set_research_slots = 5
+					add_equipment_to_stockpile = { type = convoy amount = 150 }
+
+					add_manpower = 60000
+				    add_equipment_to_stockpile = { type = train_equipment_1 amount = 25 }
+				    add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 4000 }
+				    add_equipment_to_stockpile = { type = support_equipment amount = 150 }
+				    add_equipment_to_stockpile = { type = artillery_equipment amount = 55 }
+				    add_equipment_to_stockpile = { type = anti_tank_equipment amount = 500 }
+				    add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 200 }
+
+					add_ideas = limited_conscription
+					add_ideas = limited_exports
+					add_ideas = war_economy
+
+					set_politics = { ruling_party = national_populist elections_allowed = no }
+					set_party_name = { ideology = paternal_autocrat long_name = goebb_party_gre name = goebb_party_gre }
+                    add_popularity = { ideology = national_populist popularity = 1 }
+
+					set_party_name = { ideology = totalist long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = syndicalist long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = radical_socialist long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = social_democrat long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = social_liberal long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = market_liberal long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = social_conservative long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = authoritarian_democrat long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = paternal_autocrat long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+
+                    create_country_leader = {
+	                    name = GRU_Georgios_Kosmidis
+	                    desc = "POLITICS_GEORGIOS_KOSMIDIS_DESC"
+	                    picture = "gfx/leaders/GRE/Portrait_GRE_Georgios_Kosmidis_KX.png"
+                    	expire = "1.1.1"
+                    	ideology = national_populist_subtype
+                    }
+
+					country_event = rotermorgen_itt.2
+
+					set_cosmetic_tag = goebb_gre
+					set_global_flag = goebb_gre_add
+				}
+				GRU = { add_to_faction = GRE }
+			}
+		}
+	}
+	ITT_puppet_decisions_alb = {
+		icon = hand_grab
+
+		ai_will_do = { factor = 2000 }
+
+		fire_only_once = yes
+		visible = {
+			has_global_flag = goebb_itt_add
+		}
+		days_remove = 7
+		available = {
+			tag = ITT
+			AND = {
+				OR = {
+					ITT = {
+						controls_state = 44
+					}
+					any_other_country = {
+						is_subject_of = ITT
+						controls_state = 44
+					}
+				}
+				OR = {
+					ITT = {
+						controls_state = 766
+					}
+					any_other_country = {
+						is_subject_of = ITT
+						controls_state = 766
+					}
+					any_other_country = {
+						is_in_faction_with = GRU
+						controls_state = 766
+					}
+				}
+				OR = {
+					ITT = {
+						controls_state = 1268
+					}
+					any_other_country = {
+						is_subject_of = ITT
+						controls_state = 1268
+					}
+					any_other_country = {
+						is_in_faction_with = GRU
+						controls_state = 1268
+					}
+				}
+				OR = {
+					ITT = {
+						controls_state = 1271
+					}
+					any_other_country = {
+						is_subject_of = ITT
+						controls_state = 1271
+					}
+					any_other_country = {
+						is_in_faction_with = GRU
+						controls_state = 1271
+					}
+				}
+				OR = {
+					ITT = {
+						controls_state = 765
+					}
+					any_other_country = {
+						is_subject_of = ITT
+						controls_state = 765
+					}
+					any_other_country = {
+						is_in_faction_with = GRU
+						controls_state = 765
+					}
+				}
+				OR = {
+					ITT = {
+						controls_state = 1097
+					}
+					any_other_country = {
+						is_subject_of = ITT
+						controls_state = 1097
+					}
+					any_other_country = {
+						is_in_faction_with = GRU
+						controls_state = 1097
+					}
+				}
+			}
+		}
+		remove_effect = {
+			hidden_effect = {
+				every_state = {
+			    	limit = {
+			    		OR = {
+			    	        state = 766
+				            state = 44
+				            state = 1268
+							state = 1271
+							state = 765
+							state = 1097
+			    		}
+			    	}
+			    	ALB = {
+			    		add_state_core = PREV
+			    		transfer_state = PREV
+			    	}
+			    }
+				every_state = {
+			    	limit = {
+			    		OR = {
+					        state = 766
+				            state = 44
+				            state = 1268
+							state = 1271
+							state = 765
+							state = 1097
+			    		}
+			    	}
+					add_state_core = PREV
+			    	remove_core_of = ITT
+			    }
+				set_autonomy = { target = ALB autonomy_state = RM_triumvirate }
+				ALB = {
+					transfer_state = 44
+
+					inherit_technology = ITT
+
+					set_capital = { state = 44 }
+					set_research_slots = 5
+					add_equipment_to_stockpile = { type = convoy amount = 150 }
+
+					add_manpower = 60000
+				    add_equipment_to_stockpile = { type = train_equipment_1 amount = 25 }
+				    add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 4000 }
+				    add_equipment_to_stockpile = { type = support_equipment amount = 150 }
+				    add_equipment_to_stockpile = { type = artillery_equipment amount = 55 }
+				    add_equipment_to_stockpile = { type = anti_tank_equipment amount = 500 }
+				    add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 200 }
+
+					add_ideas = limited_conscription
+					add_ideas = limited_exports
+					add_ideas = war_economy
+
+					set_politics = { ruling_party = national_populist elections_allowed = no }
+                    add_popularity = { ideology = national_populist popularity = 1 }
+
+					set_party_name = { ideology = totalist long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = syndicalist long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = radical_socialist long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = social_democrat long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = social_liberal long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = market_liberal long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = social_conservative long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = authoritarian_democrat long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = paternal_autocrat long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+
+                    create_country_leader = {
+                    	name = GRU_Midhat_Frasheri
+                    	picture = "gfx/leaders/ALB/Portrait_ALB_Midhat_Frasheri.png"
+                    	expire = "1.1.1"
+                    	ideology = national_populist_subtype
+                    }
+					set_country_flag = GRU_ALB_itt
+
+					set_country_flag = GRU_ITT_VISIBLE
+			        set_country_flag = GRU_LEADER_GUI_VISIBLE
+
+					country_event = rotermorgen_itt.3
+
+					set_cosmetic_tag = goebb_alb
+					set_global_flag = goebb_alb_add
+				}
+				GRU = { add_to_faction = ALB }
+			}
+		}
+	}
+	ITT_puppet_decisions_tun = {
+		icon = hand_grab
+
+		ai_will_do = { factor = 2000 }
+
+		fire_only_once = yes
+		visible = {
+			has_global_flag = goebb_itt_add
+		}
+		days_remove = 7
+		available = {
+			tag = ITT
+			AND = {
+				OR = {
+					ITT = {
+						controls_state = 458
+					}
+					any_other_country = {
+						is_subject_of = ITT
+						controls_state = 458
+					}
+				}
+			}
+		}
+		remove_effect = {
+			hidden_effect = {
+				every_owned_state = {
+			    	limit = {
+			    		OR = {
+			    	        state = 460
+				            state = 458
+				            state = 665
+			    		}
+			    	}
+			    	TUN = {
+			    		add_state_core = PREV
+			    		transfer_state = PREV
+			    	}
+			    }
+				every_state = {
+			    	limit = {
+			    		OR = {
+					        state = 460
+				            state = 458
+				            state = 665
+			    		}
+			    	}
+					add_state_core = PREV
+			    	remove_core_of = ITT
+			    }
+				set_autonomy = { target = TUN autonomy_state = RM_triumvirate }
+				TUN = {
+					transfer_state = 458
+
+					inherit_technology = ITT
+
+					set_capital = { state = 458 }
+					set_research_slots = 5
+					add_equipment_to_stockpile = { type = convoy amount = 150 }
+
+					add_manpower = 60000
+				    add_equipment_to_stockpile = { type = train_equipment_1 amount = 25 }
+				    add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 4000 }
+				    add_equipment_to_stockpile = { type = support_equipment amount = 150 }
+				    add_equipment_to_stockpile = { type = artillery_equipment amount = 55 }
+				    add_equipment_to_stockpile = { type = anti_tank_equipment amount = 500 }
+				    add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 200 }
+
+					add_ideas = limited_conscription
+					add_ideas = limited_exports
+					add_ideas = war_economy
+
+					set_politics = { ruling_party = paternal_autocrat elections_allowed = no }
+                    add_popularity = { ideology = paternal_autocrat popularity = 1 }
+
+					set_party_name = { ideology = totalist long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = syndicalist long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = radical_socialist long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = social_democrat long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = social_liberal long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = market_liberal long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = social_conservative long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = authoritarian_democrat long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = national_populist long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+
+					create_country_leader = {
+                    	name = GRU_Moncef_Bey
+                    	picture = "gfx/leaders/TUN/Portrait_TUN_Moncef_Bey.png"
+                    	expire = "1.1.1"
+                    	ideology = absolute_monarchy_subtype
+                    }
+
+					country_event = rotermorgen_itt.4
+
+					set_cosmetic_tag = goebb_tun
+					set_global_flag = goebb_tun_add
+				}
+				GRU = { add_to_faction = TUN }
+			}
+		}
+	}
+	ITT_puppet_decisions_egy = {
+		icon = hand_grab
+
+		ai_will_do = { factor = 2000 }
+
+		fire_only_once = yes
+		visible = {
+			has_global_flag = goebb_itt_add
+		}
+		days_remove = 7
+		available = {
+			tag = ITT
+			AND = {
+				OR = {
+					ITT = {
+						controls_state = 446
+					}
+					any_other_country = {
+						is_subject_of = ITT
+						controls_state = 446
+					}
+				}
+			}
+		}
+		remove_effect = {
+			hidden_effect = {
+				every_owned_state = {
+			    	limit = {
+			    		OR = {
+			    	        state = 452
+				            state = 552
+				            state = 862
+				            state = 447
+				            state = 446
+				            state = 453
+				            state = 1008
+				            state = 457
+				            state = 456
+				            state = 551
+				            state = 1007
+				            state = 1011
+				            state = 549
+				            state = 1010
+			    		}
+			    	}
+			    	EGY = {
+			    		add_state_core = PREV
+			    		transfer_state = PREV
+			    	}
+			    }
+				every_state = {
+			    	limit = {
+			    		OR = {
+					        state = 452
+				            state = 552
+				            state = 862
+				            state = 447
+				            state = 446
+				            state = 453
+				            state = 1008
+				            state = 457
+				            state = 456
+				            state = 551
+				            state = 1007
+				            state = 1011
+				            state = 549
+				            state = 1010
+			    		}
+			    	}
+					add_state_core = PREV
+			    	remove_core_of = ITT
+			    }
+				set_autonomy = { target = EGY autonomy_state = RM_triumvirate }
+				EGY = {
+					transfer_state = 446
+
+					inherit_technology = ITT
+
+					set_capital = { state = 446 }
+					set_research_slots = 5
+					add_equipment_to_stockpile = { type = convoy amount = 150 }
+
+					add_manpower = 60000
+				    add_equipment_to_stockpile = { type = train_equipment_1 amount = 25 }
+				    add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 4000 }
+				    add_equipment_to_stockpile = { type = support_equipment amount = 150 }
+				    add_equipment_to_stockpile = { type = artillery_equipment amount = 55 }
+				    add_equipment_to_stockpile = { type = anti_tank_equipment amount = 500 }
+				    add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 200 }
+
+					add_ideas = limited_conscription
+					add_ideas = limited_exports
+					add_ideas = war_economy
+
+					set_politics = { ruling_party = paternal_autocrat elections_allowed = no }
+                    set_party_name = { ideology = paternal_autocrat long_name = goebb_party_egy name = goebb_party_egy }
+                    add_popularity = { ideology = paternal_autocrat popularity = 1 }
+
+					set_party_name = { ideology = totalist long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = syndicalist long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = radical_socialist long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = social_democrat long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = social_liberal long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = market_liberal long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = social_conservative long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = authoritarian_democrat long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = national_populist long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+
+					create_country_leader = {
+                    	name = GRU_Farouk
+                    	picture = "gfx/leaders/EGY/Portrait_Egypt_Farouk.png"
+                    	expire = "1.1.1"
+                    	ideology = absolute_monarchy_subtype
+                    }
+
+					country_event = rotermorgen_itt.5
+
+					set_cosmetic_tag = goebb_egy
+					set_global_flag = goebb_egy_add
+				}
+				GRU = { add_to_faction = EGY }
+			}
+		}
+	}
+	ITT_puppet_decisions_iea = {
+		icon = hand_grab
+
+		ai_will_do = { factor = 2000 }
+
+		fire_only_once = yes
+		visible = {
+			has_global_flag = goebb_itt_add
+		}
+		days_remove = 7
+		available = {
+			tag = ITT
+			AND = {
+				OR = {
+					ITT = {
+						controls_state = 271
+					}
+					any_other_country = {
+						is_subject_of = ITT
+						controls_state = 271
+					}
+				}
+			}
+		}
+		remove_effect = {
+			hidden_effect = {
+				every_owned_state = {
+			    	limit = {
+			    		OR = {
+			    	        state = 550
+				            state = 961
+				            state = 941
+				            state = 268
+				            state = 923
+				            state = 921
+				            state = 920
+				            state = 924
+				            state = 271
+				            state = 922
+				            state = 919
+				            state = 944
+				            state = 906
+				            state = 269
+				            state = 892
+				            state = 559
+			    		}
+			    	}
+			    	IEA = {
+			    		add_state_core = PREV
+			    		transfer_state = PREV
+			    	}
+			    }
+				every_state = {
+			    	limit = {
+			    		OR = {
+					        state = 550
+				            state = 961
+				            state = 941
+				            state = 268
+				            state = 923
+				            state = 921
+				            state = 920
+				            state = 924
+				            state = 271
+				            state = 922
+				            state = 919
+				            state = 944
+				            state = 906
+				            state = 269
+				            state = 892
+				            state = 559
+			    		}
+			    	}
+					add_state_core = PREV
+			    	remove_core_of = ITT
+			    }
+				set_autonomy = { target = IEA autonomy_state = RM_triumvirate }
+				IEA = {
+					transfer_state = 271
+
+					inherit_technology = ITT
+
+					set_capital = { state = 271 }
+					set_research_slots = 5
+					add_equipment_to_stockpile = { type = convoy amount = 200 }
+
+					add_manpower = 60000
+				    add_equipment_to_stockpile = { type = train_equipment_1 amount = 25 }
+				    add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 10000 }
+				    add_equipment_to_stockpile = { type = support_equipment amount = 150 }
+				    add_equipment_to_stockpile = { type = artillery_equipment amount = 55 }
+				    add_equipment_to_stockpile = { type = anti_tank_equipment amount = 500 }
+				    add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 200 }
+
+					add_ideas = limited_conscription
+					add_ideas = limited_exports
+					add_ideas = war_economy
+
+					set_politics = { ruling_party = paternal_autocrat elections_allowed = no }
+                    set_party_name = { ideology = paternal_autocrat long_name = goebb_party_iea name = goebb_party_iea }
+                    add_popularity = { ideology = paternal_autocrat popularity = 1 }
+
+					set_party_name = { ideology = totalist long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = syndicalist long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = radical_socialist long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = social_democrat long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = social_liberal long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = market_liberal long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = social_conservative long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = authoritarian_democrat long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = national_populist long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+
+					create_country_leader = {
+                    	name = GRU_Luigi_Amedeo
+                    	picture = "gfx/leaders/ITA/Portrait_ITA_Prince_Luigi_Amedeo.png"
+                    	expire = "1.1.1"
+                    	ideology = absolute_monarchy_subtype
+                    }
+
+					set_country_flag = GRU_IEA_VISIBLE
+			        set_country_flag = GRU_LEADER_GUI_VISIBLE
+
+					country_event = rotermorgen_itt.6
+
+					set_cosmetic_tag = goebb_iea
+					set_global_flag = goebb_iea_add
+				}
+				GRU = { add_to_faction = IEA }
+			}
+		}
+	}
+	ITT_puppet_decisions_pal = {
+		icon = hand_grab
+
+		ai_will_do = { factor = 2000 }
+
+		fire_only_once = yes
+		visible = {
+			has_global_flag = goebb_itt_add
+		}
+		days_remove = 7
+		available = {
+			tag = ITT
+			AND = {
+				OR = {
+					ITT = {
+						controls_state = 454
+					}
+					any_other_country = {
+						is_subject_of = ITT
+						controls_state = 454
+					}
+				}
+			}
+		}
+		remove_effect = {
+			hidden_effect = {
+				every_owned_state = {
+			    	limit = {
+			    		OR = {
+			    	        state = 454
+				            state = 455
+				            state = 992
+			    		}
+			    	}
+			    	PAL = {
+			    		add_state_core = PREV
+			    		transfer_state = PREV
+			    	}
+			    }
+				every_state = {
+			    	limit = {
+			    		OR = {
+					        state = 454
+				            state = 455
+				            state = 992
+			    		}
+			    	}
+					add_state_core = PREV
+			    	remove_core_of = ITT
+			    }
+				set_autonomy = { target = PAL autonomy_state = RM_triumvirate }
+				PAL = {
+					transfer_state = 454
+
+					inherit_technology = ITT
+
+					set_capital = { state = 454 }
+					set_research_slots = 5
+					add_equipment_to_stockpile = { type = convoy amount = 150 }
+
+					add_manpower = 60000
+				    add_equipment_to_stockpile = { type = train_equipment_1 amount = 25 }
+				    add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 4000 }
+				    add_equipment_to_stockpile = { type = support_equipment amount = 150 }
+				    add_equipment_to_stockpile = { type = artillery_equipment amount = 55 }
+				    add_equipment_to_stockpile = { type = anti_tank_equipment amount = 500 }
+				    add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 200 }
+
+					add_ideas = limited_conscription
+					add_ideas = limited_exports
+					add_ideas = war_economy
+
+					set_politics = { ruling_party = national_populist elections_allowed = no }
+                    add_popularity = { ideology = national_populist popularity = 1 }
+
+					set_party_name = { ideology = totalist long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = syndicalist long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = radical_socialist long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = social_democrat long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = social_liberal long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = market_liberal long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = social_conservative long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = authoritarian_democrat long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = paternal_autocrat long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+
+					create_country_leader = {
+                    	name = GRU_al_Husayni
+                    	picture = "gfx/leaders/PAL/Portrait_PAL_al_Husayni.png"
+                    	expire = "1.1.1"
+                    	ideology = natpop_islamism_subtype
+                    }
+
+					country_event = rotermorgen_itt.7
+
+					set_cosmetic_tag = goebb_pal
+					set_global_flag = goebb_pal_add
+				}
+				GRU = { add_to_faction = PAL }
+			}
+		}
+	}
+	ITT_puppet_decisions_irq = {
+		icon = hand_grab
+
+		ai_will_do = { factor = 2000 }
+
+		fire_only_once = yes
+		visible = {
+			has_global_flag = goebb_itt_add
+		}
+		days_remove = 7
+		available = {
+			tag = ITT
+			AND = {
+				OR = {
+					ITT = {
+						controls_state = 291
+					}
+					any_other_country = {
+						is_subject_of = ITT
+						controls_state = 291
+					}
+				}
+			}
+		}
+		remove_effect = {
+			hidden_effect = {
+				every_owned_state = {
+			    	limit = {
+			    		OR = {
+			    	        state = 291
+				            state = 812
+			    		}
+			    	}
+			    	IRQ = {
+			    		add_state_core = PREV
+			    		transfer_state = PREV
+			    	}
+			    }
+				every_state = {
+			    	limit = {
+			    		OR = {
+					        state = 291
+				            state = 812
+			    		}
+			    	}
+					add_state_core = PREV
+			    	remove_core_of = ITT
+			    }
+				set_autonomy = { target = IRQ autonomy_state = RM_triumvirate }
+				IRQ = {
+					transfer_state = 291
+
+					inherit_technology = ITT
+
+					set_capital = { state = 291 }
+					set_research_slots = 5
+					add_equipment_to_stockpile = { type = convoy amount = 150 }
+
+					add_manpower = 60000
+				    add_equipment_to_stockpile = { type = train_equipment_1 amount = 25 }
+				    add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 4000 }
+				    add_equipment_to_stockpile = { type = support_equipment amount = 150 }
+				    add_equipment_to_stockpile = { type = artillery_equipment amount = 55 }
+				    add_equipment_to_stockpile = { type = anti_tank_equipment amount = 500 }
+				    add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 200 }
+
+					add_ideas = limited_conscription
+					add_ideas = limited_exports
+					add_ideas = war_economy
+
+					set_politics = { ruling_party = national_populist elections_allowed = no }
+                    add_popularity = { ideology = national_populist popularity = 1 }
+
+					set_party_name = { ideology = totalist long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = syndicalist long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = radical_socialist long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = social_democrat long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = social_liberal long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = market_liberal long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = social_conservative long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = authoritarian_democrat long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = paternal_autocrat long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+
+					create_country_leader = {
+                    	name = GRU_Gaylani
+                    	picture = "gfx/leaders/IRQ/Portrait_IRQ_Gaylani.png"
+                    	expire = "1.1.1"
+                    	ideology = national_populist_subtype
+                    }
+
+					country_event = rotermorgen_itt.8
+
+					set_cosmetic_tag = goebb_irq
+					set_global_flag = goebb_irq_add
+				}
+				GRU = { add_to_faction = IRQ }
+			}
+		}
+	}
+	ITT_puppet_decisions_sau = {
+		icon = hand_grab
+
+		ai_will_do = { factor = 2000 }
+
+		fire_only_once = yes
+		visible = {
+			has_global_flag = goebb_itt_add
+		}
+		days_remove = 7
+		available = {
+			tag = ITT
+			AND = {
+				OR = {
+					ITT = {
+						controls_state = 292
+					}
+					any_other_country = {
+						is_subject_of = ITT
+						controls_state = 292
+					}
+				}
+			}
+		}
+		remove_effect = {
+			hidden_effect = {
+				every_owned_state = {
+			    	limit = {
+			    		OR = {
+			    	        state = 754
+				            state = 679
+				            state = 675
+							state = 915
+				            state = 994
+				            state = 1035
+							state = 991
+				            state = 678
+				            state = 292
+			    		}
+			    	}
+			    	SAU = {
+			    		add_state_core = PREV
+			    		transfer_state = PREV
+			    	}
+			    }
+				every_state = {
+			    	limit = {
+			    		OR = {
+							state = 754
+				            state = 679
+				            state = 675
+							state = 915
+				            state = 994
+				            state = 1035
+							state = 991
+				            state = 678
+				            state = 292
+			    		}
+			    	}
+					add_state_core = PREV
+			    	remove_core_of = ITT
+			    }
+				set_autonomy = { target = SAU autonomy_state = RM_triumvirate }
+				SAU = {
+					transfer_state = 292
+
+					inherit_technology = ITT
+
+					set_capital = { state = 292 }
+					set_research_slots = 5
+					add_equipment_to_stockpile = { type = convoy amount = 150 }
+
+					add_manpower = 60000
+				    add_equipment_to_stockpile = { type = train_equipment_1 amount = 25 }
+				    add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 4000 }
+				    add_equipment_to_stockpile = { type = support_equipment amount = 150 }
+				    add_equipment_to_stockpile = { type = artillery_equipment amount = 55 }
+				    add_equipment_to_stockpile = { type = anti_tank_equipment amount = 500 }
+				    add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 200 }
+
+					add_ideas = limited_conscription
+					add_ideas = limited_exports
+					add_ideas = war_economy
+
+					set_politics = { ruling_party = paternal_autocrat elections_allowed = no }
+					set_party_name = { ideology = paternal_autocrat long_name = goebb_party_sau name = goebb_party_sau }
+                    add_popularity = { ideology = paternal_autocrat popularity = 1 }
+
+					set_party_name = { ideology = totalist long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = syndicalist long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = radical_socialist long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = social_democrat long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = social_liberal long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = market_liberal long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = social_conservative long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = authoritarian_democrat long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = national_populist long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+
+					create_country_leader = {
+                    	name = GRU_Abdulazis_Ibn_Saud
+                    	picture = "gfx/leaders/SAU/Portrait_Saudi_Arabia_Abdulazis_Ibn_Saud_KX.png"
+                    	expire = "1.1.1"
+                    	ideology = absolute_monarchy_subtype
+                    }
+
+					country_event = rotermorgen_itt.9
+
+					set_cosmetic_tag = goebb_sau
+					set_global_flag = goebb_sau_add
+				}
+				GRU = { add_to_faction = SAU }
+			}
+		}
+	}
+	ITT_puppet_decisions_yem = {
+		icon = hand_grab
+
+		ai_will_do = { factor = 2000 }
+
+		fire_only_once = yes
+		visible = {
+			has_global_flag = goebb_itt_add
+		}
+		days_remove = 7
+		available = {
+			tag = ITT
+			AND = {
+				OR = {
+					ITT = {
+						controls_state = 293
+					}
+					any_other_country = {
+						is_subject_of = ITT
+						controls_state = 293
+					}
+				}
+			}
+		}
+		remove_effect = {
+			hidden_effect = {
+				every_owned_state = {
+			    	limit = {
+			    		OR = {
+			    	        state = 982
+				            state = 981
+				            state = 293
+							state = 659
+				            state = 752
+			    		}
+			    	}
+			    	YEM = {
+			    		add_state_core = PREV
+			    		transfer_state = PREV
+			    	}
+			    }
+				every_state = {
+			    	limit = {
+			    		OR = {
+					        state = 982
+				            state = 981
+				            state = 293
+							state = 659
+				            state = 752
+			    		}
+			    	}
+					add_state_core = PREV
+			    	remove_core_of = ITT
+			    }
+				set_autonomy = { target = YEM autonomy_state = RM_triumvirate }
+				YEM = {
+					transfer_state = 293
+
+					inherit_technology = ITT
+
+					set_capital = { state = 293 }
+					set_research_slots = 5
+					add_equipment_to_stockpile = { type = convoy amount = 150 }
+
+					add_manpower = 60000
+				    add_equipment_to_stockpile = { type = train_equipment_1 amount = 25 }
+				    add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 4000 }
+				    add_equipment_to_stockpile = { type = support_equipment amount = 150 }
+				    add_equipment_to_stockpile = { type = artillery_equipment amount = 55 }
+				    add_equipment_to_stockpile = { type = anti_tank_equipment amount = 500 }
+				    add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 200 }
+
+					add_ideas = limited_conscription
+					add_ideas = limited_exports
+					add_ideas = war_economy
+
+					set_politics = { ruling_party = paternal_autocrat elections_allowed = no }
+                    add_popularity = { ideology = paternal_autocrat popularity = 1 }
+
+					set_party_name = { ideology = totalist long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = syndicalist long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = radical_socialist long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = social_democrat long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = social_liberal long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = market_liberal long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = social_conservative long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = authoritarian_democrat long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = national_populist long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+
+					create_country_leader = {
+                    	name = GRU_Ali_Nasser_Al_Qardai
+                    	picture = "gfx/leaders/YEM/Portrait_YEM_Ali_Nasser_Al-Qardai.png"
+                    	expire = "1.1.1"
+                    	ideology = absolute_monarchy_subtype
+                    }
+
+					country_event = rotermorgen_itt.10
+
+					set_cosmetic_tag = goebb_yem
+					set_global_flag = goebb_yem_add
+				}
+				GRU = { add_to_faction = YEM }
+			}
+		}
+	}
+	ITT_puppet_decisions_oma = {
+		icon = hand_grab
+
+		ai_will_do = { factor = 2000 }
+
+		fire_only_once = yes
+		visible = {
+			has_global_flag = goebb_itt_add
+		}
+		days_remove = 7
+		available = {
+			tag = ITT
+			AND = {
+				OR = {
+					ITT = {
+						controls_state = 294
+					}
+					any_other_country = {
+						is_subject_of = ITT
+						controls_state = 294
+					}
+				}
+			}
+		}
+		remove_effect = {
+			hidden_effect = {
+				every_owned_state = {
+			    	limit = {
+			    		OR = {
+			    	        state = 1024
+				            state = 294
+				            state = 859
+			    		}
+			    	}
+			    	OMA = {
+			    		add_state_core = PREV
+			    		transfer_state = PREV
+			    	}
+			    }
+				every_state = {
+			    	limit = {
+			    		OR = {
+					        state = 1024
+				            state = 294
+				            state = 859
+			    		}
+			    	}
+					add_state_core = PREV
+			    	remove_core_of = ITT
+			    }
+				set_autonomy = { target = OMA autonomy_state = RM_triumvirate }
+				OMA = {
+					transfer_state = 294
+
+					inherit_technology = ITT
+
+					set_capital = { state = 294 }
+					set_research_slots = 5
+					add_equipment_to_stockpile = { type = convoy amount = 150 }
+
+					add_manpower = 60000
+				    add_equipment_to_stockpile = { type = train_equipment_1 amount = 25 }
+				    add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 4000 }
+				    add_equipment_to_stockpile = { type = support_equipment amount = 150 }
+				    add_equipment_to_stockpile = { type = artillery_equipment amount = 55 }
+				    add_equipment_to_stockpile = { type = anti_tank_equipment amount = 500 }
+				    add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 200 }
+
+					add_ideas = limited_conscription
+					add_ideas = limited_exports
+					add_ideas = war_economy
+
+					set_politics = { ruling_party = paternal_autocrat elections_allowed = no }
+                    add_popularity = { ideology = paternal_autocrat popularity = 1 }
+
+					set_party_name = { ideology = totalist long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = syndicalist long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = radical_socialist long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = social_democrat long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = social_liberal long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = market_liberal long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = social_conservative long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = authoritarian_democrat long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = national_populist long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+
+					create_country_leader = {
+                    	name = GRU_Said_Ibn_Taimur
+                    	picture = "gfx/leaders/OMA/Portrait_Oman_Said_Ibn_Taimur.png"
+                    	expire = "1.1.1"
+                    	ideology = absolute_monarchy_subtype
+                    }
+
+					country_event = rotermorgen_itt.11
+
+					set_cosmetic_tag = goebb_oma
+					set_global_flag = goebb_oma_add
+				}
+				GRU = { add_to_faction = OMA }
+			}
+		}
+	}
+	ITT_puppet_decisions_tru = {
+		icon = hand_grab
+
+		ai_will_do = { factor = 2000 }
+
+		fire_only_once = yes
+		visible = {
+			has_global_flag = goebb_itt_add
+		}
+		days_remove = 7
+		available = {
+			tag = ITT
+			AND = {
+				OR = {
+					ITT = {
+						controls_state = 658
+					}
+					any_other_country = {
+						is_subject_of = ITT
+						controls_state = 658
+					}
+				}
+			}
+		}
+		remove_effect = {
+			hidden_effect = {
+				every_owned_state = {
+			    	limit = {
+			    		OR = {
+			    	        state = 347
+				            state = 658
+							state = 656
+				            state = 993
+			    		}
+			    	}
+			    	TRU = {
+			    		add_state_core = PREV
+			    		transfer_state = PREV
+			    	}
+			    }
+				every_state = {
+			    	limit = {
+			    		OR = {
+					        state = 347
+				            state = 658
+							state = 656
+				            state = 993
+			    		}
+			    	}
+					add_state_core = PREV
+			    	remove_core_of = ITT
+			    }
+				set_autonomy = { target = TRU autonomy_state = RM_triumvirate }
+				TRU = {
+					transfer_state = 658
+
+					inherit_technology = ITT
+
+					set_capital = { state = 658 }
+					set_research_slots = 5
+					add_equipment_to_stockpile = { type = convoy amount = 150 }
+
+					add_manpower = 60000
+				    add_equipment_to_stockpile = { type = train_equipment_1 amount = 25 }
+				    add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 4000 }
+				    add_equipment_to_stockpile = { type = support_equipment amount = 150 }
+				    add_equipment_to_stockpile = { type = artillery_equipment amount = 55 }
+				    add_equipment_to_stockpile = { type = anti_tank_equipment amount = 500 }
+				    add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 200 }
+
+					add_ideas = limited_conscription
+					add_ideas = limited_exports
+					add_ideas = war_economy
+
+					set_politics = { ruling_party = social_conservative elections_allowed = no }
+					set_party_name = { ideology = social_conservative long_name = goebb_party_tru name = goebb_party_tru }
+                    add_popularity = { ideology = social_conservative popularity = 1 }
+
+					set_party_name = { ideology = totalist long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = syndicalist long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = radical_socialist long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = social_democrat long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = social_liberal long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = market_liberal long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = authoritarian_democrat long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+				    set_party_name = { ideology = paternal_autocrat long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+					set_party_name = { ideology = national_populist long_name = goebb_party_pup_ban name = goebb_party_pup_ban }
+
+					country_event = rotermorgen_itt.12
+
+					set_cosmetic_tag = goebb_tru
+					set_global_flag = goebb_tru_add
+				}
+				GRU = { add_to_faction = TRU }
+			}
+		}
+	}
+}

@@ -1,0 +1,3367 @@
+add_namespace = rotermorgenGCW
+add_namespace = rmgoebbnews
+add_namespace = rmhimmler
+add_namespace = rmfallgoebb
+add_namespace = rmfix
+
+country_event = { 
+	id = rotermorgenGCW.99
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenGCW.99" }
+	title = rotermorgenGCW.99.t
+	desc = rotermorgenGCW.99.d
+	#is_triggered_only = yes
+	trigger = {
+		OR = {
+			is_ai = no
+			has_global_flag = KX_GER_REV_ALWAYS
+			has_global_flag = KX_GER_REV_MAYBE
+		}
+		tag = GER
+		OR = {	
+			AND = {
+				GER = {
+					has_completed_focus = GER_black_monday_aftermath
+				}
+				date > 1936.4.20
+			}
+			AND = {
+				GER = {
+					NOT = { has_completed_focus = GER_black_monday_aftermath }
+				}
+				date > 1936.6.20
+			}
+		}
+	}
+	hidden = yes
+	fire_only_once = yes
+	immediate = {
+		GER = {
+			country_event = {
+				id = rotermorgenGCW.100
+				days = 1
+			}
+		}
+	}
+}
+
+
+country_event = { # Help companies
+	id = rotermorgenGCW.100
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenGCW.100" }
+	title = rotermorgenGCW.100.t
+	desc = rotermorgenGCW.100.d
+	picture = GFX_report_event_Help_comps
+	is_triggered_only = yes
+	fire_only_once = yes
+	#trigger = {
+	#	GER = {
+	#		has_completed_focus = GER_black_monday_aftermath
+	#	}
+	#}
+	
+	option = { # yes
+		name = rotermorgenGCW.100.a
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0 
+				has_global_flag = KX_GER_REV_ALWAYS
+			}
+		}
+		add_stability = 0.02
+		add_political_power = -50
+		hidden_effect = {
+			add_to_variable = { var = Willy_fucks_it_up value = -2 }
+			country_event = {
+				id = rotermorgenGCW.101
+				days = 7
+			}
+		}
+	}
+	option = { # no
+		name = rotermorgenGCW.100.b
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 100
+				has_global_flag = KX_GER_REV_ALWAYS
+			}
+		}
+		add_stability = -0.05
+		add_political_power = 25
+		custom_effect_tooltip = GRU_rm_is_bad_tt
+		hidden_effect = {
+			add_to_variable = { var = Willy_fucks_it_up value = 2 }
+			country_event = {
+				id = rotermorgenGCW.101
+				days = 7
+			}
+		}
+	}
+}
+
+country_event = { #Open soup kitchens
+	id = rotermorgenGCW.101
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenGCW.101" }
+	title = rotermorgenGCW.101.t
+	desc = rotermorgenGCW.101.d
+	picture = GFX_report_event_suppenkueche
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { # no
+		name = rotermorgenGCW.101.a
+		ai_chance = {
+			factor = 0
+		}
+		add_stability = -0.1
+		add_political_power = 30
+		hidden_effect = {
+			add_to_variable = { var = Willy_fucks_it_up value = 2 }
+			country_event = {
+				id = rotermorgenGCW.102
+				days = 7
+			}
+		}
+	}
+	option = { # yes
+		name = rotermorgenGCW.101.b
+		ai_chance = {
+			factor = 100
+		}
+		add_stability = 0.1
+		add_political_power = -20
+		hidden_effect = {
+			add_to_variable = { var = Willy_fucks_it_up value = -1 }
+			country_event = {
+				id = rotermorgenGCW.102
+				days = 7
+			}
+		}
+	}
+}
+
+country_event = { # Bail out Banks
+	id = rotermorgenGCW.102
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenGCW.102" }
+	title = rotermorgenGCW.102.t
+	desc = rotermorgenGCW.102.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { # no
+		name = rotermorgenGCW.102.a
+		ai_chance = {
+			factor = 50
+		}
+		add_stability = -0.25
+		add_political_power = 40
+		hidden_effect = {
+				add_to_variable = { var = Willy_fucks_it_up value = 2 }
+				country_event = {
+				id = rotermorgenGCW.103
+				days = 7
+				}
+		}
+	}
+	option = { # yes
+		name = rotermorgenGCW.102.b
+		ai_chance = {
+			factor = 50
+		}
+		add_stability = 0.15
+		add_political_power = -100
+		hidden_effect = {
+			add_to_variable = { var = Willy_fucks_it_up value = -3 }
+			country_event = {
+				id = rotermorgenGCW.104
+				days = 7
+			}
+		}
+	}
+}
+
+country_event = { # Banks collapse
+	id = rotermorgenGCW.103
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenGCW.103" }
+	title = rotermorgenGCW.103.t
+	desc = rotermorgenGCW.103.d
+	picture = GFX_report_event_banken_kollaps
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { # Help them now 
+		name = rotermorgenGCW.103.a
+		ai_chance = {
+			factor = 100
+		}
+		add_stability = 0.10
+		add_political_power = -150
+		hidden_effect = {
+			add_to_variable = { var = Willy_fucks_it_up value = -2 }
+			country_event = {
+				id = rotermorgenGCW.104
+				days = 7
+			}
+		}
+	}
+	option = { # nope no help
+		name = rotermorgenGCW.103.b
+		ai_chance = {
+			factor = 0
+		}
+		add_stability = -0.10
+		add_political_power = 90
+		hidden_effect = {
+			add_to_variable = { var = Willy_fucks_it_up value = 2 }
+			country_event = {
+				id = rotermorgenGCW.104
+				days = 7
+			}
+		}
+	}
+}
+
+country_event = { # expropirate some rich people
+	id = rotermorgenGCW.104
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenGCW.104" }
+	title = rotermorgenGCW.104.t
+	desc = rotermorgenGCW.104.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { # Hell no!
+		name = rotermorgenGCW.104.a
+		ai_chance = {
+			factor = 90
+		}
+		add_stability = -0.05
+		add_political_power = 200
+		hidden_effect = {
+			add_to_variable = { var = Willy_fucks_it_up value = 1 }
+			country_event = {
+				id = rotermorgenGCW.105
+				days = 7
+			}
+		}
+	}
+	option = { # yes
+		name = rotermorgenGCW.104.b
+		ai_chance = {
+			factor = 10
+		}
+		add_stability = 0.35
+		add_political_power = -250
+		hidden_effect = {
+			add_to_variable = { var = Willy_fucks_it_up value = -4 }
+			country_event = {
+				id = rotermorgenGCW.105
+				days = 7
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = rotermorgenGCW.105
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenGCW.105" }
+	title = rotermorgenGCW.105.t
+	desc = rotermorgenGCW.105.d
+	is_triggered_only = yes
+
+	hidden = yes
+	fire_only_once = yes
+	immediate = {
+		GER = {
+			if = {
+				limit = {
+					OR = {
+						check_variable = { Willy_fucks_it_up > 8 }
+						has_global_flag = KX_GER_REV_ALWAYS
+					}
+				}
+				country_event = {
+					id = rotermorgenGCW.2
+					days = 14
+				}
+			}
+			else = {
+				country_event = {
+					id = rotermorgenGCW.106
+					days = 5
+				}
+			}
+		}
+	}
+}
+
+country_event = { # CW averted!
+	id = rotermorgenGCW.106
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenGCW.106" }
+	title = rotermorgenGCW.106.t
+	desc = rotermorgenGCW.106.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { #
+		name = rotermorgenGCW.106.a
+		add_stability = 0.25
+		add_political_power = 200
+
+		hidden_effect = {
+			set_country_flag = Willy_strong
+		}
+	}
+}
+
+country_event = { # companies crash
+	id = rotermorgenGCW.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenGCW.2" }
+	title = rotermorgenGCW.2.t
+	desc = rotermorgenGCW.2.d
+	picture = GFX_report_event_factories_empty_ger
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { # RebellioN? What nonsense
+		name = rotermorgenGCW.2.a
+		add_stability = -0.15
+		hidden_effect = {
+			country_event = {
+				id = rotermorgenGCW.3
+				days = 7
+			}
+			set_country_flag = Willy_sucks
+		}
+	}
+}
+
+country_event = { # Inform of mass poverty 
+	id = rotermorgenGCW.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenGCW.3" }
+	title = rotermorgenGCW.3.t
+	desc = rotermorgenGCW.3.d
+	picture = GFX_report_event_Arbeitslose
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { # RebellioN? What nonsense
+		name = rotermorgenGCW.3.a
+		add_stability = -0.05
+		hidden_effect = {
+			country_event = {
+				id = rotermorgenGCW.7
+				days = 7
+			}
+		}
+	}
+}
+
+country_event = { # flavour about ruined germany
+	id = rotermorgenGCW.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenGCW.7" }
+	title = rotermorgenGCW.7.t
+	desc = rotermorgenGCW.7.d
+	#picture = GFX_report_event_Arbeitslose
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { # RebellioN? What nonsense
+		name = rotermorgenGCW.7.a
+		add_stability = -0.05
+		hidden_effect = {
+			country_event = {
+				id = rotermorgenGCW.4
+				days = 14
+			}
+		}
+	}
+}
+
+country_event = { # riots!
+	id = rotermorgenGCW.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenGCW.4" }
+	title = rotermorgenGCW.4.t
+	desc = rotermorgenGCW.4.d
+	picture = GFX_report_event_aufstaende
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { # RebellioN? What nonsense
+		name = rotermorgenGCW.4.a
+		add_stability = -0.20
+		hidden_effect = {
+			country_event = {
+				id = rotermorgenGCW.8
+				days = 14
+			}
+		}
+	}
+}
+
+country_event = { # flavour about united front
+	id = rotermorgenGCW.8
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenGCW.8" }
+	title = rotermorgenGCW.8.t
+	desc = rotermorgenGCW.8.d
+	picture = GFX_report_event_unitedfront_gru
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = rotermorgenGCW.8.a
+		add_stability = -0.20
+		country_lock_all_division_template = yes
+		every_state = {
+			limit = {
+				OR = {
+					state = 781
+					state = 51
+					state = 42
+					state = 55
+					state = 57
+					state = 56
+					state = 50
+					state = 780
+					state = 28
+					state = 779
+					state = 8
+					state = 188
+					state = 782
+					state = 67
+					state = 86
+					state = 776
+				}
+			}
+			set_demilitarized_zone = yes
+		}
+		hidden_effect = {
+			country_event = {
+				id = rotermorgenGCW.9
+				days = 14
+			}
+			BEL = {
+				country_event = {
+			    	id = rotermorgenGCW.1001
+			    	days = 7
+			    }
+			}
+			every_owned_state = {
+				limit = {
+					is_core_of =  POL
+				}
+				POL = {
+					transfer_state = PREV
+				}
+			}
+			if = {
+				limit = { country_exists = BEL  }	
+				BEL = {
+					transfer_state = 741
+				}
+			}
+			if = {
+				limit = { country_exists = WLL  }	
+				WLL = {
+					transfer_state = 741
+				}
+			}
+		}
+	}
+}
+country_event = { # flavour about united front II
+	id = rotermorgenGCW.9
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenGCW.9" }
+	title = rotermorgenGCW.9.t
+	desc = rotermorgenGCW.9.d
+	picture = GFX_report_event_unitedfront_2_gru
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { # RebellioN? What nonsense
+		name = rotermorgenGCW.9.a
+		add_stability = -0.20
+		hidden_effect = {
+			country_event = {
+				id = crete.18
+				days = 7
+			}
+			CRE = { country_event = crete.20 }
+		}
+	}
+}
+###
+country_event = { # BEL
+	id = rotermorgenGCW.1001
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenGCW.1001" }
+	title = rotermorgenGCW.1001.t
+	desc = rotermorgenGCW.1001.d
+	picture = GFX_report_event_unitedfront_gru
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = rotermorgenGCW.1001.a
+		trigger = {
+			NOT = {
+				has_government = totalist
+				has_government = syndicalist
+				has_government = radical_socialist
+				has_government = social_democrat
+			}
+		}
+		set_stability = 0.5
+		set_war_support = 0.35
+		add_manpower = 8000
+		set_country_flag = bel_germans_went_home
+
+		remove_ideas = {
+			BEL_anti_german_sentiment3
+			BEL_Flandres_Lost
+			BEL_Military_Struck
+			BEL_Mass_Desertion
+			BEL_Protest_1936
+		}
+
+		GER = {
+			remove_from_faction = BEL
+			end_puppet = BEL
+		}
+
+		country_event = {
+			id = bel.35
+			days = 3
+		}
+
+		BEL = {
+			set_party_name = {
+				ideology = authoritarian_democrat
+                long_name = BEL_Interim_Governement_party_long
+				name = BEL_Interim_Governement_party
+			}
+			create_country_leader = {
+				name = GRU_Belgium_Parliament
+				desc = "POLITICS_BELGIAN_PARLIMENT_DESC"
+				picture = "gfx/leaders/BEL/Portrait_Belgium_Parliament.png"
+				expire = "1.1.1"
+				ideology = authoritarian_democrat_subtype
+			}
+			remove_all_ministers = yes
+			add_ideas = BEL_Paul_Van_Zeeland_hog_sco
+			add_ideas = BEL_Paul_Henri_Spaak_for_sli
+			add_ideas = BEL_Joris_Van_Severen_eco_pau
+			add_ideas = BEL_Abraham_Leon_sec_syn
+			random_unit_leader = {
+				limit = { has_id = 199 }
+				remove_unit_leader = yes
+			}
+		}
+		# White peace out if you're at war
+		separate_peace_all_wars = yes
+	}
+	option = {
+		name = rotermorgenGCW.1001.b
+		trigger = {
+			has_government = totalist
+			has_government = syndicalist
+			has_government = radical_socialist
+			has_government = social_democrat
+		}
+		add_stability = 0.10
+	}
+}
+
+country_event = {
+	id = rotermorgenGCW.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenGCW.5" }
+	title = rotermorgenGCW.5.t
+	desc = rotermorgenGCW.5.d
+	picture = GFX_report_event_rebellion_germany
+
+	trigger = {
+		original_tag = GER
+		date > 1936.11.3
+
+		has_country_flag = Willy_sucks
+		NOT = {
+			has_country_flag = Willy_strong
+		}
+	}
+	
+	fire_only_once = yes
+	immediate = {
+		hidden_effect = {
+			set_global_flag = GER_CIVL_WAR_IS_THING
+
+			country_lock_all_division_template = no
+
+			separate_peace_all_wars = yes
+
+			every_state = {
+				limit = {
+					is_core_of = "GER"
+				}
+				add_core_of = GRU
+			}
+
+			BAT = {
+				country_event = {
+			    	id = KRBAT.31
+			    	days = 2
+			    }
+			}
+
+			FRA = {
+				transfer_state = 779
+				transfer_state = 28
+				transfer_state = 8
+				transfer_state = 29
+			}
+			GEA = {
+				transfer_state = 422
+				add_state_claim = 422
+				transfer_state = 281
+				add_state_claim = 281
+				transfer_state = 710
+				add_state_claim = 710
+			}
+			EGY = {
+				transfer_state = 753
+				add_state_core = 753
+			}
+			BEL = {
+				transfer_state = 741
+			}
+			CAN = {
+				add_opinion_modifier = { target = GRU modifier = KR_disapproves_of_govt }
+				add_opinion_modifier = { target = GRU modifier = KR_trade_sanctions }
+			}
+			NFA = {
+				add_opinion_modifier = { target = GRU modifier = KR_disapproves_of_govt }
+				add_opinion_modifier = { target = GRU modifier = KR_trade_sanctions }
+			}
+			DEH = {
+				add_opinion_modifier = { target = GRU modifier = KR_disapproves_of_govt }
+				add_opinion_modifier = { target = GRU modifier = KR_trade_sanctions }
+			}
+			
+			if={
+				limit = { BEL = { is_subject_of = GER }	}
+				GER = { end_puppet = BEL }
+			}
+			if={
+				limit = { WLL = { is_subject_of = GER }	}	
+				GER = { end_puppet = WLL }
+			}
+			if={
+				limit = { FLN = { is_subject_of = GER }	}	
+				GER = { end_puppet = FLN }
+			}
+			if={
+				limit = { POL = { is_subject_of = GER }	}	
+				GER = { end_puppet = POL }
+			}
+			if={
+				limit = { WHR = { is_subject_of = GER }	}	
+				GER = { end_puppet = WHR }
+			}
+			if={
+				limit = { LIT = { is_subject_of = GER }	}	
+				GER = { end_puppet = LIT }
+			}
+			if={
+				limit = { BAT = { is_subject_of = GER }	}	
+				GER = { end_puppet = BAT }
+			}
+			if = {
+				limit = { MOR = { is_subject_of = GER }	}
+				GER = { end_puppet = MOR }
+			}
+			if = {
+				limit = { GEA = { is_subject_of = GER }	}
+				GER = { end_puppet = GEA }
+			}
+			if = {
+				limit = { MLT = { is_subject_of = GER }	}
+				GER = { end_puppet = MLT }
+			}
+			if = {
+				limit = { CRE = { is_subject_of = GER }	}
+				GER = { end_puppet = CRE }
+			}
+			
+			GRU = {
+				country_event = { id = nmdvpsuper.1 days = 4 }
+
+				delete_unit_template_and_units = { division_template = "Infanterie-Division" }
+				delete_unit_template_and_units = { division_template = "Infanterie-Division mit Artillerie" }
+				delete_unit_template_and_units = { division_template = "Infanterie-Division mit Panzerunterstützung" }
+				delete_unit_template_and_units = { division_template = "Garde Infanterie-Division" }
+				delete_unit_template_and_units = { division_template = "Motorisierte Division" }
+				delete_unit_template_and_units = { division_template = "Auslands-Festungskommando" }
+				delete_unit_template_and_units = { division_template = "Miliztruppe" }
+				delete_unit_template_and_units = { division_template = "Panzer-Division" }
+				delete_unit_template_and_units = { division_template = "Kavallerie-Division" }
+				delete_unit_template_and_units = { division_template = "Marine-Sturmdivision" }
+				delete_unit_template_and_units = { division_template = "Gebirgsjäger" }
+				delete_unit_template_and_units = { division_template = "Kraftwagen Division «Heinrich Himmler»" }
+
+				transfer_state = 781
+				transfer_state = 51
+				transfer_state = 42
+				transfer_state = 55
+				transfer_state = 57
+				transfer_state = 56
+				transfer_state = 50
+				transfer_state = 780
+
+				every_state = {
+		        	limit = {
+		        		OR = {
+		        			state = 781
+		        			state = 51
+		        			state = 42
+		        			state = 55
+		        			state = 57
+		        			state = 56
+		        			state = 50
+		        			state = 780
+		        			state = 28
+		        			state = 779
+		        			state = 8
+		        			state = 741
+		        			state = 188
+		        			state = 782
+		        			state = 67
+		        		}
+		        	}
+		        	set_demilitarized_zone = no
+		        }
+
+				inherit_technology = GER		
+				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 12000 } 
+				add_equipment_to_stockpile = { type = support_equipment amount = 1200 }
+				add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 350 }
+				add_manpower = 600000
+
+				country_lock_all_division_template = yes
+
+				set_cosmetic_tag = GRU_REBELLION
+				set_country_flag = GRU_LEFTYMOD
+				set_country_flag = GRU_REBELLION
+				set_country_flag = GRU_CW_START
+				remove_all_ministers = yes
+
+				add_ideas = GERMAN_CIVIL_WAR_participant
+				add_ideas = GRU_foreign_aid
+				add_ideas = {
+					GRU_Ernst_Thaelmann_hog_syn
+					GRU_Erich_Ollenhauer_for_rso
+					GRU_Jakob_Kaiser_eco_syn
+					GRU_Joseph_Goebbels_sec_tot
+				}
+
+				retire_country_leader = yes
+
+				promote_character = {
+		        	character = GRU_NMKF
+		        	ideology = strasserism_subtype
+		        }
+				promote_character = {
+		        	character = GRU_ZKDR
+		        	ideology = syn_red_junta_subtype
+		        }
+				promote_character = {
+		        	character = GRU_FAUD
+		        	ideology = anarchism_subtype
+		        }
+				promote_character = {
+		        	character = GRU_Kurt_Schuhmacher
+		        	ideology = socdem_democratic_socialism_subtype
+		        }
+				promote_character = {
+		        	character = GRU_Franz_Bluecher
+		        	ideology = classical_liberalism_subtype
+		        }
+				promote_character = {
+		        	character = GRU_Gustav_Krupp
+		        	ideology = marlib_national_liberalism_subtype
+		        }
+				promote_character = {
+		        	character = GRU_Konrad_Adenauer
+		        	ideology = soccon_paneuropeanism_subtype
+		        }
+				promote_character = {
+		        	character = GRU_Schlange_Schoningen
+		        	ideology = authdem_agrarianism_subtype
+		        }
+				promote_character = {
+		        	character = GRU_Alfred_Hugenberg
+		        	ideology = pataut_volkism_subtype
+		        }
+				promote_character = {
+		        	character = GRU_Moeller_van_den_Bruck
+		        	ideology = neokonservatismus_subtype
+		        }
+
+				create_field_marshal = {
+					name = GRU_general_Paul_Lensch
+					portrait_path = "gfx/leaders/GRU/NEW/Portrait_Germany_Paul_Lensch.png"
+					traits = { politically_connected germsoc_rev_leaders }
+					skill = 1
+					attack_skill = 2
+					defense_skill = 1
+					planning_skill = 2
+					logistics_skill = 2
+				}
+				create_field_marshal = {
+					name = GRU_general_Josef_Goebbels
+					portrait_path = "gfx/leaders/GRU/Portrait_Germany_Josef_Goebbels_13.png"
+					traits = { politically_connected Nazbol_rev_leaders }
+					skill = 3
+					attack_skill = 2
+					defense_skill = 1
+					planning_skill = 2
+					logistics_skill = 3
+				}
+				create_field_marshal = {
+					name = GRU_general_Ernst_Thalmann
+					portrait_path = "gfx/leaders/GRU/Portrait_Germany_Ernst_Thalmann.png"
+					traits = { politically_connected red_guard_leaders }
+					skill = 2
+
+					attack_skill = 2
+					defense_skill = 1
+					planning_skill = 3
+					logistics_skill = 4
+				}
+				create_corps_commander = {
+					name = GRU_general_Heinrich_Laufenberg
+					portrait_path = "gfx/leaders/GRU/NEW/Portrait_Germany_Heinrich_Laufenberg.png"
+					traits = { politically_connected red_guard_leaders }
+					skill = 2
+
+					attack_skill = 2
+					defense_skill = 2
+					planning_skill = 2
+					logistics_skill = 1
+				}
+				create_corps_commander = {
+					name = GRU_general_Max_Reimann
+					portrait_path = "gfx/leaders/GRU/NEW/Portrait_Germany_Max_Reimann.png"
+					traits = { politically_connected red_guard_leaders }
+					skill = 2
+
+					attack_skill = 1
+					defense_skill = 2
+					planning_skill = 2
+					logistics_skill = 2
+				}
+				create_corps_commander = {
+					name = GRU_general_Willi_Munzenberg
+					portrait_path = "gfx/leaders/GRU/NEW/Portrait_Germany_Willi_Munzenberg.png"
+					traits = { politically_connected red_guard_leaders }
+					skill = 2
+
+					attack_skill = 1
+					defense_skill = 2
+					planning_skill = 2
+					logistics_skill = 2
+				}
+				create_corps_commander = {
+					name = GRU_general_Willy_Brandt
+					portrait_path = "gfx/leaders/GRU/NEW/Portrait_Germany_Willy_Brandt.png"
+					traits = { politically_connected radsoc_rev_leaders }
+					skill = 2
+
+					attack_skill = 2
+					defense_skill = 1
+					planning_skill = 2
+					logistics_skill = 2
+				}
+				create_corps_commander = {
+					name = GRU_general_Walter_Ulbricht
+					portrait_path = "gfx/leaders/GRU/NEW/Portrait_GRU_Walter_Ulbricht.png"
+					traits = { politically_connected red_guard_leaders }
+					skill = 2
+
+					attack_skill = 2
+					defense_skill = 1
+					planning_skill = 1
+					logistics_skill = 1
+				}
+				create_corps_commander = {
+					name = GRU_general_Willy_Leow
+					portrait_path = "gfx/leaders/GRU/Portrait_Germany_Willy_Leow.png"
+					traits = { politically_connected red_guard_leaders }
+					skill = 3
+
+					attack_skill = 2
+					defense_skill = 3
+					planning_skill = 2
+					logistics_skill = 1
+				}
+				create_corps_commander = {
+					name = GRU_general_Wilhelm_Pieck
+					portrait_path = "gfx/leaders/GRU/Portrait_Germany_Wilhelm_Pieck_I.png"
+					traits = { politically_connected red_guard_leaders }
+					skill = 3
+
+					attack_skill = 1
+					defense_skill = 2
+					planning_skill = 2
+					logistics_skill = 3
+				}
+				create_corps_commander = {
+					name = GRU_general_Erich_Honecker
+					portrait_path = "gfx/leaders/GRU/Portrait_Germany_Erich_Honecker_young.png"
+					traits = { politically_connected red_guard_leaders }
+					skill = 3
+
+					attack_skill = 3
+					defense_skill = 1
+					planning_skill = 2
+					logistics_skill = 2
+				}
+				create_field_marshal = {
+					name = GRU_general_Karl_Liebknecht
+					portrait_path = "gfx/leaders/GRU/Portrait_Germany_Karl_Liebknecht.png"
+					traits = { politically_connected radsoc_rev_leaders }
+					skill = 3
+
+					attack_skill = 2
+					defense_skill = 1
+					planning_skill = 4
+					logistics_skill = 3
+				}
+				create_corps_commander = {
+					name = GRU_Karl_Radek
+					portrait_path = "gfx/leaders/RUS/Portrait_RUS_Karl_Radek.png"
+					traits = { politically_connected cosmopolitan_war_tourist }
+					skill = 3
+
+					attack_skill = 4
+					defense_skill = 3
+					planning_skill = 3
+					logistics_skill = 2
+					id = 5558
+				}
+				create_corps_commander = {
+					name = GRU_general_Ernst_Rhoem
+					portrait_path = "gfx/leaders/GRU/Portrait_Germany_Ernst_Rhoem.png"
+					traits = { politically_connected Nazbol_rev_leaders }
+					skill = 3
+
+					attack_skill = 2
+					defense_skill = 2
+					planning_skill = 4
+					logistics_skill = 4
+					id = 5555
+				}
+				create_corps_commander = {
+					name = GRU_general_Karl_Erns
+					portrait_path = "gfx/leaders/GRU/Portrait_Germany_Karl_Ernst_revolution.png"
+					traits = { politically_connected Nazbol_rev_leaders }
+					skill = 3
+
+					attack_skill = 3
+					defense_skill = 2
+					planning_skill = 1
+					logistics_skill = 3
+					id = 5556
+				}
+				create_corps_commander = {
+					name = GRU_general_Gregor_Strasser
+					portrait_path = "gfx/leaders/GRU/Portrait_Germany_Gregor_Strasser.png"
+					traits = { politically_connected Nazbol_rev_leaders }
+					skill = 3
+
+					attack_skill = 1
+					defense_skill = 2
+					planning_skill = 1
+					logistics_skill = 3
+				}
+				create_corps_commander = {
+					name = GRU_general_Horst_Wessel
+					portrait_path = "gfx/leaders/GRU/Portrait_Germany_Horst_Wessel.png"
+					traits = { media_personality politically_connected Nazbol_rev_leaders }
+					skill = 3
+
+					attack_skill = 4
+					defense_skill = 2
+					planning_skill = 4
+					logistics_skill = 2
+					id = 5557
+				}
+				create_corps_commander = {
+					name = GRU_general_Otto_Braun
+					portrait_path = "gfx/leaders/GRU/Portrait_Germany_Otto_Braun.png"
+					traits = { politically_connected red_guard_leaders }
+					skill = 3
+
+					attack_skill = 5
+					defense_skill = 1
+					planning_skill = 2
+					logistics_skill = 2
+				}
+				create_corps_commander = {
+					name = GRU_general_Ernst_meyer
+					portrait_path = "gfx/leaders/GRU/Portrait_Germany_Ernst_meyer.png"
+					traits = { politically_connected radsoc_rev_leaders }
+					skill = 3
+
+					attack_skill = 2
+					defense_skill = 2
+					planning_skill = 4
+					logistics_skill = 2
+				}
+				create_corps_commander = {
+					name = GRU_general_Karl_Artelt
+					portrait_path = "gfx/leaders/GRU/Portrait_Germany_Karl_Artelt.png"
+					traits = { politically_connected radsoc_rev_leaders }
+					skill = 3
+
+					attack_skill = 1
+					defense_skill = 4
+					planning_skill = 4
+					logistics_skill = 1
+				}
+				create_corps_commander = {
+					name = GRU_general_Albert_Schreiner
+					portrait_path = "gfx/leaders/GRU/Portrait_Germany_Albert_Schreiner.png"
+					traits = { politically_connected red_guard_leaders }
+					skill = 2
+
+					attack_skill = 3
+					defense_skill = 2
+					planning_skill =2
+					logistics_skill = 2
+				}
+				create_corps_commander = {
+					name = GRU_general_Emil_Barth
+					portrait_path = "gfx/leaders/GRU/Portrait_Germany_Emil_Barth.png"
+					traits = { politically_connected radsoc_rev_leaders }
+					skill = 3
+
+					attack_skill = 3
+					defense_skill = 1
+					planning_skill = 2
+					logistics_skill = 2
+				}
+				every_army_leader = { set_unit_leader_flag = revolutionary_leader }
+				
+				set_politics = { ruling_party = syndicalist last_election = "1.1.1" elections_allowed = no }
+				set_popularities = { totalist = 20 syndicalist = 30 radical_socialist = 20 social_democrat = 10 social_liberal = 6 market_liberal = 3 social_conservative = 6 authoritarian_democrat = 5 }
+				load_focus_tree = { tree = gru_totalist_CW }
+
+				set_party_name = { ideology = totalist long_name = GRU_REBELLION_NM_B_PARTY name = GRU_REBELLION_NM_B_PARTY }
+				set_party_name = { ideology = syndicalist long_name = GRU_REBELLION_PARTY name = GRU_REBELLION_PARTY }
+				set_party_name = { ideology = radical_socialist long_name = GRU_REBELLION_FAUD_PARTY name = GRU_REBELLION_FAUD_PARTY }
+				set_party_name = { ideology = social_liberal long_name = GRU_SOCLIB_PARTY_long name = GRU_SOCLIB_PARTY }
+				set_party_name = { ideology = market_liberal long_name = GRU_MARLIB_PARTY_long name = GRU_MARLIB_PARTY }
+				set_party_name = { ideology = social_conservative long_name = GRU_CONS_PARTY_long name = GRU_CONS_PARTY }
+				set_party_name = { ideology = national_populist long_name = GER_national_populist_party_long name = GER_national_populist_party }
+
+				add_ai_strategy = {
+		        	type = prepare_for_war
+		        	id = GER
+		        	value = 1000
+		        }
+				add_ai_strategy = {
+		        	type = prepare_for_war
+		        	id = GER
+		        	value = 1000
+		        }
+			}
+			GER = {
+				delete_unit_template_and_units = { division_template = "Infanterie-Division" }
+				delete_unit_template_and_units = { division_template = "Infanterie-Division mit Artillerie" }
+				delete_unit_template_and_units = { division_template = "Infanterie-Division mit Panzerunterstützung" }
+				delete_unit_template_and_units = { division_template = "Garde Infanterie-Division" }
+				delete_unit_template_and_units = { division_template = "Motorisierte Division" }
+				delete_unit_template_and_units = { division_template = "Auslands-Festungskommando" }
+				delete_unit_template_and_units = { division_template = "Miliztruppe" }
+				delete_unit_template_and_units = { division_template = "Panzer-Division" }
+				delete_unit_template_and_units = { division_template = "Kavallerie-Division" }
+				delete_unit_template_and_units = { division_template = "Marine-Sturmdivision" }
+				delete_unit_template_and_units = { division_template = "Gebirgsjäger" }
+				
+				add_ideas = GERMAN_CIVIL_WAR_participant
+				add_timed_idea = {
+		        	idea = GRU_ger_dying_faterland
+		        	days = 180
+		        }
+
+				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 8000 }
+				add_equipment_to_stockpile = { type = support_equipment amount = 500 }
+				add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 800 }
+				
+				set_country_flag = GER_LEFT_REVOLT
+				transfer_units_fraction= {
+					target = GRU
+					size = 0
+					stockpile_ratio = 0.5
+					army_ratio = 0
+					navy_ratio = 0.3
+					air_ratio = 0.3
+					keep_unit_leaders_trigger = {
+						NOT = { has_unit_leader_flag = my_test_flag }
+					}
+				}
+					
+				dismantle_faction = yes
+
+				add_ai_strategy = {
+		        	type = prepare_for_war
+		        	id = GRU
+		        	value = 1000
+		        }
+			    add_ai_strategy = {
+		        	type = conquer
+		        	id = GRU
+		        	value = 1000
+		        }
+
+				delete_unit_template_and_units = { division_template = "Пехотная дивизия" }
+				delete_unit_template_and_units = { division_template = "Артиллерийская пехотная дивизия" }
+				delete_unit_template_and_units = { division_template = "Пехотная дивизия с бронетанковой поддержкой" }
+				delete_unit_template_and_units = { division_template = "Гвардейская стрелковая дивизия" }
+				delete_unit_template_and_units = { division_template = "Крафтваген дивизия" }
+				delete_unit_template_and_units = { division_template = "Аусландс-Фестунгскоммандо" }
+				delete_unit_template_and_units = { division_template = "Милицтруппе" }
+				delete_unit_template_and_units = { division_template = "Панцер дивизия" }
+				delete_unit_template_and_units = { division_template = "Кавалерийская дивизия" }
+				delete_unit_template_and_units = { division_template = "Морская Штурм-Дивизия" }
+				delete_unit_template_and_units = { division_template = "Гебиргсъегер" }
+			}
+		}
+	}
+	
+	option = { # stay what you are
+		name = rotermorgenGCW.5.a
+		hidden_effect = {
+			GRU = {
+				country_event = rmfix.1
+
+				delete_unit_template_and_units = { division_template = "Infanterie-Division" }
+				delete_unit_template_and_units = { division_template = "Infanterie-Division mit Artillerie" }
+				delete_unit_template_and_units = { division_template = "Infanterie-Division mit Panzerunterstützung" }
+				delete_unit_template_and_units = { division_template = "Garde Infanterie-Division" }
+				delete_unit_template_and_units = { division_template = "Motorisierte Division" }
+				delete_unit_template_and_units = { division_template = "Auslands-Festungskommando" }
+				delete_unit_template_and_units = { division_template = "Miliztruppe" }
+				delete_unit_template_and_units = { division_template = "Panzer-Division" }
+				delete_unit_template_and_units = { division_template = "Kavallerie-Division" }
+				delete_unit_template_and_units = { division_template = "Marine-Sturmdivision" }
+				delete_unit_template_and_units = { division_template = "Gebirgsjäger" }
+				delete_unit_template_and_units = { division_template = "Kraftwagen Division «Heinrich Himmler»" }
+				
+				country_lock_all_division_template = no
+
+			    division_template = {
+			    	name = "Revolutionary militia"
+			    	division_names_group = GRU_rev_mil
+					is_locked = yes
+			    	regiments = {
+			    		irregular_infantry = { x = 0 y = 0 }
+		                irregular_infantry = { x = 0 y = 1 }
+		                infantry = { x = 0 y = 2 }
+		                irregular_infantry = { x = 1 y = 0 }
+		                irregular_infantry = { x = 1 y = 1 }
+		                infantry = { x = 1 y = 2 }
+		                militia = { x = 2 y = 0 }
+		                militia = { x = 2 y = 1 }
+		                militia = { x = 2 y = 2 }
+			    		militia = { x = 3 y = 0 }
+		                militia = { x = 3 y = 1 }
+						militia = { x = 3 y = 2 }
+			    	}
+			    	support = {
+						recon = { x = 0 y = 0 }
+			    		engineer = { x = 0 y = 1 }
+			    		artillery = { x = 0 y = 2 }
+			    	}
+			    	priority = 1
+			    }
+		        random_owned_state = {
+		        	prioritize =  { 50 }
+		        	create_unit = {
+		        		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+		        		owner = GRU
+		        	}
+		        	create_unit = {
+		        		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+		        		owner = GRU
+		        	}
+		        	create_unit = {
+		        		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+		        		owner = GRU
+		        	}
+		        	create_unit = {
+		        		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+		        		owner = GRU
+		        	}
+		        	create_unit = {
+		        		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+		        		owner = GRU
+		        	}
+					create_unit = {
+		        		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+		        		owner = GRU
+		        	}
+		        }
+			    random_owned_state = {
+			    	prioritize =  { 55 }
+			    	create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    }
+			    random_owned_state = {
+			    	prioritize =  { 57 }
+			    	create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    }
+			    random_owned_state = {
+			    	prioritize =  { 56 }
+			    	create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+					create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    }
+			    division_template = {
+			    	name = "Volkspolitzai Division"
+			    	division_names_group = GRU_rev_mil_2
+			    	regiments = {
+		                militia = { x = 0 y = 0 }
+		                militia = { x = 0 y = 1 }
+		                militia = { x = 0 y = 2 }
+			    		militia = { x = 1 y = 0 }
+		                militia = { x = 1 y = 1 }
+			    		militia = { x = 1 y = 2 }
+			    	}
+			    	support = {
+			    		military_police = { x = 0 y = 0 }
+			    	}
+			    	priority = 0
+			    }
+			    random_owned_state = {
+			    	prioritize =  { 51 }
+			    	create_unit = {
+			    		division = "division_template = \"Volkspolitzai Division\" start_experience_factor = 0.1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Volkspolitzai Division\" start_experience_factor = 0.1"
+			    		owner = GRU
+			    	}
+			    }
+			    random_owned_state = {
+			    	prioritize =  { 42 }
+			    	create_unit = {
+			    		division = "division_template = \"Volkspolitzai Division\" start_experience_factor = 0.1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Volkspolitzai Division\" start_experience_factor = 0.1"
+			    		owner = GRU
+			    	}
+			    }
+			    division_template = {
+			    	name = "Sonderkommando R.A.M."
+			    	division_names_group = GRU_rev_mil_3
+			    	is_locked = yes
+			    	regiments = {
+		                infantry = { x = 0 y = 0 }
+		                infantry = { x = 0 y = 1 }
+		                infantry = { x = 0 y = 2 }
+			    		infantry = { x = 0 y = 3 }
+			    		infantry = { x = 1 y = 0 }
+		                infantry = { x = 1 y = 1 }
+			    		infantry = { x = 1 y = 2 }
+			    		infantry = { x = 2 y = 0 }
+		                infantry = { x = 2 y = 1 }
+			    		infantry = { x = 2 y = 2 }
+			    		infantry = { x = 3 y = 0 }
+			    		artillery_brigade = { x = 3 y = 1 }
+			    	}
+			    	support = {
+			    		mot_recon = { x = 0 y = 0 }
+			    		engineer = { x = 0 y = 1 }
+			    		artillery = { x = 0 y = 2 }
+			    	}
+			    	priority = 2
+			    }
+			    random_owned_state = {
+			    	prioritize =  { 50 }
+			    	create_unit = {
+			    		division = "division_template = \"Sonderkommando R.A.M.\" start_experience_factor = 0.4 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Sonderkommando R.A.M.\" start_experience_factor = 0.4 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    }
+			    random_owned_state = {
+			    	prioritize =  { 780 }
+			    	create_unit = {
+			    		division = "division_template = \"Sonderkommando R.A.M.\" start_experience_factor = 0.4 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Sonderkommando R.A.M.\" start_experience_factor = 0.4 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    }
+			    division_template = {
+			    	name = "Sonderkommando FAUD"
+			    	division_names_group = GRU_rev_mil_4
+			    	is_locked = yes
+			    	regiments = {
+		                infantry = { x = 0 y = 0 }
+		                infantry = { x = 0 y = 1 }
+		                infantry = { x = 0 y = 2 }
+			    		infantry = { x = 0 y = 3 }
+			    		infantry = { x = 1 y = 0 }
+		                infantry = { x = 1 y = 1 }
+			    		infantry = { x = 1 y = 2 }
+			    		infantry = { x = 2 y = 0 }
+		                infantry = { x = 2 y = 1 }
+			    		infantry = { x = 2 y = 2 }
+			    		infantry = { x = 3 y = 0 }
+			    		artillery_brigade = { x = 3 y = 1 }
+			    	}
+			    	support = {
+			    		mot_recon = { x = 0 y = 0 }
+			    		engineer = { x = 0 y = 1 }
+			    		artillery = { x = 0 y = 2 }
+			    	}
+			    	priority = 2
+			    }
+			    random_owned_state = {
+			    	prioritize =  { 55 }
+			    	create_unit = {
+			    		division = "division_template = \"Sonderkommando FAUD\" start_experience_factor = 0.3 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Sonderkommando FAUD\" start_experience_factor = 0.3 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    }
+			    random_owned_state = {
+			    	prioritize =  { 42 }
+			    	create_unit = {
+			    		division = "division_template = \"Sonderkommando FAUD\" start_experience_factor = 0.3 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Sonderkommando FAUD\" start_experience_factor = 0.3 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    }
+			    division_template = {
+			    	name = "Sonderkommando NM-KV/SNF"
+			    	division_names_group = GRU_rev_mil_5
+			    	is_locked = yes
+			    	regiments = {
+		                infantry = { x = 0 y = 0 }
+		                infantry = { x = 0 y = 1 }
+		                infantry = { x = 0 y = 2 }
+			    		infantry = { x = 0 y = 3 }
+			    		infantry = { x = 1 y = 0 }
+		                infantry = { x = 1 y = 1 }
+			    		infantry = { x = 1 y = 2 }
+			    		infantry = { x = 2 y = 0 }
+		                infantry = { x = 2 y = 1 }
+			    		infantry = { x = 2 y = 2 }
+			    		infantry = { x = 3 y = 0 }
+			    		artillery_brigade = { x = 3 y = 1 }
+			    	}
+			    	support = {
+			    		mot_recon = { x = 0 y = 0 }
+			    		engineer = { x = 0 y = 1 }
+			    		artillery = { x = 0 y = 2 }
+						field_hospital = { x = 0 y = 3 }
+			    	}
+			    	priority = 2
+			    }
+			    random_owned_state = {
+			    	prioritize =  { 57 }
+			    	create_unit = {
+			    		division = "division_template = \"Sonderkommando NM-KV/SNF\" start_experience_factor = 0.5 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Sonderkommando NM-KV/SNF\" start_experience_factor = 0.5 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    }
+			    random_owned_state = {
+			    	prioritize = { 56 }
+			    	create_unit = {
+			    		division = "division_template = \"Sonderkommando NM-KV/SNF\" start_experience_factor = 0.5 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Sonderkommando NM-KV/SNF\" start_experience_factor = 0.5 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    }
+
+				delete_unit_template_and_units = { division_template = "Пехотная дивизия" }
+				delete_unit_template_and_units = { division_template = "Артиллерийская пехотная дивизия" }
+				delete_unit_template_and_units = { division_template = "Пехотная дивизия с бронетанковой поддержкой" }
+				delete_unit_template_and_units = { division_template = "Гвардейская стрелковая дивизия" }
+				delete_unit_template_and_units = { division_template = "Крафтваген дивизия" }
+				delete_unit_template_and_units = { division_template = "Аусландс-Фестунгскоммандо" }
+				delete_unit_template_and_units = { division_template = "Милицтруппе" }
+				delete_unit_template_and_units = { division_template = "Панцер дивизия" }
+				delete_unit_template_and_units = { division_template = "Кавалерийская дивизия" }
+				delete_unit_template_and_units = { division_template = "Морская Штурм-Дивизия" }
+				delete_unit_template_and_units = { division_template = "Гебиргсъегер" }
+
+				news_event = { id = gruothernews.1 days = 10 }
+			}
+			GER = {
+				country_event = rmfix.2
+
+				remove_ideas = GER_quenched_militarism
+				remove_ideas = GER_quenched_militarism2
+
+				delete_unit_template_and_units = { division_template = "Infanterie-Division" }
+				delete_unit_template_and_units = { division_template = "Infanterie-Division mit Artillerie" }
+				delete_unit_template_and_units = { division_template = "Infanterie-Division mit Panzerunterstützung" }
+				delete_unit_template_and_units = { division_template = "Garde Infanterie-Division" }
+				delete_unit_template_and_units = { division_template = "Motorisierte Division" }
+				delete_unit_template_and_units = { division_template = "Auslands-Festungskommando" }
+				delete_unit_template_and_units = { division_template = "Miliztruppe" }
+				delete_unit_template_and_units = { division_template = "Panzer-Division" }
+				delete_unit_template_and_units = { division_template = "Kavallerie-Division" }
+				delete_unit_template_and_units = { division_template = "Marine-Sturmdivision" }
+				delete_unit_template_and_units = { division_template = "Gebirgsjäger" }
+
+				country_lock_all_division_template = no
+				
+				##
+				division_template = {
+					name = "Infanterie-Division"
+					division_names_group = GER_INF_01
+					is_locked = yes
+					regiments = {
+						infantry = { x = 0 y = 0 }
+		                infantry = { x = 0 y = 1 }
+		                infantry = { x = 0 y = 2 }
+		                infantry = { x = 1 y = 0 }
+		                infantry = { x = 1 y = 1 }
+		                infantry = { x = 1 y = 2 }
+		                infantry = { x = 2 y = 0 }
+		                infantry = { x = 2 y = 1 }
+		                infantry = { x = 2 y = 2 }
+					}
+					support = {
+						recon = { x = 0 y = 0 }
+						engineer = { x = 0 y = 1 }
+						artillery = { x = 0 y = 2 }
+						field_hospital = { x = 0 y = 3 }
+					}
+					priority = 1
+				}
+				division_template = {
+					name = "Motorisierte Division"
+					division_names_group = GER_MOT_02
+					is_locked = yes
+					regiments = {
+						motorized = { x = 0 y = 0 }
+						motorized = { x = 0 y = 1 }
+						motorized = { x = 0 y = 2 }
+						
+						motorized = { x = 1 y = 0 }
+						motorized = { x = 1 y = 1 }
+						motorized = { x = 1 y = 2 }
+					}
+					support = {
+						mot_recon = { x = 0 y = 0 }
+						engineer = { x = 0 y = 1 }
+						artillery = { x = 0 y = 2 }
+					}
+					priority = 2
+				}
+				division_template = {
+					name = "Kraftwagen Division «Heinrich Himmler»"
+					division_names_group = GER_MOT_02
+					is_locked = yes
+					regiments = {
+						motorized = { x = 0 y = 0 }
+						motorized = { x = 0 y = 1 }
+						motorized = { x = 0 y = 2 }
+						motorized = { x = 0 y = 3 }
+						
+						motorized = { x = 1 y = 0 }
+						motorized = { x = 1 y = 1 }
+						motorized = { x = 1 y = 2 }
+						motorized = { x = 1 y = 3 }
+
+						mot_artillery_brigade = { x = 2 y = 0 }
+
+						motorized = { x = 3 y = 0 }
+						motorized = { x = 3 y = 1 }
+						
+						motorized = { x = 4 y = 0 }
+					}
+					support = {
+						mot_recon = { x = 0 y = 0 }
+						engineer = { x = 0 y = 1 }
+						anti_air = { x = 0 y = 2 }
+						field_hospital = { x = 0 y = 3 }
+					}
+					priority = 2
+				}
+				division_template = {
+					name = "Kavallerie-Division"
+					division_names_group = GER_MOB_01
+					is_locked = yes
+					regiments = {
+						cavalry = { x = 0 y = 0 }
+		                cavalry = { x = 0 y = 1 }
+		                cavalry = { x = 0 y = 2 }
+		                cavalry = { x = 1 y = 0 }
+		                cavalry = { x = 1 y = 1 }
+		                cavalry = { x = 1 y = 2 }
+		                light_armor = { x = 2 y = 0 }
+					}
+					support = {
+						military_police = { x = 0 y = 0 }
+					}
+					priority = 0
+				}
+				random_owned_state = {
+					prioritize =  { 52 }
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+				}
+				random_owned_state = {
+					prioritize =  { 54 }
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+				}
+				random_owned_state = {
+					prioritize =  { 60 }
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+				}
+				random_owned_state = {
+					prioritize =  { 59 }
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+				}
+				random_owned_state = {
+					prioritize =  { 60 }
+					create_unit = {
+						division = "name = \"Kraftwagen Division «Heinrich Himmler»\" division_template = \"Kraftwagen Division «Heinrich Himmler»\" start_experience_factor = 0.75 start_equipment_factor = 1"
+						owner = GER
+					}
+				}
+				random_owned_state = {
+					prioritize =  { 64 }
+					create_unit = {
+						division = "division_template = \"Motorisierte Division\" start_experience_factor = 0.5"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Motorisierte Division\" start_experience_factor = 0.5"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Motorisierte Division\" start_experience_factor = 0.5"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Motorisierte Division\" start_experience_factor = 0.5"
+						owner = GER
+					}
+				}
+				random_owned_state = {
+					prioritize =  { 65 }
+					create_unit = {
+						division = "division_template = \"Kavallerie-Division\" start_experience_factor = 0.2"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Kavallerie-Division\" start_experience_factor = 0.2"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Kavallerie-Division\" start_experience_factor = 0.2"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Kavallerie-Division\" start_experience_factor = 0.2"
+						owner = GER
+					}
+				}
+
+				delete_unit_template_and_units = { division_template = "Пехотная дивизия" }
+				delete_unit_template_and_units = { division_template = "Артиллерийская пехотная дивизия" }
+				delete_unit_template_and_units = { division_template = "Пехотная дивизия с бронетанковой поддержкой" }
+				delete_unit_template_and_units = { division_template = "Гвардейская стрелковая дивизия" }
+				delete_unit_template_and_units = { division_template = "Крафтваген дивизия" }
+				delete_unit_template_and_units = { division_template = "Аусландс-Фестунгскоммандо" }
+				delete_unit_template_and_units = { division_template = "Милицтруппе" }
+				delete_unit_template_and_units = { division_template = "Панцер дивизия" }
+				delete_unit_template_and_units = { division_template = "Кавалерийская дивизия" }
+				delete_unit_template_and_units = { division_template = "Морская Штурм-Дивизия" }
+				delete_unit_template_and_units = { division_template = "Гебиргсъегер" }
+
+				news_event = { id = gruothernews.1 days = 10 }
+			}
+		}
+	}
+	option = {
+		name = rotermorgenGCW.5.b
+		GRU = {
+		    change_tag_from = GER
+		}
+		hidden_effect = {
+			GRU = {
+				country_event = rmfix.1
+				
+				delete_unit_template_and_units = { division_template = "Infanterie-Division" }
+				delete_unit_template_and_units = { division_template = "Infanterie-Division mit Artillerie" }
+				delete_unit_template_and_units = { division_template = "Infanterie-Division mit Panzerunterstützung" }
+				delete_unit_template_and_units = { division_template = "Garde Infanterie-Division" }
+				delete_unit_template_and_units = { division_template = "Motorisierte Division" }
+				delete_unit_template_and_units = { division_template = "Auslands-Festungskommando" }
+				delete_unit_template_and_units = { division_template = "Miliztruppe" }
+				delete_unit_template_and_units = { division_template = "Panzer-Division" }
+				delete_unit_template_and_units = { division_template = "Kavallerie-Division" }
+				delete_unit_template_and_units = { division_template = "Marine-Sturmdivision" }
+				delete_unit_template_and_units = { division_template = "Gebirgsjäger" }
+				delete_unit_template_and_units = { division_template = "Kraftwagen Division «Heinrich Himmler»" }
+				
+				country_lock_all_division_template = no
+
+			    division_template = {
+			    	name = "Revolutionary militia"
+			    	division_names_group = GRU_rev_mil
+					is_locked = yes
+			    	regiments = {
+			    		irregular_infantry = { x = 0 y = 0 }
+		                irregular_infantry = { x = 0 y = 1 }
+		                infantry = { x = 0 y = 2 }
+		                irregular_infantry = { x = 1 y = 0 }
+		                irregular_infantry = { x = 1 y = 1 }
+		                infantry = { x = 1 y = 2 }
+		                militia = { x = 2 y = 0 }
+		                militia = { x = 2 y = 1 }
+		                militia = { x = 2 y = 2 }
+			    		militia = { x = 3 y = 0 }
+		                militia = { x = 3 y = 1 }
+						militia = { x = 3 y = 2 }
+			    	}
+			    	support = {
+						recon = { x = 0 y = 0 }
+			    		engineer = { x = 0 y = 1 }
+			    		artillery = { x = 0 y = 2 }
+			    	}
+			    	priority = 1
+			    }
+		        random_owned_state = {
+		        	prioritize =  { 50 }
+		        	create_unit = {
+		        		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+		        		owner = GRU
+		        	}
+		        	create_unit = {
+		        		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+		        		owner = GRU
+		        	}
+		        	create_unit = {
+		        		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+		        		owner = GRU
+		        	}
+		        	create_unit = {
+		        		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+		        		owner = GRU
+		        	}
+		        	create_unit = {
+		        		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+		        		owner = GRU
+		        	}
+					create_unit = {
+		        		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+		        		owner = GRU
+		        	}
+		        }
+			    random_owned_state = {
+			    	prioritize =  { 55 }
+			    	create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    }
+			    random_owned_state = {
+			    	prioritize =  { 57 }
+			    	create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    }
+			    random_owned_state = {
+			    	prioritize = { 56 }
+			    	create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+					create_unit = {
+			    		division = "division_template = \"Revolutionary militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    }
+			    division_template = {
+			    	name = "Volkspolitzai Division"
+			    	division_names_group = GRU_rev_mil_2
+			    	regiments = {
+		                militia = { x = 0 y = 0 }
+		                militia = { x = 0 y = 1 }
+		                militia = { x = 0 y = 2 }
+			    		militia = { x = 1 y = 0 }
+		                militia = { x = 1 y = 1 }
+			    		militia = { x = 1 y = 2 }
+			    	}
+			    	support = {
+			    		military_police = { x = 0 y = 0 }
+			    	}
+			    	priority = 0
+			    }
+			    random_owned_state = {
+			    	prioritize =  { 51 }
+			    	create_unit = {
+			    		division = "division_template = \"Volkspolitzai Division\" start_experience_factor = 0.1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Volkspolitzai Division\" start_experience_factor = 0.1"
+			    		owner = GRU
+			    	}
+			    }
+			    random_owned_state = {
+			    	prioritize =  { 42 }
+			    	create_unit = {
+			    		division = "division_template = \"Volkspolitzai Division\" start_experience_factor = 0.1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Volkspolitzai Division\" start_experience_factor = 0.1"
+			    		owner = GRU
+			    	}
+			    }
+			    division_template = {
+			    	name = "Sonderkommando R.A.M."
+			    	division_names_group = GRU_rev_mil_3
+			    	is_locked = yes
+			    	regiments = {
+		                infantry = { x = 0 y = 0 }
+		                infantry = { x = 0 y = 1 }
+		                infantry = { x = 0 y = 2 }
+			    		infantry = { x = 0 y = 3 }
+			    		infantry = { x = 1 y = 0 }
+		                infantry = { x = 1 y = 1 }
+			    		infantry = { x = 1 y = 2 }
+			    		infantry = { x = 2 y = 0 }
+		                infantry = { x = 2 y = 1 }
+			    		infantry = { x = 2 y = 2 }
+			    		infantry = { x = 3 y = 0 }
+			    		artillery_brigade = { x = 3 y = 1 }
+			    	}
+			    	support = {
+			    		mot_recon = { x = 0 y = 0 }
+			    		engineer = { x = 0 y = 1 }
+			    		artillery = { x = 0 y = 2 }
+			    	}
+			    	priority = 2
+			    }
+			    random_owned_state = {
+			    	prioritize =  { 50 }
+			    	create_unit = {
+			    		division = "division_template = \"Sonderkommando R.A.M.\" start_experience_factor = 0.4 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Sonderkommando R.A.M.\" start_experience_factor = 0.4 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    }
+			    random_owned_state = {
+			    	prioritize =  { 780 }
+			    	create_unit = {
+			    		division = "division_template = \"Sonderkommando R.A.M.\" start_experience_factor = 0.4 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Sonderkommando R.A.M.\" start_experience_factor = 0.4 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    }
+			    division_template = {
+			    	name = "Sonderkommando FAUD"
+			    	division_names_group = GRU_rev_mil_4
+			    	is_locked = yes
+			    	regiments = {
+		                infantry = { x = 0 y = 0 }
+		                infantry = { x = 0 y = 1 }
+		                infantry = { x = 0 y = 2 }
+			    		infantry = { x = 0 y = 3 }
+			    		infantry = { x = 1 y = 0 }
+		                infantry = { x = 1 y = 1 }
+			    		infantry = { x = 1 y = 2 }
+			    		infantry = { x = 2 y = 0 }
+		                infantry = { x = 2 y = 1 }
+			    		infantry = { x = 2 y = 2 }
+			    		infantry = { x = 3 y = 0 }
+			    		artillery_brigade = { x = 3 y = 1 }
+			    	}
+			    	support = {
+			    		mot_recon = { x = 0 y = 0 }
+			    		engineer = { x = 0 y = 1 }
+			    		artillery = { x = 0 y = 2 }
+			    	}
+			    	priority = 2
+			    }
+			    random_owned_state = {
+			    	prioritize =  { 55 }
+			    	create_unit = {
+			    		division = "division_template = \"Sonderkommando FAUD\" start_experience_factor = 0.3 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Sonderkommando FAUD\" start_experience_factor = 0.3 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    }
+			    random_owned_state = {
+			    	prioritize =  { 42 }
+			    	create_unit = {
+			    		division = "division_template = \"Sonderkommando FAUD\" start_experience_factor = 0.3 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Sonderkommando FAUD\" start_experience_factor = 0.3 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    }
+			    division_template = {
+			    	name = "Sonderkommando NM-KV/SNF"
+			    	division_names_group = GRU_rev_mil_5
+			    	is_locked = yes
+			    	regiments = {
+		                infantry = { x = 0 y = 0 }
+		                infantry = { x = 0 y = 1 }
+		                infantry = { x = 0 y = 2 }
+			    		infantry = { x = 0 y = 3 }
+			    		infantry = { x = 1 y = 0 }
+		                infantry = { x = 1 y = 1 }
+			    		infantry = { x = 1 y = 2 }
+			    		infantry = { x = 2 y = 0 }
+		                infantry = { x = 2 y = 1 }
+			    		infantry = { x = 2 y = 2 }
+			    		infantry = { x = 3 y = 0 }
+			    		artillery_brigade = { x = 3 y = 1 }
+			    	}
+			    	support = {
+			    		mot_recon = { x = 0 y = 0 }
+			    		engineer = { x = 0 y = 1 }
+			    		artillery = { x = 0 y = 2 }
+						field_hospital = { x = 0 y = 3 }
+			    	}
+			    	priority = 2
+			    }
+			    random_owned_state = {
+			    	prioritize =  { 57 }
+			    	create_unit = {
+			    		division = "division_template = \"Sonderkommando NM-KV/SNF\" start_experience_factor = 0.5 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Sonderkommando NM-KV/SNF\" start_experience_factor = 0.5 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    }
+			    random_owned_state = {
+			    	prioritize =  { 56 }
+			    	create_unit = {
+			    		division = "division_template = \"Sonderkommando NM-KV/SNF\" start_experience_factor = 0.5 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    	create_unit = {
+			    		division = "division_template = \"Sonderkommando NM-KV/SNF\" start_experience_factor = 0.5 start_equipment_factor = 1"
+			    		owner = GRU
+			    	}
+			    }
+
+				delete_unit_template_and_units = { division_template = "Пехотная дивизия" }
+				delete_unit_template_and_units = { division_template = "Артиллерийская пехотная дивизия" }
+				delete_unit_template_and_units = { division_template = "Пехотная дивизия с бронетанковой поддержкой" }
+				delete_unit_template_and_units = { division_template = "Гвардейская стрелковая дивизия" }
+				delete_unit_template_and_units = { division_template = "Крафтваген дивизия" }
+				delete_unit_template_and_units = { division_template = "Аусландс-Фестунгскоммандо" }
+				delete_unit_template_and_units = { division_template = "Милицтруппе" }
+				delete_unit_template_and_units = { division_template = "Панцер дивизия" }
+				delete_unit_template_and_units = { division_template = "Кавалерийская дивизия" }
+				delete_unit_template_and_units = { division_template = "Морская Штурм-Дивизия" }
+				delete_unit_template_and_units = { division_template = "Гебиргсъегер" }
+
+				news_event = { id = gruothernews.1 days = 10 }
+			}
+			GER = {
+				country_event = rmfix.2
+
+				remove_ideas = GER_quenched_militarism
+				remove_ideas = GER_quenched_militarism2
+
+				delete_unit_template_and_units = { division_template = "Infanterie-Division" }
+				delete_unit_template_and_units = { division_template = "Infanterie-Division mit Artillerie" }
+				delete_unit_template_and_units = { division_template = "Infanterie-Division mit Panzerunterstützung" }
+				delete_unit_template_and_units = { division_template = "Garde Infanterie-Division" }
+				delete_unit_template_and_units = { division_template = "Motorisierte Division" }
+				delete_unit_template_and_units = { division_template = "Auslands-Festungskommando" }
+				delete_unit_template_and_units = { division_template = "Miliztruppe" }
+				delete_unit_template_and_units = { division_template = "Panzer-Division" }
+				delete_unit_template_and_units = { division_template = "Kavallerie-Division" }
+				delete_unit_template_and_units = { division_template = "Marine-Sturmdivision" }
+				delete_unit_template_and_units = { division_template = "Gebirgsjäger" }
+
+				country_lock_all_division_template = no
+				
+				##
+				division_template = {
+					name = "Infanterie-Division"
+					division_names_group = GER_INF_01
+					is_locked = yes
+					regiments = {
+						infantry = { x = 0 y = 0 }
+		                infantry = { x = 0 y = 1 }
+		                infantry = { x = 0 y = 2 }
+		                infantry = { x = 1 y = 0 }
+		                infantry = { x = 1 y = 1 }
+		                infantry = { x = 1 y = 2 }
+		                infantry = { x = 2 y = 0 }
+		                infantry = { x = 2 y = 1 }
+		                infantry = { x = 2 y = 2 }
+					}
+					support = {
+						recon = { x = 0 y = 0 }
+						engineer = { x = 0 y = 1 }
+						artillery = { x = 0 y = 2 }
+						field_hospital = { x = 0 y = 3 }
+					}
+					priority = 1
+				}
+				division_template = {
+					name = "Motorisierte Division"
+					division_names_group = GER_MOT_02
+					is_locked = yes
+					regiments = {
+						motorized = { x = 0 y = 0 }
+						motorized = { x = 0 y = 1 }
+						motorized = { x = 0 y = 2 }
+						motorized = { x = 0 y = 3 }
+						
+						motorized = { x = 1 y = 0 }
+						motorized = { x = 1 y = 1 }
+						motorized = { x = 1 y = 2 }
+						motorized = { x = 1 y = 3 }
+					}
+					support = {
+						mot_recon = { x = 0 y = 0 }
+						engineer = { x = 0 y = 1 }
+						artillery = { x = 0 y = 2 }
+					}
+					priority = 2
+				}
+				division_template = {
+					name = "Kraftwagen Division «Heinrich Himmler»"
+					division_names_group = GER_MOT_02
+					is_locked = yes
+					regiments = {
+						motorized = { x = 0 y = 0 }
+						motorized = { x = 0 y = 1 }
+						motorized = { x = 0 y = 2 }
+						
+						motorized = { x = 1 y = 0 }
+						motorized = { x = 1 y = 1 }
+						motorized = { x = 1 y = 2 }
+
+						mot_artillery_brigade = { x = 2 y = 0 }
+
+						motorized = { x = 3 y = 0 }
+						motorized = { x = 3 y = 1 }
+						
+						motorized = { x = 4 y = 0 }
+					}
+					support = {
+						mot_recon = { x = 0 y = 0 }
+						engineer = { x = 0 y = 1 }
+						anti_air = { x = 0 y = 2 }
+						field_hospital = { x = 0 y = 3 }
+					}
+					priority = 2
+				}
+				division_template = {
+					name = "Kavallerie-Division"
+					division_names_group = GER_MOB_01
+					is_locked = yes
+					regiments = {
+						cavalry = { x = 0 y = 0 }
+		                cavalry = { x = 0 y = 1 }
+		                cavalry = { x = 0 y = 2 }
+		                cavalry = { x = 1 y = 0 }
+		                cavalry = { x = 1 y = 1 }
+		                cavalry = { x = 1 y = 2 }
+		                light_armor = { x = 2 y = 0 }
+					}
+					support = {
+						military_police = { x = 0 y = 0 }
+					}
+					priority = 0
+				}
+				random_owned_state = {
+					prioritize =  { 52 }
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+				}
+				random_owned_state = {
+					prioritize =  { 54 }
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+				}
+				random_owned_state = {
+					prioritize =  { 60 }
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+				}
+				random_owned_state = {
+					prioritize =  { 59 }
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						owner = GER
+					}
+				}
+				random_owned_state = {
+					prioritize =  { 60 }
+					create_unit = {
+						division = "name = \"Kraftwagen Division «Heinrich Himmler»\" division_template = \"Kraftwagen Division «Heinrich Himmler»\" start_experience_factor = 0.75 start_equipment_factor = 1"
+						owner = GER
+					}
+				}
+				random_owned_state = {
+					prioritize =  { 64 }
+					create_unit = {
+						division = "division_template = \"Motorisierte Division\" start_experience_factor = 0.5"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Motorisierte Division\" start_experience_factor = 0.5"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Motorisierte Division\" start_experience_factor = 0.5"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Motorisierte Division\" start_experience_factor = 0.5"
+						owner = GER
+					}
+				}
+				random_owned_state = {
+					prioritize =  { 65 }
+					create_unit = {
+						division = "division_template = \"Kavallerie-Division\" start_experience_factor = 0.2"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Kavallerie-Division\" start_experience_factor = 0.2"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Kavallerie-Division\" start_experience_factor = 0.2"
+						owner = GER
+					}
+					create_unit = {
+						division = "division_template = \"Kavallerie-Division\" start_experience_factor = 0.2"
+						owner = GER
+					}
+				}
+
+				delete_unit_template_and_units = { division_template = "Пехотная дивизия" }
+				delete_unit_template_and_units = { division_template = "Артиллерийская пехотная дивизия" }
+				delete_unit_template_and_units = { division_template = "Пехотная дивизия с бронетанковой поддержкой" }
+				delete_unit_template_and_units = { division_template = "Гвардейская стрелковая дивизия" }
+				delete_unit_template_and_units = { division_template = "Крафтваген дивизия" }
+				delete_unit_template_and_units = { division_template = "Аусландс-Фестунгскоммандо" }
+				delete_unit_template_and_units = { division_template = "Милицтруппе" }
+				delete_unit_template_and_units = { division_template = "Панцер дивизия" }
+				delete_unit_template_and_units = { division_template = "Кавалерийская дивизия" }
+				delete_unit_template_and_units = { division_template = "Морская Штурм-Дивизия" }
+				delete_unit_template_and_units = { division_template = "Гебиргсъегер" }
+
+				news_event = { id = gruothernews.1 days = 10 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = rotermorgenGCW.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenGCW.6" }
+	title = rotermorgenGCW.6.t
+	desc = rotermorgenGCW.6.d
+	fire_only_once = yes
+	trigger = {
+		GRU = {
+			controls_state = 64
+			has_country_flag = GRU_REBELLION
+		}
+		NOT = { country_exists = GER }
+	}
+	hidden = yes
+	immediate = {
+		GRU = {
+			clr_country_flag = GRU_REBELLION
+			separate_peace_all_wars = yes
+			set_country_flag = GRU_GCW_ENDED
+			
+			remove_ideas = GRU_foreign_aid
+			swap_ideas = {
+				remove_idea = GERMAN_CIVIL_WAR_participant
+				add_idea = GRU_RUINED_ECONOMY_TOALLY_RUINED
+			}
+		}
+		GER = {
+			remove_ideas = GERMAN_CIVIL_WAR_participant
+		}
+		UKR = { country_event = ukraine.104 }
+	}
+}
+
+country_event = { # victory Intro
+	id = rotermorgenGCW.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenGCW.10" }
+
+	title = rotermorgenGCW.10.t
+	desc = rotermorgenGCW.10.d
+	picture = GFX_report_event_victory_cw
+	is_triggered_only = yes
+	
+	option = { #
+		name = rotermorgenGCW.10.a
+		
+		INT = { add_to_faction = GRU }
+		28 = { remove_core_of = GRU }
+		8 = { remove_core_of = GRU }
+
+		add_tot_to_coalition = yes
+		add_synd_to_coalition = yes
+		add_radsoc_to_coalition = yes
+		add_socdem_to_coalition = yes
+
+		hidden_effect = {
+			country_lock_all_division_template = yes
+
+			delete_unit_template_and_units = { division_template = "Пехотная дивизия" }
+			delete_unit_template_and_units = { division_template = "Артиллерийская пехотная дивизия" }
+			delete_unit_template_and_units = { division_template = "Пехотная дивизия с бронетанковой поддержкой" }
+			delete_unit_template_and_units = { division_template = "Гвардейская стрелковая дивизия" }
+			delete_unit_template_and_units = { division_template = "Крафтваген дивизия" }
+			delete_unit_template_and_units = { division_template = "Аусландс-Фестунгскоммандо" }
+			delete_unit_template_and_units = { division_template = "Милицтруппе" }
+			delete_unit_template_and_units = { division_template = "Панцер дивизия" }
+			delete_unit_template_and_units = { division_template = "Кавалерийская дивизия" }
+			delete_unit_template_and_units = { division_template = "Морская Штурм-Дивизия" }
+			delete_unit_template_and_units = { division_template = "Гебиргсъегер" }
+
+			division_template = {
+				name = "Gebirgsjäger"
+				division_names_group = GRU_Mnt_01
+
+				regiments = {
+					mountaineers = { x = 0 y = 0 }
+		            mountaineers = { x = 0 y = 1 }
+		            mountaineers = { x = 0 y = 2 }
+		            mountaineers = { x = 1 y = 0 }
+		            mountaineers = { x = 1 y = 1 }
+		            mountaineers = { x = 1 y = 2 }
+				}
+				support = {
+					recon = { x = 0 y = 0 }
+					engineer = { x = 0 y = 1 }
+					artillery = { x = 0 y = 2 }
+				}
+				priority = 2
+			}
+			division_template = {
+				name = "Marine-Sturmdivision"
+				division_names_group = GRU_MAR_01
+
+				regiments = {
+					marine = { x = 0 y = 0 }
+		            marine = { x = 0 y = 1 }
+					marine = { x = 0 y = 2 }
+					marine = { x = 0 y = 3 }
+		            marine = { x = 1 y = 0 }
+		            marine = { x = 1 y = 1 }
+					marine = { x = 1 y = 2 }
+					marine = { x = 1 y = 3 }
+				}
+				priority = 2
+			}
+
+		    every_army_leader = {
+				limit = { has_unit_leader_flag = revolutionary_leader }
+		    	set_nationality = NSW
+		    }
+			every_army_leader = {
+				limit = { has_id = 144888 }
+				set_nationality = NSW
+			}
+			every_army_leader = {
+				limit = { has_id = 5555 }
+				set_nationality = NSW
+			}
+			every_army_leader = {
+				limit = { has_id = 5556 }
+				set_nationality = NSW
+			}
+			every_army_leader = {
+				limit = { has_id = 5557 }
+				set_nationality = NSW
+			}
+			every_army_leader = {
+				limit = { has_id = 5558 }
+				set_nationality = NSW
+			}
+		    country_event = {
+		    	id = rotermorgenGCW.20
+		    	days = 14
+		    }
+			FRA = {
+		    	add_ai_strategy = {
+		    		type = send_volunteers_desire
+		    		id = GRU
+		    		value = 0
+		    	}
+		    	add_ai_strategy = {
+		    		type = send_lend_lease_desire
+		    		id = GRU
+		    		value = 0
+		    	}
+		    	add_ai_strategy = {
+		    		type = support
+		    		id = GRU
+		    		value = 0
+		    	}
+		    }
+		    ENG = {
+		    	add_ai_strategy = {
+		    		type = send_volunteers_desire
+		    		id = GRU
+		    		value = 0
+		    	}
+		    	add_ai_strategy = {
+		    		type = send_lend_lease_desire
+		    		id = GRU
+		    		value = 0
+		    	}
+		    	add_ai_strategy = {
+		    		type = support
+		    		id = GRU
+		    		value = 0
+		    	}
+		    }
+			GRU = {
+				delete_unit_template_and_units = { division_template = "Kraftwagen Division «Heinrich Himmler»" }
+				delete_unit_template_and_units = { division_template = "Revolutionary militia" }
+				delete_unit_template_and_units = { division_template = "Sonderkommando R.A.M." }
+				delete_unit_template_and_units = { division_template = "Sonderkommando FAUD" }
+				delete_unit_template_and_units = { division_template = "Sonderkommando NM-KV/SNF" }
+			}
+		}
+	}
+}
+
+country_event = { #RCW
+	id = rotermorgenGCW.12
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenGCW.12" }
+	picture = GFX_report_event_hmlr_pidr
+	title = rmhimmler.1.t
+	desc = rmhimmler.1.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = rmhimmler.1.b
+	}
+}
+
+country_event = { # SPD radikalize Forms
+	id = rotermorgenGCW.20
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenGCW.20" }
+	title = rotermorgenGCW.20.t
+	desc = rotermorgenGCW.20.d
+	picture = GFX_report_event_spd_rd_frm
+
+	is_triggered_only = yes
+	
+	option = { # SPD-r forms
+		name = rotermorgenGCW.20.a
+		hidden_effect = {
+			country_event = {
+				id = rotermorgenGCW.30
+				days = 7
+			}
+		}
+	}
+}
+country_event = { # FAUD-Reaorganises
+	id = rotermorgenGCW.30
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenGCW.30" }
+	title = rotermorgenGCW.30.t
+	desc = rotermorgenGCW.30.d
+	picture = GFX_report_event_faud_reaorganises
+
+	is_triggered_only = yes
+	
+	option = { # FAUD
+		name = rotermorgenGCW.30.a
+		hidden_effect = {
+			country_event = {
+				id = rotermorgenGCW.40
+				days = 7
+			}
+		}
+	}
+}
+country_event = { # SMEPD forms
+	id = rotermorgenGCW.40
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenGCW.40" }
+	title = rotermorgenGCW.40.t
+	desc = rotermorgenGCW.40.d
+	picture = GFX_report_event_smepd_forms
+
+	is_triggered_only = yes
+	
+	option = { # SMEPD forms
+		name = rotermorgenGCW.40.a
+		hidden_effect = {
+			country_event = {
+				id = rotermorgenGCW.50
+				days = 7
+			}
+		}
+	}
+}
+
+country_event = { # NMDVP Forms
+	id = rotermorgenGCW.50
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenGCW.50" }
+	title = rotermorgenGCW.50.t
+	desc = rotermorgenGCW.50.d
+	picture = GFX_report_event_Goebb_patay
+
+	is_triggered_only = yes
+	
+	option = { # NMDVP forms
+		name = rotermorgenGCW.50.a
+		hidden_effect = {
+			country_event = {
+				id = rotermorgenGCW.51
+				days = 4
+			}
+		}
+	}
+	option = { # NMDVP forms
+		name = rotermorgenGCW.50.b
+		hidden_effect = {
+			country_event = {
+				id = rotermorgenGCW.51
+				days = 4
+			}
+			country_event = {
+				id = rotermorgenGCW.52
+				days = 7
+			}
+		}
+	}
+}
+
+country_event = { # GSVP Forms
+	id = rotermorgenGCW.51
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenGCW.51" }
+	title = rotermorgenGCW.51.t
+	desc = rotermorgenGCW.51.d
+	picture = GFX_report_event_rm_GSVP_congress
+
+	is_triggered_only = yes
+	
+	option = { # GSVP forms
+		name = rotermorgenGCW.51.a
+		hidden_effect = {
+			country_event = {
+				id = rotermorgenGCW.60
+				days = 7
+			}
+		}
+	}
+}
+country_event = { 
+	id = rotermorgenGCW.52
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenGCW.52" }
+	picture = GFX_report_event_goebb_NMDVP_police
+	title = rotermorgenGCW.52.t
+	desc = rotermorgenGCW.52.d
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = rotermorgenGCW.52.a
+		add_manpower = -37
+		add_stability = -0.1
+	}
+}
+
+country_event = { # congress_allowed
+	id = rotermorgenGCW.60
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenGCW.60" }
+	picture = GFX_report_event_rm_congress
+	title = rotermorgenGCW.60.t
+	desc = rotermorgenGCW.60.d
+
+	is_triggered_only = yes
+	
+	option = { # Occupation calls for election
+		name = rotermorgenGCW.60.a
+		hidden_effect = {
+			set_country_flag = PARTIES_FORMED
+			complete_national_focus = GRU_first_congress_of_german_unions
+		}
+	}
+}
+
+country_event = { # CONGRESS
+	id = rotermorgenGCW.70
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenGCW.70" }
+	title = rotermorgenGCW.70.t
+	desc = rotermorgenGCW.70.d
+	picture = GFX_report_event_Congress_pic
+	is_triggered_only = yes
+	
+	option = { # NMDVP Victory
+		name = rotermorgenGCW.70.a
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				NOT = {
+					has_game_rule = {
+						rule = GRU_congress
+						option = GRU_CONGRESS_RANDOM
+					}
+					has_game_rule = {
+						rule = GRU_congress
+						option = GRU_CONGRESS_NMDVP
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_lock_all_division_template = no
+
+			set_country_flag = GRU_NMDVP_rule
+			complete_national_focus = GRU_nmdvp_victory
+
+			retire_country_leader = yes
+			promote_character = {
+		    	character = GRU_Joseph_Goebbels
+		    	ideology = germanic_socialism_subtype
+		    }
+			promote_character = {
+		    	character = GRU_Wilhelm_Pieck
+		    	ideology = centralized_syndicalism_subtype
+		    }
+			promote_character = {
+		    	character = GRU_Karl_Liebknecht
+		    	ideology = socdem_democratic_socialism_subtype
+		    }
+			promote_character = {
+		    	character = GRU_Rudolf_Rocker
+		    	ideology = radsoc_anarcho_syndicalist_subtype
+		    }
+
+			set_cosmetic_tag = GRU_NMDVP
+			set_party_name = {
+				ideology = totalist
+				long_name = GRU_NMDVP_long
+				name = GRU_NMDVP
+			}
+			set_party_name = {
+				ideology = syndicalist
+				long_name = GRU_SEPD_long
+				name = GRU_SEPD
+			}
+			set_party_name = {
+				ideology = social_democrat
+				long_name = GRU_SPD_long
+				name = GRU_SPD
+			}
+			set_party_name = {
+				ideology = radical_socialist
+				long_name = GRU_FAUD_long
+				name = GRU_FAUD
+			}
+			remove_all_ministers = yes
+			add_ideas = {
+				GRU_Joseph_Goebbels_hog_tot
+				GRU_Bodo_Uhse_for_tot
+				GRU_Gregor_Strasser_eco_tot
+				GRU_Paul_Lensch_sec_tot
+			}
+			set_politics = {
+				ruling_party = totalist
+				last_election = "1.1.1"
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = totalist
+				popularity = 0.40
+			}
+
+			remove_tot_from_coalition = yes
+			remove_synd_from_coalition = yes
+			remove_radsoc_from_coalition = yes
+			remove_socdem_from_coalition = yes
+
+			FRA = {
+				add_opinion_modifier = { target = GRU modifier = KR_hates_govt }
+				add_opinion_modifier = { target = GRU modifier = KR_outraged }
+			}
+			ENG = {
+				add_opinion_modifier = { target = GRU modifier = KR_hates_govt }
+				add_opinion_modifier = { target = GRU modifier = KR_outraged }
+			}
+		}
+	}
+	option = { # SMEPD Victory
+		name = rotermorgenGCW.70.b
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				NOT = {
+					has_game_rule = {
+						rule = GRU_congress
+						option = GRU_CONGRESS_DEFAULT
+					}
+					has_game_rule = {
+						rule = GRU_congress
+						option = GRU_CONGRESS_SMEPD
+					}
+					has_game_rule = {
+						rule = GRU_congress
+						option = GRU_CONGRESS_RANDOM
+					}
+					has_game_rule = {
+						rule = GRU_congress
+						option = GRU_CONGRESS_SMEPD_THALMANN
+					}
+					has_game_rule = {
+						rule = GRU_congress
+						option = GRU_CONGRESS_SMEPD_PIECK
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_lock_all_division_template = no
+
+			set_country_flag = GRU_SMEPD_rule
+			complete_national_focus = GRU_sepd_victory
+
+			retire_country_leader = yes
+			promote_character = {
+		    	character = GRU_NMKF
+		    	ideology = strasserism_subtype
+		    }
+			promote_character = {
+		    	character = GRU_Wilhelm_Pieck
+		    	ideology = centralized_syndicalism_subtype
+		    }
+			promote_character = {
+		    	character = GRU_Karl_Liebknecht
+		    	ideology = socdem_democratic_socialism_subtype
+		    }
+			promote_character = {
+		    	character = GRU_Rudolf_Rocker
+		    	ideology = radsoc_anarcho_syndicalist_subtype
+		    }
+
+			set_cosmetic_tag = GRU_SEPD_A
+			set_party_name = {
+				ideology = totalist
+				long_name = GRU_KGRNS_long
+				name = GRU_KGRNS
+			}
+			set_party_name = {
+				ideology = syndicalist
+				long_name = GRU_SEPD_long
+				name = GRU_SEPD
+			}
+			set_party_name = {
+				ideology = social_democrat
+				long_name = GRU_SPD_long
+				name = GRU_SPD
+			}
+			set_party_name = {
+				ideology = radical_socialist
+				long_name = GRU_FAUD_long
+				name = GRU_FAUD
+			}
+			remove_all_ministers = yes
+			add_ideas = {
+				GRU_Ernst_Thaelmann_hog_syn
+				GRU_Walter_Ulbricht_for_tot
+				GRU_Jakob_Kaiser_eco_syn
+				GRU_Willi_Muenzenberg_sec_tot
+			}
+			set_politics = {
+				ruling_party = syndicalist
+				last_election = "1.1.1"
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = syndicalist
+				popularity = 0.60
+			}
+
+			remove_tot_from_coalition = yes
+			remove_synd_from_coalition = yes
+			remove_radsoc_from_coalition = yes
+			remove_socdem_from_coalition = yes
+		}
+	}
+	option = { # FAUD Victory
+		name = rotermorgenGCW.70.c
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				NOT = {
+					has_game_rule = {
+						rule = GRU_congress
+						option = GRU_CONGRESS_RANDOM
+					}
+					has_game_rule = {
+						rule = GRU_congress
+						option = GRU_CONGRESS_FAUD
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_lock_all_division_template = no
+
+			set_country_flag = GRU_FAUD_rule
+			complete_national_focus = GRU_faud_victory
+			
+			retire_country_leader = yes
+			promote_character = {
+		    	character = GRU_NMKF
+		    	ideology = strasserism_subtype
+		    }
+			promote_character = {
+		    	character = GRU_Rudolf_Rocker
+		    	ideology = anarcho_syndicalist_subtype
+		    }
+			promote_character = {
+		    	character = GRU_Karl_Liebknecht
+		    	ideology = moderate_socialist_subtype
+		    }
+
+			set_cosmetic_tag = GRU_FAUD
+			remove_all_ministers = yes
+			add_ideas = {
+				GRU_Helmut_Herzfeld_hog_syn
+				GRU_Paul_Levi_for_syn
+				GRU_Rudolf_Egelhofer_eco_syn
+				GRU_Eugen_Levine_sec_syn
+			}
+			set_party_name = {
+				ideology = totalist
+				long_name = GRU_KGRNS_long
+				name = GRU_KGRNS
+			}
+			set_politics = {
+				ruling_party = syndicalist
+				last_election = "1.1.1"
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = syndicalist
+				popularity = 0.60
+			}
+			set_party_name = {
+				ideology = social_democrat
+				long_name = GRU_SPD_long
+				name = GRU_SPD
+			}
+			set_party_name = {
+				ideology = radical_socialist
+				long_name = GRU_SPDR_long
+				name = GRU_SPDR
+			}
+			set_party_name = {
+				ideology = syndicalist
+				long_name = GRU_FAUD_long
+				name = GRU_FAUD
+			}
+
+			remove_tot_from_coalition = yes
+			remove_synd_from_coalition = yes
+			remove_radsoc_from_coalition = yes
+			remove_socdem_from_coalition = yes
+		}
+	}
+	option = { # SPD Victory
+		name = rotermorgenGCW.70.e
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = GRU_congress
+						option = GRU_CONGRESS_SMEPD
+					}
+					has_game_rule = {
+						rule = GRU_congress
+						option = GRU_CONGRESS_FAUD
+					}
+					has_game_rule = {
+						rule = GRU_congress
+						option = GRU_CONGRESS_SMEPD_THALMANN
+					}
+					has_game_rule = {
+						rule = GRU_congress
+						option = GRU_CONGRESS_SMEPD_PIECK
+					}
+					has_game_rule = {
+						rule = GRU_congress
+						option = GRU_CONGRESS_NMDVP
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_lock_all_division_template = no
+
+			set_country_flag = GRU_SPD_rule
+			complete_national_focus = GRU_spd_victory
+
+			retire_country_leader = yes
+			promote_character = {
+		    	character = GRU_NMKF
+		    	ideology = strasserism_subtype
+		    }
+			promote_character = {
+		    	character = GRU_Rudolf_Rocker
+		    	ideology = anarcho_syndicalist_subtype
+		    }
+			promote_character = {
+		    	character = GRU_Karl_Liebknecht
+		    	ideology = moderate_socialist_subtype
+		    }
+
+			set_country_flag = GRU_LIEBK_ROSA_VISIBLE
+			set_country_flag = GRU_LEADER_GUI_VISIBLE
+
+			set_cosmetic_tag = GRU_REP
+			remove_all_ministers = yes
+			add_ideas = {
+				GRU_Heinrich_Brandler_hog_rso
+				GRU_Erich_Ollenhauer_for_rso
+				GRU_Hans_Reichenbach_eco_rso
+				GRU_Franz_Oppenhoff_sec_rso
+			}
+			set_politics = {
+				ruling_party = radical_socialist
+				last_election = "1.1.1"
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = radical_socialist
+				popularity = 0.60
+			}
+			set_party_name = {
+				ideology = totalist
+				long_name = GRU_KGRNS_long
+				name = GRU_KGRNS
+			}
+			set_party_name = {
+				ideology = syndicalist
+				long_name = GRU_FAUD_long
+				name = GRU_FAUD
+			}
+			set_party_name = {
+				ideology = radical_socialist
+				long_name = GRU_SPDR_long
+				name = GRU_SPDR
+			}
+			set_party_name = {
+				ideology = social_democrat
+				long_name = GRU_SPD_long
+				name = GRU_SPD
+			}
+
+			remove_tot_from_coalition = yes
+			remove_synd_from_coalition = yes
+			remove_radsoc_from_coalition = yes
+			remove_socdem_from_coalition = yes
+		}
+	}
+}
+country_event = {
+	id = rmfix.1
+
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		delete_unit_template_and_units = { division_template = "Крафтваген дивизия" }
+		delete_unit_template_and_units = { division_template = "Кавалерийская дивизия" }
+		delete_unit_template_and_units = { division_template = "Аусландс-Фестунгскоммандо" }
+		delete_unit_template_and_units = { division_template = "Милицтруппе" }
+		delete_unit_template_and_units = { division_template = "Пехотная дивизия" }
+		delete_unit_template_and_units = { division_template = "Панцер дивизия" }
+		delete_unit_template_and_units = { division_template = "Артиллерийская пехотная дивизия" }
+		delete_unit_template_and_units = { division_template = "Пехотная дивизия с бронетанковой поддержкой" }
+		delete_unit_template_and_units = { division_template = "Гвардейская стрелковая дивизия" }
+		delete_unit_template_and_units = { division_template = "Морская Штурм-Дивизия" }
+		delete_unit_template_and_units = { division_template = "Гебиргсъегер" }
+	}
+	
+	option = {
+		name = rmfix.1.a
+	}
+}
+country_event = {
+	id = rmfix.2
+
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		delete_unit_template_and_units = { division_template = "Крафтваген дивизия" }
+		delete_unit_template_and_units = { division_template = "Кавалерийская дивизия" }
+		delete_unit_template_and_units = { division_template = "Аусландс-Фестунгскоммандо" }
+		delete_unit_template_and_units = { division_template = "Милицтруппе" }
+		delete_unit_template_and_units = { division_template = "Пехотная дивизия" }
+		delete_unit_template_and_units = { division_template = "Панцер дивизия" }
+		delete_unit_template_and_units = { division_template = "Артиллерийская пехотная дивизия" }
+		delete_unit_template_and_units = { division_template = "Пехотная дивизия с бронетанковой поддержкой" }
+	}
+	
+	option = {
+		name = rmfix.2.a
+	}
+}
+country_event = {
+	id = rmfix.3
+
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		GRU_setup_AI_infl = yes
+	}
+	
+	option = {
+		name = rmfix.3.a
+	}
+}

@@ -1,0 +1,360 @@
+focus_tree = {
+	id = la_Loire_Atlantique
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = PDL
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 2000 y = 2000 }
+	
+	focus = {
+		id = PDL_Remembering_la_Vendee
+		icon = GFX_goal_generic_peasant_strike
+		prerequisite = {
+			
+		}
+		x = 15
+		y = 0
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			add_political_power = 100
+		}
+	}	
+
+	focus = {
+		id = PDL_Awaken_the_spirit_of_the_masses
+		icon = GFX_goal_mass_concentration_of_army
+		prerequisite = {
+			focus = PDL_Remembering_la_Vendee
+		}
+		x = 0
+		y = 1
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		relative_position_id = PDL_Remembering_la_Vendee
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			add_manpower = 20000
+		}
+	}	
+
+	focus = {
+		id = PDL_Refurbishment_of_used_weapons
+		icon = GFX_goal_planning_bonus
+		prerequisite = {
+			focus = PDL_Awaken_the_spirit_of_the_masses
+		}
+		x = -2
+		y = 2
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		relative_position_id = PDL_Remembering_la_Vendee
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 4500
+				producer = FRA
+			}
+		}
+	}	
+
+	focus = {
+		id = PDL_Smuggling_firearms
+		icon = GFX_goal_generic_railroad
+		prerequisite = {
+			focus = PDL_Awaken_the_spirit_of_the_masses
+		}
+		x = 0
+		y = 2
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		relative_position_id = PDL_Remembering_la_Vendee
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 3000
+				producer = FRA
+			}
+			PRO = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 5000
+					producer = FRA
+				}
+			}
+			DOB = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 5000
+					producer = FRA
+				}
+			}
+			PDL = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 5000
+					producer = FRA
+				}
+			}
+		}
+	}	
+
+	focus = {
+		id = PDL_Get_armed
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		prerequisite = {
+			focus = PDL_Awaken_the_spirit_of_the_masses
+		}
+		x = 2
+		y = 2
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		relative_position_id = PDL_Remembering_la_Vendee
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			hidden_effect = {
+				division_template = {
+					name = "绿衫军"
+					priority = 1
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 0 y = 5 }
+						infantry = { x = 0 y = 6 }
+						infantry = { x = 0 y = 7 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"绿衫军\" division_template = \"绿衫军\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"绿衫军\" division_template = \"绿衫军\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"绿衫军\" division_template = \"绿衫军\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"绿衫军\" division_template = \"绿衫军\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"绿衫军\" division_template = \"绿衫军\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+					create_unit = {
+						division = "name = \"绿衫军\" division_template = \"绿衫军\" start_experience_factor = 1 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = PDL
+					}
+				}
+			}
+			custom_effect_tooltip = "六只农民精锐武装将组建"
+		}
+	}	
+
+	focus = {
+		id = PDL_Seize_the_factory
+		icon = GFX_goal_MNT_nationalize_austrian_business
+		prerequisite = {
+			focus = PDL_Refurbishment_of_used_weapons
+		}
+		prerequisite = {
+			focus = PDL_Smuggling_firearms
+		}
+		prerequisite = {
+			focus = PDL_Get_armed
+		}
+		x = -1
+		y = 3
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		relative_position_id = PDL_Remembering_la_Vendee
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}	
+
+	focus = {
+		id = PDL_Eliminate_the_remnants_of_the_bourgeoisie
+		icon = GFX_RUS_Say_No_To_Capitalism
+		prerequisite = {
+			focus = PDL_Refurbishment_of_used_weapons
+		}
+		prerequisite = {
+			focus = PDL_Smuggling_firearms
+		}
+		prerequisite = {
+			focus = PDL_Get_armed
+		}
+		x = 1
+		y = 3
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		relative_position_id = PDL_Remembering_la_Vendee
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			add_manpower = -400
+		}
+	}	
+
+	focus = {
+		id = PDL_Salute_to_the_monastery
+		icon = GFX_goal_TEX_focus_Encourage_Conversions
+		prerequisite = {
+			focus = PDL_Seize_the_factory
+		}
+		prerequisite = {
+			focus = PDL_Eliminate_the_remnants_of_the_bourgeoisie
+		}
+		x = -2
+		y = 4
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		relative_position_id = PDL_Remembering_la_Vendee
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			add_ideas = PDL_claustrales
+		}
+	}	
+
+	focus = {
+		id = PDL_Converting_civilian_vehicles
+		icon = GFX_goal_VIN_motorization
+		prerequisite = {
+			focus = PDL_Seize_the_factory
+		}
+		prerequisite = {
+			focus = PDL_Eliminate_the_remnants_of_the_bourgeoisie
+		}
+		x = 0
+		y = 4
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		relative_position_id = PDL_Remembering_la_Vendee
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			add_equipment_to_stockpile = {
+				type = mechanized_equipment
+				amount = 200
+				producer = FRA
+			}
+		}
+	}	
+
+	focus = {
+		id = PDL_Training_new_officers
+		icon = GFX_goal_generic_army_training
+		prerequisite = {
+			focus = PDL_Seize_the_factory
+		}
+		prerequisite = {
+			focus = PDL_Eliminate_the_remnants_of_the_bourgeoisie
+		}
+		x = 2
+		y = 4
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		relative_position_id = PDL_Remembering_la_Vendee
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			add_command_power = 100
+		}
+	}	
+
+	focus = {
+		id = PDL_Relying_on_swamps
+		icon = GFX_goal_TEX_night_assaults
+		prerequisite = {
+			focus = PDL_Salute_to_the_monastery
+		}
+		prerequisite = {
+			focus = PDL_Converting_civilian_vehicles
+		}
+		prerequisite = {
+			focus = PDL_Training_new_officers
+		}
+		x = 0
+		y = 5
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		relative_position_id = PDL_Remembering_la_Vendee
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			add_ideas = PDL_Loire_swamp
+		}
+	}	
+
+	focus = {
+		id = PDL_Our_beautiful_land
+		icon = GFX_focus_generic_agriculture
+		prerequisite = {
+			focus = PDL_Relying_on_swamps
+		}
+		x = 0
+		y = 6
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		relative_position_id = PDL_Remembering_la_Vendee
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			add_political_power = 100
+		}
+	}	
+}

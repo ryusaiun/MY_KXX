@@ -1,0 +1,42 @@
+AST_AAPAs = {
+	icon = generic_propaganda
+	visible = {
+		tag = AST
+		has_completed_focus = AST_AAPA
+	}
+}
+AST_SLPs = {
+	icon = generic_propaganda
+	visible = {
+		tag = AST
+		has_completed_focus = AST_SLP_victory
+	}
+}
+AST_CPAs = {
+	icon = generic_propaganda
+	visible = {
+		tag = AST
+		has_completed_focus = AST_CPA_victory
+	}
+}
+AST_ACTUs = {
+	icon = generic_propaganda
+	visible = {
+		tag = AST
+		has_completed_focus = AST_ACTU
+	}
+}
+AST_IWWs = {
+	icon = generic_propaganda
+	visible = {
+		tag = AST
+		has_completed_focus = AST_australasian_iww
+	}
+}
+AST_RUMs = {
+	icon = generic_propaganda
+	visible = {
+		tag = AST
+		has_completed_focus = AST_second_rum_rebellion
+	}
+}

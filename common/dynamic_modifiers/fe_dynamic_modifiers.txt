@@ -1,0 +1,11 @@
+
+egyptian_battle_temples_modifier = {
+	icon = "GFX_idea_BUL_titans_amogus"
+	enable = {
+		always = yes
+	}
+
+	army_defence_factor = egyptian_battle_temples_army_defence_factor
+	army_attack_factor = egyptian_battle_temples_army_attack_factor
+	SUPPLY_CONSUMPTION_FACTOR = egyptian_battle_temples_supply_consumption_factor
+}

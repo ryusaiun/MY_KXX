@@ -1,0 +1,128 @@
+guiTypes = {
+	containerWindowType = {
+		name = "GFX_JONS_BATTAL_GUI1"
+		position = { x = -1500 y = 80 }
+		size = { width = 500 height = 500}
+		Orientation = upper_right
+		
+			buttonType = {
+				name = "GFX_JONS_BATTAL_GUI_BUTTON1_1"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "GFX_small_button_71x26"
+				buttonFont = "hoi_16mbs"
+				buttonText = "双头之争"
+				pdx_tooltip = "GFX_JONS_BATTAL_GUI_BUTTON1_1_tooltip"
+				clicksound = click_default
+			} 
+		}
+	containerWindowType = {
+		name = "GFX_JONS_BATTAL_GUI"
+		position = { x = -400 y = 150 }
+		verticalScrollbar = "right_vertical_slider"
+		size = { width = 800 height = 720}
+		Orientation = center_up
+		
+		background = {
+			name = "Background" 
+			quadTextureSprite = "GFX_NR_tiled_plain_bg"
+		}
+
+		
+		instantTextboxType = {
+			name = "GFX_JONS_BATTAL_GUI_TEXT"
+			position = { x = 340 y = 4 }
+			font = "hoi_36header"
+			text = "双头之争"
+			maxWidth = 150
+			maxHeight = 50
+			format = center
+		}
+		instantTextboxType = {
+			name = "GFX_JONS_desc_TEXT"
+			position = { x = 15 y = 85 }
+			font = "hoi_18mbs"
+			text = "GFX_JONS_desc0_TEXT"
+			maxWidth = 770
+			maxHeight = 800
+			format = center
+		}
+		instantTextboxType = {
+			name = "GFX_JONS_LEADER_TEXT"
+			position = { x = 50 y = 520 }
+			font = "hoi_18mbs"
+			text = "拉米罗·莱德斯马·拉莫斯"
+			maxWidth = 250
+			maxHeight = 50
+			format = center
+		}
+		instantTextboxType = {
+			name = "GFX_JONS_LEADERQW_TEXT"
+			position = { x = 50 y = 550 }
+			font = "hoi_36header"
+			text = "[JONS_LEADERQW_TEXT]"
+			maxWidth = 250
+			maxHeight = 50
+			format = center
+		}
+		instantTextboxType = {
+			name = "GFX_JONS_LEADERQW2_TEXT"
+			position = { x = 485 y = 550 }
+			font = "hoi_36header"
+			text = "[JONS_LEADERQW2_TEXT]"
+			maxWidth = 280
+			maxHeight = 50
+			format = center
+		}
+		buttonType = {
+			name = "GFX_JONS_LEADERQW_button"
+			quadTextureSprite ="GFX_button_221x34"
+			buttonFont = "hoi_20b"
+			clicksound = click_default
+			shortcut = "RETURN"
+			position = { x = 72 y = 600 }
+			buttonText = "GFX_JONS_LEADERQW_button_tooltip"
+			pdx_tooltip = "GFX_JONS_LEADERQW_button_tooltip"
+		}
+		buttonType = {
+			name = "GFX_JONS_LEADERQW2_button"
+			quadTextureSprite ="GFX_button_221x34"
+			buttonFont = "hoi_20b"
+			clicksound = click_default
+			shortcut = "RETURN"
+			position = { x = 515 y = 600 }
+			buttonText = "GFX_JONS_LEADERQW2_button_tooltip"
+			pdx_tooltip = "GFX_JONS_LEADERQW2_button_tooltip"
+		}
+		buttonType = {
+			name = "GFX_JONS_LEADERQW_button_close"
+			quadTextureSprite ="GFX_closebutton_small"
+			buttonFont = "hoi_20b"
+			clicksound = click_default
+			shortcut = "RETURN"
+			position = { x = 768 y = 7 }
+			buttonText = ""
+			pdx_tooltip = "关闭权力斗争"
+		}
+		instantTextboxType = {
+			name = "GFX_JONS_LEADER2_TEXT"
+			position = { x = 500 y = 520 }
+			font = "hoi_18mbs"
+			text = "奥内西莫·雷东多·奥特加"
+			maxWidth = 250
+			maxHeight = 50
+			format = center
+		}
+		iconType = {
+			name = "GFX_Ledesma_name"
+			spriteType = "GFX_Ledesma"		
+			position = { x = 100  y = 300 }
+			pdx_tooltip = "GFX_Ledesma_tooltip"
+		}
+		iconType = {
+			name = "GFX_redondo_name"
+			spriteType = "GFX_redondo"		
+			position = { x = 550  y = 300 }
+			pdx_tooltip = "GFX_redondo_tooltip"
+		}
+	}
+}

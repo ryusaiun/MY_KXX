@@ -1,0 +1,225 @@
+spriteTypes = {
+	####goals
+	spriteType = {
+		name = "GFX_PAL_against_the_sea_people"
+		texturefile = "gfx/interface/goals/GFX_PAL_against_the_sea_people.png"
+	}
+	spriteType = {
+		name = "GFX_PAL_attack_persia"
+		texturefile = "gfx/interface/goals/GFX_PAL_attack_persia.png"
+	}
+	spriteType = {
+		name = "GFX_PAL_babylon_second"
+		texturefile = "gfx/interface/goals/GFX_PAL_babylon_second.png"
+	}	
+	spriteType = {
+		name = "GFX_PAL_back_before_the_bulgars"
+		texturefile = "gfx/interface/goals/GFX_PAL_back_before_the_bulgars.png"
+	}
+	spriteType = {
+		name = "GFX_PAL_before_indians"
+		texturefile = "gfx/interface/goals/GFX_PAL_before_indians.png"
+	}
+	spriteType = {
+		name = "GFX_PAL_before_scythians"
+		texturefile = "gfx/interface/goals/GFX_PAL_before_scythians.png"
+	}
+	spriteType = {
+		name = "GFX_PAL_before_the_huns"
+		texturefile = "gfx/interface/goals/GFX_PAL_before_the_huns.png"
+	}
+	spriteType = {
+		name = "GFX_PAL_before_xia"
+		texturefile = "gfx/interface/goals/GFX_PAL_before_xia.png"
+	}
+	spriteType = {
+		name = "GFX_PAL_berber_bros"
+		texturefile = "gfx/interface/goals/GFX_PAL_berber_bros.png"
+	}
+	spriteType = {
+		name = "GFX_PAL_canaanites_within_punt"
+		texturefile = "gfx/interface/goals/GFX_PAL_canaanites_within_punt.png"
+	}
+	spriteType = {
+		name = "GFX_PAL_chariot_in_hyksos"
+		texturefile = "gfx/interface/goals/GFX_PAL_chariot_in_hyksos.png"
+	}
+	spriteType = {
+		name = "GFX_PAL_continuation_war"
+		texturefile = "gfx/interface/goals/GFX_PAL_continuation_war.png"
+	}
+	spriteType = {
+		name = "GFX_PAL_crescent_retaken"
+		texturefile = "gfx/interface/goals/GFX_PAL_crescent_retaken.png"
+	}
+	spriteType = {
+		name = "GFX_PAL_cross_to_himyar"
+		texturefile = "gfx/interface/goals/GFX_PAL_cross_to_himyar.png"
+	}
+	spriteType = {
+		name = "GFX_PAL_gothic_legacy"
+		texturefile = "gfx/interface/goals/GFX_PAL_gothic_legacy.png"
+	}
+	spriteType = {
+		name = "GFX_PAL_invade_the_romans"
+		texturefile = "gfx/interface/goals/GFX_PAL_invade_the_romans.png"
+	}
+	spriteType = {
+		name = "GFX_PAL_nubian_pyramids"
+		texturefile = "gfx/interface/goals/GFX_PAL_nubian_pyramids.png"
+	}
+	spriteType = {
+		name = "GFX_PAL_olympus"
+		texturefile = "gfx/interface/goals/GFX_PAL_olympus.png"
+	}
+	spriteType = {
+		name = "GFX_PAL_on_top_of_world"
+		texturefile = "gfx/interface/goals/GFX_PAL_on_top_of_world.png"
+	}
+	spriteType = {
+		name = "GFX_PAL_push_for_greater_israel"
+		texturefile = "gfx/interface/goals/GFX_PAL_push_for_greater_israel.png"
+	}
+	spriteType = {
+		name = "GFX_PAL_restore_gaul"
+		texturefile = "gfx/interface/goals/GFX_PAL_restore_gaul.png"
+	}
+	spriteType = {
+		name = "GFX_PAL_return_of_numidians"
+		texturefile = "gfx/interface/goals/GFX_PAL_return_of_numidians.png"
+	}
+	spriteType = {
+		name = "GFX_PAL_salt_sprinkled_over_carthage"
+		texturefile = "gfx/interface/goals/GFX_PAL_salt_sprinkled_over_carthage.png"
+	}
+	spriteType = {
+		name = "GFX_PAL_what_alexander_couldnt"
+		texturefile = "gfx/interface/goals/GFX_PAL_what_alexander_couldnt.png"
+	}
+	spriteType = {
+		name = "GFX_PAL_canaan_marches_on"
+		texturefile = "gfx/interface/goals/GFX_PAL_canaan_marches_on.png"
+	}
+	spriteType = {
+		name = "GFX_PAL_worker_coops"
+		texturefile = "gfx/interface/goals/GFX_PAL_worker_coops.png"
+	}
+	spriteType = {
+		name = "GFX_PAL_local_capitalism"
+		texturefile = "gfx/interface/goals/GFX_PAL_local_capitalism.png"
+	}
+	spriteType = {
+		name = "GFX_PAL_economic_anti_imperialism"
+		texturefile = "gfx/interface/goals/GFX_PAL_economic_anti_imperialism.png"
+	}
+	spriteType = {
+		name = "GFX_PAL_repurpose_ottoman_assets"
+		texturefile = "gfx/interface/goals/GFX_PAL_repurpose_ottoman_assets.png"
+	}
+	spriteType = {
+		name = "GFX_PAL_promote_local_growth"
+		texturefile = "gfx/interface/goals/GFX_PAL_promote_local_growth.png"
+	}
+	spriteType = {
+		name = "GFX_PAL_national_economy"
+		texturefile = "gfx/interface/goals/GFX_PAL_national_economy.png"
+	}
+	spriteType = {
+		name = "GFX_PAL_form_canaanite_mythology"
+		texturefile = "gfx/interface/goals/GFX_PAL_form_canaanite_mythology.png"
+	}
+	spriteType = {
+		name = "GFX_PAL_Latinize_Hebrew"
+		texturefile = "gfx/interface/goals/GFX_PAL_Latinize_Hebrew.png"
+	}
+	spriteType = {
+		name = "GFX_PAL_separate_jews_from_judaism"
+		texturefile = "gfx/interface/goals/GFX_PAL_separate_jews_from_judaism.png"
+	}
+	spriteType = {
+		name = "GFX_PAL_separate_muslims_from_islam"
+		texturefile = "gfx/interface/goals/GFX_PAL_separate_muslims_from_islam.png"
+	}
+	spriteType = {
+		name = "GFX_goal_work_with_stern"
+		texturefile = "gfx/interface/goals/GFX_goal_work_with_stern.png"
+	}
+	spriteType = {
+		name = "GFX_goal_PAL_woth_with_bund"
+		texturefile = "gfx/interface/goals/GFX_PAL_woth_with_bund.png"
+	}
+	spriteType = {
+		name = "GFX_goal_PAL_canaan_rises"
+		texturefile = "gfx/interface/goals/GFX_PAL_canaan_rises.png"
+	}
+####################################################################################
+	spriteType = {
+		name = "GFX_goal_african_frontier"
+		texturefile = "gfx/interface/goals/NE_UOB/African_fronteir.png"
+	}
+
+	spriteType = {
+		name = "GFX_goal_between_east_and_west"
+		texturefile = "gfx/interface/goals/NE_UOB/Between_East_and_West.png"
+	}
+
+	spriteType = {
+		name = "GFX_goal_build_new_nation"
+		texturefile = "gfx/interface/goals/NE_UOB/Build_a_New_Nation.png"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_destroy_antieuropeans"
+		texturefile = "gfx/interface/goals/NE_UOB/Destory_Anti_European_Sentiment.png"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_new_identity"
+		texturefile = "gfx/interface/goals/NE_UOB/Establishing_a_New_Identity.png"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_europe_secured"
+		texturefile = "gfx/interface/goals/NE_UOB/Europe_Secured.png"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_european_nationalism"
+		texturefile = "gfx/interface/goals/NE_UOB/European_Nationalism.png"
+	}
+
+	spriteType = {
+		name = "GFX_goal_father_of_nation"
+		texturefile = "gfx/interface/goals/NE_UOB/Father_of_Nations.png"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_leaving_anti_europeanists"
+		texturefile = "gfx/interface/goals/NE_UOB/leaving-anti_europeanists.png"
+	}
+
+	spriteType = {
+		name = "GFX_goal_new_marxism"
+		texturefile = "gfx/interface/goals/NE_UOB/New_Marxism.png"
+	}
+
+	spriteType = {
+		name = "GFX_goal_restore_anglo_identity"
+		texturefile = "gfx/interface/goals/NE_UOB/restore_anglo_identity.png"
+	}
+
+	spriteType = {
+		name = "GFX_goal_retake_former_colonies"
+		texturefile = "gfx/interface/goals/NE_UOB/Retake_Former_Colonies.png"
+	}
+
+	spriteType = {
+		name = "GFX_goal_Start_The_Crusade"
+		texturefile = "gfx/interface/goals/NE_UOB/Start_The_Crusade.png"
+	}
+
+	spriteType = {
+		name = "GFX_goal_The_Alternative"
+		texturefile = "gfx/interface/goals/NE_UOB/The_Alternative.png"
+	}
+}

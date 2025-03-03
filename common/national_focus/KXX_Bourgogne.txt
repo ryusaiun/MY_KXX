@@ -1,0 +1,432 @@
+focus_tree = {
+	id = Bourgogne
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = DOB
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 2000 y = 2000 }
+	
+	focus = {
+		id = DOB_Burgundy_Crisis_Moment
+		icon = GFX_goal_FRA_peasant_commitees
+		prerequisite = {
+			
+		}
+		x = 15
+		y = 0
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			add_political_power = 100
+		}
+	}	
+
+	focus = {
+		id = DOB_Expand_the_Workers_Syndicate
+		icon = GFX_goal_FRA_farm_outreach
+		prerequisite = {
+			focus = DOB_Burgundy_Crisis_Moment
+		}
+		x = 0
+		y = 1
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		relative_position_id = DOB_Burgundy_Crisis_Moment
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			add_ideas = FRA_union_loyalty2
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}	
+
+	focus = {
+		id = DOB_Establish_a_military_factory
+		icon = GFX_RUS_The_Industry_Needs_Men
+		prerequisite = {
+			focus = DOB_Expand_the_Workers_Syndicate
+		}
+		x = -2
+		y = 2
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		relative_position_id = DOB_Burgundy_Crisis_Moment
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}	
+
+	focus = {
+		id = DOB_Protecting_food_supply
+		icon = GFX_JAPRECOVERY_starting_the_land_reformation-248360
+		prerequisite = {
+			focus = DOB_Expand_the_Workers_Syndicate
+		}
+		x = 0
+		y = 2
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		relative_position_id = DOB_Burgundy_Crisis_Moment
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			PRO = {
+				random_owned_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+			CHP = {
+				random_owned_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+			PDL = {
+				random_owned_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}	
+
+	focus = {
+		id = DOB_Simple_weapon_assembly
+		icon = GFX_focus_generic_modernize_industry
+		prerequisite = {
+			focus = DOB_Expand_the_Workers_Syndicate
+		}
+		x = 2
+		y = 2
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		relative_position_id = DOB_Burgundy_Crisis_Moment
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 3000
+				producer = FRA
+			}
+		}
+	}	
+
+	focus = {
+		id = DOB_Transfer_equipment_production_line
+		icon = GFX_RUS_Complexes_Urals
+		prerequisite = {
+			focus = DOB_Establish_a_military_factory
+		}
+		prerequisite = {
+			focus = DOB_Protecting_food_supply
+		}
+		prerequisite = {
+			focus = DOB_Simple_weapon_assembly
+		}
+		x = -1
+		y = 3
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		relative_position_id = DOB_Burgundy_Crisis_Moment
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			PRO = {
+				random_owned_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+			CHP = {
+				random_owned_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+			PDL = {
+				random_owned_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}	
+
+	focus = {
+		id = DOB_Promote_cooperative_economy
+		icon = GFX_goal_FRA_agro_industrial_federation
+		prerequisite = {
+			focus = DOB_Establish_a_military_factory
+		}
+		prerequisite = {
+			focus = DOB_Protecting_food_supply
+		}
+		prerequisite = {
+			focus = DOB_Simple_weapon_assembly
+		}
+		x = 1
+		y = 3
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		relative_position_id = DOB_Burgundy_Crisis_Moment
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			add_ideas = command_economy
+		}
+	}	
+
+	focus = {
+		id = DOB_Establish_a_reconnaissance_unit
+		icon = GFX_goal_integrate_the_militia
+		prerequisite = {
+			focus = DOB_Transfer_equipment_production_line
+		}
+		prerequisite = {
+			focus = DOB_Promote_cooperative_economy
+		}
+		x = -2
+		y = 4
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		relative_position_id = DOB_Burgundy_Crisis_Moment
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			add_tech_bonus = {
+				name = SRI_ragruppamenti_esploranti
+				bonus = 1
+				uses = 1
+				category = recon_tech
+			}
+			if = {
+				limit = { has_dlc_lar = yes }
+				add_tech_bonus = {
+					name = SRI_ragruppamenti_esploranti
+					bonus = 1
+					uses = 1
+					category = cat_armored_cars
+				}
+			}
+		}
+	}	
+
+	focus = {
+		id = DOB_Ensure_wireless_communication
+		icon = GFX_goal_CSA_communications_infrastructure
+		prerequisite = {
+			focus = DOB_Transfer_equipment_production_line
+		}
+		prerequisite = {
+			focus = DOB_Promote_cooperative_economy
+		}
+		x = 0
+		y = 4
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		relative_position_id = DOB_Burgundy_Crisis_Moment
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			add_tech_bonus = {
+				name = AUS_communications
+				bonus = 1
+				uses = 1
+				category = electronics
+			}
+		}
+	}	
+
+	focus = {
+		id = DOB_Radio_popularization
+		icon = GFX_focus_rus_people
+		prerequisite = {
+			focus = DOB_Transfer_equipment_production_line
+		}
+		prerequisite = {
+			focus = DOB_Promote_cooperative_economy
+		}
+		x = 2
+		y = 4
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		relative_position_id = DOB_Burgundy_Crisis_Moment
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			27 = {
+				add_building_construction = {
+					type = radar_station
+					province = 9642
+					level = 2
+				}
+			}
+		}
+	}	
+
+	focus = {
+		id = DOB_Focus_on_decryption
+		icon = GFX_goal_economic_control
+		prerequisite = {
+			focus = DOB_Establish_a_reconnaissance_unit
+		}
+		prerequisite = {
+			focus = DOB_Ensure_wireless_communication
+		}
+		prerequisite = {
+			focus = DOB_Radio_popularization
+		}
+		x = 0
+		y = 5
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		relative_position_id = DOB_Burgundy_Crisis_Moment
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			create_intelligence_agency = {
+				name = "辛迪加情报总局"
+			}
+		}
+	}	
+
+	focus = {
+		id = DOB_Protector_of_Farmers
+		icon = GFX_RUS_Peasant_Councils
+		prerequisite = {
+			focus = DOB_Focus_on_decryption
+		}
+		x = 0
+		y = 6
+		cost = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		relative_position_id = DOB_Burgundy_Crisis_Moment
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_Pursue_European_Republicanism"
+			add_political_power = 100
+		}
+	}	
+}

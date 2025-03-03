@@ -1,0 +1,83 @@
+spriteTypes = {
+	spriteType = {
+		name = "txt_icon_KMT_leaderparty"
+		texturefile = "gfx/texticons/txt_icon_KMT_leaderparty.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "txt_icon_KMT_no_leader"
+		texturefile = "gfx/texticons/txt_icon_KMT_no_leader.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "txt_icon_KMT_Chen_Duxiu"
+		texturefile = "gfx/texticons/txt_icon_KMT_Chen_Duxiu.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "txt_icon_KMT_Dai_li"
+		texturefile = "gfx/texticons/txt_icon_KMT_Dai_li.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "txt_icon_Zhang_Guotao"
+		texturefile = "gfx/texticons/txt_icon_Zhang_Guotao.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "txt_icon_KMT_chiang_Kai_shek"
+		texturefile = "gfx/texticons/txt_icon_KMT_chiang_Kai_shek.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "txt_icon_KMT_Li_Zongren"
+		texturefile = "gfx/texticons/txt_icon_KMT_Li_Zongren.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "txt_icon_KMT_Lin_Sen"
+		texturefile = "gfx/texticons/txt_icon_KMT_Lin_Sen.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "txt_icon_KMT_Mao_zedong"
+		texturefile = "gfx/texticons/txt_icon_KMT_Mao_zedong.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "txt_icon_KMT_Song_Qingling"
+		texturefile = "gfx/texticons/txt_icon_KMT_Song_Qingling.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "txt_icon_KMT_Wang_Jingwei"
+		texturefile = "gfx/texticons/txt_icon_KMT_Wang_Jingwei.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "txt_icon_KMT_Zhou_Enlai"
+		texturefile = "gfx/texticons/txt_icon_KMT_Zhou_Enlai.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "txt_icon_KMT_Zhu_Peide"
+		texturefile = "gfx/texticons/txt_icon_KMT_Zhu_Peide.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "txt_icon_KMT_Hu_zongnan"
+		texturefile = "gfx/texticons/txt_icon_KMT_Hu_zongnan.png"
+		legacy_lazy_load = no
+	}
+	progressbartype = {
+		name = "GFX_CHI_radicalism_progress_red"
+		textureFile1 = "gfx/texticons/left.png"
+		textureFile2 = "gfx/texticons/empty.png"
+		size = {
+			x = 359
+			y = 34
+		}
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = yes
+	}
+}

@@ -1,0 +1,250 @@
+guiTypes = {
+	containerWindowType = {
+		name = "GEA_map_gui_game"
+		position = { x = 0 y = 0 }
+		size = { width = 275 height = 380 }
+		
+		iconType = {
+			name = "GEA_Map"
+			orientation = upper_left
+			position = { x = 0 y = 0 }
+		}
+		
+		buttonType = {
+			name = "Burma_Map"
+			orientation = center
+			position = { x = -130 y = -190 }
+			spriteType = "GEA_Burma"
+			pdx_tooltip = "GEA_Burma"
+			pdx_tooltip_delayed = "GEA_Burma_DESC"
+			scale = 0.7
+		}
+		buttonType = {
+			name = "Burma_soc_Map"
+			orientation = center
+			position = { x = -130 y = -190 }
+			spriteType = "GEA_Burma_soc"
+			pdx_tooltip = "GEA_Burma"
+			pdx_tooltip_delayed = "GEA_Burma_soc_DESC"
+			scale = 0.7
+		}
+		buttonType = {
+			name = "Burma_ger_Map"
+			orientation = center
+			position = { x = -130 y = -190 }
+			spriteType = "GEA_Burma_ger"
+			pdx_tooltip = "GEA_Burma_ger"
+			pdx_tooltip_delayed = "GEA_Burma_ger_DESC"
+			scale = 0.7
+		}
+		buttonType = {
+			name = "DEI_Map"
+			orientation = center
+			position = { x = -130 y = -190 }
+			spriteType = "GEA_DEI"
+			pdx_tooltip = "GEA_DEI"
+			pdx_tooltip_delayed = "GEA_DEI_DESC"
+			scale = 0.7
+		}
+		buttonType = {
+			name = "DEI_ger_Map"
+			orientation = center
+			position = { x = -130 y = -190 }
+			spriteType = "GEA_DEI_ger"
+			pdx_tooltip = "GEA_DEI_ger"
+			pdx_tooltip_delayed = "GEA_DEI_ger_DESC"
+			scale = 0.7
+		}
+		buttonType = {
+			name = "GER_Guinea_Map"
+			orientation = center
+			position = { x = -130 y = -190 }
+			spriteType = "GEA_GER_Guinea"
+			pdx_tooltip = "GEA_GER_Guinea"
+			pdx_tooltip_delayed = "GEA_GER_Guinea_DESC"
+			scale = 0.7
+		}
+		buttonType = {
+			name = "HOL_Guinea_Map"
+			orientation = center
+			position = { x = -130 y = -190 }
+			spriteType = "GEA_HOL_Guinea"
+			pdx_tooltip = "GEA_HOL_Guinea"
+			pdx_tooltip_delayed = "GEA_HOL_Guinea_DESC"
+			scale = 0.7
+		}
+		buttonType = {
+			name = "Guinea_Map"
+			orientation = center
+			position = { x = -130 y = -190 }
+			spriteType = "GEA_Guinea"
+			pdx_tooltip = "GEA_GER_Guinea"
+			pdx_tooltip_delayed = "GEA_GER_Guinea_DESC"
+			scale = 0.7
+		}
+		buttonType = {
+			name = "Indochina_Map"
+			orientation = center
+			position = { x = -130 y = -190 }
+			spriteType = "GEA_Indochina"
+			pdx_tooltip = "GEA_Indochina"
+			pdx_tooltip_delayed = "GEA_Indochina_DESC"
+			scale = 0.7
+		}
+		buttonType = {
+			name = "Indochina_schorner_Map"
+			orientation = center
+			position = { x = -130 y = -190 }
+			spriteType = "GEA_Indochina_schorner"
+			pdx_tooltip = "GEA_Indochina_schorner"
+			pdx_tooltip_delayed = "GEA_Indochina_schorner_DESC"
+			scale = 0.7
+		}
+		buttonType = {
+			name = "Indochina_inc_Map"
+			orientation = center
+			position = { x = -130 y = -190 }
+			spriteType = "GEA_Indochina_inc"
+			pdx_tooltip = "GEA_Indochina_inc"
+			pdx_tooltip_delayed = "GEA_Indochina_inc_DESC"
+			scale = 0.7
+		}
+		buttonType = {
+			name = "Indochina_vin_Map"
+			orientation = center
+			position = { x = -130 y = -190 }
+			spriteType = "GEA_Indochina_vin"
+			pdx_tooltip = "GEA_Indochina_vin"
+			pdx_tooltip_delayed = "GEA_Indochina_vin_DESC"
+			scale = 0.7
+		}
+		buttonType = {
+			name = "Malaya_Map"
+			orientation = center
+			position = { x = -130 y = -190 }
+			spriteType = "GEA_Malaya"
+			pdx_tooltip = "GEA_Malaya"
+			pdx_tooltip_delayed = "GEA_Malaya_DESC"
+			scale = 0.7
+		}
+		buttonType = {
+			name = "North_Borneo_Map"
+			orientation = center
+			position = { x = -130 y = -190 }
+			spriteType = "GEA_North_Borneo"
+			pdx_tooltip = "GEA_North_Borneo"
+			pdx_tooltip_delayed = "GEA_North_Borneo_DESC"
+			scale = 0.7
+		}
+		buttonType = {
+			name = "Philippines_Map"
+			orientation = center
+			position = { x = -130 y = -190 }
+			spriteType = "GEA_Philippines"
+			pdx_tooltip = "GEA_Philippines"
+			pdx_tooltip_delayed = "GEA_Philippines_DESC"
+			scale = 0.7
+		}
+		buttonType = {
+			name = "Philippines_soc_Map"
+			orientation = center
+			position = { x = -130 y = -190 }
+			spriteType = "GEA_Philippines_soc"
+			pdx_tooltip = "GEA_Philippines"
+			pdx_tooltip_delayed = "GEA_Philippines_DESC"
+			scale = 0.7
+		}
+		buttonType = {
+			name = "Philippines_ger_Map"
+			orientation = center
+			position = { x = -130 y = -190 }
+			spriteType = "GEA_Philippines_ger"
+			pdx_tooltip = "GEA_Philippines_ger"
+			pdx_tooltip_delayed = "GEA_Philippines_ger_DESC"
+			scale = 0.7
+		}
+		buttonType = {
+			name = "South_Borneo_Map"
+			orientation = center
+			position = { x = -130 y = -190 }
+			spriteType = "GEA_South_Borneo"
+			pdx_tooltip = "GEA_South_Borneo"
+			pdx_tooltip_delayed = "GEA_South_Borneo_DESC"
+			scale = 0.7
+		}
+		buttonType = {
+			name = "Borneo_Map"
+			orientation = center
+			position = { x = -130 y = -190 }
+			spriteType = "GEA_Borneo"
+			pdx_tooltip = "GEA_Borneo"
+			pdx_tooltip_delayed = "GEA_Borneo_DESC"
+			scale = 0.7
+		}
+		buttonType = {
+			name = "Thailand_Map"
+			orientation = center
+			position = { x = -130 y = -190 }
+			spriteType = "GEA_Thailand"
+			pdx_tooltip = "GEA_Thailand"
+			pdx_tooltip_delayed = "GEA_Thailand_DESC"
+			scale = 0.7
+		}
+		buttonType = {
+			name = "Thailand_soc_Map"
+			orientation = center
+			position = { x = -130 y = -190 }
+			spriteType = "GEA_Thailand_soc"
+			pdx_tooltip = "GEA_Thailand"
+			pdx_tooltip_delayed = "GEA_Thailand_soc_DESC"
+			scale = 0.7
+		}
+		buttonType = {
+			name = "Thailand_ger_Map"
+			orientation = center
+			position = { x = -130 y = -190 }
+			spriteType = "GEA_Thailand_ger"
+			pdx_tooltip = "GEA_Thailand_ger"
+			pdx_tooltip_delayed = "GEA_Thailand_ger_DESC"
+			scale = 0.7
+		}
+		buttonType = {
+			name = "whiteline"
+			orientation = center
+			position = { x = -130 y = -190 }
+			spriteType = "whiteline"
+			pdx_tooltip = "whiteline"
+			pdx_tooltip_delayed = "whiteline_DESC"
+			scale = 0.7
+		}
+		buttonType = {
+			name = "Hawaii_Map"
+			orientation = center
+			position = { x = -130 y = -190 }
+			spriteType = "GEA_Hawaii"
+			pdx_tooltip = "GEA_Hawaii"
+			pdx_tooltip_delayed = "GEA_Hawaii_DESC"
+			scale = 0.7
+		}
+		buttonType = {
+			name = "Hawaii_ger_Map"
+			orientation = center
+			position = { x = -130 y = -190 }
+			spriteType = "GEA_Hawaii_ger"
+			pdx_tooltip = "GEA_Hawaii_ger"
+			pdx_tooltip_delayed = "GEA_Hawaii_ger_DESC"
+			scale = 0.7
+		}
+		buttonType = {
+			name = "Hawaii_usa_Map"
+			orientation = center
+			position = { x = -130 y = -190 }
+			spriteType = "GEA_Hawaii_usa"
+			pdx_tooltip = "GEA_Hawaii_usa"
+			pdx_tooltip_delayed = "GEA_Hawaii_usa_DESC"
+			scale = 0.7
+		}
+	}
+}
+
+

@@ -1,0 +1,157 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GEA_Burma"
+		texturefile = "gfx/interface/GEAGUI/GEA_Burma.png"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GEA_Burma_soc"
+		texturefile = "gfx/interface/GEAGUI/GEA_Burma_soc.png"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GEA_Burma_ger"
+		texturefile = "gfx/interface/GEAGUI/GEA_Burma_ger.png"
+		transparencecheck = yes
+	}
+	
+	spriteType = {
+		name = "GEA_DEI"
+		texturefile = "gfx/interface/GEAGUI/GEA_DEI.png"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GEA_DEI_ger"
+		texturefile = "gfx/interface/GEAGUI/GEA_DEI_ger.png"
+		transparencecheck = yes
+	}
+	
+	spriteType = {
+		name = "GEA_GER_Guinea"
+		texturefile = "gfx/interface/GEAGUI/GEA_GER_Guinea.png"
+		transparencecheck = yes
+	}
+	
+	spriteType = {
+		name = "GEA_HOL_Guinea"
+		texturefile = "gfx/interface/GEAGUI/GEA_HOL_Guinea.png"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GEA_Guinea"
+		texturefile = "gfx/interface/GEAGUI/GEA_Guinea.png"
+		transparencecheck = yes
+	}
+	
+	spriteType = {
+		name = "GEA_Indochina"
+		texturefile = "gfx/interface/GEAGUI/GEA_Indochina.png"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GEA_Indochina_schorner"
+		texturefile = "gfx/interface/GEAGUI/GEA_Indochina_schorner.png"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GEA_Indochina_inc"
+		texturefile = "gfx/interface/GEAGUI/GEA_Indochina_inc.png"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GEA_Indochina_vin"
+		texturefile = "gfx/interface/GEAGUI/GEA_Indochina_vin.png"
+		transparencecheck = yes
+	}
+	
+	spriteType = {
+		name = "GEA_Malaya"
+		texturefile = "gfx/interface/GEAGUI/GEA_Malaya.png"
+		transparencecheck = yes
+	}
+	
+	spriteType = {
+		name = "GEA_North_Borneo"
+		texturefile = "gfx/interface/GEAGUI/GEA_North_Borneo.png"
+		transparencecheck = yes
+	}
+	
+	spriteType = {
+		name = "GEA_Philippines"
+		texturefile = "gfx/interface/GEAGUI/GEA_Philippines.png"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GEA_Philippines_soc"
+		texturefile = "gfx/interface/GEAGUI/GEA_Philippines_soc.png"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GEA_Philippines_ger"
+		texturefile = "gfx/interface/GEAGUI/GEA_Philippines_ger.png"
+		transparencecheck = yes
+	}
+	
+	spriteType = {
+		name = "GEA_South_Borneo"
+		texturefile = "gfx/interface/GEAGUI/GEA_South_Borneo.png"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GEA_Borneo"
+		texturefile = "gfx/interface/GEAGUI/GEA_Borneo.png"
+		transparencecheck = yes
+	}
+	
+	spriteType = {
+		name = "GEA_Thailand"
+		texturefile = "gfx/interface/GEAGUI/GEA_Thailand.png"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GEA_Thailand_soc"
+		texturefile = "gfx/interface/GEAGUI/GEA_Thailand_soc.png"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GEA_Thailand_ger"
+		texturefile = "gfx/interface/GEAGUI/GEA_Thailand_ger.png"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "whiteline"
+		texturefile = "gfx/interface/GEAGUI/whiteline.png"
+		transparencecheck = yes
+	}
+	
+	spriteType = {
+		name = "GEA_Hawaii"
+		texturefile = "gfx/interface/GEAGUI/GEA_Hawaii.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GEA_Hawaii_usa"
+		texturefile = "gfx/interface/GEAGUI/GEA_Hawaii_usa.png"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GEA_Hawaii_ger"
+		texturefile = "gfx/interface/GEAGUI/GEA_Hawaii_ger.png"
+		transparencecheck = yes
+	}
+}

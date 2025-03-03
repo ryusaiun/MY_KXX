@@ -1,0 +1,347 @@
+﻿	capital = 165
+oob = "empty"
+
+set_technology = {
+	### Infantry ###
+	infantry_weapons = 1
+	basic_train = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	gw_artillery = 1
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "CNT_air_bba"
+		set_technology = {
+			aa_lmg = 1
+			early_bombs = 1
+			engines_1 = 1
+			iw_small_airframe = 1
+			iw_medium_airframe = 1
+			air_torpedoe_1 = 1
+		}
+		CNT_BBA_air_variants = yes
+	else = {
+		set_air_oob = "CNT_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			naval_bomber1 = 1
+			early_bomber = 1
+		}
+	}
+}
+
+### Navy - MtG ###
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		panzerschiffe = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		cruiser_submarines = 1
+		
+		basic_naval_mines = 1
+
+		## Modules##
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_medium_battery = 1
+		basic_heavy_battery = 1
+		basic_depth_charges = 1
+		basic_torpedo = 1
+		improved_ship_torpedo_launcher = 1
+		basic_cruiser_armor_scheme = 1
+
+		### Transport ###
+		mtg_transport = 1
+	}
+}
+
+### Navy - Non MtG ###
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "Man the Guns"
+		}
+	}
+	set_technology = {
+		early_destroyer = 1
+		basic_destroyer = 1
+		early_light_cruiser = 1
+		basic_light_cruiser = 1
+		early_submarine = 1
+		basic_submarine = 1
+		early_heavy_cruiser = 1
+		basic_heavy_cruiser = 1
+		early_battleship = 1
+
+		### Transport ###
+		transport = 1
+	}
+}
+
+set_research_slots = 3
+set_cosmetic_tag = CNT_FAI
+
+set_politics = {
+	ruling_party = syndicalist
+	last_election = "1888.6.15"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+country_event = {id = jons.1 days = 7 }
+
+CAR = {
+	country_event = {
+		id = fe.1
+		days = 10
+	}
+}
+
+set_popularities = {
+	totalist = 8
+	radical_socialist = 12
+	syndicalist = 55
+	social_democrat = 3
+	social_liberal = 3
+	market_liberal = 7
+	social_conservative = 0
+	authoritarian_democrat = 10
+	paternal_autocrat = 0
+	national_populist = 2
+}
+
+create_country_leader = {
+	name = "弗内塞斯克·阿萨尼亚·迪亚斯"
+	picture = "gfx/leaders/CNT/Portrait_CNT_Francesc_Sureda_i_Blanes.png"
+	expire = "1.1.1"
+	ideology = paternal_autocrat_subtype
+}
+
+create_country_leader = {
+	name = "胡安三世"
+	desc = "POLITICS_JUAN_BOURBON_DESC"
+	picture = "gfx/leaders/SPR/Portrait_SPR_Juan_III.png"
+	expire = "1.1.1"
+	ideology = autdem_christian_democracy_subtype
+}
+
+create_country_leader = {
+	name = "尼塞托·阿尔卡拉·萨莫拉"
+	picture = "gfx/leaders/CNT/Portrait_CNT_Niceto_Alcala_Zamora.png"
+	expire = "1.1.1"
+	ideology = christian_democracy_subtype
+}
+
+create_country_leader = {
+	name = "何塞普·塔拉德利亚斯"
+	picture = "gfx/leaders/CNT/Portrait_CNT_Josep_Tarradellas.png"
+	expire = "1.1.1"
+	ideology = marlib_national_liberalism_subtype
+}
+
+create_country_leader = {
+	name = "曼努埃尔·阿萨尼亚·迪亚斯"
+	picture = "gfx/leaders/CNT/Portrait_CNT_Manuel_Azana_Diaz.png"
+	expire = "1.1.1"
+	ideology = radical_liberalism_subtype
+}
+
+create_country_leader = {
+	name = "奥古斯托·巴尔西亚·特雷列斯"
+	picture = "gfx/leaders/CNT/Portrait_CNT_Augusto_Barcia_Trelles.png"
+	expire = "1.1.1"
+	ideology = socdem_democratic_socialism_subtype
+}
+
+create_country_leader = {
+	name = "无政府工联中央委员会"
+	picture = "gfx/leaders/CNT/Portrait_Switzerland_Council.png"
+	expire = "1.1.1"
+	ideology = anarcho_syndicalist_subtype
+}
+
+create_country_leader = {
+	name = "弗朗西斯科·拉尔戈·卡瓦列罗"
+	picture = "gfx/leaders/CNT/Portrait_CNT_Francisco_Largo_Caballero.png"
+	expire = "1.1.1"
+	ideology = moderate_socialist_subtype
+}
+
+create_country_leader = {
+	name = "多洛雷斯·伊巴露丽·戈麦斯"
+	picture = "gfx/leaders/CNT/Portrait_CNT_Dolores_Ibarruri_Gomez.png"
+	expire = "1.1.1"
+	ideology = authcom_subtype
+}
+
+add_ideas = {
+	# Ministers
+	CNT_Juan_Garcia_Oliver_hog_rso
+	CNT_Angel_Pestana_for_rso
+	CNT_Juan_Peiro_Belis_eco_syn
+	CNT_Joaquin_Ascaso_Budria_sec_rso
+
+	volunteer_only
+}
+
+### Field Marshals ###
+create_field_marshal = {
+	name = "费尔南德斯·奥索里奥·塔法伊"
+	portrait_path = "gfx/leaders/CNT/Portrait_CNT_Fernandez_Osorio_y_Tafall.png"
+	traits = {
+		politically_connected
+		organisational_leader
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 2
+	id = 320
+}
+
+### Corps Commanders ###
+create_corps_commander = {
+	name = "多梅内克·巴泰特"
+	portrait_path = "gfx/leaders/CNT/Portrait_CNT_Domenec_Batet.png"
+	traits = { }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+	id = 319
+}
+create_corps_commander = {
+	name = "拉斐尔·桑切斯·马萨斯"
+	portrait_path = "gfx/leaders/CNT/CNT_Rafael_Sanchez_Mazas.png"
+	traits = { }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+	id = 114514
+}
+create_corps_commander = {
+	name = "曼努埃尔·赫迪拉·拉里"
+	portrait_path = "gfx/leaders/CNT/CNT_Manuel_Hedilla.png"
+	traits = { }
+	skill = 3
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+	id = 114515
+}
+create_corps_commander = {
+	name = "雷蒙多·费尔南德斯·奎斯塔"
+	portrait_path = "gfx/leaders/CNT/CNT_Raimundo_Fernández_Cuesta.png"
+	traits = { }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+	id = 114516
+}
+create_corps_commander = {
+	name = "胡里奥·鲁伊斯·德·阿尔达"
+	portrait_path = "gfx/leaders/CNT/CNT_Julio_Ruiz_de_Alda.png"
+	traits = { }
+	skill = 3
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 2
+	id = 114517
+}
+create_corps_commander = {
+	name = "布埃纳文图拉·杜鲁提"
+	portrait_path = "gfx/leaders/CNT/Portrait_CNT_Durruti_Dumange.png"
+	traits = {
+		guerilla_officer
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+	id = 321
+}
+create_corps_commander = {
+	name = "恩里克·利斯特·福里扬"
+	portrait_path = "gfx/leaders/CNT/Portrait_CNT_Enrique_Lister.png"
+	traits = {
+		trickster
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+	id = 318
+}
+create_corps_commander = {
+	name = "何塞·里克尔梅·洛佩斯·巴戈"
+	portrait_path = "gfx/leaders/CNT/Portrait_CNT_Riquelme_y_Lopez_Bago.png"
+	traits = {
+		career_officer
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+	id = 322
+}
+create_corps_commander = {
+	name = "埃米利奥·埃雷拉·利纳雷斯"
+	portrait_path = "gfx/leaders/CNT/Portrait_CNT_Herrera_Linares.png"
+	traits = {
+		trait_engineer
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	id = 323
+}
+create_corps_commander = {
+	name = "比森特·罗霍·列乌契"
+	portrait_path = "gfx/leaders/CNT/Portrait_CNT_Rojo_Lluch.png"
+	traits = {
+		organizer
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	id = 324
+}
+
+### Admirals ###
+create_navy_leader = {
+	name = "André Marty"
+	portrait_path = "gfx/leaders/CNT/Portrait_CNT_Andre_Marty.png"
+	traits = { }
+	skill = 2
+	maneuvering_skill = 2
+	defense_skill = 2
+	attack_skill = 1
+	coordination_skill = 1
+	id = 325
+}

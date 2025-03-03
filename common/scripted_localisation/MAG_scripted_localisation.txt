@@ -1,0 +1,327 @@
+defined_text = {
+	name = MAG_heydrich_status
+	text = {
+		trigger = {
+			check_variable = { MAG_Heydrich_Power > 80 }
+		}
+		localization_key = MAG_heydrich_status1
+	}
+	text = {
+		trigger = {
+			check_variable = { MAG_Heydrich_Power > 60 }
+		}
+		localization_key = MAG_heydrich_status2
+	}
+	text = {
+		trigger = {
+			check_variable = { MAG_Heydrich_Power > 40 }
+		}
+		localization_key = MAG_heydrich_status3
+	}
+	text = {
+		trigger = {
+			check_variable = { MAG_Heydrich_Power > 20 }
+		}
+		localization_key = MAG_heydrich_status4
+	}
+	text = {
+		trigger = {
+			check_variable = { MAG_Heydrich_Power > -100 }
+		}
+		localization_key = MAG_heydrich_status5
+	}
+}
+
+defined_text = {
+	name = MAG_heydrich_status_number
+	text = {
+		trigger = {
+			check_variable = { MAG_Heydrich_Power > 80 }
+		}
+		localization_key = MAG_heydrich_status_number1
+	}
+	text = {
+		trigger = {
+			check_variable = { MAG_Heydrich_Power > 60 }
+		}
+		localization_key = MAG_heydrich_status_number2
+	}
+	text = {
+		trigger = {
+			check_variable = { MAG_Heydrich_Power > 40 }
+		}
+		localization_key = MAG_heydrich_status_number3
+	}
+	text = {
+		trigger = {
+			check_variable = { MAG_Heydrich_Power > 20 }
+		}
+		localization_key = MAG_heydrich_status_number4
+	}
+	text = {
+		trigger = {
+			check_variable = { MAG_Heydrich_Power > -100 }
+		}
+		localization_key = MAG_heydrich_status_number5
+	}
+}
+
+defined_text = {
+	name = MAG_french_status
+	text = {
+		trigger = {
+			check_variable = { MAG_French_Power > 80 }
+		}
+		localization_key = MAG_french_status1
+	}
+	text = {
+		trigger = {
+			check_variable = { MAG_French_Power > 60 }
+		}
+		localization_key = MAG_french_status2
+	}
+	text = {
+		trigger = {
+			check_variable = { MAG_French_Power > 40 }
+		}
+		localization_key = MAG_french_status3
+	}
+	text = {
+		trigger = {
+			check_variable = { MAG_French_Power > 20 }
+		}
+		localization_key = MAG_french_status4
+	}
+	text = {
+		trigger = {
+			check_variable = { MAG_French_Power > -100 }
+		}
+		localization_key = MAG_french_status5
+	}
+}
+
+defined_text = {
+	name = MAG_french_status_number
+	text = {
+		trigger = {
+			check_variable = { MAG_French_Power > 80 }
+		}
+		localization_key = MAG_french_status_number1
+	}
+	text = {
+		trigger = {
+			check_variable = { MAG_French_Power > 60 }
+		}
+		localization_key = MAG_french_status_number2
+	}
+	text = {
+		trigger = {
+			check_variable = { MAG_French_Power > 40 }
+		}
+		localization_key = MAG_french_status_number3
+	}
+	text = {
+		trigger = {
+			check_variable = { MAG_French_Power > 20 }
+		}
+		localization_key = MAG_french_status_number4
+	}
+	text = {
+		trigger = {
+			check_variable = { MAG_French_Power > -100 }
+		}
+		localization_key = MAG_french_status_number5
+	}
+}
+
+defined_text = {
+	name = MAG_local_status
+	text = {
+		trigger = {
+			check_variable = { MAG_Local_Power > 80 }
+		}
+		localization_key = MAG_french_status1
+	}
+	text = {
+		trigger = {
+			check_variable = { MAG_Local_Power > 60 }
+		}
+		localization_key = MAG_french_status2
+	}
+	text = {
+		trigger = {
+			check_variable = { MAG_Local_Power > 40 }
+		}
+		localization_key = MAG_french_status3
+	}
+	text = {
+		trigger = {
+			check_variable = { MAG_Local_Power > 20 }
+		}
+		localization_key = MAG_french_status4
+	}
+	text = {
+		trigger = {
+			check_variable = { MAG_Local_Power > -100 }
+		}
+		localization_key = MAG_french_status5
+	}
+}
+
+defined_text = {
+	name = MAG_local_status_number
+	text = {
+		trigger = {
+			check_variable = { MAG_Local_Power > 80 }
+		}
+		localization_key = MAG_local_status_number1
+	}
+	text = {
+		trigger = {
+			check_variable = { MAG_Local_Power > 60 }
+		}
+		localization_key = MAG_local_status_number2
+	}
+	text = {
+		trigger = {
+			check_variable = { MAG_Local_Power > 40 }
+		}
+		localization_key = MAG_local_status_number3
+	}
+	text = {
+		trigger = {
+			check_variable = { MAG_Local_Power > 20 }
+		}
+		localization_key = MAG_local_status_number4
+	}
+	text = {
+		trigger = {
+			check_variable = { MAG_Local_Power > -100 }
+		}
+		localization_key = MAG_local_status_number5
+	}
+}
+
+defined_text = {
+	name = MAG_jew_status
+	text = {
+		trigger = {
+			check_variable = { MAG_Jewish_Power > 80 }
+		}
+		localization_key = MAG_french_status1
+	}
+	text = {
+		trigger = {
+			check_variable = { MAG_Jewish_Power > 60 }
+		}
+		localization_key = MAG_french_status2
+	}
+	text = {
+		trigger = {
+			check_variable = { MAG_Jewish_Power > 40 }
+		}
+		localization_key = MAG_french_status3
+	}
+	text = {
+		trigger = {
+			check_variable = { MAG_Jewish_Power > 20 }
+		}
+		localization_key = MAG_french_status4
+	}
+	text = {
+		trigger = {
+			check_variable = { MAG_Jewish_Power > -100 }
+		}
+		localization_key = MAG_french_status5
+	}
+}
+
+defined_text = {
+	name = MAG_jew_status_number
+	text = {
+		trigger = {
+			check_variable = { MAG_Jewish_Power > 80 }
+		}
+		localization_key = MAG_jew_status_number1
+	}
+	text = {
+		trigger = {
+			check_variable = { MAG_Jewish_Power > 60 }
+		}
+		localization_key = MAG_jew_status_number2
+	}
+	text = {
+		trigger = {
+			check_variable = { MAG_Jewish_Power > 40 }
+		}
+		localization_key = MAG_jew_status_number3
+	}
+	text = {
+		trigger = {
+			check_variable = { MAG_Jewish_Power > 20 }
+		}
+		localization_key = MAG_jew_status_number4
+	}
+	text = {
+		trigger = {
+			check_variable = { MAG_Jewish_Power > -100 }
+		}
+		localization_key = MAG_jew_status_number5
+	}
+}
+
+defined_text = {
+	name = MAG_GER_status
+	text = {
+		trigger = {
+			check_variable = { MAG_GER_Power > 15 }
+		}
+		localization_key = MAG_GER_status1
+	}
+	text = {
+		trigger = {
+			check_variable = { MAG_GER_Power > 10 }
+		}
+		localization_key = MAG_GER_status2
+	}
+	text = {
+		trigger = {
+			check_variable = { MAG_GER_Power > 5 }
+		}
+		localization_key = MAG_GER_status3
+	}
+	text = {
+		trigger = {
+			check_variable = { MAG_GER_Power > -100 }
+		}
+		localization_key = MAG_GER_status4
+	}
+}
+
+defined_text = {
+	name = MAG_GER_status_number
+	text = {
+		trigger = {
+			check_variable = { MAG_GER_Power > 15 }
+		}
+		localization_key = MAG_GER_status_number1
+	}
+	text = {
+		trigger = {
+			check_variable = { MAG_GER_Power > 10 }
+		}
+		localization_key = MAG_GER_status_number2
+	}
+	text = {
+		trigger = {
+			check_variable = { MAG_GER_Power > 5 }
+		}
+		localization_key = MAG_GER_status_number3
+	}
+	text = {
+		trigger = {
+			check_variable = { MAG_GER_Power > -100 }
+		}
+		localization_key = MAG_GER_status_number4
+	}
+}

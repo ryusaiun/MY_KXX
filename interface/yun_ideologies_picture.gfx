@@ -1,0 +1,47 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ideology_left_occultism_bar"
+		textureFile = "gfx/interface/ideologies/ideology_bars/left_occultism.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_ideology_genshitism_bar"
+		textureFile = "gfx/interface/ideologies/ideology_bars/genshitism.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_ideology_doroism_bar"
+		textureFile = "gfx/interface/ideologies/ideology_bars/doroism.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_ideology_human_cannibalism_bar"
+		textureFile = "gfx/interface/ideologies/ideology_bars/human_cannibalism.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_ideology_cannibalism_bar"
+		textureFile = "gfx/interface/ideologies/ideology_bars/cannibalism.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_ideology_lusotropicalism_bar"
+		textureFile = "gfx/interface/ideologies/ideology_bars/lusotropicalism.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_ideology_revisionist_sorelianism_bar"
+		textureFile = "gfx/interface/ideologies/ideology_bars/revisionist_sorelianism.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_ideology_otokonomusumeism_bar"
+		textureFile = "gfx/interface/ideologies/ideology_bars/otokonomusumeism.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_ideology_marxism_leninism_banderaism_bar"
+		textureFile = "gfx/interface/ideologies/ideology_bars/marxism_leninism_banderaism.png"
+		legacy_lazy_load = no
+	}
+}
