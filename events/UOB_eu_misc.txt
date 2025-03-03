@@ -1,5 +1,6 @@
 ﻿add_namespace = uob_eu_misc
-add_namespace = uob_eu_misc_news 
+add_namespace = uob_eu_misc_news
+add_namespace = uob_eu_bucard
 
 country_event = { #paneuropeanism embraced
 	id = uob_eu_misc.0
@@ -245,3 +246,228 @@ news_event = { ##Nat coup
 	}
 }
 
+country_event = { #olive branch to Spain
+	id = uob_eu_bucard.0
+	immediate = { log = "[GetDateText]: [Root.GetName]: event uob_eu_bucard.0" }
+	title = uob_eu_bucard.0.t
+	desc = uob_eu_bucard.0.d
+	picture = GFX_report_event_generic_map_brit
+
+	is_triggered_only = yes
+
+	option = {
+		name = "联系普里莫·德·里维拉"
+		hidden_effect = {
+			news_event = {
+				id = uob_eu_bucard.1
+				days = 7
+			}
+		}
+	}
+
+}
+
+country_event = { #olive branch to Spain - primo de rivera accepts
+	id = uob_eu_bucard.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event uob_eu_bucard.1" }
+	title = uob_eu_bucard.1.t
+	desc = uob_eu_bucard.1.d
+	picture = GFX_report_event_generic_map_brit
+
+	is_triggered_only = yes
+
+	option = {
+		name = "好消息！"
+		CNT = {
+			news_event = {
+				id = uob_eu_bucard.2
+				days = 0
+			}
+		}
+	}
+
+}
+
+country_event = { #olive branch to Spain - Spanish side, organisation of UNS
+	id = uob_eu_bucard.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event uob_eu_bucard.2" }
+	title = uob_eu_bucard.2.t
+	desc = uob_eu_bucard.2.d
+	picture = GFX_report_event_generic_map_brit
+
+	is_triggered_only = yes
+
+	option = {
+		name = "这太可怕了！"
+		hidden_effect = {
+			news_event = {
+				id = uob_eu_bucard.3
+				days = 14
+			}
+		}
+	}
+
+}
+
+country_event = { #olive branch to Spain - Spanish side, coup
+	id = uob_eu_bucard.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event uob_eu_bucard.3" }
+	title = uob_eu_bucard.3.t
+	desc = uob_eu_bucard.3.d
+	picture = GFX_report_event_generic_map_brit
+
+	is_triggered_only = yes
+
+	option = {
+		name = "轴心已然崛起"
+		FRA = {
+			set_autonomy = {
+				target = CNT
+				autonomy_state = kr_military_district
+				end_wars = no
+				end_civil_wars = no
+			}
+			country_event = {
+				id = uob_eu_bucard.4
+				days = 0
+			}
+		}
+		create_country_leader = {
+					name = "何塞·安东尼奥·普里莫·德·里维拉"
+					desc = "POLITICS_DE_RIVERA_DESC"
+					picture = "gfx/leaders/CNT/Portrait_SPAIN_Jose_Antonio_Primo_de_Rivera.png"
+					expire = "1965.1.1"
+					ideology = natsynd_subtype
+		}
+	}
+
+}
+
+country_event = { #olive branch to Spain -  French side, coup
+	id = uob_eu_bucard.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event uob_eu_bucard.4" }
+	title = uob_eu_bucard.4.t
+	desc = uob_eu_bucard.4.d
+	picture = GFX_report_event_generic_map_brit
+
+	is_triggered_only = yes
+
+	option = {
+		name = "辉煌！"
+		
+	}
+
+}
+
+country_event = { #olive branch to England
+	id = uob_eu_bucard.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event uob_eu_bucard.5" }
+	title = uob_eu_bucard.5.t
+	desc = uob_eu_bucard.5.d
+	picture = GFX_report_event_generic_map_brit
+
+	is_triggered_only = yes
+
+	option = {
+		name = "私下与莫斯利取得联系"
+		hidden_effect = {
+			news_event = {
+				id = uob_eu_bucard.6
+				days = 7
+			}
+		}
+	}
+
+}
+
+country_event = { #olive branch to Britain - Mosley accepts
+	id = uob_eu_bucard.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event uob_eu_bucard.6" }
+	title = uob_eu_bucard.6.t
+	desc = uob_eu_bucard.6.d
+	picture = GFX_report_event_generic_map_brit
+
+	is_triggered_only = yes
+
+	option = {
+		name = "好消息！"
+		ENG = {
+			news_event = {
+				id = uob_eu_bucard.7
+				days = 0
+			}
+		}
+	}
+
+}
+
+country_event = { #olive branch to England - English side, organisation of UNS
+	id = uob_eu_bucard.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event uob_eu_bucard.7" }
+	title = uob_eu_bucard.7.t
+	desc = uob_eu_bucard.7.d
+	picture = GFX_report_event_generic_map_brit
+
+	is_triggered_only = yes
+
+	option = {
+		name = "这太可怕了！"
+		hidden_effect = {
+			news_event = {
+				id = uob_eu_bucard.8
+				days = 14
+			}
+		}
+	}
+
+}
+
+country_event = { #olive branch to England - English side, coup
+	id = uob_eu_bucard.8
+	immediate = { log = "[GetDateText]: [Root.GetName]: event uob_eu_bucard.8" }
+	title = uob_eu_bucard.8.t
+	desc = uob_eu_bucard.8.d
+	picture = GFX_report_event_generic_map_brit
+
+	is_triggered_only = yes
+
+	option = {
+		name = "锤与剑..."
+		FRA = {
+			set_autonomy = {
+				target = ENG
+				autonomy_state = kr_military_district
+				end_wars = no
+				end_civil_wars = no
+			}
+			country_event = {
+				id = uob_eu_bucard.9
+				days = 0
+			}
+		}
+		create_country_leader = {
+					name = "奥斯瓦尔德·莫斯利"
+					desc = "POLITICS_OSWALD_MOSLEY_DESC"
+					picture = "gfx/leaders/ENG/Portrait_England_Oswald_Mosley_Grand_Protector.png"
+					expire = "1965.1.1"
+					ideology = natsynd_subtype
+		}
+	}
+
+}
+
+country_event = { #olive branch to England -  French side, coup
+	id = uob_eu_bucard.9
+	immediate = { log = "[GetDateText]: [Root.GetName]: event uob_eu_bucard.9" }
+	title = uob_eu_bucard.9.t
+	desc = uob_eu_bucard.9.d
+	picture = GFX_report_event_generic_map_brit
+
+	is_triggered_only = yes
+
+	option = {
+		name = "真了不起"
+		
+	}
+
+}

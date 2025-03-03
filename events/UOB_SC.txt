@@ -199,7 +199,7 @@ country_event = { ##WHOMSTVE gets the funding (industrial)
 			}
 		}
 		else = {
-			add_idea = imperial_chemical_industries_improved
+			add_ideas = imperial_chemical_industries_improved
 		}
 	}
 	option = {
@@ -216,7 +216,7 @@ country_event = { ##WHOMSTVE gets the funding (industrial)
 			}
 		}
 		else = {
-			add_idea = english_electric_improved
+			add_ideas = english_electric_improved
 		}
 	}
 	option = {
@@ -233,7 +233,7 @@ country_event = { ##WHOMSTVE gets the funding (industrial)
 			}
 		}
 		else = {
-			add_idea = marconi_improved
+			add_ideas = marconi_improved
 		}
 	}
 	option = {

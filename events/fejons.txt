@@ -459,7 +459,7 @@ country_event = {
 
 	option = { 
 		name = SPRtest.1.a
-		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = LEADER_GUI_VISIBLE
 		clr_country_flag = KXX_LEADER_GUI_VISIBLE
 		add_popularity = { ideology = national_populist popularity = 0.45 }
 		set_politics = {
@@ -476,7 +476,7 @@ country_event = {
 	}
 	option = { 
 		name = SPRtest.1.b
-		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = LEADER_GUI_VISIBLE
 		clr_country_flag = KXX_LEADER_GUI_VISIBLE
 		add_popularity = { ideology = national_populist popularity = 0.45 }
 		set_politics = {
@@ -493,7 +493,7 @@ country_event = {
 	}
 	option = { 
 		name = SPRtest.1.c
-		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = LEADER_GUI_VISIBLE
 		clr_country_flag = KXX_LEADER_GUI_VISIBLE
 		add_popularity = { ideology = totalist popularity = 0.45 }
 		set_politics = {
@@ -510,7 +510,7 @@ country_event = {
 	}
 	option = { 
 		name = SPRtest.1.e
-		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = LEADER_GUI_VISIBLE
 		clr_country_flag = KXX_LEADER_GUI_VISIBLE
 		add_popularity = { ideology = radical_socialist popularity = 0.45 }
 		set_politics = {
@@ -527,7 +527,7 @@ country_event = {
 	}
 	option = { 
 		name = SPRtest.1.f
-		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = LEADER_GUI_VISIBLE
 		clr_country_flag = KXX_LEADER_GUI_VISIBLE
 		add_popularity = { ideology = paternal_autocrat popularity = 0.45 }
 		set_politics = {
@@ -544,7 +544,7 @@ country_event = {
 	}
 	option = { 
 		name = SPRtest.1.g
-		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = LEADER_GUI_VISIBLE
 		clr_country_flag = KXX_LEADER_GUI_VISIBLE
 		add_popularity = { ideology = paternal_autocrat popularity = 0.45 }
 		set_politics = {
@@ -569,7 +569,7 @@ country_event = {
 
 	option = { 
 		name = SPRtest.2.a
-		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = LEADER_GUI_VISIBLE
 		clr_country_flag = KXX_LEADER_GUI_VISIBLE
 		add_popularity = { ideology = national_populist popularity = 0.45 }
 		set_politics = {
@@ -586,7 +586,7 @@ country_event = {
 	}
 	option = { 
 		name = SPRtest.2.b
-		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = LEADER_GUI_VISIBLE
 		clr_country_flag = KXX_LEADER_GUI_VISIBLE
 		add_popularity = { ideology = paternal_autocrat popularity = 0.45 }
 		set_politics = {
@@ -603,7 +603,7 @@ country_event = {
 	}
 	option = { 
 		name = SPRtest.2.c
-		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = LEADER_GUI_VISIBLE
 		clr_country_flag = KXX_LEADER_GUI_VISIBLE
 		add_popularity = { ideology = national_populist popularity = 0.45 }
 		set_politics = {
@@ -620,7 +620,7 @@ country_event = {
 	}
 	option = { 
 		name = SPRtest.2.e
-		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = LEADER_GUI_VISIBLE
 		clr_country_flag = KXX_LEADER_GUI_VISIBLE
 		add_popularity = { ideology = paternal_autocrat popularity = 0.45 }
 		set_politics = {
@@ -637,7 +637,7 @@ country_event = {
 	}
 	option = { 
 		name = SPRtest.2.f
-		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = LEADER_GUI_VISIBLE
 		clr_country_flag = KXX_LEADER_GUI_VISIBLE
 		add_popularity = { ideology = national_populist popularity = 0.45 }
 		set_politics = {
@@ -654,7 +654,7 @@ country_event = {
 	}
 	option = { 
 		name = SPRtest.2.g
-		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = LEADER_GUI_VISIBLE
 		clr_country_flag = KXX_LEADER_GUI_VISIBLE
 		add_popularity = { ideology = authoritarian_democrat popularity = 0.45 }
 		set_politics = {
@@ -679,7 +679,7 @@ country_event = {
 
 	option = { 
 		name = SPRtest.3.a
-		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = LEADER_GUI_VISIBLE
 		clr_country_flag = KXX_LEADER_GUI_VISIBLE
 		add_popularity = { ideology = national_populist popularity = 0.45 }
 		set_politics = {
@@ -696,7 +696,7 @@ country_event = {
 	}
 	option = { 
 		name = SPRtest.3.b
-		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = LEADER_GUI_VISIBLE
 		clr_country_flag = KXX_LEADER_GUI_VISIBLE
 		add_popularity = { ideology = totalist popularity = 0.45 }
 		set_politics = {
@@ -713,7 +713,7 @@ country_event = {
 	}
 	option = { 
 		name = SPRtest.3.c
-		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = LEADER_GUI_VISIBLE
 		clr_country_flag = KXX_LEADER_GUI_VISIBLE
 		add_popularity = { ideology = paternal_autocrat popularity = 0.45 }
 		set_politics = {
@@ -739,7 +739,7 @@ country_event = {
 
 	option = { 
 		name = visigothic.1.a
-		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = LEADER_GUI_VISIBLE
 		clr_country_flag = KXX_LEADER_GUI_VISIBLE
 		remove_ideas_with_trait = head_of_government
 		add_ideas = CAR_Julio_Martinez_Santa_Olalla_hog_npo
@@ -778,7 +778,7 @@ country_event = {
 		}
 		set_country_flag = Falangist_Win
 		set_cosmetic_tag = FE_Provisional_Government
-		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = LEADER_GUI_VISIBLE
 		set_country_flag = KXX_LEADER_GUI_VISIBLE
 		remove_ideas_with_trait = head_of_government
 		add_ideas = CAR_Jose_Antonio_Primo_de_Rivera_hog_pau
@@ -1330,7 +1330,7 @@ country_event = {
 	option = { 
 		name = fe.111.a
 		set_country_flag = CAR_totalist_come2
-		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = LEADER_GUI_VISIBLE
 		clr_country_flag = KXX_LEADER_GUI_VISIBLE
 		set_cosmetic_tag = CAR_falangism_totalist_state
 		add_popularity = { ideology = totalist popularity = 0.45 }
@@ -1368,7 +1368,7 @@ country_event = {
 	option = { 
 		name = fe.112.a
 		set_country_flag = CAR_anarchism_come2
-		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = LEADER_GUI_VISIBLE
 		clr_country_flag = KXX_LEADER_GUI_VISIBLE
 		set_cosmetic_tag = CAR_falangism_anarchism_state
 		add_popularity = { ideology = radical_socialist popularity = 0.45 }
@@ -1406,7 +1406,7 @@ country_event = {
 	option = { 
 		name = fe.113.a
 		set_country_flag = CAR_legionarism_come2
-		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = LEADER_GUI_VISIBLE
 		clr_country_flag = KXX_LEADER_GUI_VISIBLE
 		set_cosmetic_tag = CAR_falangism_legionarism_state
 		add_popularity = { ideology = national_populist popularity = 0.45 }
@@ -1455,7 +1455,7 @@ country_event = {
 			ruling_party = national_populist
 			elections_allowed = no
 		}
-		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = LEADER_GUI_VISIBLE
 		clr_country_flag = KXX_LEADER_GUI_VISIBLE
 		create_country_leader = {
 			name = "何塞·安东尼奥·德里维拉"
@@ -1525,7 +1525,7 @@ country_event = {
 		add_political_power = 100
 		set_cosmetic_tag = CAR_falangism_revolution_state
 		add_popularity = { ideology = totalist popularity = 1 }
-		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = LEADER_GUI_VISIBLE
 		clr_country_flag = KXX_LEADER_GUI_VISIBLE
 		set_politics = {
 			ruling_party = totalist
@@ -1572,8 +1572,8 @@ country_event = {
 
 	option = { 
 		name = fe.16.a
-		clr_countrt_flag = KXX_LEADER_GUI_VISIBLE
-		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = KXX_LEADER_GUI_VISIBLE
+		clr_country_flag = LEADER_GUI_VISIBLE
 		add_popularity = { ideology = paternal_autocrat popularity = 1 }
 		set_cosmetic_tag = CAR_arms_state
 		set_country_flag = CAR_Tercio_de_Extranjeros_Win
@@ -1607,8 +1607,8 @@ country_event = {
 		ai_chance = {
 			factor = 0
 		}
-		clr_countrt_flag = KXX_LEADER_GUI_VISIBLE
-		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = KXX_LEADER_GUI_VISIBLE
+		clr_country_flag = LEADER_GUI_VISIBLE
 		set_country_flag = KXX_LEADER_GUI_NOT_VISIBLE
 		add_popularity = { ideology = paternal_autocrat popularity = 1 }
 		set_cosmetic_tag = CAR_javier_national_populist_state
@@ -1638,8 +1638,8 @@ country_event = {
 		ai_chance = {
 			factor = 0
 		}
-		clr_countrt_flag = KXX_LEADER_GUI_VISIBLE
-		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = KXX_LEADER_GUI_VISIBLE
+		clr_country_flag = LEADER_GUI_VISIBLE
 		set_country_flag = KXX_LEADER_GUI_NOT_VISIBLE
 		add_popularity = { ideology = paternal_autocrat popularity = 1 }
 		set_cosmetic_tag = CAR_javier_totalist_state
@@ -1684,7 +1684,7 @@ country_event = {
 		ai_chance = {
 			factor = 0
 		}
-		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = LEADER_GUI_VISIBLE
 		clr_country_flag = KXX_LEADER_GUI_VISIBLE
 		add_popularity = { ideology = paternal_autocrat popularity = 0.45 }
 		remove_ideas_with_trait = head_of_government
@@ -1771,7 +1771,7 @@ country_event = {
 
 	option = { 
 		name = fe.21.a
-		clr_countrt_flag = LEADER_GUI_VISIBLE
+		clr_country_flag = LEADER_GUI_VISIBLE
 		set_country_flag = KXX_LEADER_GUI_VISIBLE
 		add_popularity = { ideology = syndicalist popularity = 0.45 }
 		remove_ideas_with_trait = head_of_government

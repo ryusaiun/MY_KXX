@@ -275,8 +275,6 @@ IRE_initial_eco_measures = {
 	if = {
 		limit = {
 			has_completed_focus = IRE_stabilise_punt
-			NOT = { has_completed_focus = IRE_empower_central_bank }
-			NOT = { has_completed_focus = IRE_emergency_agricultural_bailout }
 			NOT = { has_completed_focus = IRE_purchase_surplus_dairy }
 			NOT = { has_completed_focus = IRE_promote_beef_exports }
 			NOT = { has_completed_focus = IRE_organise_rural_relief_work }
@@ -289,8 +287,6 @@ IRE_initial_eco_measures = {
 	else_if = {
 		limit = {
 			has_completed_focus = IRE_stabilise_punt
-			has_completed_focus = IRE_empower_central_bank
-			NOT = { has_completed_focus = IRE_emergency_agricultural_bailout }
 			NOT = { has_completed_focus = IRE_purchase_surplus_dairy }
 			NOT = { has_completed_focus = IRE_promote_beef_exports }
 			NOT = { has_completed_focus = IRE_organise_rural_relief_work }
@@ -303,7 +299,7 @@ IRE_initial_eco_measures = {
 	else_if = {
 		limit = {
 			has_completed_focus = IRE_stabilise_punt
-			has_completed_focus = IRE_empower_central_bank
+			 
 			has_completed_focus = IRE_emergency_agricultural_bailout
 			NOT = { has_completed_focus = IRE_purchase_surplus_dairy }
 			NOT = { has_completed_focus = IRE_promote_beef_exports }
@@ -317,7 +313,7 @@ IRE_initial_eco_measures = {
 	else_if = {
 		limit = {
 			has_completed_focus = IRE_stabilise_punt
-			has_completed_focus = IRE_empower_central_bank
+			 
 			has_completed_focus = IRE_emergency_agricultural_bailout
 			has_completed_focus = IRE_purchase_surplus_dairy
 			NOT = { has_completed_focus = IRE_promote_beef_exports }
@@ -331,7 +327,7 @@ IRE_initial_eco_measures = {
 	else_if = {
 		limit = {
 			has_completed_focus = IRE_stabilise_punt
-			has_completed_focus = IRE_empower_central_bank
+			 
 			has_completed_focus = IRE_emergency_agricultural_bailout
 			NOT = { has_completed_focus = IRE_purchase_surplus_dairy }
 			has_completed_focus = IRE_promote_beef_exports
@@ -345,7 +341,7 @@ IRE_initial_eco_measures = {
 	else_if = {
 		limit = {
 			has_completed_focus = IRE_stabilise_punt
-			has_completed_focus = IRE_empower_central_bank
+			 
 			has_completed_focus = IRE_emergency_agricultural_bailout
 			NOT = { has_completed_focus = IRE_purchase_surplus_dairy }
 			NOT = { has_completed_focus = IRE_promote_beef_exports }
@@ -359,7 +355,7 @@ IRE_initial_eco_measures = {
 	else_if = {
 		limit = {
 			has_completed_focus = IRE_stabilise_punt
-			has_completed_focus = IRE_empower_central_bank
+			 
 			has_completed_focus = IRE_emergency_agricultural_bailout
 			has_completed_focus = IRE_purchase_surplus_dairy
 			has_completed_focus = IRE_promote_beef_exports
@@ -373,7 +369,7 @@ IRE_initial_eco_measures = {
 	else_if = {
 		limit = {
 			has_completed_focus = IRE_stabilise_punt
-			has_completed_focus = IRE_empower_central_bank
+			 
 			has_completed_focus = IRE_emergency_agricultural_bailout
 			has_completed_focus = IRE_purchase_surplus_dairy
 			NOT = { has_completed_focus = IRE_promote_beef_exports }
@@ -387,7 +383,7 @@ IRE_initial_eco_measures = {
 	else_if = {
 		limit = {
 			has_completed_focus = IRE_stabilise_punt
-			has_completed_focus = IRE_empower_central_bank
+			 
 			has_completed_focus = IRE_emergency_agricultural_bailout
 			NOT = { has_completed_focus = IRE_purchase_surplus_dairy }
 			has_completed_focus = IRE_promote_beef_exports
@@ -401,7 +397,7 @@ IRE_initial_eco_measures = {
 	else_if = {
 		limit = {
 			has_completed_focus = IRE_stabilise_punt
-			has_completed_focus = IRE_empower_central_bank
+			 
 			has_completed_focus = IRE_emergency_agricultural_bailout
 			has_completed_focus = IRE_purchase_surplus_dairy
 			has_completed_focus = IRE_promote_beef_exports
@@ -415,7 +411,7 @@ IRE_initial_eco_measures = {
 	else_if = {
 		limit = {
 			has_completed_focus = IRE_stabilise_punt
-			NOT = { has_completed_focus = IRE_empower_central_bank }
+			 
 			has_completed_focus = IRE_emergency_agricultural_bailout
 			NOT = { has_completed_focus = IRE_purchase_surplus_dairy }
 			NOT = { has_completed_focus = IRE_promote_beef_exports }
@@ -429,7 +425,7 @@ IRE_initial_eco_measures = {
 	else_if = {
 		limit = {
 			has_completed_focus = IRE_stabilise_punt
-			NOT = { has_completed_focus = IRE_empower_central_bank }
+			 
 			has_completed_focus = IRE_emergency_agricultural_bailout
 			has_completed_focus = IRE_purchase_surplus_dairy
 			NOT = { has_completed_focus = IRE_promote_beef_exports }
@@ -443,7 +439,7 @@ IRE_initial_eco_measures = {
 	else_if = {
 		limit = {
 			has_completed_focus = IRE_stabilise_punt
-			NOT = { has_completed_focus = IRE_empower_central_bank }
+			 
 			has_completed_focus = IRE_emergency_agricultural_bailout
 			NOT = { has_completed_focus = IRE_purchase_surplus_dairy }
 			has_completed_focus = IRE_promote_beef_exports
@@ -457,7 +453,7 @@ IRE_initial_eco_measures = {
 	else_if = {
 		limit = {
 			has_completed_focus = IRE_stabilise_punt
-			NOT = { has_completed_focus = IRE_empower_central_bank }
+			 
 			has_completed_focus = IRE_emergency_agricultural_bailout
 			NOT = { has_completed_focus = IRE_purchase_surplus_dairy }
 			NOT = { has_completed_focus = IRE_promote_beef_exports }
@@ -471,7 +467,7 @@ IRE_initial_eco_measures = {
 	else_if = {
 		limit = {
 			has_completed_focus = IRE_stabilise_punt
-			NOT = { has_completed_focus = IRE_empower_central_bank }
+			 
 			has_completed_focus = IRE_emergency_agricultural_bailout
 			has_completed_focus = IRE_purchase_surplus_dairy
 			has_completed_focus = IRE_promote_beef_exports
@@ -485,7 +481,7 @@ IRE_initial_eco_measures = {
 	else_if = {
 		limit = {
 			has_completed_focus = IRE_stabilise_punt
-			NOT = { has_completed_focus = IRE_empower_central_bank }
+			 
 			has_completed_focus = IRE_emergency_agricultural_bailout
 			has_completed_focus = IRE_purchase_surplus_dairy
 			NOT = { has_completed_focus = IRE_promote_beef_exports }
@@ -499,7 +495,7 @@ IRE_initial_eco_measures = {
 	else_if = {
 		limit = {
 			has_completed_focus = IRE_stabilise_punt
-			NOT = { has_completed_focus = IRE_empower_central_bank }
+			
 			has_completed_focus = IRE_emergency_agricultural_bailout
 			NOT = { has_completed_focus = IRE_purchase_surplus_dairy }
 			has_completed_focus = IRE_promote_beef_exports

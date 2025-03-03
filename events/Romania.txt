@@ -4205,7 +4205,6 @@ country_event = {
 		name = romania.89.b
 		country_event = romania_wem.1
 		set_country_flag = ROM_czc_dead
-		}
 	}
 }
 #LEGION ATTACK ON BUCHAREST romania.90 
