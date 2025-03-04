@@ -22,7 +22,7 @@ country_event = { #Election
 
 	option = { #Soc Dem
 		ai_chance = {
-			factor = 30
+			base = 30
 			modifier = {
 				factor = 0
 				OR = {
@@ -58,7 +58,7 @@ country_event = { #Election
 	}
 	option = { #Soc Lib
 		ai_chance = {
-			factor = 30
+			base = 30
 			modifier = {
 				factor = 0
 				OR = {
@@ -94,7 +94,7 @@ country_event = { #Election
 	}
 	option = { #Soc Con
 		ai_chance = {
-			factor = 30
+			base = 30
 			modifier = {
 				factor = 0
 				OR = {
@@ -130,7 +130,7 @@ country_event = { #Election
 	}
 	option = { #Mar Lib
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				OR = {
@@ -193,7 +193,7 @@ country_event = { #Election 2
 
 	option = { #Soc Dem
 		ai_chance = {
-			factor = 30
+			base = 30
 			modifier = {
 				factor = 0
 				OR = {
@@ -229,7 +229,7 @@ country_event = { #Election 2
 	}
 	option = { #Soc Lib
 		ai_chance = {
-			factor = 30
+			base = 30
 			modifier = {
 				factor = 0
 				OR = {
@@ -265,7 +265,7 @@ country_event = { #Election 2
 	}
 	option = { #Soc Con
 		ai_chance = {
-			factor = 30
+			base = 30
 			modifier = {
 				factor = 0
 				OR = {
@@ -485,7 +485,7 @@ country_event = { #Zeeuws-Vlaanderen Question
 
 	option = { #Demand a referendum
 		ai_chance = {
-			factor = 80
+			base = 80
 		}
 		name = fln.5.a
 		HOL = {
@@ -494,7 +494,7 @@ country_event = { #Zeeuws-Vlaanderen Question
 	}
 	option = { #Infiltrate the Zeeuws-Vlaanderen government
 		ai_chance = {
-			factor = 20
+			base = 20
 		}
 		name = fln.5.b
 		set_country_flag = Zeeuws_Infiltration
@@ -528,7 +528,7 @@ country_event = { #Plan Antigoon
 	}
 	option = { #back down
 		ai_chance = {
-			factor = 30
+			base = 30
 		}
 		name = fln.51.b
 	}
@@ -570,7 +570,7 @@ country_event = { #Zeeuws-Vlaanderen Question
 
 	option = { #Hold a referendum
 		ai_chance = {
-			factor = 80
+			base = 80
 		}
 		name = fln.6.a
 		FLN = {
@@ -580,7 +580,7 @@ country_event = { #Zeeuws-Vlaanderen Question
 	}
 	option = { #Refuse their request
 		ai_chance = {
-			factor = 20
+			base = 20
 		}
 		name = fln.6.b
 		FLN = {
@@ -817,13 +817,13 @@ country_event = { #Situation report on French Flanders
 
 	option = {
 		ai_chance = {
-			factor = 20
+			base = 20
 		}
 		name = fln.13.a
 	}
 	option = {
 		ai_chance = {
-			factor = 80
+			base = 80
 		}
 		name = fln.13.b
 		set_country_flag = FLN_FRA
@@ -867,7 +867,7 @@ country_event = { #Plea to the bishoprics
 	}
 	option = {
 		ai_chance = {
-			factor = 30
+			base = 30
 		}
 		name = fln.14.b
 	}
@@ -907,7 +907,7 @@ country_event = { #Investment program in Frans-Vlaanderen
 	}
 	option = {
 		ai_chance = {
-			factor = 30
+			base = 30
 		}
 		name = fln.15.b
 	}
@@ -941,7 +941,7 @@ country_event = { #Francophone protest
 
 	option = {
 		ai_chance = {
-			factor = 30
+			base = 30
 		}
 		name = fln.17.a
 		modify_country_flag = {
@@ -1329,7 +1329,7 @@ country_event = { #Clash between the Vlaamse Wacht and the Secret Legion
 	}
 	option = {
 		ai_chance = {
-			factor = 30
+			base = 30
 			modifier = {
 				factor = 0
 				has_game_rule = {
@@ -1463,7 +1463,7 @@ country_event = { #Continue the Regency?
 
 	option = {
 		ai_chance = {
-			factor = 30
+			base = 30
 			modifier = {
 				factor = 0
 				OR = {
@@ -1696,7 +1696,7 @@ country_event = { #The Aristocracy increases it's power
 
 	option = {
 		ai_chance = {
-			factor = 80
+			base = 80
 			modifier = {
 				factor = 0
 				has_game_rule = {
@@ -1717,7 +1717,7 @@ country_event = { #The Aristocracy increases it's power
 	}
 	option = {
 		ai_chance = {
-			factor = 20
+			base = 20
 			modifier = {
 				factor = 0
 				OR = {
@@ -1912,7 +1912,7 @@ country_event = { #Aristocratic conspiracy discovered!
 
 	option = {
 		ai_chance = {
-			factor = 80
+			base = 80
 			modifier = {
 				factor = 0
 				has_game_rule = {
@@ -1932,7 +1932,7 @@ country_event = { #Aristocratic conspiracy discovered!
 	}
 	option = {
 		ai_chance = {
-			factor = 20
+			base = 20
 			modifier = {
 				factor = 0
 				has_game_rule = {

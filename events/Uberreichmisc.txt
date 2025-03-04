@@ -207,19 +207,19 @@ country_event = { # Offer was accepted
 			}
 
 		UBR = {
-		if = {
+			if = {
 
-			limit = { has_unit_leader = 1488 }
-			random_unit_leader = {
-				limit = { has_id = 1488 }
-				remove_unit_leader = yes
+				limit = { has_unit_leader = 1488 }
+				random_unit_leader = {
+					limit = { has_id = 1488 }
+					remove_unit_leader = yes
 				}
-			
-				}
+				
 			}
+		}
 		
 		add_offsite_building = { type = industrial_complex level = 1 }
-		add_offsite_building = { type = arms_factory level level = 1 }
+		add_offsite_building = { type = arms_factory level = 1 }
 		720 = {
 			SWA = { transfer_state = PREV }
 			}

@@ -897,7 +897,7 @@ country_event = {
 		original_tag = PER
 		has_country_flag = PER_helped_armenia
 		ARM = {
-			country_exists = YES
+			country_exists = yes
 			NOT = { has_war = yes }
 			NOT = { is_subject_of = OTT }
 		}

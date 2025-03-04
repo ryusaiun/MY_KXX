@@ -55,7 +55,7 @@ country_event = { #Knock knock...its the ERC
 		}
 	}
 	option = {
-		name = “或许我们该转向另一个方向....”
+		name = "或许我们该转向另一个方向...."
 		ai_chance = {
 			factor = 0
 		}
@@ -323,8 +323,8 @@ country_event = { ##Mosley rip bozo you wont be missed
 			add_stability = 0.02
 			hidden_effect = {
 				news_event = {
-				id = worldnews.1260
-				days = 5
+					id = worldnews.1260
+					days = 5
 				}
 			}
 		}

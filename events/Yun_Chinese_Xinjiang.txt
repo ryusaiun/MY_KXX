@@ -14,7 +14,7 @@ country_event = { #阿克苏的布尔什维克教团
 	option = {
 		name = Yun_UGR.1.a
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 		add_stability = 0.1
 		add_manpower = -1000
@@ -23,7 +23,7 @@ country_event = { #阿克苏的布尔什维克教团
     option = {
 		name = Yun_UGR.1.b
 		ai_chance = {
-			factor = 90
+			base = 90
 		}
         add_stability = -0.1
 		hidden_effect = {

@@ -40,9 +40,9 @@ country_event = { #paneuropeanism embraced
             base = 100
         }
 		custom_effect_tooltip = ENG_revolution_tp
-					hidden_effect = {
-							country_event = uob.201
-						}
+		hidden_effect = {
+			country_event = uob.201
+		}
 	}
 }
 
@@ -59,9 +59,6 @@ country_event = { #school flavor
 	option = {
 		name = "人人都应掌握这些知识"
 	}
-
-	
-	
 }
 
 country_event = { #mosley gets fucking shot 
@@ -179,11 +176,11 @@ country_event = { #underground against Mosleyites forms
 	option = {
 		name = "立即进行调查！"
 		hidden_effect = {
-				party_name_change_post_mosley = yes
-				country_event = {
-					id = uob_eu.5
-					days = 14
-				}
+			party_name_change_post_mosley = yes
+			country_event = {
+				id = uob_eu.5
+				days = 14
+			}
 		}
 	}
 }

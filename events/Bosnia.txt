@@ -246,11 +246,11 @@ country_event = {
     desc = bosnia_independence.9.d
 	
 	trigger = {
-	tag = BOS
-	syndicalist > 0.15
-	NOT = {
-	has_government = syndicalist
-	}
+		tag = BOS
+		syndicalist > 0.15
+		NOT = {
+			has_government = syndicalist
+		}
     }
 	
 	option = { 
@@ -268,11 +268,11 @@ country_event = {
     desc = bosnia_independence.10.d
 	
 	trigger = {
-	tag = BOS
-	syndicalist > 0.32
-	NOT = {
-	has_government = syndicalist
-	}
+		tag = BOS
+		syndicalist > 0.32
+		NOT = {
+			has_government = syndicalist
+		}
     }
 
 	option = { 
@@ -291,7 +291,7 @@ country_event = {
 		add_ideas = BOS_Dzemal_Bijedic_sec_syn
 		add_popularity = { ideology = syndicalist popularity = 0.2 }
 		FRA = {
-		add_to_faction = BOS
+			add_to_faction = BOS
 		}
 	}
 }
@@ -328,8 +328,8 @@ country_event = {
 	
 	option = { 
 		name = bosnia_independence.11.a
-		ai_will_do = {
-			factor = 0
+		ai_chance = {
+			base = 0
 		}
 		set_politics = {
 			ruling_party = paternal_autocrat
@@ -368,11 +368,11 @@ country_event = {
 		}
 		add_popularity = { ideology = paternal_autocrat popularity = 0.45 }
 		BOS = {
-		OVERLORD =  {
-		end_puppet = ROOT
-		}
-		leave_faction = yes
-		add_stability = -0.3
+			OVERLORD =  {
+				end_puppet = ROOT
+			}
+			leave_faction = yes
+			add_stability = -0.3
 		}
 	}
 }
@@ -393,14 +393,14 @@ country_event = {
 		}
 		}
 		BOS = {
-		remove_ideas_with_trait = head_of_government
-		add_ideas = BOS_Jure_Francetic_hog_npo
-		remove_ideas_with_trait = economy_minister
-		add_ideas = BOS_Rafael_Boban_eco_npo
-		remove_ideas_with_trait = foreign_minister
-		add_ideas = BOS_Vjekoslav_Luburic_for_npo
-		remove_ideas_with_trait = security_minister
-		add_ideas = BOS_Slavko_Kvaternik_sec_npo
+			remove_ideas_with_trait = head_of_government
+			add_ideas = BOS_Jure_Francetic_hog_npo
+			remove_ideas_with_trait = economy_minister
+			add_ideas = BOS_Rafael_Boban_eco_npo
+			remove_ideas_with_trait = foreign_minister
+			add_ideas = BOS_Vjekoslav_Luburic_for_npo
+			remove_ideas_with_trait = security_minister
+			add_ideas = BOS_Slavko_Kvaternik_sec_npo
 		}
 		BOS = {
 			set_popularities = {
@@ -418,14 +418,14 @@ country_event = {
 		}
 		}
 		BOS = {
-		remove_ideas_with_trait = head_of_government
-		add_ideas = BOS_Ante_Ciliga_hog_tot
-		remove_ideas_with_trait = economy_minister
-		add_ideas = BOS_Duro_Dakovic_eco_tot
-		remove_ideas_with_trait = foreign_minister
-		add_ideas = BOS_Andrija_Hebrang_for_tot
-		remove_ideas_with_trait = security_minister
-		add_ideas = BOS_Pavle_Gregoric_sec_tot
+			remove_ideas_with_trait = head_of_government
+			add_ideas = BOS_Ante_Ciliga_hog_tot
+			remove_ideas_with_trait = economy_minister
+			add_ideas = BOS_Duro_Dakovic_eco_tot
+			remove_ideas_with_trait = foreign_minister
+			add_ideas = BOS_Andrija_Hebrang_for_tot
+			remove_ideas_with_trait = security_minister
+			add_ideas = BOS_Pavle_Gregoric_sec_tot
 		}
 		BOS = {
 			set_popularities = {

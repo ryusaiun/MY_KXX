@@ -21,32 +21,32 @@ country_event = {
 		trigger = {
 			NOT = { has_socialist_government = yes }
 		}		
-		set_cosmetic_tag= GER_German_Greater
+		set_cosmetic_tag = GER_German_Greater
 	}
 	option = { 
 		name = Deutschinkx.1.b
 		trigger = {
 			NOT = { has_socialist_government = yes }
 		}				
-		set_cosmetic_tag= AUS_GER		
+		set_cosmetic_tag = AUS_GER		
 	}
 	option = { 
 		name = Deutschinkx.1.c
 		trigger = {
 			NOT = { has_socialist_government = yes }
 		}				
-		set_cosmetic_tag= BAT_germany			
+		set_cosmetic_tag = BAT_germany			
 	}
 	option = { 
 		name = Deutschinkx.1.e
 		trigger = {
 			NOT = { has_socialist_government = yes }
 		}				
-		set_cosmetic_tag= CZE_hussite_expasion			
+		set_cosmetic_tag = CZE_hussite_expasion			
 	}
 	option = { 
 		name = Deutschinkx.1.f
-		set_cosmetic_tag= CZE_hussite_rep_expasion			
+		set_cosmetic_tag = CZE_hussite_rep_expasion			
 	}
 	option = { 
 		name = Deutschinkx.1.g
@@ -75,7 +75,7 @@ country_event = {
 		trigger = {
 			NOT = { has_socialist_government = yes }
 		}				
-		set_cosmetic_tag= LUX_GER_LARP
+		set_cosmetic_tag = LUX_GER_LARP
 	}
 	option = { 
 		name = Deutschinkx.2.b
@@ -132,14 +132,14 @@ country_event = {
 		trigger = {
 			NOT = { has_socialist_government = yes }
 		}				
-		set_cosmetic_tag= BAY_DOLBUS_GERMANY
+		set_cosmetic_tag = BAY_DOLBUS_GERMANY
 	}
 	option = { 
 		name = Deutschinkx.3.b
 		trigger = {
 			NOT = { has_socialist_government = yes }
 		}				
-		set_cosmetic_tag= GER_AUS		
+		set_cosmetic_tag = GER_AUS		
 	}	
 	option = { 
 		name = Deutschinkx.3.c
@@ -691,18 +691,18 @@ country_event = {
 	option = { 
 		name = GDEadm.10.f
 		hidden_effect = {
-		190 = { remove_core_of = ROOT }
-		1091 = { remove_core_of = ROOT }
-		12 = { remove_core_of = ROOT }
-		191 = { remove_core_of = ROOT }
-		13 = { remove_core_of = ROOT }
-		880 = { remove_core_of = ROOT }
-		190 = { remove_claim_by = ROOT }
-		1091 = { remove_claim_by = ROOT }
-		12 = { remove_claim_by = ROOT }
-		191 = { remove_claim_by = ROOT }
-		13 = { remove_claim_by = ROOT }
-		880 = { remove_claim_by = ROOT }			
+			190 = { remove_core_of = ROOT }
+			1091 = { remove_core_of = ROOT }
+			12 = { remove_core_of = ROOT }
+			191 = { remove_core_of = ROOT }
+			13 = { remove_core_of = ROOT }
+			880 = { remove_core_of = ROOT }
+			190 = { remove_claim_by = ROOT }
+			1091 = { remove_claim_by = ROOT }
+			12 = { remove_claim_by = ROOT }
+			191 = { remove_claim_by = ROOT }
+			13 = { remove_claim_by = ROOT }
+			880 = { remove_claim_by = ROOT }			
 		}		
 	}
 
@@ -732,7 +732,7 @@ country_event = {
 		name = SchwarzRotGold.1.b
 		hidden_effect = {
 			country_event = Grossdeutscheflag.1
-				}		
+		}		
 	}
 }
 
@@ -779,9 +779,8 @@ country_event = {
 	option = { 
 		name = Grossdeutscheflag.1.h
 		hidden_effect = {
-		country_event = Grossdeutscheflag.2
-			}
-			
+			country_event = Grossdeutscheflag.2
+		}
 	}		
 }
 
@@ -828,8 +827,8 @@ country_event = {
 	option = { 
 		name = Grossdeutscheflag.2.h
 		hidden_effect = {
-		country_event = Grossdeutscheflag.3
-			}
+			country_event = Grossdeutscheflag.3
+		}
 			
 	}		
 }

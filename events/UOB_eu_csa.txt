@@ -18,7 +18,7 @@ country_event = { #Form or not to form?
 	option = {
 		name = "我们不会辜负这次重建"
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 		COR = {
 			transfer_state = 371
@@ -65,7 +65,7 @@ country_event = { #Form or not to form?
 	option = {
 		name = "我们真的不需要"
 		ai_chance = {
-			factor = 90
+			base = 90
 		}
 		
 	}

@@ -231,8 +231,6 @@ country_event = { #The War of Independence
 	desc = cro.1.d
 	picture = GFX_report_event_generic_towar
 
-	is_triggered_only = no
-
 	trigger = {
 		has_war_with = AUS
 		NOT = { has_country_flag = CRO_war_of_independence_not_started }
@@ -265,8 +263,6 @@ country_event = { #The War of Independence Ends
 	title = cro.2.t
 	desc = cro.2.d
 	picture = GFX_report_event_generic_happy_crowd
-
-	is_triggered_only = no
 	
 	trigger = {
 		NOT = { has_war_with = AUS }
@@ -309,8 +305,6 @@ country_event = { #Bombing in Zagreb
 	title = cro.3.t
 	desc = cro.3.d
 	picture = GFX_report_event_IRE_bombing
-
-	is_triggered_only = no
 	
 	trigger = {
 		has_war_with = AUS
@@ -333,8 +327,6 @@ country_event = { #The Bosnian Guerillas
 	title = cro.4.t
 	desc = cro.4.d
 	picture = GFX_report_event_IRE_deadbody
-
-	is_triggered_only = no
 	
 	trigger = {
 		has_war_with = AUS
@@ -973,8 +965,6 @@ country_event = { #Bosnia Petitions for Autonomy
 	title = cro.24.t
 	desc = cro.24.d 
 	picture = GFX_report_event_generic_diplomacy2
-
-	is_triggered_only = no
 	
 	trigger = {
 		has_country_flag = CRO_won_independence
@@ -1595,8 +1585,6 @@ country_event = { #The Enabling Act
 	title = cro.41.t
 	desc = cro.41.d
 	picture = GFX_report_event_generic_diplomacy1
-
-	is_triggered_only = no
 	
 	is_triggered_only = yes
 	
@@ -1676,19 +1664,15 @@ country_event = { #End of Illyria
 	title = cro.43.t
 	desc = cro.43.d
 	picture = GFX_report_event_generic_diplomacy2
-
-	is_triggered_only = no
 	
 	is_triggered_only = yes
-	
-	mean_time_to_happen = { days = 1 }
-
-
 	fire_only_once = yes
+
+	mean_time_to_happen = { days = 1 }
 	
 	option = { #Long live the Mandate
 		name = cro.43.a
-		ai_chance = { factor = 100 }
+		ai_chance = { base = 100 }
 		set_party_name = { 
 			ideology = paternal_autocrat 
 			long_name = "Austrian Mandate" 
@@ -1700,8 +1684,6 @@ country_event = { #End of Illyria
 			picture = "gfx/leaders/AUS/Portrait_AUS_Franz_Bohme.png"
 			expire = "1.1.1"
 			ideology = junta_subtype
-			traits = {
-			}
 		}
 		set_country_flag = ILL_Mandate
 		set_politics = {
@@ -1726,15 +1708,13 @@ country_event = { #End of Illyria
 	
 	option = { #Long Live the Duke
 		name = cro.43.b
-		ai_chance = { factor = 100 }
+		ai_chance = { base = 100 }
 		create_country_leader = {
 			name = "Stjepan Sarkotic"
 			desc = "CRO_DUKE_DESC"
 			picture = "gfx/leaders/CRO/Portrait_CRO_Stjepan_Sarkotic.png"
 			expire = "1.1.1"
 			ideology = oligarchy_subtype
-			traits = {
-			}
 		}
 		add_popularity = {
 			ideology = paternal_autocrat

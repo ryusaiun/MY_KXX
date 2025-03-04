@@ -539,7 +539,10 @@ country_event = { # The 1936 Election
 		}
 		hidden_effect = {
 			random_other_country = {
-				news_event = { id = worldnews.70 days = 1 }
+				news_event = { 
+					id = worldnews.70 
+					days = 1 
+				}
 			}
 		}
 		set_politics = {
@@ -717,7 +720,7 @@ country_event = { # Movimento Comunità Leadership Conference
 	option = { # Adriano Olivetti
 		name = italianrepublic.16.a
 		ai_chance = {
-			factor = 80
+			base = 80
 		}
 		create_country_leader = { # Adriano Olivetti
 			name = "阿德里亚诺·奥利韦蒂"
@@ -771,7 +774,7 @@ country_event = { # Partito Repubblicano Italiano Leadership Conference
 	option = { # Luigi Einaudi
 		name = italianrepublic.17.a
 		ai_chance = {
-			factor = 80
+			base = 80
 		}
 		set_country_flag = ITA_luigi_einaudii_ml_leader
 		create_country_leader = { # Luigi Einaudi
@@ -1263,7 +1266,7 @@ country_event = { # SRI has chance to intervene
 	option = {
 		name = italianrepublic.33.a #Now is our chance
 		ai_chance = {
-			factor = 80
+			base = 80
 		}
 		set_country_flag = SRI_intervention_in_italy
 		declare_war_on = {

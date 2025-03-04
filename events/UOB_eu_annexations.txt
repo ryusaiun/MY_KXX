@@ -124,23 +124,22 @@ country_event = {
 			}
 			africa_mosley_leader_swap = yes 
 		}
-	}
-
-}
-DEN = {
-	hidden_effect = {
-		every_neighbor_country = { 
-			declare_war_on = {
-				target = DEN
-				type = annex_everything
+		DEN = {
+			hidden_effect = {
+				every_neighbor_country = { 
+					declare_war_on = {
+						target = DEN
+						type = annex_everything
+					}
+			
+				}
 			}
-	
-		}
-	}
-	effect_tooltip = {
-		declare_war_on = {
-			target = PREV
-			type = annex_everything
+			effect_tooltip = {
+				declare_war_on = {
+					target = PREV
+					type = annex_everything
+				}
+			}
 		}
 	}
 }

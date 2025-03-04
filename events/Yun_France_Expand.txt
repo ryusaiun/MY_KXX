@@ -14,7 +14,7 @@ country_event = {
 	option = {
 		name = rednap.1.a
 		ai_chance = {
-			factor = 35
+			base = 35
 			modifier = {
 				factor = 100
 				has_game_rule = {
@@ -47,8 +47,8 @@ country_event = {
 		set_autonomy = { target = SRI autonomy_state = autonomous_territory }
 		set_autonomy = { target = PAP autonomy_state = autonomous_territory }
 		set_autonomy = { target = SIC autonomy_state = autonomous_territory }
-			hidden_effect = {
-				SRI = {
+		hidden_effect = {
+			SRI = {
 				transfer_state = 159
 				transfer_state = 783
 				transfer_state = 160
@@ -57,16 +57,16 @@ country_event = {
 				transfer_state = 161
 				transfer_state = 157
 				every_owned_state = { add_core_of = SRI }
-				}	
-				PAP = {
+			}	
+			PAP = {
 				transfer_state = 162
 				transfer_state = 1005
 				transfer_state = 764
 				transfer_state = 2
 				transfer_state = 1149
 				every_owned_state = { add_core_of = PAP }
-				}	
-				SIC = {
+			}	
+			SIC = {
 				transfer_state = 117
 				transfer_state = 742
 				transfer_state = 837
@@ -74,8 +74,8 @@ country_event = {
 				transfer_state = 156
 				transfer_state = 115
 				every_owned_state = { add_core_of = SIC }
-				}																								
-			}		
+			}																								
+		}		
 	}
 
 	option = {
@@ -126,8 +126,8 @@ country_event = {
 		set_autonomy = { target = SRI autonomy_state = autonomous_territory }
 		set_autonomy = { target = PAP autonomy_state = autonomous_territory }
 		set_autonomy = { target = SIC autonomy_state = autonomous_territory }
-			hidden_effect = {
-				SRI = {
+		hidden_effect = {
+			SRI = {
 				transfer_state = 159
 				transfer_state = 783
 				transfer_state = 160
@@ -136,16 +136,16 @@ country_event = {
 				transfer_state = 161
 				transfer_state = 157
 				every_owned_state = { add_core_of = SRI }				
-				}	
-				PAP = {
+			}	
+			PAP = {
 				transfer_state = 162
 				transfer_state = 1005
 				transfer_state = 764
 				transfer_state = 2
 				transfer_state = 1149
 				every_owned_state = { add_core_of = PAP }			
-				}	
-				SIC = {
+			}	
+			SIC = {
 				transfer_state = 117
 				transfer_state = 742
 				transfer_state = 837
@@ -153,13 +153,13 @@ country_event = {
 				transfer_state = 156
 				transfer_state = 115
 				every_owned_state = { add_core_of = SIC }			
-				}																									
-			}
+			}																									
+		}
 	}
 	option = { 
 		name = rednap.1.c
 		ai_chance = {
-			factor = 15
+			base = 15
 			modifier = {
 				factor = 100
 				has_game_rule = {
@@ -177,8 +177,8 @@ country_event = {
 		}								
 		set_autonomy = { target = PAP autonomy_state = autonomous_territory }
 		country_event = rednap.2
-			hidden_effect = {
-				PAP = {
+		hidden_effect = {
+			PAP = {
 				transfer_state = 159
 				transfer_state = 783
 				transfer_state = 160
@@ -201,44 +201,32 @@ country_event = {
 				create_country_leader = {
 					name = "Giuseppe Garibaldi II"
 					picture = "gfx/leaders/SRI/Portrait_SRI_Giuseppe_Garibaldi_II_Suit.png"
-					desc = ""
 					ideology = radsoc_socialist_feminism_subtype
-					traits = { }
 			    }
 			    create_country_leader = {
 					name = "Giuseppe Garibaldi II"
 					picture = "gfx/leaders/SRI/Portrait_SRI_Giuseppe_Garibaldi_II_Suit.png"
-					desc = ""
 					ideology = liberal_socialism_subtype
-					traits = { }
 			    }
 				create_country_leader = {
 					name = "Giuseppe Garibaldi II"
 					picture = "gfx/leaders/SRI/Portrait_SRI_Giuseppe_Garibaldi_II_Suit.png"
-					desc = ""
 					ideology = marlib_radical_liberalism_subtype
-					traits = { }
 				}
 				create_country_leader = {
 					name = "Giuseppe Garibaldi II"
 					picture = "gfx/leaders/SRI/Portrait_SRI_Giuseppe_Garibaldi_II_Suit.png"
-					desc = ""
 					ideology = paternal_socialism_subtype 
-					traits = { }
 				}
 				create_country_leader = {
 					name = "Giuseppe Garibaldi II"
 					picture = "gfx/leaders/SRI/Portrait_SRI_Giuseppe_Garibaldi_II_Suit.png"
-					desc = ""
 					ideology = qualunquismo_subtype
-					traits = { }
 				}
 				create_country_leader = {
 					name = "Giuseppe Garibaldi II"
 					picture = "gfx/leaders/SRI/Portrait_SRI_Giuseppe_Garibaldi_II_Suit.png"
-					desc = ""
 					ideology = pataut_national_conservative_subtype
-					traits = { }
 				}						
 			}																									
 		}		
@@ -246,7 +234,7 @@ country_event = {
 	option = { 
 		name = rednap.1.e
 		ai_chance = {
-			factor = 15
+			base = 15
 			modifier = {
 				factor = 100
 				has_game_rule = {
@@ -361,16 +349,16 @@ country_event = {
 		set_cosmetic_tag = ITK_FRA_rednap
 		create_country_leader = {
 			name = "拿破仑二世"
-			picture = "gfx/leaders/NFA/Portrait_NFA_Napoleon_Westphalia.png"
-			expire = "1.1.1"
-			ideology = radsoc_bonapartism_subtype
-			traits = { red_napoleon UKR_red_prince NFA_New_Eagle }			
+				picture = "gfx/leaders/NFA/Portrait_NFA_Napoleon_Westphalia.png"
+				expire = "1.1.1"
+				ideology = radsoc_bonapartism_subtype
+				traits = { red_napoleon UKR_red_prince NFA_New_Eagle }			
 			}	
-		set_party_name = {
-			name = "波拿巴家族"
-			long_name = "波拿巴家族"
-			ideology = radical_socialist
-		}
+			set_party_name = {
+				name = "波拿巴家族"
+				long_name = "波拿巴家族"
+				ideology = radical_socialist
+			}
 		}
 	}
 	option = { 
@@ -681,7 +669,7 @@ country_event = {
 	option = { 
 		name = COF_Valois.1.a
 		ai_chance = {
-			factor = 1
+			base = 1
 			modifier = {
 				factor = 100
 				has_game_rule = {
@@ -696,7 +684,7 @@ country_event = {
 	option = { 
 		name = COF_Valois.1.b
 		ai_chance = {
-			factor = 99
+			base = 99
 			modifier = {
 				factor = 100
 				OR = {
@@ -708,7 +696,6 @@ country_event = {
 						rule = FRA_day_of_imfamy
 						option = FRA_BUCARD_ASSUMES_CONTROL
 					}
-					id = comfrance.928
 					has_game_rule = {
 						rule = FRA_xday_of_imfamy
 						option = FRA_ORTHOR_ASSUMES_CONTROL
@@ -741,7 +728,7 @@ country_event = {
 			always = no
 		}
 		ai_chance = {
-			factor = 0
+			base = 0
 		}
 		set_cosmetic_tag = FRA_Sorel_Capetiens
 		set_country_leader_portrait = {
@@ -789,7 +776,7 @@ country_event = { #索雷尔派的变革之风
 	option = {
 		name = COF_Valois.99.a
 		ai_chance = {
-			factor = 0
+			base = 0
 		}
 		create_country_leader = {
 			name = "夏尔·阿尔伯特"
@@ -803,11 +790,10 @@ country_event = { #索雷尔派的变革之风
     option = {
 		name = COF_Valois.99.b
 		ai_chance = {
-			factor = 0
+			base = 0
 		}
 		create_country_leader = {
 			name = "于贝尔·布尔然"
-			desc = ""
 			picture = "gfx/leaders/FRA/Portrait_FRA_Hubert_Bourgin.png"
 			expire = "1965.1.1"
 			ideology = tot_reformed_natsynd_subtype
@@ -817,11 +803,10 @@ country_event = { #索雷尔派的变革之风
     option = {
 		name = COF_Valois.99.b
 		ai_chance = {
-			factor = 0
+			base = 0
 		}
 		create_country_leader = {
 			name = "菲利普·拉莫尔"
-			desc = ""
 			picture = "gfx/leaders/FRA/Portrait_FRA_Philippe_Lamour.png"
 			expire = "1965.1.1"
 			ideology = technocracy_subtype
@@ -831,11 +816,10 @@ country_event = { #索雷尔派的变革之风
 	option = {
 		name = COF_Valois.99.b
 		ai_chance = {
-			factor = 0
+			base = 0
 		}
 		create_country_leader = {
 			name = "保罗·尼赞"
-			desc = ""
 			picture = "gfx/leaders/FRA/Portrait_France_Paul_Nizan.png"
 			expire = "1965.1.1"
 			ideology = massimalismo_subtype
@@ -890,7 +874,6 @@ country_event = {
 		name = COF_redflood.2.a
 		create_country_leader = {
 			name = "安德烈·布勒东"
-			desc = ""
 			picture = "gfx/leaders/FRA/Portrait_FRA_Andre_Breton.png"
 			expire = "1.1.1"
 			ideology = radsoc_surrealism_subtype

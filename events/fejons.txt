@@ -1636,7 +1636,7 @@ country_event = {
 	option = { 
 		name = fe.17.b
 		ai_chance = {
-			factor = 0
+			base = 0
 		}
 		clr_country_flag = KXX_LEADER_GUI_VISIBLE
 		clr_country_flag = LEADER_GUI_VISIBLE
@@ -2895,9 +2895,7 @@ country_event = {
 			picture = "gfx/leaders/CNT/no_leader.png"
 			expire = "1965.1.1"
 			ideology = spanish_syndicalism
-			traits = {
-				}
-			}
+		}
 	}
 }
 country_event = {
@@ -2910,8 +2908,6 @@ country_event = {
 
 	option = {
 		name = fe_jons.21.a
-		hidden_effect = {
-		}
 	}
 }
 country_event = {

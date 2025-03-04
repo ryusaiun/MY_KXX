@@ -90,7 +90,7 @@ country_event = {
 			limit={
 				free_building_slots={
 					building=industrial_complex
-					size>0
+					size > 0
 					include_locked=yes
 				}
 			}
@@ -107,7 +107,7 @@ country_event = {
 			limit={
 				free_building_slots={
 					building=industrial_complex
-					size>0
+					size > 0
 					include_locked=yes
 				}
 			}
@@ -124,7 +124,7 @@ country_event = {
 			limit={
 				free_building_slots={
 					building=industrial_complex
-					size>0
+					size > 0
 					include_locked=yes
 				}
 			}
@@ -150,13 +150,13 @@ country_event = {
 		add_war_support = 0.05
 		set_global_flag = romanian_civil_war
 		ROM = {
-		set_cosmetic_tag = ROM_IG_KLN
-		create_country_leader = {
-			name = "科尔内留·科德里亚努"
-			picture = "gfx/leaders/ROM/Portrait_ROM_Corneliu_Zelea_Codreanu.png"
-			expire = "1.1.1"
-			ideology = legionarism_subtype
-		}
+			set_cosmetic_tag = ROM_IG_KLN
+			create_country_leader = {
+				name = "科尔内留·科德里亚努"
+				picture = "gfx/leaders/ROM/Portrait_ROM_Corneliu_Zelea_Codreanu.png"
+				expire = "1.1.1"
+				ideology = legionarism_subtype
+			}
 		}
 		RRM = {
 		transfer_state = 81

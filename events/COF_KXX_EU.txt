@@ -11,7 +11,7 @@ country_event = {
 	option = {
 		name = comfranceeu.1.a 
 		ai_chance = {
-			factor = 50
+			base = 50
 		}
 		hidden_effect = {	
 			create_country_leader = {
@@ -45,7 +45,7 @@ country_event = {
 	option = {
 		name = comfranceeu.1.b
 		ai_chance = {
-			factor = 50
+			base = 50
 		}
 		hidden_effect = {	
 			create_country_leader = {

@@ -14,39 +14,45 @@ country_event = {
 
 	option = { 
 		name = ChinKX.1.a
-		ai_will_do = {
-			factor = 100
+		ai_chance = {
+			base = 100
 		}
 	}
 	option = { 
 		name = ChinKX.1.b
-		ai_will_do = {
-			factor = 0
-		}
+		ai_chance = {
+			base = 0
+		} 
 		KXX = {
-		transfer_state = 597
-		transfer_state = 1064
-		transfer_state = 1065
-		transfer_state = 744
-		transfer_state = 996
-		transfer_state = 1047
-		transfer_state = 1062
-		transfer_state = 1063
-		transfer_state = 1061
-		transfer_state = 1060
-		transfer_state = 607
-		transfer_state = 1059
-		change_tag_from = SQI
+			transfer_state = 597
+			transfer_state = 1064
+			transfer_state = 1065
+			transfer_state = 744
+			transfer_state = 996
+			transfer_state = 1047
+			transfer_state = 1062
+			transfer_state = 1063
+			transfer_state = 1061
+			transfer_state = 1060
+			transfer_state = 607
+			transfer_state = 1059
+			change_tag_from = SQI
 		}
 		hidden_effect = {
 			random_country = {
 				limit = { owns_state = 593 }
-				592 = { add_core_of = PREV
-					   transfer_state_to = PREV }
-				728 = { add_core_of = PREV
-					   transfer_state_to = PREV }	
-				326 = { add_core_of = PREV
-					   transfer_state_to = PREV }	
+					592 = { 
+						add_core_of = PREV
+					    transfer_state_to = PREV 
+					}
+					728 = { 
+						add_core_of = PREV
+					    transfer_state_to = PREV 
+					}	
+					326 = { 
+						add_core_of = PREV
+					    transfer_state_to = PREV 
+					}	
 				729 = { add_core_of = PREV
 					   transfer_state_to = PREV }								   					   
 					   }		      
@@ -172,36 +178,36 @@ country_event = {
 			}		
 			every_state = {
 				limit = { 
-				OR = {
-				is_core_of = QIE
-				is_claimed_by = QIE
+					OR = {
+						is_core_of = QIE
+						is_claimed_by = QIE
 					}
 				}
 				add_core_of = KXX
-				prioritize={
-				}
+			}	
+			every_state = {	
 				limit={
 					free_building_slots={
 						building=industrial_complex
-						size>0
+						size > 0
 						include_locked=yes
 					}
 					free_building_slots={
 						building=arms_factory
-						size>0
+						size > 0
 						include_locked=yes
 					}
 				}
-				add_extra_state_shared_building_slots=4
-				add_building_construction={
-					type=industrial_complex
-					level=4
-					instant_build=yes
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
 				}
 				add_building_construction={
-					type=arms_factory
-					level=4
-					instant_build=yes
+					type = arms_factory
+					level = 4
+					instant_build = yes
 				}
 			}
 			KXX = {											
