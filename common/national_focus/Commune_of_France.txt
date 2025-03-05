@@ -21,7 +21,7 @@ focus = {
 	x = 0
 	y = 0
 	ai_will_do = {
-		factor = 100
+		factor = 80
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FRA_eco_direction"
@@ -42,7 +42,7 @@ focus = {
 	y = 2
 	relative_position_id = FRA_eco_direction
 	ai_will_do = {
-		factor = 100
+		factor = 60
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FRA_amenagement"
@@ -95,7 +95,7 @@ focus = {
 	y = 1
 	relative_position_id = FRA_eco_direction
 	ai_will_do = {
-		factor = 10
+		factor = 80
 	}
 	available = {
 		has_country_flag = ECO_TRAV
@@ -150,7 +150,7 @@ focus = {
 	y = 1
 	relative_position_id = FRA_eco_direction
 	ai_will_do = {
-		factor = 10
+		factor = 80
 	}
 	available = {
 		has_country_flag = ECO_JACO
@@ -206,7 +206,7 @@ focus = {
 	y = 1
 	relative_position_id = FRA_eco_direction
 	ai_will_do = {
-		factor = 200
+		factor = 80
 	}
 	available = {
 		has_country_flag = ECO_SORE
@@ -232,7 +232,7 @@ focus = {
 	y = 1
 	relative_position_id = FRA_eco_direction
 	ai_will_do = {
-		factor = 10
+		factor = 80
 	}
 	available = {
 		has_country_flag = ECO_ANAR
@@ -310,7 +310,7 @@ focus = {
 	x = 0
 	y = 1
 
-	ai_will_do = { factor = 100 }
+	ai_will_do = { factor = 60 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FRA_office_des_chemins_de_fer"
@@ -392,7 +392,7 @@ focus = {
 	}
 
 
-	ai_will_do = { factor = 100 }
+	ai_will_do = { factor = 60 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FRA_voluntary_association"
@@ -711,7 +711,7 @@ focus = {
 	}
 	
 
-	ai_will_do = { factor = 100 }
+	ai_will_do = { factor = 60 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FRA_modernisation_and_cartelisation"
@@ -1110,7 +1110,7 @@ focus = {
 	}
 	
 
-	ai_will_do = { factor = 100 }
+	ai_will_do = { factor = 60 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FRA_militarisation_of_the_proletariat"
@@ -1669,7 +1669,7 @@ focus = {
 	}
 	
 
-	ai_will_do = { factor = 100 }
+	ai_will_do = { factor = 60 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FRA_embrace_planism"
@@ -2885,7 +2885,7 @@ focus = {
 	x = 12
 	y = 0
 	ai_will_do = {
-		factor = 100
+		factor = 60
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FRA_socialist_education"
@@ -2900,7 +2900,7 @@ focus = {
 	y = 0
 	relative_position_id = FRA_socialist_education
 	ai_will_do = {
-		factor = 100
+		factor = 60
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FRA_road_to_war"
@@ -2925,7 +2925,7 @@ focus = {
 	ai_will_do = {
 		factor = 70
 		modifier = {
-			factor = 100
+			factor = 60
 			date > 1937.1.1
 		}
 	}
@@ -2982,7 +2982,7 @@ focus = {
 	available = {
 	}
 	ai_will_do = {
-		factor = 100
+		factor = 60
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FRA_avantgarde"
@@ -3042,7 +3042,7 @@ focus = {
 	y = 2
 	relative_position_id = FRA_socialist_education
 	ai_will_do = {
-		factor = 100
+		factor = 60
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FRA_Blanqui_Research_Institute"
@@ -3180,7 +3180,7 @@ focus = {
 	x = -2
 	y = 2
 	relative_position_id = FRA_socialist_education
-	ai_will_do = { factor = 100 }
+	ai_will_do = { factor = 60 }
 	prerequisite = {
 		focus = FRA_Our_time_has_come
 	}
@@ -3690,7 +3690,7 @@ focus = {
 	x = 34
 	y = 1
 	ai_will_do = {
-		factor = 100
+		factor = 80
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FRA_communal_army"
@@ -3735,7 +3735,7 @@ focus = {
 	x = 26
 	y = 9
 	ai_will_do = {
-		factor = 100
+		factor = 80
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FRA_navy_focus"
@@ -3852,7 +3852,7 @@ focus = {
 	y = 1
 	relative_position_id = FRA_navy_focus
 	ai_will_do = {
-		factor = 100
+		factor = 80
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FRA_new_doctrine"
@@ -3961,7 +3961,7 @@ focus = {
 	y = 1
 	relative_position_id = FRA_Host_the_Internationale
 	ai_will_do = {
-		factor = 100
+		factor = 80
 		modifier = {
 			factor = 0.01
 			OR = {
@@ -4055,7 +4055,7 @@ focus = {
 		}
 	}
 	ai_will_do = {
-		factor = 100
+		factor = 80
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FRA_Demand_Romandy"
@@ -4103,7 +4103,7 @@ focus = {
 			}
 		}
 		modifier = {
-			factor = 100
+			factor = 80
 			date > 1939.11.23
 			NOT = {
 				controls_state = 779
@@ -4111,7 +4111,7 @@ focus = {
 			}
 		}
 		modifier = {
-			factor = 100
+			factor = 80
 			date > 1940.11.6
 			AND = {
 				controls_state = 779
@@ -4568,7 +4568,7 @@ focus = {
 	will_lead_to_war_with = CAR
 	will_lead_to_war_with = POR
 	ai_will_do = {
-		factor = 100
+		factor = 80
 		modifier = {
 			factor = 0
 			ROOT_is_threatened = yes
@@ -4664,7 +4664,7 @@ focus = {
 		
 	}
 	ai_will_do = {
-		factor = 100
+		factor = 80
 		
 	}
 	completion_reward = {
@@ -4685,7 +4685,7 @@ focus = {
 	y = 1
 	relative_position_id = FRA_win
 	ai_will_do = {
-		factor = 100
+		factor = 80
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FRA_arab_committee"
@@ -4722,7 +4722,7 @@ focus = {
 	y = 2
 	relative_position_id = FRA_win
 	ai_will_do = {
-		factor = 100
+		factor = 80
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FRA_arab_committee"
@@ -4742,7 +4742,7 @@ focus = {
 	y = 2
 	relative_position_id = FRA_win
 	ai_will_do = {
-		factor = 100
+		factor = 80
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FRA_arab_committee"
@@ -4762,7 +4762,7 @@ focus = {
 	y = 3
 	relative_position_id = FRA_win
 	ai_will_do = {
-		factor = 100
+		factor = 80
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FRA_arab_committee"
@@ -4799,7 +4799,7 @@ focus = {
 	y = 3
 	relative_position_id = FRA_win
 	ai_will_do = {
-		factor = 100
+		factor = 80
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FRA_arab_committee"
@@ -4829,7 +4829,7 @@ focus = {
 	y = 3
 	relative_position_id = FRA_win
 	ai_will_do = {
-		factor = 100
+		factor = 80
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FRA_arab_committee"
@@ -4857,7 +4857,7 @@ focus = {
 	y = 4
 	relative_position_id = FRA_win
 	ai_will_do = {
-		factor = 100
+		factor = 80
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FRA_arab_committee"
@@ -4886,7 +4886,7 @@ focus = {
 	y = 4
 	relative_position_id = FRA_win
 	ai_will_do = {
-		factor = 100
+		factor = 80
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FRA_arab_committee"
@@ -4919,7 +4919,7 @@ focus = {
 	y = 5
 	relative_position_id = FRA_win
 	ai_will_do = {
-		factor = 100
+		factor = 80
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FRA_arab_committee"
@@ -4946,7 +4946,7 @@ focus = {
 	y = 3
 	relative_position_id = FRA_communal_army
 	ai_will_do = {
-		factor = 100
+		factor = 80
 	}
 	available = {
 		has_country_flag = ARMY_TRAV
@@ -5063,7 +5063,7 @@ focus = {
 	y = 3
 	relative_position_id = FRA_communal_army
 	ai_will_do = {
-		factor = 100
+		factor = 80
 	}
 	available = {
 		has_country_flag = ARMY_JACO
@@ -5159,7 +5159,7 @@ focus = {
 	y = 3
 	relative_position_id = FRA_communal_army
 	ai_will_do = {
-		factor = 100
+		factor = 80
 	}
 	available = {
 		has_country_flag = ARMY_SORE
@@ -5258,7 +5258,7 @@ focus = {
 	y = 3
 	relative_position_id = FRA_communal_army
 	ai_will_do = {
-		factor = 100
+		factor = 80
 	}
 	available = {
 		has_country_flag = ARMY_ANAR
@@ -5428,7 +5428,7 @@ focus = {
 	  FOCUS_FILTER_ARMY_BONUS
 	}
   }
-	### New Military Tree ###
+	### 新军事树 ###
 
 	focus = {
 		id = FRA_integrate_the_corps_francs
@@ -5442,7 +5442,7 @@ focus = {
 			focus = FRA_communal_army
 		}
 		ai_will_do = {
-			factor = 100
+			factor = 80
 		}
 
 		completion_reward = {
@@ -5473,7 +5473,7 @@ focus = {
 			focus = FRA_communal_army
 		}
 		ai_will_do = {
-			factor = 100
+			factor = 80
 		}
 
 		completion_reward = {
@@ -5500,7 +5500,7 @@ focus = {
 			focus = FRA_communal_army
 		}
 		ai_will_do = {
-			factor = 100
+			factor = 80
 		}
 
 		completion_reward = {
@@ -5553,7 +5553,7 @@ focus = {
 		y = 2
 		relative_position_id = FRA_communal_army
 		ai_will_do = {
-			factor = 100
+			factor = 80
 		}
 
 		completion_reward = {
@@ -5568,7 +5568,7 @@ focus = {
 	focus = {
 		id = FRA_all_for_the_revolution
 		icon = GFX_focus_SOV_builder_of_the_red_army
-		cost = 3
+		cost = 5
 
 		prerequisite = {
 			focus = FRA_mass_conscription
@@ -5622,7 +5622,7 @@ focus = {
 	focus = {
 		id = FRA_our_comrades_fight_too
 		icon = GFX_goal_generic_solidarity
-		cost = 3
+		cost = 5
 
 		prerequisite = {
 			focus = FRA_all_for_the_revolution
@@ -5717,7 +5717,7 @@ focus = {
 	focus = {
 		id = FRA_levee_en_masse
 		icon = GFX_focus_generic_spur_communist_revolutions
-		cost = 3
+		cost = 5
 
 		prerequisite = {
 			focus = FRA_all_for_the_revolution
@@ -5755,7 +5755,7 @@ focus = {
 	focus = {
 		id = FRA_the_methodical_war
 		icon = GFX_focus_BEL_legacy_of_the_great_war
-		cost = 3
+		cost = 5
 
 		
 		prerequisite = {
@@ -5814,7 +5814,7 @@ focus = {
 	focus = {
 		id = FRA_an_armys_stomach
 		icon = GFX_focus_generic_reinforcing_the_supply_network
-		cost = 3
+		cost = 5
 
 		prerequisite = {
 			focus = FRA_the_methodical_war
@@ -5859,7 +5859,7 @@ focus = {
 	focus = {
 		id = FRA_principe_de_concentration
 		icon = GFX_focus_SWE_let_fly_all_guns
-		cost = 3
+		cost = 5
 
 		
 		prerequisite = {
@@ -5913,7 +5913,7 @@ focus = {
 	focus = {
 		id = FRA_aero_terrestrial_integration
 		icon = GFX_focus_generic_armored_air_support
-		cost = 3
+		cost = 5
 
 		prerequisite = {
 			focus = FRA_principe_de_concentration
@@ -5948,7 +5948,7 @@ focus = {
 	focus = {
 		id = FRA_supremacy_of_movement
 		icon = GFX_focus_generic_tankette
-		cost = 3
+		cost = 5
 
 		
 		prerequisite = {
@@ -6007,7 +6007,7 @@ focus = {
 	focus = {
 		id = FRA_la_petite_reine
 		icon = GFX_focus_SWE_bicycle
-		cost = 3
+		cost = 5
 
 		prerequisite = {
 			focus = FRA_supremacy_of_movement
@@ -6032,7 +6032,7 @@ focus = {
 	focus = {
 		id = FRA_overrun_capitals_front_lines
 		icon = GFX_goal_generic_mobile_trucks
-		cost = 3
+		cost = 5
 
 		prerequisite = {
 			focus = FRA_supremacy_of_movement
@@ -6070,7 +6070,7 @@ focus = {
 	focus = {
 		id = FRA_the_modern_comrade_soldier
 		icon = GFX_goal_FRA_lumpen_appeals
-		cost = 3
+		cost = 5
 
 		prerequisite = {
 			focus = FRA_legacy_of_the_grande_batterie
@@ -6128,7 +6128,7 @@ focus = {
 	focus = {
 		id = FRA_expand_the_fusiliers
 		icon = GFX_focus_eng_special_air_service
-		cost = 3
+		cost = 5
 
 		prerequisite = {
 			focus = FRA_the_modern_comrade_soldier
@@ -6204,7 +6204,7 @@ focus = {
 	focus = {
 		id = FRA_corps_francs_hunters
 		icon = GFX_focus_prc_infiltration
-		cost = 3
+		cost = 5
 
 		prerequisite = {
 			focus = FRA_expand_the_fusiliers
@@ -6288,7 +6288,7 @@ focus = {
 	focus = {
 		id = FRA_deepen_the_fog_of_war
 		icon = GFX_focus_generic_radio_communication
-		cost = 3
+		cost = 5
 
 		prerequisite = {
 			focus = FRA_expand_the_fusiliers
@@ -6371,7 +6371,7 @@ focus = {
 			 
 		
 		
-		cost = 3
+		cost = 5
 
 		prerequisite = {
 			focus = FRA_the_modern_comrade_soldier
@@ -6451,7 +6451,7 @@ focus = {
 	focus = {
 		id = FRA_corps_du_genie_militaire
 		icon = GFX_goal_generic_construction2
-		cost = 3
+		cost = 5
 
 		prerequisite = {
 			focus = FRA_the_modern_comrade_soldier
@@ -6527,7 +6527,7 @@ focus = {
 	focus = {
 		id = FRA_rapid_response_detachments
 		icon = GFX_focus_generic_field_hostpital
-		cost = 3
+		cost = 5
 
 		prerequisite = {
 			focus = FRA_corps_du_genie_militaire
@@ -6602,7 +6602,7 @@ focus = {
 	focus = {
 		id = FRA_legacy_of_the_grande_batterie
 		icon = GFX_goal_generic_army_artillery
-		cost = 3
+		cost = 5
 
 		prerequisite = {
 			focus = FRA_principe_concentration
@@ -6672,7 +6672,7 @@ focus = {
 	focus = {
 		id = FRA_precise_fire_control
 		icon = GFX_focus_generic_anti_tank_guns
-		cost = 3
+		cost = 5
 
 		prerequisite = {
 			focus = FRA_legacy_of_the_grande_batterie
@@ -6763,7 +6763,7 @@ focus = {
 	focus = {
 		id = FRA_dual_purpose_howitzers
 		icon = GFX_goal_generic_dual_purpose_guns
-		cost = 3
+		cost = 5
 
 		prerequisite = {
 			focus = FRA_legacy_of_the_grande_batterie
@@ -6846,7 +6846,7 @@ focus = {
 	focus = {
 		id = FRA_comrade_estiennes_heritage
 		icon = GFX_goal_doctrine_tank_warfare
-		cost = 3
+		cost = 5
 
 		prerequisite = {
 			focus = FRA_legacy_of_the_grande_batterie
@@ -6973,7 +6973,7 @@ focus = {
 	focus = {
 		id = FRA_proletarian_knights
 		icon = GFX_goal_generic_armored_cars
-		cost = 3
+		cost = 5
 
 		prerequisite = {
 			focus = FRA_comrade_estiennes_heritage
@@ -7028,7 +7028,7 @@ focus = {
 	focus = {
 		id = FRA_chars_du_futur
 		icon = GFX_goal_MON_Tank
-		cost = 3
+		cost = 5
 
 		prerequisite = {
 			focus = FRA_comrade_estiennes_heritage
@@ -7178,7 +7178,7 @@ focus = {
 	focus = {
 		id = FRA_the_battlefields_new_queen
 		icon = GFX_focus_SOV_the_glory_of_the_red_army_communism
-		cost = 3
+		cost = 5
 
 		prerequisite = {
 			focus = FRA_comrade_estiennes_heritage
@@ -7317,7 +7317,7 @@ focus = {
 	focus = {
 		id = FRA_mobile_fortresses
 		icon = GFX_focus_generic_mass_production
-		cost = 3
+		cost = 5
 
 		prerequisite = {
 			focus = FRA_the_battlefields_new_queen
@@ -7392,7 +7392,7 @@ focus = {
 	focus = {
 		id = FRA_overwhelming_firepower
 		icon = GFX_focus_generic_tank_assault
-		cost = 3
+		cost = 5
 
 		prerequisite = {
 			focus = FRA_the_battlefields_new_queen
@@ -7846,7 +7846,7 @@ focus = {
 	y = 2
 	relative_position_id = FRA_Host_the_Internationale
 	ai_will_do = {
-		factor = 100
+		factor = 80
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FRA_arab_committee"
@@ -7869,7 +7869,7 @@ focus = {
 	y = 3
 	relative_position_id = FRA_Host_the_Internationale
 	ai_will_do = {
-		factor = 100
+		factor = 80
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FRA_arab_committee"
@@ -7890,7 +7890,7 @@ focus = {
 	y = 4
 	relative_position_id = FRA_Host_the_Internationale
 	ai_will_do = {
-		factor = 100
+		factor = 80
 	}
 	available = {
 		is_neighbor_of = HOL
@@ -7956,7 +7956,7 @@ focus = {
 	y = 2
 	relative_position_id = FRA_Host_the_Internationale
 	ai_will_do = {
-		factor = 100
+		factor = 80
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FRA_arab_committee"
@@ -11636,6 +11636,9 @@ focus = {
 		id = FRA_state_anarchy
 		icon = GFX_goal_FRA_Revolutionary_Ethos
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		prerequisite = {
 			focus = FRA_counter
 		}
@@ -11665,6 +11668,9 @@ focus = {
 		id = FRA_true_equality
 		icon = GFX_UKR_Work_With_Makhnovtsy
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		prerequisite = {
 			focus = FRA_state_anarchy
 		}
@@ -11694,6 +11700,9 @@ focus = {
 		id = FRA_communes
 		icon = GFX_goal_FRA_anarchy_communes
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		prerequisite = {
 			focus = FRA_state_anarchy
 		}
@@ -11722,6 +11731,9 @@ focus = {
 		id = FRA_power
 		icon = GFX_goal_FRA_parasite
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		prerequisite = {
 			focus = FRA_state_anarchy
 		}
@@ -11758,6 +11770,9 @@ focus = {
 		id = FRA_abolish
 		icon = GFX_goal_WHR_Immolate_Monetary_System
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		prerequisite = {
 			focus = FRA_power
 		}
@@ -11839,6 +11854,9 @@ focus = {
 		relative_position_id = FRA_state_anarchy
 		x = 1
 		y = 2
+		ai_will_do = {
+			factor = 100
+		}
 		available = {
 			OR = {
 				has_country_leader = {
@@ -11882,6 +11900,9 @@ focus = {
 		relative_position_id = FRA_state_anarchy
 		x = 0
 		y = 3
+		ai_will_do = {
+			factor = 100
+		}
 		available = {
 			OR = {
 				has_country_leader = {
@@ -11920,6 +11941,9 @@ focus = {
 		relative_position_id = FRA_state_anarchy
 		x = 0
 		y = 4
+		ai_will_do = {
+			factor = 100
+		}
 		available = {
 			OR = {
 				has_country_leader = {
@@ -12285,7 +12309,9 @@ focus = {
 			focus = FRA_military_government
 			focus = FRA_popular_front_contiunes
 		}
-		
+		ai_will_do = {
+			factor = 100
+		}
 		relative_position_id = FRA_provisional_government_continues
 		x = 0
 		y = 2
@@ -12316,7 +12342,9 @@ focus = {
 			focus = FRA_liberalize_economy
 			
 		}
-		
+		ai_will_do = {
+			factor = 100
+		}
 		relative_position_id = FRA_provisional_government_continues
 		x = 0
 		y = 3
@@ -12346,7 +12374,9 @@ focus = {
 			focus = FRA_but_under_state_control
 			
 		}
-		
+		ai_will_do = {
+			factor = 100
+		}
 		relative_position_id = FRA_provisional_government_continues
 		x = 0
 		y = 4
@@ -12370,7 +12400,9 @@ focus = {
 			focus = FRA_social_welfare_system
 			
 		}
-		
+		ai_will_do = {
+			factor = 100
+		}
 		relative_position_id = FRA_provisional_government_continues
 		x = 0
 		y = 5
@@ -12425,7 +12457,9 @@ focus = {
 		prerequisite = {
 			focus = FRA_popular_front_contiunes
 		}
-		
+		ai_will_do = {
+			factor = 100
+		}
 		relative_position_id = FRA_popular_front_contiunes
 		x = 0
 		y = 1
@@ -12466,7 +12500,9 @@ focus = {
 		prerequisite = {
 			focus = FRA_exterminate_radicalism
 		}
-		
+		ai_will_do = {
+			factor = 100
+		}
 		relative_position_id = FRA_popular_front_contiunes
 		x = -1
 		y = 2
@@ -12488,7 +12524,9 @@ focus = {
 		prerequisite = {
 			focus = FRA_exterminate_radicalism
 		}
-		
+		ai_will_do = {
+			factor = 100
+		}
 		relative_position_id = FRA_popular_front_contiunes
 		x = 1
 		y = 2
@@ -12510,7 +12548,9 @@ focus = {
 		prerequisite = {
 			focus = FRA_Nouvelle_societe
 		}
-		
+		ai_will_do = {
+			factor = 100
+		}
 		relative_position_id = FRA_popular_front_contiunes
 		x = -2
 		y = 3
@@ -12541,6 +12581,9 @@ focus = {
 		}
 		prerequisite = {
 			focus = FRA_Nouvelle_republique
+		}
+		ai_will_do = {
+			factor = 100
 		}
 		relative_position_id = FRA_popular_front_contiunes
 		x = 0
@@ -12581,6 +12624,9 @@ focus = {
 		}
 		prerequisite = {
 			focus = FRA_Nouvelle_republique
+		}
+		ai_will_do = {
+			factor = 100
 		}
 		relative_position_id = FRA_popular_front_contiunes
 		x = 2
@@ -12639,6 +12685,9 @@ focus = {
 		relative_position_id = FRA_popular_front_contiunes
 		x = -1
 		y = 4
+		ai_will_do = {
+			factor = 100
+		}
 		available = {
 			has_country_leader = {
 				ruling_only = yes
@@ -12668,6 +12717,9 @@ focus = {
 		relative_position_id = FRA_popular_front_contiunes
 		x = 0
 		y = 5
+		ai_will_do = {
+			factor = 100
+		}
 		available = {
 			has_country_leader = {
 				ruling_only = yes
@@ -12698,6 +12750,9 @@ focus = {
 		relative_position_id = FRA_popular_front_contiunes
 		x = 1
 		y = 4
+		ai_will_do = {
+			factor = 100
+		}
 		available = {
 			has_country_leader = {
 				ruling_only = yes
@@ -12746,7 +12801,9 @@ focus = {
 		prerequisite = {
 			focus = FRA_military_government
 		}
-		
+		ai_will_do = {
+			factor = 100
+		}
 		relative_position_id = FRA_military_government
 		x = 0
 		y = 1
@@ -12807,7 +12864,9 @@ focus = {
 		prerequisite = {
 			focus = FRA_ban_all_other_party
 		}
-		
+		ai_will_do = {
+			factor = 100
+		}
 		relative_position_id = FRA_ban_all_other_party
 		x = -1
 		y = 1
@@ -12840,7 +12899,9 @@ focus = {
 		prerequisite = {
 			focus = FRA_ban_all_other_party
 		}
-		
+		ai_will_do = {
+			factor = 100
+		}
 		relative_position_id = FRA_ban_all_other_party
 		x = 1
 		y = 1
@@ -12870,7 +12931,9 @@ focus = {
 		prerequisite = {
 			focus = FRA_expand_millice
 		}
-		
+		ai_will_do = {
+			factor = 100
+		}
 		relative_position_id = FRA_ban_all_other_party
 		x = -2
 		y = 2
@@ -12910,6 +12973,9 @@ focus = {
 		relative_position_id = FRA_ban_all_other_party
 		x = 0
 		y = 2
+		ai_will_do = {
+			factor = 100
+		}
 		available = {
 			has_country_leader = {
 				ruling_only = yes
@@ -12935,6 +13001,9 @@ focus = {
 		relative_position_id = FRA_ban_all_other_party
 		x = 2
 		y = 2
+		ai_will_do = {
+			factor = 100
+		}
 		available = {
 			has_country_leader = {
 				ruling_only = yes
@@ -12963,6 +13032,9 @@ focus = {
 		relative_position_id = FRA_ban_all_other_party
 		x = -1
 		y = 3
+		ai_will_do = {
+			factor = 100
+		}
 		available = {
 			has_country_leader = {
 				ruling_only = yes
@@ -13017,6 +13089,9 @@ focus = {
 		relative_position_id = FRA_ban_all_other_party
 		x = 1
 		y = 3
+		ai_will_do = {
+			factor = 100
+		}
 		available = {
 			has_country_leader = {
 				ruling_only = yes
@@ -13044,6 +13119,9 @@ focus = {
 		relative_position_id = FRA_ban_all_other_party
 		x = 0
 		y = 4
+		ai_will_do = {
+			factor = 100
+		}
 		available = {
 			has_country_leader = {
 				ruling_only = yes
