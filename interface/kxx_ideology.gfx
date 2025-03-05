@@ -66,10 +66,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideologies/subideologies/socdem_possibilism.png"
 	}
 	spriteType = {
-		name = "GFX_ideology_radsoc_saint_simonianism_subtype"
-		texturefile = "gfx/interface/ideologies/subideologies/saint_simonianism.png"
-	}
-	spriteType = {
 		name = "GFX_ideology_nihonyudaya_shugi_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/nihonyudaya_shugi.png"
 	}
@@ -81,10 +77,6 @@ spriteTypes = {
 		name = "GFX_ideology_hayek_neoliberalism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/hayek_neoliberalism.png"
 	}		
-	spriteType = {
-		name = "GFX_ideology_syn_volkisch_communitarianism_subtype"
-		texturefile = "gfx/interface/ideologies/subideologies/volkisch_communitarianism_group.png"
-	}
 	spriteType = {
 		name = "GFX_ideology_natpop_goebbels_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/goebbels_ideology_group.png"
@@ -302,14 +294,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_ideology_otokonomusumeism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/otokonomusumeism.png"
-	}
-	spriteType = {
-		name = "GFX_ideology_berberism_subtype"
-		texturefile = "gfx/interface/ideologies/subideologies/berberism.png"
-	}
-	spriteType = {
-		name = "GFX_ideology_soccon_berberism_subtype"
-		texturefile = "gfx/interface/ideologies/subideologies/soccon_berberism.png"
 	}		
 	spriteType = {
 		name = "GFX_ideology_autdem_numitheism_subtype"

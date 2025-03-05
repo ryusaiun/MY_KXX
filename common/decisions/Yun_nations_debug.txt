@@ -91,44 +91,211 @@ yun_debug_decisions = {
 		icon = de_industrialization
 		complete_effect = {
 			every_state = {
-			limit = {
-				is_capital = no
+				limit = {
+					is_capital = no
+				}
+				if = {
+					limit = { 
+						arms_factory > 4
+					}
+					remove_building = {
+						type = arms_factory
+						level = 4
+					}
+				}
+				else_if = {
+					limit = { 
+						arms_factory > 3
+					}
+					remove_building = {
+						type = arms_factory
+						level = 3
+					}
+				}
+				else_if = {
+					limit = { 
+						arms_factory > 2
+					}
+					remove_building = {
+						type = arms_factory
+						level = 2
+					}
+				}
+				else_if = {
+					limit = { 
+						arms_factory > 1
+					}
+					remove_building = {
+						type = arms_factory
+						level = 1
+					}
+				}
+				else_if = {
+					limit = { 
+						arms_factory > 0
+					}
+					remove_building = {
+						type = arms_factory
+						level = 1
+					}
+				}
+
+				if = {
+					limit = { 
+						industrial_complex > 4
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 4
+					}
+				}
+				else_if = {
+					limit = { 
+						industrial_complex > 3
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 3
+					}
+				}
+				else_if = {
+					limit = { 
+						industrial_complex > 2
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 2
+					}
+				}
+				else_if = {
+					limit = { 
+						industrial_complex > 1
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 1
+					}
+				}
+				else_if = {
+					limit = { 
+						industrial_complex > 0
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 1
+					}
+				}
+
+				if = {
+					limit = { 
+						infrastructure > 4
+					}
+					remove_building = {
+						type = infrastructure
+						level = 4
+					}
+				}
+				else_if = {
+					limit = { 
+						infrastructure > 3
+					}
+					remove_building = {
+						type = infrastructure
+						level = 3
+					}
+				}
+				else_if = {
+					limit = { 
+						infrastructure > 2
+					}
+					remove_building = {
+						type = infrastructure
+						level = 2
+					}
+				}
+				else_if = {
+					limit = { 
+						infrastructure > 1
+					}
+					remove_building = {
+						type = infrastructure
+						level = 1
+					}
+				}
+				else_if = {
+					limit = { 
+						infrastructure > 0
+					}
+					remove_building = {
+						type = infrastructure
+						level = 1
+					}
+				}
+
+				if = {
+					limit = { 
+						dockyard > 4
+					}
+					remove_building = {
+						type = dockyard
+						level = 4
+					}
+				}
+				else_if = {
+					limit = { 
+						dockyard > 3
+					}
+					remove_building = {
+						type = dockyard
+						level = 3
+					}
+				}
+				else_if = {
+					limit = { 
+						dockyard > 2
+					}
+					remove_building = {
+						type = dockyard
+						level = 2
+					}
+				}
+				else_if = {
+					limit = { 
+						dockyard > 1
+					}
+					remove_building = {
+						type = dockyard
+						level = 1
+					}
+				}
+				else_if = {
+					limit = { 
+						dockyard > 0
+					}
+					remove_building = {
+						type = dockyard
+						level = 1
+					}
+				}
+		   }
+			every_state = {
+				limit = {
+					arms_factory > 4
+				}
+				remove_building = {
+					type = arms_factory
+					level = 3
+				}
 			}
-			remove_building = {
-				type = arms_factory
-				level = 2
+			every_state = {
+				limit = {
+					industrial_complex > 4
+				}
+				remove_building = {
+					type = industrial_complex
+					level = 3
+				}
 			}
-			remove_building = {
-				type = industrial_complex
-				level = 1
-			}
-			remove_building = {
-				type = infrastructure
-				level = 1
-			}
-			remove_building = {
-				type = dockyard
-				level = 2
-			}
-		  }
-		every_state = {
-			limit = {
-				arms_factory > 4
-			}
-			remove_building = {
-				type = arms_factory
-				level = 3
-			}
-		  }
-		  every_state = {
-			limit = {
-				industrial_complex > 4
-			}
-			remove_building = {
-				type = industrial_complex
-				level = 3
-			}
-		  }
 		}
 	}	
 	yun_no_continued = {

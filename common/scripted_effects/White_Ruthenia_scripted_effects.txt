@@ -39,16 +39,16 @@ WHR_recalculate_land_reform = {
 		set_temp_variable = { WHR_land_reform_popularity_factor = WHR_Land_Reform_Popularity }
 		divide_temp_variable = { WHR_land_reform_popularity_factor = 30 }
 
-		set_variable = { WHR_land_reform_stability_factor = -0.2 }
-		multiply_variable = { WHR_land_reform_stability_factor = WHR_land_reform_popularity_factor }
+		set_variable = { WHR_land_reform_add_stability = -0.2 }
+		multiply_variable = { WHR_land_reform_add_stability = WHR_land_reform_popularity_factor }
 	}
 	else = {
 		set_temp_variable = { WHR_land_reform_popularity_factor = WHR_Land_Reform_Popularity }
 		subtract_from_temp_variable = { WHR_land_reform_popularity_factor = 30 }
 		divide_temp_variable = { WHR_land_reform_popularity_factor = 70 }
 
-		set_variable = { WHR_land_reform_stability_factor = 0.3 }
-		multiply_variable = { WHR_land_reform_stability_factor = WHR_land_reform_popularity_factor }
+		set_variable = { WHR_land_reform_add_stability = 0.3 }
+		multiply_variable = { WHR_land_reform_add_stability = WHR_land_reform_popularity_factor }
 	}
 }
 

@@ -7760,10 +7760,6 @@ spriteTypes = {
         texturefile = "gfx/interface/goals/KXX_FX/RUS_Secure_Iraq.png"
     }
 	spriteType = {
-        name = "GFX_goal_RUS_Support_Small_Business_vns"
-        texturefile = "gfx/interface/goals/KXX_FX/RUS_Support_Small_Business_vns.png"
-    }
-	spriteType = {
         name = "GFX_goal_RUS_white_legacy"
         texturefile = "gfx/interface/goals/KXX_FX/RUS_white_legacy.png"
     }
@@ -8046,10 +8042,6 @@ spriteTypes = {
 	spriteType = {
         name = "GFX_goal_SOV_family"
         texturefile = "gfx/interface/goals/KXX_FX/SOV_family.png"
-    }
-	spriteType = {
-        name = "GFX_goal_SOV_farmers"
-        texturefile = "gfx/interface/goals/KXX_FX/SOV_farmers.png"
     }
 	spriteType = {
         name = "GFX_goal_SOV_Hang_up_Portraits"
@@ -8502,10 +8494,6 @@ spriteTypes = {
 	spriteType = {
         name = "GFX_goal_UKR_found_sokil_youth"
         texturefile = "gfx/interface/goals/KXX_FX/UKR_found_sokil_youth.png"
-    }
-	spriteType = {
-        name = "GFX_goal_UKR_indicative_planning"
-        texturefile = "gfx/interface/goals/KXX_FX/UKR_indicative_planning.png"
     }
 	spriteType = {
         name = "GFX_goal_UKR_king"

@@ -24,7 +24,7 @@ PER_coring_conquered_territory = {
 		days_remove = 200
 
 		modifier = {
-			stability_factor = -0.05
+			add_stability = -0.05
 			political_power_gain = -0.1
 			conscription_factor = -0.1
 			consumer_goods_factor = 0.02
@@ -74,7 +74,7 @@ PER_coring_conquered_territory = {
 		days_remove = 200
 
 		modifier = {
-			stability_factor = -0.05
+			add_stability = -0.05
 			political_power_gain = -0.05
 			conscription_factor = -0.05
 			consumer_goods_factor = 0.02
@@ -135,7 +135,7 @@ PER_coring_conquered_territory = {
 		days_remove = 200
 
 		modifier = {
-			stability_factor = -0.05
+			add_stability = -0.05
 			political_power_gain = -0.1
 			conscription_factor = -0.1
 			consumer_goods_factor = 0.02

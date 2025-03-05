@@ -128,7 +128,7 @@ country_event = {
 	
 	option = {
 		name = shizo_finland.7.a
-		ai_chance = { factor = 10 }
+		ai_chance = { base = 10 }
 	}
 	
 }
@@ -146,7 +146,7 @@ country_event = {
 	
 	option = {
 		name = shizo_finland.8.a
-		ai_chance = { factor = 10 }
+		ai_chance = { base = 10 }
 		play_song = "fe_superevent"
 		set_global_flag = finland_invades_egypt_Super_Event_Visible
 		set_global_flag = Super_Event_Visible
@@ -167,9 +167,7 @@ country_event = {
 	
 	option = {
 		name = shizo_finland.9.a
-		ai_chance = { factor = 10 }
-		
-		
+		ai_chance = { base = 10 }
 	}
 	
 }
@@ -185,7 +183,7 @@ country_event = {
 	
 	option = {
 		name = shizo_finland.10.a
-		ai_chance = { factor = 10 }
+		ai_chance = { base = 10 }
 		swap_ideas = {
 			remove_idea = FIN_mounting_dissent_idea
 			add_idea = FIN_AND_EGY
@@ -206,7 +204,7 @@ country_event = {
 	
 	option = {
 		name = shizo_finland.11.a
-		ai_chance = { factor = 10 }
+		ai_chance = { base = 10 }
 		add_manpower = -17
 	}
 }
@@ -224,7 +222,7 @@ country_event = {
 		name = shizo_finland.12.a
 		unlock_decision_category_tooltip = FE_PR
 		set_country_flag = fe_start
-		ai_chance = { factor = 10 }
+		ai_chance = { base = 10 }
 	}
 	
 }
@@ -242,7 +240,7 @@ country_event = {
 		name = shizo_finland.13.a
 		remove_ideas = FIN_work
 		add_ideas = FIN_pyramid
-		ai_chance = { factor = 10 }
+		ai_chance = { base = 10 }
 	}
 	
 }
@@ -259,7 +257,7 @@ country_event = {
 	
 	option = {
 		name = shizo_finland.14.a
-		ai_chance = { factor = 10 }
+		ai_chance = { base = 10 }
 		every_owned_state = {
 			add_extra_state_shared_building_slots = 3
 			add_building_construction = {
@@ -295,7 +293,7 @@ country_event = {
 			remove_idea = FIN_origin
 			add_idea = FIN_origin2
 		  }
-		ai_chance = { factor = 10 }
+		ai_chance = { base = 10 }
 	}
 	
 }
@@ -310,21 +308,22 @@ country_event = {
 	
 	option = {
 		name = shizo_finland.16.a
+		ai_chance = { base = 10 }
 		FIN = {
 			country_event = {
 				id = shizo_finland.28
 				days = 2
 			  }
 			}
-		ai_chance = { factor = 10 }
 	}
 	option = {
 		name = shizo_finland.16.b
+		ai_chance = { base = 0 }
 		FIN = {
 			country_event = {			
-			  id = shizo_finland.17 }
+			  	id = shizo_finland.17 
 			}
-		ai_chance = { factor = 0 }
+		}
 	}
 	
 }
@@ -1108,24 +1107,24 @@ country_event = {
 				option = {
 					name = shizo_finland.34.a
 					add_war_support = 0.10
-			division_template = {
-				name = "卡累利阿起义军"
-				division_names_group = SRI_GAR_01
-				template_counter = 68
-				regiments = {
-					militia = { x = 0 y = 0 }
-					militia = { x = 0 y = 1 }
-					militia = { x = 0 y = 2 }
-					militia = { x = 1 y = 0 }
-					militia = { x = 1 y = 1 }
+				division_template = {
+					name = "卡累利阿起义军"
+					division_names_group = SRI_GAR_01
+					template_counter = 68
+					regiments = {
+						militia = { x = 0 y = 0 }
+						militia = { x = 0 y = 1 }
+						militia = { x = 0 y = 2 }
+						militia = { x = 1 y = 0 }
+						militia = { x = 1 y = 1 }
+					}
+					support = {
+						recon = {
+							x = 0
+							y = 0
+						}
+					}
 				}
-				support = {
-          recon = {
-            x = 0
-            y = 0
-          }
-        }
-			}
 			hidden_effect = {
 			set_province_controller = 170
 			set_province_controller = 6117
@@ -1136,69 +1135,70 @@ country_event = {
 			set_province_controller = 3067
 			set_province_controller = 11159
 		}
-       215 = {
-        create_unit = {
-          division = "division_template = \"卡累利阿起义军\" start_experience_factor = 0 start_equipment_factor = 0.5"
-          owner = FIN
-        }
-        create_unit = {
-          division = "division_template = \"卡累利阿起义军\" start_experience_factor = 0 start_equipment_factor = 0.5"
-          owner = FIN
-        }
-		create_unit = {
-			division = "division_template = \"卡累利阿起义军\" start_experience_factor = 0 start_equipment_factor = 0.5"
-			owner = FIN
-		  }
-		  create_unit = {
-			division = "division_template = \"卡累利阿起义军\" start_experience_factor = 0 start_equipment_factor = 0.5"
-			owner = FIN
-		  }
-      }
-	  213 = {
-        create_unit = {
-          division = "division_template = \"卡累利阿起义军\" start_experience_factor = 0 start_equipment_factor = 0.5"
-          owner = FIN
-        }
-      }
-	  722 = {
-        create_unit = {
-          division = "division_template = \"卡累利阿起义军\" start_experience_factor = 0 start_equipment_factor = 0.5"
-          owner = FIN
-        }
-        create_unit = {
-          division = "division_template = \"卡累利阿起义军\" start_experience_factor = 0 start_equipment_factor = 0.5"
-          owner = FIN
-        }
-      }
-	  1274 = {
-        create_unit = {
-          division = "division_template = \"卡累利阿起义军\" start_experience_factor = 0 start_equipment_factor = 0.5"
-          owner = FIN
-        }
-      }
-	  1327 = {
-        create_unit = {
-          division = "division_template = \"卡累利阿起义军\" start_experience_factor = 0 start_equipment_factor = 0.5"
-          owner = FIN
-        }
-      }
-	  216 = {
-        create_unit = {
-          division = "division_template = \"卡累利阿起义军\" start_experience_factor = 0 start_equipment_factor = 0.5"
-          owner = FIN
-        }
-		create_unit = {
-			division = "division_template = \"卡累利阿起义军\" start_experience_factor = 0 start_equipment_factor = 0.5"
-			owner = FIN
-		  }
-		  create_unit = {
-			division = "division_template = \"卡累利阿起义军\" start_experience_factor = 0 start_equipment_factor = 0.5"
-			owner = FIN
-		  }
-      }
-					ai_chance = { factor = 60 }
-				}
+		215 = {
+			create_unit = {
+				division = "division_template = \"卡累利阿起义军\" start_experience_factor = 0 start_equipment_factor = 0.5"
+				owner = FIN
 			}
+			create_unit = {
+				division = "division_template = \"卡累利阿起义军\" start_experience_factor = 0 start_equipment_factor = 0.5"
+				owner = FIN
+			}
+			create_unit = {
+				division = "division_template = \"卡累利阿起义军\" start_experience_factor = 0 start_equipment_factor = 0.5"
+				owner = FIN
+			}
+			create_unit = {
+				division = "division_template = \"卡累利阿起义军\" start_experience_factor = 0 start_equipment_factor = 0.5"
+				owner = FIN
+			}
+		}
+		213 = {
+			create_unit = {
+				division = "division_template = \"卡累利阿起义军\" start_experience_factor = 0 start_equipment_factor = 0.5"
+				owner = FIN
+			}
+		}
+		722 = {
+			create_unit = {
+				division = "division_template = \"卡累利阿起义军\" start_experience_factor = 0 start_equipment_factor = 0.5"
+				owner = FIN
+			}
+			create_unit = {
+				division = "division_template = \"卡累利阿起义军\" start_experience_factor = 0 start_equipment_factor = 0.5"
+				owner = FIN
+			}
+		}
+		1274 = {
+			create_unit = {
+				division = "division_template = \"卡累利阿起义军\" start_experience_factor = 0 start_equipment_factor = 0.5"
+				owner = FIN
+			}
+		}
+		1327 = {
+			create_unit = {
+				division = "division_template = \"卡累利阿起义军\" start_experience_factor = 0 start_equipment_factor = 0.5"
+				owner = FIN
+			}
+		}
+		216 = {
+			create_unit = {
+				division = "division_template = \"卡累利阿起义军\" start_experience_factor = 0 start_equipment_factor = 0.5"
+				owner = FIN
+			}
+			create_unit = {
+				division = "division_template = \"卡累利阿起义军\" start_experience_factor = 0 start_equipment_factor = 0.5"
+				owner = FIN
+			}
+			create_unit = {
+				division = "division_template = \"卡累利阿起义军\" start_experience_factor = 0 start_equipment_factor = 0.5"
+				owner = FIN
+			}
+		}
+		ai_chance = { base = 0 }
+
+			}
+		}
 			country_event = {			
 				id = shizo_finland.35
 				immediate = {log = "[Root.GetName]: event shizo_finland.35"}
@@ -1520,7 +1520,8 @@ country_event = {
 				option = {
 					name = shizo_finland.50.a
 					UKR = {
-					add_manpower = 563 }
-					ai_chance = { factor = 40 }
+						add_manpower = 563 
+					}
+					ai_chance = { base = 40 }
 				}
 			}

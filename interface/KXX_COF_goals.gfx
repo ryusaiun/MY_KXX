@@ -618,36 +618,9 @@ spriteTypes = {
 		name = "GFX_ideology_radsoc_scythianism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/radsoc_scythianism_subtype.png"
 	}
-	SpriteType = {
-		name = "GFX_ideology_polish_natsynd"
-		texturefile = "gfx/interface/ideologies/subideologies/polish_natsynd.png"
-	}
-
-	###布拉西拉赫假国策
-	SpriteType = {
-		name = "GFX_goals_FRA_bulaxilahe_01"
-		texturefile = "gfx/interface/goals/FIU_france_east.png"
-	}
-	SpriteType = {
-		name = "GFX_goals_FRA_bulaxilahe_02"
-		texturefile = "gfx/interface/goals/AUS_New_Age_Ariosophic_Artistry.png"
-	}
-	SpriteType = {
-		name = "GFX_goals_FRA_bulaxilahe_03"
-		texturefile = "gfx/interface/goals/CHL_JUDEN.png"
-	}
-	SpriteType = {
-		name = "GFX_goals_FRA_bulaxilahe_04"
-		texturefile = "gfx/interface/goals/CHL_protestas_crushear.png"
-	}
-
 
 
 	###精神
-	spriteType = {
-		name = "GFX_idea_farmer"
-		texturefile = "gfx/interface/ideas/ideas/FRA_Farmer.png"
-	}
 	spriteType = {
 		name = "GFX_idea_FRA_natcol"
 		texturefile = "gfx/interface/ideas/FRA/FRA_natcol.png"

@@ -9,22 +9,29 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 
-option = { 
-	name = kxxfrance.1.a
-	FRA = {
-		annex_country = { target = BEL  }
-		annex_country = { target = WLL  }
+	option = { 
+		name = kxxfrance.1.a
+		FRA = {
+			annex_country = { 
+				target = BEL  
+			}
+			annex_country = { 
+				target = WLL  
+			}
+		}
+		
 	}
-	
-}
-option = { 
-	name = kxxfrance.1.b
-	FRA = {
-		create_wargoal = { target = BEL }
-		create_wargoal = { target = WLL }
+	option = { 
+		name = kxxfrance.1.b
+		FRA = {
+			annex_country = { 
+				target = BEL  
+			}
+			annex_country = { 
+				target = WLL  
+			}
+		}
 	}
-	
-}
 }
 country_event = {	
 	id = kxxfrance.2
@@ -35,9 +42,9 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 
-option = { 
-	name = kxxfrance.2.a
-}	
+	option = { 
+		name = kxxfrance.2.a
+	}	
 }	
 country_event = {	
 	id = kxxfrance.3
@@ -48,29 +55,29 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 
-option = { 
-	name = kxxfrance.3.a
-	ai_chance = {
-		factor = 100
-	}
-}	
-option = { 
-	name = kxxfrance.3.b
-	ai_chance = {
-		factor = 0
-	}
-	set_country_flag = PANEUROPE
-	every_country = {
-		limit = {
-			NOT = {
-				tag = FRA
-			}
-			capital_scope = { is_on_continent = europe }
-			is_in_faction_with = FRA
+	option = { 
+		name = kxxfrance.3.a
+		ai_chance = {
+			base = 100
 		}
-		country_event = kxxfrance.4
+	}	
+	option = { 
+		name = kxxfrance.3.b
+		ai_chance = {
+			base = 0
+		}
+		set_country_flag = PANEUROPE
+		every_country = {
+			limit = {
+				NOT = {
+					tag = FRA
+				}
+				capital_scope = { is_on_continent = europe }
+				is_in_faction_with = FRA
+			}
+			country_event = kxxfrance.4
+		}
 	}
-}
 }	
 country_event = {	
 	id = kxxfrance.4
@@ -81,35 +88,35 @@ country_event = {
 	is_triggered_only = yes
 	
 
-option = { 
-	name = kxxfrance.4.a
-	ai_chance = {
-		factor = 0
-		
-	}
-}	
-option = { 
-	name = kxxfrance.4.b
-	ai_chance = {
-		factor = 100
-		
-	}
-	FRA = {
-		annex_country = { target = ROOT transfer_troops = yes }
+	option = { 
+		name = kxxfrance.4.a
+		ai_chance = {
+			base = 0
+			
+		}
+	}	
+	option = { 
+		name = kxxfrance.4.b
+		ai_chance = {
+			base = 100
+			
+		}
+		FRA = {
+			annex_country = { target = ROOT transfer_troops = yes }
 
-	}
-	every_unit_leader = {	
-		set_nationality = FRA
-	}
-	every_state = {
-		limit = {
-			is_core_of = ROOT
 		}
-		FRA = { 
-			add_state_core = PREV 
+		every_unit_leader = {	
+			set_nationality = FRA
+		}
+		every_state = {
+			limit = {
+				is_core_of = ROOT
+			}
+			FRA = { 
+				add_state_core = PREV 
+			}
 		}
 	}
-}
 }
 country_event = {	
 	id = kxxfrance.5
@@ -143,41 +150,35 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 
-option = { 
-	name = kxxfrance.6.a
-	create_faction =  "地中海同盟"
+	option = { 
+		name = kxxfrance.6.a
+		create_faction =  "地中海同盟"
+	}
 }	
-}	
+
 country_event = {
 	id = Frajocbin.1
 	immediate = {log = "[GetDateText]: [Root.GetName]: event Frajocbin.win"}
 	title = Frajocbin.1.t
 	desc = Frajocbin.1.d
-is_triggered_only = yes
-fire_only_once = yes
-hidden = no
-option = { 
-	name = Frajocbin.1.a
-	trigger = {
-		always=yes
-	}
-	add_political_power = -50
-	add_popularity = {
-		ideology = totalist
-		popularity = 0.04
-	}
-	add_ideas = FRA_farmer
-	add_stability = -0.05
-	
-}
-option = { 
-	name = Frajocbin.1.b
-	trigger = {
-		always=yes
-	}
-	add_political_power = 20
-}
+	is_triggered_only = yes
+	fire_only_once = yes
 
+	option = { 
+		name = Frajocbin.1.a
+		add_political_power = -50
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.04
+		}
+		add_ideas = FRA_farmer
+		add_stability = -0.05
+	}
+
+	option = { 
+		name = Frajocbin.1.b
+		add_political_power = 20
+	}
 }
 country_event = {	
 	id = kxxfrance.7
@@ -188,28 +189,28 @@ country_event = {
 	is_triggered_only = yes
 	
 
-option = { 
-	name = kxxfrance.7.a
-	ai_chance = {
-		factor = 34
+	option = { 
+		name = kxxfrance.7.a
+		ai_chance = {
+			base = 34
+		}
+		set_country_flag = PROFRANCE
 	}
-	set_country_flag = PROFRANCE
+	option = { 
+		ai_chance = {
+			base = 33
+		}
+		name = kxxfrance.7.b
+		set_country_flag = PROBRITISH
+	}	
+	option = { 
+		ai_chance = {
+			base = 33
+		}
+		name = kxxfrance.7.c
+	}	
 }
-option = { 
-	ai_chance = {
-		factor = 33
-	}
-	name = kxxfrance.7.b
-	set_country_flag = PROBRITISH
-}	
-option = { 
-	ai_chance = {
-		factor = 33
-	}
-	name = kxxfrance.7.c
-	
-}	
-}
+
 country_event = {	
 	id = kxxfrance.8
 	immediate = {log = "[GetDateText]: [Root.GetName]: event Frajocbin.war"}
@@ -219,10 +220,11 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 
-option = { 
-	name = kxxfrance.8.a
-}	
+	option = { 
+		name = kxxfrance.8.a
+	}	
 }
+
 country_event = {	
 	id = kxxfrance.9
 	immediate = {log = "[GetDateText]: [Root.GetName]: event Frajocbin.war"}
@@ -232,37 +234,37 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 
-option = { 
-	name = kxxfrance.9.a
-	custom_effect_tooltip = "New Communal Elections will take place every 5 years!"
-	hidden_effect = {
-		country_event = { id = comfrance.1004 days = 1825 } # Repeat communal election every 5 years
-	}
-	
-}	
-option = { 
-	name = kxxfrance.9.b
-	if = {
-		limit = {
-			check_variable = { FRA_commie_power > FRA_syndie_power }
-		}
+	option = { 
+		name = kxxfrance.9.a
+		custom_effect_tooltip = "New Communal Elections will take place every 5 years!"
 		hidden_effect = {
-			country_event = {
-				id = kxxfrance.10
-				days = 2
+			country_event = { id = comfrance.1004 days = 1825 } # Repeat communal election every 5 years
+		}
+	}	
+	option = { 
+		name = kxxfrance.9.b
+		if = {
+			limit = {
+				check_variable = { FRA_commie_power > FRA_syndie_power }
+			}
+			hidden_effect = {
+				country_event = {
+					id = kxxfrance.10
+					days = 2
+				}
+			}
+			
+		}
+		else = {
+			hidden_effect = {
+				country_event = {
+					id = kxxfrance.11
+					days = 2
+				}
 			}
 		}
 		
-	}else = {
-		hidden_effect = {
-			country_event = {
-				id = kxxfrance.11
-				days = 2
-			}
-		}
 	}
-	
-}
 }
 country_event = {	
 	id = kxxfrance.10
@@ -273,26 +275,25 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 
-option = { 
-	name = kxxfrance.10.a
-	create_country_leader = {
-		name = "马塞尔·加香"
-		picture = "gfx/leaders/FRA/Portrait_France_Marcel_Cachin.png"
-		expire = "1.1.1"
-		ideology = broad_communism_subtype
-	}
-	set_politics = {
-		ruling_party = totalist
+	option = { 
+		name = kxxfrance.10.a
+		create_country_leader = {
+			name = "马塞尔·加香"
+			picture = "gfx/leaders/FRA/Portrait_France_Marcel_Cachin.png"
+			expire = "1.1.1"
+			ideology = broad_communism_subtype
+		}
+		set_politics = {
+			ruling_party = totalist
+		}	
+		set_party_name = {
+			ideology = totalist
+			long_name = FRA_parti_communiste_long
+			name = FRA_parti_communiste
+		}
+		set_country_flag = FRA_mod_jac_sup
+		complete_national_focus = FRA_moderate
 	}	
-	set_party_name = {
-		ideology = totalist
-		long_name = FRA_parti_communiste_long
-		name = FRA_parti_communiste
-	}
-	set_country_flag = FRA_mod_jac_sup
-	complete_national_focus = FRA_moderate
-	
-}	
 }
 country_event = {	
 	id = kxxfrance.11
@@ -303,20 +304,19 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 
-option = { 
-	name = kxxfrance.11.a
-	create_country_leader = {
-		name = "临时政务会议"
-		picture = "gfx/leaders/FRA/Portrait_FRA_Conseil.png"
-		expire = "1.1.1"
-		ideology = syndicalist_subtype
+	option = { 
+		name = kxxfrance.11.a
+		create_country_leader = {
+			name = "临时政务会议"
+			picture = "gfx/leaders/FRA/Portrait_FRA_Conseil.png"
+			expire = "1.1.1"
+			ideology = syndicalist_subtype
+		}
+		country_event = {
+			id = kxxfrance.12
+			days = 7
+		}
 	}
-	country_event = {
-		id = kxxfrance.12
-		days = 7
-	}
-}
-
 }
 country_event = {	
 	id = kxxfrance.12
@@ -327,46 +327,46 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 
-option = { 
-	name = kxxfrance.12.a
-	create_country_leader = {
-		name = "马塞尔·戴亚"
-		desc = "POLITICS_MARCEL_DEAT_DESC"
-		picture = "gfx/leaders/FRA/Portrait_France_Marcel_Deat_Emergency.png"
-		expire = "1.1.1"
-		traits = { chairman_leader }
-		ideology = neo_socialism_subtype
-	}
-	set_politics = {
-		ruling_party = totalist
-	}
-	set_party_name = {
-		ideology = totalist
-		long_name = FRA_deat_start_long
-		name = FRA_deat_start
-	}
-	set_cosmetic_tag = FRA_Deat	 
-	hidden_effect = {	
-		remove_ideas_with_trait = head_of_government
-		add_ideas = FRA_Ernest_Lafont_hog_tot
-		remove_ideas_with_trait = foreign_minister
-		add_ideas = FRA_Adrien_Marquet_for_tot
-		remove_ideas_with_trait = economy_minister
-		add_ideas = FRA_Max_Hymans_eco_tot
-		remove_ideas_with_trait = security_minister
-		add_ideas = FRA_Max_Bonnafous_sec_tot
-		add_popularity = {
-		  ideology = totalist
-		   popularity = 0.20
-		 }
-		complete_national_focus = FRA_Paris_en_ordre
-		remove_ideas = FRA_valois_dead_idea
-		remove_ideas = French_Revanchism_idea
-		country_event = {
-			id = comfrance.929
-			days = 5
-		}	 
-	}
+	option = { 
+		name = kxxfrance.12.a
+		create_country_leader = {
+			name = "马塞尔·戴亚"
+			desc = "POLITICS_MARCEL_DEAT_DESC"
+			picture = "gfx/leaders/FRA/Portrait_France_Marcel_Deat_Emergency.png"
+			expire = "1.1.1"
+			traits = { chairman_leader }
+			ideology = neo_socialism_subtype
+		}
+		set_politics = {
+			ruling_party = totalist
+		}
+		set_party_name = {
+			ideology = totalist
+			long_name = FRA_deat_start_long
+			name = FRA_deat_start
+		}
+		set_cosmetic_tag = FRA_Deat	 
+		hidden_effect = {	
+			remove_ideas_with_trait = head_of_government
+			add_ideas = FRA_Ernest_Lafont_hog_tot
+			remove_ideas_with_trait = foreign_minister
+			add_ideas = FRA_Adrien_Marquet_for_tot
+			remove_ideas_with_trait = economy_minister
+			add_ideas = FRA_Max_Hymans_eco_tot
+			remove_ideas_with_trait = security_minister
+			add_ideas = FRA_Max_Bonnafous_sec_tot
+			add_popularity = {
+				ideology = totalist
+				popularity = 0.20
+			}
+			complete_national_focus = FRA_Paris_en_ordre
+			remove_ideas = FRA_valois_dead_idea
+			remove_ideas = French_Revanchism_idea
+			country_event = {
+				id = comfrance.929
+				days = 5
+			}	 
+		}
 }	
 option = { 
 	name = kxxfrance.12.b
@@ -422,14 +422,14 @@ option = {
 		traits = {}
 	}
 
-	remove_all_ministers = yes
-	add_ideas = FRA_Leon_Blum_hog_rso
-	add_ideas = FRA_Jean_Paul_Sartre_for_rso
-	add_ideas = FRA_Daniel_Guerin_eco_rso
-	add_ideas = FRA_Adrien_Tixier_sec_syn
-		set_cosmetic_tag = FRA_Gamelin
-	set_country_flag = LEADER_GUI_VISIBLE
-	random_unit_leader = {
+		remove_all_ministers = yes
+		add_ideas = FRA_Leon_Blum_hog_rso
+		add_ideas = FRA_Jean_Paul_Sartre_for_rso
+		add_ideas = FRA_Daniel_Guerin_eco_rso
+		add_ideas = FRA_Adrien_Tixier_sec_syn
+			set_cosmetic_tag = FRA_Gamelin
+		set_country_flag = LEADER_GUI_VISIBLE
+		random_unit_leader = {
 			limit = { has_id = 200 }
 			remove_unit_leader = yes
 		}
@@ -2115,60 +2115,60 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 
-option = { #nein
-	name = kxxfrance.23.a
-	add_political_power = 50
-}
-option = { 
-	name = kxxfrance.23.b
-	
-	create_country_leader = {
-		name = "乔治·马歇"  # Georges Marchais
-		picture = "gfx/leaders/NRM/Portrait_Normandy_Georges_Marchais.png"
-		expire = "1.1.1"
-		ideology = popcom_subtype
+	option = { #nein
+		name = kxxfrance.23.a
+		add_political_power = 50
 	}
-	
-}
-option = { 
-	name = kxxfrance.23.c
-	set_politics = {
-		ruling_party = radical_socialist
+	option = { 
+		name = kxxfrance.23.b
+		
+		create_country_leader = {
+			name = "乔治·马歇"  # Georges Marchais
+			picture = "gfx/leaders/NRM/Portrait_Normandy_Georges_Marchais.png"
+			expire = "1.1.1"
+			ideology = popcom_subtype
+		}
+		
 	}
-	create_country_leader = {
-		name = "乔治·马歇"  # Georges Marchais
-		picture = "gfx/leaders/NRM/Portrait_Normandy_Georges_Marchais.png"
-		expire = "1.1.1"
-		ideology = radsoc_popcom_subtype
+	option = { 
+		name = kxxfrance.23.c
+		set_politics = {
+			ruling_party = radical_socialist
+		}
+		create_country_leader = {
+			name = "乔治·马歇"  # Georges Marchais
+			picture = "gfx/leaders/NRM/Portrait_Normandy_Georges_Marchais.png"
+			expire = "1.1.1"
+			ideology = radsoc_popcom_subtype
+		}
+		add_tot_to_coalition = yes
 	}
-	add_tot_to_coalition = yes
-}
-option = { 
-	name = kxxfrance.23.e
-	set_politics = {
-		ruling_party = radical_socialist
+	option = { 
+		name = kxxfrance.23.e
+		set_politics = {
+			ruling_party = radical_socialist
+		}
+		create_country_leader = {
+			name = "乔治·马歇"  # Georges Marchais
+			picture = "gfx/leaders/NRM/Portrait_Normandy_Georges_Marchais.png"
+			expire = "1.1.1"
+			ideology = broad_communism_subtype
+		}
+		add_tot_to_coalition = yes
 	}
-	create_country_leader = {
-		name = "乔治·马歇"  # Georges Marchais
-		picture = "gfx/leaders/NRM/Portrait_Normandy_Georges_Marchais.png"
-		expire = "1.1.1"
-		ideology = broad_communism_subtype
+	option = { 
+		name = kxxfrance.23.f
+		set_politics = {
+			ruling_party = radical_socialist
+		}
+		create_country_leader = {
+			name = "乔治·马歇"  # Georges Marchais
+			picture = "gfx/leaders/NRM/Portrait_Normandy_Georges_Marchais.png"
+			expire = "1.1.1"
+			ideology = radsoc_communism_subtype
+		}
+		add_tot_to_coalition = yes
 	}
-	add_tot_to_coalition = yes
-}
-option = { 
-	name = kxxfrance.23.f
-	set_politics = {
-		ruling_party = radical_socialist
-	}
-	create_country_leader = {
-		name = "乔治·马歇"  # Georges Marchais
-		picture = "gfx/leaders/NRM/Portrait_Normandy_Georges_Marchais.png"
-		expire = "1.1.1"
-		ideology = radsoc_communism_subtype
-	}
-	add_tot_to_coalition = yes
-}
 }
 country_event = {	
 	id = kxxfrance.24 #anglo french union
@@ -2179,69 +2179,68 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 
-option = { #nein
-	name = kxxfrance.24.a
-	ai_chance = {
-		factor = 0
-	}
-	add_political_power = 50
-	
-}
-option = { #oh yes
-	name = kxxfrance.24.b
-	ai_chance = {
-		factor = 100
-	}
-	if = {
-		limit = {
-			ENG = {
-				is_ai = no
-			}
+	option = { #nein
+		name = kxxfrance.24.a
+		ai_chance = {
+			factor = 0
 		}
-		every_state = {
+		add_political_power = 50
+		
+	}
+	option = { #oh yes
+		name = kxxfrance.24.b
+		ai_chance = {
+			factor = 100
+		}
+		if = {
 			limit = {
-				is_core_of = FRA
+				ENG = {
+					is_ai = no
+				}
 			}
-			add_core_of = ENG
+			every_state = {
+				limit = {
+					is_core_of = FRA
+				}
+				add_core_of = ENG
 
-		}
+			}
 			set_cosmetic_tag = FRA_Frangleterre
 			annex_country = { target = FRA transfer_troops = yes }
 			country_event = {
 				id = kxxfrance.25
 				days = 30
 			}
-		
-		FRA = {
-			every_unit_leader = {	
-				set_nationality = ENG
-			}	
+			
+			FRA = {
+				every_unit_leader = {	
+					set_nationality = ENG
+				}	
+			}
 		}
+		else = {
+			FRA = {
+				set_cosmetic_tag = FRA_Frangleterre
+				annex_country = { target = ENG transfer_troops = yes }
+				every_state = {
+					limit = {
+						is_core_of = ENG
+					}
 
-	}
-	else = {
-		FRA = {
-			set_cosmetic_tag = FRA_Frangleterre
-			annex_country = { target = ENG transfer_troops = yes }
-			every_state = {
-				limit = {
-					is_core_of = ENG
+					add_core_of = FRA
 				}
-
-				add_core_of = FRA
+				country_event = {
+					id = kxxfrance.25
+					days = 30
+				}
 			}
-			country_event = {
-				id = kxxfrance.25
-				days = 30
+			ENG = {
+				every_unit_leader = {	
+					set_nationality = ENG
+				}	
 			}
-		}
-		ENG = {
-			every_unit_leader = {	
-				set_nationality = ENG
-			}	
 		}
 	}
-}
 
 }
 country_event = {	
@@ -2253,10 +2252,10 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 
-option = { #nein
-	name = kxxfrance.25.a
-	add_political_power = 50
-}
+	option = { #nein
+		name = kxxfrance.25.a
+		add_political_power = 50
+	}
 option = { #oh yes
 	name = kxxfrance.25.b
 	set_cosmetic_tag = FRA_Frangleterre_federation
@@ -2519,13 +2518,13 @@ option = { #oh yes
 					add_state_core = 753
 					add_state_core = 453
 					
-		create_wargoal = { type = annex_everything target = 700.owner }
-		create_wargoal = { type = annex_everything target = 274.owner }
-		create_wargoal = { type = annex_everything target = 311.owner }
-		create_wargoal = { type = annex_everything target = 336.owner }
-		create_wargoal = { type = annex_everything target = 751.owner }
-		create_wargoal = { type = annex_everything target = 453.owner }
-		create_wargoal = { type = annex_everything target = 753.owner }
+			create_wargoal = { type = annex_everything target = 700.owner }
+			create_wargoal = { type = annex_everything target = 274.owner }
+			create_wargoal = { type = annex_everything target = 311.owner }
+			create_wargoal = { type = annex_everything target = 336.owner }
+			create_wargoal = { type = annex_everything target = 751.owner }
+			create_wargoal = { type = annex_everything target = 453.owner }
+			create_wargoal = { type = annex_everything target = 753.owner }
 			every_state = {
 				limit = {
 					is_core_of = ZAM
@@ -2533,7 +2532,7 @@ option = { #oh yes
 				add_core_of = ENG
 				add_core_of = FRA
 			}
-		create_wargoal = { type = annex_everything target = ZIM }
+			create_wargoal = { type = annex_everything target = ZIM }
 			every_state = {
 				limit = {
 					is_core_of = ZIM
@@ -2541,7 +2540,7 @@ option = { #oh yes
 				add_core_of = ENG
 				add_core_of = FRA
 			}
-		create_wargoal = { type = annex_everything target = KEN }
+			create_wargoal = { type = annex_everything target = KEN }
 			every_state = {
 				limit = {
 					is_core_of = KEN
@@ -2549,7 +2548,7 @@ option = { #oh yes
 				add_core_of = ENG
 				add_core_of = FRA
 			}
-		create_wargoal = { type = annex_everything target = EGY }
+			create_wargoal = { type = annex_everything target = EGY }
 			every_state = {
 				limit = {
 					is_core_of = EGY
@@ -2557,7 +2556,7 @@ option = { #oh yes
 				add_core_of = ENG
 				add_core_of = FRA
 			}
-		create_wargoal = { type = annex_everything target = NGR }
+			create_wargoal = { type = annex_everything target = NGR }
 			every_state = {
 				limit = {
 					is_core_of = NGR
@@ -2565,7 +2564,7 @@ option = { #oh yes
 				add_core_of = ENG
 				add_core_of = FRA
 			}
-		create_wargoal = { type = annex_everything target = YEM }
+			create_wargoal = { type = annex_everything target = YEM }
 			every_state = {
 				limit = {
 					is_core_of = YEM
@@ -2573,7 +2572,7 @@ option = { #oh yes
 				add_core_of = ENG
 				add_core_of = FRA
 			}
-		create_wargoal = { type = annex_everything target = OMA }
+			create_wargoal = { type = annex_everything target = OMA }
 			every_state = {
 				limit = {
 					is_core_of = OMA
@@ -2581,7 +2580,7 @@ option = { #oh yes
 				add_core_of = ENG
 				add_core_of = FRA
 			}
-		create_wargoal = { type = annex_everything target = BRM }
+			create_wargoal = { type = annex_everything target = BRM }
 			every_state = {
 				limit = {
 					is_core_of = BRM
@@ -3414,148 +3413,148 @@ option = { #no god no please no
 	declare_war_on = { target = IQR type = annex_everything } 
 	IQR = { change_tag_from = CAN }
 }	
-option = { #no god no please no
-	name = kxxfrance.36.c
-	leave_faction = yes
-	create_dynamic_country = {	
-		original_tag = CAN
-		copy_tag = CAN
-
-		#State
-		every_state = {
-			limit = {
-				is_core_of = CAN
-			}
-			add_state_core = ROOT
-		}
-		transfer_state = 740
-		transfer_state = 473
-		transfer_state = 470
-		set_technology = {
-			reservation_musket = 1
-		}
-		
-		### Leader
-		create_country_leader = {
-			name = "加拿大社会主义者代表大会"
-			picture = "gfx/leaders/CAN/Portrait_Canada_Vacant_Office_2.png"
-			expire = "1.1.1"
-			ideology = syndicalist_subtype
-		}
-
-		### Politics
-		set_popularities = {
-			totalist = 30
-			radical_socialist = 30
-			syndicalist = 30
-			social_democrat = 10
-			social_liberal = 0
-			market_liberal = 0
-			social_conservative = 0
-			authoritarian_democrat = 0
-			paternal_autocrat = 0
-			national_populist = 0
-		}
-		
-		set_party_name = {
-			long_name = SCC_syndicalist_party2_long
-			name = SCC_syndicalist_party2
-			ideology = syndicalist
-		}
-		set_country_flag = soc_dems_are_socialists
-		set_politics = {
-			ruling_party = syndicalist
-			elections_allowed = no
-		}
-		set_cosmetic_tag = NFL_CANADA
-
-		#Units
-		division_template = {
-			name = "民兵"
-			division_names_group = CSA_INF_01
-
-			regiments = {
-				infantry = { x = 0 y = 0 }
-				infantry = { x = 0 y = 1 }
-				infantry = { x = 0 y = 2 }
-				infantry = { x = 1 y = 0 }
-				infantry = { x = 1 y = 1 }
-				infantry = { x = 1 y = 2 }
-			}
-			priority = 0
-		}
-		declare_war_on = { target = CAN type = annex_everything } 
-	load_oob = CAN
-	}
-	set_autonomy = {
-		target = NFL
-		autonomy_state = autonomy_free 
-	}
-	NFL = {
+	option = { #no god no please no
+		name = kxxfrance.36.c
 		leave_faction = yes
-		set_politics = {
-			ruling_party = syndicalist
-			elections_allowed = no
+		create_dynamic_country = {	
+			original_tag = CAN
+			copy_tag = CAN
+
+			#State
+			every_state = {
+				limit = {
+					is_core_of = CAN
+				}
+				add_state_core = ROOT
+			}
+			transfer_state = 740
+			transfer_state = 473
+			transfer_state = 470
+			set_technology = {
+				reservation_musket = 1
+			}
+			
+			### Leader
+			create_country_leader = {
+				name = "加拿大社会主义者代表大会"
+				picture = "gfx/leaders/CAN/Portrait_Canada_Vacant_Office_2.png"
+				expire = "1.1.1"
+				ideology = syndicalist_subtype
+			}
+
+			### Politics
+			set_popularities = {
+				totalist = 30
+				radical_socialist = 30
+				syndicalist = 30
+				social_democrat = 10
+				social_liberal = 0
+				market_liberal = 0
+				social_conservative = 0
+				authoritarian_democrat = 0
+				paternal_autocrat = 0
+				national_populist = 0
+			}
+			
+			set_party_name = {
+				long_name = SCC_syndicalist_party2_long
+				name = SCC_syndicalist_party2
+				ideology = syndicalist
+			}
+			set_country_flag = soc_dems_are_socialists
+			set_politics = {
+				ruling_party = syndicalist
+				elections_allowed = no
+			}
+			set_cosmetic_tag = NFL_CANADA
+
+			#Units
+			division_template = {
+				name = "民兵"
+				division_names_group = CSA_INF_01
+
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+				}
+				priority = 0
+			}
+			declare_war_on = { target = CAN type = annex_everything } 
+		load_oob = CAN
 		}
-		transfer_state = 332
-		transfer_state = 331
-		load_oob = NFL
-	}
-	QUE = {
-		transfer_state = 466
-		transfer_state = 832
-		transfer_state = 468
-	}
-	IQR = {
-		add_state_core = 796
-		add_state_core = 933
-		transfer_state = 933
-		transfer_state = 796
-		load_oob = IroqouisRoyalArmy
-		
-	}
-	set_country_flag = iqr_independent
-	hidden_effect = {
+		set_autonomy = {
+			target = NFL
+			autonomy_state = autonomy_free 
+		}
+		NFL = {
+			leave_faction = yes
+			set_politics = {
+				ruling_party = syndicalist
+				elections_allowed = no
+			}
+			transfer_state = 332
+			transfer_state = 331
+			load_oob = NFL
+		}
+		QUE = {
+			transfer_state = 466
+			transfer_state = 832
+			transfer_state = 468
+		}
 		IQR = {
-			country_event = {
-				id = IQR.1
-				days = 9
+			add_state_core = 796
+			add_state_core = 933
+			transfer_state = 933
+			transfer_state = 796
+			load_oob = IroqouisRoyalArmy
+			
+		}
+		set_country_flag = iqr_independent
+		hidden_effect = {
+			IQR = {
+				country_event = {
+					id = IQR.1
+					days = 9
+				}
 			}
 		}
-	}
-	WAB = {
-		add_state_core = 464
-		add_state_core = 357
-		add_state_core = 934
-		add_state_core = 488
-		add_state_core = 465
-		transfer_state = 357
-		transfer_state = 464
-		transfer_state = 934
-		transfer_state = 468
-		transfer_state = 465
-		transfer_state = 1330
-		transfer_state = 1331
-		add_state_core = 1330
-		add_state_core = 1331
-		load_oob = WabanakiRoyalArmy
-		
-	}
-	set_country_flag = wab_independent
-	hidden_effect = {
 		WAB = {
-			country_event = {
-				id = WAB.1
-				days = 9
+			add_state_core = 464
+			add_state_core = 357
+			add_state_core = 934
+			add_state_core = 488
+			add_state_core = 465
+			transfer_state = 357
+			transfer_state = 464
+			transfer_state = 934
+			transfer_state = 468
+			transfer_state = 465
+			transfer_state = 1330
+			transfer_state = 1331
+			add_state_core = 1330
+			add_state_core = 1331
+			load_oob = WabanakiRoyalArmy
+			
+		}
+		set_country_flag = wab_independent
+		hidden_effect = {
+			WAB = {
+				country_event = {
+					id = WAB.1
+					days = 9
+				}
 			}
 		}
-	}
-	declare_war_on = { target = WAB type = annex_everything } 
-	declare_war_on = { target = NFL type = annex_everything } 
-	declare_war_on = { target = QUE type = annex_everything } 
-	declare_war_on = { target = IQR type = annex_everything } 
-	WAB = { change_tag_from = CAN }
-}	
+		declare_war_on = { target = WAB type = annex_everything } 
+		declare_war_on = { target = NFL type = annex_everything } 
+		declare_war_on = { target = QUE type = annex_everything } 
+		declare_war_on = { target = IQR type = annex_everything } 
+		WAB = { change_tag_from = CAN }
+	}	
 }
 country_event = {
 	id = Frajocbin.rev.win

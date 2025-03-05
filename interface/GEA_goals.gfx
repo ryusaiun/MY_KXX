@@ -56,20 +56,12 @@ SpriteTypes = {
 		texturefile = "gfx/interface/goals/GEA_focus_stability.png"
 	}
 	SpriteType = {
-		name = "GFX_GEA_support_from_vaterland"
-		texturefile = "gfx/interface/goals/GFX_GER_use_the_wealth_of_the_junkers-32619.png"
-	}
-	SpriteType = {
 		name = "GFX_GEA_expand_export_market"
 		texturefile = "gfx/interface/goals/GEA_expand_export_market.png"
 	}
 	SpriteType = {
 		name = "GFX_GEA_introduction_of_oligopoly"
 		texturefile = "gfx/interface/goals/GEA_introduction_of_oligopoly.png"
-	}
-	SpriteType = {
-		name = "GFX_GEA_profit_of_investment"
-		texturefile = "gfx/interface/goals/goal_aog_money.png"
 	}
 	SpriteType = {
 		name = "GFX_GEA_appointment_of_loyal_officers"

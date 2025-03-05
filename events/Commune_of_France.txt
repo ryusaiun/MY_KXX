@@ -2015,23 +2015,23 @@ country_event = {
 			CURRENT_DATE = "[?global.date.GetDateStringNoHour]"
 		}
 		create_country_leader = {
-				name = "迈·皮克雷"
-				picture = "gfx/leaders/FRA/Portrait_France_May_Picqueray.png"
-				expire = "1.1.1"
-				ideology = radsoc_socialist_feminism_subtype
-			}
-			create_country_leader = {
-				name = "迈·皮克雷"
-				picture = "gfx/leaders/FRA/Portrait_France_May_Picqueray.png"
-				expire = "1.1.1"
-				ideology = feminist_syndicalist_subtype
-			}
-			create_country_leader = {
-				name = "迈·皮克雷"
-				picture = "gfx/leaders/FRA/Portrait_France_May_Picqueray.png"
-				expire = "1.1.1"
-				ideology = totalist_subtype
-			}
+			name = "迈·皮克雷"
+			picture = "gfx/leaders/FRA/Portrait_France_May_Picqueray.png"
+			expire = "1.1.1"
+			ideology = radsoc_socialist_feminism_subtype
+		}
+		create_country_leader = {
+			name = "迈·皮克雷"
+			picture = "gfx/leaders/FRA/Portrait_France_May_Picqueray.png"
+			expire = "1.1.1"
+			ideology = feminist_syndicalist_subtype
+		}
+		create_country_leader = {
+			name = "迈·皮克雷"
+			picture = "gfx/leaders/FRA/Portrait_France_May_Picqueray.png"
+			expire = "1.1.1"
+			ideology = totalist_subtype
+		}
 		remove_ideas_with_trait = head_of_government
 		add_ideas = FRA_Daniel_Guerin_hog_rso
 		remove_ideas_with_trait = economy_minister
@@ -4271,7 +4271,7 @@ country_event = {
 	option = { #Provide all the help they need
 		name = comfrance.10300.a
 		ai_chance = {
-			factor = 90
+			base = 90
 		}
 		set_country_flag = FRA_help_chile
 		reverse_add_opinion_modifier = {

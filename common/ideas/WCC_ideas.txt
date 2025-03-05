@@ -802,7 +802,6 @@ ideas = {
 		modifier = {
 			resistance_target = -0.07
 			resistance_decay = 0.13
-			compliance_starting_value = 0.06
 			required_garrison_factor = -0.08
 			army_leader_start_level = 1 
 			army_morale_factor = 0.04

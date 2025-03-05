@@ -11,7 +11,6 @@ ideas = {
 			army_attack_factor = 0.15
 			army_core_defence_factor = 0.1
 			pocket_penalty = -0.1
-			production_resource_need_factor = -0.15
 			dig_in_speed_factor = 0.2
 			breakthrough_factor = 0.1
 			}
@@ -30,7 +29,6 @@ ideas = {
 			army_armor_attack_factor = 0.1
 			army_armor_defence_factor = 0.15
 			pocket_penalty = -0.2
-			production_resource_need_factor = -0.2
 			dig_in_speed_factor = 0.25
 			breakthrough_factor = 0.15
 			}

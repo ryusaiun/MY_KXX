@@ -455,8 +455,8 @@ ideas = {
 			army_morale_factor = 0.2
 			training_time_factor = -0.3
 			training_time_army_factor = -0.3
-			winter_attrition_factor  = -0.5
-			heat_attrition_factor  = -0.5
+			winter_attrition_factor = -0.5
+			heat_attrition_factor = -0.5
 			org_loss_when_moving = -0.5
 			max_organisation = 20
 			}
@@ -475,8 +475,8 @@ ideas = {
 			army_morale_factor = 0.2
 			training_time_factor = -0.3
 			training_time_army_factor = -0.3
-			winter_attrition_factor  = -0.5
-			heat_attrition_factor  = -0.5
+			winter_attrition_factor = -0.5
+			heat_attrition_factor = -0.5
 			org_loss_when_moving = -0.5
 			max_organisation = 20
 			experience_gain_army_unit_factor = 0.5
@@ -500,8 +500,8 @@ ideas = {
 			army_morale_factor = 0.2
 			training_time_factor = -0.3
 			training_time_army_factor = -0.3
-			winter_attrition_factor  = -0.5
-			heat_attrition_factor  = -0.5
+			winter_attrition_factor = -0.5
+			heat_attrition_factor = -0.5
 			org_loss_when_moving = -0.5
 			max_organisation = 20
 			experience_gain_army_unit_factor = 0.5
@@ -984,14 +984,16 @@ ideas = {
 			picture = CNT_christian_syndicalism
 			allowed = { always = no }
 			modifier = {
-			weekly_manpower = 500
-			industry_research = 0.15
-			electronics_research = 0.15
-			nuclear_research = 0.15
-			naval_equipment_research = 0.35
-			infantry_weapons_research = 0.35
-			local_resources_factor = 0.25
-			industry_repair_factor = 0.25
+				weekly_manpower = 500
+				naval_equipment_research = 0.35
+				infantry_weapons_research = 0.35
+				local_resources_factor = 0.25
+				industry_repair_factor = 0.25
+			}
+			research_bonus = {
+				nuclear = 0.15
+				electronics = 0.15
+				industry = 0.15
 			}
 		}
 		JONS_christian_syndicalism_1 = {
@@ -1000,17 +1002,19 @@ ideas = {
 			picture = CNT_christian_syndicalism
 			allowed = { always = no }
 			modifier = {
-			weekly_manpower = 1500
-			industry_research = 0.35
-			electronics_research = 0.35
-			nuclear_research = 0.35
-			naval_equipment_research = 0.35
-			infantry_weapons_research = 0.35
-			local_manpower = 0.15
-			local_resources = 0.2
-			local_factories = 0.5
-			local_resources_factor = 0.25
-			industry_repair_factor = 0.25
+				weekly_manpower = 1500
+				naval_equipment_research = 0.35
+				infantry_weapons_research = 0.35
+				local_manpower = 0.15
+				local_resources = 0.2
+				local_factories = 0.5
+				local_resources_factor = 0.25
+				industry_repair_factor = 0.25
+			}
+			research_bonus = {
+				industry = 0.35
+				electronics = 0.35
+				nuclear = 0.35
 			}
 		}
 		JONS_the_spanish_dream = {
@@ -1302,13 +1306,11 @@ ideas = {
 			army_org_factor = 0.35
 			supply_consumption_factor = -0.5
 			attrition = -0.35
-			winter_attrition_factor  = -0.5
-			heat_attrition_factor  = -0.5
-			acclimatization_cold_climate_gain_factor = 0.5
-			acclimatization_hot_climate_gain_factor  = 0.5
+			winter_attrition_factor = -0.5
+			heat_attrition_factor = -0.5
+			acclimatization_cold_climate_gain_factor = 0.5
+			acclimatization_hot_climate_gain_factor = 0.5
 			out_of_supply_factor = -0.3
-			army_core_attack_factor = 0.2
-			army_core_defence_factor = 0.2
 			army_artillery_defence_factor = 0.2
 			army_artillery_attack_factor = 0.2
 			army_armor_attack_factor = 0.2
@@ -1436,7 +1438,6 @@ ideas = {
 			picture = generic_migration
 			allowed = { always = no }
 			modifier = {
-			production_resource_need_factor = -0.1
 			dig_in_speed_factor = 0.1
 			army_attack_speed_factor = 0.2
 			org_loss_at_low_org_factor = -0.2
@@ -2368,7 +2369,6 @@ ideas = {
 			DIG_IN_SPEED_FACTOR = 0.2
 			ARMY_ATTACK_FACTOR = 0.05
 			RECON_FACTOR = 0.15
-			NAVAL_INVASION_PREPARATION = 0.1
 			DDITIONAL_SLOTS_CAP = 0.1
 			}
 		}
@@ -2746,7 +2746,6 @@ ideas = {
 			resistance_target = -0.1
 			resistance_decay = 0.1
 			resistance_growth = -0.1
-			compliance_starting_value = 0.2
 			required_garrison_factor = -0.1
 			}
 		}
@@ -2759,7 +2758,6 @@ ideas = {
 			resistance_target = -0.15
 			resistance_decay = 0.15
 			resistance_growth = -0.15
-			compliance_starting_value = 0.2
 			required_garrison_factor = -0.15
 			}
 		}

@@ -15,5 +15,5 @@ dependencies={
 	"临时启用KX汉化"
 }
 name="KX部分国家微调纯净版"
-supported_version="1.15.*"
+supported_version="1.16.*"
 remote_file_id="3408504379"

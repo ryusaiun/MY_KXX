@@ -210,7 +210,7 @@ ideas = {
 				local_non_core_manpower = 0.2
 				weekly_manpower = 100
 				stability_weekly_factor = -0.1
-				add_stability = -0.2
+				stability_factor = -0.2
 			}
 		}
 	}
@@ -224,7 +224,7 @@ ideas = {
 				local_non_core_manpower = 0.2
 				weekly_manpower = 250
 				stability_weekly_factor = 0.01
-				add_stability = -0.1
+				stability_factor = -0.1
 				war_support_weekly = 0.02
 				mobilization_speed = 0.2
 				conscription_factor	= 0.10

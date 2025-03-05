@@ -33,10 +33,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/LKMT_goals/CHI_kuodatongyizhanxian.png"
 	}
 	SpriteType = {
-		name = "GFX_goal_CHI_new_way"
-		texturefile = "gfx/interface/goals/LKMT_goals/CHI_new_way.png"
-	}
-	SpriteType = {
 		name = "GFX_goal_CHI_quanguogaokao"
 		texturefile = "gfx/interface/goals/LKMT_goals/CHI_quanguogaokao.png"
 	}
@@ -122,47 +118,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/LKMT_goals/CHI_QHTK.png"
 	}
 
-
-	SpriteType = {
-		name = "GFX_goal_FNG_HGT"
-		texturefile = "gfx/interface/goals/LKMT_goals/FNG_HGT.png"
-	}
-	SpriteType = {
-		name = "GFX_goal_FNG_MDZXL"
-		texturefile = "gfx/interface/goals/LKMT_goals/FNG_MDZXL.png"
-	}
-	SpriteType = {
-		name = "GFX_goal_FNG_MBFS"
-		texturefile = "gfx/interface/goals/LKMT_goals/FNG_MBFS.png"
-	}
-	SpriteType = {
-		name = "GFX_goal_FNG_qbftaq"
-		texturefile = "gfx/interface/goals/LKMT_goals/FNG_qbftaq.png"
-	}
-	SpriteType = {
-		name = "GFX_goal_FNG_LALONGLAOJIANG"
-		texturefile = "gfx/interface/goals/LKMT_goals/FNG_LALONGLAOJIANG.png"
-	}
-	SpriteType = {
-		name = "GFX_goal_FNG_QBSBZC"
-		texturefile = "gfx/interface/goals/LKMT_goals/FNG_QBSBZC.png"
-	}
-	SpriteType = {
-		name = "GFX_goal_FNG_dysgx"
-		texturefile = "gfx/interface/goals/LKMT_goals/FNG_dysgx.png"
-	}
-	SpriteType = {
-		name = "GFX_goal_FNG_FZRBST"
-		texturefile = "gfx/interface/goals/LKMT_goals/FNG_FZRBST.png"
-	}
-	SpriteType = {
-		name = "GFX_goal_FNG_QBYYT"
-		texturefile = "gfx/interface/goals/LKMT_goals/FNG_QBYYT.png"
-	}
-	SpriteType = {
-		name = "GFX_goal_FNG_ZXLKZDB"
-		texturefile = "gfx/interface/goals/LKMT_goals/FNG_ZXLKZDB.png"
-	}
 	SpriteType = {
 		name = "GFX_goal_CHI_FDP"
 		texturefile = "gfx/interface/goals/LKMT_goals/CHI_FDP.png"
@@ -175,10 +130,6 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_goal_CHI_CGB"
 		texturefile = "gfx/interface/goals/LKMT_goals/CHI_CGB.png"
-	}
-	SpriteType = {
-		name = "GFX_goal_CHI_SRZZ"
-		texturefile = "gfx/interface/goals/LKMT_goals/CHI_SRZZ.png"
 	}
 	SpriteType = {
 		name = "GFX_goal_CHI_WNJHH"
@@ -299,10 +250,6 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_goal_CHI_PLSC"
 		texturefile = "gfx/interface/goals/LKMT_goals/CHI_PLSC.png"
-	}
-	SpriteType = {
-		name = "GFX_goal_CHI_junguantuan"
-		texturefile = "gfx/interface/goals/LKMT_goals/CHI_junguantuan.png"
 	}
 	SpriteType = {
 		name = "GFX_goal_CHI_shentou"

@@ -1402,7 +1402,6 @@ ideas = {
 			modifier = {
 			resistance_decay = 0.2
 			resistance_growth = -0.2
-			compliance_starting_value = 0.2
 			compliance_growth = 0.2
 			required_garrison_factor = -0.2
 			}

@@ -37,20 +37,4 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/mag/MAG_agency_logo_KX_madagaskar.png"
 		noOfFrames = 2
 	}
-	SpriteType = {
-		name = "GFX_idea_MAG_plundering_of_jewish_property"
-		texturefile = "gfx/interface/ideas/MAG_plundering_of_jewish_property.png"
-	}
-	SpriteType = {
-		name = "GFX_idea_MAG_army_for_the_liberation_of_africa"
-		texturefile = "gfx/interface/ideas/MAG_army_for_the_liberation_of_africa.png"
-	}
-	SpriteType = {
-		name = "GFX_idea_MAG_the_more_the_merrier"
-		texturefile = "gfx/interface/ideas/MAG_the_more_the_merrier.png"
-	}
-	SpriteType = {
-		name = "GFX_idea_MAG_constantly_improve_something"
-		texturefile = "gfx/interface/ideas/MAG_constantly_improve_something.png"
-	}
 }
