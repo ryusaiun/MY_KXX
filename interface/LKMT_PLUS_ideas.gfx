@@ -1,9 +1,5 @@
 spriteTypes = {
 	spriteType = {
-		name = "GFX_idea_CHI_tiedaobu"
-		texturefile = "gfx/interface/companies/CHI/CHI_tiedaobu.png"
-	}
-	spriteType = {
 		name = "GFX_idea_CHI_guofangjiaoyv_idea"
 		texturefile = "gfx/interface/ideas/LKMT_ideas/CHI_guofangjiaoyv.png"
 	}
@@ -90,26 +86,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_CHI_MSS2_idea"
 		texturefile = "gfx/interface/ideas/LKMT_ideas/CHI_MSS2.png"
-	}
-	spriteType = {
-		name = "GFX_idea_KR_CHI_popular_support_1_idea"
-		texturefile = "gfx/interface/ideas/LKMT_ideas/KR_CHI_popular_support_1.png"
-	}
-	spriteType = {
-		name = "GFX_idea_KR_CHI_popular_support_2_idea"
-		texturefile = "gfx/interface/ideas/LKMT_ideas/KR_CHI_popular_support_2.png"
-	}
-	spriteType = {
-		name = "GFX_idea_KR_CHI_popular_support_3_idea"
-		texturefile = "gfx/interface/ideas/LKMT_ideas/KR_CHI_popular_support_3.png"
-	}
-	spriteType = {
-		name = "GFX_idea_KR_CHI_popular_support_4_idea"
-		texturefile = "gfx/interface/ideas/LKMT_ideas/KR_CHI_popular_support_4.png"
-	}
-	spriteType = {
-		name = "GFX_idea_KR_CHI_popular_support_5_idea"
-		texturefile = "gfx/interface/ideas/LKMT_ideas/KR_CHI_popular_support_5.png"
 	}
 	spriteType = {
 		name = "GFX_idea_CHI_GFDG_idea"

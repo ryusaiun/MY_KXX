@@ -413,7 +413,7 @@ country_event = {
 	option = {
 		name = comfranceeu.4.f
 		ai_chance = {
-			factor = 80
+			base = 80
 		}
 		add_stability = 0.1
 	}

@@ -321,13 +321,10 @@ ideas = {
 					build_cost_ic = -0.1
 					instant = yes
 				}
-				equipment_bonus = {
-					artillery_equipment = {
-						build_cost_ic = -0.1
-						instant = yes
-					}
+				artillery_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
 				}
-			
 			}
 		
 		}
@@ -457,13 +454,12 @@ ideas = {
 				research_speed_factor = 0.1
 				political_power_cost = -0.2
 				resistance_target = -0.1
-				compliance_starting_value = 0.1
 				compliance_growth = 0.15
 				required_garrison_factor = -0.1
 				local_resources_factor = 0.1
 				defensive_war_stability_factor = 0.25
 				offensive_war_stability_factor = 0.25
-				stability_popularity_factor = 0.25
+				party_popularity_stability_factor = 0.25
 				global_building_slots_factor = 0.15
 				production_speed_buildings_factor = 0.1
 				monthly_population = 0.5
@@ -490,13 +486,12 @@ ideas = {
 			modifier = {
 				political_power_cost = -0.2
 				resistance_target = -0.1
-				compliance_starting_value = 0.1
 				compliance_growth = 0.15
 				required_garrison_factor = -0.1
 				local_resources_factor = 0.1
 				defensive_war_stability_factor = 0.25
 				offensive_war_stability_factor = 0.25
-				stability_popularity_factor = 0.25
+				party_popularity_stability_factor = 0.25
 
 			}
 		}
@@ -552,7 +547,6 @@ ideas = {
 				social_conservative_drift = 0.01
 				authoritarian_democrat_drift = 0.01
 				resistance_target = -0.1	
-				compliance_starting_value = 0.1
 				compliance_growth = 0.1
 				industrial_capacity_factory = 0.1
 				production_speed_buildings_factor = 0.1
@@ -710,7 +704,6 @@ ideas = {
 				aircraft_manufacturer_cost_factor = -0.5
 				materiel_manufacturer_cost_factor = -0.5
 				industrial_concern_cost_factor = -0.5
-				theorist_cost_factor = -0.5
 				army_chief_cost_factor = -0.5
 				navy_chief_cost_factor = -0.5
 				air_chief_cost_factor = -0.5
@@ -992,7 +985,6 @@ ideas = {
 				conscription = 0.01
 				conscription_factor = 0.07
 				resistance_target = -0.1
-				compliance_starting_value = 0.1
 				compliance_growth = 0.1
 				required_garrison_factor = -0.1
 				attrition = -0.1
@@ -1061,7 +1053,6 @@ ideas = {
 				stability_weekly = 0.01
 				war_support_weekly = 0.01
 				resistance_target = -0.15
-				compliance_starting_value = 0.1
 				compliance_growth = 0.15
 
 			}
@@ -1125,7 +1116,6 @@ ideas = {
 				radical_socialist_drift = 0.02
 				syndicalist_drift = 0.01
 				resistance_target = -0.1
-				compliance_starting_value = 0.1
 				compliance_growth = 0.1
 				required_garrison_factor = -0.1
 				conscription = 0.01
@@ -1244,7 +1234,6 @@ ideas = {
 				radical_socialist_drift = 0.02
 				research_speed_factor = 0.2
 				resistance_target = -0.2
-				compliance_starting_value = 0.15
 				compliance_growth = 0.2
 				required_garrison_factor = -0.15
 				attrition = -0.1
@@ -1499,7 +1488,6 @@ ideas = {
 				consumer_goods_factor = -0.1
 				research_speed_factor = 0.1
 				resistance_target = -0.1
-				compliance_starting_value = 0.1
 				compliance_growth = 0.1
 				required_garrison_factor = -0.1
 				attrition = 0.1
@@ -1532,7 +1520,6 @@ ideas = {
 				consumer_goods_factor = -0.1
 				research_speed_factor = 0.1
 				resistance_target = -0.1
-				compliance_starting_value = 0.1
 				compliance_growth = 0.1
 				required_garrison_factor = -0.1
 				attrition = 0.1
@@ -1575,7 +1562,6 @@ ideas = {
 				consumer_goods_factor = -0.1
 				research_speed_factor = 0.1
 				resistance_target = -0.1
-				compliance_starting_value = 0.1
 				compliance_growth = 0.1
 				required_garrison_factor = -0.1
 				attrition = 0.1
@@ -1695,7 +1681,6 @@ ideas = {
 				research_speed_factor = 0.1
 				local_resources_factor = 0.1
 				resistance_target = -0.1
-				compliance_starting_value = 0.1
 				compliance_growth = 0.15
 				required_garrison_factor = -0.1
 				attrition = -0.1
@@ -1744,7 +1729,6 @@ ideas = {
 				research_speed_factor = 0.1
 				local_resources_factor = 0.1
 				resistance_target = -0.1
-				compliance_starting_value = 0.1
 				compliance_growth = 0.15
 				required_garrison_factor = -0.1
 				attrition = -0.1
@@ -1913,7 +1897,6 @@ ideas = {
 				research_speed_factor = 0.1
 				local_resources_factor = 0.1
 				global_building_slots_factor = 0.15
-				compliance_starting_value = 0.15
 				compliance_growth = 0.1
 				required_garrison_factor = -0.1
 				attrition = -0.1
@@ -1936,7 +1919,6 @@ ideas = {
 				research_speed_factor = 0.1
 				local_resources_factor = 0.1
 				global_building_slots_factor = 0.15
-				compliance_starting_value = 0.15
 				compliance_growth = 0.1
 				required_garrison_factor = -0.1
 				attrition = -0.1
@@ -1944,7 +1926,7 @@ ideas = {
 				army_morale_factor = 0.1
 
 			}
-	equipment_bonus = {
+			equipment_bonus = {
 				infantry_equipment = {
 					build_cost_ic = -0.1
 					reliability = 0.1
@@ -2027,7 +2009,6 @@ ideas = {
 				stability_factor = 0.1
 				syndicalist_drift = 0.02
 				research_speed_factor = 0.15
-				compliance_starting_value = 0.25
 				compliance_growth = 0.25
 				required_garrison_factor = -0.25
 				attrition = -0.25
@@ -2044,7 +2025,6 @@ ideas = {
 				stability_factor = 0.1
 				syndicalist_drift = 0.02
 				research_speed_factor = 0.15
-				compliance_starting_value = 0.25
 				compliance_growth = 0.25
 				required_garrison_factor = -0.25
 				attrition = -0.25
@@ -2066,7 +2046,6 @@ ideas = {
 				stability_factor = 0.1
 				syndicalist_drift = 0.02
 				research_speed_factor = 0.15
-				compliance_starting_value = 0.25
 				compliance_growth = 0.25
 				required_garrison_factor = -0.25
 				attrition = -0.25
@@ -2091,7 +2070,6 @@ ideas = {
 				stability_factor = 0.1
 				syndicalist_drift = 0.02
 				research_speed_factor = 0.15
-				compliance_starting_value = 0.25
 				compliance_growth = 0.25
 				required_garrison_factor = -0.25
 				attrition = -0.25
@@ -2251,7 +2229,6 @@ ideas = {
 				monthly_population = 0.5
 				supply_consumption_factor = -0.1
 				resistance_target = -0.1	
-				compliance_starting_value = 0.1
 				compliance_growth = 0.1
 				required_garrison_factor = -0.1
 
@@ -2318,7 +2295,6 @@ ideas = {
 				stability_factor = 0.1
 				war_support_factor = 0.1
 				syndicalist_drift = 0.02
-				compliance_starting_value = 0.15
 				compliance_growth = 0.2
 				production_factory_max_efficiency_factor = 0.1
 				production_factory_efficiency_gain_factor = 0.1
@@ -2363,7 +2339,7 @@ ideas = {
 				army_leader_start_level = 1 
 				acclimatization_hot_climate_gain_factor = 0.2 
 				acclimatization_cold_climate_gain_factor = 0.2 
-				man_power_weekly = 100
+				weekly_manpower = 100
 				breakthrough_factor = 0.1
 				recon_factor = 0.1
 				land_reinforce_rate = 0.1
@@ -2381,7 +2357,7 @@ ideas = {
 				army_leader_start_level = 1 
 				acclimatization_hot_climate_gain_factor = 0.2 
 				acclimatization_cold_climate_gain_factor = 0.2 
-				man_power_weekly = 100
+				weekly_manpower = 100
 			}
 		}
 		FRA_minority_right_protection = {
@@ -2964,7 +2940,7 @@ ideas = {
 				production_speed_industrial_complex_factor = 0.1
 				consumer_goods_factor = -0.15
 				min_export = 0
-				esearch_speed_factor = 0.1
+				research_speed_factor = 0.1
 				local_resources_factor = 0.15
 				conscription = 0.02
 			}
@@ -3599,7 +3575,6 @@ ideas = {
 				stability_factor = 0.05
 				war_support_factor = 0.05
 				resistance_decay = 0.1
-				compliance_starting_value = 0.1
 
 			}
 		}
@@ -3612,7 +3587,6 @@ ideas = {
 				stability_factor = 0.1
 				war_support_factor = 0.1
 				resistance_decay = 0.1
-				compliance_starting_value = 0.1
 				army_attack_factor = 0.05
 				army_defence_factor = 0.05
 				army_speed_factor = 0.1
@@ -5666,7 +5640,6 @@ ideas = {
 				resistance_decay_on_our_occupied_states = -0.1
 				resistance_growth = -0.1
 				resistance_growth_on_our_occupied_states = 0.1
-				compliance_starting_value = 0.1
 				compliance_growth = 0.1
 				compliance_growth_on_our_occupied_states = -0.1
 
@@ -5757,7 +5730,7 @@ ideas = {
 				production_factory_max_efficiency_factor = 0.15
 				industrial_capacity_factory = 0.1
 				production_speed_buildings_factor = 0.075
-				add_stability = 0.15
+				stability_factor = 0.15
 				totalist_drift = 0.03
 			}
 		}
@@ -5864,7 +5837,6 @@ ideas = {
 				production_speed_arms_factory_factor = 0.05
 				production_speed_industrial_complex_factor = 0.05
 				consumer_goods_factor = -0.2
-				industrial_capacity_factory = 0.05
 			}
 		}
 		FRA_social_hero = {
@@ -6062,19 +6034,6 @@ ideas = {
 				required_garrison_factor = -0.1
 				global_building_slots_factor = 0.1
 				supply_consumption_factor = -0.1
-			}
-		}
-		FRA_home_of_the_international_revolution = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea FRA_home_of_the_international_revolution"}
-			allowed = { always = no }
-			picture = FRA_phalanstere
-			picture = FRA_home_of_the_international_revolution
-			modifier = {
-				drift_defence_factor = 0.5
-				send_volunteer_size = 4
-				totalist_acceptance = 100
-				syndicalist_acceptance = 100
-				radical_socialist_acceptance = 100
 			}
 		}
 	}

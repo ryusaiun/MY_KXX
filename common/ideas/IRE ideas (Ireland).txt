@@ -2248,7 +2248,6 @@ ideas = {
 			name = IRE_tenuous_coalition
 			picture = generic_disjointed_gov
 			modifier = {
-				political_advisor_cost_factor = 0.25
 				custom_modifier_tooltip = IRE_tenuous_coalition_tt
 			}
 			on_remove = {
@@ -3061,7 +3060,7 @@ ideas = {
 				syndicalist_drift = -0.02
 				totalist_drift = -0.02
 			}
-			on_remove = { add_stability = 0.05 }
+			on_remove = { stability_factor = 0.05 }
 		}
 		IRE_emigration_banned = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_emigration_banned" }

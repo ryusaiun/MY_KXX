@@ -9,10 +9,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/gea/GEA_greece.png"
 	}
 	spriteType = {
-		name = "GFX_GEA_colonial_government_icon"
-		textureFile = "gfx/interface/autonomy/autonomy_colonial_government_icon.png"
-	}
-	spriteType = {
 		name = "GFX_idea_GEA_mucke_reform"
 		texturefile = "gfx/interface/ideas/gea/GEA_mucke_reform.png"
 	}

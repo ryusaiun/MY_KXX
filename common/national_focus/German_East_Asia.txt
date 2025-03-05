@@ -2120,7 +2120,7 @@ focus_tree = {
 				popularity = 0.05
 			}
 			add_to_variable = { GEA_mucke_reform_command_power_gain_mult = 0.1 } 
-			add_to_variable = { GEA_mucke_reform_defensive_war_stability_factor = 0.1 } 
+			add_to_variable = { GEA_mucke_reform_defensive_war_add_stability = 0.1 } 
 			custom_effect_tooltip = GEA_german_states_model_tt
 			add_to_variable = {
 				GEA_Progress_of_reform = 0.05
@@ -2457,7 +2457,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_strengthen_government"
 			unlock_decision_tooltip = GEA_she_li_di_dang_fa_gui
 			add_to_variable = { GEA_mucke_reform_political_power_factor = 0.05 } 
-			add_to_variable = { GEA_mucke_reform_party_popularity_stability_factor = 0.15 } 
+			add_to_variable = { GEA_mucke_reform_party_popularity_add_stability = 0.15 } 
 			custom_effect_tooltip = GEA_strengthen_government_tt
 			add_to_variable = {
 				GEA_Progress_of_reform = 0.05

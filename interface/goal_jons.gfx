@@ -592,25 +592,4 @@ spriteTypes = {
 	name = "PSE_Vanguard_in_the_Black_Mist"
 	texturefile = "gfx/interface/focus/PSE_Vanguard_in_the_Black_Mist.png"			
 	}
-	SpriteType = {
-	name = "RIF_Rise_up_the_flag"
-	texturefile = "gfx/interface/focus/RIF_Rise_up_the_flag.png"			
-	}
-	SpriteType = {
-	name = "RIF_Second_Rif_Uprising"
-	texturefile = "gfx/interface/focus/RIF_Second_Rif_Uprising.png"			
-	}
-	SpriteType = {
-	name = "RIF_Seek_support"
-	texturefile = "gfx/interface/focus/RIF_Seek_support.png"			
-	}
-	SpriteType = {
-	name = "RIF_Fortify_the_line_of_defense"
-	texturefile = "gfx/interface/focus/RIF_Fortify_the_line_of_defense.png"			
-	}
-	SpriteType = {
-	name = "RIF_Freedom_or_death"
-	texturefile = "gfx/interface/focus/RIF_Freedom_or_death.png"			
-	}
-
 }
