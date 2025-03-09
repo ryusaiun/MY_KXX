@@ -162,14 +162,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideologies/subideologies/radsoc_islamism_group.png"
 	}
 	SpriteType = {
-		name = "GFX_ideology_radsoc_islamism_subtype"
-		texturefile = "gfx/interface/ideologies/subideologies/radsoc_islamism_group.png"
-	}
-	SpriteType = {
-		name = "GFX_ideology_tot_islamism_subtype"
-		texturefile = "gfx/interface/ideologies/subideologies/tot_islamism_group.png"
-	}
-	SpriteType = {
 		name = "GFX_ideology_imperialcult_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/imperialate_group.png"
 	}
@@ -233,7 +225,6 @@ spriteTypes = {
 		name = "GFX_ideology_fredaism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/fredaism.png"
 	}
-
 	##制作组彩蛋
 	spriteType = {
 		name = "GFX_ideology_leftkxxism_subtype"

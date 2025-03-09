@@ -22,7 +22,6 @@ scripted_gui = {
 				has_country_leader_ideology = tot_euro_mosleyism
 				has_country_leader_ideology = radsoc_sansepolcrismo
 				has_country_leader_ideology = tot_francism_subtype
-				has_country_leader_ideology = tot_neosocialism_subtype
 				has_country_leader_ideology = radsoc_nasserism
 				has_country_leader_ideology = radsoc_brownism
 				has_country_leader_ideology = tot_natcol_subtype

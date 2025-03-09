@@ -6550,7 +6550,7 @@ country_event = {
 				desc = "POLITICS_MARCEL_DEAT_DESC"
 				picture = "gfx/leaders/FRA/Portrait_France_Marcel_Deat.png"
 				expire = "1965.1.1"
-				ideology = new_socialism_subtype
+				ideology = neo_socialism_subtype
 			}
 			add_stability = -0.1
 			remove_ideas_with_trait = head_of_government

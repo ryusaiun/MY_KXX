@@ -113,14 +113,7 @@ defined_text = {
 		}
 		localization_key = radsoc_nasserism
 	}
-	
-	text = {
-		trigger = {
-			has_country_leader_ideology = tot_neosocialism_subtype
-		}
-		localization_key = tot_neosocialism_subtype
-	}
-	
+		
 	text = {
 		trigger = {
 			has_country_leader_ideology = tot_francism_subtype

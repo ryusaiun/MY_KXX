@@ -442,12 +442,6 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_ideology_tot_neosocialism_subtype"
-		texturefile = "gfx/interface/ideologies/uobeu/tot_neo_syndicalism.png"
-	}
-
-	
-	spriteType = {
 		name = "GFX_ideology_radsoc_sansepolcrismo"
 		texturefile = "gfx/interface/ideologies/uobeu/radsocsansepolcrismo.png"
 	}

@@ -10,7 +10,7 @@ country_event = {
 	
 	option = {
 		name = test_picker.1.a
-		set_country_leader_ideology = ikki_kita_thought_subtype
+		set_country_leader_ideology = dainippon_communism_subtype
 	}
 	option = {
 		name = test_picker.1.b
@@ -18,7 +18,7 @@ country_event = {
 	}
 	option = {
 		name = test_picker.1.c
-		set_country_leader_ideology = doroism_subtype
+		set_country_leader_ideology = kozahacom_subtype
 	}
 	option = {
 		name = test_picker.1.e
