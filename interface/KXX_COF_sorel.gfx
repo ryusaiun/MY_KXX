@@ -1,5 +1,25 @@
 spriteTypes = {	
 	spriteType = {
+		name = "GFX_idea_FRA_soreleu1"
+		texturefile = "gfx/interface/ideas/FRA/FRA_soreleu1_idea.png"
+	}
+	spriteType = {
+		name = "GFX_idea_FRA_soreleu2"
+		texturefile = "gfx/interface/ideas/FRA/FRA_soreleu2_idea.png"
+	}
+	spriteType = {
+		name = "GFX_idea_FRA_soreleu3"
+		texturefile = "gfx/interface/ideas/FRA/FRA_soreleu3_idea.png"
+	}
+	spriteType = {
+		name = "GFX_idea_FRA_classical_arts"
+		texturefile = "gfx/interface/ideas/FRA/FRA_classical_arts.png"
+	}
+	spriteType = {
+		name = "GFX_idea_FRA_sorel_loyal"
+		texturefile = "gfx/interface/ideas/FRA/FRA_sorel_loyal.png"
+	}
+	spriteType = {
 	name = "GFX_goal_FRA_Prometheus_the_Immortal"
 	texturefile = "gfx/interface/goals/KXX_COF/FRA_Prometheus_the_Immortal.png"
 	}

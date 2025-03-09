@@ -19545,6 +19545,12 @@ focus = {
 }		
 	focus = {
 		id = FRA_neosocialism_in_effect
+		allow_branch = {
+			has_country_leader = {
+				ruling_only = yes
+				name = "阿德里安·马凯"
+			}
+		}
 		icon = GFX_goal_FRA_socialist_republican_party
 		x = 139
 		y = 0
@@ -19977,6 +19983,12 @@ focus = {
 	}
 	focus = {
 		id = FRA_second_1889
+		allow_branch = {
+			has_country_leader = {
+				ruling_only = yes
+				name = "保罗·拉努瓦尔"
+			}
+		}
 		icon = GFX_goals_FRA_boulangerists
 		x = 145
 		y = 0
@@ -20352,6 +20364,12 @@ focus = {
 	}
 	focus = {
 		id = FRA_sorelian_second
+		allow_branch = {
+			has_country_leader = {
+				ruling_only = yes
+				name = "皮埃尔·德里厄·拉罗谢尔"
+			}
+		}
 		icon = GFX_goal_FRA_sorelians
 		x = 151
 		y = 0
@@ -20710,7 +20728,12 @@ focus = {
 		icon = GFX_goal_FRA_orthodox_jacobins
 		x = 158
 		y = 0
-		
+		allow_branch = {
+			has_country_leader = {
+				ruling_only = yes
+				name = "雅克·杜克洛"
+			}
+		}
 		cost = 1
 		available = {
 			has_country_leader = {
@@ -21071,6 +21094,12 @@ focus = {
 	}
 	focus = {
 		id = FRA_1793_coming
+		allow_branch = {
+			has_country_leader = {
+				ruling_only = yes
+				name = "勒内·比奈"
+			}
+		}
 		icon = GFX_goal_FRA_national_jacobin
 		x = 139
 		y = 10
@@ -21409,6 +21438,12 @@ focus = {
 	}
 	focus = {
 		id = FRA_third_way
+		allow_branch = {
+			has_country_leader = {
+				ruling_only = yes
+				name = "乔治·马歇"
+			}
+		}
 		icon = GFX_goal_ideology_libsoc
 		x = 146
 		y = 10
@@ -21772,7 +21807,12 @@ focus = {
 		icon = GFX_goals_FRA_yellow_syndicalists
 		x = 153
 		y = 10
-		
+		allow_branch = {
+			has_country_leader = {
+				ruling_only = yes
+				name = "皮埃尔·比耶特里"
+			}
+		}
 		cost = 1
 		available = {
 			has_country_leader = {
@@ -28600,7 +28640,7 @@ focus = {
 
 		id = FRA_Prometheus_the_Immortal
 		icon = GFX_goal_FRA_Prometheus_the_Immortal
-		cost = 4
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
@@ -28620,7 +28660,7 @@ focus = {
 	focus = {
 		id = FRA_No_Democracy_required
 		icon = GFX_goal_FRA_No_Democracy_required
-		cost = 2
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
@@ -28636,12 +28676,13 @@ focus = {
 				popularity = -0.2
 			}
 			add_manpower = -300
+			add_ideas = FRA_no_democracy_required_idea
 		}
 	}
 	focus = {
 		id = FRA_Valois_Gabriel_Horn
 		icon = GFX_goal_FRA_Valois_Gabriel_Horn
-		cost = 2
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
@@ -28663,7 +28704,7 @@ focus = {
 	focus = {
 		id = FRA_United_Revolutionary_Syn
 		icon = GFX_Focus_COMFRA9
-		cost = 4
+		cost = 3
 		ai_will_do = {
 			factor = 100
 		}
@@ -28687,7 +28728,7 @@ focus = {
 	focus = {
 		id = FRA_Continue_Cooperation_Sorelians
 		icon = GFX_goal_FRA_Continue_Cooperation_Sorelians
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -28715,12 +28756,15 @@ focus = {
 			}
 			add_synd_to_coalition = yes
 			add_natpop_to_coalition = yes
+			hidden_effect = {
+				add_ideas = FRA_union_loyalty
+			}
 		}
 	}
 	focus = {
 		id = FRA_Cultivating_Technocrats
 		icon = GFX_goal_CSA_Technical_Alliance
-		cost = 3
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
@@ -28731,8 +28775,11 @@ focus = {
 		x = -3
 		y = 1
 		completion_reward = {
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.25
+			}
 			add_research_slot = 1
-			add_ideas = command_economy
 			add_tech_bonus = {
 				bonus = 1
 				uses = 1
@@ -28749,7 +28796,7 @@ focus = {
 	focus = {
 		id = FRA_Sorel_Planning_Doctrine
 		icon = GFX_goal_COR_Southern_Command_Economy
-		cost = 3
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
@@ -28760,7 +28807,6 @@ focus = {
 		x = -1
 		y = 1
 		completion_reward = {
-			add_ideas = FRA_planisme
 			random_owned_state = {
 				limit = {
 					free_building_slots = {
@@ -28811,7 +28857,7 @@ focus = {
 	focus = {
 		id = FRA_Mouvement_Class_Moyennes
 		icon = GFX_focus_spr_class_war
-		cost = 4
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
@@ -28825,13 +28871,13 @@ focus = {
 		x = 1
 		y = 1
 		completion_reward = {
-			add_ideas = FRA_constructive_revolution3
+			add_ideas = FRA_neoclass_society
 		}
 	}
 	focus = {
 		id = FRA_Curbing_the_More_Radical
 		icon = GFX_focus_focus_fra_fascist_threat
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -28863,7 +28909,7 @@ focus = {
 	focus = {
 		id = FRA_Warrior_Class_First
 		icon = GFX_Focus_COMFRA4
-		cost = 3
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
@@ -28874,28 +28920,33 @@ focus = {
 		x = 1
 		y = 1
 		completion_reward={
-			add_ideas = FRA_Civil_and_military_organizations
+			add_ideas = FRA_combatant
 		}
 	}
 	focus = {
 		id = FRA_Defence_of_Culture_SR
 		icon = GFX_goal_FRA_Defence_of_Culture_SR
-		cost = 3
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
 		prerequisite = {
 			focus = FRA_Warrior_Class_First
 		}
+		available = {
+			has_completed_focus = FRA_avantgarde
+		}
 		relative_position_id = FRA_Warrior_Class_First
 		x = -1
 		y = 1
-
+		completion_reward = { 
+			country_event = COF_Valois.4
+		}
 	}
 	focus = {
 		id = FRA_Between_Paneu_and_Nat
 		icon = GFX_goal_FRA_Between_Paneu_and_Nat
-		cost = 3
+		cost = 10
 		ai_will_do = {
 			factor = 100
 		}
@@ -28905,12 +28956,14 @@ focus = {
 		relative_position_id = FRA_Warrior_Class_First
 		x = 0
 		y = 2
-
+		completion_reward = { 
+			country_event = COF_Valois.5
+		}
 	}
 	focus = {
 		id = FRA_Dreyfus_Affair_Nightmare
 		icon = GFX_goal_FRA_slay_bourgeois_decadence
-		cost = 3
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
@@ -28930,7 +28983,7 @@ focus = {
 	focus = {
 		id = FRA_Bucard_Threat_Great
 		icon = GFX_goals_FRA_ultranatsynd_gang
-		cost = 3
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
@@ -28941,14 +28994,14 @@ focus = {
 		x = 3
 		y = 1
 		completion_reward = {
-			add_ideas = FRA_violence
 			army_experience = 50
+			country_event = COF_Valois.3
 		}
 	}
 	focus = {
 		id = FRA_Family_Motherland_Revolution
 		icon = GFX_goal_FRA_Family_Motherland_Revolution
-		cost = 3
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
@@ -28959,13 +29012,13 @@ focus = {
 		x = -3
 		y = 1
 		completion_reward = {
-			add_ideas = FRA_Travail_Famille_Patrie
+			add_ideas = FRA_Family_Motherland_Revolution
 		}
 	}
 	focus = {
 		id = FRA_Remember_1871_and_1918
 		icon = GFX_goal_FRA_Remember_1871_and_1918
-		cost = 3
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
@@ -28976,13 +29029,16 @@ focus = {
 		x = 1
 		y = 1
 		completion_reward = {
-			add_ideas = FRA_Vous_aurez_pas_Alsace_Lorraine3
+			swap_ideas = {
+				remove_idea = FRA_combatant
+				add_idea = FRA_combatant2
+			}
 		}
 	}
 	focus = {
 		id = FRA_Cartel_Arthuys
 		icon = GFX_Focus_COMFRA5
-		cost = 3
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
@@ -29000,12 +29056,14 @@ focus = {
 				remove_idea = FRA_corporate_syndie_idea
 				add_idea = FRA_corporate_syndie_idea2
 			}
+			add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
 		}
 	}
 	focus = {
 		id = FRA_Retablissement_de_Letalonor
 		icon = GFX_focus_hol_abandon_the_gold_standard
-		cost = 3
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
@@ -29016,13 +29074,16 @@ focus = {
 		x = -1
 		y = 1
 		completion_reward = {
-			add_ideas = FRA_economy_reforms2
+			swap_ideas = {
+				remove_idea = FRA_neoclass_society
+				add_idea = FRA_neoclass_society2
+			}
 		}
 	}
 	focus = {
 		id = FRA_Awakening_the_Labor_Myth
 		icon = GFX_goal_FRA_empire_of_french_worker
-		cost = 4
+		cost = 10
 		ai_will_do = {
 			factor = 100
 		}
@@ -29036,13 +29097,16 @@ focus = {
 		x = 0
 		y = 2
 		completion_reward = {
-			add_ideas = FRA_labor_aristocracy
+			swap_ideas = {
+				remove_idea = FRA_neoclass_society2
+				add_idea = FRA_neoclass_society3
+			}
 		}
 	}
 	focus = {
 		id = FRA_Totalism_International_Goal
 		icon = GFX_goal_totalism
-		cost = 4
+		cost = 10
 		ai_will_do = {
 			factor = 100
 		}
@@ -29053,14 +29117,14 @@ focus = {
 		x = 3
 		y = 2
 		completion_reward = {
-			add_ideas = FRA_supremacy
+			increase_ruling_party_popularity_by_25 = yes
 			add_country_leader_trait = COF_totalism_international_mentor
 		}
 	}
 	focus = {
 		id = FRA_Common_Enemy_Allemagne
 		icon = GFX_goal_NFE_take_down_germany
-		cost = 4
+		cost = 10
 		ai_will_do = {
 			factor = 100
 		}
@@ -29074,7 +29138,10 @@ focus = {
 		x = 0
 		y = 2
 		completion_reward={
-			add_ideas = FRA_The_France_of_Iron_and_Blood2
+			swap_ideas = {
+				remove_idea = FRA_combatant2
+				add_idea = FRA_combatant3
+			}
 		}
 	}
 	#第三国际科学特别调查署

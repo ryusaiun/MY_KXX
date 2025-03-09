@@ -724,9 +724,6 @@ country_event = {
 
 	option = { 
 		name = COF_Valois.1.c
-		trigger = {
-			always = no
-		}
 		ai_chance = {
 			base = 0
 		}
@@ -761,6 +758,238 @@ country_event = {
 				elections_allowed = no
 			}			
 		}
+	}
+
+}
+
+country_event = { #革命军团问题
+	id =  COF_Valois.3
+	title =  COF_Valois.3.t
+	desc =  COF_Valois.3.d
+	picture = GFX_report_event_CHI_SJ
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name =  COF_Valois.3.a
+		ai_chance = {
+			base = 40
+		}
+		add_ideas = FRA_violence
+	}
+
+	option = {
+		name =  COF_Valois.3.b
+		ai_chance = {
+			base = 60
+		}
+		add_ideas = FRA_antibucard_sorel_idea
+	}
+}
+
+country_event = { #文艺方向问题
+	id =  COF_Valois.4
+	title =  COF_Valois.4.t
+	desc =  COF_Valois.4.d
+	picture = GFX_report_event_CHI_SJ
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name =  COF_Valois.4.a
+		ai_chance = {
+			base = 40
+		}
+		swap_ideas = {
+			remove_idea = FRA_avantgarde
+			add_idea = FRA_avantgarde2
+		}
+	}
+
+	option = {
+		name =  COF_Valois.4.b
+		ai_chance = {
+			base = 60
+		}
+		add_ideas = FRA_classical_arts_idea
+	}
+
+}
+
+country_event = { #泛欧主义问题
+	id =  COF_Valois.5
+	title =  COF_Valois.5.t
+	desc =  COF_Valois.5.d
+	picture = GFX_report_event_CHI_SJ
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name =  COF_Valois.5.a
+		ai_chance = {
+			base = 1
+		}
+		set_cosmetic_tag = FRA_Sorel_EU
+		add_ideas = FRA_soreleu1_idea
+		hidden_effect = { 
+		sound_effect = complete_focus
+			every_state = {
+				limit = { 
+					is_on_continent = europe
+				}
+				add_core_of = ROOT
+			}
+		}
+	}
+
+    option = {
+		name =  COF_Valois.5.b
+		ai_chance = {
+			base = 1
+		}
+		set_cosmetic_tag = FRA_Sorel_EU
+		add_ideas = FRA_soreleu2_idea
+		hidden_effect = { 
+			sound_effect = complete_focus
+				#西班牙
+				118 = { add_core_of = ROOT }
+				41 = { add_core_of = ROOT }
+				165 = { add_core_of = ROOT }
+				166 = { add_core_of = ROOT }
+				167 = { add_core_of = ROOT }
+				168 = { add_core_of = ROOT }
+				169 = { add_core_of = ROOT }
+				170 = { add_core_of = ROOT }
+				171 = { add_core_of = ROOT }
+				172 = { add_core_of = ROOT }
+				173 = { add_core_of = ROOT }
+				174 = { add_core_of = ROOT }
+				175 = { add_core_of = ROOT }
+				176 = { add_core_of = ROOT }
+				177 = { add_core_of = ROOT }
+				178 = { add_core_of = ROOT }
+				793 = { add_core_of = ROOT }
+				940 = { add_core_of = ROOT }
+				1313 = { add_core_of = ROOT }
+				951 = { add_core_of = ROOT }
+				1316 = { add_core_of = ROOT }
+				290 = { add_core_of = ROOT }
+				#葡萄牙
+				112 = { add_core_of = ROOT }
+				179 = { add_core_of = ROOT }
+				180 = { add_core_of = ROOT }
+				181 = { add_core_of = ROOT }
+				795 = { add_core_of = ROOT }	
+				697 = { add_core_of = ROOT }	
+				698 = { add_core_of = ROOT }				
+				#意大利
+				759 = { add_core_of = ROOT }
+				160 = { add_core_of = ROOT }
+				159 = { add_core_of = ROOT }
+				1003 = { add_core_of = ROOT }
+				158 = { add_core_of = ROOT }
+				838 = { add_core_of = ROOT }
+				1004 = { add_core_of = ROOT }
+				161 = { add_core_of = ROOT }
+				162 = { add_core_of = ROOT }
+				157 = { add_core_of = ROOT }
+				1005 = { add_core_of = ROOT }
+				1236 = { add_core_of = ROOT }
+				764 = { add_core_of = ROOT }
+				742 = { add_core_of = ROOT }
+				117 = { add_core_of = ROOT }
+				837 = { add_core_of = ROOT }
+				1006 = { add_core_of = ROOT }
+				156 = { add_core_of = ROOT }
+				115 = { add_core_of = ROOT }
+				114 = { add_core_of = ROOT }
+				1002 = { add_core_of = ROOT }
+				2 = { add_core_of = ROOT }
+				1149 = { add_core_of = ROOT }
+				#瑞士法语区
+				943 = { add_core_of = ROOT }
+				760 = { add_core_of = ROOT } 
+				761 = { add_core_of = ROOT } 
+				#法国
+				1 = { add_core_of = ROOT } 
+				14 = { add_core_of = ROOT }
+				15 = { add_core_of = ROOT }
+				16 = { add_core_of = ROOT }
+				17 = { add_core_of = ROOT }
+				18 = { add_core_of = ROOT }
+				19 = { add_core_of = ROOT }
+				20 = { add_core_of = ROOT }
+				21 = { add_core_of = ROOT }
+				22 = { add_core_of = ROOT }
+				23 = { add_core_of = ROOT }
+				24 = { add_core_of = ROOT }
+				25 = { add_core_of = ROOT }
+				26 = { add_core_of = ROOT }
+				27 = { add_core_of = ROOT }
+				30 = { add_core_of = ROOT }
+				31 = { add_core_of = ROOT }
+				32 = { add_core_of = ROOT }
+				33 = { add_core_of = ROOT }
+				735 = { add_core_of = ROOT }
+				785 = { add_core_of = ROOT }
+				762 = { add_core_of = ROOT }
+				763 = { add_core_of = ROOT }
+				817 = { add_core_of = ROOT }
+				984 = { add_core_of = ROOT }
+				983 = { add_core_of = ROOT }
+				980 = { add_core_of = ROOT }
+				#低地和莱茵兰和伊利里亚
+				29 = { add_core_of = ROOT }
+				34 = { add_core_of = ROOT }
+				6 = { add_core_of = ROOT }
+				741 = { add_core_of = ROOT }
+				8 = { add_core_of = ROOT }
+				28 = { add_core_of = ROOT }
+				979 = { add_core_of = ROOT }
+				35 = { add_core_of = ROOT }
+				978 = { add_core_of = ROOT }
+				7 = { add_core_of = ROOT }
+				866 = { add_core_of = ROOT }
+				36 = { add_core_of = ROOT }
+				51 = { add_core_of = ROOT }
+				781 = { add_core_of = ROOT }
+				42 = { add_core_of = ROOT }
+				783 = { add_core_of = ROOT }
+				39 = { add_core_of = ROOT }
+				1100 = { add_core_of = ROOT }
+				736 = { add_core_of = ROOT }
+				1144 = { add_core_of = ROOT }
+				1105 = { add_core_of = ROOT }
+				1206 = { add_core_of = ROOT }
+				103 = { add_core_of = ROOT }
+				163 = { add_core_of = ROOT }
+				1098 = { add_core_of = ROOT }			
+		}
+	}
+
+    option = {
+		name =  COF_Valois.5.c
+		ai_chance = {
+			base = 98
+		}
+		add_ideas = FRA_soreleu3_idea
+		29 = { add_core_of = ROOT }
+		34 = { add_core_of = ROOT }
+		6 = { add_core_of = ROOT }
+		741 = { add_core_of = ROOT }
+		8 = { add_core_of = ROOT }
+		28 = { add_core_of = ROOT }
+		979 = { add_core_of = ROOT }
+		35 = { add_core_of = ROOT }
+		978 = { add_core_of = ROOT }
+		7 = { add_core_of = ROOT }
+		866 = { add_core_of = ROOT }
+		36 = { add_core_of = ROOT }
+		51 = { add_core_of = ROOT }
+		781 = { add_core_of = ROOT }
+		42 = { add_core_of = ROOT }
+		1313 = { add_core_of = ROOT }
+		165 = { add_core_of = ROOT }
 	}
 
 }
