@@ -63,10 +63,14 @@
  FRA_OR_LEADER1:0 "点击以切换§G教宗§!与§R总书记§!"
  FRA_OR_LEADER2:0 "法兰西教区的§R总书记§!"
  FRA_OR_JESUS:0 "点击以切换§G圣徒§!与§R弥赛亚§!"
+ FRA_OR_Makhno:0 "点击以切换§G领袖§!与§R保护者§!"
+ FRA_OR_Makhno1:0 "[FROM.GetNameWithFlag]的§R保护者§!"
  FRA_OR_JESUS2:0 "世界的§R吾主基督§!"
  FRA_or_Chaumet:0 "安德烈·肖梅"
  FRA_or_Weil:0 "西蒙娜·威尔"
  FRA_or_Jesus:0 "吾主基督"
+ FRA_OR_Dumezil:0 "乔治·杜兹米尔"
+ FRA_OR_Nestor_Makhno:0 "涅斯托尔·马赫诺"
  #法兰西公社特殊傀儡
  NSPR_Jose_Antonio:0 "何塞·安东尼奥·普里莫·德里维拉"
  NSPR_PM:0 "[FROM.GetNameWithFlag]的首相"
@@ -130,3 +134,14 @@
  KOG_OR_Freyre:0 "吉尔贝托·德·梅洛·弗雷雷"
  KOG_OR_Salazar:0 "安东尼奥·萨拉查"
  KOG_OR_Andrade:0 "奥斯瓦尔德·德·安德拉德"
+
+ #白鲁塞尼亚
+ WHR_OR_Adamovic:0 "亚泽普·阿达莫维奇"
+ WHR_OR_Astrouski:0 "拉达斯罗夫·阿斯特罗夫斯基"
+ WHR_OR_Ljosik:0 "亚泽普·柳西克"
+
+ #日本重置
+ JAP_OR_LEADER:0 "点击以切换§4内阁总理大臣§!与§Y今上陛下§!"
+ JAP_OR_LEADER1:0 "[FROM.GetNameWithFlag]的§Y国家象征§!"
+ JAP_OR_Hirohito:0 "裕仁"
+ JAP_OR_Yasuhito:0 "雍仁"

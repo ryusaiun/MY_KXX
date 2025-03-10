@@ -40,22 +40,146 @@ scripted_gui = {
 					has_country_flag = GRU_GOEBB_ROEM_VISIBLE
 				}
 			}
-			Gregor_Strasser_visible = { #施特拉塞
+			GRU_Heinrich_Himmler_visible = { #海因里希·希姆莱
 				AND = {
-					has_country_flag = KXX_HOG_gru_veiw
-					has_country_flag = GRU_Gregor_Strasser_VISIBLE
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = GRU_GOEBB_HIMMLER_VISIBLE
 				}
 			}
 			Albert_Speer_visible = { #阿尔伯特·施佩尔
 				AND = {
-					has_country_flag = KXX_HOG_third_veiw
-					has_country_flag = GRU_Albert_Speer_VISIBLE
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = GRU_GOEBB_SPEER_VISIBLE
 				}
 			}
-			Horst_Wessel_visible = { #威塞尔
+			Hermann_Goering_visible = { #赫尔曼·戈林
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = GRU_GOEBB_GORING_VISIBLE
+				}
+			}
+			Rosa_Luxenburg_visible = { #罗莎·卢森堡
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = GRU_LIEBK_ROSA_VISIBLE
+				}
+			}
+			### 傀儡双领袖
+			Britain_Charles_III_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = GRU_ENG_VISIBLE
+				}
+			}
+			Antonio_Salazar_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = GRU_IBR_VISIBLE
+				}
+			}
+			Victor_Emmanuel_III_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = GRU_ITT_VISIBLE
+				}
+			}
+			IEA_Victor_Emmanuel_III_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = GRU_IEA_VISIBLE
+				}
+			}
+			MNT_king_michael_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = GRU_MNT_VISIBLE
+				}
+			}
+			GRU_SER_Otto_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = GRU_SER_VISIBLE
+				}
+			}
+			###傀儡的傀儡双领袖
+			Pyotr_Wrangel_Tsar_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = GRU_VYT_VISIBLE
+				}
+			}
+			Grigol_Ordzhonikikdze_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = STALIN_ORDZ_VISIBLE
+				}
+			}
+			Carl_Gustaf_Mannerheim_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = GRU_MUR_VISIBLE
+				}
+			}
+			Aleksandr_Yegorov_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = SUG_triumvirate
+				}
+			}
+			Bronislav_Kaminski_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = GRU_RRV_VISIBLE
+				}
+			}
+			Konstantin_Rodzaevsky_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = GRU_AMR_VISIBLE
+				}
+			}
+			Diterikhs_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = GRU_MGD_VISIBLE
+				}
+			}
+			SHE_Regency_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = GRU_SHE_VISIBLE
+				}
+			}
+			Gregor_Strasser_2_visible = { #施特拉塞
+				AND = {
+					has_country_flag = KXX_HOG_gru_veiw
+					has_country_flag = GRU_Gregor_Strasser_2_VISIBLE
+				}
+			}
+			Albert_Speer_2_visible = { #阿尔伯特·施佩尔
+				AND = {
+					has_country_flag = KXX_HOG_third_veiw
+					has_country_flag = GRU_Albert_Speer_2_VISIBLE
+				}
+			}
+			Horst_Wessel_2_visible = { #威塞尔
 				AND = {
 					has_country_flag = KXX_HOG_second_veiw
-					has_country_flag = GRU_Horst_Wessel_VISIBLE
+					has_country_flag = GRU_Horst_Wessel_2_VISIBLE
+				}
+			}
+
+			#日本重置
+			Hirohito_visible = {  #裕仁天皇
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = JAP_Hirohito_VISIBLE
+				}
+			}
+			Yasuhito_visible = {  #雍仁天皇
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = JAP_Yasuhito_VISIBLE
 				}
 			}
 
@@ -113,8 +237,40 @@ scripted_gui = {
 					has_country_flag = DEN_Max_Arildskov_VISIBLE
 				}
 			}
+			
+			###白鲁塞尼亚
+			Jazep_Adamovic_visible = {   #亚泽普·阿达莫维奇
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = WHR_Jazep_Adamovic_VISIBLE
+				}
+			}
+			Radaslau_Astrouski_visible = {   #拉达斯罗夫·阿斯特罗夫斯基
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = WHR_Radaslau_Astrouski_VISIBLE
+				}
+			}
+			Jazep_Ljosik_visible = {   #亚泽普·柳西克
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = WHR_Jazep_Ljosik_VISIBLE
+				}
+			}
 
 			#法兰西公社
+			Nestor_Makhno_visible = {   #涅斯托尔·马赫诺
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = FRA_Nestor_Makhno_visible
+				}
+			}
+			Georges_Dumezil_visible = {   #乔治·杜兹米尔
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = FRA_Georges_Dumezil_VISIBLE
+				}
+			}
 			Andre_Chaumet_visible = {   #安德烈·肖梅
 				AND = {
 					has_country_flag = KXX_HOG_veiw
@@ -348,6 +504,36 @@ scripted_gui = {
 			
 
 			#民族与革命
+			Adalbert_Probst_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = BAY_Adalbert_Probst_flag
+				}
+			}
+			Hans_Michael_Frank_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = BAY_Hans_Michael_Frank_flag
+				}
+			}
+			Ali_Munif_Bey_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_leader = {
+						name = "奥斯曼行政当局"
+						ruling_only = yes
+					}
+				}
+			}
+			Sadr_al_Din_al_Sadr_visible = {
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_leader = {
+						name = "先知穆罕默德"
+						ruling_only = yes
+					}
+				}
+			}
 			Oleksander_Shumsky_visible = {
 				AND = {
 					has_country_flag = KXX_HOG_second_veiw
@@ -480,364 +666,7 @@ scripted_gui = {
 			}
 
 
-			### 日本 ###
 			
-			Abe_Iso_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Abe_Iso_hog_sde
-				}
-			}
-			
-			Katayama_Tetsu_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Katayama_Tetsu_hog_sde
-				}
-			}
-			
-			Machida_Chuji_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Machida_Chuji_hog_mli
-				}
-			}
-			
-			Hamaguchi_Osachi_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Hamaguchi_Osachi_hog_mli
-				}
-			}
-			
-			Ugaki_Kazushige_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Ugaki_Kazushige_hog_mli
-				}
-			}
-			
-			Inukai_Tsuyoshi_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Inukai_Tsuyoshi_hog_sco
-				}
-			}
-			
-			Suzuki_Kisaburo_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Suzuki_Kisaburo_hog_sco
-				}
-			}
-			
-			Mizuno_Rentaro_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Mizuno_Rentaro_hog_sco
-				}
-			}
-			
-			Yoshizawa_Kenkichi_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Yoshizawa_Kenkichi_hog_sco
-				}
-			}
-			
-			Hatoyama_Ichiro_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Hatoyama_Ichiro_hog_sco
-				}
-			}
-			
-			Adachi_Kenzo_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Adachi_Kenzo_hog_ade
-				}
-			}
-			
-			Maeda_Yonezo_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Maeda_Yonezo_hog_ade
-				}
-			}
-			
-			Hiranuma_Kiichiro_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Hiranuma_Kiichiro_hog_pau
-				}
-			}
-			
-			Hayashi_Senjuro_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Hayashi_Senjuro_hog_pau
-				}
-			}
-			
-			Tojo_Hideki_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Tojo_Hideki_hog_pau
-				}
-			}
-			
-			Nagata_Tetsuzan_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Nagata_Tetsuzan_hog_pau
-				}
-			}
-			
-			Konoe_Fumimaro_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Konoe_Fumimaro_hog_npo
-				}
-			}
-			
-			Araki_Sadao_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Araki_Sadao_hog_npo
-				}
-			}
-			
-			Kuhara_Fusanosuke_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Kuhara_Fusanosuke_hog_npo
-				}
-			}
-			
-			####红龙日本####
-			
-			Jotaro_Kawakami_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_jotaro_kawakami_hog_sde
-				}
-			}
-			Yamamoto_Kenzo_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Yamamoto_Kenzo_hog_sde
-					
-				}
-			}
-			
-			Katayama_Tetsu_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Katayama_Tetsu_hog_sde
-				}
-			}
-			
-			Seigo_Nakano_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					OR = {
-					has_idea = JAP_Nakano_Seigo_hog_tot
-					has_idea = JAP_Nakano_Seigo_hog_npo
-					}
-				}
-			}
-			
-			Saito_Takao_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_saito_takao_hog_sli
-				}
-			}
-			
-			Inejiro_Asanuma_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_inejiro_asanuma_hog_rso
-				}
-			}
-			
-			Katsumaro_Akamatsu_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Katsumaro_Akamatsu_hog_tot
-				}
-			}
-			
-			Kokkai_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Kokkai_hog_ade
-				}
-			}
-			
-			Giro_Senoo_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Giro_Senoo_hog_rso
-				}
-			}
-			
-			Yoshio_Kodama_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Yoshio_Kodama_hog_pau
-				}
-			}
-			
-			Tatsuo_Tsukui_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Tatsuo_Tsukui_hog_tot
-				}
-			}
-			
-			Kanji_Ishiwara_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Kanji_Ishiwara_hog_npo
-				}
-			}
-			Nissho_Inoue_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Nissho_Inoue_hog_npo
-				}
-			}
-			
-			Okawa_Shumei_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Okawa_Shumei_hog_npo
-				}
-			}
-			
-			Ikki_Kita_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Kita_Ikki_hog_tot
-				}
-			}
-			Ryohei_Uchida_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Ryohei_Uchida_hog_npo
-				}
-			}
-			
-			Toyama_Mitsuru_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Toyama_Mitsuru_hog_npo
-				}
-			}
-			
-			Onisaburo_Deguchi_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Onisaburo_Deguchi_hog_npo
-				}
-			}
-			
-			Kingoro_Hashimoto_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Kingoro_Hashimoto_hog_tot
-				}
-			}
-			Kozaburo_Tachibana_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Kozaburo_Tachibana_hog_npo
-				}
-			}
-			
-			Iwane_Matsui_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Iwane_Matsui_hog_npo
-				}
-			}
-			
-			Ryutaro_Nagai_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Ryutaro_Nagai_hog_sli
-				}
-			}
-			
-			Chikuhei_Nakajima_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Chikuhei_Nakajima_hog_sco
-				}
-			}
-			Bin_Akao_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Bin_Akao_hog_npo
-				}
-			}
-			
-			Akira_Kazami_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Akira_Kazami_hog_ade
-				}
-			}
-			
-			Josei_Toda_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Josei_Toda_hog_sde
-				}
-			}
-			
-			Tsunesaburo_Makiguchi_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Tsunesaburo_Makiguchi_hog_tot
-				}
-			}
-			Rikizo_Hirano_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Hirano_Rikizo_hog_tot
-				}
-			}
-			
-			Sumihisa_Ikeda_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Sumihisa_Ikeda_hog_tot
-				}
-			}
-			
-			Aso_Hisashi_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Aso_Hisashi_hog_tot
-				}
-			}
-			
-			Yoshikuru_Yamana_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Yoshikuru_Yamana_hog_tot
-				}
-			}
-			
-			Zaibatsu_Council_visible = {
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_idea = JAP_Zaibatsu_Council_hog_pau
-				}
-			}
 
 			KXX_pm_name_visible = {
 				has_country_flag = KXX_HOG_veiw

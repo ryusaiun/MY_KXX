@@ -7130,7 +7130,7 @@ country_event = {
 		name = comfrance.919.b
 		add_stability = 0.1
 		ai_chance = {
-			factor = 35
+			factor = 30
 			modifier = {
 				factor = 1000
 					has_game_rule = {
@@ -7166,7 +7166,7 @@ country_event = {
 	option = { 
 		name = comfrance.919.c
 		ai_chance = {
-			factor = 35
+			factor = 30
 			modifier = {
 				factor = 100
 					has_game_rule = {
@@ -7189,6 +7189,33 @@ country_event = {
 			}
 		}
 		
+	}
+
+	option = { 
+		name = comfrance.919.e
+		ai_chance = {
+			factor = 10
+		}
+		create_country_leader = {
+			name = "莱昂·儒奥"
+			desc = "POLITICS_LEON_JOUHAUX_DESC"
+			picture = "gfx/leaders/FRA/Portrait_France_Leon_Jouhaux.png"
+			expire = "1.1.1"
+			ideology = syndicalist_subtype
+			traits = {}
+		}
+		set_politics = {
+			ruling_party = syndicalist
+			elections_allowed = no
+		}
+		add_stability = 0.12
+		remove_ideas = FRA_black_guard_insurgency_idea
+		hidden_effect = {
+			country_event = {
+				id = comfrance.1006
+				days = 30
+			}
+		}
 	}
 
 }
