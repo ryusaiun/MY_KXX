@@ -141,7 +141,7 @@
  WHR_OR_Ljosik:0 "亚泽普·柳西克"
 
  #日本重置
- JAP_OR_LEADER:0 "点击以切换§4内阁总理大臣§!与§Y今上陛下§!"
+ JAP_OR_LEADER:0 "点击以切换£GFX_Emblem_of_the_Prime_Minister_of_Japan §4内阁总理大臣§!与£GFX_Imperial_Seal_of_Japan §Y今上陛下§!"
  JAP_OR_LEADER1:0 "[FROM.GetNameWithFlag]的§Y国家象征§!"
  JAP_OR_Hirohito:0 "裕仁"
  JAP_OR_Yasuhito:0 "雍仁"

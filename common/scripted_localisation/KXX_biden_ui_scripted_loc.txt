@@ -1655,7 +1655,6 @@ defined_text = {
 			has_country_flag= JAP_Hirohito_VISIBLE
     	}
  		localization_key = GFX_Portrait_JAP_Hirohito
-
  	}
 	text = {
     	trigger = {
