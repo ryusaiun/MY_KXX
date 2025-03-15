@@ -762,41 +762,248 @@ country_event = {
 
 }
 
-country_event = { #革命军团问题
-	id =  COF_Valois.3
-	title =  COF_Valois.3.t
-	desc =  COF_Valois.3.d
-	picture = GFX_report_event_CHI_SJ
+country_event = { #调查革命法兰西主义者
+	id = COF_Valois.3
+	title = COF_Valois.3.t
+	desc = COF_Valois.3.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	
 	option = {
-		name =  COF_Valois.3.a
+		name = COF_Valois.3.a
 		ai_chance = {
-			base = 40
+			base = 70
 		}
-		add_ideas = FRA_violence
+		hidden_effect = {
+			country_event = {
+				id = COF_Valois.4
+				days = 14
+			}			
+		}
 	}
 
 	option = {
-		name =  COF_Valois.3.b
+		name = COF_Valois.3.b
 		ai_chance = {
-			base = 60
+			base = 30
 		}
+		hidden_effect = {
+			country_event = {
+				id = COF_Valois.6
+				days = 31
+			}			
+		}
+	}
+}
+
+country_event = { #巴黎的长夜
+	id = COF_Valois.4
+	title = COF_Valois.4.t
+	desc = COF_Valois.4.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = COF_Valois.4.a
+		hidden_effect = {
+			country_event = {
+				id = COF_Valois.5
+				days = 31
+			}			
+		}
+	}
+}
+
+country_event = { #予以光荣之人
+	id = COF_Valois.5
+	title = COF_Valois.5.t
+	desc = COF_Valois.5.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = COF_Valois.5.a
+		random_unit_leader = {
+			limit = {
+				has_id = 5770
+			}
+			remove_unit_leader = yes
+		}
+		add_manpower = -500
 		add_ideas = FRA_antibucard_sorel_idea
 	}
 }
 
+country_event = { #秃鹫的啄食
+	id = COF_Valois.6
+	title = COF_Valois.6.t
+	desc = COF_Valois.6.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = Georges_Valois_lived
+			set_country_flag = Georges_Valois_dead
+			add_manpower = -500
+			add_stability = -0.25
+			create_country_leader = {
+				name = "公共安全委员会"
+				desc = "POLITICS_FRENCH_COUNCIL_DESC"
+				picture = "gfx/leaders/FRA/Portrait_France_Council.png"
+				expire = "1965.1.1"
+				ideology = sorelianism_subtype
+			}
+			create_country_leader = {
+				name = "公共安全委员会"
+				desc = "POLITICS_FRENCH_COUNCIL_DESC"
+				picture = "gfx/leaders/FRA/Portrait_France_Council.png"
+				expire = "1965.1.1"
+				ideology = natpop_sorelism_subtype
+			}
+			set_politics = {
+				ruling_party = totalist
+			}
+		}
+	}	
+
+	option = {
+		name = COF_Valois.6.a
+		set_country_flag = Yun_FRA_deat_visible_flag
+		create_country_leader = {
+			name = "古斯塔夫·爱尔威"
+			picture = "gfx/leaders/FRA/Portrait_FRA_Gustaf_Herve.png"
+			expire = "1.1.1"
+			traits = { pacifist_millitarist }
+			ideology = hervism_subtype
+		}
+		set_politics = {
+			ruling_party = totalist
+		}
+		set_party_name = {
+			ideology = totalist
+			long_name = FRA_herve_party
+			name = FRA_herve_party
+		}
+		set_cosmetic_tag = FRA_herve
+		remove_ideas_with_trait = head_of_government
+		add_ideas = FRA_Gustaf_Herve_hog_tot
+		remove_ideas_with_trait = foreign_minister
+		add_ideas = FRA_Jean_Allemane_for_tot
+		remove_ideas_with_trait = economy_minister
+		add_ideas = FRA_Victor_Meric_eco_tot
+		remove_ideas_with_trait = security_minister
+		add_ideas = FRA_Alexandre_Zevaes_sec_tot
+		add_popularity = {
+		  ideology = totalist
+		   popularity = 0.20
+		}
+		complete_national_focus = FRA_herve_win		
+	}
+
+	option = {
+		name = COF_Valois.6.b
+		create_country_leader = {
+			name = "休伯特·拉加代尔"
+			
+			picture = "gfx/leaders/FRA/Portrait_France_Hubert_Lagardelle.png"
+			expire = "1965.1.1"
+			ideology = sorelianism_subtype
+		}
+		add_popularity = {
+		  ideology = totalist
+		   popularity = 0.20
+		}
+		set_cosmetic_tag = FRA_Lagardelle
+		set_party_name = {
+		  ideology = totalist
+		  long_name = FRA_vanguard_party
+		  name = FRA_vanguard_party
+		}
+		remove_ideas_with_trait = head_of_government
+		add_ideas = FRA_Gustaf_Herve_hog_tot
+		remove_ideas_with_trait = foreign_minister
+		add_ideas = FRA_Jean_Fontenoy_for_tot
+		remove_ideas_with_trait = economy_minister
+		add_ideas = FRA_Gabriel_Jeantet_eco_tot
+		remove_ideas_with_trait = security_minister
+		add_ideas = FRA_Marc_Augier_sec_tot
+		complete_national_focus = FRA_woke_gang_win
+	}
+
+	option = {
+		name = COF_Valois.6.c
+		create_country_leader = {
+			name = "马塞尔·布卡德"
+			desc = "POLITICS_MARCEL_BUCARD_DESC"
+			picture = "gfx/leaders/FRA/Portrait_France_Marcel_Bucard_Political.png"
+			expire = "1965.1.1"
+			ideology = tot_francism_subtype
+		}
+		add_stability = -0.1
+		remove_ideas_with_trait = head_of_government
+		add_ideas = FRA_Gustaf_Herve_hog_tot
+		remove_ideas_with_trait = foreign_minister
+		add_ideas = FRA_Jean_Fontenoy_for_tot
+		remove_ideas_with_trait = economy_minister
+		add_ideas = FRA_Gabriel_Jeantet_eco_tot
+		remove_ideas_with_trait = security_minister
+		add_ideas = FRA_Marc_Augier_sec_tot
+		add_popularity = {
+		  ideology = totalist
+		   popularity = 0.20
+		 }
+		set_party_name = {
+		  ideology = totalist
+		  long_name = FRA_ultranatsynd
+		  name = FRA_ultranatsynd
+		}	 
+		country_event = {
+			id = comfrance.928
+			days = 10
+		}
+	}
+
+	option = {
+		name = COF_Valois.6.e
+		clr_country_flag = Georges_Valois_dead
+		create_country_leader = {
+			name = "皮埃尔·德里厄·拉罗谢尔"
+			picture = "gfx/leaders/FRA/Portrait_Pierre_Drieu_La_Rochelle.png"
+			expire = "1.1.1"
+			ideology = sorelianism_subtype
+			traits = {}
+		}
+		set_party_name = { 
+			ideology = totalist
+			long_name = FRA_sorelians_long
+			name = FRA_sorelians
+		}
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.3
+		}
+		set_cosmetic_tag = FRA_Sorelian
+		remove_all_ministers = yes
+		add_ideas = {
+			FRA_Gustaf_Herve_hog_tot
+			FRA_Hubert_Bourgin_for_tot
+			FRA_Marcel_Deat_eco_tot
+			FRA_Claudine_Chomat_sec_tot
+		}
+	}
+
+}
+
 country_event = { #文艺方向问题
-	id =  COF_Valois.4
-	title =  COF_Valois.4.t
-	desc =  COF_Valois.4.d
-	picture = GFX_report_event_CHI_SJ
+	id = COF_Valois.7
+	title = COF_Valois.7.t
+	desc = COF_Valois.7.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	
 	option = {
-		name =  COF_Valois.4.a
+		name = COF_Valois.7.a
 		ai_chance = {
 			base = 40
 		}
@@ -807,7 +1014,7 @@ country_event = { #文艺方向问题
 	}
 
 	option = {
-		name =  COF_Valois.4.b
+		name = COF_Valois.7.b
 		ai_chance = {
 			base = 60
 		}
@@ -817,15 +1024,14 @@ country_event = { #文艺方向问题
 }
 
 country_event = { #泛欧主义问题
-	id =  COF_Valois.5
-	title =  COF_Valois.5.t
-	desc =  COF_Valois.5.d
-	picture = GFX_report_event_CHI_SJ
+	id = COF_Valois.8
+	title = COF_Valois.8.t
+	desc = COF_Valois.8.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	
 	option = {
-		name =  COF_Valois.5.a
+		name = COF_Valois.8.a
 		ai_chance = {
 			base = 1
 		}
@@ -843,7 +1049,7 @@ country_event = { #泛欧主义问题
 	}
 
     option = {
-		name =  COF_Valois.5.b
+		name = COF_Valois.8.b
 		ai_chance = {
 			base = 1
 		}
@@ -968,7 +1174,7 @@ country_event = { #泛欧主义问题
 	}
 
     option = {
-		name =  COF_Valois.5.c
+		name = COF_Valois.8.c
 		ai_chance = {
 			base = 98
 		}

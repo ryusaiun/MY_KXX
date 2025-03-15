@@ -184,8 +184,8 @@ country_event = { #GOEBBELS GREATER GERMANIC NATIONAL WORKERS STATE
 		every_country = {
 			limit = {
 				NOT = {
-					is_ai = yes
-					has_country_flag = KX_superevent_sounds_off
+					has_global_flag = KX_superevent_sounds_off
+					has_global_flag = KX_superevent_total_off
 				}
 			}
 			scoped_sound_effect = "ger_civl_sound"
@@ -211,14 +211,14 @@ country_event = { #GOEBBELS GREATER GERMANIC NATIONAL WORKERS STATE
 		set_global_flag = GRU_Super_Event_Visible
 		set_global_flag = greater_germanic_state_goebbels
 		every_country = {
-			limit = {
-				NOT = {
-					is_ai = yes
-					has_country_flag = KX_superevent_sounds_off
-				}
-			}
-			scoped_sound_effect = "superev_greater_germanic_state_goebbels"
-		}
+        	limit = {
+        		NOT = {
+        			has_global_flag = KX_superevent_sounds_off
+        			has_global_flag = KX_superevent_total_off
+        		}
+        	}
+        	scoped_sound_effect = "superev_greater_germanic_state_goebbels"
+        }
 	}
 }
 
@@ -240,13 +240,13 @@ country_event = {		#GOEBBELS ENDSIEG
 		set_global_flag = GRU_Super_Event_Visible
 		set_global_flag = endsieg_goebbels
 		every_country = {
-			limit = {
-				NOT = {
-					is_ai = yes
-					has_country_flag = KX_superevent_sounds_off
-				}
-			}
-			scoped_sound_effect = "superev_endsieg_goebbels"
-		}
+        	limit = {
+        		NOT = {
+        			has_global_flag = KX_superevent_sounds_off
+        			has_global_flag = KX_superevent_total_off
+        		}
+        	}
+        	scoped_sound_effect = "superev_endsieg_goebbels"
+        }
 	}
 }

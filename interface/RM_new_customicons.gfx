@@ -12139,17 +12139,17 @@ spriteTypes = {
 
 	##Icon For: 
 	SpriteType = { 
-		name = "GFX_GRU_hydroelectric_power-4048"
-		texturefile = "gfx/interface/goals/GFX_GRU_hydroelectric_power-4048.png"
+		name = "GFX_GRU_death_trains"
+		texturefile = "gfx/interface/goals/GRU_death_trains.png"
 	}
 
 	##Icon Shine For: 
 	SpriteType = { 
-		name = "GFX_GRU_hydroelectric_power-4048_shine"
-		texturefile = "gfx/interface/goals/GFX_GRU_hydroelectric_power-4048.png"
+		name = "GFX_GRU_death_trains_shine"
+		texturefile = "gfx/interface/goals/GRU_death_trains.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GFX_GRU_hydroelectric_power-4048.png"
+			animationmaskfile = "gfx/interface/goals/GRU_death_trains.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -12161,7 +12161,7 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 } 
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GFX_GRU_hydroelectric_power-4048.png"
+			animationmaskfile = "gfx/interface/goals/GRU_death_trains.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no

@@ -28940,7 +28940,7 @@ focus = {
 		x = -1
 		y = 1
 		completion_reward = { 
-			country_event = COF_Valois.4
+			country_event = COF_Valois.7
 		}
 	}
 	focus = {
@@ -28957,7 +28957,7 @@ focus = {
 		x = 0
 		y = 2
 		completion_reward = { 
-			country_event = COF_Valois.5
+			country_event = COF_Valois.8
 		}
 	}
 	focus = {

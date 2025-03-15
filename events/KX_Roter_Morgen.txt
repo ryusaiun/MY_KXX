@@ -434,6 +434,11 @@ country_event = { # CONGRESS
 	}
 	picture = GFX_report_event_Congress_pic
 	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			set_country_flag = GRU_CONGRESS_DONE
+		}
+	}
 	
 	option = { # NMDVP Victory
 		name = rotermorgen.70.a
@@ -8790,8 +8795,8 @@ news_event = {
 			every_country = {
 		    	limit = {
 		    		NOT = {
-		    			is_ai = yes
-		    			has_country_flag = KX_superevent_sounds_off
+		    			has_global_flag = KX_superevent_sounds_off
+		    			has_global_flag = KX_superevent_total_off
 		    		}
 		    	}
 		    	scoped_sound_effect = "superev_demilitarization"
@@ -8866,8 +8871,8 @@ news_event = {
 			every_country = {
 		    	limit = {
 		    		NOT = {
-		    			is_ai = yes
-		    			has_country_flag = KX_superevent_sounds_off
+		    			has_global_flag = KX_superevent_sounds_off
+		    			has_global_flag = KX_superevent_total_off
 		    		}
 		    	}
 		    	scoped_sound_effect = "superev_remilitarization"
