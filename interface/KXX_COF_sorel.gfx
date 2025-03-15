@@ -20,6 +20,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/FRA/FRA_sorel_loyal.png"
 	}
 	spriteType = {
+		name = "GFX_idea_FRA_no_democracy_required"
+		texturefile = "gfx/interface/ideas/FRA/FRA_no_democracy_required.png"
+	}
+	spriteType = {
 	name = "GFX_goal_FRA_Prometheus_the_Immortal"
 	texturefile = "gfx/interface/goals/KXX_COF/FRA_Prometheus_the_Immortal.png"
 	}

@@ -29113,12 +29113,32 @@ focus = {
 		prerequisite = {
 			focus = FRA_Between_Paneu_and_Nat
 		}
+		available = {
+			date > 1943.1.1
+		}
 		relative_position_id = FRA_Mouvement_Class_Moyennes
 		x = 3
 		y = 2
 		completion_reward = {
+			custom_effect_tooltip = FRA_Totalism_International_Crazy
 			increase_ruling_party_popularity_by_25 = yes
 			add_country_leader_trait = COF_totalism_international_mentor
+			hidden_effect = {
+				every_country = {
+					limit = {
+						NOT = { 
+							has_government = totalist
+							is_in_faction_with = ROOT
+						}
+					}
+					ROOT = {
+						create_wargoal = {
+							type = annex_everything
+							target = PREV
+						}
+					}
+				}				
+			}
 		}
 	}
 	focus = {

@@ -114,7 +114,7 @@ ideas = {
 		FRA_no_democracy_required_idea = {#诋毁民主制
 			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
 			allowed = { always = yes }
-			picture = NFA_red_resistance
+			picture = FRA_no_democracy_required
 			modifier = {
 				surrender_limit = -0.1
 				war_support_weekly = -0.01
