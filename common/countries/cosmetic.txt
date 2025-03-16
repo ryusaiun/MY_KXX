@@ -6001,7 +6001,10 @@ FRA_Sorel_Capetiens = {
 	color = rgb { 138 28 33 }
 	color_ui = rgb { 138 28 33 }
 }
-
+FRA_Sorel_Capitiens_Frankish = {
+	color = rgb { 138 28 33 }
+	color_ui = rgb { 138 28 33 }
+}
 FRA_Wokerempire = {
 	color = rgb { 0 37 85 }
 	color_ui = rgb { 0 37 85 }

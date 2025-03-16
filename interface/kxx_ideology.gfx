@@ -165,6 +165,10 @@ spriteTypes = {
 		name = "GFX_ideology_imperialcult_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/imperialate_group.png"
 	}
+	spriteType = {
+		name = "GFX_ideology_monarcho_syndicalism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/monarcho_syndicalism_subtype.png"
+	}
 	##毛主义衍生
 	spriteType = {
 		name = "GFX_ideology_linism_subtype"

@@ -249,6 +249,254 @@ ideas = {
 				resistance_target = 0.15
 			}
 		}
+		#瓦卢瓦发疯
+		FRA_revenge_for_the_war_of_hundred = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = generic_britain_on_fire
+			modifier = {
+				invasion_preparation = -0.25
+				amphibious_invasion = 0.25
+			}
+			targeted_modifier = {
+				tag = ENG
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+				breakthrough_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = CAN
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+				breakthrough_bonus_against = 0.1
+			}
+		}
+		FRA_ultracentralization = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = CAN_exile_government
+			modifier = {
+				industrial_capacity_factory = 0.10
+				monthly_population = 0.5
+				no_supply_grace = 24
+				mobilization_speed = 0.1
+			}
+		}
+		FRA_fonctions_tripartites = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = NFA_fraternal_france
+			modifier = {
+				research_speed_factor = 0.15
+				local_resources_factor = 0.15
+				command_power_gain = 0.1
+				max_command_power = 150
+				command_power_gain_mult = 0.1
+				max_command_power_mult = 0.1
+				production_resource_need_factor = -0.1
+				compliance_growth = 0.2	
+				conscription = 0.04
+				conscription_factor = 0.25
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+				supply_consumption_factor = -0.1
+				org_loss_when_moving = -0.15
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				army_speed_factor = 0.1
+				army_attack_speed_factor = 0.25
+				experience_loss_factor = -0.15
+				army_strength_factor = 0.15
+				line_change_production_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				global_building_slots_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				consumer_goods_factor = -0.15
+				consumer_goods_expected_value = -0.15
+			}
+			research_bonus = {
+				armor = 0.1
+				electronics = 0.1
+				construction_tech = 0.1
+				excavation_tech = 0.1
+				industry = 0.1
+				infantry_weapons = 0.1
+				support_tech = 0.1
+				land_doctrine = 0.1
+				motorized_equipment = 0.1		
+				artillery = 0.1
+
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1
+					reliability = 0.1
+					defense = 0.1
+					breakthrough = 0.1
+					hardness = 0.1
+					soft_attack = 0.1
+					hard_attack = 0.1
+					instant = yes
+				}
+				
+				artillery_equipment = {
+					build_cost_ic = -0.1
+					reliability = 0.1
+					defense = 0.1
+					breakthrough = 0.1
+					hardness = 0.1
+					soft_attack = 0.1
+					hard_attack = 0.1
+					instant = yes
+				}
+				armor = {
+					build_cost_ic = -0.1
+					reliability = 0.1
+					defense = 0.1
+					breakthrough = 0.1
+					hardness = 0.1
+					soft_attack = 0.1
+					hard_attack = 0.1
+					instant = yes
+				}
+				
+			}
+		}
+		FRA_oratores1 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = NFA_pope_lefebvre
+			modifier = {
+				research_speed_factor = 0.15
+				local_resources_factor = 0.15
+				command_power_gain = 0.1
+				max_command_power = 150
+				command_power_gain_mult = 0.1
+				max_command_power_mult = 0.1
+				production_resource_need_factor = -0.1
+				compliance_growth = 0.2	
+			}
+			research_bonus = {
+				armor = 0.1
+				electronics = 0.1
+				construction_tech = 0.1
+				excavation_tech = 0.1
+				industry = 0.1
+				infantry_weapons = 0.1
+				support_tech = 0.1
+				land_doctrine = 0.1
+				motorized_equipment = 0.1		
+				artillery = 0.1
+
+			}
+		}
+		FRA_oratores = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = NFA_pope_lefebvre
+			modifier = {
+				research_speed_factor = 0.15
+				
+			}
+			research_bonus = {
+				armor = 0.1
+				electronics = 0.1
+				construction_tech = 0.1
+				excavation_tech = 0.1
+				industry = 0.1
+				infantry_weapons = 0.1
+				support_tech = 0.1
+				land_doctrine = 0.1
+				motorized_equipment = 0.1		
+				artillery = 0.1
+
+			}
+		}
+		FRA_bellatores1 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = red_militias
+			modifier = {
+				conscription = 0.04
+				conscription_factor = 0.25
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+				supply_consumption_factor = -0.1
+				org_loss_when_moving = -0.15
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				army_speed_factor = 0.1
+				army_attack_speed_factor = 0.25
+				experience_loss_factor = -0.15
+				army_strength_factor = 0.15
+			}
+		}
+		FRA_bellatores = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = red_militias
+			modifier = {
+				conscription = 0.04
+				conscription_factor = 0.25
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+				supply_consumption_factor = -0.1
+				org_loss_when_moving = -0.15
+
+			}
+		}
+		FRA_laboratores1 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = farmer_labor_alliance
+			modifier = {
+				line_change_production_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				global_building_slots_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				consumer_goods_factor = -0.15
+				consumer_goods_expected_value = -0.15
+			}
+		}
+		FRA_laboratores = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = farmer_labor_alliance
+			modifier = {
+				line_change_production_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+
+			}
+		}
+		FRA_monarcho_syndicalism = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = generic_syndicalist_monarchy
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.1
+				totalist_drift = 0.05
+				war_support_factor = 0.1
+				war_stability_factor = 0.25
+				
+			}
+		}
 		#暂未启用的战后国策树
 		FRA_1812_never_again = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}

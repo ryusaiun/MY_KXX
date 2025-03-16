@@ -29164,6 +29164,405 @@ focus = {
 			}
 		}
 	}
+	#瓦卢瓦发疯
+	focus = {
+		id = FRA_based_valois_lives
+		icon = GFX_goal_FRA_based_valois_lives
+		cost = 5.00
+		prerequisite = {
+			focus = FRA_valois_is_gone
+		}	
+		x = 0
+		y = 5
+		relative_position_id = FRA_sorelians_rule_supreme
+		ai_will_do = {
+			factor = 100
+		}
+		allow_branch = {
+			has_country_flag = Georges_Valois_crazy
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_establish_the_corporates"
+			add_political_power = 100
+			set_country_leader_ideology = monarcho_syndicalism_subtype
+		}
+	}
+	focus = {
+		id = FRA_monarcho_syndicalism
+		icon = GFX_goal_anarcho_monarchism
+		cost = 3
+		x = -2
+		y = 1
+		relative_position_id = FRA_based_valois_lives
+		available = {
+			has_government = totalist
+		}
+		prerequisite = { focus = FRA_based_valois_lives }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_establish_the_corporates"
+			add_ideas = FRA_monarcho_syndicalism
+		}
+	}
+	focus = {
+		id = FRA_monarchists_in_circle_proudhon
+		icon = GFX_goal_NFA_intellectual_nationalist_rebirth
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = FRA_based_valois_lives
+		available = {
+			has_government = totalist
+		}
+		prerequisite = { focus = FRA_based_valois_lives }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_establish_the_corporates"
+			add_war_support = 0.1
+			add_political_power = 100
+			add_stability = 0.1
+			if = {
+				limit = {
+					NFA = {
+						is_ai = yes
+						has_completed_focus = NFA_victory_for_af
+					}
+					annex_country = { target = NFA transfer_troops = yes }
+
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_distance_from_fake_socialists
+		icon = GFX_goal_NYC_Oppose_Radical_Unions
+		cost = 3
+		x = 2
+		y = 1
+		relative_position_id = FRA_based_valois_lives
+		available = {
+			has_government = totalist
+		}
+		prerequisite = { focus = FRA_based_valois_lives }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_establish_the_corporates"
+			dismantle_faction = yes
+			add_popularity = {
+				ideology = syndicalist
+				popularity = -0.20
+			}
+			add_popularity = {
+				ideology = radical_socialist
+				popularity = -0.20
+			}
+			add_popularity = {
+				ideology = totalist
+				popularity = 0.20
+			}
+		}
+	}
+	focus = {
+		id = FRA_second_valois_dynasity
+		icon = GFX_goal_NFA_restauration
+		cost = 1
+		x = 0
+		y = 2
+		relative_position_id = FRA_based_valois_lives
+		available = {
+			has_government = totalist
+		}
+		prerequisite = { focus = FRA_monarcho_syndicalism }
+		prerequisite = { focus = FRA_monarchists_in_circle_proudhon }
+		prerequisite = { focus = FRA_distance_from_fake_socialists }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			set_cosmetic_tag = FRA_Sorel_Capetiens
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_establish_the_corporates"
+			set_country_leader_portrait = {
+				portrait = "gfx/leaders/FRA/Portrait_France_Georges_Valois_King.png"
+			}
+			add_country_leader_trait = sorelian_monarch
+			add_country_leader_trait = COF_prometheus_the_immortal_traits
+			add_country_leader_trait = COF_leader_of_national_rejuvenation
+			set_country_leader_name = {
+				name = "乔治一世"
+			}
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = FRA_laboratores
+		icon = GFX_goal_MEX_Enshrine_Rights_Workers_Laborers
+		cost = 4
+		x = -2
+		y = 3
+		relative_position_id = FRA_based_valois_lives
+		available = {
+			has_government = totalist
+		}
+		prerequisite = { focus = FRA_second_valois_dynasity }
+		
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_establish_the_corporates"
+			add_ideas = FRA_laboratores
+			add_one_random_civilian_factory = yes
+			add_one_random_military_factory = yes
+			add_one_random_civilian_factory = yes
+			add_one_random_military_factory = yes
+		}
+	}
+	focus = {
+		id = FRA_bellatores
+		icon = GFX_goal_ALB_Liberation_Army
+		cost = 4
+		x = 0
+		y = 3
+		relative_position_id = FRA_based_valois_lives
+		available = {
+			has_government = totalist
+		}
+		prerequisite = { focus = FRA_second_valois_dynasity }
+		
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_establish_the_corporates"
+			add_ideas = FRA_bellatores
+			add_manpower = 10000
+			add_command_power = 50
+			army_experience = 50
+		}
+	}
+	focus = {
+		id = FRA_oratores
+		icon = GFX_goal_NFA_Catholic_War_Priest
+		cost = 4
+		x = 2
+		y = 3
+		relative_position_id = FRA_based_valois_lives
+		available = {
+			has_government = totalist
+		}
+		prerequisite = { focus = FRA_second_valois_dynasity }
+		
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_establish_the_corporates"
+			add_ideas = FRA_oratores
+			add_popularity = {
+				ideology = totalist
+				popularity = 0.20
+			}
+		}
+	}
+	focus = {
+		id = FRA_true_worker_aristocrat
+		icon = GFX_goal_AUS_Arische_Wirtschaftsordnung
+		cost = 4
+		x = -2
+		y = 4
+		relative_position_id = FRA_based_valois_lives
+		available = {
+			has_government = totalist
+		}
+		prerequisite = { focus = FRA_laboratores }
+		
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_establish_the_corporates"
+			swap_ideas = {
+				remove_idea = FRA_laboratores
+				add_idea = FRA_laboratores1
+			}
+			add_one_random_civilian_factory = yes
+			add_one_random_military_factory = yes
+			add_one_random_civilian_factory = yes
+			add_one_random_military_factory = yes
+		}
+	}
+	focus = {
+		id = FRA_proletarian_crsuaders
+		icon = GFX_BBR_crusaders
+		cost = 4
+		x = 0
+		y = 4
+		relative_position_id = FRA_based_valois_lives
+		available = {
+			has_government = totalist
+		}
+		prerequisite = { focus = FRA_bellatores }
+		
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_establish_the_corporates"
+			swap_ideas = {
+				remove_idea = FRA_bellatores
+				add_idea = FRA_bellatores1
+			}
+			add_manpower = 10000
+			add_command_power = 50
+			army_experience = 50
+		}
+	}
+	focus = {
+		id = FRA_ideology_indoctorine
+		icon = GFX_goal_NYC_Five_Boroughs_One_Union
+		cost = 4
+		x = 2
+		y = 4
+		relative_position_id = FRA_based_valois_lives
+		available = {
+			has_government = totalist
+		}
+		prerequisite = { focus = FRA_oratores }
+		
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_establish_the_corporates"
+			swap_ideas = {
+				remove_idea = FRA_oratores
+				add_idea = FRA_oratores1
+			}
+			add_popularity = {
+				ideology = totalist
+				popularity = 0.20
+			}
+		}
+	}
+	focus = {
+		id = FRA_ultracentralization
+		icon = GFX_SOV_Central_Moscow
+		cost = 4
+		x = -1
+		y = 5
+		relative_position_id = FRA_based_valois_lives
+		available = {
+			has_government = totalist
+		}
+		prerequisite = { focus = FRA_true_worker_aristocrat }
+		prerequisite = { focus = FRA_proletarian_crsuaders }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_establish_the_corporates"
+			add_ideas = FRA_ultracentralization
+		}
+	}
+	focus = {
+		id = FRA_destroy_catholic_influence
+		icon = GFX_goal_NYC_Remove_Catholic_NYPD
+		cost = 4
+		x = 1
+		y = 5
+		relative_position_id = FRA_based_valois_lives
+		available = {
+			has_government = totalist
+		}
+		prerequisite = { focus = FRA_ideology_indoctorine }
+		prerequisite = { focus = FRA_proletarian_crsuaders }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_establish_the_corporates"
+			add_popularity = {
+				ideology = social_liberal
+				popularity = -0.20
+			}
+			add_popularity = {
+				ideology = social_conservative
+				popularity = -0.20
+			}
+			add_political_power = 200
+		}
+	}
+	focus = {
+		id = FRA_fonctions_tripartites
+		icon = GFX_goal_FRA_fonctions_tripartites
+		cost = 5
+		x = 0
+		y = 6
+		relative_position_id = FRA_based_valois_lives
+		available = {
+			has_government = totalist
+		}
+		prerequisite = { focus = FRA_ultracentralization }
+		prerequisite = { focus = FRA_destroy_catholic_influence }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_establish_the_corporates"
+			remove_ideas = FRA_laboratores1
+			remove_ideas = FRA_bellatores1
+			remove_ideas = FRA_oratores1
+			add_ideas = FRA_fonctions_tripartites
+		}
+	}
+	focus = {
+		id = FRA_revenge_for_the_war_of_hundred
+		icon = GFX_goal_ENG_vendetta
+		cost = 5.00
+		x = 0
+		y = 7
+		relative_position_id = FRA_based_valois_lives
+		available = {
+			has_government = totalist
+		}
+		prerequisite = { focus = FRA_fonctions_tripartites }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_establish_the_corporates"
+			create_wargoal = {
+				target = ENG
+				type = annex_everything
+			}
+			add_ideas = FRA_revenge_for_the_war_of_hundred
+		}
+	}
+	focus = {
+		id = FRA_restore_glory_of_ancestors
+		icon = GFX_goal_BEL_Demand_Our_Rightful_Land
+		cost = 7
+		x = 0
+		y = 8
+		relative_position_id = FRA_based_valois_lives
+		available = {
+			has_government = totalist
+		}
+		prerequisite = { focus = FRA_revenge_for_the_war_of_hundred }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_establish_the_corporates"
+			country_event = COF_Valois.10
+		}
+	}
 	#第三国际科学特别调查署
 	focus = {
 		id = INT_SSSP_goal

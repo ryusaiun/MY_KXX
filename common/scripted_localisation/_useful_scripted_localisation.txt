@@ -5769,6 +5769,12 @@ defined_text = {
 		}
 		localization_key = radsoc_surrealism_subtype
 	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = monarcho_syndicalism_subtype
+		}
+		localization_key = monarcho_syndicalism_subtype
+	}
 	#柏柏尔主义
 	text = {
 		trigger = {

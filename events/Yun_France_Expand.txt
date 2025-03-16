@@ -727,18 +727,7 @@ country_event = {
 		ai_chance = {
 			base = 0
 		}
-		set_cosmetic_tag = FRA_Sorel_Capetiens
-		set_country_leader_portrait = {
-			portrait = "gfx/leaders/FRA/Portrait_France_Georges_Valois_King.png"
-		}
-		add_country_leader_trait = COF_prometheus_the_immortal_traits
-		add_country_leader_trait = COF_leader_of_national_rejuvenation
-		add_country_leader_trait = COF_totalism_international_mentor
-		set_party_name = {
-			ideology = totalist
-			long_name = FRA_Sorel_Capetiens_Party
-			name = FRA_Sorel_Capetiens_Party
-		}
+		country_event = COF_Valois.9
 	}
 
 }
@@ -1216,6 +1205,227 @@ country_event = { #泛欧主义问题
 		760 = { add_core_of = ROOT }
 	}
 
+}
+
+country_event = {
+	id = COF_Valois.9
+	immediate = {log = "[GetDateText]: [Root.GetName]: event COF_Valois.9"}
+	title = COF_Valois.9.t
+	desc = COF_Valois.9.d
+	is_triggered_only = yes
+	
+	option = {
+		name = COF_Valois.9.a
+		add_stability = -0.2
+		set_country_flag = Georges_Valois_crazy
+		set_party_name = {
+			ideology = totalist
+			long_name = FRA_Sorel_Capetiens_Party
+			name = FRA_Sorel_Capetiens_Party
+		}
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+country_event = {	
+	id = COF_Valois.10 #瓦卢瓦新卡佩
+	immediate = {log = "[GetDateText]: [Root.GetName]: event Frajocbin.war"}
+	title = COF_Valois.10.t
+	desc = COF_Valois.10.d
+	picture = GFX_WLL_Capet
+	is_triggered_only = yes
+	
+
+option = { 
+	name = COF_Valois.10.a
+	
+}	
+option = { 
+	name = COF_Valois.10.b
+	every_state = {
+		limit = { is_core_of = HOL }
+		add_core_of = FRA
+	}
+	create_wargoal = {
+		target = HOL
+		type = annex_everything
+	}
+	every_state = {
+		limit = { is_core_of = FLN }
+		add_core_of = FRA
+	}
+	create_wargoal = {
+		target = FLN
+		type = annex_everything
+	}
+	every_state = {
+		limit = { is_core_of = WLL }
+		add_core_of = FRA
+	}
+	create_wargoal = {
+		target = WLL
+		type = annex_everything
+	}
+	every_state = {
+		limit = { is_core_of = BEL }
+		add_core_of = FRA
+	}
+	create_wargoal = {
+		target = BEL
+		type = annex_everything
+	}
+	every_state = {
+		limit = { is_core_of = SPR }
+		add_core_of = FRA
+	}
+	create_wargoal = {
+		target = SPR
+		type = annex_everything
+	}
+	every_state = {
+		limit = { is_core_of = CAR }
+		add_core_of = FRA
+	}
+	create_wargoal = {
+		target = CAR
+		type = annex_everything
+	}
+	every_state = {
+		limit = { is_core_of = CNT }
+		add_core_of = FRA
+	}
+	create_wargoal = {
+		target = CNT
+		type = annex_everything
+	}
+	every_state = {
+		limit = { is_core_of = POR }
+		add_core_of = FRA
+	}
+	create_wargoal = {
+		target = POR
+		type = annex_everything
+	}
+	every_state = {
+		limit = { is_core_of = SIC }
+		add_core_of = FRA
+	}
+	create_wargoal = {
+		target = SIC
+		type = annex_everything
+	}
+	every_state = {
+		limit = { is_core_of = SRD }
+		add_core_of = FRA
+	}
+	create_wargoal = {
+		target = SRD
+		type = annex_everything
+	}
+	add_state_core = 781
+	add_state_core = 29
+	add_state_core = 42
+
+}	
+}
+country_event = {	
+	id = COF_Valois.11 #瓦卢瓦建立法兰克
+	immediate = {log = "[GetDateText]: [Root.GetName]: event Frajocbin.war"}
+	title = COF_Valois.11.t
+	desc = COF_Valois.11.d
+	picture = GFX_WLL_Charlemagne
+	fire_only_once = yes
+	  trigger = {
+		tag = FRA
+		FRA = {			
+			has_completed_focus = FRA_based_valois_lives
+			controls_state = 59
+		}
+	}
+	
+
+option = { 
+	name = COF_Valois.11.a
+	
+}	
+option = { 
+	name = COF_Valois.11.b
+	set_cosmetic_tag = FRA_Sorel_Capitiens_Frankish
+	every_state = {
+		limit = { is_core_of = SWI }
+		add_core_of = FRA
+	}
+	every_state = {
+		limit = { is_core_of = GER }
+		add_core_of = FRA
+	}
+	every_state = {
+		limit = { is_core_of = AUS }
+		add_core_of = FRA
+	}
+	every_state = {
+		limit = { is_core_of = ITA }
+		add_core_of = FRA
+	}
+	every_state = {
+		limit = { is_core_of = SRI }
+		add_core_of = FRA
+	}
+	every_state = {
+		limit = { is_core_of = PAP }
+		add_core_of = FRA
+	}
+	every_state = {
+		limit = { is_core_of = LOM }
+		add_core_of = FRA
+	}
+	every_state = {
+		limit = { is_core_of = VNC }
+		add_core_of = FRA
+	}
+	every_state = {
+		limit = { is_core_of = CZE }
+		add_core_of = FRA
+	}
+}	
+}
+country_event = {	
+	id = COF_Valois.12 #瓦卢瓦要建立安茹
+	immediate = {log = "[GetDateText]: [Root.GetName]: event Frajocbin.war"}
+	title = COF_Valois.12.t
+	desc = COF_Valois.12.d
+	fire_only_once = yes
+	trigger = {
+		tag = FRA
+		FRA = {		
+			has_completed_focus = FRA_based_valois_lives
+			controls_state = 126
+		}
+	}
+
+option = { 
+	name = COF_Valois.12.a
+	
+}	
+option = { 
+	name = COF_Valois.12.b
+	every_state = {
+		limit = { is_core_of = ENG }
+		add_core_of = FRA
+	}
+	every_state = {
+		limit = { is_core_of = IRE }
+		add_core_of = FRA
+	}
+	every_state = {
+		limit = { is_core_of = SCO }
+		add_core_of = FRA
+	}
+	every_state = {
+		limit = { is_core_of = WAL }
+		add_core_of = FRA
+	}
+}	
 }
 
 country_event = { #索雷尔派的变革之风

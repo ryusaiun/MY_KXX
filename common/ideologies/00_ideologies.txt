@@ -160,6 +160,7 @@ ideologies = {
 			revisionist_sorelianism_subtype = {can_be_randomly_selected = no} #修正索雷尔主义(KXX)
 			millitarist_sorelianism_subtype = {can_be_randomly_selected = no} #军政索雷尔主义(KXX)
 			tot_islamism_subtype = {can_be_randomly_selected = no} #阿尔及利亚拓展
+			monarcho_syndicalism_subtype = {can_be_randomly_selected = no} #君主工团主义(KXX)
 
 		}
 		dynamic_faction_names = {
