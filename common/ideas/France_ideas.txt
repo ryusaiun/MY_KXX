@@ -2662,7 +2662,6 @@ ideas = {
 				war_support_factor = 0.1
 				army_org_factor = 0.05
 				army_morale_factor = 0.05
-
 			}
 		}
 		FRA_Montagne_legacy2 = {
@@ -2691,7 +2690,6 @@ ideas = {
 				conscription_factor = 0.1
 				army_org_factor = 0.05
 				army_morale_factor = 0.05
-
 			}
 		}
 		FRA_new_red_army2 = {
@@ -2710,7 +2708,6 @@ ideas = {
 				planning_speed = 0.1
 				max_planning = 0.1
 				experience_loss_factor = -0.1
-
 			}
 		}
 		FRA_new_red_army3 = {
@@ -2736,7 +2733,6 @@ ideas = {
 				max_command_power = 100
 				command_power_gain_mult = 0.1
 				max_command_power_mult = 0.1
-
 			}
 		}
 		FRA_prodic = {
@@ -2756,7 +2752,6 @@ ideas = {
 				research_speed_factor = 0.1
 				non_core_manpower = 0.5
 				monthly_population = 0.5
-
 			}
 		}
 		FRA_economy_commitee = {
@@ -2785,7 +2780,6 @@ ideas = {
 				army_attack_factor = 0.05
 				army_defence_factor = 0.05
 				conscription = 0.02
-				
 			}
 		}
 		FRA_avantgarde = {
@@ -2798,7 +2792,6 @@ ideas = {
 				stability_factor = 0.1
 				war_support_factor = 0.1
 				research_speed_factor = 0.15
-
 			}
 		}
 		FRA_avantgarde2 = {
@@ -2844,7 +2837,6 @@ ideas = {
 				army_infantry_defence_factor = 0.1
 				breakthrough_factor = 0.1
 				recon_factor = 0.1
-
 			}
 		}
 		FRA_nietzsche = {
@@ -2872,7 +2864,6 @@ ideas = {
 				production_factory_max_efficiency_factor = 0.05
 				production_factory_efficiency_gain_factor = 0.05
 				local_resources_factor = 0.1
-
 			}
 		}
 		FRA_direct = {
@@ -2898,7 +2889,6 @@ ideas = {
 				industrial_capacity_factory = 0.05
 				production_factory_max_efficiency_factor = 0.05
 				production_factory_efficiency_gain_factor = 0.05
-
 			}
 		}
 		FRA_constructive_revolution2 = {
@@ -2918,7 +2908,6 @@ ideas = {
 				production_speed_buildings_factor = 0.05
 				production_speed_arms_factory_factor = 0.1
 				production_speed_industrial_complex_factor = 0.1
-
 			}
 		}
 		FRA_constructive_revolution3 = {
@@ -5978,7 +5967,6 @@ ideas = {
 			modifier = {
 				resistance_decay = 0.1
 				resistance_target = -0.1
-
 			}
 		}
 		FRA_egalite = {
@@ -5988,7 +5976,6 @@ ideas = {
 			modifier = {
 				required_garrison_factor = -0.1
 				no_supply_grace = 24
-
 			}
 		}
 		FRA_fraternite = {
@@ -5999,8 +5986,6 @@ ideas = {
 				breakthrough_factor = 0.05
 				recon_factor = 0.2
 				land_reinforce_rate = 0.1
-
-				
 			}
 		}
 		FRA_krasnacht = {
