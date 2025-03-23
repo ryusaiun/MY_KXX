@@ -255,6 +255,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideologies/subideologies/doroism.png"
 	}
 	spriteType = {
+		name = "GFX_ideology_bangdreamism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/bangdreamism.png"
+	}
+	spriteType = {
 		name = "GFX_ideology_radsoc_byronism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/radsoc_byronism.png"
 	}

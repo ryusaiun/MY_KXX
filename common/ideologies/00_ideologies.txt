@@ -952,6 +952,7 @@ ideologies = {
 			ikemenjoshism_subtype = {can_be_randomly_selected = no} #美青年女子至上（制作组彩蛋）
 			motoori_thought_subtype = {can_be_randomly_selected = no} #本居思想（制作组彩蛋）
 			doroism_subtype = {can_be_randomly_selected = no color = { 254 177 207 }  } #桃乐丝主义（制作组彩蛋）
+			bangdreamism_subtype = {can_be_randomly_selected = no } #户山香澄思想（制作组彩蛋）
 			autdem_falangism = {can_be_randomly_selected = no} #长枪主义（民族与革命）
 			autdem_numitheism_subtype = { can_be_randomly_selected = no }  #努米底亚多神教（阿尔及利亚拓展）
 			autdem_hayekism_subtype = { can_be_randomly_selected = no }  #哈耶克新自由主义（制作组彩蛋）

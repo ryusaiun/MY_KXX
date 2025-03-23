@@ -15,6 +15,11 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	spriteType = {
+		name = "GFX_ideology_bangdreamism_bar"
+		textureFile = "gfx/interface/ideologies/ideology_bars/bangdreamism.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
 		name = "GFX_ideology_human_cannibalism_bar"
 		textureFile = "gfx/interface/ideologies/ideology_bars/human_cannibalism.png"
 		legacy_lazy_load = no

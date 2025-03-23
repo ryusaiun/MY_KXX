@@ -708,3 +708,44 @@ country_event = {
 			}
 	}
 }
+
+country_event = { #KXX的未来
+	id = ChinKX.3
+	title = ChinKX.3.t
+	desc = ChinKX.3.d
+	is_triggered_only = yes
+
+	option = {#交给钾
+		name = ChinKX.3.a
+
+	}
+
+    option = {#开选举
+		name = ChinKX.3.b
+	}
+
+	option = {#独裁
+		name = ChinKX.3.c
+	}
+}
+
+country_event = { #意识形态选择
+	id = ChinKX.4
+	title = ChinKX.4.t
+	desc = ChinKX.4.d
+	is_triggered_only = yes
+
+	option = {#本居思想不动摇
+		name = ChinKX.4.a
+	}
+
+    option = {#Doro袭击KX
+		name = ChinKX.4.b
+		set_country_leader_ideology = doroism_subtype
+	}
+
+	option = {#高举邦多利思想大旗
+		name = ChinKX.4.c
+		set_country_leader_ideology = bangdreamism_subtype
+	}
+}

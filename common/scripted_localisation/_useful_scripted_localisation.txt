@@ -5657,6 +5657,12 @@ defined_text = {
 	}
 	text = {
 		trigger = {
+			has_country_leader_ideology = bangdreamism_subtype
+		}
+		localization_key = bangdreamism_subtype  
+	}
+	text = {
+		trigger = {
 			has_country_leader_ideology = marxism_leninism_banderaism_subtype
 		}
 		localization_key = marxism_leninism_banderaism_subtype  

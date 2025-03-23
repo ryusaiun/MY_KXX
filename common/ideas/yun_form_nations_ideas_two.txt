@@ -191,7 +191,7 @@ ideas = {
             }
         }
 
-        guerilla_warfare_expert = {        
+        guerrilla_warfare_expert = {        
         picture = NFA_lion       
         allowed = {
             always = yes	
@@ -205,7 +205,7 @@ ideas = {
             }
         }
 
-        legacy_of_duel_monarchy = {        
+        legacy_of_dual_monarchy = {        
         picture = AUS_army_reform_near_done       
         allowed = {
             always = yes	
@@ -338,7 +338,7 @@ ideas = {
             }
         }
 
-        revivatize_constantinople = {        
+        revitalize_constantinople = {        
         picture = city_on_a_hill_idea       
         allowed = {
             always = yes	
