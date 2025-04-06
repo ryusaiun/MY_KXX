@@ -887,7 +887,6 @@ country_event = { #葡萄牙-热带命运体建构
 			add_core_of = KOG
 		}
 		POR = {
-			inherit_technology = CAN
 			set_cosmetic_tag = KOG_POR_Tropical
 			country_event = {
 				id = yun_kogexpand.21

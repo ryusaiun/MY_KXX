@@ -325,79 +325,29 @@ focus_tree = {
 		x = -2
 		y = 1
 		cost = 6
-		available = {
-			587 = {
-					is_owned_and_controlled_by  = VST
-				}
-			402 = {
-					is_owned_and_controlled_by  = VST
-				}
-			712 = {
-					is_owned_and_controlled_by  = VST
-				}
-			404 = {
-					is_owned_and_controlled_by  = VST
-				}
-			589 = {
-					is_owned_and_controlled_by  = VST
-				}
-			810 = {
-					is_owned_and_controlled_by  = VST
-				}
-			582 = {
-					is_owned_and_controlled_by  = VST
-			}
-			583 = {
-					is_owned_and_controlled_by  = VST
-				}
-			590 = {
-					is_owned_and_controlled_by  = VST
-				}
-			588 = {
-					is_owned_and_controlled_by  = VST
-				}
-			40 = {
-					is_owned_and_controlled_by  = VST
-				}
-		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TURANIA_INTEGRATE_ALASH"
-			587 = {
-					add_core_of  = VST
+			every_state = {
+				limit = {
+					OR = {
+						state = 1208
+				        state = 1212
+				        state = 402
+				        state = 587
+				        state = 590
+				        state = 583
+				        state = 810
+				        state = 588
+				        state = 40
+				        state = 404
+				        state = 589
+					}
 				}
-			402 = {
-					add_core_of  = VST
+				VST = {
+					add_state_core = PREV
+					transfer_state = PREV
 				}
-			712 = {
-					add_core_of  = VST
-				}
-			404 = {
-					add_core_of  = VST
-				}
-			589 = {
-					add_core_of  = VST
-				}
-			810 = {
-					add_core_of  = VST
-				}
-			582 = {
-					add_core_of  = VST
-				}
-			583 = {
-					add_core_of  = VST
-				}
-			590 = {
-					add_core_of  = VST
-				}
-			588 = {
-					add_core_of  = VST
-				}
-			40 = {
-					add_core_of  = VST
-				}
-			654 = {
-					add_core_of  = VST
-				}
+			}
 		}
 		prerequisite = { focus = TURANIA_HAIL_THE_ONDER  }
 	}
@@ -408,102 +358,40 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 6
-		available = {
-			1217 = {
-				is_owned_and_controlled_by  = VST
-			}
-			1218 = {
-				is_owned_and_controlled_by  = VST
-			}
-			1219 = {
-				is_owned_and_controlled_by  = VST
-			}
-			418 = {
-					is_owned_and_controlled_by  = VST
-				}
-			804 = {
-					is_owned_and_controlled_by  = VST
-				}
-			415 = {
-					is_owned_and_controlled_by  = VST
-				}
-			267 = {
-					is_owned_and_controlled_by  = VST
-				}
-			445 = {
-					is_owned_and_controlled_by  = VST
-				}
-			442 = {
-					is_owned_and_controlled_by  = VST
-				}
-			891 = {
-					is_owned_and_controlled_by  = VST
-				}
-			441 = {
-					is_owned_and_controlled_by  = VST
-				}
-		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TURANIA_TAKE_MUGHAL_LAND"
-			1217 = {
-				add_core_of  = VST
-			}
-			1218 = {
-				add_core_of  = VST
-			}
-			1219 = {
-				add_core_of  = VST
-			}
-
-			619	 = {
-				add_core_of  = VST
-			}
-			1085 = {
-				add_core_of  = VST
-			}
-			617 = {
-				add_core_of  = VST
-			}
-			618 = {
-				add_core_of  = VST
-			}
-			1083 = {
-				add_core_of  = VST
-			}
-			287 = {
-				add_core_of  = VST
-			}
-			897 = {
-				add_core_of  = VST
-			}
-
-			418 = {
-				add_core_of  = VST
-			}
-			418 = {
-					add_core_of  = VST
+			declare_war_on = { type = annex_everything	target = AFG }
+			declare_war_on = { type = annex_everything	target = SIK }
+			declare_war_on = { type = annex_everything	target = TAN }
+			declare_war_on = { type = annex_everything	target = MON }
+			every_state = {
+				limit = {
+					OR = {
+						state = 415
+				        state = 1218
+				        state = 1219
+				        state = 445
+				        state = 442
+				        state = 267
+				        state = 1217
+				        state = 891
+				        state = 441
+				        state = 619
+				        state = 897
+						state = 287
+				        state = 1085
+				        state = 617
+				        state = 618
+				        state = 1083
+						state = 1084
+				        state = 330
+					}
 				}
-			804 = {
-					add_core_of  = VST
+				VST = {
+					add_state_core = PREV
+					transfer_state = PREV
 				}
-			415 = {
-					add_core_of  = VST
-				}
-			267 = {
-					add_core_of  = VST
-				}
-			445 = {
-					add_core_of  = VST
-				}
-			442 = {
-					add_core_of  = VST
-				}
-			891 = {
-					add_core_of  = VST
-				}
-			441 = {
-					add_core_of  = VST
-				}
+			}
 		}
 		prerequisite = { focus = TURANIA_HAIL_THE_ONDER  }
 	}
@@ -514,136 +402,38 @@ focus_tree = {
 		x = 2
 		y = 1
 		cost = 6
-		available = {
-			1276 = {
-				is_owned_and_controlled_by  = VST
-			}
-			405 = {
-				is_owned_and_controlled_by  = VST
-			}
-			1275 = {
-				is_owned_and_controlled_by  = VST
-			}
-			1277 = {
-				is_owned_and_controlled_by  = VST
-			}
-			1209 = {
-				is_owned_and_controlled_by  = VST
-			}
-			1210 = {
-				is_owned_and_controlled_by  = VST
-			}
-			1211 = {
-				is_owned_and_controlled_by  = VST
-			}
-			1278 = {
-				is_owned_and_controlled_by  = VST
-			}
-			1279 = {
-				is_owned_and_controlled_by  = VST
-			}
-			1196 = {
-				is_owned_and_controlled_by  = VST
-			}
-			584 = {
-					is_owned_and_controlled_by  = VST
-				}
-			1281 = {
-					is_owned_and_controlled_by  = VST
-				}
-			861 = {
-					is_owned_and_controlled_by  = VST
-				}
-			585 = {
-					is_owned_and_controlled_by  = VST
-				}
-			405 = {
-					is_owned_and_controlled_by  = VST
-				}
-			407 = {
-					is_owned_and_controlled_by  = VST
-				}
-			1042 = {
-					is_owned_and_controlled_by  = VST
-				}
-			732 = {
-					is_owned_and_controlled_by  = VST
-				}
-			586 = {
-					is_owned_and_controlled_by  = VST
-				}
-			1203 = {
-					is_owned_and_controlled_by  = VST
-				}
-			1212 = {
-					is_owned_and_controlled_by  = VST
-				}
-		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TURANIA_INTEGRATE_TURKMENS"
-			1276 = {
-				add_core_of  = VST
-			}
-			405 = {
-				add_core_of  = VST
-			}
-			1275 = {
-				add_core_of  = VST
-			}
-			1277 = {
-				add_core_of  = VST
-			}
-			1209 = {
-				add_core_of  = VST
-			}
-			1210 = {
-				add_core_of  = VST
-			}
-			1211 = {
-				add_core_of  = VST
-			}
-			1278 = {
-				add_core_of  = VST
-			}
-			1279 = {
-				add_core_of  = VST
-			}
-			1196 = {
-				add_core_of  = VST
-			}
-			584 = {
-				add_core_of  = VST
-			}
-			1281 = {
-					add_core_of  = VST
+			every_state = {
+				limit = {
+					OR = {
+						state = 584
+				        state = 1275
+				        state = 1276
+				        state = 1281
+				        state = 861
+				        state = 1278
+				        state = 585
+				        state = 1203
+				        state = 712
+				        state = 405
+				        state = 1209
+						state = 407
+				        state = 1196
+				        state = 586
+				        state = 1042
+				        state = 1279
+						state = 1277
+				        state = 1210
+						state = 732
+						state = 1211
+					}
 				}
-			861 = {
-					add_core_of  = VST
+				VST = {
+					add_state_core = PREV
+					transfer_state = PREV
 				}
-			585 = {
-					add_core_of  = VST
-				}
-			405 = {
-					add_core_of  = VST
-				}
-			407 = {
-					add_core_of  = VST
-				}
-			1042 = {
-					add_core_of  = VST
-				}
-			732 = {
-					add_core_of  = VST
-				}
-			586 = {
-					add_core_of  = VST
-				}
-			1203 = {
-					add_core_of  = VST
-				}
-			1212 = {
-					add_core_of  = VST
-				}
+			}
 		}
 		prerequisite = { focus = TURANIA_HAIL_THE_ONDER  }
 	}

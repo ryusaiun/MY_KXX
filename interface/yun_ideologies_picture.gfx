@@ -40,6 +40,11 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	spriteType = {
+		name = "GFX_ideology_neo_socialism_bar"
+		textureFile = "gfx/interface/ideologies/ideology_bars/neo_socialism.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
 		name = "GFX_ideology_otokonomusumeism_bar"
 		textureFile = "gfx/interface/ideologies/ideology_bars/otokonomusumeism.png"
 		legacy_lazy_load = no
@@ -47,6 +52,21 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_ideology_marxism_leninism_banderaism_bar"
 		textureFile = "gfx/interface/ideologies/ideology_bars/marxism_leninism_banderaism.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_ideology_national_mysticism_bar"
+		textureFile = "gfx/interface/ideologies/ideology_bars/national_mysticism.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_ideology_ikemenjoshism_bar"
+		textureFile = "gfx/interface/ideologies/ideology_bars/ikemenjoshism.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_ideology_saint_simonianism_bar"
+		textureFile = "gfx/interface/ideologies/ideology_bars/saint_simonianism.png"
 		legacy_lazy_load = no
 	}
 }

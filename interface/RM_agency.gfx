@@ -1,7 +1,7 @@
 spriteTypes = {
 	spriteType = {
-		name = "GFX_intelligence_agency_logo_GRU_STASI"
-		texturefile = "gfx/interface/operatives/agencies/agency_logo_KX_RM_Stasi.png"
+		name = "GFX_intelligence_agency_logo_Stasi"
+		texturefile = "gfx/interface/operatives/agencies/agency_logo_Stasi.png"
 		noOfFrames = 2
 	}
 	spriteType = {

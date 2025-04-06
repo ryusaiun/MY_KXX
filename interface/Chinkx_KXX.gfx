@@ -1,4 +1,12 @@
 spriteTypes = {	
+	frameAnimatedSpriteType = {
+        name = "GFX_flower_trainer"
+        texturefile = "gfx/leaders/funny/flower_trainer.png"
+        noOfFrames = 10
+		animation_rate_fps = 10
+		looping = yes
+		play_on_show = yes
+    }
 	SpriteType = {
 	name = "GFX_idea_famine_kxx_icon"
 	texturefile = "gfx/interface/ideas/KXX/famine_kxx_icon.png"			

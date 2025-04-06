@@ -4771,7 +4771,7 @@ ALT = {
 	color = rgb { 126 136 125 }
 	color_ui = rgb { 126 136 125 }
 }
-TMN = {
+WSB = {
 	color = rgb { 123 0 28 }
 	color_ui = rgb { 163 17 31 }
 }

@@ -1,5 +1,5 @@
 intelligence_agency = {
-	picture = GFX_intelligence_agency_logo_GRU_STASI
+	picture = GFX_intelligence_agency_logo_Stasi
 	names = { GRU_agency_stasi }
 
 	default = {

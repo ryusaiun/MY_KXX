@@ -257,7 +257,7 @@ create_country_leader = {
 	desc = ""
 	picture = "gfx/leaders/IMJ/Kamen_Rider_Naki.png"
 	expire = "1965.1.1"
-	ideology = soclib_radical_progressivism_subtype
+	ideology = soclib_ikemenjoshism_subtype
 }
 create_country_leader = {
 	name = "Tianyun Haiqing"

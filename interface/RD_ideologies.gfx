@@ -23,6 +23,11 @@ spriteTypes = {
 	name = "GFX_ideology_lu_xun_thought_subtype"
 	texturefile = "gfx/interface/ideologies/subideologies/lu_xun_thought_group.png"
 	}
+
+	SpriteType = {
+	name = "GFX_ideology_radsoc_lu_xun_thought_subtype"
+	texturefile = "gfx/interface/ideologies/subideologies/radsoc_lu_xun_thought_group.png"
+	}
 	
 	SpriteType = {
 	name = "GFX_ideology_radsoc_social_buddhism_subtype"
@@ -59,11 +64,6 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-	name = "GFX_ideology_natpop_juche_subtype"
-	texturefile = "gfx/interface/ideologies/subideologies/natpop_juche.png"
-	}
-	
-	SpriteType = {
 	name = "GFX_ideology_authdem_anarchism_subtype"
 	texturefile = "gfx/interface/ideologies/subideologies/anarcho_individualism.png"
 	}
@@ -72,22 +72,10 @@ spriteTypes = {
 	name = "GFX_ideology_anarcho_buddhism_subtype"
 	texturefile = "gfx/interface/ideologies/subideologies/anarcho_buddhism.png"
 	}
-	SpriteType = {
-	name = "GFX_ideology_pataut_popular_patriotism_subtype"
-	texturefile = "gfx/interface/ideologies/subideologies/natpop_popular_patriotism_group.png"
-	}
 	
 	SpriteType = {
 	name = "GFX_ideology_patau_chiangism_subtype"
 	texturefile = "gfx/interface/ideologies/subideologies/patau_chiangism.png"
-	}
-	SpriteType = {
-	name = "GFX_ideology_tot_nihon_socialism_subtype"
-	texturefile = "gfx/interface/ideologies/subideologies/tot_nihon_socialism_2.png"
-	}
-	SpriteType = {
-	name = "GFX_ideology_natpop_nihon_socialism_subtype"
-	texturefile = "gfx/interface/ideologies/subideologies/natpop_nihon_socialism_2.png"
 	}
 	SpriteType = {
 	name = "GFX_ideology_tot_mayakovskyism_subtype"
@@ -154,9 +142,5 @@ spriteTypes = {
 	name = "GFX_ideology_natpop_datong_shu_subtype"
 	texturefile = "gfx/interface/ideologies/subideologies/natpop_datong_shu_thought.png"
 	}
-	
-	SpriteType = {
-	name = "GFX_ideology_tot_ikedaism_subtype"
-	texturefile = "gfx/interface/ideologies/subideologies/tot_ikedaism.png"
-	}
+
 }

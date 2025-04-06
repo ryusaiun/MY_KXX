@@ -8284,7 +8284,7 @@ GRU_volkssturm_decisions = {
 		
         is_good = no
         selectable_mission = no
-        days_mission_timeout = 28
+        days_mission_timeout = 32
 
 		cancel_trigger = {
 		    check_variable = { GRU_Overall_Goebbels_Support > 0.94 }
@@ -20054,6 +20054,7 @@ GRU_new_order_decisions = {
 				state = 26
 				state = 19
 				state = 984
+				state = 1334
 				state = 817
 				state = 22
 				state = 31
@@ -20104,6 +20105,7 @@ GRU_new_order_decisions = {
 					        state = 26
 					        state = 19
 					        state = 984
+							state = 1334
 					        state = 817
 					        state = 22
 					        state = 31
@@ -20132,6 +20134,7 @@ GRU_new_order_decisions = {
 					        state = 26
 					        state = 19
 					        state = 984
+							state = 1334
 					        state = 817
 					        state = 22
 					        state = 31
@@ -20201,7 +20204,6 @@ GRU_new_order_decisions = {
 		ai_will_do = { factor = 2000 }
 		highlight_states = {
 		    highlight_state_targets = {
-				state = 984
 				state = 817
 				state = 172
 				state = 940
@@ -20278,7 +20280,6 @@ GRU_new_order_decisions = {
 				every_owned_state = {
 			    	limit = {
 			    		OR = {
-			    	        state = 984
 			                state = 817
 			                state = 172
 			                state = 940
@@ -20333,7 +20334,6 @@ GRU_new_order_decisions = {
 			    every_state = {
 			    	limit = {
 			    		OR = {
-			    	        state = 984
 			    	        state = 817
 			    	        state = 172
 			    	        state = 940
@@ -20434,7 +20434,6 @@ GRU_new_order_decisions = {
 		ai_will_do = { factor = 2000 }
 		highlight_states = {
 		    highlight_state_targets = {
-				state = 984
 			    state = 817
 			    state = 172
 			    state = 940
@@ -20471,19 +20470,6 @@ GRU_new_order_decisions = {
 		available = {
 			tag = GRU 
 			AND = {
-				OR = {
-					GRU = {
-						controls_state = 984
-					}
-					any_other_country = {
-						is_subject_of = GRU
-						controls_state = 984
-					}
-					any_other_country = {
-						is_in_faction_with = GRU
-						controls_state = 984
-					}
-				}
 				OR = {
 					GRU = {
 						controls_state = 817
@@ -20829,7 +20815,6 @@ GRU_new_order_decisions = {
 				every_state = {
 			    	limit = {
 			    		OR = {
-				            state = 984
 			                state = 817
 			                state = 172
 			                state = 940
@@ -28753,6 +28738,7 @@ GRU_beyond_lebensraum_decisions = {
 					state = 575
 					state = 1293
 					state = 1292
+					state = 582
 		    	}
 		    }
 			fire_only_once = yes
@@ -28763,6 +28749,15 @@ GRU_beyond_lebensraum_decisions = {
 				has_country_flag = VSJ_established
 				tag = GRU 
 				AND = {
+					OR = {
+						GRU = {
+							controls_state = 582
+						}
+						any_other_country = {
+							is_subject_of = GRU
+							controls_state = 582
+						}
+					}
 					OR = {
 						GRU = {
 							controls_state = 575
@@ -28927,6 +28922,7 @@ GRU_beyond_lebensraum_decisions = {
 		
 			complete_effect = {
 				VSJ = {
+					transfer_state = 582
 					transfer_state = 575
 					transfer_state = 1293
 					transfer_state = 403
@@ -29223,17 +29219,15 @@ GRU_beyond_lebensraum_decisions = {
 		}
 		highlight_states = {
 		    highlight_state_targets = {
-		    	state = 587
-				state = 583
-				state = 404
-				state = 590
-				state = 588
-				state = 810
-				state = 40
-				state = 589
-				state = 582
-				state = 654
+		    	state = 1212
+				state = 1208
 				state = 402
+				state = 583
+				state = 590
+				state = 810
+				state = 588
+				state = 404
+				state = 40
 		    }
 		}
 		fire_only_once = yes
@@ -29246,11 +29240,29 @@ GRU_beyond_lebensraum_decisions = {
 				AND = {	
 						OR = {
 							GRU = {
-								controls_state = 587
+								controls_state = 1212
 							}
 							any_other_country = {
 								is_subject_of = GRU
-								controls_state = 587
+								controls_state = 1212
+							}
+						}
+						OR = {
+							GRU = {
+								controls_state = 1208
+							}
+							any_other_country = {
+								is_subject_of = GRU
+								controls_state = 1208
+							}
+						}
+						OR = {
+							GRU = {
+								controls_state = 402
+							}
+							any_other_country = {
+								is_subject_of = GRU
+								controls_state = 402
 							}
 						}
 						OR = {
@@ -29264,29 +29276,11 @@ GRU_beyond_lebensraum_decisions = {
 						}
 						OR = {
 							GRU = {
-								controls_state = 404
-							}
-							any_other_country = {
-								is_subject_of = GRU
-								controls_state = 404
-							}
-						}
-						OR = {
-							GRU = {
 								controls_state = 590
 							}
 							any_other_country = {
 								is_subject_of = GRU
 								controls_state = 590
-							}
-						}
-						OR = {
-							GRU = {
-								controls_state = 588
-							}
-							any_other_country = {
-								is_subject_of = GRU
-								controls_state = 588
 							}
 						}
 						OR = {
@@ -29300,38 +29294,29 @@ GRU_beyond_lebensraum_decisions = {
 						}
 						OR = {
 							GRU = {
+								controls_state = 588
+							}
+							any_other_country = {
+								is_subject_of = GRU
+								controls_state = 588
+							}
+						}
+						OR = {
+							GRU = {
+								controls_state = 404
+							}
+							any_other_country = {
+								is_subject_of = GRU
+								controls_state = 404
+							}
+						}
+						OR = {
+							GRU = {
 								controls_state = 40
 							}
 							any_other_country = {
 								is_subject_of = GRU
 								controls_state = 40
-							}
-						}
-						OR = {
-							GRU = {
-								controls_state = 589
-							}
-							any_other_country = {
-								is_subject_of = GRU
-								controls_state = 589
-							}
-						}
-						OR = {
-							GRU = {
-								controls_state = 582
-							}
-							any_other_country = {
-								is_subject_of = GRU
-								controls_state = 582
-							}
-						}
-						OR = {
-							GRU = {
-								controls_state = 654 
-							}
-							any_other_country = {
-								is_subject_of = GRU
-								controls_state = 654 
 							}
 						}
 				}
@@ -29345,16 +29330,15 @@ GRU_beyond_lebensraum_decisions = {
 		
 			complete_effect = {
 					VST = {
-								transfer_state = 587
+								transfer_state = 1212
+								transfer_state = 1208
+								transfer_state = 402
 								transfer_state = 583
-								transfer_state = 404
 								transfer_state = 590
-								transfer_state = 588
 								transfer_state = 810
+								transfer_state = 588
+								transfer_state = 404
 								transfer_state = 40
-								transfer_state = 589
-								transfer_state = 582
-								transfer_state = 654
 					}
 					hidden_effect = {
 				VST = {	country_event = rotermorgenmisc.951 }
@@ -29368,27 +29352,28 @@ GRU_beyond_lebensraum_decisions = {
 		}
 		highlight_states = {
 		    highlight_state_targets = {
-		    	state = 584
-				state = 861
-				state = 585
-				state = 405
-				state = 732
-				state = 1042
-				state = 407
-				state = 586
-				state = 1212
-				state = 1209
-				state = 1211
-				state = 1210 
-				state = 1196
+		    	state = 589
 				state = 1203
-				state = 1275
-				state = 1276
-				state = 1277
-				state = 1278
+				state = 586
+				state = 1196
 				state = 1279
-				state = 1281
 				state = 712
+				state = 407
+				state = 1042
+				state = 1210
+				state = 1209
+				state = 585
+				state = 1278
+				state = 1211
+				state = 732
+				state = 1277
+				state = 405
+				state = 587
+				state = 861
+				state = 1276
+				state = 1281
+				state = 584
+				state = 1275
 		    }
 		}
 		fire_only_once = yes
@@ -29401,92 +29386,20 @@ GRU_beyond_lebensraum_decisions = {
 			AND = {	
 				OR = {
 					GRU = {
-						controls_state = 584
+						controls_state = 589
 					}
 					any_other_country = {
 						is_subject_of = GRU
-						controls_state = 584
+						controls_state = 589
 					}
 				}
 				OR = {
 					GRU = {
-						controls_state = 861
+						controls_state = 1203
 					}
 					any_other_country = {
 						is_subject_of = GRU
-						controls_state = 861
-					}
-				}
-				OR = {
-					GRU = {
-						controls_state = 585
-					}
-					any_other_country = {
-						is_subject_of = GRU
-						controls_state = 585
-					}
-				}
-				OR = {
-					GRU = {
-						controls_state = 405
-					}
-					any_other_country = {
-						is_subject_of = GRU
-						controls_state = 405
-					}
-				}
-				OR = {
-					GRU = {
-						controls_state = 732
-					}
-					any_other_country = {
-						is_subject_of = GRU
-						controls_state = 732
-					}
-				}
-				OR = {
-					GRU = {
-						controls_state = 1212
-					}
-					any_other_country = {
-						is_subject_of = GRU
-						controls_state = 1212
-					}
-				}
-				OR = {
-					GRU = {
-						controls_state = 1209
-					}
-					any_other_country = {
-						is_subject_of = GRU
-						controls_state = 1209
-					}
-				}
-				OR = {
-					GRU = {
-						controls_state = 1211
-					}
-					any_other_country = {
-						is_subject_of = GRU
-						controls_state = 1211
-					}
-				}
-				OR = {
-					GRU = {
-						controls_state = 1042
-					}
-					any_other_country = {
-						is_subject_of = GRU
-						controls_state = 1042
-					}
-				}
-				OR = {
-					GRU = {
-						controls_state = 407
-					}
-					any_other_country = {
-						is_subject_of = GRU
-						controls_state = 407
+						controls_state = 1203
 					}
 				}
 				OR = {
@@ -29500,47 +29413,11 @@ GRU_beyond_lebensraum_decisions = {
 				}
 				OR = {
 					GRU = {
-						controls_state = 1210 
+						controls_state = 1196
 					}
 					any_other_country = {
 						is_subject_of = GRU
-						controls_state = 1210 
-					}
-				}
-				OR = {
-					GRU = {
-						controls_state = 1203 
-					}
-					any_other_country = {
-						is_subject_of = GRU
-						controls_state = 1203 
-					}
-				}
-				OR = {
-					GRU = {
-						controls_state = 1276 
-					}
-					any_other_country = {
-						is_subject_of = GRU
-						controls_state = 1276 
-					}
-				}
-				OR = {
-					GRU = {
-						controls_state = 1277 
-					}
-					any_other_country = {
-						is_subject_of = GRU
-						controls_state = 1277 
-					}
-				}
-				OR = {
-					GRU = {
-						controls_state = 1278
-					}
-					any_other_country = {
-						is_subject_of = GRU
-						controls_state = 1278
+						controls_state = 1196
 					}
 				}
 				OR = {
@@ -29554,11 +29431,128 @@ GRU_beyond_lebensraum_decisions = {
 				}
 				OR = {
 					GRU = {
-						controls_state = 1196
+						controls_state = 712
 					}
 					any_other_country = {
 						is_subject_of = GRU
-						controls_state = 1196
+						controls_state = 712
+					}
+				}
+				OR = {
+					GRU = {
+						controls_state = 407
+					}
+					any_other_country = {
+						is_subject_of = GRU
+						controls_state = 407
+					}
+				}
+				OR = {
+					GRU = {
+						controls_state = 1042
+					}
+					any_other_country = {
+						is_subject_of = GRU
+						controls_state = 1042
+					}
+				}
+				OR = {
+					GRU = {
+						controls_state = 1210
+					}
+					any_other_country = {
+						is_subject_of = GRU
+						controls_state = 1210
+					}
+				}
+				OR = {
+					GRU = {
+						controls_state = 1209
+					}
+					any_other_country = {
+						is_subject_of = GRU
+						controls_state = 1209
+					}
+				}
+				OR = {
+					GRU = {
+						controls_state = 585
+					}
+					any_other_country = {
+						is_subject_of = GRU
+						controls_state = 585
+					}
+				}
+				OR = {
+					GRU = {
+						controls_state = 1278 
+					}
+					any_other_country = {
+						is_subject_of = GRU
+						controls_state = 1278 
+					}
+				}
+				OR = {
+					GRU = {
+						controls_state = 1211 
+					}
+					any_other_country = {
+						is_subject_of = GRU
+						controls_state = 1211 
+					}
+				}
+				OR = {
+					GRU = {
+						controls_state = 732 
+					}
+					any_other_country = {
+						is_subject_of = GRU
+						controls_state = 732 
+					}
+				}
+				OR = {
+					GRU = {
+						controls_state = 1277 
+					}
+					any_other_country = {
+						is_subject_of = GRU
+						controls_state = 1277 
+					}
+				}
+				OR = {
+					GRU = {
+						controls_state = 405
+					}
+					any_other_country = {
+						is_subject_of = GRU
+						controls_state = 405
+					}
+				}
+				OR = {
+					GRU = {
+						controls_state = 587
+					}
+					any_other_country = {
+						is_subject_of = GRU
+						controls_state = 587
+					}
+				}
+				OR = {
+					GRU = {
+						controls_state = 861
+					}
+					any_other_country = {
+						is_subject_of = GRU
+						controls_state = 861
+					}
+				}
+				OR = {
+					GRU = {
+						controls_state = 1276
+					}
+					any_other_country = {
+						is_subject_of = GRU
+						controls_state = 1276
 					}
 				}
 				OR = {
@@ -29572,11 +29566,20 @@ GRU_beyond_lebensraum_decisions = {
 				}
 				OR = {
 					GRU = {
-						controls_state = 712
+						controls_state = 584
 					}
 					any_other_country = {
 						is_subject_of = GRU
-						controls_state = 712
+						controls_state = 584
+					}
+				}
+				OR = {
+					GRU = {
+						controls_state = 1275
+					}
+					any_other_country = {
+						is_subject_of = GRU
+						controls_state = 1275
 					}
 				}
 			}
@@ -29590,26 +29593,28 @@ GRU_beyond_lebensraum_decisions = {
 	
 		complete_effect = {
 			VST = {
-				transfer_state = 584
-				transfer_state = 861
-				transfer_state = 585
-				transfer_state = 405
-				transfer_state = 732
-				transfer_state = 1042
-				transfer_state = 407
-				transfer_state = 586
-				transfer_state = 1212
-				transfer_state = 1209
-				transfer_state = 1211
-				transfer_state = 1210 
-				transfer_state = 1196
+				transfer_state = 589
 				transfer_state = 1203
-				transfer_state = 1276
-				transfer_state = 1277
-				transfer_state = 1278
+				transfer_state = 586
+				transfer_state = 1196
 				transfer_state = 1279
-				transfer_state = 1281
 				transfer_state = 712
+				transfer_state = 407
+				transfer_state = 1042
+				transfer_state = 1210
+				transfer_state = 1209
+				transfer_state = 585
+				transfer_state = 1278 
+				transfer_state = 1211
+				transfer_state = 732
+				transfer_state = 1277
+				transfer_state = 405
+				transfer_state = 587
+				transfer_state = 861
+				transfer_state = 1276
+				transfer_state = 1281
+				transfer_state = 584
+				transfer_state = 1275
 			}
 			hidden_effect = { VST = { country_event = rotermorgenmisc.951 } }
 		}

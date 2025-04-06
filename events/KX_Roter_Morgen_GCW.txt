@@ -1862,37 +1862,6 @@ country_event = {
 		GRU = {
 		    change_tag_from = GER
 		}
-		if = {
-			limit = {
-			  GER = {
-					is_ai = no
-				}
-			}
-			GER = {
-			  add_timed_idea = {
-				  idea = gru_diguodehuimie
-				  days = 210
-			  }
-			}
-		  GRU = {
-			  add_timed_idea = {
-				  idea = gru_geming
-				  days = 210
-			  }
-			  add_timed_idea = {
-				  idea = gru_zhanshipeijizhi
-				  days = 210
-			  }
-			  add_timed_idea = {
-				  idea = gru_pingfan
-				  days = 90
-			  }
-			  add_timed_idea = {
-				  idea = gru_beishuiyizhan
-				  days = 90
-			  }
-			}
-		}		
 		hidden_effect = {
 			GRU = {
 				country_event = rmfix.1

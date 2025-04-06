@@ -10,11 +10,11 @@ country_event = {
 	
 	option = {
 		name = test_picker.1.a
-		set_country_leader_ideology = dainippon_communism_subtype
+		set_country_leader_ideology = radsoc_saint_simonianism_subtype
 	}
 	option = {
 		name = test_picker.1.b
-		set_country_leader_ideology = okawa_shumei_thought_subtype
+		set_country_leader_ideology = ikemenjoshism_subtype
 	}
 	option = {
 		name = test_picker.1.c
@@ -30,7 +30,13 @@ country_event = {
 	}
 	option = {
 		name = test_picker.1.g
-		set_country_leader_ideology = rightkxxism_subtype
+		create_country_leader = {
+			name = "西野T"
+			picture = "GFX_flower_trainer"
+			expire = "1.1.1"
+			traits = {  }
+			ideology = doroism_subtype
+		}
 	}
 	option = {
 		name = test_picker.1.h

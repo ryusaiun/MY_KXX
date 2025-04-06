@@ -1,0 +1,39 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			if = {
+				limit = {
+				    has_game_rule = {
+						rule = GER_REV
+						option = GER_REV_MAYBE
+					}
+				}
+				set_global_flag = KX_GER_REV_MAYBE
+			}
+			if = {
+				limit = {
+				    has_game_rule = {
+						rule = GER_REV
+						option = GER_REV_ALWAYS
+					}
+				}
+				set_global_flag = KX_GER_REV_ALWAYS
+			}
+		}
+	}
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					tag = GRU
+		            has_war_with = GER
+					GER = { surrender_progress > 0.70 }
+		            GRU = { has_country_leader = { character = GRU_ZKDR ruling_only = yes } }
+		            GRU = { controls_province = 6521 }
+				}
+				country_event = rotermorgen.4004
+				country_event = { id = rotermorgen.4005 days = 1 }
+			}
+		}
+	}
+}

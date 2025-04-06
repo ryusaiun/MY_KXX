@@ -169,6 +169,58 @@ spriteTypes = {
 		name = "GFX_ideology_monarcho_syndicalism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/monarcho_syndicalism_subtype.png"
 	}
+	spriteType = {
+		name = "GFX_ideology_national_mysticism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/national_mysticism_group.png"
+	}	
+	spriteType = {
+		name = "GFX_ideology_pataut_national_mysticism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/pataut_national_mysticism_group.png"
+	}	
+	spriteType = {
+		name = "GFX_ideology_authdem_national_mysticism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/authdem_national_mysticism_group.png"
+	}	
+	spriteType = {
+		name = "GFX_ideology_soccon_national_mysticism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/soccon_national_mysticism_group.png"
+	}	
+	spriteType = {
+		name = "GFX_ideology_marlib_national_mysticism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/marlib_national_mysticism_group.png"
+	}	
+	spriteType = {
+		name = "GFX_ideology_soclib_national_mysticism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/soclib_national_mysticism_group.png"
+	}	
+	spriteType = {
+		name = "GFX_ideology_socdem_national_mysticism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/socdem_national_mysticism_group.png"
+	}	
+	spriteType = {
+		name = "GFX_ideology_radsoc_national_mysticism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/radsoc_national_mysticism_group.png"
+	}	
+	spriteType = {
+		name = "GFX_ideology_syn_national_mysticism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/radsoc_national_mysticism_group.png"
+	}	
+	spriteType = {
+		name = "GFX_ideology_tot_national_mysticism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/tot_national_mysticism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_radsoc_saint_simonianism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/saint_simonianism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_socdem_revisionist_sorelianism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/socdem_revisionist_sorelianism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_radsoc_neo_socialism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/radsoc_neo_socialism_group.png"
+	}	
 	##毛主义衍生
 	spriteType = {
 		name = "GFX_ideology_linism_subtype"
@@ -245,6 +297,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_ideology_ikemenjoshism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/ikemenjoshism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_soclib_ikemenjoshism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/soclib_ikemenjoshism.png"
 	}
 	spriteType = {
 		name = "GFX_ideology_motoori_thought_subtype"

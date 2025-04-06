@@ -6614,6 +6614,7 @@ country_event = { # VST claims
 		1210  = { add_claim_by = VST }
 		1211  = { add_claim_by = VST }
 		1212 = { add_claim_by = VST }
+		1208 = { add_claim_by = VST }
 		1217 = { add_claim_by = VST }
 		1218 = { add_claim_by = VST }
 		1219 = { add_claim_by = VST }
@@ -6848,6 +6849,7 @@ country_event = { #
 		26 = { add_core_of = RFA }
 		19 = { add_core_of = RFA }
 		984 = { add_core_of = RFA }
+		1334 = { add_core_of = RFA }
 		817 = { add_core_of = RFA }
 		22 = { add_core_of = RFA }
 		31 = { add_core_of = RFA }
@@ -6864,7 +6866,6 @@ country_event = { #
 	is_triggered_only = yes
 	hidden = yes
 	immediate = {
-		984 = { add_core_of = IBR }
 		817 = { add_core_of = IBR }
 		172 = { add_core_of = IBR }
 		940 = { add_core_of = IBR }
@@ -8635,6 +8636,15 @@ country_event = {
 	}
 	option = {
 		name = rotermorgen.1006.f
+		set_country_leader_portrait = {
+			portrait = "gfx/leaders/GRU/Portrait_Germany_Josef_Goebbels_nazi.png"
+		}
+	}
+	option = {
+		name = rotermorgen.1006.f
+		trigger = {
+			has_completed_focus = GRU_german_endsieg
+		}
 		set_country_leader_portrait = {
 			portrait = "gfx/leaders/GRU/Portrait_Germany_Josef_Goebbels_nazi.png"
 		}

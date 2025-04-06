@@ -196,7 +196,7 @@ country_event = { #换意识形态
 		ai_chance = {
 			factor = 10
 		}
-        set_country_leader_ideology = lu_xun_thought_subtype
+        set_country_leader_ideology = radsoc_lu_xun_thought_subtype
 	}
 
 	option = {
