@@ -166,7 +166,7 @@ create_country_leader = {
 
 create_country_leader = {
 	name = "无政府工联中央委员会"
-	picture = "gfx/leaders/CNT/Portrait_Switzerland_Council.png"
+	picture = "gfx/leaders/CNT/Portrait_CNT_FAI_Council.png"
 	expire = "1.1.1"
 	ideology = anarcho_syndicalist_subtype
 }
