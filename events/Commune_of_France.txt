@@ -9220,6 +9220,9 @@ country_event = { #Election after the 1936 ones (repeating)
 			}
 		}
 		add_stability = 0.2
+		hidden_effect = {
+			country_event = { id = comfrance.1004 days = 1825 } # Repeat communal election every 5 years			
+		}
 	}
 	
 	option = { #militant

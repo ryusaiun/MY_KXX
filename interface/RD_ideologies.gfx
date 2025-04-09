@@ -50,10 +50,6 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-	name = "GFX_ideology_socdem_mao_zedong_thought_subtype"
-	texturefile = "gfx/interface/ideologies/subideologies/moderate_revolutionary_agrarianism.png"
-	}
-	SpriteType = {
 	name = "GFX_ideology_tot_anti_japaneseism_subtype"
 	texturefile = "gfx/interface/ideologies/subideologies/anti_japaneseism.png"
 	}

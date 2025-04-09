@@ -5049,6 +5049,10 @@ HNN_PROC = {
 	color = rgb { 222 41 16 }
 	color_ui = rgb { 222 41 16 }
 }
+HNN_PROC_H = {
+	color = rgb { 222 41 16 }
+	color_ui = rgb { 222 41 16 }
+}
 HNN_PROC_M = {
 	color = rgb { 222 41 16 }
 	color_ui = rgb { 222 41 16 }
@@ -5076,6 +5080,10 @@ HNN_PROC_YJ = {
 HNN_PROC_L = {
 	color = rgb { 85 51 43 }
 	color_ui = rgb { 85 51 43 }
+}
+HNN_ASIA = {
+	color = rgb { 222 41 16 }
+	color_ui = rgb { 222 41 16 }
 }
 HNN_PROC_B = {
 	color = rgb { 222 41 16 }
@@ -5125,6 +5133,10 @@ HNN_FJZ = {
 	color = rgb { 111 107 170 }
 	color_ui = rgb { 111 107 170 }
 }
+HNN_BDF = {
+	color = rgb { 111 107 170 }
+	color_ui = rgb { 111 107 170 }
+}
 HNN_FJD = {
 	color = rgb { 111 107 170 }
 	color_ui = rgb { 111 107 170 }
@@ -5165,6 +5177,15 @@ HNN_FJR = {
 	color = rgb { 23 22 22 }
 	color_ui = rgb { 23 22 22 }
 }
+###琼崖
+QYG = {
+	color = rgb { 222 41 16 }
+	color_ui = rgb { 222 41 16 }
+}
+QYG_YGQ = {
+	color = rgb { 222 41 16 }
+	color_ui = rgb { 222 41 16 }
+}
 ###上海
 SHC = {
 	color = rgb { 222 41 16 }
@@ -5178,7 +5199,51 @@ SHC_ROC = {
 	color = rgb { 222 41 16 }
 	color_ui = rgb { 222 41 16 }
 }
+LEC_FREE = {
+	color = rgb { 79 0 20 }
+	color_ui = rgb { 163 17 31 }
+}
+LEC_SZC_FREE = {
+	color = rgb { 79 0 20 }
+	color_ui = rgb { 163 17 31 }
+}
+LEC_SHC_FREE = {
+	color = rgb { 79 0 20 }
+	color_ui = rgb { 163 17 31 }
+}
+LEC_HNN_FREE = {
+	color = rgb { 79 0 20 }
+	color_ui = rgb { 163 17 31 }
+}
+LEC_GXC_FREE = {
+	color = rgb { 79 0 20 }
+	color_ui = rgb { 163 17 31 }
+}
+LEC_SHX_FREE = {
+	color = rgb { 79 0 20 }
+	color_ui = rgb { 163 17 31 }
+}
+LEC_ANQ_FREE = {
+	color = rgb { 79 0 20 }
+	color_ui = rgb { 163 17 31 }
+}
+LEC_YUN_FREE = {
+	color = rgb { 79 0 20 }
+	color_ui = rgb { 163 17 31 }
+}
 LEC_GT = {
+	color = rgb { 222 41 16 }
+	color_ui = rgb { 222 41 16 }
+}
+LEC_PRC = {
+	color = rgb { 222 41 16 }
+	color_ui = rgb { 222 41 16 }
+}
+LEC_SOV = {
+	color = rgb { 222 41 16 }
+	color_ui = rgb { 222 41 16 }
+}
+LEC_GT_S = {
 	color = rgb { 222 41 16 }
 	color_ui = rgb { 222 41 16 }
 }
@@ -5214,6 +5279,14 @@ LEC_HD = {
 	color = rgb { 255 128 0 }
 	color_ui = rgb { 255 128 0 }
 }
+SHC_YT = {
+	color = rgb { 255 128 0 }
+	color_ui = rgb { 255 128 0 }
+}
+SHC_YTC = {
+	color = rgb { 255 128 0 }
+	color_ui = rgb { 255 128 0 }
+}
 LEC_HD_Z = {
 	color = rgb { 255 128 0 }
 	color_ui = rgb { 255 128 0 }
@@ -5229,6 +5302,18 @@ LEC_TZ_T = {
 LEC_PLE = {
 	color = rgb { 252 201 185 }
 	color_ui = rgb { 252 201 185 }
+}
+LEC_MING_ANNAN = {
+	color = rgb { 255 201 14 }
+	color_ui = rgb { 255 201 14 }
+}
+LEC_MING_DADA = {
+	color = rgb { 255 201 14 }
+	color_ui = rgb { 255 201 14 }
+}
+LEC_MING_FUNAN = {
+	color = rgb { 255 201 14 }
+	color_ui = rgb { 255 201 14 }
 }
 SHC_PLE_D = {
 	color = rgb { 252 201 185 }
@@ -5246,15 +5331,20 @@ SHC_PLE = {
 	color = rgb { 41 23 91 }
 	color_ui = rgb { 41 23 91 }
 }
-LEC_HAN = {
-	color = rgb { 23 22 22 }
-	color_ui = rgb { 23 22 22 }
+###德属东亚
+GXC_german = {
+	color = rgb { 70 79 73 }
+	color_ui = rgb { 70 79 73 }
 }
-LEC_ZHO = {
+###两广
+GXC_fire = {
+	color = rgb { 0 0 0 }
+	color_ui = rgb { 0 0 0 }
+}
+GXC_BAI = {
 	color = rgb { 222 41 16 }
 	color_ui = rgb { 222 41 16 }
 }
-###两广
 GXC_PB = {
 	color = rgb { 23 22 22 }
 	color_ui = rgb { 23 22 22 }
@@ -5300,6 +5390,30 @@ GXC_CAP = {
 	color_ui = rgb { 238 253 25 }
 }
 GXC_CAP_CN = {
+	color = rgb { 238 253 25 }
+	color_ui = rgb { 238 253 25 }
+}
+GXC_BLS = {
+	color = rgb { 238 253 25 }
+	color_ui = rgb { 238 253 25 }
+}
+GXC_POL = {
+	color = rgb { 238 253 25 }
+	color_ui = rgb { 238 253 25 }
+}
+GXC_ARG = {
+	color = rgb { 238 253 25 }
+	color_ui = rgb { 238 253 25 }
+}
+GXC_MEX = {
+	color = rgb { 238 253 25 }
+	color_ui = rgb { 238 253 25 }
+}
+GXC_BRA = {
+	color = rgb { 238 253 25 }
+	color_ui = rgb { 238 253 25 }
+}
+GXC_PRF = {
 	color = rgb { 238 253 25 }
 	color_ui = rgb { 238 253 25 }
 }
@@ -5354,6 +5468,22 @@ GXC_KOR = {
 GXC_JAP = {
 	color = rgb { 238 253 25 }
 	color_ui = rgb { 238 253 25 }
+}
+GXC_DLG_alt = {
+	color = rgb { 0 76 128 }
+	color_ui = rgb { 0 76 128 }
+}
+GXC_DLG = {
+	color = rgb { 0 76 128 }
+	color_ui = rgb { 0 76 128 }
+}
+GXC_DLG_GER_alt = {
+	color = rgb { 0 76 128 }
+	color_ui = rgb { 0 76 128 }
+}
+GXC_DLG_GER = {
+	color = rgb { 0 76 128 }
+	color_ui = rgb { 0 76 128 }
 }
 GXC_CAN = {
 	color = rgb { 238 253 25 }
@@ -5457,13 +5587,9 @@ YUN_MG = {
 	color = rgb { 0 155 57 }
 	color_ui = rgb { 0 155 57 }
 }
-YUN_MHM = {
-	color = rgb { 178 0 0 }
-	color_ui = rgb { 178 0 0 }
-}
-YUN_MHM_Q = {
-	color = rgb { 178 0 0 }
-	color_ui = rgb { 178 0 0 }
+YUN_BAI_ROC = {
+	color = rgb { 222 20 16 }
+	color_ui = rgb { 222 20 16 }
 }
 #大清
 QIE_RUS = {
@@ -5593,6 +5719,24 @@ QIE_JKH = {
 QIE_JKH_RED = {
 	color = rgb { 222 20 16 }
 	color_ui = rgb { 222 20 16 }
+}
+#山西
+SHX_FU = {
+	color = rgb { 42 96 59 }
+	color_ui = rgb { 42 96 59 }
+}
+#新疆
+ETS_RED = {
+	color = rgb { 222 41 16 }
+	color_ui = rgb { 222 41 16 }
+}
+ETS_mid_SOV = {
+	color = rgb { 222 41 16 }
+	color_ui = rgb { 222 41 16 }
+}
+ETS_PRC = {
+	color = rgb { 222 41 16 }
+	color_ui = rgb { 222 41 16 }
 }
 ###Nation Europa
 ENG_europa = {

@@ -259,12 +259,6 @@ add_namespace = Ostasien
 				factor = 50
 				modifier = {
 					factor = 1000 
-					OR = {
-						has_game_rule = {
-							rule = GEA_if_creat_inc_cheat
-							option = GEA_IF_CREAT_INC_YES
-						}
-					}
 				}
 			}
 			set_global_flag = GEA_Martial_Law_NOT_Declared
@@ -280,12 +274,6 @@ add_namespace = Ostasien
 				factor = 50
 				modifier = {
 					factor = 1000 
-					OR = {
-						has_game_rule = {
-							rule = GEA_if_creat_inc_cheat
-							option = GEA_IF_CREAT_INC_NO
-						}
-					}
 				}
 			}
 			name = Ostasien.6.b
@@ -366,12 +354,6 @@ add_namespace = Ostasien
 				factor = 33
 				modifier = {
 					factor = 1000 
-					OR = {
-						has_game_rule = {
-							rule = GEA_if_creat_inc_cheat
-							option = GEA_IF_CREAT_INC_NO
-						}
-					}
 				}
 			}
 			add_political_power = -100
@@ -400,12 +382,6 @@ add_namespace = Ostasien
 				factor = 33
 				modifier = {
 					factor = 1000 
-					OR = {
-						has_game_rule = {
-							rule = GEA_if_creat_inc_cheat
-							option = GEA_IF_CREAT_INC_YES
-						}
-					}
 				}
 			}
 			add_political_power = 50
@@ -455,12 +431,6 @@ add_namespace = Ostasien
 				factor = 50
 				modifier = {
 					factor = 1000 
-					OR = {
-						has_game_rule = {
-							rule = GEA_if_creat_inc_cheat
-							option = GEA_IF_CREAT_INC_NO
-						}
-					}
 				}
 			}
 			add_timed_idea = {idea = GEA_Give_in_to_longshoremen days = 90}
@@ -474,12 +444,6 @@ add_namespace = Ostasien
 				factor = 50
 				modifier = {
 					factor = 1000 
-					OR = {
-						has_game_rule = {
-							rule = GEA_if_creat_inc_cheat
-							option = GEA_IF_CREAT_INC_YES
-						}
-					}
 				}
 			}
 			add_manpower = -317
@@ -514,12 +478,6 @@ add_namespace = Ostasien
 				factor = 33
 				modifier = {
 					factor = 1000 
-					OR = {
-						has_game_rule = {
-							rule = GEA_if_creat_inc_cheat
-							option = GEA_IF_CREAT_INC_YES
-						}
-					}
 				}
 			}
 			add_timed_idea = {
@@ -537,12 +495,6 @@ add_namespace = Ostasien
 				factor = 33
 				modifier = {
 					factor = 1000 
-					OR = {
-						has_game_rule = {
-							rule = GEA_if_creat_inc_cheat
-							option = GEA_IF_CREAT_INC_NO
-						}
-					}
 				}
 			}
 			add_political_power = -25
@@ -664,21 +616,16 @@ add_namespace = Ostasien
 				}
 			}
 		}
+
 		option = {
 			name = Ostasien.14.c
 			ai_chance = {
 				factor = 0
 				modifier = {
 					factor = 1000 
-					OR = {
-						has_game_rule = {
-							rule = GEA_if_creat_inc_cheat
-							option = GEA_IF_CREAT_INC_NO
-						}
-					}
 				}
 			}
-			visible = {
+			trigger = {
 				GEA = {
 					is_ai = yes
 				}
@@ -691,7 +638,6 @@ add_namespace = Ostasien
 			}
 		}
 	}
-
 	country_event = { #印度支那起义
 		id = Ostasien.15
 		title = Ostasien.15.t
@@ -1409,12 +1355,6 @@ add_namespace = Ostasien
 				factor = 50
 				modifier = {
 					factor = 1000 
-					OR = {
-						has_game_rule = {
-							rule = GEA_if_creat_inc_cheat
-							option = GEA_IF_CREAT_INC_YES
-						}
-					}
 				}
 			}
 			add_manpower = -2934
@@ -1428,12 +1368,6 @@ add_namespace = Ostasien
 				factor = 50
 				modifier = {
 					factor = 1000 
-					OR = {
-						has_game_rule = {
-							rule = GEA_if_creat_inc_cheat
-							option = GEA_IF_CREAT_INC_NO
-						}
-					}
 				}
 			}
 			add_manpower = -7542
@@ -1474,12 +1408,6 @@ add_namespace = Ostasien
 				factor = 50
 				modifier = {
 					factor = 1000 
-					OR = {
-						has_game_rule = {
-							rule = GEA_if_creat_inc_cheat
-							option = GEA_IF_CREAT_INC_YES
-						}
-					}
 				}
 			}
 			add_to_variable = { GEA_socialist_power = 10 }
@@ -1495,12 +1423,6 @@ add_namespace = Ostasien
 				factor = 50
 				modifier = {
 					factor = 1000 
-					OR = {
-						has_game_rule = {
-							rule = GEA_if_creat_inc_cheat
-							option = GEA_IF_CREAT_INC_NO
-						}
-					}
 				}
 			}
 			add_to_variable = { GEA_socialist_power = -5 }
@@ -1624,12 +1546,6 @@ add_namespace = Ostasien
 				factor = 50
 				modifier = {
 					factor = 1000 
-					OR = {
-						has_game_rule = {
-							rule = GEA_if_creat_inc_cheat
-							option = GEA_IF_CREAT_INC_YES
-						}
-					}
 				}
 			}
 			add_to_variable = { GEA_socialist_power = 15 }
@@ -1643,12 +1559,6 @@ add_namespace = Ostasien
 				factor = 50
 				modifier = {
 					factor = 1000 
-					OR = {
-						has_game_rule = {
-							rule = GEA_if_creat_inc_cheat
-							option = GEA_IF_CREAT_INC_NO
-						}
-					}
 				}
 			}
 			add_to_variable = { GEA_socialist_power = 10 }
@@ -2006,7 +1916,7 @@ add_namespace = Ostasien
 							long_name = GEA_paternal_autocrat_party2
 						}
 						create_country_leader = {
-							name = "约西亚斯·楚·瓦尔代克-皮尔蒙特亲王"
+							name = "Josias zu Waldeck und Pyrmont"
 							desc = "POLITICS_JOSIAS_DESC"
 							picture = "gfx/leaders/GEA/Portrait_GEA_Prinz_Josias_Waldeck-Prymont.png"
 							expire = "1957.7.30"
@@ -2238,12 +2148,6 @@ add_namespace = Ostasien
 				factor = 50
 				modifier = {
 					factor = 1000 
-					OR = {
-						has_game_rule = {
-							rule = GEA_if_creat_inc_cheat
-							option = GEA_IF_CREAT_INC_NO
-						}
-					}
 				}
 			}
 			add_to_variable = { GEA_socialist_power = -10 }  
@@ -2326,7 +2230,7 @@ add_namespace = Ostasien
 					}
 					retire_country_leader = yes
 					create_country_leader = {
-						name = "保大" # Dai Hoang De Be Ha, lol
+						name = "Bao Dai" # Dai Hoang De Be Ha, lol
 						desc = "POLITICS_BAO_DAI_DESC"
 						picture = "gfx/leaders/VIN/Portrait_Vietnam_Bao_Dai.png"
 						expire = "1997.7.30"
@@ -2437,7 +2341,7 @@ add_namespace = Ostasien
 					}
 					retire_country_leader = yes
 					create_country_leader = {
-						name = "保大" # Dai Hoang De Be Ha, lol
+						name = "Bao Dai" # Dai Hoang De Be Ha, lol
 						desc = "POLITICS_BAO_DAI_DESC"
 						picture = "gfx/leaders/VIN/Portrait_Vietnam_Bao_Dai.png"
 						expire = "1997.7.30"
@@ -2497,11 +2401,8 @@ add_namespace = Ostasien
 			ai_chance = {
 				factor = 90
 			}
-			set_country_flag = GEA_has_election		
-			country_event = {
-				id = Ostasien.136
-				days = 10
-			}			
+			set_country_flag = GEA_has_election
+			
 		}
 		
 		option = {
@@ -2530,7 +2431,7 @@ add_namespace = Ostasien
 				long_name = GEA_social_democrat_party_election_long
 			}	
 			create_country_leader = {
-				name = "阮太学"
+				name = "Nguyen Thai Hoc"
 				picture = "gfx/leaders/INC/Portrait_INC_Nguyen_Tai_Hoc.png"
 				expire = "1.1.1"
 				ideology = socdem_left_nationalism_subtype
@@ -2542,7 +2443,7 @@ add_namespace = Ostasien
 				long_name = GEA_social_liberal_party_election_long
 			}
 			create_country_leader = {
-				name = "路易斯·蒙巴顿"
+				name = "Louis Mountbatten"
 				picture = "gfx/leaders/CAN/Portrait_Canada_Louis_Mountbatten.png"
 				expire = "1.1.1"
 				ideology = soclib_colonial_govt_subtype
@@ -2554,7 +2455,7 @@ add_namespace = Ostasien
 				long_name = GEA_market_liberal_party_election_long
 			}	
 			create_country_leader = {
-				name = "阿尔弗雷德·克虏伯"
+				name = "Alfried Krupp"
 				picture = "gfx/leaders/GEA/Portrait_GEA_Alfried_Krupp.png"
 				expire = "1.1.1"
 				ideology = free_market_capitalist_subtype
@@ -2566,7 +2467,7 @@ add_namespace = Ostasien
 				long_name = GEA_authoritarian_democrat_party_election_long
 			}	
 			create_country_leader = {
-				name = "柔佛的易卜拉欣一世"
+				name = "Ibrahim I Johor"
 				picture = "gfx/leaders/MLY/Portrait_Malaya_Ibrahim_I_Johor.png"
 				expire = "1.1.1"
 				ideology = oligarchy_subtype
@@ -2768,14 +2669,13 @@ add_namespace = Ostasien
 
 		option = { 
 			name = Ostasien.171.a
-			increase_ruling_party_popularity_by_10 = yes
 			set_party_name = {
 				ideology = social_conservative
 				name = GEA_social_conservative_party1_Schorner
 				long_name = GEA_social_conservative_party1_Schorner
 			}	
 			create_country_leader = {
-				name = "费迪南德·舍尔纳"
+				name = "Ferdinand Schorner"
 				picture = "gfx/leaders/GEA/Portrait_GEA_Ferdinand_Schorner.png"
 				expire = "1.1.1"
 				ideology = soccon_colonial_govt_subtype
@@ -2787,7 +2687,7 @@ add_namespace = Ostasien
 				long_name = GEA_authoritarian_democrat_Schorner_party_long
 			}
 			create_country_leader = {
-				name = "费迪南德·舍尔纳"
+				name = "Ferdinand Schorner"
 				picture = "gfx/leaders/GEA/Portrait_GEA_Ferdinand_Schorner.png"
 				expire = "1.1.1"
 				ideology = colonial_govt_subtype
@@ -2799,7 +2699,7 @@ add_namespace = Ostasien
 				long_name = GEA_paternal_autocrat_Schorner_party_long
 			}	
 			create_country_leader = {
-				name = "费迪南德·舍尔纳"
+				name = "Ferdinand Schorner"
 				picture = "gfx/leaders/GEA/Portrait_GEA_Ferdinand_Schorner.png"
 				expire = "1.1.1"
 				ideology = autocratic_colonial_govt_subtype
@@ -2839,7 +2739,7 @@ add_namespace = Ostasien
 			add_stability = -0.05
 			hidden_effect = {
 				create_country_leader = {
-					name = "费迪南德·舍尔纳"
+					name = "Ferdinand Schorner"
 					picture = "gfx/leaders/GEA/Portrait_GEA_Ferdinand_Schorner.png"
 					expire = "1.1.1"
 					ideology = natpop_colonial_govt_subtype
@@ -3264,7 +3164,7 @@ add_namespace = Ostasien
 		option = {
 			name = Ostasien.300.a
 			create_country_leader = {
-				name = "赫尔穆特·冯·穆克"
+				name = "Hellmuth von Mücke"
 				desc = "POLITICS_HELLMUTH_VON_MUCKE_DESC"
 				picture = "gfx/leaders/GEA/Portrait_GEA_Hellmuth_von_Mucke.png"
 				expire = "1957.7.30"
@@ -3294,17 +3194,11 @@ add_namespace = Ostasien
 				factor = 33
 				modifier = {
 					factor = 1000 
-					OR = {
-						has_game_rule = {
-							rule = GEA_future 
-							option = GEA_FUTURE_MUCKE
-						}
-					}
 				}
 			}
 			hidden_effect = {
 				create_country_leader = {
-					name = "约西亚斯·楚·瓦尔代克-皮尔蒙特亲王"
+					name = "Josias zu Waldeck und Pyrmont"
 					desc = "POLITICS_JOSIAS_DESC"
 					picture = "gfx/leaders/GEA/Portrait_GEA_Prinz_Josias_Waldeck-Prymont.png"
 					expire = "1957.7.30"
@@ -3352,16 +3246,10 @@ add_namespace = Ostasien
 				factor = 33
 				modifier = {
 					factor = 1000 
-					OR = {
-						has_game_rule = {
-							rule = GEA_future 
-							option = GEA_FUTURE_JOSIAS
-						}
-					}
 				}
 			}
 			create_country_leader = {
-				name = "约西亚斯·楚·瓦尔代克-皮尔蒙特亲王"
+				name = "Josias zu Waldeck und Pyrmont"
 				desc = "POLITICS_JOSIAS_DESC"
 				picture = "gfx/leaders/GEA/Portrait_GEA_Prinz_Josias_Waldeck-Prymont.png"
 				expire = "1957.7.30"
@@ -3392,17 +3280,11 @@ add_namespace = Ostasien
 				factor = 33
 				modifier = {
 					factor = 1000 
-					OR = {
-						has_game_rule = {
-							rule = GEA_future 
-							option = GEA_FUTURE_HEYE
-						}
-					}
 				}
 			}
 			hidden_effect = {
 				create_country_leader = {
-					name = "约西亚斯·楚·瓦尔代克-皮尔蒙特亲王"
+					name = "Josias zu Waldeck und Pyrmont"
 					desc = "POLITICS_JOSIAS_DESC"
 					picture = "gfx/leaders/GEA/Portrait_GEA_Prinz_Josias_Waldeck-Prymont.png"
 					expire = "1957.7.30"
@@ -3412,7 +3294,7 @@ add_namespace = Ostasien
 					}
 				}
 				create_country_leader = {
-					name = "威廉·海耶"
+					name = "Wilhelm Heye"
 					desc = "POLITICS_HEYE_DESC"
 					picture = "gfx/leaders/GEA/Portrait_GEA_Wilhelm_Heye.png"
 					expire = "1.1.1"
@@ -3671,8 +3553,6 @@ add_namespace = Ostasien
 				add_state_core = 972
 				transfer_state = 721
 				add_state_core = 721
-				transfer_state = 321
-				add_state_core = 321
 			}
 		}
 		option = { 
@@ -3683,10 +3563,6 @@ add_namespace = Ostasien
 			GEA = {
 				add_state_claim = 729
 				create_wargoal = { target = POR type = take_claimed_state }
-				add_state_claim = 729
-				add_state_core = 972
-				add_state_core = 721
-				add_state_core = 321
 			}
 		}
 	}
@@ -3944,10 +3820,10 @@ add_namespace = Ostasien
 		title = Ostasien.809.t
 		desc = Ostasien.809.d
 		picture = GFX_GEA_guangzhou_obey
-
+	
 		fire_only_once = yes
 		is_triggered_only = yes
-
+	
 		option = { 
 			name = Ostasien.809.a
 			ai_chance = {
@@ -3965,6 +3841,13 @@ add_namespace = Ostasien
 			set_autonomy = {
 				target = GXC
 				autonomy_state = autonomy_puppet
+			}
+			GXC = {
+				load_focus_tree = {#德属两广
+					tree = KR_Guangdong_Merchants
+					keep_completed = yes 
+				}
+				complete_national_focus = GXC_ying_zi_xi_lai
 			}
 			hidden_effect = {
 				add_popularity = {
@@ -3985,14 +3868,14 @@ add_namespace = Ostasien
 					GXC_Chen_Bingkun_sec_pau
 				}
 				create_country_leader = {
-					name = "迪特里希·冯·绍肯"
+					name = "Dietrich von Saucken"
 					picture = "gfx/leaders/GEA/Portrait_GEA_Dietrich_von_Saucken.png"
 					expire = "1.1.1"
 					ideology = autocratic_colonial_govt_subtype
 					traits = {}
 				}
 				create_country_leader = {
-					name = "阿尔弗雷德·克虏伯"
+					name = "Alfried Krupp"
 					picture = "gfx/leaders/GEA/Portrait_GEA_Alfried_Krupp.png"
 					expire = "1.1.1"
 					ideology = free_market_capitalist_subtype
@@ -4017,8 +3900,8 @@ add_namespace = Ostasien
 			}
 			GEA = {
 				create_wargoal = {
-				type = annex_everything
-				target = GXC
+					type = annex_everything
+					target = GXC
 				}
 			}
 		}
@@ -4199,10 +4082,6 @@ add_namespace = Ostasien
 				effect_tooltip = {
 					if = {
 						limit = { has_country_leader = { name = "Hirohito" ruling_only = yes } }
-						retire_country_leader = yes
-					}
-					if = {
-						limit = { has_country_leader = { name = "裕仁" ruling_only = yes } }
 						retire_country_leader = yes
 					}
 				}

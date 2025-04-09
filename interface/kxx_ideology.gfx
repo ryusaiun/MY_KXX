@@ -2,14 +2,6 @@ spriteTypes = {
 	
 	### SubIdeologies ###
 	spriteType = {
-		name = "GFX_ideology_taleisinism_subtype"
-		texturefile = "gfx/interface/ideologies/subideologies/taleisinism_group.png"
-	}
-	spriteType = {
-		name = "GFX_ideology_right_taleisinism_subtype"
-		texturefile = "gfx/interface/ideologies/subideologies/right_taleisinism_group.png"
-	}
-	spriteType = {
 		name = "GFX_ideology_germanic_socialism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/germanic_socialism_group.png"
 	}
@@ -36,14 +28,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_ideology_radsoc_anarcho_federalism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/anarcho_federalism.png"
-	}
-	spriteType = {
-		name = "GFX_ideology_tot_Wesselism_subtype"
-		texturefile = "gfx/interface/ideologies/subideologies/tot_Wesselism.png"
-	}
-	spriteType = {
-		name = "GFX_ideology_Wesselism_subtype"
-		texturefile = "gfx/interface/ideologies/subideologies/Wesselism.png"
 	}
 	spriteType = {
 		name = "GFX_ideology_new_democrat_subtype"
@@ -223,24 +207,8 @@ spriteTypes = {
 	}	
 	##毛主义衍生
 	spriteType = {
-		name = "GFX_ideology_linism_subtype"
-		texturefile = "gfx/interface/ideologies/subideologies/linism.png"
-	}
-	spriteType = {
-		name = "GFX_ideology_maoism_thirdworldism_subtype"
-		texturefile = "gfx/interface/ideologies/subideologies/maoism_thirdworldism.png"
-	}
-	spriteType = {
-		name = "GFX_ideology_buddhist_maoism_subtype"
-		texturefile = "gfx/interface/ideologies/subideologies/buddhist_maoism.png"
-	}
-	spriteType = {
 		name = "GFX_ideology_farleft_maoism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/farleft_maoism.png"
-	}
-	spriteType = {
-		name = "GFX_ideology_maoism_feminism_subtype"
-		texturefile = "gfx/interface/ideologies/subideologies/maoism_feminism.png"
 	}
 	spriteType = {
 		name = "GFX_ideology_red_guard_subtype"
@@ -259,37 +227,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideologies/subideologies/xue_tong_lun.png"
 	}
 	spriteType = {
-		name = "GFX_ideology_anarcho_maoism_subtype"
-		texturefile = "gfx/interface/ideologies/subideologies/anarcho_maoism.png"
-	}
-	spriteType = {
-		name = "GFX_ideology_mao_spontex_subtype"
-		texturefile = "gfx/interface/ideologies/subideologies/mao_spontex.png"
-	}	spriteType = {
-		name = "GFX_ideology_natpop_maoism_subtype"
-		texturefile = "gfx/interface/ideologies/subideologies/natpop_maoism.png"
-	}
-	spriteType = {
-		name = "GFX_ideology_national_maoism_subtype"
-		texturefile = "gfx/interface/ideologies/subideologies/national_maoism.png"
-	}
-	spriteType = {
 		name = "GFX_ideology_dengism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/dengism.png"
 	}
-	spriteType = {
-		name = "GFX_ideology_fredaism_subtype"
-		texturefile = "gfx/interface/ideologies/subideologies/fredaism.png"
-	}
 	##制作组彩蛋
-	spriteType = {
-		name = "GFX_ideology_leftkxxism_subtype"
-		texturefile = "gfx/interface/ideologies/subideologies/leftkxxism.png"
-	}
-	spriteType = {
-		name = "GFX_ideology_rightkxxism_subtype"
-		texturefile = "gfx/interface/ideologies/subideologies/rightkxxism.png"
-	}
 	spriteType = {
 		name = "GFX_ideology_Tao_Fuism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/Tao_Fuism.png"
