@@ -73,10 +73,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/generic/RF_idea_crossed_swords.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_generic_idea_RF_idea_resist"
-		texturefile = "gfx/interface/ideas/generic/RF_idea_resist.dds"
-	}
-	spriteType = {
 		name = "GFX_idea_KAV_riddle_of_time"
 		texturefile = "gfx/interface/ideas/KAV/KAV_riddle_of_time.png"
 	}
