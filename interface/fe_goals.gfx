@@ -151,19 +151,19 @@ spriteTypes = {
 	}
 	Spritetype = {
 		name = "GFX_focus_FIU_Contacts_In_The_Veneto"
-		texturefile = "gfx/interface/goals/FIU/FIU_Contacts_In_The_Veneto.dds"
+		texturefile = "gfx/interface/goals/FIN/FIU_Contacts_In_The_Veneto.dds"
 }
 Spritetype = {
   	name = "GFX_focus_ENG_Start_The_Draft"
-  	texturefile = "gfx/interface/goals/ENG/start_the_draft.dds"
+  	texturefile = "gfx/interface/goals/FIN/start_the_draft.dds"
   	}
 	Spritetype = {
 		name = "GFX_BUL_drive_out_demons"
-		texturefile = "gfx/interface/goals/BUL/drive_out_demons.png"
+		texturefile = "gfx/interface/goals/FIN/drive_out_demons.png"
 	}
 	Spritetype = {
 		name = "GFX_BUL_fistathebourgeoisie"
-		texturefile = "gfx/interface/goals/BUL/fistathebourgeoisie.png"
+		texturefile = "gfx/interface/goals/FIN/fistathebourgeoisie.png"
 	}
 	Spritetype = {
 		name = "GFX_war_plan_sword"
@@ -191,7 +191,7 @@ Spritetype = {
 	}	
 	Spritetype = {
 		name = "GFX_focus_FIU_The_Eastern_Border"
-		texturefile = "gfx/interface/goals/FIU/FIU_The_Eastern_Border.dds"
+		texturefile = "gfx/interface/goals/FIN/FIU_The_Eastern_Border.dds"
 }
 Spritetype = {
 	name = "GFX_FIN_allies_from_beyond_uatur-26534"
@@ -199,7 +199,7 @@ Spritetype = {
 }
 Spritetype = {
 	name = "GFX_ISR_RestoreOrder"
-	texturefile = "gfx/interface/goals/ISR/RestoreOrder.dds"
+	texturefile = "gfx/interface/goals/FIN/RestoreOrder.dds"
 }
 Spritetype = {
 	name = "GFX_FIN_finnish_hieroglyphy-26532"
@@ -215,7 +215,7 @@ Spritetype = {
 }
 Spritetype = {
 	name = "GFX_BUL_between_heaven_and_earth"
-	texturefile = "gfx/interface/goals/BUL/between_heaven_and_earth.png"
+	texturefile = "gfx/interface/goals/FIN/between_heaven_and_earth.png"
 }
 Spritetype = {
 	name = "GFX_FIN_society_of_thoth-26529"

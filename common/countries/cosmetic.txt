@@ -6177,19 +6177,6 @@ FRA_acephale = {
 	color = rgb { 99 33 66 }
 	color_ui = rgb { 99 33 66 }
 }
-#KXX MEME
-KXX_NEWSHANDONG = {
-	color = rgb { 93 34 53 }
-	color_ui = rgb { 93 34 53 }
-}
-KXX_SUZHOU = {
-    color = rgb { 177 1 3 }
-	color_ui = rgb { 177 1 3 }
-}
-KXX_Animism = {
-    color = rgb { 64 139 125 }
-	color_ui = rgb { 64 139 125 }
-}
 #################
 ### 成立新国家 ###
 #################
