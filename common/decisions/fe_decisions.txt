@@ -121,7 +121,7 @@ FE_PR = {
 		cost = 10
 		days_remove = 30
 		
-		fire_only_once = NO
+		fire_only_once = no
 		days_re_enable = 5
 		available = { has_country_flag = fe_p_start
 		NOT = {

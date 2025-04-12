@@ -78,7 +78,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_attack_core_texticon_texticon"
-		texturefile = "gfx/texticons/actions/attack_core_texticon.png"
+		texturefile = "gfx/texticons/actions/attack_core_texticon.dds"
 		legacy_lazy_load = no
 	}
 	spriteType = {
@@ -153,7 +153,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_enemy_speed_texticon"
-		texturefile = "gfx/texticons/actions/enemy_speed_texticon.dds"
+		texturefile = "gfx/texticons/actions/enemy_speed_texticon.png"
 		legacy_lazy_load = no
 	}
 	spriteType = {
@@ -320,11 +320,6 @@ spriteTypes = {
 	}
 	### OTHER
 	spriteType = {
-		name = "GFX_sup_volks"
-		texturefile = "gfx/texticons/sup_volks.png"
-		legacy_lazy_load = no
-	}
-	spriteType = {
 		name = "GFX_goebb_ska"
 		texturefile = "gfx/texticons/hypoborea.png"
 		legacy_lazy_load = no
@@ -360,58 +355,13 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	spriteType = {
-		name = "GFX_construction_texticon"
-		texturefile = "gfx/texticons/construction_texticon.png"
-		legacy_lazy_load = no
-	}
-	spriteType = {
-		name = "GFX_china_texticon"
-		texturefile = "gfx/texticons/china.png"
-		legacy_lazy_load = no
-	}
-	spriteType = {
-		name = "GFX_parl_add_texticon"
-		texturefile = "gfx/texticons/parl_add.png"
-		legacy_lazy_load = no
-	}
-	spriteType = {
-		name = "GFX_parl_rmv_texticon"
-		texturefile = "gfx/texticons/parl_rmv.png"
-		legacy_lazy_load = no
-	}
-	spriteType = {
-		name = "GFX_question_texticon"
-		texturefile = "gfx/texticons/question.png"
-		legacy_lazy_load = no
-	}
-	spriteType = {
 		name = "GFX_opposition_texticon"
 		texturefile = "gfx/texticons/opposition.png"
 		legacy_lazy_load = no
 	}
 	spriteType = {
-		name = "GFX_russians_texticon"
-		texturefile = "gfx/texticons/russians.png"
-		legacy_lazy_load = no
-	}
-	spriteType = {
-		name = "GFX_elect_texticon"
-		texturefile = "gfx/texticons/elect_texticon.png"
-		legacy_lazy_load = no
-	}
-	spriteType = {
-		name = "GFX_prosecutors_office_texticon"
-		texturefile = "gfx/texticons/prosecutors_office.png"
-		legacy_lazy_load = no
-	}
-	spriteType = {
 		name = "GFX_paper_texticon"
 		texturefile = "gfx/texticons/paper.png"
-		legacy_lazy_load = no
-	}
-	spriteType = {
-		name = "GFX_crown_texticon"
-		texturefile = "gfx/texticons/crown.png"
 		legacy_lazy_load = no
 	}
 	spriteType = {
@@ -421,12 +371,12 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_research_icon_texticon"
-		texturefile = "gfx/texticons/research_icon_texticon.png"
+		texturefile = "gfx/texticons/research_icon_texticon.dds"
 		legacy_lazy_load = no
 	}
 	spriteType = {
 		name = "GFX_positive_christianity_texticon"
-		texturefile = "gfx/texticons/positive_christianity_texticon.png"
+		texturefile = "gfx/texticons/positive_christianity_texticon.dds"
 		legacy_lazy_load = no
 	}
 	spriteType = {

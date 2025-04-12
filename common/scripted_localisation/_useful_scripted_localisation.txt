@@ -5647,18 +5647,6 @@ defined_text = {
 			has_country_leader_ideology = syn_islamism_subtype
 		}
 		localization_key = syn_islamism_subtype
-	}
-	text = {
-		trigger = {
-			has_country_leader_ideology = radsoc_islamism_subtype
-		}
-		localization_key = radsoc_islamism_subtype
-	}
-	text = {
-		trigger = {
-			has_country_leader_ideology = tot_islamism_subtype
-		}
-		localization_key = tot_islamism_subtype
 	}	
 
     #烤蟹蟹

@@ -698,7 +698,6 @@ ideas = {
 				mobilization_laws_cost_factor = -0.5
 				trade_laws_cost_factor  = -0.5
 				economy_cost_factor = -0.5
-				political_advisor_cost_factor = -0.5
 				tank_manufacturer_cost_factor = -0.5
 				naval_manufacturer_cost_factor = -0.5
 				aircraft_manufacturer_cost_factor = -0.5

@@ -40,11 +40,7 @@ formable_nations_mod_category = {
 				}
 			}
 			custom_trigger_tooltip = { tooltip = not_already_existing_tt NOT = { any_country = { has_cosmetic_tag = FORM_NEWTAG } } }
-		}
-		highlight_states = {
-			highlight_state_targets = {
-			}
-		}					
+		}				
 		icon = generic_form_nation
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_NEWTAG
@@ -31351,23 +31347,23 @@ formable_nations_mod_category = {
 			}
 			set_party_name = {
 				ideology = totalist
-				name = 毁与生党（极致派）
-				long_name = 毁与生党-加拉尔之声
+				name = "毁与生党（极致派）"
+				long_name = "毁与生党-加拉尔之声"
 			}				
 			set_party_name = {
 				ideology = syndicalist
-				name = 毁与生党（社团派）
-				long_name = 毁与生党-塔尔塔罗斯
+				name = "毁与生党（社团派）"
+				long_name = "毁与生党-塔尔塔罗斯"
 			}		
 			set_party_name = {
 				ideology = radical_socialist
-				name = 毁与生党（命轮派）
-				long_name = 毁与生党-福尔图娜的喝彩
+				name = "毁与生党（命轮派）"
+				long_name = "毁与生党-福尔图娜的喝彩"
 			}		
 			set_party_name = {
 				ideology = social_democrat
-				name = 毁与生党（温和派）
-				long_name = 毁与生党-阿波罗之光
+				name = "毁与生党（温和派）"
+				long_name = "毁与生党-阿波罗之光"
 			}											
 			create_country_leader = {
 				name = "Tanino Gimlet"

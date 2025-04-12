@@ -9,7 +9,6 @@ leader_traits = {
 
 	ATU_any_trait = {
 		random = no
-		right_authoritarianism_drift = 0.1
 		justify_war_goal_time = -0.1
 		war_support_factor = 0.1
 	}
@@ -197,17 +196,14 @@ leader_traits = {
 		random = no
 		research_speed_factor = 0.02
 		army_core_defence_factor = 0.05
-		despotism_drift = 0.01
 	}
 	PER_mo_pahlavi_cyrus = {
 		random = no
 		research_speed_factor = 0.05
 		army_core_defence_factor = 0.07
-		despotism_drift = 0.02
 	}
 	RPR_kochik_khan = {
 		random = no
-		vanguard_socialism_drift = 0.01
 		army_morale_factor = 0.05
 	}
 	#ISR
@@ -232,7 +228,6 @@ leader_traits = {
 	ISR_jabo_leader = {
 		random = no
 		army_core_defence_factor = 0.05
-		right_authoritarianism_drift = 0.03
 		opinion_gain_monthly_factor = 0.5
 	}
 	ISR_ben_gurion_leader = {
@@ -261,7 +256,6 @@ leader_traits = {
 	FIN_pharaoh = {
 		random = no
 		war_support_factor = 0.15
-		accelerationism_drift = 0.03
 	}
 
 	# Brazil #
@@ -318,7 +312,6 @@ leader_traits = {
 	EST_sole_ruler_of_estonians = {
 		random = no
 		political_power_factor = 0.05
-		right_authoritarianism_drift = 0.05
 	}
 	EST_protector_of_estonian_freedom = {
 		random = no
@@ -552,7 +545,6 @@ POL_pilsudski_titan = {
 	random = no
 	global_building_slots_factor = 0.1
 	research_speed_factor = 0.1
-	accelerationism_drift = 0.1
 	hidden_modifier = {
 		justify_war_goal_time = 2137
 	}
@@ -597,7 +589,6 @@ POL_pilsudski_tritan = {
 	random = no
 	global_building_slots_factor = 0.02
 	research_speed_factor = 0.01
-	accelerationism_drift = 0.01
 	hidden_modifier = {
 		justify_war_goal_time = 2137
 	}

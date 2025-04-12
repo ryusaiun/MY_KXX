@@ -5,7 +5,6 @@ leader_traits = {
 		mobilization_laws_cost_factor = -0.15
 	    trade_laws_cost_factor  = -0.15
 	    economy_cost_factor = -0.15
-    	political_advisor_cost_factor = -0.15
 	    tank_manufacturer_cost_factor = -0.15
 	    naval_manufacturer_cost_factor = -0.15
 	    aircraft_manufacturer_cost_factor = -0.15

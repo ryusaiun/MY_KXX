@@ -163,7 +163,7 @@ FLN_puppet_asia = {
 	available = { 
 		is_subject = no 
 		NOT = {
-			ALQ = { exists = yes }
+			ALO = { exists = yes }
 			ANQ = { exists = yes }
 			BHU = { exists = yes }
 			BOR = { exists = yes }

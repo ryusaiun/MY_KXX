@@ -7,7 +7,6 @@ leader_traits = {
 	Timekeeper_1 = {
 		random = no
 		political_power_gain = -0.05
-		fascism_drift = -0.01
 	}
 	Timekeeper_s_assistant = {
 		random = no

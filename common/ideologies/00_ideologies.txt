@@ -153,7 +153,6 @@ ideologies = {
 			tot_pan_celticism_subtype = { can_be_randomly_selected = no color = { 0 128 0 } } #泛凯尔特主义(KXX)
 			revisionist_sorelianism_subtype = { can_be_randomly_selected = no } #修正索雷尔主义(KXX)
 			millitarist_sorelianism_subtype = { can_be_randomly_selected = no } #军政索雷尔主义(KXX)
-			tot_islamism_subtype = { can_be_randomly_selected = no } #阿尔及利亚拓展
 			monarcho_syndicalism_subtype = { can_be_randomly_selected = no } #君主工团主义(KXX)
 			tot_national_mysticism_subtype = { can_be_randomly_selected = no } #民族神秘主义(云的补充)
 
@@ -413,7 +412,6 @@ ideologies = {
 			radsoc_saint_simonianism_subtype = { can_be_randomly_selected = no }  #圣西门主义
 			radsoc_united_front = { can_be_randomly_selected = no } #统一阵线
 			algerian_socialism_subtype = { can_be_randomly_selected = no } #自管社会主义（阿尔及利亚拓展）
-			radsoc_islamism_subtype = { can_be_randomly_selected = no } #阿尔及利亚拓展
 			radsoc_left_occultism_subtype = { can_be_randomly_selected = no }  #左翼密教
 			otokonomusumeism_subtype = { can_be_randomly_selected = no }  #伪娘风徽（彩蛋）
 			radsoc_surrealism_subtype = { can_be_randomly_selected = no } #超现实主义（布勒东）

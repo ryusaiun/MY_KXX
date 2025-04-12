@@ -24,7 +24,7 @@ PER_coring_conquered_territory = {
 		days_remove = 200
 
 		modifier = {
-			add_stability = -0.05
+			stability_factor = -0.05
 			political_power_gain = -0.1
 			conscription_factor = -0.1
 			consumer_goods_factor = 0.02
@@ -74,7 +74,7 @@ PER_coring_conquered_territory = {
 		days_remove = 200
 
 		modifier = {
-			add_stability = -0.05
+			stability_factor = -0.05
 			political_power_gain = -0.05
 			conscription_factor = -0.05
 			consumer_goods_factor = 0.02
@@ -135,7 +135,7 @@ PER_coring_conquered_territory = {
 		days_remove = 200
 
 		modifier = {
-			add_stability = -0.05
+			stability_factor = -0.05
 			political_power_gain = -0.1
 			conscription_factor = -0.1
 			consumer_goods_factor = 0.02
@@ -316,9 +316,11 @@ PER_war_for_the_gulf = {
 
 		cost = 20
 
-		highlight_state_targets = {
-			state = 421
-		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 421
+			}
+        }
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision PER_Arm_Barzinji target: [From.GetName]"
@@ -364,9 +366,11 @@ PER_war_for_the_gulf = {
 
 		cost = 50
 
-		highlight_state_targets = {
-			state = 819
-		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 819
+			}
+        }
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision PER_Sulaymaniyah_Revolt target: [From.GetName]"
@@ -414,9 +418,11 @@ PER_war_for_the_gulf = {
 
 		cost = 10
 
-		highlight_state_targets = {
-			state = 412
-		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 412
+			}
+        }
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision PER_Hengam_Island target: [From.GetName]"
@@ -453,9 +459,11 @@ PER_war_for_the_gulf = {
 
 		cost = 10
 
-		highlight_state_targets = {
-			state = 658
-		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 658
+			}
+        }
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision PER_Dubai_Jalbut target: [From.GetName]"

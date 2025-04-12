@@ -61,8 +61,10 @@ ITT_puppet_decisions = {
 				            state = 1270
 			    		}
 			    	}
-					add_state_core = PREV
-			    	remove_core_of = ITT
+					MNT = {
+			    		add_state_core = PREV
+			    		remove_core_of = ITT
+			    	}
 			    }
 				set_autonomy = { target = MNT autonomy_state = RM_triumvirate }
 				MNT = {

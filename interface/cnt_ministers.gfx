@@ -1,28 +1,28 @@
 spriteTypes = {	
 	
 	SpriteType = {
-	name = "GFX_idea_CNT_felipe_emilo_sandoval_cabrerizo_hog_rso"
-	texturefile = "gfx/interface/ministers/CNT/CNT_felipe_emilo_sandoval_cabrerizo.png"			
+		name = "GFX_idea_CNT_felipe_emilo_sandoval_cabrerizo_hog_rso"
+		texturefile = "gfx/interface/ministers/CNT/CNT_felipe_emilo_sandoval_cabrerizo.png"			
 	}
 	SpriteType = {
-	name = "GFX_idea_CNT_Ramiro_Ledesma_Ramos_hog_tot"
-	texturefile = "gfx/interface/ministers/CNT/CNT_Ramiro_Ledesma_Ramos.png"			
+		name = "GFX_idea_CNT_Ramiro_Ledesma_Ramos_hog_tot"
+		texturefile = "gfx/interface/ministers/CNT/CNT_Ramiro_Ledesma_Ramos.png"			
 	}
 	SpriteType = {
-	name = "GFX_idea_CNT_Onesimo_Redondo_Ortega_eco_tot"
-	texturefile = "gfx/interface/ministers/CNT/CNT_Onesimo_Redondo_Ortega.png"			
+		name = "GFX_idea_CNT_Onesimo_Redondo_Ortega_eco_tot"
+		texturefile = "gfx/interface/ministers/CNT/CNT_Onesimo_Redondo_Ortega.png"			
 	}
 	SpriteType = {
-	name = "GFX_idea_CNT_Ernesto_Gimenez_Caballero_for_tot"
-	texturefile = "gfx/interface/ministers/CNT/CNT_Ernesto_Gimenez_Caballero.png"			
+		name = "GFX_idea_CNT_Ernesto_Gimenez_Caballero_for_tot"
+		texturefile = "gfx/interface/ministers/CNT/CNT_Ernesto_Gimenez_Caballero.png"			
 	}
 	SpriteType = {
-	name = "GFX_idea_CNT_Santiago_Montero_Dias_sec_tot"
+		name = "GFX_idea_CNT_Santiago_Montero_Dias_sec_tot"
 	texturefile = "gfx/interface/ministers/CNT/CNT_Santiago_Montero_Dias.png"			
-	}
+		}
 	SpriteType = {
-	name = "GFX_idea_CNT_Jose_Antonio_Primo_de_Rivera_hog_npo"
-	texturefile = "gfx/interface/ministers/CNT/CNT_Jose_Antonio_Primo_de_Rivera.png"			
+		name = "GFX_idea_CNT_Jose_Antonio_Primo_de_Rivera_hog_npo"
+		texturefile = "gfx/interface/ministers/CNT/CNT_Jose_Antonio_Primo_de_Rivera.png"			
 	}
 	SpriteType = {
 	name = "GFX_idea_CNT_Pedro_Lain_Entralgo_for_npo"

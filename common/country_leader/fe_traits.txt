@@ -13,7 +13,6 @@ leader_traits = {
 	mika_valtari_trait = {
 		stability_factor = -0.05
 		political_power_gain = 0.25
-		accelerationism_drift = 0.02
 		reactionism_drift = 0.02
 		random = no
 	}
@@ -68,7 +67,6 @@ leader_traits = {
 		experience_gain_air = 0.07
 		air_ace_generation_chance_factor = 0.1
 		air_strategic_bomber_bombing_factor = 0.1
-		air_close_air_support_attack_factor = 0.05
 		army_bonus_air_superiority_factor = 0.1
 		political_power_gain = -0.1
 		random = no
@@ -90,8 +88,7 @@ leader_traits = {
 		justify_war_goal_time = -0.10
 		mobilization_speed = 0.05
 		ai_focus_aggressive_factor = 0.75
-		r
-		andom = no
+		random = no
 	}
 	GUA_NAP1 = {
 		random = no

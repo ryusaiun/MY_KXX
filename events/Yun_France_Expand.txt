@@ -414,13 +414,13 @@ country_event = {
 		name = rednap.3.a
 		ai_chance = { base = 25 }
 		CRO = {
-		create_country_leader = {
-			name = "莫里斯·甘末林"
-			desc = "POLITICS_GAMELIN_DESC"
-			picture = "gfx/leaders/FRA/Portrait_France_Maurice_Gamelin_KR.png"
-			expire = "1.1.1"
-			ideology = radsoc_bonapartism_subtype	
-			traits = {marshal_leader}		
+			create_country_leader = {
+				name = "莫里斯·甘末林"
+				desc = "POLITICS_GAMELIN_DESC"
+				picture = "gfx/leaders/FRA/Portrait_France_Maurice_Gamelin_KR.png"
+				expire = "1.1.1"
+				ideology = radsoc_bonapartism_subtype	
+				traits = {marshal_leader}		
 			}	
 		}
 	}

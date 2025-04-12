@@ -1820,6 +1820,7 @@ FRA_liberate_europe_category = {
 		}
     }
 }
+
 FRA_neocolonialism_category = {
 	FRA_ultimatum_to_lebanon = {
 		icon = generic_construction
@@ -1846,7 +1847,7 @@ FRA_neocolonialism_category = {
 					}
 				}
 				LEB = {
-				country_event = kxxfrance.48
+					country_event = kxxfrance.48
 				}
 			}
 			else = {

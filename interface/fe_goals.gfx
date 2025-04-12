@@ -2,7 +2,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_fe_goal_ankh_cross"
-		texturefile = "gfx/interface/goals/fe_goal_ankh_cross.png"
+		texturefile = "gfx/interface/goals/fe_goal_ankh_cross.tga"
 	}
 	spriteType = {
 		name = "GFX_fe_goal_finland"
@@ -152,10 +152,10 @@ spriteTypes = {
 	Spritetype = {
 		name = "GFX_focus_FIU_Contacts_In_The_Veneto"
 		texturefile = "gfx/interface/goals/FIN/FIU_Contacts_In_The_Veneto.dds"
-}
-Spritetype = {
-  	name = "GFX_focus_ENG_Start_The_Draft"
-  	texturefile = "gfx/interface/goals/FIN/start_the_draft.dds"
+	}
+	Spritetype = {
+  		name = "GFX_focus_ENG_Start_The_Draft"
+  		texturefile = "gfx/interface/goals/FIN/start_the_draft.dds"
   	}
 	Spritetype = {
 		name = "GFX_BUL_drive_out_demons"
@@ -192,58 +192,54 @@ Spritetype = {
 	Spritetype = {
 		name = "GFX_focus_FIU_The_Eastern_Border"
 		texturefile = "gfx/interface/goals/FIN/FIU_The_Eastern_Border.dds"
-}
-Spritetype = {
-	name = "GFX_FIN_allies_from_beyond_uatur-26534"
-	texturefile = "gfx/interface/goals/FIN/GFX_FIN_allies_from_beyond_uatur-26534.dds"
-}
-Spritetype = {
-	name = "GFX_ISR_RestoreOrder"
-	texturefile = "gfx/interface/goals/FIN/RestoreOrder.dds"
-}
-Spritetype = {
-	name = "GFX_FIN_finnish_hieroglyphy-26532"
-	texturefile = "gfx/interface/goals/FIN/GFX_FIN_finnish_hieroglyphy-26532.dds"
-}
-Spritetype = {
-	name = "GFX_FIN_great_pyramids_of_helsinki-26527"
-	texturefile = "gfx/interface/goals/FIN/GFX_FIN_great_pyramids_of_helsinki-26527.dds"
-}
-Spritetype = {
-	name = "GFX_FIN_rebirth_of_mummification_traditions-26531"
-	texturefile = "gfx/interface/goals/FIN/GFX_FIN_rebirth_of_mummification_traditions-26531.dds"
-}
-Spritetype = {
-	name = "GFX_BUL_between_heaven_and_earth"
-	texturefile = "gfx/interface/goals/FIN/between_heaven_and_earth.png"
-}
-Spritetype = {
-	name = "GFX_FIN_society_of_thoth-26529"
-	texturefile = "gfx/interface/goals/FIN/GFX_FIN_society_of_thoth-26529.dds"
-}	
-Spritetype = {
-	name = "GFX_FIN_modern_carriage_of_amunra-26535"
-	texturefile = "gfx/interface/goals/FIN/GFX_FIN_modern_carriage_of_amunra-26535.dds"
-}
-Spritetype = {
-	name = "GFX_FIN_unification_of_lands_of_set-26537"
-	texturefile = "gfx/interface/goals/FIN/GFX_FIN_unification_of_lands_of_set-26537.dds"
-}
-Spritetype = {
-	name = "GFX_FIN_sail_to_our_ancestral_lands-26539"
-	texturefile = "gfx/interface/goals/FIN/GFX_FIN_sail_to_our_ancestral_lands-26539.dds"
-}
-Spritetype = {
-	name = "GFX_FIN_suojelijan_kuoleman_henki-26979"
-	texturefile = "gfx/interface/goals/FIN/GFX_FIN_suojelijan_kuoleman_henki-26979.dds"
-}
-Spritetype = {
-	name = "GFX_FIN_democratic_coup-26540"
-	texturefile = "gfx/interface/goals/FIN/GFX_FIN_democratic_coup-26540.dds"
-}
-	
-	
-	
-	
+	}
+	Spritetype = {
+		name = "GFX_FIN_allies_from_beyond_uatur-26534"
+		texturefile = "gfx/interface/goals/FIN/GFX_FIN_allies_from_beyond_uatur-26534.dds"
+	}
+	Spritetype = {
+		name = "GFX_ISR_RestoreOrder"
+		texturefile = "gfx/interface/goals/FIN/RestoreOrder.dds"
+	}
+	Spritetype = {
+		name = "GFX_FIN_finnish_hieroglyphy-26532"
+		texturefile = "gfx/interface/goals/FIN/GFX_FIN_finnish_hieroglyphy-26532.dds"
+	}
+	Spritetype = {
+		name = "GFX_FIN_great_pyramids_of_helsinki-26527"
+		texturefile = "gfx/interface/goals/FIN/GFX_FIN_great_pyramids_of_helsinki-26527.dds"
+	}
+	Spritetype = {
+		name = "GFX_FIN_rebirth_of_mummification_traditions-26531"
+		texturefile = "gfx/interface/goals/FIN/GFX_FIN_rebirth_of_mummification_traditions-26531.dds"
+	}
+	Spritetype = {
+		name = "GFX_BUL_between_heaven_and_earth"
+		texturefile = "gfx/interface/goals/FIN/between_heaven_and_earth.png"
+	}
+	Spritetype = {
+		name = "GFX_FIN_society_of_thoth-26529"
+		texturefile = "gfx/interface/goals/FIN/GFX_FIN_society_of_thoth-26529.dds"
+	}	
+	Spritetype = {
+		name = "GFX_FIN_modern_carriage_of_amunra-26535"
+		texturefile = "gfx/interface/goals/FIN/GFX_FIN_modern_carriage_of_amunra-26535.dds"
+	}
+	Spritetype = {
+		name = "GFX_FIN_unification_of_lands_of_set-26537"
+		texturefile = "gfx/interface/goals/FIN/GFX_FIN_unification_of_lands_of_set-26537.dds"
+	}
+	Spritetype = {
+		name = "GFX_FIN_sail_to_our_ancestral_lands-26539"
+		texturefile = "gfx/interface/goals/FIN/GFX_FIN_sail_to_our_ancestral_lands-26539.dds"
+	}
+	Spritetype = {
+		name = "GFX_FIN_suojelijan_kuoleman_henki-26979"
+		texturefile = "gfx/interface/goals/FIN/GFX_FIN_suojelijan_kuoleman_henki-26979.dds"
+	}
+	Spritetype = {
+		name = "GFX_FIN_democratic_coup-26540"
+		texturefile = "gfx/interface/goals/FIN/GFX_FIN_democratic_coup-26540.dds"
+	}
 }
 	

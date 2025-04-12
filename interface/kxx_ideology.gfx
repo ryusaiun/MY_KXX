@@ -142,10 +142,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideologies/subideologies/millitarist_sorelianism_subtype.png"
 	}
 	SpriteType = {
-		name = "GFX_ideology_syn_islamism_subtype"
-		texturefile = "gfx/interface/ideologies/subideologies/radsoc_islamism_group.png"
-	}
-	SpriteType = {
 		name = "GFX_ideology_imperialcult_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/imperialate_group.png"
 	}

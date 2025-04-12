@@ -22,7 +22,7 @@ country_event = { #Intro
 		name = comfrance.1.a
 		ai_chance = {
 			factor = 35
-			}
+		}
 		hidden_effect = {
 			country_event = {
 				days = 10
@@ -115,19 +115,19 @@ country_event = {
 	option = {
 		name = comfrance.6.a #Paul Le Gentilhomme (Travailleur) - Tank proponent
 		ai_chance = {
-			factor = 45
+			base = 45
 			modifier = {
-			factor = 0
-			OR = {
-				  has_game_rule = {
+				factor = 0
+				OR = {
+				 	has_game_rule = {
 						rule = FRA_start_election
 						option = FRA_START_RADICAL_SOCIALIST_ANARCHISTE
 					}
-				  has_game_rule = {
+				  	has_game_rule = {
 						rule = FRA_start_election
 						option = FRA_START_TOTALIST_JACOBIN
 					}
-				  has_game_rule = {
+				  	has_game_rule = {
 						rule = FRA_start_election
 						option = FRA_START_TOTALIST_SORELIAN
 					}

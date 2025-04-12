@@ -21,7 +21,7 @@ add_namespace = wcc
 		option = {
 			name = wcc.1.a
 			ai_chance = {
-				factor = 100
+				base = 100
 			}
 			add_equipment_to_stockpile = {
 				type = infantry_equipment

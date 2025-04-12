@@ -4527,7 +4527,6 @@ ideas = {
 				air_air_superiority_agility_factor = 0.05
 				air_superiority_efficiency = 0.05
 				air_close_air_support_agility_factor = 0.05
-				air_close_air_support_attack_factor = 0.05
 			}
 		}
 		### Naval Ideas ###

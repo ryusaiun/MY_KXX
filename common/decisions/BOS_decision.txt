@@ -23,9 +23,9 @@ BOS_National_Reconstruction_Commission = {
 			prioritize={
 			}
 			limit={
-				free_building_slots={
-					building=arms_factory
-					size>0
+				free_building_slots = {
+					building = arms_factory
+					size > 0
 					include_locked=yes
 				}
 			}
@@ -61,9 +61,9 @@ BOS_National_Reconstruction_Commission = {
 			prioritize={
 			}
 			limit={
-				free_building_slots={
-					building=industrial_complex
-					size>0
+				free_building_slots = {
+					building = industrial_complex
+					size > 0
 					include_locked=yes
 				}
 			}
@@ -111,7 +111,7 @@ BOS_National_Reconstruction_Commission = {
 		cost =  60
 		
 		available = {
-		has_full_control_of_state = 1097
+			has_full_control_of_state = 1097
 		}
 		
 		visible = {

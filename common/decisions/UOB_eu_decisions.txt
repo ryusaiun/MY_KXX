@@ -420,7 +420,7 @@ UOB_yeeting_asia_category = {
 		allowed = { original_tag = ENG }
 		available = {
 				NOT = {
-					ALQ = { exists = yes }
+					ALO = { exists = yes }
 					ANQ = { exists = yes }
 					BHU = { exists = yes }
 					BOR = { exists = yes }
@@ -552,7 +552,7 @@ UOB_yeeting_asia_category = {
 			}
 		}
 		cost = 10
-		targets = { ALQ ANQ BHU BOR BRM CAM CHI ETS FNG GEA GXC PRC HNN INC INS JAP KAC KOR KYR LAO LEC LEP MAN MLY MON QIE PHI PNG SAR SHA SHX SIA SIK SIR SQI SZC TAJ TAN TIB UZB VIN XSM YUN TRK ALO BHC CEY DEH INR MAD MYS NEP SKM PRF TRV} 
+		targets = { ALO ANQ BHU BOR BRM CAM CHI ETS FNG GEA GXC PRC HNN INC INS JAP KAC KOR KYR LAO LEC LEP MAN MLY MON QIE PHI PNG SAR SHA SHX SIA SIK SIR SQI SZC TAJ TAN TIB UZB VIN XSM YUN TRK ALO BHC CEY DEH INR MAD MYS NEP SKM PRF TRV} 
 		target_trigger = {
 			FROM = { exists = yes }
 			NOT = {

@@ -7353,7 +7353,6 @@ focus = {
 			}
 			custom_effect_tooltip = tooltip_white_line
 			add_one_random_military_factory = yes
-			FRA_add_final_tank_variants = yes
 			if = {
 				limit = { has_completed_focus = FRA_supremacy_of_movement }
 				custom_effect_tooltip = tooltip_white_line
@@ -7428,7 +7427,6 @@ focus = {
 			}
 			custom_effect_tooltip = tooltip_white_line
 			add_one_random_military_factory = yes
-			FRA_add_final_tank_variants = yes
 			if = {
 				limit = { has_completed_focus = FRA_supremacy_of_movement }
 				custom_effect_tooltip = tooltip_white_line
@@ -7694,7 +7692,7 @@ focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus FRA_arab_committee"
 		MAF = {
 			add_stability = -0.1
-			add_from_variable = {
+			add_to_variable = {
 				var = MAF_collapse_var
 				value = 5
 			}
@@ -10049,10 +10047,10 @@ focus = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_true_marxism"
 			country_event = comfrance.940
-			remove_idea =FRA_Gongshe1
-			remove_idea =FRA_Gongshe
-			remove_idea =FRA_Zibenjia
-			remove_idea =FRA_Right
+			remove_ideas =FRA_Gongshe1
+			remove_ideas =FRA_Gongshe
+			remove_ideas =FRA_Zibenjia
+			remove_ideas =FRA_Right
 			swap_ideas = {
 				remove_idea = FRA_lenin
 				add_idea = FRA_lenin2

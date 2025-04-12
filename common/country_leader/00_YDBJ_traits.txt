@@ -43,7 +43,6 @@ leader_traits = {
 		stability_weekly = -0.0007
 		consumer_goods_factor = -0.08
 		army_intel_to_others = -30
-		operation_coup_government_risk = -1.0
 	}
 	
 	GDP_li_chuntao_trait = {
@@ -82,7 +81,7 @@ leader_traits = {
 		random = no
 		production_speed_bunker_factor = 0.2
 		send_volunteer_divisions_required = -0.2
-		research_speed = 0.2
+		research_speed_factor = 0.20
 	}
 
 	HKC_He_yaoquan_trait = {

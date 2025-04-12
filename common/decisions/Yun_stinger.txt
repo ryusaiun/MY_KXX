@@ -719,53 +719,53 @@ yun_funny_puppet = {
 					}	
 					set_party_name = {
 						ideology = totalist
-						name = 闽局（含量金）
-						long_name = 福州S6含量金船政局
+						name = "闽局（含量金）"
+						long_name = "福州S6含量金船政局"
 					}				
 					set_party_name = {
 						ideology = syndicalist
-						name = 闽局（含量金）
+						name = "闽局（含量金）"
 						long_name = 福州S6含量金船政局
 					}		
 					set_party_name = {
 						ideology = radical_socialist
-						name = 闽局（含量金）
+						name = "闽局（含量金）"
 						long_name = 福州S6含量金船政局
 					}		
 					set_party_name = {
 						ideology = social_democrat
-						name = 闽局（含量金）
-						long_name = 福州S6含量金船政局
+						name = "闽局（含量金）"
+						long_name = "福州S6含量金船政局"
 					}								
 					set_party_name = {
 						ideology = social_liberal
-						name = 闽局（含量金）
-						long_name = 福州S6含量金船政局
+						name = "闽局（含量金）"
+						long_name = "福州S6含量金船政局"
 					}
 					set_party_name = {
 						ideology = market_liberal
-						name = 闽局（含量金）
-						long_name = 福州S6含量金船政局
+						name = "闽局（含量金）"
+						long_name = "福州S6含量金船政局"
 					}	
 					set_party_name = {
 						ideology = social_conservative
-						name = 闽局（含量金）
-						long_name = 福州S6含量金船政局
+						name = "闽局（含量金）"
+						long_name = "福州S6含量金船政局"
 					}
 					set_party_name = {
 						ideology = authoritarian_democrat
-						name = 闽局（含量金）
-						long_name = 福州S6含量金船政局
+						name = "闽局（含量金）"
+						long_name = "福州S6含量金船政局"
 					}	
 					set_party_name = {
 						ideology = paternal_autocrat
-						name = 闽局（含量金）
-						long_name = 福州S6含量金船政局
+						name = "闽局（含量金）"
+						long_name = "福州S6含量金船政局"
 					}
 					set_party_name = {
 						ideology = national_populist
-						name = 闽局（含量金）
-						long_name = 福州S6含量金船政局
+						name = "闽局（含量金）"
+						long_name = "福州S6含量金船政局"
 					}		
 				}					   
 			}												
@@ -2844,33 +2844,33 @@ yun_funny_puppet = {
 				}				
 				set_party_name = {
 					ideology = radical_socialist
-					name = 白人保留地
-					long_name = 白人保留地
+					name = "白人保留地"
+					long_name = "白人保留地"
 				}		
 				set_party_name = {
 					ideology = social_democrat
-					name = 白人保留地
-					long_name = 白人保留地
+					name = "白人保留地"
+					long_name = "白人保留地"
 				}								
 				set_party_name = {
 					ideology = social_liberal
-					name = 白人保留地
-					long_name = 白人保留地
+					name = "白人保留地"
+					long_name = "白人保留地"
 				}
 				set_party_name = {
 					ideology = market_liberal
-					name = 白人保留地
-					long_name = 白人保留地
+					name = "白人保留地"
+					long_name = "白人保留地"
 				}	
 				set_party_name = {
 					ideology = social_conservative
-					name = 白人保留地
-					long_name = 白人保留地
+					name = "白人保留地"
+					long_name = "白人保留地"
 				}
 				set_party_name = {
 					ideology = authoritarian_democrat
-					name = 白人保留地
-					long_name = 白人保留地
+					name = "白人保留地"
+					long_name = "白人保留地"
 				}					
 				every_owned_state = {
 					NZL = {
