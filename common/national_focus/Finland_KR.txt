@@ -12433,7 +12433,7 @@ focus_tree = {
 			}
       create_wargoal = {
 				type = take_state_focus
-				target = UZB
+				target = KHI
 			}
       create_wargoal = {
 				type = take_state_focus

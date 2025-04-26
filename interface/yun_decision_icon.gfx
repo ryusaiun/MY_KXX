@@ -31,7 +31,15 @@ spriteTypes = {
 	spriteType = {
 		name = "Sara_Kujou"
 		texturefile = "gfx/interface/decisions/Sara_Kujou.tga"
-	}					
+	}
+	spriteType = {
+		name = "Ange_Katrina"
+		texturefile = "gfx/interface/decisions/Ange_Katrina.tga"
+	}	
+	spriteType = {
+		name = "Nakayama_Satsuki"
+		texturefile = "gfx/interface/decisions/Nakayama_Satsuki.tga"
+	}						
 	spriteType = {
 		name = "GFX_decision_sonko_chan"
 		texturefile = "gfx/interface/decisions/decision_sonko_chan.png"

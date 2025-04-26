@@ -201,7 +201,7 @@ FLN_puppet_asia = {
 			TAJ = { exists = yes }
 			TAN = { exists = yes }
 			TIB = { exists = yes }
-			UZB = { exists = yes }
+			KHI = { exists = yes }
 			VIN = { exists = yes }
 			XSM = { exists = yes }
 			YUN = { exists = yes }

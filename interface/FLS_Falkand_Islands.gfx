@@ -1,0 +1,482 @@
+SpriteTypes = {	
+	#阿加森头像
+	frameAnimatedSpriteType = {
+        name = "GFX_Portrait_FLS_Admiral_Byrd_distort_animated"
+        texturefile = "gfx/leaders/FLS/Portrait_FLS_Admiral_Byrd_distort.png"
+        noOfFrames = 40
+		animation_rate_fps = 200
+		looping = yes
+		play_on_show = yes
+    }
+	spriteType = {
+		name = "GFX_idea_FLS_Richard_Byrd_hog_pau"
+		texturefile = "gfx/interface/ministers/FLS/FLS_Richard_Byrd_hog_pau.png"
+	}
+	#事件图片
+	spriteType = {
+		name = "GFX_FLS_Byrd_Event_1_Event"
+		texturefile = "gfx/event_pictures/FLS/Byrd_1_event.png"
+	}
+	spriteType = {
+		name = "GFX_FLS_Byrd_Event_2_Event"
+		texturefile = "gfx/event_pictures/FLS/Byrd_2_event.png"
+	}
+	#精神
+	spriteType = {
+        name = "GFX_idea_preparing_homeland"
+        texturefile = "gfx/interface/ideas/FLS/preparing_homeland.png"
+    }
+	spriteType = {
+        name = "GFX_idea_atlantian_statue"
+        texturefile = "gfx/interface/ideas/FLS/atlantian_statue.png"
+    }
+	spriteType = {
+        name = "GFX_idea_five_principles"
+        texturefile = "gfx/interface/ideas/FLS/five_principles.png"
+    }
+	spriteType = {
+        name = "GFX_idea_coup_detat_flk"
+        texturefile = "gfx/interface/ideas/FLS/coup_detat_flk.png"
+    }
+	spriteType = {
+        name = "GFX_idea_eyes_from_both"
+        texturefile = "gfx/interface/ideas/FLS/eyes_from_both.png"
+    }
+	spriteType = {
+        name = "GFX_idea_political_immigration"
+        texturefile = "gfx/interface/ideas/FLS/political_immigration.png"
+    }
+    spriteType = {
+        name = "GFX_idea_under_the_british_crown"
+        texturefile = "gfx/interface/ideas/FLS/under_the_brit_crown.png"
+    }	
+	#国策
+	SpriteType = {
+		name = "GFX_goal_FLS_legacy_of_coup"
+		texturefile = "gfx/interface/goals/FLS/Legacy_Of_Coup.png"
+	} 
+	SpriteType = {
+		name = "GFX_goal_FLS_solidate_our_rule"
+		texturefile = "gfx/interface/goals/FLS/solidate_our_rule.png"
+	} 
+	SpriteType = {
+		name = "GFX_goal_FLS_naval_dictatorship"
+		texturefile = "gfx/interface/goals/FLS/naval_dictatorship.png"
+	} 
+    SpriteType = {
+		name = "GFX_goal_FLS_Admiral_Cult"
+		texturefile = "gfx/interface/goals/FLS/Admiral_Cult.png"
+	}
+    SpriteType = {
+		name = "GFX_goal_FLS_Five_Principles"
+		texturefile = "gfx/interface/goals/FLS/Five_Principles.png"
+	}
+    SpriteType = {
+		name = "GFX_goal_FLS_Embrace_the_old"
+		texturefile = "gfx/interface/goals/FLS/Embrace_the_old.png"
+	}
+    SpriteType = {
+		name = "GFX_goal_FLS_of_where_we_need_to"
+		texturefile = "gfx/interface/goals/FLS/of_where_we_need_to.png"
+	}
+    SpriteType = {
+		name = "GFX_goal_FLS_Our_first_conquest"
+		texturefile = "gfx/interface/goals/FLS/Our_first_conquest.png"
+	}
+    SpriteType = {
+		name = "GFX_goal_FLS_Atlantic_voyage"
+		texturefile = "gfx/interface/goals/FLS/Atlantic_voyage.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_FLS_pacific_voyage"
+		texturefile = "gfx/interface/goals/FLS/pacific_voyage.png"
+	} 
+	SpriteType = {
+		name = "GFX_goal_FLS_Cape_of_no_orang"
+		texturefile = "gfx/interface/goals/FLS/Cape_of_no_orang.png"
+	} 
+	SpriteType = {
+		name = "GFX_goal_FLS_A_gateway_to_indian_ocean"
+		texturefile = "gfx/interface/goals/FLS/A_gateway_to_indian_ocean.png"
+	} 
+    SpriteType = {
+		name = "GFX_goal_FLS_Final_conquest"
+		texturefile = "gfx/interface/goals/FLS/Final_conquest.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_FLS_gateway_to_heaven"
+		texturefile = "gfx/interface/goals/FLS/gateway_to_heaven.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_FLS_Improve_sheep_market"
+		texturefile = "gfx/interface/goals/FLS/Improve_sheep_market.png"
+	} 
+	SpriteType = {
+		name = "GFX_goal_FLS_The_oil_must_flow"
+		texturefile = "gfx/interface/goals/FLS/The_oil_must_flow.png"
+	} 
+	SpriteType = {
+		name = "GFX_goal_FLS_great_dockyard"
+		texturefile = "gfx/interface/goals/FLS/great_dockyard.png"
+	} 
+    SpriteType = {
+		name = "GFX_goal_FLS_grow_the_military_industry"
+		texturefile = "gfx/interface/goals/FLS/grow_the_military_industry.png"
+	}
+	#国策shine
+	SpriteType = {
+		name = "GFX_goal_FLS_legacy_of_coup_shine"
+		texturefile = "gfx/interface/goals/FLS/legacy_of_coup.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/FLS/legacy_of_coup.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.png"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+   }
+
+
+	SpriteType = {
+		name = "GFX_goal_FLS_solidate_our_rule_shine"
+		texturefile = "gfx/interface/goals/FLS/solidate_our_rule.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/FLS/solidate_our_rule.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.png"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+   }
+
+
+	SpriteType = {
+		name = "GFX_goal_FLS_naval_dictatorship_shine"
+		texturefile = "gfx/interface/goals/FLS/naval_dictatorship.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/FLS/naval_dictatorship.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.png"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+   }
+
+	SpriteType = {
+		name = "GFX_goal_FLS_Five_Principles_shine"
+		texturefile = "gfx/interface/goals/FLS/Five_Principles.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/FLS/Five_Principles.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.png"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	legacy_lazy_load = no
+
+}
+
+	SpriteType = {
+		name = "GFX_goal_FLS_Embrace_the_old_shine"
+		texturefile = "gfx/interface/goals/FLS/Embrace_the_old.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/FLS/Embrace_the_old.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.png"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+     legacy_lazy_load = no
+  }
+
+	SpriteType = {
+		name = "GFX_goal_FLS_of_where_we_need_to_shine"
+		texturefile = "gfx/interface/goals/FLS/of_where_we_need_to.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/FLS/of_where_we_need_to.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.png"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+     legacy_lazy_load = no
+ }
+
+	SpriteType = {
+		name = "GFX_goal_FLS_Admiral_Cult_shine"
+		texturefile = "gfx/interface/goals/FLS/Admiral_Cult.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/FLS/Admiral_Cult.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.png"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+    legacy_lazy_load = no
+ }
+
+	SpriteType = {
+		name = "GFX_goal_FLS_Our_first_conquest_shine"
+		texturefile = "gfx/interface/goals/FLS/Our_first_conquest.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/FLS/Our_first_conquest.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.png"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+    legacy_lazy_load = no
+ } 
+
+	SpriteType = {
+		name = "GFX_goal_FLS_Atlantic_voyage_shine"
+		texturefile = "gfx/interface/goals/FLS/Atlantic_voyage.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/FLS/Atlantic_voyage.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.png"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+     legacy_lazy_load = no
+}
+
+
+	SpriteType = {
+		name = "GFX_goal_FLS_pacific_voyage_shine"
+		texturefile = "gfx/interface/goals/FLS/pacific_voyage.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/FLS/pacific_voyage.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.png"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+   }
+
+
+	SpriteType = {
+		name = "GFX_goal_FLS_Cape_of_no_orang_shine"
+		texturefile = "gfx/interface/goals/FLS/Cape_of_no_orang.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/FLS/Cape_of_no_orang.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.png"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+   }
+
+
+	SpriteType = {
+		name = "GFX_goal_FLS_A_gateway_to_indian_ocean_shine"
+		texturefile = "gfx/interface/goals/FLS/A_gateway_to_indian_ocean.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/FLS/A_gateway_to_indian_ocean.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.png"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+   }
+
+	SpriteType = {
+		name = "GFX_goal_FLS_Final_conquest_shine"
+		texturefile = "gfx/interface/goals/FLS/Final_conquest.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/FLS/Final_conquest.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.png"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	legacy_lazy_load = no
+
+}
+
+	SpriteType = {
+		name = "GFX_goal_FLS_gateway_to_heaven_shine"
+		texturefile = "gfx/interface/goals/FLS/gateway_to_heaven.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/FLS/gateway_to_heaven.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.png"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	legacy_lazy_load = no
+
+}
+
+
+
+	SpriteType = {
+		name = "GFX_goal_FLS_Improve_sheep_market_shine"
+		texturefile = "gfx/interface/goals/FLS/Improve_sheep_market.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/FLS/Improve_sheep_market.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.png"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+   }
+
+
+	SpriteType = {
+		name = "GFX_goal_FLS_The_oil_must_flow_shine"
+		texturefile = "gfx/interface/goals/FLS/The_oil_must_flow.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/FLS/The_oil_must_flow.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.png"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+   }
+
+
+	SpriteType = {
+		name = "GFX_goal_FLS_great_dockyard_shine"
+		texturefile = "gfx/interface/goals/FLS/great_dockyard.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/FLS/great_dockyard.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.png"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+   }
+
+	SpriteType = {
+		name = "GFX_goal_FLS_grow_the_military_industry_shine"
+		texturefile = "gfx/interface/goals/FLS/grow_the_military_industry.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/FLS/grow_the_military_industry.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.png"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	legacy_lazy_load = no
+
+}
+
+}

@@ -142,6 +142,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideologies/subideologies/millitarist_sorelianism_subtype.png"
 	}
 	SpriteType = {
+		name = "GFX_ideology_sorelian_bolshevism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/sorelian_bolshevism_group.png"
+	}
+	SpriteType = {
+		name = "GFX_ideology_ultranational_bolshevism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/ultranational_bolshevism_group.png"
+	}
+	SpriteType = {
 		name = "GFX_ideology_imperialcult_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/imperialate_group.png"
 	}

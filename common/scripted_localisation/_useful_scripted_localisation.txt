@@ -5644,11 +5644,16 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			has_country_leader_ideology = syn_islamism_subtype
+			has_country_leader_ideology = sorelian_bolshevism_subtype
 		}
-		localization_key = syn_islamism_subtype
-	}	
-
+		localization_key = sorelian_bolshevism_subtype
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = ultranational_bolshevism_subtype
+		}
+		localization_key = ultranational_bolshevism_subtype
+	}
     #烤蟹蟹
 	text = {
 		trigger = {

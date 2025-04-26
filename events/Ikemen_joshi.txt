@@ -39,3 +39,32 @@ country_event = {
 		set_cosmetic_tag= Fujikiseki6
 	}
 }
+country_event = { 
+	id = Ikemenjoshi.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Ikemenjoshi.2" }
+	title = Ikemenjoshi.2.t
+	desc = Ikemenjoshi.2.d
+
+	is_triggered_only = yes
+	
+	option = {
+		name = Ikemenjoshi.2.a
+		set_cosmetic_tag= Nakayama_Naki
+	}
+
+	option = {
+		name = Ikemenjoshi.2.b
+		set_cosmetic_tag= Nakayama_Naki2			
+	}
+
+	option = { 
+		name = Ikemenjoshi.2.c
+		set_cosmetic_tag = Nakayama_Naki3		
+	}
+
+	option = { 
+		name = Ikemenjoshi.2.e
+		set_cosmetic_tag= Nakayama_Naki4		
+	}
+	
+}

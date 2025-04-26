@@ -2706,53 +2706,53 @@ yun_funny_puppet = {
 				}	
 				set_party_name = {
 					ideology = totalist
-					name = 腾扬制冰集团
-					long_name = 腾扬天下制冰托拉斯
+					name = "腾扬制冰集团"
+					long_name = "腾扬天下制冰托拉斯"
 				}				
 				set_party_name = {
 					ideology = syndicalist
-					name = 腾扬制冰集团
-					long_name = 腾扬天下制冰托拉斯
+					name = "腾扬制冰集团"
+					long_name = "腾扬天下制冰托拉斯"
 				}		
 				set_party_name = {
 					ideology = radical_socialist
-					name = 腾扬制冰集团
-					long_name = 腾扬天下制冰托拉斯
+					name = "腾扬制冰集团"
+					long_name = "腾扬天下制冰托拉斯"
 				}		
 				set_party_name = {
 					ideology = social_democrat
-					name = 腾扬制冰集团
-					long_name = 腾扬天下制冰托拉斯
+					name = "腾扬制冰集团"
+					long_name = "腾扬天下制冰托拉斯"
 				}								
 				set_party_name = {
 					ideology = social_liberal
-					name = 腾扬制冰集团
-					long_name = 腾扬天下制冰托拉斯
+					name = "腾扬制冰集团"
+					long_name = "腾扬天下制冰托拉斯"
 				}
 				set_party_name = {
 					ideology = market_liberal
-					name = 腾扬制冰集团
-					long_name = 腾扬天下制冰托拉斯
+					name = "腾扬制冰集团"
+					long_name = "腾扬天下制冰托拉斯"
 				}	
 				set_party_name = {
 					ideology = social_conservative
-					name = 腾扬制冰集团
-					long_name = 腾扬天下制冰托拉斯
+					name = "腾扬制冰集团"
+					long_name = "腾扬天下制冰托拉斯"
 				}
 				set_party_name = {
 					ideology = authoritarian_democrat
-					name = 腾扬制冰集团
-					long_name = 腾扬天下制冰托拉斯
+					name = "腾扬制冰集团"
+					long_name = "腾扬天下制冰托拉斯"
 				}	
 				set_party_name = {
 					ideology = paternal_autocrat
-					name = 腾扬制冰集团
-					long_name = 腾扬天下制冰托拉斯
+					name = "腾扬制冰集团"
+					long_name = "腾扬天下制冰托拉斯"
 				}
 				set_party_name = {
 					ideology = national_populist
-					name = 腾扬制冰集团
-					long_name = 腾扬天下制冰托拉斯
+					name = "腾扬制冰集团"
+					long_name = "腾扬天下制冰托拉斯"
 				}		
 			}					   
 		}									

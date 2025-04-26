@@ -367,7 +367,7 @@ yun_debug_decisions = {
 					NOT = { is_owned_and_controlled_by = LBA }
 					NOT = { is_owned_and_controlled_by = RUS }
 					NOT = { is_owned_and_controlled_by = ALO }
-					NOT = { is_owned_and_controlled_by = UZB }
+					NOT = { is_owned_and_controlled_by = KHI }
 					NOT = { is_owned_and_controlled_by = TRK }
 					NOT = { is_owned_and_controlled_by = KYR }
 					NOT = { is_owned_and_controlled_by = TRM }

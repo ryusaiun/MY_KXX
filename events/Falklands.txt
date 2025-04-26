@@ -1,0 +1,495 @@
+ 
+add_namespace = FLS
+
+country_event = {
+	id = FLS.1929
+	title = FLS.1929.t
+	desc = FLS.1929.d
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FLS.1929" }
+	fire_only_once = yes
+	trigger = { 
+		tag = ARG
+		date > 1936.3.1
+	}
+
+	option = {
+		name = FLS.1929.a
+        add_stability = -0.01
+		add_political_power = -50
+		add_manpower = -1000
+	}
+
+	option = {
+		name = FLS.1929.b
+        add_stability = -0.02
+		FLS = {
+			transfer_state = 299
+			add_state_core = 299
+			change_tag_from = ROOT
+		}
+		CAN = { add_to_faction = FLS }
+		hidden_effect = {
+			FLS = {
+				add_manpower = 10000
+			}
+		}
+	}
+}
+
+country_event = {
+	id = FLS.1
+	title = FLS.1.t
+	desc = FLS.1.d
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FLS.1" }
+	picture = GFX_FLS_Byrd_Event_2_Event
+	fire_only_once = yes
+	trigger = { 
+		tag = FLS
+		date > 1936.3.1
+	}
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { has_dlc_mtg = no }
+				if = {
+					limit = { NOT = { has_tech = basic_light_cruiser } }
+					set_technology = { basic_light_cruiser = 1 popup = no }
+				}
+				create_equipment_variant = {
+					name = "福克兰群岛"
+					type = light_cruiser_2
+					upgrades = {
+						ship_reliability_upgrade = 2
+						ship_engine_upgrade = 2
+						ship_armor_upgrade = 2
+						ship_gun_upgrade = 2
+					}
+				}
+				if = {
+					limit = { NOT = { has_tech = basic_destroyer } }
+					set_technology = { basic_destroyer = 1 popup = no }
+				}
+				create_equipment_variant = {
+					type = destroyer_2
+					name = "南乔治亚群岛"
+					upgrades = {
+						ship_torpedo_upgrade = 2
+						destroyer_engine_upgrade = 2
+						ship_ASW_upgrade = 2
+						ship_anti_air_upgrade = 2
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = { NOT = { has_tech = basic_ship_hull_light } }
+					set_technology = { basic_ship_hull_light = 1 popup = no }
+				}
+				if = {
+					limit = { NOT = { has_tech = basic_ship_hull_cruiser } }
+					set_technology = { basic_ship_hull_cruiser = 1 popup = no }
+				}
+				if = {
+					limit = { NOT = { has_tech = basic_light_battery } }
+					set_technology = { basic_light_battery = 1 popup = no }
+				}
+				create_equipment_variant = {
+					name = "福克兰群岛"
+					type = ship_hull_cruiser_2
+					name_group = CHYN_CL_HISTORICAL
+					parent_version = 0
+					allow_without_tech = yes
+					modules = {
+						fixed_ship_battery_slot = ship_light_battery_2
+						fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+						fixed_ship_anti_air_slot = ship_anti_air_1
+						fixed_ship_radar_slot = empty
+						fixed_ship_engine_slot = cruiser_ship_engine_2
+						fixed_ship_armor_slot = empty
+						fixed_ship_secondaries_slot = ship_secondaries_1
+						front_1_custom_slot = ship_anti_air_1
+						mid_1_custom_slot = ship_airplane_launcher_1
+						mid_2_custom_slot = empty
+						rear_1_custom_slot = empty
+					}
+				}
+				if = {
+					limit = { NOT = { has_tech = basic_ship_hull_cruiser } }
+					set_technology = { basic_ship_hull_cruiser = 1 popup = no }
+				}
+				if = {
+					limit = { NOT = { has_tech = basic_ship_hull_cruiser } }
+					set_technology = { basic_ship_hull_cruiser = 1 popup = no }
+				}
+				create_equipment_variant = {
+					name = "南乔治亚群岛"
+					type = ship_hull_light_2
+					allow_without_tech = yes
+					name_group = CHYN_DD_HISTORICAL
+					parent_version = 0
+					modules = {
+						fixed_ship_battery_slot = ship_light_battery_1
+						fixed_ship_anti_air_slot = ship_anti_air_1
+						fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+						fixed_ship_radar_slot = empty
+						fixed_ship_torpedo_slot = ship_torpedo_1
+						fixed_ship_engine_slot = light_ship_engine_1
+						mid_1_custom_slot = ship_anti_air_1
+						rear_1_custom_slot = ship_torpedo_1
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = FLS.1.a
+        add_stability = 0.01
+        add_political_power = 5
+		if = {
+			limit = { has_dlc_mtg = no }
+			create_ship = { type = light_cruiser_2 equipment_variant = "福克兰群岛" name = "福克兰群岛" }
+			create_ship = { type = destroyer_2 equipment_variant = "南乔治亚群岛" name = "南乔治亚群岛" }
+			create_ship = { type = destroyer_2 equipment_variant = "南乔治亚群岛" name = "火地岛" }
+		}
+		else = {
+			create_ship = { type = ship_hull_cruiser_2 equipment_variant = "福克兰群岛" name = "福克兰群岛" }
+			create_ship = { type = ship_hull_light_2 equipment_variant = "南乔治亚群岛" name = "南乔治亚群岛" }
+			create_ship = { type = ship_hull_light_2 equipment_variant = "南乔治亚群岛" name = "火地岛" }
+		}
+		299 = {
+			create_unit = {
+				division = "name = \"Infanteria de Marina\" division_template = \"Infanteria de Marina\" start_experience_factor = 0.5 start_equipment_factor = 1"
+				allow_spawning_on_enemy_provs = yes
+				owner = FLS
+			}
+			create_unit = {
+				division = "name = \"Infanteria de Marina\" division_template = \"Infanteria de Marina\" start_experience_factor = 0.5 start_equipment_factor = 1"
+				allow_spawning_on_enemy_provs = yes
+				owner = FLS
+			}
+			create_unit = {
+				division = "name = \"Infanteria de Marina\" division_template = \"Infanteria de Marina\" start_experience_factor = 0.5 start_equipment_factor = 1"
+				allow_spawning_on_enemy_provs = yes
+				owner = FLS
+			}
+			create_unit = {
+				division = "name = \"Infanteria de Marina\" division_template = \"Infanteria de Marina\" start_experience_factor = 0.5 start_equipment_factor = 1"
+				allow_spawning_on_enemy_provs = yes
+				owner = FLS
+			}
+			create_unit = {
+				division = "name = \"Infanteria de Marina\" division_template = \"Infanteria de Marina\" start_experience_factor = 0.5 start_equipment_factor = 1"
+				allow_spawning_on_enemy_provs = yes
+				owner = FLS
+			}
+			create_unit = {
+				division = "name = \"Infanteria de Marina\" division_template = \"Infanteria de Marina\" start_experience_factor = 0.5 start_equipment_factor = 1"
+				allow_spawning_on_enemy_provs = yes
+				owner = FLS
+			}
+			create_unit = {
+				division = "name = \"Infanteria de Marina\" division_template = \"Infanteria de Marina\" start_experience_factor = 0.5 start_equipment_factor = 1"
+				allow_spawning_on_enemy_provs = yes
+				owner = FLS
+			}
+		}
+	}
+}
+
+country_event = {
+	id = FLS.2 ###byrd finds shit
+	title = FLS.2.t
+	desc = FLS.2.d
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FLS.2" }
+	picture = GFX_FLS_Byrd_Event_1_Event
+	fire_only_once = yes
+	
+	trigger = { 
+		tag = FLS
+		has_completed_focus = FLS_THE_FIRST_CONQUEST
+	}
+	
+	option = {
+		name = FLS.2.a
+        add_stability = 0.01
+        add_political_power = 5
+        set_country_flag = flk_agartha_open_gates
+		add_ideas = yun_skull_army
+		add_ideas = ACW_building_navy
+	}
+}
+
+country_event = {
+	id = FLS.3 ###entente surrenders
+	title = FLS.3.t
+	desc = FLS.3.d
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FLS.3" }
+	picture = GFX_FLS_Byrd_Event_1_Event
+	
+	fire_only_once = yes
+	
+	trigger = { 
+		FLS = {
+            controls_state = 1176
+			controls_state = 719
+        }
+	}
+	
+	option = {
+		name = FLS.3.a
+		FLS = {
+			white_peace = SAF
+			white_peace = CAN
+			white_peace = NFA				
+            transfer_state = 1176
+            transfer_state = 681
+            transfer_state = 946
+            transfer_state = 719
+		}
+	}
+}
+
+country_event = {
+	id = FLS.4 ###reichspakt surrenders
+	title = FLS.4.t
+	desc = FLS.4.d
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FLS.4" }
+	picture = GFX_FLS_Byrd_Event_1_Event
+	
+	fire_only_once = yes
+	
+	trigger = { 
+		FLS = {
+            controls_state = 1179
+            controls_state = 1178
+            controls_state = 1177
+            controls_state = 543
+        }
+	}
+	
+	option = {
+		name = FLS.4.a
+		FLS = {
+			white_peace = GER
+			white_peace = MAF
+			transfer_state = 1179
+			transfer_state = 1178
+			transfer_state = 1177
+			transfer_state = 543
+			transfer_state = 708
+			transfer_state = 706
+			transfer_state = 707
+		}
+	}
+}
+
+country_event = {
+	id = FLS.5
+	title = FLS.5.t
+	desc = FLS.5.d
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FLS.5" }
+	picture = GFX_FLS_Byrd_Event_1_Event
+	
+	trigger = {
+		tag = FLS
+		has_completed_focus = FLS_THE_FIRST_CONQUEST
+		ARG = {
+			has_war_with = FOP
+		}
+	}
+	
+	fire_only_once = yes
+
+	option = {
+		name = FLS.5.a
+		add_ideas = FLS_military_universal_idea
+		declare_war_on = {
+			target = ARG
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = FOP
+			type = annex_everything
+		}
+		division_template = {
+			name = "远南派遣军"
+			priority = 2
+			division_names_group = FLS_ARMY_01
+			regiments = {
+				paratrooper = { x = 0 y = 0 }
+				paratrooper = { x = 0 y = 1 }
+				paratrooper = { x = 0 y = 2 }
+				paratrooper = { x = 1 y = 0 }
+				paratrooper = { x = 1 y = 1 }
+				paratrooper = { x = 1 y = 2 }
+			}
+			support = {
+				engineer = { x = 0 y = 0 }
+				recon = { x = 0 y = 1 }
+			}
+		}
+		1028 = {
+			create_unit = {
+				division = "name = \"远南派遣军\" division_template = \"远南派遣军\" start_experience_factor = 0.5 start_equipment_factor = 1"
+				allow_spawning_on_enemy_provs = yes
+				owner = FLS
+			}
+			create_unit = {
+				division = "name = \"远南派遣军\" division_template = \"远南派遣军\" start_experience_factor = 0.5 start_equipment_factor = 1"
+				allow_spawning_on_enemy_provs = yes
+				owner = FLS
+			}
+			create_unit = {
+				division = "name = \"远南派遣军\" division_template = \"远南派遣军\" start_experience_factor = 0.5 start_equipment_factor = 1"
+				allow_spawning_on_enemy_provs = yes
+				owner = FLS
+			}
+			create_unit = {
+				division = "name = \"远南派遣军\" division_template = \"远南派遣军\" start_experience_factor = 0.5 start_equipment_factor = 1"
+				allow_spawning_on_enemy_provs = yes
+				owner = FLS
+			}
+		}
+		720 = {
+			create_unit = {
+				division = "name = \"远南派遣军\" division_template = \"远南派遣军\" start_experience_factor = 0.5 start_equipment_factor = 1"
+				allow_spawning_on_enemy_provs = yes
+				owner = FLS
+			}
+			create_unit = {
+				division = "name = \"远南派遣军\" division_template = \"远南派遣军\" start_experience_factor = 0.5 start_equipment_factor = 1"
+				allow_spawning_on_enemy_provs = yes
+				owner = FLS
+			}
+			create_unit = {
+				division = "name = \"远南派遣军\" division_template = \"远南派遣军\" start_experience_factor = 0.5 start_equipment_factor = 1"
+				allow_spawning_on_enemy_provs = yes
+				owner = FLS
+			}
+			create_unit = {
+				division = "name = \"远南派遣军\" division_template = \"远南派遣军\" start_experience_factor = 0.5 start_equipment_factor = 1"
+				allow_spawning_on_enemy_provs = yes
+				owner = FLS
+			}
+		}
+		every_state = {
+			limit = { 
+				OR = {
+				is_core_of = ARG
+				is_claimed_by = ARG						
+				is_core_of = FOP
+				is_claimed_by = FOP
+				is_core_of = CHL
+				is_claimed_by = CHL							
+				}
+			}
+			add_core_of = ROOT
+		}
+	}
+}
+
+country_event = {
+	id = FLS.6 
+	title = FLS.6.t
+	desc = FLS.6.d
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FLS.6" }
+	picture = GFX_FLS_Byrd_Event_1_Event
+	
+	fire_only_once = yes
+	
+	trigger = { 
+		FLS = {
+            controls_state = 517
+        }
+	}
+	
+	option = {
+		name = FLS.6.a
+		FLS = {
+			white_peace = CAN
+			white_peace = NFA
+			white_peace = AST
+			white_peace = NZL
+			white_peace = RUS
+			annex_country = {
+				target = AST
+				transfer_troops = yes
+			}
+			AST = {
+				every_unit_leader = {
+					set_nationality = FLS
+				}
+			}
+			if = {
+				limit = { 
+					NZL = {
+						is_in_faction_with = CAN
+					}
+				}
+				annex_country = {
+					target = NZL
+					transfer_troops = yes
+				}
+				NZL = {
+					every_unit_leader = {
+						set_nationality = FLS
+					}
+				}			
+			}		
+		}
+	}
+}
+
+country_event = {
+	id = FLS.7
+	title = FLS.7.t
+	desc = FLS.7.d
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FLS.7" }
+	picture = GFX_FLS_Byrd_Event_1_Event
+	
+	fire_only_once = yes
+	
+	trigger = { 
+		FLS = {
+            owns_state = 278
+        }
+	}
+	
+	option = {
+		name = FLS.7.a
+		FLS = {
+			set_capital = {
+				state = 278
+			}
+			leave_faction = CAN
+			set_cosmetic_tag = FLS_berd
+		}
+	}
+
+	option = {
+		name = FLS.7.b
+		FLS = {
+			set_capital = {
+				state = 278
+			}
+			set_cosmetic_tag = FLS_crown
+			set_party_name = { ideology = social_democrat long_name = FLS_CAN_Dominion name = FLS_CAN_Dominion }
+			set_party_name = { ideology = social_liberal long_name = FLS_CAN_Dominion name = FLS_CAN_Dominion }
+			set_party_name = { ideology = market_liberal long_name = FLS_CAN_Dominion name = FLS_CAN_Dominion }
+			set_party_name = { ideology = social_conservative long_name = FLS_CAN_Dominion name = FLS_CAN_Dominion }
+			set_party_name = { ideology = authoritarian_democrat long_name = FLS_CAN_Dominion name = FLS_CAN_Dominion }
+			set_party_name = { ideology = paternal_autocrat long_name = FLS_CAN_Dominion name = FLS_CAN_Dominion }
+			set_party_name = { ideology = national_populist long_name = FLS_CAN_Dominion name = FLS_CAN_Dominion }
+		}
+		CAN = {
+			set_autonomy = { target = FLS autonomy_state = autonomous_territory }
+		}
+	}
+
+}
+
+
+
+	

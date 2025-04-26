@@ -454,13 +454,25 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_decision_formable_nations_getodacians"
 		texturefile = "gfx/interface/decisions/decision_formable_nations_getodacians.tga"
-	}	
+	}
+	spriteType = {
+		name = "GFX_decision_formable_nations_western_africa"
+		texturefile = "gfx/interface/decisions/decision_formable_nations_western_africa.tga"
+	}
+	spriteType = {
+		name = "GFX_decision_formable_nations_akhand_bharat"
+		texturefile = "gfx/interface/decisions/decision_formable_nations_akhand_bharat.tga"
+	}			
 	spriteType = {
 		name = "GFX_decision_formable_nations_dongbei_rome"
 		texturefile = "gfx/interface/decisions/decision_formable_nations_dongbei_rome.tga"
 	}	
 	spriteType = {
-		name = "GFX_decision_decision_formable_nations_han_soc"
+		name = "GFX_decision_formable_nations_han_soc"
 		texturefile = "gfx/interface/decisions/decision_formable_nations_han_soc.tga"
+	}	
+	spriteType = {
+		name = "GFX_decision_formable_nations_dazhili"
+		texturefile = "gfx/interface/decisions/decision_formable_nations_dazhili.tga"
 	}						
 }

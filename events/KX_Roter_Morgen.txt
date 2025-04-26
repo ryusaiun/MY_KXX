@@ -4231,7 +4231,7 @@ country_event = { #
 		    		state = 584
 		    	}
 			}
-			UZB = {
+			KHI = {
 				add_state_core = PREV
 				transfer_state = PREV
 			}
@@ -4299,7 +4299,7 @@ country_event = { #
 		KYR = { add_to_faction = TRK }
 		KYR = { add_to_faction = ALO }
 		KYR = { add_to_faction = SMR }
-		KYR = { add_to_faction = UZB }
+		KYR = { add_to_faction = KHI }
 
 		NVS = { add_to_faction = KNS }
 

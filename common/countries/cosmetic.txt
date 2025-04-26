@@ -8698,3 +8698,48 @@ HJL_ZHL = {
 	color = rgb { 8 99 156 }
 	color_ui = rgb { 8 99 156 }
 }
+###4月13日作业
+AG_KTRN = {
+	color = rgb { 191 51 75 }
+	color_ui = rgb { 191 51 75 }
+}
+Nakayama_Naki = {
+	color = rgb { 199 206 215 }
+	color_ui = rgb { 199 206 215 }
+}
+Nakayama_Naki2 = {
+	color = rgb { 199 206 215 }
+	color_ui = rgb { 199 206 215 }
+}
+Nakayama_Naki3 = {
+	color = rgb { 199 206 215 }
+	color_ui = rgb { 199 206 215 }
+}
+Nakayama_Naki4 = {
+	color = rgb { 199 206 215 }
+	color_ui = rgb { 199 206 215 }
+}
+Da_Zhili = {
+	color = rgb { 128 128 128 }
+	color_ui = rgb { 128 128 128 }
+}
+DZL_BEJ = {
+	color = rgb { 128 128 128 }
+	color_ui = rgb { 128 128 128 }
+}
+DZL_TSN = {
+	color = rgb { 128 128 128 }
+	color_ui = rgb { 128 128 128 }
+}
+ROE_Dongbei = {
+    color = rgb { 181 0 0 }
+	color_ui = rgb { 181 0 0 }
+}
+ROE_Dongbei2 = {
+    color = rgb { 181 0 0 }
+	color_ui = rgb { 181 0 0 }
+}
+ROE_Dongbei3 = {
+    color = rgb { 181 0 0 }
+	color_ui = rgb { 181 0 0 }
+}

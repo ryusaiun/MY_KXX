@@ -1,0 +1,30 @@
+FLS_attck_pacific = {
+        priority = 10
+	icon = hol_prepare_the_inundation_lines
+        picture = GFX_decision_crystal_nights
+	available = {  
+                has_completed_focus = FLS_PACIFIC_VOYAGE
+                allowed = { tag = FLS }
+        }
+}
+
+FLS_attck_atlantic = {
+        priority = 10
+	icon = hol_prepare_the_inundation_lines
+        picture = GFX_decision_crystal_nights
+	available = {  
+                has_completed_focus = FLS_ATLANTIC_VOYAGE
+                allowed = { tag = FLS }
+        }
+}
+
+FLS_attck_indian = {
+        priority = 10
+	icon = hol_prepare_the_inundation_lines
+        picture = GFX_decision_crystal_nights
+	available = {  
+                has_completed_focus = FLS_TO_INDIAN_OCEAN
+                allowed = { tag = FLS }
+        }
+}
+

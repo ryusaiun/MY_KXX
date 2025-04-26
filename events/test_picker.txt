@@ -10,11 +10,11 @@ country_event = {
 	
 	option = {
 		name = test_picker.1.a
-		set_country_leader_ideology = radsoc_saint_simonianism_subtype
+		set_country_leader_ideology = sorelian_bolshevism_subtype
 	}
 	option = {
 		name = test_picker.1.b
-		set_country_leader_ideology = ikemenjoshism_subtype
+		set_country_leader_ideology = ultranational_bolshevism_subtype
 	}
 	option = {
 		name = test_picker.1.c
@@ -27,80 +27,6 @@ country_event = {
 	option = {
 		name = test_picker.1.f
 		set_country_leader_ideology = marxism_leninism_banderaism_subtype
-	}
-	option = {
-		name = test_picker.1.g
-		create_country_leader = {
-			name = "西野T"
-			picture = "GFX_flower_trainer"
-			expire = "1.1.1"
-			traits = {  }
-			ideology = doroism_subtype
-		}
-	}
-	option = {
-		name = test_picker.1.h
-		create_country_leader = {
-			name = "混乱状态"
-			picture = "gfx/leaders/funny/Portrait_ZZZ_Anarchy.png"
-			expire = "1.1.1"
-			traits = {  }
-			ideology = cannibalism_proto_subtype
-			}
-		set_party_name = {
-			ideology = totalist
-			name = "KOG_POR_ERROR"
-			long_name = "KOG_POR_ERROR"
-		}				
-		set_party_name = {
-			ideology = syndicalist
-			name = "KOG_POR_ERROR"
-			long_name = "KOG_POR_ERROR"
-		}		
-		set_party_name = {
-			ideology = radical_socialist
-			name = "KOG_POR_ERROR"
-			long_name = "KOG_POR_ERROR"
-		}		
-		set_party_name = {
-			ideology = social_democrat
-			name = "KOG_POR_ERROR"
-			long_name = "KOG_POR_ERROR"
-		}										
-		set_party_name = {
-			ideology = social_liberal
-			name = "KOG_POR_ERROR"
-			long_name = "KOG_POR_ERROR"
-		}
-		set_party_name = {
-			ideology = market_liberal
-			name = "KOG_POR_ERROR"
-			long_name = "KOG_POR_ERROR"
-		}					
-		set_party_name = {
-			ideology = social_conservative
-			name = "KOG_POR_ERROR"
-			long_name = "KOG_POR_ERROR"
-		}		
-		set_party_name = {
-			ideology = authoritarian_democrat
-			name = "KOG_POR_ERROR"
-			long_name = "KOG_POR_ERROR"
-		}	
-		set_party_name = {
-			ideology = paternal_autocrat
-			name = "KOG_POR_ERROR"
-			long_name = "KOG_POR_ERROR"
-		}
-		set_party_name = {
-			ideology = national_populist
-			name = "KOG_POR_ERROR"
-			long_name = "KOG_POR_ERROR"
-		}
-		set_politics = {
-			ruling_party = national_populist
-			elections_allowed = no
-		}
 	}
 }
 

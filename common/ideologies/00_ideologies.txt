@@ -153,9 +153,10 @@ ideologies = {
 			tot_pan_celticism_subtype = { can_be_randomly_selected = no color = { 0 128 0 } } #泛凯尔特主义(KXX)
 			revisionist_sorelianism_subtype = { can_be_randomly_selected = no } #修正索雷尔主义(KXX)
 			millitarist_sorelianism_subtype = { can_be_randomly_selected = no } #军政索雷尔主义(KXX)
+			sorelian_bolshevism_subtype = { can_be_randomly_selected = no } #索雷尔先锋主义(KXX)
 			monarcho_syndicalism_subtype = { can_be_randomly_selected = no } #君主工团主义(KXX)
-			tot_national_mysticism_subtype = { can_be_randomly_selected = no } #民族神秘主义(云的补充)
-
+			tot_national_mysticism_subtype = { can_be_randomly_selected = no } #民族神秘主义
+			ultranational_bolshevism_subtype = { can_be_randomly_selected = no } #民族布尔什维克主义
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_TOTALIST_1"
@@ -251,7 +252,6 @@ ideologies = {
 
 			despotism_vanguard_anarchism_subtype = {can_be_randomly_selected = no color = { 5 5 5 } } #先锋无政府主义（rm扩展）
 			syn_united_front = { can_be_randomly_selected = no } #统一阵线
-			syn_islamism_subtype = { can_be_randomly_selected = no } #阿尔及利亚拓展
 			syn_cannibalism_subtype = { can_be_randomly_selected = no } #食人主义（刚果拓展）
 			syn_national_mysticism_subtype = { can_be_randomly_selected = no } #民族神秘主义(云的补充)
 		}

@@ -1,0 +1,594 @@
+
+FLS_attck_pacific = {
+
+        FLS_seize_eastern_island = {
+		name = FLS_Attack_eastern_island
+		icon = hol_draw_up_staff_plans
+
+		available = {
+			has_equipment = { convoy_1 > 99 }
+                        has_manpower > 99 
+                        NOT = { has_country_flag = fls_ongoing_invasion }
+		}
+
+		visible = {
+			has_completed_focus = FLS_PACIFIC_VOYAGE
+                        NOT = { owns_state = 270 }
+		}
+
+                custom_cost_trigger = {
+			has_equipment = { convoy_1 > 99 }
+		}		
+                custom_cost_text = convoy_flk_decision_cost
+		days_remove = 14
+                days_re_enable = 30
+		fire_only_once = no
+
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision FLS_seize_eastern_island"
+                        set_country_flag = fls_ongoing_invasion
+                        add_equipment_to_stockpile = {
+                       type = convoy_1
+                       amount = -100
+                       producer = FLS
+                      }
+                      add_manpower = 150
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove FLS_seize_eastern_island"
+                        clr_country_flag = fls_ongoing_invasion
+                        random_list = {
+                             50 = {
+                               transfer_state = 270
+                               add_state_core = 270
+                               add_army_experience = 10
+                                 }
+                             50 = {
+                               add_manpower = -100
+
+                              }
+                        }  
+		}
+	}
+
+
+
+ FLS_seize_german_polynesia = {
+		name = FLS_seize_german_polynesia
+		icon = hol_draw_up_staff_plans
+
+		available = {
+			has_equipment = { convoy_1 > 149 }
+                        NOT = { has_country_flag = fls_ongoing_invasion }
+                        has_manpower > 99 
+		}
+
+		visible = {
+			has_completed_focus = FLS_PACIFIC_VOYAGE
+                        NOT = { owns_state = 641 }
+		}
+
+                custom_cost_trigger = {
+			has_equipment = { convoy_1 > 149 }
+		}		
+                custom_cost_text = convoy_flk_decision_cost
+		days_remove = 14
+                days_re_enable = 30
+		fire_only_once = no
+
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision FLS_seize_german_polynesia"
+                        add_equipment_to_stockpile = {
+                       type = convoy_1
+                       amount = -150
+                       producer = FLS
+                      }
+                      add_manpower = 150
+                      set_country_flag = fls_ongoing_invasion 
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove FLS_seize_german_polynesia"
+                        clr_country_flag = fls_ongoing_invasion 
+                        random_list = {
+                             50 = {
+                               transfer_state = 641
+                               add_state_core = 641
+                               add_army_experience = 10
+                                 }
+                             50 = {
+                               add_manpower = -100
+
+                              }
+                        }  
+		}
+	}
+
+
+        FLS_seize_american_samoa = {
+		name = FLS_seize_american_samoa
+		icon = hol_draw_up_staff_plans
+
+		available = {
+			has_equipment = { convoy_1 > 149 }
+                        has_manpower > 99 
+                        NOT = { has_country_flag = fls_ongoing_invasion }
+		}
+
+		visible = {
+			has_completed_focus = FLS_PACIFIC_VOYAGE
+                        NOT = { owns_state = 726 }
+                    
+		}
+
+                custom_cost_trigger = {
+			has_equipment = { convoy_1 > 149 }
+		}		
+                custom_cost_text = convoy_flk_decision_cost
+		days_remove = 14
+                days_re_enable = 30
+		fire_only_once = no
+
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision FLS_seize_american_samoa"
+                        add_equipment_to_stockpile = {
+                       type = convoy_1
+                       amount = -150
+                       producer = FLS
+                      }
+                      add_manpower = 150
+                      set_country_flag = fls_ongoing_invasion 
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove FLS_seize_american_samoa"
+                        clr_country_flag = fls_ongoing_invasion 
+                        random_list = {
+                             50 = {
+                               transfer_state = 726
+                               add_state_core = 726
+                               add_army_experience = 10
+                                 }
+                             50 = {
+                               add_manpower = -100
+
+                              }
+                        }  
+		}
+	}
+
+        
+      FLS_seize_german_samoa = {
+		name = FLS_seize_german_samoa
+		icon = hol_draw_up_staff_plans
+
+		available = {
+			has_equipment = { convoy_1 > 149 }
+                        has_manpower > 99 
+                        NOT = { has_country_flag = fls_ongoing_invasion }
+		}
+
+		visible = {
+			has_completed_focus = FLS_PACIFIC_VOYAGE
+                        NOT = { owns_state = 941 }
+                    
+		}
+
+                custom_cost_trigger = {
+			has_equipment = { convoy_1 > 149 }
+		}		
+                custom_cost_text = convoy_flk_decision_cost
+		days_remove = 14
+                days_re_enable = 30
+		fire_only_once = no
+
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision FLS_seize_american_samoa"
+                        add_equipment_to_stockpile = {
+                       type = convoy_1
+                       amount = -150
+                       producer = FLS
+                      }
+                      add_manpower = 150
+                      set_country_flag = fls_ongoing_invasion 
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove FLS_seize_american_samoa"
+                        clr_country_flag = fls_ongoing_invasion 
+                        random_list = {
+                             50 = {
+                               transfer_state = 941
+                               add_state_core = 941
+                               add_army_experience = 10
+                                 }
+                             50 = {
+                               add_manpower = -150
+
+                              }
+                        }  
+		}
+	}
+
+}
+
+FLS_attck_atlantic = {
+
+        FLS_seize_saint_helena = {
+		name = FLS_seize_saint_helena
+		icon = hol_draw_up_staff_plans
+
+		available = {
+			has_equipment = { convoy_1 > 99 }
+                        NOT = { has_country_flag = fls_ongoing_invasion }
+                        has_manpower > 99 
+		}
+
+		visible = {
+			has_completed_focus = FLS_ATLANTIC_VOYAGE
+                        NOT = { owns_state = 704 }
+		}
+
+                custom_cost_trigger = {
+			has_equipment = { convoy_1 > 99 }
+		}		
+                custom_cost_text = convoy_flk_decision_cost
+		days_remove = 14
+                days_re_enable = 30
+		fire_only_once = no
+
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision FLS_Attack_saint_helena"
+                        set_country_flag = fls_ongoing_invasion
+                        add_equipment_to_stockpile = {
+                       type = convoy_1
+                       amount = -100
+                       producer = FLS
+                      }
+                      add_manpower = 150
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove FLS_Attack_saint_helena"
+                        clr_country_flag = fls_ongoing_invasion
+                        random_list = {
+                             50 = {
+                               transfer_state = 704
+                               add_state_core = 704
+                               add_army_experience = 10
+                                 }
+                             50 = {
+                               add_manpower = -100
+
+                              }
+                        }  
+		}
+	}
+
+
+
+ FLS_seize_ascension = {
+		name = FLS_seize_ascension
+		icon = hol_draw_up_staff_plans
+
+		available = {
+			has_equipment = { convoy_1 > 149 }
+                        NOT = { has_country_flag = fls_ongoing_invasion }
+                        has_manpower > 99 
+		}
+
+		visible = {
+			has_completed_focus = FLS_ATLANTIC_VOYAGE
+                        NOT = { owns_state = 703 }
+		}
+
+                custom_cost_trigger = {
+			has_equipment = { convoy_1 > 149 }
+		}		
+                custom_cost_text = convoy_flk_decision_cost
+		days_remove = 14
+                days_re_enable = 30
+		fire_only_once = no
+
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision FLS_seize_ascension"
+                        add_equipment_to_stockpile = {
+                       type = convoy_1
+                       amount = -150
+                       producer = FLS
+                      }
+                      add_manpower = 150
+                      set_country_flag = fls_ongoing_invasion 
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove FLS_seize_ascension"
+                        clr_country_flag = fls_ongoing_invasion 
+                        random_list = {
+                             50 = {
+                               transfer_state = 703
+                               add_state_core = 703
+                               add_army_experience = 10
+                                 }
+                             50 = {
+                               add_manpower = -100
+
+                              }
+                        }  
+		}
+	}
+
+
+        FLS_seize_saint_thomas = {
+		name = FLS_seize_saint_thomas
+		icon = hol_draw_up_staff_plans
+
+		available = {
+			has_equipment = { convoy_1 > 149 }
+                        NOT = { has_country_flag = fls_ongoing_invasion }
+                        has_manpower > 99 
+		}
+
+		visible = {
+			has_completed_focus = FLS_ATLANTIC_VOYAGE
+                        NOT = { owns_state = 705 }
+                    
+		}
+
+                custom_cost_trigger = {
+			has_equipment = { convoy_1 > 149 }
+		}		
+                custom_cost_text = convoy_flk_decision_cost
+		days_remove = 14
+                days_re_enable = 30
+		fire_only_once = no
+
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision FLS_seize_saint_thomas"
+                        add_equipment_to_stockpile = {
+                       type = convoy_1
+                       amount = -150
+                       producer = FLS
+                      }
+                      add_manpower = 150
+                      set_country_flag = fls_ongoing_invasion 
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove FLS_seize_saint_thomas"
+                        clr_country_flag = fls_ongoing_invasion 
+                        random_list = {
+                             50 = {
+                               transfer_state = 705
+                               add_state_core = 705
+                               add_army_experience = 10
+                                 }
+                             50 = {
+                               add_manpower = -100
+
+                              }
+                        }  
+		}
+	}
+}
+
+
+FLS_attck_indian = {
+
+        FLS_seize_madagascar = {
+		name = FLS_seize_madagascar
+		icon = hol_draw_up_staff_plans
+
+		available = {
+                        NOT = { has_country_flag = fls_ongoing_invasion } 
+		}
+
+		visible = {
+			has_completed_focus = FLS_TO_INDIAN_OCEAN
+                        country_exists = MAG
+		}
+
+                cost = 50
+		days_remove = 14
+		fire_only_once = yes
+
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision FLS_seize_madagascar"
+                        set_country_flag = fls_ongoing_invasion
+                        add_equipment_to_stockpile = {
+                       type = convoy_1
+                       amount = 400
+                       producer = FLS
+                      }
+                      add_manpower = 5250
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove FLS_seize_madagascar"
+                        clr_country_flag = fls_ongoing_invasion
+                        declare_war_on = {
+                        target = MAG
+                          type = annex_everything
+                   }
+                       add_state_core = 1179
+                       add_state_core = 1178
+                       add_state_core = 1177
+                       add_state_core = 543
+                       add_state_core = 708
+                       add_state_core = 706
+                       add_state_core = 707
+                   
+		}
+	}
+
+
+
+ FLS_seize_seychelles = {
+		name = FLS_seize_seychelles
+		icon = hol_draw_up_staff_plans
+
+		available = {
+			has_equipment = { convoy_1 > 149 }
+                        NOT = { has_country_flag = fls_ongoing_invasion }
+                        has_manpower > 99 
+		}
+
+		visible = {
+			has_completed_focus = FLS_TO_INDIAN_OCEAN
+                        NOT = { owns_state = 709 }
+		}
+
+                custom_cost_trigger = {
+			has_equipment = { convoy_1 > 149 }
+		}		
+                custom_cost_text = convoy_flk_decision_cost
+		days_remove = 14
+                days_re_enable = 30
+		fire_only_once = no
+
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision FLS_seize_seychelles"
+                        add_equipment_to_stockpile = {
+                       type = convoy_1
+                       amount = -150
+                       producer = FLS
+                      }
+                      add_manpower = 150
+                      set_country_flag = fls_ongoing_invasion 
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove FLS_seize_seychelles"
+                        clr_country_flag = fls_ongoing_invasion 
+                        random_list = {
+                             50 = {
+                               transfer_state = 709
+                               add_state_core = 709
+                               add_army_experience = 10
+                                 }
+                             50 = {
+                               add_manpower = -100
+
+                              }
+                        }  
+		}
+	}
+
+
+        FLS_seize_diego_garcia = {
+		name = FLS_seize_diego_garcia
+		icon = hol_draw_up_staff_plans
+
+		available = {
+			has_equipment = { convoy_1 > 149 }
+                        NOT = { has_country_flag = fls_ongoing_invasion }
+                        has_manpower > 99 
+		}
+
+		visible = {
+			has_completed_focus = FLS_TO_INDIAN_OCEAN
+                        NOT = { owns_state = 710 }
+                    
+		}
+
+                custom_cost_trigger = {
+			has_equipment = { convoy_1 > 149 }
+		}		
+                custom_cost_text = convoy_flk_decision_cost
+		days_remove = 14
+                days_re_enable = 30
+		fire_only_once = no
+
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision  FLS_seize_diego_garcia"
+                        add_equipment_to_stockpile = {
+                       type = convoy_1
+                       amount = -150
+                       producer = FLS
+                      }
+                      add_manpower = 150
+                      set_country_flag = fls_ongoing_invasion 
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove  FLS_seize_diego_garcia"
+                        clr_country_flag = fls_ongoing_invasion 
+                        random_list = {
+                             50 = {
+                               transfer_state = 710
+                               add_state_core = 710
+                               add_army_experience = 10
+                                 }
+                             50 = {
+                               add_manpower = -100
+
+                              }
+                        }  
+		}
+	}
+
+
+        FLS_seize_christmas_islands = {
+		name = FLS_seize_christmas_islands
+		icon = hol_draw_up_staff_plans
+
+		available = {
+			has_equipment = { convoy_1 > 149 }
+                        NOT = { has_country_flag = fls_ongoing_invasion }
+                        has_manpower > 99 
+		}
+
+		visible = {
+			has_completed_focus = FLS_TO_INDIAN_OCEAN
+                        NOT = { owns_state = 710 }
+                    
+		}
+
+                custom_cost_trigger = {
+			has_equipment = { convoy_1 > 149 }
+		}		
+                custom_cost_text = convoy_flk_decision_cost
+		days_remove = 14
+                days_re_enable = 30
+		fire_only_once = no
+
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision  FLS_seize_christmas_islands"
+                        add_equipment_to_stockpile = {
+                       type = convoy_1
+                       amount = -150
+                       producer = FLS
+                      }
+                      add_manpower = 150
+                      set_country_flag = fls_ongoing_invasion 
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove  FLS_seize_christmas_islands"
+                        clr_country_flag = fls_ongoing_invasion 
+                        random_list = {
+                             50 = {
+                               transfer_state = 711
+                               add_state_core = 711
+                               add_army_experience = 10
+                                 }
+                             50 = {
+                               add_manpower = -100
+
+                              }
+                        }  
+		}
+	}
+}
