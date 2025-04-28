@@ -1472,6 +1472,7 @@ country_event = {
 			factor = 50
 		}
 		hidden_effect = {
+			set_country_flag = FRA_SYNDIE_JOUHAUX
 			create_country_leader = {
 				name = "莱昂·儒奥"
 				desc = "POLITICS_LEON_JOUHAUX_DESC"
@@ -1519,6 +1520,7 @@ country_event = {
 			factor = 50
 		}
 		hidden_effect = {
+			set_country_flag = FRA_SYNDIE_FRACHON
 			create_country_leader = {
 				name = "伯努瓦·弗拉商"
 				desc = "POLITICS_BENOIT_FRACHON_DESC"
@@ -1566,6 +1568,7 @@ country_event = {
       		factor = 33
     	}
    	 	hidden_effect = {
+			set_country_flag = FRA_SYNDIE_ZYROMSKI
       		create_country_leader = {
         	name = "让·齐罗姆斯基"  # Jean Zyromski
         	picture = "gfx/leaders/FRP/Portrait_France_Jean_Zyromski.png"

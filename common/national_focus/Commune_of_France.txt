@@ -2885,7 +2885,7 @@ focus = {
 	x = 12
 	y = 0
 	ai_will_do = {
-		factor = 60
+		factor = 100
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FRA_socialist_education"
@@ -2900,7 +2900,7 @@ focus = {
 	y = 0
 	relative_position_id = FRA_socialist_education
 	ai_will_do = {
-		factor = 60
+		factor = 100
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FRA_road_to_war"
@@ -2982,7 +2982,7 @@ focus = {
 	available = {
 	}
 	ai_will_do = {
-		factor = 60
+		factor = 100
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FRA_avantgarde"
@@ -3159,7 +3159,7 @@ focus = {
 	y = 1
 	relative_position_id = FRA_socialist_education
 	ai_will_do = {
-		factor = 200
+		factor = 100
 	}
 	bypass = {
 		OR = {
@@ -3202,7 +3202,7 @@ focus = {
 	y = 1
 	relative_position_id = FRA_socialist_education
 	ai_will_do = {
-		factor = 30
+		factor = 100
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FRA_department_revolutionary_ideals"
@@ -3281,7 +3281,7 @@ focus = {
 	y = 2
 	relative_position_id = FRA_road_to_war
 	ai_will_do = {
-		factor = 3
+		factor = 80
 	}
 	available = {
 		785 = {
@@ -4972,7 +4972,7 @@ focus = {
 	y = 1
 	relative_position_id = FRA_principe_concentration
 	ai_will_do = {
-		factor = 3
+		factor = 20
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FRA_tank_research"
@@ -4998,7 +4998,7 @@ focus = {
 	y = 3
 	relative_position_id = FRA_principe_concentration
 	ai_will_do = {
-		factor = 3
+		factor = 20
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FRA_fast_army"
@@ -5023,7 +5023,7 @@ focus = {
 	x = -1
 	y = 2
 	relative_position_id = FRA_principe_concentration
-	ai_will_do = { factor = 3 }
+	ai_will_do = { factor = 20 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FRA_tank_assembly_line"
 		add_ideas = FRA_tank_assembly_line_idea
@@ -5041,7 +5041,7 @@ focus = {
 	x = 1
 	y = 2
 	relative_position_id = FRA_principe_concentration
-	ai_will_do = { factor = 3 }
+	ai_will_do = { factor = 20 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FRA_tank_quality_line"
 		add_ideas = FRA_tank_quality_line_idea
@@ -5084,7 +5084,7 @@ focus = {
 	y = 4
 	relative_position_id = FRA_communal_army
 	ai_will_do = {
-		factor = 3
+		factor = 20
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FRA_analysing_wki"
@@ -5107,7 +5107,7 @@ focus = {
 	y = 5
 	relative_position_id = FRA_communal_army
 	ai_will_do = {
-		factor = 3
+		factor = 20
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FRA_war_experience"
@@ -5130,7 +5130,7 @@ focus = {
 	y = 6
 	relative_position_id = FRA_communal_army
 	ai_will_do = {
-		factor = 3
+		factor = 20
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FRA_military_academy"
@@ -5183,7 +5183,7 @@ focus = {
 	y = 3
 	relative_position_id = FRA_officers_initiative
 	ai_will_do = {
-		factor = 5
+		factor = 20
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FRA_empower_rifleman"
@@ -5201,7 +5201,7 @@ focus = {
 	y = 2
 	relative_position_id = FRA_officers_initiative
 	ai_will_do = {
-		factor = 3
+		factor = 20
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FRA_mission_type"
@@ -5224,7 +5224,7 @@ focus = {
 	y = 1
 	relative_position_id = FRA_officers_initiative
 	ai_will_do = {
-		factor = 3
+		factor = 20
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FRA_flexible_support"
@@ -5279,7 +5279,7 @@ focus = {
 	y = 1
 	relative_position_id = FRA_mass_conscription
 	ai_will_do = {
-		factor = 3
+		factor = 20
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FRA_global_organization"
@@ -5304,7 +5304,7 @@ focus = {
 	y = 3
 	relative_position_id = FRA_mass_conscription
 	ai_will_do = {
-		factor = 3
+		factor = 20
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FRA_mass_fire_support"
@@ -5322,7 +5322,7 @@ focus = {
 	y = 2
 	relative_position_id = FRA_mass_conscription
 	ai_will_do = {
-		factor = 3
+		factor = 20
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus FRA_improve_manufactures"
@@ -5579,7 +5579,7 @@ focus = {
 		y = 1
 
 		ai_will_do = {
-			factor = 80
+			factor = 20
 		}
 
 		completion_reward = {
@@ -5636,7 +5636,7 @@ focus = {
 		y = 1
 
 		ai_will_do = {
-			factor = 80
+			factor = 20
 		}
 
 		completion_reward = {
@@ -5731,7 +5731,7 @@ focus = {
 		y = 1
 
 		ai_will_do = {
-			factor = 80
+			factor = 20
 		}
 
 		completion_reward = {
@@ -5767,7 +5767,7 @@ focus = {
 		relative_position_id = FRA_centralized_hc
 		
 		ai_will_do = {
-			factor = 80
+			factor = 20
 		}
 
 		completion_reward = {
@@ -5825,7 +5825,7 @@ focus = {
 		y = 1
 
 		ai_will_do = {
-			factor = 80
+			factor = 20
 		}
 
 		completion_reward = {
@@ -5870,7 +5870,7 @@ focus = {
 		y = 1
 
 		ai_will_do = {
-			factor = 80
+			factor = 20
 		}
 
 		completion_reward = {
@@ -5924,7 +5924,7 @@ focus = {
 		y = 1
 
 		ai_will_do = {
-			factor = 80
+			factor = 20
 		}
 
 		completion_reward = {
@@ -5960,7 +5960,7 @@ focus = {
 		y = 1
 		relative_position_id = FRA_principe_concentration
 		ai_will_do = {
-			factor = 80
+			factor = 20
 		}
 
 		completion_reward = {
@@ -6018,7 +6018,7 @@ focus = {
 		y = 1
 
 		ai_will_do = {
-			factor = 80
+			factor = 20
 		}
 
 		completion_reward = {
@@ -6043,7 +6043,7 @@ focus = {
 		y = 1
 
 		ai_will_do = {
-			factor = 80
+			factor = 20
 		}
 
 		completion_reward = {
@@ -6081,7 +6081,7 @@ focus = {
 		y = 3
 		relative_position_id = FRA_reform_the_high_command
 		ai_will_do = {
-			factor = 80
+			factor = 3
 		}
 
 		completion_reward = {
@@ -6139,7 +6139,7 @@ focus = {
 		y = 1
 
 		ai_will_do = {
-			factor = 80
+			factor = 20
 		}
 
 		completion_reward = {
@@ -6215,7 +6215,7 @@ focus = {
 		y = 1
 
 		ai_will_do = {
-			factor = 80
+			factor = 3
 		}
 
 		completion_reward = {
@@ -6299,7 +6299,7 @@ focus = {
 		y = 1
 
 		ai_will_do = {
-			factor = 80
+			factor = 3
 		}
 
 		completion_reward = {
@@ -6382,7 +6382,7 @@ focus = {
 		y = 1
 
 		ai_will_do = {
-			factor = 80
+			factor = 3
 		}
 
 		completion_reward = {
@@ -6463,7 +6463,7 @@ focus = {
 		y = 1
 
 		ai_will_do = {
-			factor = 80
+			factor = 20
 		}
 
 		completion_reward = {
@@ -6538,7 +6538,7 @@ focus = {
 		y = 1
 
 		ai_will_do = {
-			factor = 80
+			factor = 3
 		}
 
 		completion_reward = {
@@ -6683,7 +6683,7 @@ focus = {
 		y = 1
 
 		ai_will_do = {
-			factor = 80
+			factor = 20
 		}
 
 		completion_reward = {
@@ -6774,7 +6774,7 @@ focus = {
 		y = 1
 
 		ai_will_do = {
-			factor = 80
+			factor = 3
 		}
 
 		completion_reward = {
@@ -6858,7 +6858,7 @@ focus = {
 		y = 3
 
 		ai_will_do = {
-			factor = 80
+			factor = 3
 		}
 
 		completion_reward = {
@@ -6984,7 +6984,7 @@ focus = {
 		y = 1
 
 		ai_will_do = {
-			factor = 80
+			factor = 20
 		}
 
 		completion_reward = {
@@ -7042,7 +7042,7 @@ focus = {
 		y = 1
 
 		ai_will_do = {
-			factor = 80
+			factor = 3
 		}
 
 		completion_reward = {
@@ -7189,7 +7189,7 @@ focus = {
 		y = 2
 
 		ai_will_do = {
-			factor = 80
+			factor = 3
 		}
 
 		completion_reward = {
@@ -8649,6 +8649,1910 @@ focus = {
 		FOCUS_FILTER_RESEARCH
 	}
 }
+	###CGT工团主义###
+	focus = {
+		id = FRA_cgt_mandate
+		icon = GFX_goal_FRA_cgt_mandate
+		x = 20
+		y = 23
+		cost = 5
+		available = {
+			has_global_flag = travailleur_majority_1936
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_cgt_mandate"
+			add_stability = 0.02
+			add_political_power = 10
+			add_popularity =  { ideology = syndicalist popularity = 0.02 }
+		}
+	}
+	
+	focus = {
+		id = FRA_communal_policing
+		icon = GFX_goal_FRA_communal_policing
+		x = -2
+		y = 1
+		relative_position_id = FRA_cgt_mandate
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+		prerequisite = {
+			focus = FRA_cgt_mandate
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_communal_policing"
+			add_popularity =  { ideology = syndicalist popularity = 0.03 }
+			add_stability = 0.03
+		}
+	}
+	
+	focus = {
+		id = FRA_expand_factory_unions
+		icon = GFX_goal_CSA_business_unionism
+		x = 0
+		y = 1
+		relative_position_id = FRA_cgt_mandate
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+		prerequisite = {
+			focus = FRA_cgt_mandate
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_expand_factory_unions"
+			add_popularity = { ideology = syndicalist popularity = 0.02 }
+			add_political_power = 20
+			random_owned_state = {
+				limit = {
+					is_core_of = FRA
+					is_controlled_by = FRA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = FRA
+					is_controlled_by = FRA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_farm_outreach
+		icon = GFX_goal_FRA_farm_outreach
+		x = 2
+		y = 1
+		relative_position_id = FRA_cgt_mandate
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+		prerequisite = {
+			focus = FRA_cgt_mandate
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_farm_outreach"
+			add_popularity = { ideology = syndicalist popularity = 0.02 }
+			add_stability = 0.03
+			random_owned_state = {
+				limit = {
+					is_core_of = FRA
+					is_controlled_by = FRA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = FRA
+					is_controlled_by = FRA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_labor_exchanges
+		icon = GFX_goal_CSA_coop_clubs
+		x = 1
+		y = 2
+		relative_position_id = FRA_cgt_mandate
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+		prerequisite = {
+			focus = FRA_expand_factory_unions
+		}
+		prerequisite = {
+			focus = FRA_farm_outreach
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_labor_exchanges"
+			add_popularity = { ideology = syndicalist popularity = 0.01 }
+			add_stability = 0.02
+			add_political_power = 10
+			random_owned_state = {
+				limit = {
+					is_core_of = FRA
+					is_controlled_by = FRA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_international_insurrection
+		icon = GFX_goal_FRA_international_insurrection
+		x = -1
+		y = 2
+		relative_position_id = FRA_cgt_mandate
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+		prerequisite = {
+			focus = FRA_expand_factory_unions
+		}
+		prerequisite = {
+			focus = FRA_communal_policing
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_international_insurrection"
+			add_ideas = FRA_syndicalist_leadership_idea
+			add_war_support = 0.08
+			add_manpower = 2000
+			add_popularity = { ideology = syndicalist popularity = 0.02 }
+			add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 150
+			producer = FRA
+			}
+			SRI = {
+			add_opinion_modifier = { target = FRA modifier = small_increase }
+			add_war_support = 0.02
+			}
+			ENG = {
+			add_opinion_modifier = { target = FRA modifier = small_increase }
+			add_war_support = 0.02
+			}
+			GER = {
+			add_opinion_modifier = { target = FRA modifier = small_decrease }
+			}
+			AUS = {
+			add_opinion_modifier = { target = FRA modifier = small_decrease }
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_future_of_the_commune
+		icon = GFX_goal_FRA_future_of_commune
+		x = 0
+		y = 3
+		relative_position_id = FRA_cgt_mandate
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+		prerequisite = {
+			focus = FRA_labor_exchanges
+		}
+		prerequisite = {
+			focus = FRA_international_insurrection
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_future_of_the_commune"
+			add_political_power = 30
+			add_popularity = { ideology = syndicalist popularity = 0.08 }
+			add_stability = 0.05
+		}
+	}
+
+	#齐罗姆斯基路线
+	focus = {
+		id = FRA_workers_and_peasants_party
+		icon = GFX_goal_FRA_workers_and_peasants_party
+		x = -6
+		y = 1
+		relative_position_id = FRA_future_of_the_commune
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+		mutually_exclusive = {
+			focus = FRA_monatte_faction
+			focus = FRA_jouhaux_faction
+		}
+		available = {
+			has_country_flag = FRA_SYNDIE_ZYROMSKI
+		}
+		prerequisite = {
+			focus = FRA_future_of_the_commune
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_workers_and_peasants_party"
+			add_popularity = { ideology = syndicalist popularity = 0.03 }
+			add_political_power = 10
+		}
+	}
+	
+	focus = {
+		id = FRA_communal_negotiations
+		icon = GFX_goal_CSA_deal_with_communes
+		x = -1
+		y = 1
+		relative_position_id = FRA_workers_and_peasants_party
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+		prerequisite = {
+			focus = FRA_workers_and_peasants_party
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_communal_negotiations"
+			add_political_power = 25
+			add_stability = 0.04
+			add_manpower = 1000
+			add_war_support = 0.05
+
+		}
+	}
+	
+	focus = {
+		id = FRA_municipal_syndicates
+		icon = GFX_goal_CSA_centralised_syndicalism
+		x = -1
+		y = 2
+		relative_position_id = FRA_workers_and_peasants_party
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+		prerequisite = {
+			focus = FRA_communal_negotiations
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_municipal_syndicates"
+			add_political_power = 30
+			add_stability = 0.05
+			add_popularity = { ideology = syndicalist popularity = 0.03 }
+			random_owned_controlled_state = {
+					limit = {
+						is_core_of = FRA
+						is_controlled_by = FRA
+						industrial_complex > 0
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+			}
+			add_ideas = FRA_reorganized_syndicates_idea_1
+		}
+	}
+	
+	focus = {
+		id = FRA_revolutionary_party2
+		icon = GFX_goal_FRA_revolutionary_party
+		x = 1
+		y = 1
+		relative_position_id = FRA_workers_and_peasants_party
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+		prerequisite = {
+			focus = FRA_workers_and_peasants_party
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_revolutionary_party"
+			add_popularity = { ideology = syndicalist popularity = 0.07 }
+			add_political_power = 35
+			add_command_power = 5
+			add_war_support = 0.03
+			add_manpower = 2000
+			add_ideas = FRA_party_democracy_1_idea
+		}
+	}
+	
+	focus = {
+		id = FRA_internal_democracy
+		icon = GFX_goal_FRA_internal_democracy
+		x = 1
+		y = 2
+		relative_position_id = FRA_workers_and_peasants_party
+		cost = 3.5
+		ai_will_do = {
+			factor = 80
+		}
+		prerequisite = {
+			focus = FRA_revolutionary_party2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_internal_democracy"
+			add_popularity = { ideology = syndicalist popularity = 0.03 }
+			add_political_power = 25
+			add_stability =  0.02
+			swap_ideas = {
+			remove_idea = FRA_party_democracy_1_idea
+			add_idea = FRA_party_democracy_2_idea
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_peasant_committees
+		icon = GFX_goal_FRA_peasant_commitees
+		x = -2
+		y = 3
+		relative_position_id = FRA_workers_and_peasants_party
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+		prerequisite = {
+			focus = FRA_municipal_syndicates
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_peasant_committees"
+			add_popularity = { ideology = syndicalist popularity = 0.04 }
+			add_stability = 0.03
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = FRA
+					is_controlled_by = FRA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = FRA
+					is_controlled_by = FRA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_popular_committees
+		icon = GFX_goal_FRA_popular_committees
+		x = 0
+		y = 3
+		relative_position_id = FRA_workers_and_peasants_party
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+		prerequisite = {
+			focus = FRA_municipal_syndicates
+		}
+		prerequisite = {
+			focus = FRA_internal_democracy
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_popular_committees"
+			add_popularity = { ideology = syndicalist popularity = 0.03 }
+			add_political_power = 25
+			random_owned_controlled_state = {
+					limit = {
+						is_core_of = FRA
+						is_controlled_by = FRA
+						industrial_complex > 0
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+			}
+			swap_ideas = {
+			remove_idea = FRA_reorganized_syndicates_idea_1
+			add_idea = FRA_reorganized_syndicates_idea_2
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_modern_communication_techniques
+		icon = GFX_goal_FRA_nationalize_communications
+		x = 2
+		y = 3
+		relative_position_id = FRA_workers_and_peasants_party
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+		prerequisite = {
+			focus = FRA_internal_democracy
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_modern_communication_techniques"
+			add_war_support = 0.03
+			add_manpower = 1500
+			add_political_power = 25
+			add_popularity = { ideology = syndicalist popularity = 0.05 }
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.75
+				uses = 1
+				category = electronics
+			}
+			random_owned_controlled_state = {
+					limit = {
+						is_core_of = FRA
+						is_controlled_by = FRA
+						infrastructure > 0
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+			}
+			swap_ideas = {
+			remove_idea = FRA_party_democracy_2_idea
+			add_idea = FRA_party_democracy_3_idea
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_marxian_consciouness
+		icon = GFX_goal_FRA_marxist_enlightenment
+		x = 1
+		y = 4
+		relative_position_id = FRA_workers_and_peasants_party
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+		prerequisite = {
+			focus = FRA_popular_committees
+		}
+		prerequisite = {
+			focus = FRA_modern_communication_techniques
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_marxian_consciouness"
+			add_war_support = 0.05
+			add_manpower = 500
+			add_political_power = 25
+			add_popularity = { ideology = syndicalist popularity = 0.04 }
+		}
+	}
+	
+	focus = {
+		id = FRA_workers_and_peasant_militia
+		icon = GFX_goal_FRA_worker_peasant_militias
+		x = -1
+		y = 4
+		relative_position_id = FRA_workers_and_peasants_party
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+		prerequisite = {
+			focus = FRA_popular_committees
+		}
+		prerequisite = {
+			focus = FRA_peasant_committees
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_workers_and_peasant_militia"
+			add_command_power = 5
+			add_political_power = 20
+			add_manpower = 10000
+			add_war_support = 0.03
+			add_ideas = FRA_workers_and_peasant_militia_1_idea
+		}
+	}
+	
+	focus = {
+		id = FRA_general_states_of_the_workers
+		icon = GFX_goal_FRA_general_states_of_workers
+		x = 0
+		y = 5
+		relative_position_id = FRA_workers_and_peasants_party
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+		prerequisite = {
+			focus = FRA_marxian_consciouness
+		}
+		prerequisite = {
+			focus = FRA_workers_and_peasant_militia
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_general_states_of_the_workers"
+			add_political_power = 55
+			add_popularity = { ideology = syndicalist popularity = 0.05 }
+			add_stability = 0.12
+			random_owned_controlled_state = {
+					limit = {
+						is_core_of = FRA
+						is_controlled_by = FRA
+						industrial_complex > 0
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+			}
+			random_owned_controlled_state = {
+					limit = {
+						is_core_of = FRA
+						is_controlled_by = FRA
+						industrial_complex > 0
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+			}
+			random_owned_controlled_state = {
+					limit = {
+						is_core_of = FRA
+						is_controlled_by = FRA
+						infrastructure > 0
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+			}
+			random_owned_controlled_state = {
+					limit = {
+						is_core_of = FRA
+						is_controlled_by = FRA
+						infrastructure > 0
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+			}
+			swap_ideas = {
+			remove_idea = FRA_reorganized_syndicates_idea_2
+			add_idea = FRA_reorganized_syndicates_idea_3
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_undermine_jacobinism
+		icon = GFX_goal_FRA_strike_false_jacobinism
+		x = -3
+		y = 6
+		relative_position_id = FRA_workers_and_peasants_party
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+		prerequisite = {
+			focus = FRA_general_states_of_the_workers
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_undermine_jacobinism"
+			add_popularity = { ideology = totalist popularity = -0.07 }
+			add_popularity = { ideology = syndicalist popularity = 0.03 }
+			add_political_power = 30
+			add_stability = 0.02
+		}
+	}
+	focus = {
+		id = FRA_a_single_school
+		icon = GFX_goal_FRA_union_of_education
+		x = -1
+		y = 6
+		relative_position_id = FRA_workers_and_peasants_party
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+		prerequisite = {
+			focus = FRA_general_states_of_the_workers
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_a_single_school"
+			add_popularity = { ideology = syndicalist popularity = 0.02 }
+			add_stability =  0.03
+			add_political_power = 10
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+			add_tech_bonus = {
+				name = FRA_protect_coastlines
+				bonus = 0.35
+				uses = 1
+				category = radar_tech
+			}
+			add_ideas = FRA_a_single_school
+		}
+	}
+	
+	focus = {
+		id = FRA_popular_combat_front
+		icon = GFX_goal_FRA_popular_combat_front
+		x = 1
+		y = 6
+		relative_position_id = FRA_workers_and_peasants_party
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+		prerequisite = {
+			focus = FRA_general_states_of_the_workers
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_popular_combat_front"
+			add_political_power = 30
+			add_stability = 0.04
+			add_war_support = 0.08
+			add_popularity = { ideology = syndicalist popularity  = 0.03 }
+			army_experience = 6
+			swap_ideas = {
+			remove_idea = FRA_workers_and_peasant_militia_1_idea
+			add_idea = FRA_workers_and_peasant_militia_2_idea
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_spontaneous_action
+		icon = GFX_goal_FRA_spontaneous_action
+		x = 3
+		y = 6
+		relative_position_id = FRA_workers_and_peasants_party
+		cost = 2.5
+		ai_will_do = {
+			factor = 80
+		}
+		prerequisite = {
+			focus = FRA_general_states_of_the_workers
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_spontaneous_action"
+			add_popularity = { ideology = syndicalist popularity  = 0.04 }
+			add_political_power = 40
+			add_war_support = 0.04
+			swap_ideas = {
+			remove_idea = FRA_party_democracy_3_idea
+			add_idea = FRA_party_democracy_4_idea
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_union_munitions
+		icon = GFX_goal_FRA_arms_of_the_people
+		x = 0
+		y = 7
+		relative_position_id = FRA_workers_and_peasants_party
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+		prerequisite = {
+			focus = FRA_a_single_school
+		}
+		prerequisite = {
+			focus = FRA_popular_combat_front
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_union_munitions"
+			add_war_support = 0.05
+			add_manpower = 2000
+			add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 800
+			producer = FRA
+			}
+		add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = 200
+			producer = FRA
+			}
+		add_equipment_to_stockpile = {
+			type = light_tank_equipment_1
+			amount = 15
+			producer = FRA
+			}
+		swap_ideas = {
+			remove_idea = FRA_workers_and_peasant_militia_2_idea
+			add_idea = FRA_workers_and_peasant_militia_3_idea
+			}
+		}
+	}
+	
+	###弗拉商线###
+	
+	focus = {
+		id = FRA_monatte_faction
+		icon = GFX_goal_syndicalism
+		x = 0
+		y = 1
+		relative_position_id = FRA_future_of_the_commune
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+		available = {
+			has_country_flag = FRA_SYNDIE_FRACHON
+		}
+		mutually_exclusive = {
+			focus = FRA_jouhaux_faction
+			focus = FRA_workers_and_peasants_party
+		}
+		prerequisite = {
+			focus = FRA_future_of_the_commune
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_monatte_faction"
+			add_popularity = { ideology = syndicalist popularity = 0.02 }
+			add_political_power = 20
+		}
+	}
+	
+	focus = {
+		id = FRA_union_dominance
+		icon = GFX_goal_FRA_union_dominance
+		x = 0
+		y = 1
+		relative_position_id = FRA_monatte_faction
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+		prerequisite = {
+			focus = FRA_monatte_faction
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_union_dominance"
+			add_popularity = { ideology = syndicalist popularity = 0.02 }
+			add_political_power = 30
+			add_stability = 0.05
+			add_ideas = FRA_union_economy_1_idea
+		}
+	}
+	
+	focus = {
+		id = FRA_communal_statistical_commission
+		icon = GFX_goal_FRA_communal_statistical_commission
+		x = 1
+		y = 2
+		relative_position_id = FRA_monatte_faction
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+		prerequisite = {
+			focus = FRA_union_dominance
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_communal_statistical_commission"
+			add_political_power = 20
+			add_stability = 0.01
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.25
+				uses = 1
+				category = industry
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = FRA
+					is_controlled_by = FRA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			swap_ideas = {
+			remove_idea = FRA_union_economy_1_idea
+			add_idea = FRA_union_economy_2_idea
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_paris_expansion
+		icon = GFX_goal_FRA_paris_expansion
+		x = -1
+		y = 2
+		relative_position_id = FRA_monatte_faction
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+		prerequisite = {
+			focus = FRA_union_dominance
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_paris_expansion"
+			add_popularity = { ideology = syndicalist popularity = 0.01 }
+			16 = {
+				if = {
+					limit = {
+						is_core_of = FRA
+						is_controlled_by = FRA
+						industrial_complex > 0
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_new_cgt_regulars
+		icon = GFX_goal_CSA_proletarian_arms
+		x = -2
+		y = 3
+		relative_position_id = FRA_monatte_faction
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+		prerequisite = {
+			focus = FRA_paris_expansion
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_new_cgt_regulars"
+			add_popularity = { ideology = syndicalist popularity = 0.01 }
+			army_experience = 15
+			add_manpower = 5000
+			add_war_support = 0.05
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 340
+				producer = FRA
+			}
+			add_ideas = FRA_cgt_empowerment_1_idea
+		}
+	}
+	
+	focus = {
+		id = FRA_reign_of_the_working_man
+		icon = GFX_goal_FRA_reign_of_working_man
+		x = 0
+		y = 3
+		relative_position_id = FRA_monatte_faction
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+		prerequisite = {
+			focus = FRA_paris_expansion
+		}
+		prerequisite = {
+			focus = FRA_communal_statistical_commission
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_reign_of_the_working_man"
+			add_political_power = 55
+			add_popularity = { ideology = syndicalist popularity = 0.06 }
+			add_stability = 0.04
+			add_war_support = 0.03
+			swap_ideas = {
+			remove_idea = FRA_cgt_empowerment_1_idea
+			add_idea = FRA_cgt_empowerment_2_idea
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_workingmans_associations
+		icon = GFX_goal_FRA_workingman_associations
+		x = -1
+		y = 4
+		relative_position_id = FRA_monatte_faction
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+		prerequisite = {
+			focus = FRA_new_cgt_regulars
+		}
+		prerequisite = {
+			focus = FRA_reign_of_the_working_man
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_workingmans_associations"
+			add_popularity = { ideology = syndicalist popularity = 0.03 }
+			add_political_power = 20
+			swap_ideas = {
+			remove_idea = FRA_syndicalist_leadership_idea
+			add_idea = FRA_syndicalist_leadership_monatte_idea 
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_union_education
+		icon = GFX_goal_FRA_union_education
+		x = -1
+		y = 5
+		relative_position_id = FRA_monatte_faction
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+		prerequisite = {
+			focus = FRA_workingmans_associations
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_union_education"
+			add_popularity = { ideology = syndicalist popularity = 0.03 }
+			add_stability = 0.03
+		add_tech_bonus = {
+			name = industrial_bonus
+			bonus = 0.5
+			uses = 1
+			category = industry
+		}
+		add_ideas = FRA_union_education
+		}
+	}
+	
+	focus = {
+		id = FRA_bank_of_exchange
+		icon = GFX_BBR_mutual_savings_bank
+		x = 2
+		y = 3
+		relative_position_id = FRA_monatte_faction
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+		prerequisite = {
+			focus = FRA_communal_statistical_commission
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_bank_of_exchange"
+			add_stability = 0.03
+			add_political_power = 30
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = FRA
+					is_controlled_by = FRA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			swap_ideas = {
+			remove_idea = FRA_union_economy_2_idea
+			add_idea = FRA_union_economy_3_idea
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_labour_notes
+		icon = GFX_goal_FRA_labor_notes
+		x = 1
+		y = 4
+		relative_position_id = FRA_monatte_faction
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+		prerequisite = {
+			focus = FRA_bank_of_exchange
+		}
+		mutually_exclusive = {
+			focus = FRA_cost_value_vouchers
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_labour_notes"
+			add_political_power = 20
+			add_popularity = { ideology = syndicalist popularity = 0.02 }
+			add_stability = 0.03
+			random_owned_state = {
+				limit = {
+					is_core_of = FRA
+					is_controlled_by = FRA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = FRA
+					is_controlled_by = FRA
+					infrastructure > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = FRA
+					is_controlled_by = FRA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ideas = FRA_labour_notes_idea
+		}
+	}
+	
+	focus = {
+		id = FRA_cost_value_vouchers
+		icon = GFX_goal_FRA_vouchers
+		x = 3
+		y = 4
+		relative_position_id = FRA_monatte_faction
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+		prerequisite = {
+			focus = FRA_bank_of_exchange
+			focus = FRA_peoples_bank
+		}
+		mutually_exclusive = {
+			focus = FRA_labour_notes
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_cost_value_vouchers"
+			add_stability = 0.03
+			random_owned_state = {
+				limit = {
+					is_core_of = FRA
+					is_controlled_by = FRA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = FRA
+					is_controlled_by = FRA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+			add_ideas = FRA_cost_value_vouchers_idea
+		}
+	}
+	
+	focus = {
+		id = FRA_communal_market
+		icon = GFX_goal_CSA_department_of_production
+		x = 2
+		y = 5
+		relative_position_id = FRA_monatte_faction
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+		prerequisite = {
+			focus = FRA_labour_notes
+			focus = FRA_cost_value_vouchers
+		}
+		available = {
+			has_completed_focus = FRA_monatte_faction
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_communal_market"
+			add_political_power = 30
+			add_stability = 0.05
+			random_owned_state = {
+				limit = {
+					is_core_of = FRA
+					is_controlled_by = FRA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = FRA
+					is_controlled_by = FRA
+					infrastructure > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = FRA
+					is_controlled_by = FRA
+					infrastructure > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			swap_ideas = {
+			remove_idea = FRA_union_economy_3_idea
+			add_idea = FRA_union_economy_4_idea
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_federation_of_labor
+		icon = GFX_goal_FRA_federation_of_labor
+		x = 0
+		y = 6
+		relative_position_id = FRA_monatte_faction
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+		prerequisite = {
+			focus = FRA_communal_market
+		}
+		prerequisite = {
+			focus = FRA_workingmans_associations
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_federation_of_labor"
+			add_popularity = { ideology = syndicalist popularity = 0.05 }
+			add_political_power = 50
+			add_stability = 0.05
+			random_owned_state = {
+				limit = {
+					is_core_of = FRA
+					is_controlled_by = FRA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = FRA
+					is_controlled_by = FRA
+					dockyard > 0
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = FRA
+					is_controlled_by = FRA
+					infrastructure > 0
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			swap_ideas = {
+			remove_idea = FRA_cgt_empowerment_2_idea
+			add_idea = FRA_cgt_empowerment_3_idea
+			}
+		}
+	}
+	
+	###儒奥路线###
+	focus = {
+		id = FRA_jouhaux_faction
+		icon = GFX_goal_FRA_jouhau_faction
+		x = 5
+		y = 1
+		relative_position_id = FRA_future_of_the_commune
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+		available = {
+			has_country_flag = FRA_SYNDIE_JOUHAUX
+		}
+		mutually_exclusive = {
+			focus = FRA_monatte_faction
+			focus = FRA_workers_and_peasants_party
+		}
+		prerequisite = {
+			focus = FRA_future_of_the_commune
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_jouhaux_faction"
+			add_political_power = 20
+			add_stability = 0.02
+		}
+	}
+	
+	focus = {
+		id = FRA_coop_dominance
+		icon = GFX_goal_FRA_Coop_Dominance
+		x = 0
+		y = 1
+		relative_position_id = FRA_jouhaux_faction
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+		prerequisite = {
+			focus = FRA_jouhaux_faction
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_coop_dominance"
+			add_popularity = { ideology = syndicalist popularity = 0.03 }
+			random_owned_state = {
+				limit = {
+					is_core_of = FRA
+					is_controlled_by = FRA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ideas = FRA_coop_economy_1_idea
+		}
+	}
+	
+	focus = {
+		id = FRA_proudhonist_property
+		icon = GFX_goal_FRA_proudhonian_property
+		x = -1
+		y = 2
+		relative_position_id = FRA_jouhaux_faction
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+		prerequisite = {
+			focus = FRA_coop_dominance
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_proudhonist_property"
+			add_political_power = 20
+			add_stability = 0.03
+			add_popularity = { ideology = syndicalist popularity = 0.02 }
+			random_owned_state = {
+				limit = {
+					is_core_of = FRA
+					is_controlled_by = FRA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = FRA
+					is_controlled_by = FRA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			swap_ideas = {
+			remove_idea = FRA_coop_economy_1_idea
+			add_idea = FRA_coop_economy_2_idea
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_peoples_bank
+		icon = GFX_goal_FRA_peoples_banking
+		x = -1
+		y = 3
+		relative_position_id = FRA_jouhaux_faction
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+		prerequisite = {
+			focus = FRA_proudhonist_property
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_peoples_bank"
+			add_political_power = 10
+			add_popularity = { ideology = syndicalist popularity = 0.03 }
+			add_stability = 0.04
+			random_owned_state = {
+				limit = {
+					is_core_of = FRA
+					is_controlled_by = FRA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			swap_ideas = {
+			remove_idea = FRA_coop_economy_2_idea
+			add_idea = FRA_coop_economy_3_idea
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_mutual_credit
+		icon = GFX_goal_CSA_industrial_democracy
+		x = 0
+		y = 4
+		relative_position_id = FRA_jouhaux_faction
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+		prerequisite = {
+			focus = FRA_peoples_bank
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_mutual_credit"
+			random_owned_state = {
+				limit = {
+					is_core_of = FRA
+					is_controlled_by = FRA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = FRA
+					is_controlled_by = FRA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = FRA
+					is_controlled_by = FRA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = FRA
+					is_controlled_by = FRA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			swap_ideas = {
+			remove_idea = FRA_coop_economy_3_idea
+			add_idea = FRA_coop_economy_4_idea
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_social_free_market
+		icon = GFX_goal_FRA_social_free_market
+		x = -1
+		y = 5
+		relative_position_id = FRA_jouhaux_faction
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+		prerequisite = {
+			focus = FRA_mutual_credit
+		}
+		prerequisite = {
+			focus = FRA_cost_value_vouchers
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_social_free_market"
+			random_owned_state = {
+				limit = {
+					is_core_of = FRA
+					is_controlled_by = FRA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = FRA
+					is_controlled_by = FRA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = FRA
+					is_controlled_by = FRA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = FRA
+					is_controlled_by = FRA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			swap_ideas = {
+			remove_idea = FRA_coop_economy_4_idea
+			add_idea = FRA_coop_economy_5_idea
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_streamlined_bureaucracy
+		icon = GFX_goal_FRA_streamlined_bureaucracies
+		x = -2
+		y = 6
+		relative_position_id = FRA_jouhaux_faction
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+		prerequisite = {
+			focus = FRA_communal_market
+			focus = FRA_social_free_market
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_streamlined_bureaucracy"
+			add_political_power = 30
+			add_stability = 0.05
+			add_popularity = { ideology = syndicalist popularity = 0.02 }
+			random_owned_state = {
+				limit = {
+					is_core_of = FRA
+					is_controlled_by = FRA
+					infrastructure > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = FRA
+					is_controlled_by = FRA
+					infrastructure > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = FRA
+					is_controlled_by = FRA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_munipal_representation
+		icon = GFX_goal_CSA_townhall_democarcy
+		x = 2
+		y = 2
+		relative_position_id = FRA_jouhaux_faction
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+		prerequisite = {
+			focus = FRA_coop_dominance
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_munipal_representation"
+			add_political_power = 30
+			add_stability = 0.03
+			add_popularity = { ideology = syndicalist popularity = 0.03 }
+		}
+	}
+	
+	focus = {
+		id = FRA_artisan_education
+		icon = GFX_goal_FRA_artisan_education
+		x = 2
+		y = 3
+		relative_position_id = FRA_jouhaux_faction
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+		prerequisite = {
+			focus = FRA_munipal_representation
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_artisan_education"
+			add_popularity = { ideology = syndicalist popularity = 0.03 }
+			random_owned_state = {
+				limit = {
+					is_core_of = FRA
+					is_controlled_by = FRA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.75
+				uses = 1
+				category = industry
+			}
+			add_ideas = FRA_producerism_1_idea
+		}
+	}
+	
+	focus = {
+		id = FRA_craftsmen_contracts
+		icon = GFX_goal_CSA_social_dividends
+		x = 2
+		y = 4
+		relative_position_id = FRA_jouhaux_faction
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+		prerequisite = {
+			focus = FRA_artisan_education
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_craftsmen_contracts"
+			add_political_power = 20
+			add_stability = 0.02
+			add_popularity = { ideology = syndicalist popularity = 0.02 }
+			random_owned_state = {
+				limit = {
+					is_core_of = FRA
+					is_controlled_by = FRA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = infantry_bonus
+				bonus = 0.25
+				uses = 1
+				category = infantry_weapons
+			}
+			add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.3
+				uses = 1
+				category = armor
+			}
+			add_equipment_to_stockpile = {
+			type = infantry_equipment_2
+				amount = 280
+				producer = FRA
+			}
+			swap_ideas = {
+				remove_idea = FRA_producerism_1_idea
+				add_idea = FRA_producerism_2_idea
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_syndicate_of_production
+		icon = GFX_goal_FRA_syndicate_of_production
+		x = 1
+		y = 5
+		relative_position_id = FRA_jouhaux_faction
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+		prerequisite = {
+			focus = FRA_craftsmen_contracts
+		}
+		prerequisite = {
+			focus = FRA_mutual_credit
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_syndicate_of_production"
+			add_stability = 0.05
+			random_owned_state = {
+				limit = {
+					is_controlled_by = FRA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = FRA
+					arms_factory > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = FRA
+					dockyard > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = convoy
+				amount = 30
+				producer = FRA
+			}
+			add_ideas = FRA_syndicate_of_production_idea
+		}
+	}
+	
+	focus = {
+		id = FRA_syndicate_of_consumption
+		icon = GFX_goal_FRA_syndicate_of_consumption
+		x = 3
+		y = 5
+		relative_position_id = FRA_jouhaux_faction
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+		prerequisite = {
+			focus = FRA_craftsmen_contracts
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_syndicate_of_consumption"
+			add_popularity = { ideology = syndicalist popularity = 0.05 }
+			add_stability = 0.05
+			random_owned_state = {
+				limit = {
+					is_controlled_by = FRA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = FRA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ideas = FRA_syndicate_of_consumption_idea
+		}
+	}
+	
+	focus = {
+		id = FRA_agro_industrial_federation
+		icon = GFX_goal_FRA_agro_industrial_federation
+		x = 2
+		y = 6
+		relative_position_id = FRA_jouhaux_faction
+		cost = 4
+		ai_will_do = {
+			factor = 80
+		}
+		prerequisite = {
+			focus = FRA_syndicate_of_production
+		}
+		prerequisite = {
+			focus = FRA_syndicate_of_consumption
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus FRA_agro_industrial_federation"
+			add_stability = 0.08
+			random_owned_state = {
+				limit = {
+					is_controlled_by = FRA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = FRA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = FRA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = FRA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = FRA
+					industrial_complex > 0
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			swap_ideas = {
+				remove_idea = FRA_producerism_2_idea
+				add_idea = FRA_producerism_3_idea
+			}
+		}
+	}
+	##雅各宾##
 	focus = {
 		id = FRA_begin_revolution
 		icon = GFX_goal_Red_France
@@ -14120,7 +16024,7 @@ focus = {
 			has_completed_focus = FRA_Paris_en_ordre
 			has_country_leader = {
 				ruling_only = yes
-				name = "西蒙娜·威尔"
+				name = "西蒙娜·薇依"
 			}
 		}
 		x = 122

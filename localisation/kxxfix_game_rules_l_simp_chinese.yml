@@ -78,7 +78,7 @@
  RULE_OPTION_FRA_REDNAP_REMAIN: "£GFX_KR_game_rule_flag_FRA_rednap 野望停转"
  RULE_OPTION_FRA_REDNAP_REMAIN_DESC: "我们不需要整合任何领土，那样徒增管理的成本。\n§R需要：§!\n在§Y£GFX_KR_game_rule_flag_FRA_Deat 公社的“光明未来”§!中选择§R£GFX_KR_game_rule_flag_FRA_consulat 赤色拿破仑§!"
  RULE_OPTION_FRA_AFTER_DEAT_CHRIST: "£GFX_KR_game_rule_flag_FRA_christsoc 敬神之人"
- RULE_OPTION_FRA_AFTER_DEAT_CHRIST_DESC: "西蒙娜·威尔和她的基督教社会主义派胜利了。\n§R需要：§!\n在§Y£GFX_KR_game_rule_flag_FRA_Sorelian 国耻日§!中选择§C戴亚恢复秩序§!"
+ RULE_OPTION_FRA_AFTER_DEAT_CHRIST_DESC: "西蒙娜·薇依和她的基督教社会主义派胜利了。\n§R需要：§!\n在§Y£GFX_KR_game_rule_flag_FRA_Sorelian 国耻日§!中选择§C戴亚恢复秩序§!"
  RULE_OPTION_FRA_AFTER_DEAT_ANTIGOD: "£GFX_KR_game_rule_flag_FRA_atheist 厌神之人"
  RULE_OPTION_FRA_AFTER_DEAT_ANTIGOD_DESC: "安德烈·洛吕奥和他的激进无神论派胜利了。\n§R需要：§!\n在§Y£GFX_KR_game_rule_flag_FRA_Sorelian 国耻日§!中选择§C戴亚恢复秩序§!"
  RULE_OPTION_FRA_AFTER_DEAT_CELTIC: "£GFX_KR_game_rule_flag_FRA_celt 凯尔特人"

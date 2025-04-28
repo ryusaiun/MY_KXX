@@ -455,6 +455,9 @@ country_event = {
 		FLS = {
             owns_state = 278
         }
+		NOT = {
+			country_exists = CHL
+		}
 	}
 	
 	option = {
@@ -482,6 +485,20 @@ country_event = {
 			set_party_name = { ideology = authoritarian_democrat long_name = FLS_CAN_Dominion name = FLS_CAN_Dominion }
 			set_party_name = { ideology = paternal_autocrat long_name = FLS_CAN_Dominion name = FLS_CAN_Dominion }
 			set_party_name = { ideology = national_populist long_name = FLS_CAN_Dominion name = FLS_CAN_Dominion }
+			every_state = {
+				limit = { 
+					OR = {
+					is_core_of = PAR
+					is_claimed_by = PAR	
+					is_core_of = URG
+					is_claimed_by = URG
+					}
+				}
+				add_core_of = ROOT
+			}
+			set_country_leader_portrait = {
+				portrait = "gfx/leaders/FLS/Portrait_FLS_Admiral_Byrd_CAN.png"
+			}
 		}
 		CAN = {
 			set_autonomy = { target = FLS autonomy_state = autonomous_territory }

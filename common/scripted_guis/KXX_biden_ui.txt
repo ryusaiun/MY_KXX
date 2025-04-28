@@ -277,7 +277,7 @@ scripted_gui = {
 					has_country_flag = FRA_Andre_Chaumet_VISIBLE
 				}
 			}
-			Simone_Weil_visible = {   #西蒙娜·威尔
+			Simone_Weil_visible = {   #西蒙娜·薇依
 				AND = {
 					has_country_flag = KXX_HOG_veiw
 					has_country_flag = FRA_Simone_Weil_VISIBLE

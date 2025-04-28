@@ -571,7 +571,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_junta
 		x = 16
 		y = 0
-		cost = 10
+		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FLS_army_effort"
 			army_experience = 5
@@ -592,7 +592,7 @@ focus_tree = {
 		relative_position_id = FLS_army_effort
 		x = -1
 		y = 1
-		cost = 10
+		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FLS_equipment_effort"
 			add_tech_bonus = {
@@ -614,7 +614,7 @@ focus_tree = {
 		relative_position_id = FLS_army_effort
 		x = 1
 		y = 1
-		cost = 10
+		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FLS_motorization_effort"
 			add_tech_bonus = {
@@ -633,7 +633,7 @@ focus_tree = {
 		relative_position_id = FLS_army_effort
 		x = 0
 		y = 2
-		cost = 10
+		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FLS_doctrine_effort"
 			army_experience = 5
@@ -654,7 +654,7 @@ focus_tree = {
 		relative_position_id = FLS_army_effort
 		x = -1
 		y = 3
-		cost = 10
+		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FLS_equipment_effort_2"
 			add_tech_bonus = {
@@ -675,7 +675,7 @@ focus_tree = {
 		relative_position_id = FLS_army_effort
 		x = 1
 		y = 3
-		cost = 10
+		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FLS_mechanization_effort"
 			add_tech_bonus = {
@@ -695,7 +695,7 @@ focus_tree = {
 		relative_position_id = FLS_army_effort
 		x = 0
 		y = 4
-		cost = 10
+		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FLS_doctrine_effort_2"
 			army_experience = 5
@@ -716,7 +716,7 @@ focus_tree = {
 		relative_position_id = FLS_army_effort
 		x = -1
 		y = 5
-		cost = 10
+		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FLS_equipment_effort_3"
 			add_tech_bonus = {
@@ -737,7 +737,7 @@ focus_tree = {
 		relative_position_id = FLS_army_effort
 		x = 1
 		y = 5
-		cost = 10
+		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FLS_armor_effort"
 			add_tech_bonus = {
@@ -759,7 +759,7 @@ focus_tree = {
 		relative_position_id = FLS_army_effort
 		x = 0
 		y = 6
-		cost = 10
+		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FLS_special_forces"
 			add_tech_bonus = {
@@ -784,7 +784,7 @@ focus_tree = {
 		icon = GFX_goal_generic_air_command
 		x = 20
 		y = 0
-		cost = 10
+		cost = 5
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FLS_aviation_effort"
@@ -831,7 +831,7 @@ focus_tree = {
 		relative_position_id = FLS_aviation_effort
 		x = -1
 		y = 1
-		cost = 10
+		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FLS_fighter_focus"
 			add_tech_bonus = {
@@ -851,7 +851,7 @@ focus_tree = {
 		relative_position_id = FLS_aviation_effort
 		x = 1
 		y = 1
-		cost = 10
+		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FLS_bomber_focus"
 			add_tech_bonus = {
@@ -872,7 +872,7 @@ focus_tree = {
 		relative_position_id = FLS_aviation_effort
 		x = 0
 		y = 2
-		cost = 10
+		cost = 5
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FLS_aviation_effort_2"
@@ -920,7 +920,7 @@ focus_tree = {
 		relative_position_id = FLS_aviation_effort
 		x = -1
 		y = 3
-		cost = 10
+		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FLS_CAS_effort"
 			add_tech_bonus = {
@@ -941,7 +941,7 @@ focus_tree = {
 		relative_position_id = FLS_aviation_effort
 		x = 0
 		y = 4
-		cost = 10
+		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FLS_rocket_effort"
 			add_tech_bonus = {
@@ -975,7 +975,7 @@ focus_tree = {
 		relative_position_id = FLS_aviation_effort
 		x = 1
 		y = 3
-		cost = 10
+		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FLS_NAV_effort"
 			add_tech_bonus = {
@@ -995,7 +995,7 @@ focus_tree = {
 		icon = GFX_USA_navy_top
 		x = 24
 		y = 0
-		cost = 10
+		cost = 5
 
 		available = {
 			any_owned_state = {
@@ -1083,7 +1083,7 @@ focus_tree = {
 		relative_position_id = FLS_naval_effort
 		x = -1
 		y = 1
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1117,7 +1117,7 @@ focus_tree = {
 		relative_position_id = FLS_naval_effort
 		x = 1
 		y = 1
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1151,7 +1151,7 @@ focus_tree = {
 		relative_position_id = FLS_naval_effort
 		x = -1
 		y = 2
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1185,7 +1185,7 @@ focus_tree = {
 		relative_position_id = FLS_naval_effort
 		x = 1
 		y = 2
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1220,7 +1220,7 @@ focus_tree = {
 		relative_position_id = FLS_naval_effort
 		x = -1
 		y = 3
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1254,7 +1254,7 @@ focus_tree = {
 		relative_position_id = FLS_naval_effort
 		x = 1
 		y = 3
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1291,7 +1291,7 @@ focus_tree = {
 		icon = GFX_goal_CSA_strenght_through_industry
 		x = 28
 		y = 0
-		cost = 10
+		cost = 5
 		available = {
 			OR = {
 				NOT = {	is_ai = yes	}
@@ -1322,7 +1322,7 @@ focus_tree = {
 		relative_position_id = FLS_industrial_effort
 		x = -1
 		y = 1
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2
@@ -1393,7 +1393,7 @@ focus_tree = {
 		relative_position_id = FLS_industrial_effort
 		x = 1
 		y = 1
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2
@@ -1464,7 +1464,7 @@ focus_tree = {
 		relative_position_id = FLS_industrial_effort
 		x = -1
 		y = 2
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2
@@ -1535,7 +1535,7 @@ focus_tree = {
 		relative_position_id = FLS_industrial_effort
 		x = 1
 		y = 2
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2
@@ -1606,7 +1606,7 @@ focus_tree = {
 		relative_position_id = FLS_industrial_effort
 		x = -1
 		y = 3
-		cost = 10
+		cost = 5
 		bypass = {
 			custom_trigger_tooltip = {
 				tooltip = generic_infrastructure_effort_tt
@@ -1699,7 +1699,7 @@ focus_tree = {
 		relative_position_id = FLS_industrial_effort
 		x = 1
 		y = 3
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2
@@ -1770,7 +1770,7 @@ focus_tree = {
 		relative_position_id = FLS_industrial_effort
 		x = -1
 		y = 4
-		cost = 10
+		cost = 5
 		bypass = {
 			custom_trigger_tooltip = {
 				tooltip = generic_infrastructure_effort_tt
@@ -1863,7 +1863,7 @@ focus_tree = {
 		relative_position_id = FLS_industrial_effort
 		x = 1
 		y = 4
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2
@@ -1934,7 +1934,7 @@ focus_tree = {
 		relative_position_id = FLS_industrial_effort
 		x = -1
 		y = 5
-		cost = 10
+		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FLS_extra_tech_slot"
 			add_research_slot = 1
@@ -1953,7 +1953,7 @@ focus_tree = {
 		relative_position_id = FLS_industrial_effort
 		x = -1
 		y = 6
-		cost = 10
+		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FLS_extra_tech_slot_2"
 			add_research_slot = 1
@@ -1970,7 +1970,7 @@ focus_tree = {
 
 		x = 32
 		y = 0
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 
@@ -1991,7 +1991,7 @@ focus_tree = {
 		relative_position_id = FLS_political_effort
 		x = -1
 		y = 1
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 
@@ -2011,9 +2011,7 @@ focus_tree = {
 		available = {
 
 			NOT = {
-
 				has_government = totalist
-				has_government = paternal_autocrat
 				has_government = national_populist
 			}
 		}
@@ -2023,7 +2021,7 @@ focus_tree = {
 		relative_position_id = FLS_political_effort
 		x = 1
 		y = 1
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 
@@ -2043,7 +2041,7 @@ focus_tree = {
 		relative_position_id = FLS_political_effort
 		x = -1
 		y = 2
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 
@@ -2066,7 +2064,7 @@ focus_tree = {
 		relative_position_id = FLS_political_effort
 		x = -1
 		y = 3
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 
@@ -2087,7 +2085,7 @@ focus_tree = {
 		relative_position_id = FLS_political_effort
 		x = -1
 		y = 4
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 
@@ -2109,7 +2107,7 @@ focus_tree = {
 		relative_position_id = FLS_political_effort
 		x = 1
 		y = 2
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 
@@ -2131,7 +2129,7 @@ focus_tree = {
 		relative_position_id = FLS_political_effort
 		x = 1
 		y = 3
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 
@@ -2153,7 +2151,7 @@ focus_tree = {
 		relative_position_id = FLS_political_effort
 		x = 1
 		y = 4
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 
@@ -2175,7 +2173,7 @@ focus_tree = {
 		relative_position_id = FLS_political_effort
 		x = 0
 		y = 5
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 
@@ -2213,7 +2211,7 @@ focus_tree = {
 		relative_position_id = FLS_political_effort
 		x = 0
 		y = 6
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 

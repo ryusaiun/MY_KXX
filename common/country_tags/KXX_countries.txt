@@ -8,3 +8,7 @@ GOA = "countries/POR_colonies.txt"
 JER = "countries/Channel Islands.txt"
 FLS = "countries/Far-Southern State of Falkland Islands.txt"
 FRG = "countries/French Reconstruction Government.txt"
+CHP = "countries/CHP.txt" #香槟
+PRO = "countries/CHP.txt" #普罗旺斯
+DOB = "countries/CHP.txt" #勃艮第
+PDL = "countries/CHP.txt" #卢瓦尔河

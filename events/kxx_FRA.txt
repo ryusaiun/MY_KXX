@@ -964,7 +964,7 @@ option = {
 
 	}
 	create_country_leader = {
-		name = "西蒙娜·威尔"
+		name = "西蒙娜·薇依"
 
 		picture = "gfx/leaders/FRA/Portrait_Simone_Weil.png"
 		expire = "1.1.1"
