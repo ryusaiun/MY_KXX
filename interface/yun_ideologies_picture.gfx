@@ -69,4 +69,19 @@ spriteTypes = {
 		textureFile = "gfx/interface/ideologies/ideology_bars/saint_simonianism.png"
 		legacy_lazy_load = no
 	}
+	spriteType = {
+		name = "GFX_ideology_right_jacobinism_bar"
+		textureFile = "gfx/interface/ideologies/ideology_bars/right_jacobinism.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_ideology_neo_dirigisme_technocratique_bar"
+		textureFile = "gfx/interface/ideologies/ideology_bars/neo_dirigisme_technocratique.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_ideology_paternalistic_reactionaryism_bar"
+		textureFile = "gfx/interface/ideologies/ideology_bars/paternalistic_reactionaryism.png"
+		legacy_lazy_load = no
+	}
 }

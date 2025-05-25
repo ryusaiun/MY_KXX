@@ -89,47 +89,6 @@ country_event = {
 
 }
 
-country_event = { 
-	id = yundebug.77
-	immediate = { log = "[GetDateText]: [Root.GetName]: event yundebug.77" }
-	title = yundebug.77.t
-	desc = yundebug.77.d
-	picture = GFX_report_event_PAP_vatican
-    trigger = {
-		date > 1937.07.01
-		is_ai = no
-	}
-	fire_only_once = yes
-
-	option = {
-		name = yundebug.77.a
-	}
-	
-	option = { 
-		name = yundebug.77.b
-		custom_effect_tooltip = fatima_fuckex	
-		trigger = {
-			has_socialist_government = no
-		}
-		hidden_effect = {
-			FRA = { add_ideas = yun_fatimah_punishment }
-			CNT = { add_ideas = yun_fatimah_punishment }			
-		}
-	}
-
-	option = { 
-		name = yundebug.77.c
-		custom_effect_tooltip = fatima_fuckex
-		trigger = {
-			has_socialist_government = yes
-		}		
-		hidden_effect = {
-			FRA = { add_ideas = yun_fatimah_punishment }
-			CNT = { add_ideas = yun_fatimah_punishment }			
-		}
-	}
-}
-
 country_event = {
 	id = rotermorgenGCW.1848
 	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenGCW.1848" }

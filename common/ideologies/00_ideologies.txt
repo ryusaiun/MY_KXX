@@ -157,6 +157,7 @@ ideologies = {
 			monarcho_syndicalism_subtype = { can_be_randomly_selected = no } #君主工团主义(KXX)
 			tot_national_mysticism_subtype = { can_be_randomly_selected = no } #民族神秘主义
 			ultranational_bolshevism_subtype = { can_be_randomly_selected = no } #民族布尔什维克主义
+			neo_dirigisme_technocratique_subtype = { can_be_randomly_selected = no } #新统制主义
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_TOTALIST_1"
@@ -550,14 +551,13 @@ ideologies = {
 			socdem_national_socialism_subtype = {can_be_randomly_selected = no} #修正国家社会主义
 			
 			socdem_labor_zionism_subtype = { can_be_randomly_selected = no } #社会锡安主义
-			socdem_hartmannism_subtype = { can_be_randomly_selected = no }  #哈特曼主义（制作组彩蛋）
-			socdem_paternal_koishism_subtype = { can_be_randomly_selected = no }  #恋式家长制（制作组彩蛋）
 			socdem_possibilism_subtype = { can_be_randomly_selected = no }  #可能主义
 			socdem_united_front = { can_be_randomly_selected = no } #统一阵线
 			socdem_algerian_socialism_subtype = { can_be_randomly_selected = no } #自管社会主义（阿尔及利亚拓展）
 			individualist_anarchism = { can_be_randomly_selected = no } #个人无政府主义（nr西班牙）
 			socdem_national_mysticism_subtype = { can_be_randomly_selected = no } #民族神秘主义(云的补充)
 			socdem_revisionist_sorelianism_subtype = { can_be_randomly_selected = no } #修正索雷尔主义
+			paternalistic_reactionaryism_subtype = { can_be_randomly_selected = no } #家长式反动主义
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_SOCIAL_DEMOCRAT_1"
@@ -594,8 +594,8 @@ ideologies = {
 
 	social_liberal = {
 		types = {
-		social_liberal_subtype = {} #社会自由主义(无子意识)
-		centrist_subtype = { can_be_randomly_selected = no } #中间路线
+			social_liberal_subtype = {} #社会自由主义(无子意识)
+			centrist_subtype = { can_be_randomly_selected = no } #中间路线
 			soclib_agrarianism_subtype = { can_be_randomly_selected = no } #农业主义
 			soclib_true_whigs_subtype = { can_be_randomly_selected = no } #真辉格主义
 			soclib_warlordism_subtype = { can_be_randomly_selected = no } #自由主义军阀
@@ -660,7 +660,6 @@ ideologies = {
 			byronism_subtype = { can_be_randomly_selected = no } #拜伦主义
 			classical_progressivism = {can_be_randomly_selected = no color = { 135 206 250 }} #古典进步主义
 			soclib_cannibalism_subtype = { can_be_randomly_selected = no } #食人主义（刚果拓展）
-			venizelism_subtype = { can_be_randomly_selected = no } #韦尼泽洛斯主义
 			soclib_national_mysticism_subtype = { can_be_randomly_selected = no } #民族神秘主义(云的补充)
 			lu_xun_thought_subtype = { can_be_randomly_selected = no } #鲁迅思想(云的补充)
 			soclib_ikemenjoshism_subtype = {can_be_randomly_selected = no} #美青年女子至上（制作组彩蛋）
@@ -903,7 +902,6 @@ ideologies = {
 	authoritarian_democrat = {
 		types = {
 			authoritarian_democrat_subtype = {} #威权民主主义（无子意识）
-			
 			autdem_christian_democracy_subtype = { can_be_randomly_selected = no } #威权基督教民主
 			longism_subtype = { can_be_randomly_selected = no } #朗主义
 			authdem_junta_subtype = { can_be_randomly_selected = no } #军政府
@@ -1126,11 +1124,8 @@ ideologies = {
 			pataut_paniranism_subtype = { can_be_randomly_selected = no } #泛伊朗主义(波斯扩展)
 			pau_falangism = { can_be_randomly_selected = no } #长枪主义（民族与革命）
 			pataut_numitheism_subtype = { can_be_randomly_selected = no }  #努米底亚多神教（阿尔及利亚拓展）
-			hartmannism_subtype = { can_be_randomly_selected = no }  #哈特曼主义（制作组彩蛋）
-			paternal_koishism_subtype = { can_be_randomly_selected = no }  #恋式家长制（制作组彩蛋）
 			pau_eternal_revolution = { can_be_randomly_selected = no } #永恒革命 （nr西乌克兰重置）
 			lusotropicalism_subtype = { can_be_randomly_selected = no } #葡萄牙热带主义（刚果拓展）
-			pataut_metaxism_subtype = { can_be_randomly_selected = no } #梅塔克萨斯主义
 			pataut_national_mysticism_subtype = { can_be_randomly_selected = no } #民族神秘主义(云的补充)
 
 			absolute_monarchy_CN_subtype = {can_be_randomly_selected = no color = { 255 216 0 } } #绝对君主制
@@ -1286,8 +1281,7 @@ ideologies = {
 
 			
 			natpop_based_subtype = { can_be_randomly_selected = no } #国家社会主义
-			national_bonapartism_subtype = { can_be_randomly_selected = no }  #民族波拿巴主义
-			blessings_subtype = { can_be_randomly_selected = no }   #五十星祝福
+			right_jacobinism_subtype = { can_be_randomly_selected = no }  #右翼雅各宾主义（FRG）
 			kwantang_Junta_subtype = { can_be_randomly_selected = no }
 			reform_bureaucracy_subtype = { can_be_randomly_selected = no } #革新官僚
 			pan_turkism_subtype = { can_be_randomly_selected = no } # 泛突厥主义
@@ -1309,9 +1303,9 @@ ideologies = {
 			natpop_goebbels_subtype = { can_be_randomly_selected = no }  #民族马克思主义
 			natpop_lusotropicalism_subtype = { can_be_randomly_selected = no } #葡萄牙热带主义（刚果拓展）
 			cannibalism_proto_subtype = {can_be_randomly_selected = no color = { 93 27 29 } } #同类相食（刚果拓展）
-			mercourism_subtype = { can_be_randomly_selected = no color = { 11 46 29 } } #梅尔库里斯主义
-			imperialcult_subtype = { can_be_randomly_selected = no color = { 9 11 57 } } #帝国宗教 （风雨欲来）
+			imperialcult_subtype = { can_be_randomly_selected = no color = { 9 11 57 } } #帝国宗教 （FRG）
 			national_mysticism_subtype = { can_be_randomly_selected = no color = { 91 9 76 } } #民族神秘主义(云的补充)
+			ultranationalism_proto_subtype = { can_be_randomly_selected = no }  #极端民族主义
 
 			Coca_Cola_Monarchy = {can_be_randomly_selected = no color = { 127 0 0 } } #可口可乐君主制
 			Anti_Posadasism_subtype = {can_be_randomly_selected = no color = { 127 0 0 } } #逆波萨达斯主义

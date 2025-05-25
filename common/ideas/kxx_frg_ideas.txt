@@ -329,7 +329,9 @@ ideas = {
 				army_org_factor = 0.3
 				army_org_regain = 0.3				
 				industrial_capacity_factory = 0.5
-				unit_limit_bonus = 50				
+				unit_limit_bonus = 50
+				ai_call_ally_desire_factor = -1000
+				ai_join_ally_desire_factor = -1000		
 			}
 			picture = HOL_unemployed_conscription
 		}
@@ -974,6 +976,129 @@ ideas = {
 				war_support_weekly = 0.02
 				trade_opinion_factor = 0.5
 				monthly_population = 0.4
+			}
+		}
+
+		FRG_getout_idea = { #嘿，别跑！
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_Capone_economic_policy_idea4"}
+			picture = black_legion_activity
+			allowed = { always = no }
+            modifier = {
+				monthly_population = -0.2
+				production_speed_industrial_complex_factor = 0.3
+				production_speed_arms_factory_factor = 0.3
+				repair_speed_arms_factory_factor = 0.3
+				repair_speed_industrial_complex_factor = 0.3
+
+			}
+		}
+
+		FRG_Awaken_the_public_idea = { #唤醒大众
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_Capone_economic_policy_idea4"}
+			picture = legion_chiefs
+			allowed = { always = no }
+            modifier = {
+				war_support_factor = 0.15
+				war_support_weekly = 0.03
+				command_power_gain = 0.2
+				max_command_power = 100
+			}
+		}
+
+		FRG_triangular_trade_idea = { #三角贸易再启动
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_Capone_economic_policy_idea4"}
+			picture = preferred_immigration
+			allowed = { always = no }
+            modifier = {
+				consumer_goods_factor = -0.25
+				consumer_goods_expected_value = -0.25
+				monthly_population = -0.1
+			}
+		}
+
+		FRG_triangular_trade_idea_1 = { #移民潮
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_Capone_economic_policy_idea4"}
+			picture = preferred_immigration
+			allowed = { always = no }
+            modifier = {
+				non_core_manpower = 0.2
+				monthly_population = 0.1
+				consumer_goods_factor = 0.2
+			}
+		}
+
+		FRG_the_french_connection_idea = { #法国贩毒网
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_Capone_economic_policy_idea4"}
+			picture = preferred_immigration
+			allowed = { always = no }
+            modifier = {
+				min_export = 0.2
+			}
+		}
+
+		FRG_the_french_connection_idea_1 = { #法国贩毒网
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_Capone_economic_policy_idea4"}
+			picture = preferred_immigration
+			allowed = { always = no }
+            modifier = {
+				min_export = 0.4
+				trade_opinion_factor = 0.4
+			}
+		}
+
+		FRG_Extracting_highpurity_heroin_idea = { #高纯海洛因
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_Capone_economic_policy_idea4"}
+			picture = PAN_Drugs_Panama
+			allowed = { always = no }
+            modifier = {
+				army_morale_factor = 0.2
+				supply_consumption_factor = -0.2
+				no_supply_grace = 24
+			}
+		}
+
+		FRG_Extracting_highpurity_heroin_idea_1 = { #迷幻世界之梦幻泡影
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_Capone_economic_policy_idea4"}
+			picture = PAN_Drugs_Panama
+			allowed = { always = no }
+            modifier = {
+				army_morale_factor = 0.3
+				supply_consumption_factor = -0.3
+				no_supply_grace = 48
+			}
+		}
+
+		FRG_Pornography_gambling_and_drugs_idea = { #黄赌毒不分家
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_Capone_economic_policy_idea4"}
+			picture = generic_riot
+			allowed = { always = no }
+            modifier = {
+				consumer_goods_factor = -0.2
+				consumer_goods_expected_value = -0.2
+				stability_factor = 0.1
+				industrial_capacity_factory = -0.1
+			}
+		}
+
+		FRG_Pornography_gambling_and_drugs_idea_1 = { #黄赌毒不分家
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_Capone_economic_policy_idea4"}
+			picture = generic_riot
+			allowed = { always = no }
+            modifier = {
+				consumer_goods_factor = -0.4
+				consumer_goods_expected_value = -0.4
+				stability_factor = 0.2
+				industrial_capacity_factory = -0.2
+			}
+		}
+
+		FRG_Expand_arms_trade_idea = { #扩大军火贸易
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CSA_Capone_economic_policy_idea4"}
+			picture = PAN_Guns_Panama
+			allowed = { always = no }
+            modifier = {
+				production_lack_of_resource_penalty_factor = -0.2
+				industrial_capacity_factory = 0.2
 			}
 		}
 

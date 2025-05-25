@@ -1233,7 +1233,7 @@ country_event = {
 	option = { 
 		name = fe.102.b
 		hidden_effect = {
-			country_event = fe.102
+			country_event = fe.101
 		}
 	}
 }

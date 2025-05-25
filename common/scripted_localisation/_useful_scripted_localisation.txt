@@ -4830,16 +4830,9 @@ defined_text = {
 
 	text = {
 		trigger = {
-			has_country_leader_ideology = national_bonapartism_subtype
+			has_country_leader_ideology = right_jacobinism_subtype
 		}
-		localization_key = national_bonapartism_subtype
-	}
-
-	text = {
-		trigger = {
-			has_country_leader_ideology = blessings_subtype
-		}
-		localization_key = blessings_subtype
+		localization_key = right_jacobinism_subtype
 	}
 
 	text = {
@@ -5654,6 +5647,12 @@ defined_text = {
 		}
 		localization_key = ultranational_bolshevism_subtype
 	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = paternalistic_reactionaryism_subtype
+		}
+		localization_key = paternalistic_reactionaryism_subtype
+	}	
     #烤蟹蟹
 	text = {
 		trigger = {
@@ -5705,30 +5704,6 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			has_country_leader_ideology = socdem_hartmannism_subtype
-		}
-		localization_key = socdem_hartmannism_subtype  
-	}
-	text = {
-		trigger = {
-			has_country_leader_ideology = socdem_paternal_koishism_subtype
-		}
-		localization_key = socdem_paternal_koishism_subtype  
-	}
-	text = {
-		trigger = {
-			has_country_leader_ideology = hartmannism_subtype
-		}
-		localization_key = hartmannism_subtype  
-	}
-	text = {
-		trigger = {
-			has_country_leader_ideology = paternal_koishism_subtype
-		}
-		localization_key = paternal_koishism_subtype  
-	}
-	text = {
-		trigger = {
 			has_country_leader_ideology = genshitism_subtype
 		}
 		localization_key = genshitism_subtype  
@@ -5775,24 +5750,6 @@ defined_text = {
 		}
 		localization_key = natpop_goebbels_subtype  
 	}	
-	text = {
-		trigger = {
-			has_country_leader_ideology = venizelism_subtype
-		}
-		localization_key = venizelism_subtype  
-	}
-	text = {
-		trigger = {
-			has_country_leader_ideology = mercourism_subtype
-		}
-		localization_key = mercourism_subtype  
-	}
-	text = {
-		trigger = {
-			has_country_leader_ideology = pataut_metaxism_subtype
-		}
-		localization_key = pataut_metaxism_subtype  
-	}
 	text = {
 		trigger = {
 			has_country_leader_ideology = imperialcult_subtype
@@ -5939,6 +5896,24 @@ defined_text = {
 			has_country_leader_ideology = radsoc_left_occultism_subtype
 		}
 		localization_key = radsoc_left_occultism_subtype
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = right_jacobinism_subtype
+		}
+		localization_key = right_jacobinism_subtype
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = ultranationalism_proto_subtype
+		}
+		localization_key = ultranationalism_proto_subtype
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = neo_dirigisme_technocratique_subtype
+		}
+		localization_key = neo_dirigisme_technocratique_subtype
 	}
 	#民族神秘主义
 	text = {

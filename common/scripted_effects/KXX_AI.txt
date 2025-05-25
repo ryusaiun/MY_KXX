@@ -1,0 +1,638 @@
+FRA_GER_Yunwar = {
+	if = {
+		limit = {
+			FRA = {
+				is_ai = yes
+			}
+		}
+		FRA = {
+			add_timed_idea = {
+				idea = yun_fatimah_punishment
+				days = 700
+			}		
+		}
+	}
+	every_country = {
+		limit = {
+			OR = {
+				tag = GER
+				is_in_faction_with = GER
+			}
+		}
+		add_timed_idea = {
+			idea = GER_reichspakt_emergency_idea
+			days = 999
+		}
+	}
+	GER = {
+		add_ideas = GRU_ger_dying_faterland
+		division_template = {
+			name = "Infanterie-Division"
+			division_names_group = GER_INF_01
+			is_locked = yes
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+				infantry = { x = 2 y = 0 }
+				infantry = { x = 2 y = 1 }
+				infantry = { x = 2 y = 2 }
+			}
+			support = {
+				recon = { x = 0 y = 0 }
+				engineer = { x = 0 y = 1 }
+				artillery = { x = 0 y = 2 }
+				field_hospital = { x = 0 y = 3 }
+			}
+			priority = 1
+		}
+		division_template = {
+			name = "Motorisierte Division"
+			division_names_group = GER_MOT_02
+			is_locked = yes
+			regiments = {
+				motorized = { x = 0 y = 0 }
+				motorized = { x = 0 y = 1 }
+				motorized = { x = 0 y = 2 }
+				motorized = { x = 0 y = 3 }
+				
+				motorized = { x = 1 y = 0 }
+				motorized = { x = 1 y = 1 }
+				motorized = { x = 1 y = 2 }
+				motorized = { x = 1 y = 3 }
+			}
+			support = {
+				mot_recon = { x = 0 y = 0 }
+				engineer = { x = 0 y = 1 }
+				artillery = { x = 0 y = 2 }
+			}
+			priority = 2
+		}
+		division_template = {
+			name = "Kraftwagen Division «Heinrich Himmler»"
+			division_names_group = GER_MOT_02
+			is_locked = yes
+			regiments = {
+				motorized = { x = 0 y = 0 }
+				motorized = { x = 0 y = 1 }
+				motorized = { x = 0 y = 2 }
+				
+				motorized = { x = 1 y = 0 }
+				motorized = { x = 1 y = 1 }
+				motorized = { x = 1 y = 2 }
+
+				mot_artillery_brigade = { x = 2 y = 0 }
+
+				motorized = { x = 3 y = 0 }
+				motorized = { x = 3 y = 1 }
+				
+				motorized = { x = 4 y = 0 }
+			}
+			support = {
+				mot_recon = { x = 0 y = 0 }
+				engineer = { x = 0 y = 1 }
+				anti_air = { x = 0 y = 2 }
+				field_hospital = { x = 0 y = 3 }
+			}
+			priority = 2
+		}
+		division_template = {
+			name = "Kavallerie-Division"
+			division_names_group = GER_MOB_01
+			is_locked = yes
+			regiments = {
+				cavalry = { x = 0 y = 0 }
+				cavalry = { x = 0 y = 1 }
+				cavalry = { x = 0 y = 2 }
+				cavalry = { x = 1 y = 0 }
+				cavalry = { x = 1 y = 1 }
+				cavalry = { x = 1 y = 2 }
+				light_armor = { x = 2 y = 0 }
+			}
+			support = {
+				military_police = { x = 0 y = 0 }
+			}
+			priority = 0
+		}
+		random_owned_state = {
+			prioritize =  { 781 }
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+		}
+		random_owned_state = {
+			prioritize =  { 42 }
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+		}
+		random_owned_state = {
+			prioritize =  { 28 }
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+		}
+		random_owned_state = {
+			prioritize =  { 779 }
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = GER
+			}
+		}
+		random_owned_state = {
+			prioritize =  { 780 }
+			create_unit = {
+				division = "name = \"Kraftwagen Division «Heinrich Himmler»\" division_template = \"Kraftwagen Division «Heinrich Himmler»\" start_experience_factor = 0.75 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "name = \"Kraftwagen Division «Heinrich Himmler»\" division_template = \"Kraftwagen Division «Heinrich Himmler»\" start_experience_factor = 0.75 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "name = \"Kraftwagen Division «Heinrich Himmler»\" division_template = \"Kraftwagen Division «Heinrich Himmler»\" start_experience_factor = 0.75 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "name = \"Kraftwagen Division «Heinrich Himmler»\" division_template = \"Kraftwagen Division «Heinrich Himmler»\" start_experience_factor = 0.75 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "name = \"Kraftwagen Division «Heinrich Himmler»\" division_template = \"Kraftwagen Division «Heinrich Himmler»\" start_experience_factor = 0.75 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "name = \"Kraftwagen Division «Heinrich Himmler»\" division_template = \"Kraftwagen Division «Heinrich Himmler»\" start_experience_factor = 0.75 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "name = \"Kraftwagen Division «Heinrich Himmler»\" division_template = \"Kraftwagen Division «Heinrich Himmler»\" start_experience_factor = 0.75 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "name = \"Kraftwagen Division «Heinrich Himmler»\" division_template = \"Kraftwagen Division «Heinrich Himmler»\" start_experience_factor = 0.75 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "name = \"Kraftwagen Division «Heinrich Himmler»\" division_template = \"Kraftwagen Division «Heinrich Himmler»\" start_experience_factor = 0.75 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "name = \"Kraftwagen Division «Heinrich Himmler»\" division_template = \"Kraftwagen Division «Heinrich Himmler»\" start_experience_factor = 0.75 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "name = \"Kraftwagen Division «Heinrich Himmler»\" division_template = \"Kraftwagen Division «Heinrich Himmler»\" start_experience_factor = 0.75 start_equipment_factor = 1"
+				owner = GER
+			}
+			create_unit = {
+				division = "name = \"Kraftwagen Division «Heinrich Himmler»\" division_template = \"Kraftwagen Division «Heinrich Himmler»\" start_experience_factor = 0.75 start_equipment_factor = 1"
+				owner = GER
+			}					
+		}
+		random_owned_state = {
+			prioritize =  { 52 }
+			create_unit = {
+				division = "division_template = \"Motorisierte Division\" start_experience_factor = 0.5"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Motorisierte Division\" start_experience_factor = 0.5"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Motorisierte Division\" start_experience_factor = 0.5"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Motorisierte Division\" start_experience_factor = 0.5"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Motorisierte Division\" start_experience_factor = 0.5"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Motorisierte Division\" start_experience_factor = 0.5"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Motorisierte Division\" start_experience_factor = 0.5"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Motorisierte Division\" start_experience_factor = 0.5"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Motorisierte Division\" start_experience_factor = 0.5"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Motorisierte Division\" start_experience_factor = 0.5"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Motorisierte Division\" start_experience_factor = 0.5"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Motorisierte Division\" start_experience_factor = 0.5"
+				owner = GER
+			}
+		}
+		random_owned_state = {
+			prioritize =  { 55 }
+			create_unit = {
+				division = "division_template = \"Kavallerie-Division\" start_experience_factor = 0.2"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Kavallerie-Division\" start_experience_factor = 0.2"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Kavallerie-Division\" start_experience_factor = 0.2"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Kavallerie-Division\" start_experience_factor = 0.2"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Kavallerie-Division\" start_experience_factor = 0.2"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Kavallerie-Division\" start_experience_factor = 0.2"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Kavallerie-Division\" start_experience_factor = 0.2"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Kavallerie-Division\" start_experience_factor = 0.2"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Kavallerie-Division\" start_experience_factor = 0.2"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Kavallerie-Division\" start_experience_factor = 0.2"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Kavallerie-Division\" start_experience_factor = 0.2"
+				owner = GER
+			}
+			create_unit = {
+				division = "division_template = \"Kavallerie-Division\" start_experience_factor = 0.2"
+				owner = GER
+			}
+		}
+	}
+}

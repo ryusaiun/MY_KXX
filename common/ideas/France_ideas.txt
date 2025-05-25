@@ -70,7 +70,7 @@ hidden_ideas = {
 		allowed = { always = no }
 		equipment_bonus = { #if you edit this, update FRA_armour_defence_bonus to match
 			armor = {
-				defense = 0.1
+				defense = 0.05
 				instant = yes
 			}
 		}
@@ -82,7 +82,7 @@ hidden_ideas = {
 		allowed = { always = no }
 		equipment_bonus = { #if you edit this, update FRA_armour_breakthrough_bonus to match
 			armor = {
-				breakthrough = 0.1
+				breakthrough = 0.05
 				instant = yes
 			}
 		}
@@ -150,22 +150,15 @@ ideas = {
 			picture = generic_syndicalist_manpower
 			allowed = { always = no }
 			modifier = {
-				conscription = 0.005
 				army_armor_defence_factor = 0.05
 				army_armor_speed_factor = 0.05
 				breakthrough_factor = 0.05
 				army_artillery_attack_factor = 0.05
-				max_dig_in_factor = 0.1
-				dig_in_speed_factor = 0.1
-				conscription_factor = 0.1
 				army_org_factor = 0.05
 				army_morale_factor = 0.05
-				army_infantry_defence_factor = 0.05
-				max_command_power_mult = 0.15
 				command_power_gain_mult = 0.15
 				experience_gain_factor = 0.05
 				out_of_supply_factor = -0.1
-				army_armor_attack_factor = 0.05
 			}
 		}
 
@@ -175,23 +168,12 @@ ideas = {
 			picture = generic_syndicalist_militia
 			allowed = { always = no }
 			modifier = {
-				org_loss_when_moving = -0.15
-				army_armor_defence_factor = 0.05
-				army_armor_speed_factor = 0.05
 				breakthrough_factor = 0.05
 				army_artillery_attack_factor = 0.05
-				max_dig_in_factor = 0.1
-				dig_in_speed_factor = 0.1
 				conscription_factor = 0.1
 				initiative_factor = 0.05
 				army_speed_factor = 0.05
 				coordination_bonus = 0.05
-				army_armor_attack_factor = 0.05
-				terrain_penalty_reduction = 0.1
-				army_attack_speed_factor = 0.05
-				cas_damage_reduction = 0.05
-				army_infantry_attack_factor = 0.05
-
 			}
 		}
 		internationale_support = {

@@ -1,6 +1,148 @@
 ideas = {
 
 	country = {
+		###平衡德法战争
+		yun_fatimah_punishment = {
+			name = yun_fatimah_punishment
+			picture = neon_genesis
+			allowed = { always = no }
+			modifier = {
+				land_reinforce_rate = -0.1
+				army_org_factor = -0.2
+				army_morale_factor = -0.2
+				army_attack_factor = -0.20
+				army_defence_factor = -0.20
+				attrition = 0.15
+				experience_loss_factor = 0.08
+				training_time_factor = 0.5
+				global_building_slots_factor = -0.5
+				production_speed_buildings_factor = -0.5
+				industry_repair_factor = -0.5
+				repair_speed_factor = -0.5
+				industry_free_repair_factor = -0.5
+				production_speed_industrial_complex_factor = -0.5
+				production_speed_arms_factory_factor = -0.5	
+			}
+		}
+		GER_strengthen_the_siegfried_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_Strengthen_the_Siegfried_idea"}
+			modifier = {
+				experience_loss_factor = -0.25
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+				army_speed_factor = 0.15
+				army_armor_attack_factor = 0.15
+				army_armor_defence_factor = 0.15
+				army_armor_speed_factor = 0.1
+				army_artillery_attack_factor = 0.15
+				army_artillery_defence_factor = 0.1
+				training_time_factor = -0.2
+			}
+			picture = SRI_italyreforge
+		}
+		FRA_lose_the_siegfried_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_lose_the_siegfried_idea"}
+			modifier = {
+				army_attack_factor = -0.3
+				experience_loss_factor = 0.50
+				army_org_factor = -0.2
+				army_morale_factor = -0.2
+				army_speed_factor = -0.2
+				army_armor_attack_factor = -0.15
+				army_armor_defence_factor = -0.15
+				army_armor_speed_factor = -0.1
+				army_artillery_attack_factor = -0.15
+				army_artillery_defence_factor = -0.1
+				planning_speed = -0.5
+				land_reinforce_rate = -0.1
+				attrition = 0.3
+				production_factory_max_efficiency_factor = -0.5
+				production_factory_efficiency_gain_factor = -1.0
+				production_lack_of_resource_penalty_factor = 0.75
+				training_time_factor = 0.5
+				out_of_supply_factor = 0.75
+			}
+			picture = SRI_italyreforge
+		}
+		GER_reichspakt_emergency_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_reichspakt_emergency_idea"}
+			targeted_modifier = {
+				tag = RUS
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.15
+			}
+			targeted_modifier = {
+				tag = FRA
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.15
+			}
+			targeted_modifier = {
+				tag = ENG
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.15
+			}
+			targeted_modifier = {
+				tag = SRI
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.15
+			}
+			targeted_modifier = {
+				tag = CNT
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.15
+			}
+			modifier = {
+				ai_focus_aggressive_factor = 0.2
+				breakthrough_factor = 0.2
+				surrender_limit = 0.2
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+				army_speed_factor = 0.1
+				attrition = -0.15
+			}
+			picture = neon_genesis
+		}
+		GER_reichspakt_emergency_idea2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_reichspakt_emergency_idea2"}
+			targeted_modifier = {
+				tag = RUS
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.2
+			}
+			targeted_modifier = {
+				tag = FRA
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.2
+			}
+			targeted_modifier = {
+				tag = ENG
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.2
+			}
+			targeted_modifier = {
+				tag = SRI
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.2
+			}
+			targeted_modifier = {
+				tag = CNT
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.2
+			}
+			modifier = {
+				ai_focus_aggressive_factor = 0.25
+				surrender_limit = 0.3
+				army_core_attack_factor = 0.35
+				army_core_defence_factor = 0.35
+				army_org_factor = 0.2
+				army_morale_factor = 0.2
+				army_speed_factor = 0.15
+				attrition = -0.2
+			}
+			picture = neon_genesis
+		}
 		###第一次选举-工团派###
 		FRA_syndicalist_leadership_idea = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_syndicalist_leadership_idea"}
@@ -700,6 +842,228 @@ ideas = {
 			}
 			picture = radical_education
 		}
+		##无政府-贝斯纳德
+		FRA_push_decentralize = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea FRA_rural_religious_question"}
+			allowed = { always = no }
+			picture = decentralized_planning
+			modifier = {
+				line_change_production_efficiency_factor = -0.02
+				industrial_capacity_factory = -0.03
+				production_speed_arms_factory_factor = 0.08
+				production_speed_industrial_complex_factor = 0.08
+				global_building_slots_factor = 0.1
+
+			}
+		}
+		FRA_push_decentralize2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea FRA_rural_religious_question"}
+			allowed = { always = no }
+			picture = decentralized_planning
+			modifier = {
+				line_change_production_efficiency_factor = 0.02
+				industrial_capacity_factory = 0.03
+				production_speed_arms_factory_factor = 0.08
+				production_speed_industrial_complex_factor = 0.08
+				global_building_slots_factor = 0.1
+				local_resources_factor = 0.05
+			}
+		}
+		FRA_pure_syndicalism = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea FRA_rural_religious_question"}
+			allowed = { always = no }
+			picture = generic_syndicalist_revolution
+			modifier = {
+				consumer_goods_factor = 0.05
+				consumer_goods_expected_value = 0.05
+				production_factory_max_efficiency_factor = 0.03
+				production_factory_efficiency_gain_factor = 0.03
+				local_resources_factor = 0.03
+			}
+		}
+		FRA_pure_syndicalism2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea FRA_rural_religious_question"}
+			allowed = { always = no }
+			picture = generic_syndicalist_revolution
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_factory_max_efficiency_factor = 0.03
+				production_factory_efficiency_gain_factor = 0.03
+				local_resources_factor = 0.03
+				fuel_gain_factor = 0.25
+				global_building_slots = 1
+				industry_repair_factor = 0.1
+				monthly_population = 0.2
+
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.05
+					soft_attack = 0.05
+					hard_attack = 0.05
+
+					instant = yes
+				}
+			}
+		}
+		FRA_pure_syndicalism3 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea FRA_rural_religious_question"}
+			allowed = { always = no }
+			picture = generic_syndicalist_revolution
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_factory_max_efficiency_factor = 0.03
+				production_factory_efficiency_gain_factor = 0.03
+				local_resources_factor = 0.03
+				fuel_gain_factor = 0.25
+				global_building_slots = 1
+				industry_repair_factor = 0.1
+				monthly_population = 0.2
+				production_factory_start_efficiency_factor = 0.03
+				production_factory_max_efficiency_factor = 0.03
+				production_factory_efficiency_gain_factor = 0.03
+				production_speed_buildings_factor = 0.05
+				command_power_gain_mult = 0.1
+				max_command_power_mult = 0.1
+
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.05
+					soft_attack = 0.05
+					hard_attack = 0.05
+					defense = 0.05
+					breakthrough = 0.05
+					hardness = 0.05
+
+					instant = yes
+				}
+			}
+		}
+		FRA_pure_syndicalism4 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea FRA_rural_religious_question"}
+			allowed = { always = no }
+			picture = generic_syndicalist_revolution
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_factory_max_efficiency_factor = 0.03
+				production_factory_efficiency_gain_factor = 0.03
+				local_resources_factor = 0.03
+				fuel_gain_factor = 0.25
+				global_building_slots = 1
+				industry_repair_factor = 0.1
+				monthly_population = 0.2
+				production_factory_start_efficiency_factor = 0.03
+				production_factory_max_efficiency_factor = 0.03
+				production_factory_efficiency_gain_factor = 0.03
+				production_speed_buildings_factor = 0.05
+				command_power_gain_mult = 0.1
+				max_command_power_mult = 0.1
+
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1
+					soft_attack = 0.1
+					hard_attack = 0.1
+					defense = 0.1
+					breakthrough = 0.1
+					hardness = 0.1
+					instant = yes
+				}
+			}
+		}
+		FRA_single_and_equal_pay = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea FRA_rural_religious_question"}
+			allowed = { always = no }
+			picture = WHR_goods_vouchers_community
+			modifier = {
+				consumer_goods_factor = -0.1
+				consumer_goods_expected_value = -0.1
+				production_factory_max_efficiency_factor = -0.02
+				production_factory_efficiency_gain_factor = -0.03
+				industrial_capacity_factory = 0.05
+				stability_factor = 0.1
+			}
+		}
+		FRA_pursue_autarky = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea FRA_rural_religious_question"}
+			allowed = { always = no }
+			picture = generic_autarky
+			modifier = {
+				min_export = -0.1
+				conscription_factor = 0.2
+				production_speed_bunker_factor = 0.2
+				production_speed_infrastructure_factor = 0.2
+
+			}
+		}
+		FRA_scientist_unions = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea FRA_rural_religious_question"}
+			allowed = { always = no }
+			picture = new_sciences
+			modifier = {
+				research_speed_factor = 0.1
+				supply_node_range = 0.1
+				military_industrial_organization_research_bonus = 0.1
+				military_industrial_organization_funds_gain = 0.1
+				army_fuel_consumption_factor = -0.1
+			}
+		}
+		FRA_economic_rationalization = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea FRA_rural_religious_question"}
+			allowed = { always = no }
+			picture = generic_autarky
+			modifier = {
+				min_export = -0.1
+				conscription_factor = 0.2
+				production_speed_bunker_factor = 0.2
+				production_speed_infrastructure_factor = 0.2
+				supply_consumption_factor = -0.1
+				production_factory_max_efficiency_factor = 0.04
+				production_factory_efficiency_gain_factor = 0.04
+			}	
+		}
+		#无政府（介朗）
+		FRA_bonds_of_friendship = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea FRA_rural_religious_question"}
+			allowed = { always = no }
+			picture = BBR_socialist_civic_identity
+			modifier = {
+				send_volunteer_divisions_required = -0.1
+				opinion_gain_monthly_factor = 0.25
+				min_export = 0.1
+				trade_opinion_factor = 0.25
+				compliance_starting_value = 0.1
+				compliance_growth = 0.25
+			
+			}
+		}
+		FRA_automous_web_committe = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea FRA_rural_religious_question"}
+			allowed = { always = no }
+			picture = BBR_top_down_autonomy
+			modifier = {
+				political_power_factor = 0.15
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				required_garrison_factor = -0.1
+				attrition = -0.1
+
+			}
+		}
+		FRA_embrace_ancom = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea FRA_rural_religious_question"}
+			allowed = { always = no }
+			picture = anarcho_marxist_economy
+			modifier = {
+				production_speed_buildings_factor = 0.03
+				production_speed_arms_factory_factor = 0.03
+				production_speed_industrial_complex_factor = 0.03
+				research_speed_factor = 0.05
+				political_power_gain = 0.15
+			}
+		}													
 		#索雷尔重置
 		FRA_combatant3 = {#战斗者集团
 			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}

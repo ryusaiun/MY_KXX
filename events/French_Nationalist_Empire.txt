@@ -1,497 +1,117 @@
-﻿
-
-#add_namespace = fne
-add_namespace = frg
-
-country_event = { 
-	id = frg.100
-	immediate = {log = "[GetDateText]: [Root.GetName]: event fne.3"}
-	title = fne.3.t
-	desc = fne.3.d
-	picture = GFX_FRG_soldiers_frg_Event
-
-	is_triggered_only = yes
-	fire_only_once = yes
-
-	option = {
-		name = fne.3.a
-		ai_chance = {
-		    factor = 35
-		}
-		CHP = {
-			CHP = { transfer_state = 18 }
-			CHP = { add_state_core = 18 }
-			hidden_effect = {		
-				create_faction = "果农同盟阵线"
-				add_manpower = 100000
-				add_equipment_to_stockpile = {
-					type = infantry_equipment
-					amount = 10000
-					producer = FRA
-				}
-				division_template = {
-					name = "农民武装"
-					priority = 3
-					regiments = {
-						infantry = { x = 0 y = 0 }
-						infantry = { x = 0 y = 1 }
-						infantry = { x = 0 y = 2 }
-						infantry = { x = 0 y = 3 }
-						infantry = { x = 0 y = 4 }
-						infantry = { x = 0 y = 5 }
-						infantry = { x = 0 y = 6 }
-					}
-				}
-				random_owned_controlled_state = {
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = CHP
-					}
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = CHP
-					}
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = CHP
-					}
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = CHP
-					}
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = CHP
-					}
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = CHP
-					}
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = CHP
-					}
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = CHP
-					}create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = CHP
-					}
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = CHP
-					}
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = CHP
-					}
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = CHP
-					}
-				}
-			}
-		}
-
-		DOB = {
-			DOB = { transfer_state = 27 }
-			DOB = { add_state_core = 27 }
-			hidden_effect = {		
-				add_manpower = 100000
-				add_equipment_to_stockpile = {
-					type = infantry_equipment
-					amount = 10000
-					producer = FRA
-				}
-				division_template = {
-					name = "农民武装"
-					priority = 3
-					regiments = {
-						infantry = { x = 0 y = 0 }
-						infantry = { x = 0 y = 1 }
-						infantry = { x = 0 y = 2 }
-						infantry = { x = 0 y = 3 }
-						infantry = { x = 0 y = 4 }
-						infantry = { x = 0 y = 5 }
-						infantry = { x = 0 y = 6 }
-					}
-				}
-				random_owned_controlled_state = {
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = DOB
-					}
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = DOB
-					}
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = DOB
-					}
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = DOB
-					}
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = DOB
-					}
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = DOB
-					}
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = DOB
-					}
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = DOB
-					}create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = DOB
-					}
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = DOB
-					}
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = DOB
-					}
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = DOB
-					}
-				}
-			}
-		}
-
-		PDL = {
-			PDL = { transfer_state = 14 }
-			PDL = { add_state_core = 14 }
-			PDL = { transfer_state = 23 }
-			PDL = { add_state_core = 23 }
-			PDL = { transfer_state = 983 }
-			PDL = { add_state_core = 983 }
-			hidden_effect = {		
-				add_manpower = 100000
-				add_equipment_to_stockpile = {
-					type = infantry_equipment
-					amount = 10000
-					producer = FRA
-				}
-				division_template = {
-					name = "农民武装"
-					priority = 3
-					regiments = {
-						infantry = { x = 0 y = 0 }
-						infantry = { x = 0 y = 1 }
-						infantry = { x = 0 y = 2 }
-						infantry = { x = 0 y = 3 }
-						infantry = { x = 0 y = 4 }
-						infantry = { x = 0 y = 5 }
-						infantry = { x = 0 y = 6 }
-					}
-				}
-				random_owned_controlled_state = {
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = PDL
-					}
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = PDL
-					}
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = PDL
-					}
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = PDL
-					}
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = PDL
-					}
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = PDL
-					}
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = PDL
-					}
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = PDL
-					}
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = PDL
-					}
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = PDL
-					}
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = PDL
-					}
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = PDL
-					}
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = PDL
-					}
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = PDL
-					}
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = PDL
-					}
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = PDL
-					}
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 1 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = PDL
-					}
-				}
-			}
-		}
-
-		PRO = {
-			PRO = { transfer_state = 21 }
-			PRO = { add_state_core = 21 }
-			PRO = { transfer_state = 763 }
-			PRO = { add_state_core = 763 }
-			hidden_effect = {		
-				add_manpower = 100000
-				add_equipment_to_stockpile = {
-					type = infantry_equipment
-					amount = 10000
-					producer = FRA
-				}
-				division_template = {
-					name = "农民武装"
-					priority = 3
-					regiments = {
-						infantry = { x = 0 y = 0 }
-						infantry = { x = 0 y = 1 }
-						infantry = { x = 0 y = 2 }
-						infantry = { x = 0 y = 3 }
-						infantry = { x = 0 y = 4 }
-						infantry = { x = 0 y = 5 }
-						infantry = { x = 0 y = 6 }
-					}
-				}
-				random_owned_controlled_state = {
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = PRO
-					}
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = PRO
-					}
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = PRO
-					}
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = PRO
-					}
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = PRO
-					}
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = PRO
-					}
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = PRO
-					}
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = PRO
-					}
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = PRO
-					}
-					create_unit = {
-						division = "name = \"农民武装\" division_template = \"农民武装\" start_experience_factor = 0.5 start_equipment_factor = 1"
-						allow_spawning_on_enemy_provs = yes
-						owner = PRO
-					}
-				}
-			}
-		} 
-		hidden_effect = {
-			CHP = { add_to_faction = DOB }
-			CHP = { add_to_faction = PRO }
-			CHP = { add_to_faction = PDL }
-			DOB = {
-				declare_war_on = { target = FRA type = annex_everything }
-			}
-			CHP = {
-				declare_war_on = { target = FRA type = annex_everything }
-			}
-			PDL = {
-				declare_war_on = { target = FRA type = annex_everything }
-			}
-			PRO = {
-				declare_war_on = { target = FRA type = annex_everything }
-			}
-			FRA = {
-				add_ideas = FRA_Fruit_Farmer_Revolution	
-			}
-			FRA = {
-				activate_mission = FRA_surviving_Farmer_Revolution
-			}
-		}	
-	}  
-}
+﻿add_namespace = frg
 
 country_event = {
-	id = frg.101
-	hidden = yes
-	fire_only_once = yes
-	is_triggered_only = yes
-	immediate = {
-		log = "[GetDateText]: [Root.GetName]: event fne.28"
-		FRA = {
-			white_peace = CHP
-		}
-	}
-}
-
-country_event = {
-	id = frg.210
+	id = frg.13
 	immediate = {log = "[GetDateText]: [Root.GetName]: event comfrance.971"}
-	title = fne.21.t
-	desc = fne.21.d
+	title = frg.13.t
+	desc = frg.13.d
 	picture = GFX_news_event_FRA_anarchist_bombings
 	fire_only_once = yes
 	is_triggered_only = yes
 	
 	option = {	
-        name = fne.21.a
-		set_politics = {
-			ruling_party = totalist
-			elections_allowed = no
+		name = frg.13.a
+		FRA = {
+			set_politics = {
+				ruling_party = totalist
+				elections_allowed = no
+			}
+			create_country_leader = {
+				name = "莫里斯·多列士"
+				desc = "POLITICS_MAURICE_THOREZ_DESC"
+				picture = "gfx/leaders/FRA/Portrait_France_Maurice_Thorez.png"
+				expire = "1965.1.1"
+				ideology = jacobinism_subtype
+			}
+			delete_unit = { 
+				division_template = "Brigade de Chars de Combat"
+				disband = no
+			}	
 		}
-		create_country_leader = {
-			name = "莫里斯·多列士"
-			desc = "POLITICS_MAURICE_THOREZ_DESC"
-			picture = "gfx/leaders/FRA/Portrait_France_Maurice_Thorez.png"
-			expire = "1965.1.1"
-			ideology = jacobinism_subtype
-		}
-        FRG = { change_tag_from = FRA }
-        hidden_effect = {
-            FRG = { transfer_state = 762 }
-            FRG = { transfer_state = 21 }
-            FRG = { transfer_state = 763 }
-            FRG = { transfer_state = 32 }
-            FRG = { transfer_state = 735 }
-            FRG = { transfer_state = 20 }
-            FRG = { transfer_state = 26 }
-            FRG = { transfer_state = 22 }
-			FRG = { transfer_state = 25 }
-            JDF = { transfer_state = 785 }
+		FRG = { change_tag_from = FRA }
+		hidden_effect = {
+		    FRG = { transfer_state = 762 }
+		    FRG = { transfer_state = 21 }
+		    FRG = { transfer_state = 763 }
+		    FRG = { transfer_state = 32 }
+		    FRG = { transfer_state = 735 }
+		    FRG = { transfer_state = 20 }
+		    FRG = { transfer_state = 26 }
+		    FRG = { transfer_state = 22 }		
 			OCC = { transfer_state = 817 }
 			OCC = { transfer_state = 984 }
 			OCC = { transfer_state = 31 }
 			OCC = { transfer_state = 19 }
 			OCC = { transfer_state = 22 }
-			NRM = { transfer_state = 15 }
+			OCC = { transfer_state = 1334 }
 			BRI = { transfer_state = 983 }
 			BRI = { transfer_state = 14 }
-            FRG = { 
-				add_state_core = 762
-                add_state_core = 21
-                add_state_core = 763
-                add_state_core = 32
-                add_state_core = 735
-                add_state_core = 20
-                add_state_core = 26
-				add_state_core = 25
-				create_country_leader = {
-  					name = "科洛内尔·雷米"  # Colonel Rémy
-  					picture = "gfx/leaders/FRA/Portrait_FRA_Gilbert_Renault_KX.png"
-  					expire = "1.1.1"
-  					ideology = maurrassism_subtype
-				}
+			LRE = { transfer_state = 27 }
+			LRE = { transfer_state = 785 }
+			LRE = { transfer_state = 18 }
+			every_state = {
+				limit = { is_core_of = FRA }
+				add_claim_by = FRG
 			}
-			JDF = { 
-				add_state_core = 785
-				set_politics = {
-					ruling_party = authoritarian_democrat
-					elections_allowed = no
+		    FRG = { 
+				add_state_core = 762
+				add_state_core = 21
+				add_state_core = 763
+				add_state_core = 32
+				add_state_core = 735
+				add_state_core = 20
+				add_state_core = 26
+				add_state_core = 25							
+			}
+			LRE = {
+				division_template = {
+					name = "Brigade de Chars de Combat"
+					division_names_group = FRA_ARM_01
+					regiments = {
+						light_armor = { x = 0 y = 0 }
+						light_armor = { x = 0 y = 1 }
+						light_armor = { x = 0 y = 2 }
+						light_armor = { x = 1 y = 0 }
+						light_armor = { x = 1 y = 1 }
+						light_armor = { x = 1 y = 2 }
+						motorized = { x = 2 y = 0 }
+						motorized = { x = 2 y = 1 }
+						motorized = { x = 2 y = 2 }
+						motorized = { x = 2 y = 3 }
+					}
+					support = {
+						recon = { x = 0 y = 0 }
+						engineer = { x = 0 y = 1 }
+						artillery = { x = 0 y = 2 }
+					}
+					priority = 2
 				}
+				18 = {
+					create_unit = {
+						division = "division_template = \"Brigade de Chars de Combat\" start_experience_factor = 0.3 start_equipment_factor = 1.0"
+						owner = LRE
+					}
+					create_unit = {
+						division = "division_template = \"Brigade de Chars de Combat\" start_experience_factor = 0.3 start_equipment_factor = 1.0"
+						owner = LRE
+					}
+					create_unit = {
+						division = "division_template = \"Brigade de Chars de Combat\" start_experience_factor = 0.3 start_equipment_factor = 1.0"
+						owner = LRE
+					}
+					create_unit = {
+						division = "division_template = \"Brigade de Chars de Combat\" start_experience_factor = 0.3 start_equipment_factor = 1.0"
+						owner = LRE
+					}
+					create_unit = {
+						division = "division_template = \"Brigade de Chars de Combat\" start_experience_factor = 0.3 start_equipment_factor = 1.0"
+						owner = LRE
+					}
+				}
+				add_state_core = 27
+				add_state_core = 785
+				add_state_core = 18	
+				set_cosmetic_tag = LRE_GrandEst	
 			}
 			OCC = { 
 				add_state_core = 817
@@ -499,17 +119,18 @@ country_event = {
 				add_state_core = 31
 				add_state_core = 19
 				add_state_core = 22
+				add_state_core = 1334
 				set_politics = {
 					ruling_party = authoritarian_democrat
 					elections_allowed = no
 				}
-			}
-			NRM = { 
-				add_state_core = 15
-				set_politics = {
-					ruling_party = totalist
-					elections_allowed = no
+				add_manpower = 800000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 50000
+					producer = FRA
 				}
+				add_timed_idea = { idea = yun_skull_army days = 100 }
 			}
 			BRI = { 
 				add_state_core = 983
@@ -518,93 +139,77 @@ country_event = {
 					ruling_party = paternal_autocrat
 					elections_allowed = no
 				}
-			}
-			FRA = {
-           		transfer_units_fraction= {
-	    			target = FRG
-	    			size = 0.4
-	    			stockpile_ratio = 0.7
-	    			army_ratio = 0.5
-	    			air_ratio = 0.2
-        	    }
+				add_manpower = 800000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 50000
+					producer = FRA
+				}
+				add_timed_idea = { idea = yun_skull_army days = 100 }
 			}
 			FRG = {
-				add_ideas = FRG_Robert_Brasillach_hog_npo
-				add_ideas = FRG_POI_Leon_Degrelle_npo
-				add_ideas = FRG_POI_Maurice_Papon_npo
-				add_ideas = FRG_POI_Francis_Delaisi_npo
-				add_ideas = PB_FRA_Crumbling_Coalition
-				add_ideas = PB_FRA_Bitter_Revanchism
-				country_event = { id = fne.27 } 
+				add_manpower = 800000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 50000
+					producer = FRA
+				}
+				add_timed_idea = { idea = yun_skull_army days = 35 }
+				load_oob = FRG
 			}
+			CAN = { 
+				add_to_faction = FRG 
+			}
+			NFA = { 
+				diplomatic_relation = {
+					country = FRG
+					relation = guarantee
+					active = no
+				}
+			}			
+			delete_unit = {
+				state = 18
+			}
+			delete_unit = {
+				state = 785
+			}
+			delete_unit = {
+				state = 27
+			}
+			delete_unit = {
+				state = 817
+			}
+			delete_unit = {
+				state = 984
+			}
+			delete_unit = {
+				state = 31
+			}
+			delete_unit = {
+				state = 33
+			}
+			delete_unit = {
+				state = 19
+			}
+			delete_unit = {
+				state = 22
+			}
+			delete_unit = {
+				state = 1334
+			}
+			delete_unit = {
+				state = 983
+			}
+			delete_unit = {
+				state = 14
+			}			
 			dismantle_faction = yes
-		}
-       
-        declare_war_on = {
-         	target = FRG
-         	type = annex_everything
-        }
+			declare_war_on = {
+				target = FRG
+				type = annex_everything
+			}
+		}   
     }
-    option = {	
-        name = fne.21.b
-		set_politics = {
-			ruling_party = totalist
-			elections_allowed = no
-		}
-		create_country_leader = {
-			name = "莫里斯·多列士"
-			desc = "POLITICS_MAURICE_THOREZ_DESC"
-			picture = "gfx/leaders/FRA/Portrait_France_Maurice_Thorez.png"
-			expire = "1965.1.1"
-			ideology = jacobinism_subtype
-		}
-        set_country_flag = FRA_civil_war
-        hidden_effect = {
-            FRG = { transfer_state = 16 }
-            FRG = { transfer_state = 24 }
-            FRG = { transfer_state = 980 }
-            FRG = { transfer_state = 785 }
-            FRG = { transfer_state = 18 }
-            FRG = { transfer_state = 17 }
-            FRG = { transfer_state = 27 }
-            FRG = { transfer_state = 20 }
-            FRG = { transfer_state = 32 }
-            FRG = { 
-				add_state_core = 16
-                add_state_core = 24
-    	        add_state_core = 980
-                add_state_core = 785
-                add_state_core = 18
-                add_state_core = 17
-                add_state_core = 27
-                add_state_core = 20
-                add_state_core = 32
-			}
-			FRA = {
-           		transfer_units_fraction= {
-	    			target = FRG
-	    			size = 0.4
-	    			stockpile_ratio = 0.7
-	    			army_ratio = 0.5
-	    			air_ratio = 0.2
-        	    }
-			}
-			FRG = {
-				add_ideas = FRG_Robert_Brasillach_hog_npo
-				add_ideas = FRG_POI_Leon_Degrelle_npo
-				add_ideas = FRG_POI_Maurice_Papon_npo
-				add_ideas = FRG_POI_Francis_Delaisi_npo
-				add_ideas = PB_FRA_Crumbling_Coalition
-				add_ideas = PB_FRA_Bitter_Revanchism
-				country_event = { id = fne.27 } 
-			}
-         	dismantle_faction = yes
-        }
-        declare_war_on = {
-            target = FRG
-            type = annex_everything
-        }
-    }  
 }
 
 country_event = { 
@@ -615,14 +220,14 @@ country_event = {
 
 	is_triggered_only = yes
 	fire_only_once = yes
-         
+		 
 
 	option = {
 		name = frg.1.a
 		ai_chance = {
 			factor = 90
 		}   
-        add_stability = 0.01  
+		add_stability = 0.01  
 		country_event = { id = frg.2 days = 4 }
 	}
 }
@@ -635,14 +240,14 @@ country_event = {
 
 	is_triggered_only = yes
 	fire_only_once = yes
-         
+		 
 
 	option = {
 		name = frg.2.a
 		ai_chance = {
 			factor = 90
 		}   
-        add_stability = 0.01  
+		add_stability = 0.01  
 		country_event = { id = frg.3 days = 2 }
 	}
 }
@@ -655,14 +260,14 @@ country_event = {
 
 	is_triggered_only = yes
 	fire_only_once = yes
-         
+		 
 
 	option = {
 		name = frg.3.a
 		ai_chance = {
 			factor = 90
 		}   
-        add_stability = 0.01  
+		add_stability = 0.01  
 	}
 }
 
@@ -674,7 +279,7 @@ country_event = {
 
 	is_triggered_only = yes
 	fire_only_once = yes
-         
+		 
 
 	option = {
 		name = frg.4.a
@@ -693,7 +298,7 @@ country_event = {
 
 	is_triggered_only = yes
 	fire_only_once = yes
-         
+		 
 
 	option = {
 		name = frg.5.a
@@ -718,7 +323,7 @@ country_event = {
 
 	is_triggered_only = yes
 	fire_only_once = yes
-         
+		 
 
 	option = {
 		name = frg.6.a
@@ -745,7 +350,7 @@ country_event = {
 
 	is_triggered_only = yes
 	fire_only_once = yes
-         
+		 
 
 	option = {
 		name = frg.7.a
@@ -772,7 +377,7 @@ country_event = {
 
 	is_triggered_only = yes
 	fire_only_once = yes
-         
+		 
 
 	option = {
 		name = frg.8.a
@@ -799,7 +404,7 @@ country_event = {
 
 	is_triggered_only = yes
 	fire_only_once = yes
-         
+		 
 
 	option = {
 		name = frg.9.a
@@ -826,7 +431,7 @@ country_event = {
 
 	is_triggered_only = yes
 	fire_only_once = yes
-         
+		 
 
 	option = {
 		name = frg.10.a
@@ -853,7 +458,7 @@ country_event = {
 
 	is_triggered_only = yes
 	fire_only_once = yes
-         
+		 
 
 	option = {
 		name = frg.11.a
@@ -878,34 +483,23 @@ country_event = {
 				traits = {}
 			}
 			create_country_leader = {
-				name = "乔治·瓦卢瓦"
-				desc = "POLITICS_GEORGES_VALOIS_DESC"
-				picture = "gfx/leaders/FRA/Portrait_France_Georges_Valois.png"
+				name = "公共安全委员会"
+				desc = ""
+				picture = "gfx/leaders/FRA/Portrait_France_Council.png"
 				expire = "1965.1.1"
-				ideology = sorelianism_subtype
+				ideology = millitarist_sorelianism_subtype
 			}
 			remove_ideas_with_trait = head_of_government
-			add_ideas = FRA_Marcel_Bucard_hog_tot
 			remove_ideas_with_trait = foreign_minister
-			add_ideas = FRA_Jacques_Arthuys_for_tot
 			remove_ideas_with_trait = economy_minister
-			add_ideas = FRA_Jacques_Doriot_eco_tot
 			remove_ideas_with_trait = security_minister
-			add_ideas = FRA_Hubert_Lagardelle_sec_tot
 			add_popularity = {
 				ideology = totalist
 				popularity = 0.20
 			}
 			add_stability = -0.1
-			set_cosmetic_tag = FRA_Valois
-			remove_ideas = FRG_large_tear
 			hidden_effect = {
-				random_other_country = {
-					news_event = {
-						id = worldnews.34
-						days = 1
-					}
-				}
+				country_event = { id = frg.13 days = 7 }
 			}
 		}
 	}
@@ -920,7 +514,7 @@ country_event = {
 
 	is_triggered_only = yes
 	fire_only_once = yes
-         
+		 
 
 	option = {
 		trigger = {
@@ -1045,6 +639,7 @@ country_event = {
 					}
 					CURRENT_DATE = "[?global.date.GetDateStringNoHour]"
 				}
+				set_country_flag = Georges_Valois_dead2
 				country_event = { id = comfrance.1004 days = 1825 }
 				remove_ideas_with_trait = foreign_minister
 				add_ideas = FRA_Jacques_Arthuys_for_tot
@@ -1210,8 +805,8 @@ country_event = {
 			}
 			set_party_name = {
 				ideology = social_democrat
-				long_name = FRA_gamelin_party_long
-				name = FRA_gamelin_party
+				long_name = FRA_gamelin
+				name = FRA_gamelin
 			}
 		}
 	}

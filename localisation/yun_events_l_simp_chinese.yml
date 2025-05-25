@@ -35,7 +35,7 @@
  yundebug.77.a:0 "没有意义的新闻。"
  yundebug.77.b:0 "第三个秘密会是什么……"
  yundebug.77.c:0 "罗马教廷又在装神弄鬼了……"
- yun_fatimah_punishment:0 "§V法蒂玛的惩罚§!"
+ yun_fatimah_punishment:0 "§V战争的惩罚§!"
  fatima_fuckex:0 "§V法蒂玛圣母会降罚于不洁之国……§!"
  xinguojia.1.t:0 "泛非主义之旗帜"
  xinguojia.1.d:0 " "
@@ -94,4 +94,8 @@
  polhunexp.1.d:0 "在古代，波兰和匈牙利素有“天主之矛”和“天主之盾”的美誉，在王国时期曾二度结成联盟，但均以失败告终。此后两国都经历了一段被瓜分和吞并的时光，饱受周围国家的压迫。即使现在联盟再立，我们也不得不承认地缘政治仍然像以前一样差。为此，我们必须打一场证明自己的战争，或是挑战俄国和德国的欧陆霸权，或是向巴尔干进军。"
  polhunexp.1.a:0 "我们将让整个东欧为之震撼" 
  polhunexp.1.b:0 "专心对付伊利里亚人" 
+ GER_strengthen_the_siegfried_idea:0 "加强齐格飞防线" 
+ FRA_lose_the_siegfried_idea:0 "折戟齐格飞" 
+ GER_reichspakt_emergency_idea:0 "帝国公约紧急状态"
+ GER_reichspakt_emergency_idea2:0 "帝国公约紧急状态" 
 

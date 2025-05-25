@@ -1,9 +1,77 @@
 spriteTypes = {
-
+	###摩洛克
+	frameAnimatedSpriteType = {
+        name = "GFX_Portrait_FRG_Moloch_animated"
+        texturefile = "gfx/leaders/FRG/Portrait_FRG_Moloch.png"
+        noOfFrames = 20
+		animation_rate_fps = 10
+		looping = yes
+		play_on_show = yes
+    }
 	###精神图标
 	spriteType = {
 		name = "GFX_idea_FRG_large_tear"
 		texturefile = "gfx/interface/ideas/FRG/FRG_large_tear.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_FRG_France_Heart"
+		texturefile = "gfx/interface/ideas/FRG/PB_FRA_SP_Heart.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_FRG_Blood_Water"
+		texturefile = "gfx/interface/ideas/FRG/FRG_Blood_Water.png"
+	}
+	spriteType = {
+		name = "GFX_idea_FRG_New_French_Man"
+		texturefile = "gfx/interface/ideas/FRG/PB_FRA_New_Frenchman.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_FRG_Bitter_Revanchism"
+		texturefile = "gfx/interface/ideas/FRG/PB_FRA_Bitter_Revanchism.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_FRG_Carolingian_Legacy"
+		texturefile = "gfx/interface/ideas/FRG/PB_FRA_Carolingian_Legacy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_FRG_New_French_State"
+		texturefile = "gfx/interface/ideas/FRG/PB_FRA_New_France.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_FRG_lol_fucking_conscript_everyone"
+		texturefile = "gfx/interface/ideas/FRG/PB_FRA_Noblity_Restored.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_FRG_Class_Struggle"
+		texturefile = "gfx/interface/ideas/FRG/PB_FRA_Superior_Race.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_FRG_survival_of_the_fittest"
+		texturefile = "gfx/interface/ideas/FRG/FRG_survival_of_the_fittest.png"
+	}
+	spriteType = {
+		name = "GFX_idea_FRG_Non_mandatory_sterilization"
+		texturefile = "gfx/interface/ideas/FRG/FRG_Non_mandatory_sterilization.png"
+	}
+	spriteType = {
+		name = "GFX_idea_FRG_Manipulate_the_brain"
+		texturefile = "gfx/interface/ideas/FRG/FRG_Manipulate_the_brain.png"
+	}
+	spriteType = {
+		name = "GFX_idea_FRG_Genetic_Fertility_Permit"
+		texturefile = "gfx/interface/ideas/FRG/FRG_Genetic_Fertility_Permit.png"
+	}
+	spriteType = {
+		name = "GFX_idea_FRG_Build_a_high_wall_idea"
+		texturefile = "gfx/interface/ideas/FRG/FRG_Build_a_high_wall_idea.png"
+	}
+	spriteType = {
+		name = "GFX_idea_FRG_A_chaotic_government"
+		texturefile = "gfx/interface/ideas/FRG/FRG_A_chaotic_government.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_FRG_Shadow_Governments_idea"
+		texturefile = "gfx/interface/ideas/FRG/FRG_Shadow_Governments_idea.dds"
 	}
 
 	###国策图标
@@ -90,6 +158,865 @@ spriteTypes = {
 		name = "GFX_goal_FRG_Patrie"
 		texturefile = "gfx/interface/goals/KXX_FRG/FRG_Patrie.png"
 	}
+	spriteType = {
+		name = "GFX_goal_FRG_sea_breeze"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_sea_breeze.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_FRG_the_french_connection"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_the_french_connection.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_FRG_the_capital_of_gambling"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_the_capital_of_gambling.tga"
+	}
+	spriteType = {
+		name = "GFX_goal_FRG_Pornography_gambling_and_drugs"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_Pornography_gambling_and_drugs.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_FRG_Opening_up_drug_trafficking_routes"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_Opening_up_drug_trafficking_routes.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_FRG_Developing_new_drugs"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_Developing_new_drugs.tga"
+	}
+	spriteType = {
+		name = "GFX_goal_FRG_Public_medical_insurance"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_Public_medical_insurance.tga"
+	}
+	spriteType = {
+		name = "GFX_goal_FRG_sun"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_sun.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_FRG_Establish_a_sanatorium_for_disabled_soldiers"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_Establish_a_sanatorium_for_disabled_soldiers.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_FRG_midnight"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_midnight.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_FRG_moon"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_moon.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_FRG_Murder_Maze"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_Murder_Maze.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_FRG_Randomly_draw_kills"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_Randomly_draw_kills.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_FRG_Ri_Ming"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_Ri_Ming.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_FRG_Science_popularization_for_disease_prevention"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_Science_popularization_for_disease_prevention.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_FRG_shine_forever_like_the_sun_and_the_moon"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_shine_forever_like_the_sun_and_the_moon.png"
+	}
+	spriteType = {
+		name = "GFX_goal_FRG_The_grand_opening_of_the_circus"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_The_grand_opening_of_the_circus.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_FRG_Shadow_Governments"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_Shadow_Governments.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_FRG_Appearing_from_the_shadow"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_Appearing_from_the_shadow.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_FRG_Perfect_Utopia"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_Perfect_Utopia.png"
+	}
+
+
+   #frp国策图标
+	spriteType = {
+		name = "GFX_goal_FRG_Roses_bloom_in_France"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_Roses_bloom_in_France.png"
+	}
+	spriteType = {
+		name = "GFX_goal_FRG_Purification_ceremony"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_Purification_ceremony.png"
+	}
+	spriteType = {
+		name = "GFX_goal_FRG_A_Call_from_Deep_Space"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_A_Call_from_Deep_Space.png"
+	}
+	spriteType = {
+		name = "GFX_goal_FRG_A_Call_from_Deep_Space_2"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_A_Call_from_Deep_Space_2.png"
+	}
+
+
+
+
+	spriteType = {
+		name = "GFX_goal_FRG_Perfect_Utopia_shine"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_Perfect_Utopia.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/FRG_Perfect_Utopia.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/FRG_Perfect_Utopia.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+
+	spriteType = {
+		name = "GFX_goal_FRG_Roses_bloom_in_France_shine"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_Roses_bloom_in_France.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/FRG_Roses_bloom_in_France.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/FRG_Roses_bloom_in_France.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_goal_FRG_Purification_ceremony_shine"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_Purification_ceremony.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/FRG_Purification_ceremony.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/FRG_Purification_ceremony.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_goal_FRG_A_Call_from_Deep_Space_shine"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_A_Call_from_Deep_Space.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/FRG_A_Call_from_Deep_Space.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/FRG_A_Call_from_Deep_Space.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_goal_FRG_A_Call_from_Deep_Space_2_shine"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_A_Call_from_Deep_Space_2.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/FRG_A_Call_from_Deep_Space_2.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/FRG_A_Call_from_Deep_Space_2.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+
+
+
+	spriteType = {
+		name = "GFX_goal_FRG_Appearing_from_the_shadow_shine"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_Appearing_from_the_shadow.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/FRG_Appearing_from_the_shadow.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/FRG_Appearing_from_the_shadow.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+
+	spriteType = {
+		name = "GFX_goal_FRG_Shadow_Governments_shine"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_Shadow_Governments.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/FRG_Shadow_Governments.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/FRG_Shadow_Governments.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+
+	spriteType = {
+		name = "GFX_goal_FRG_Developing_new_drugs_shine"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_Developing_new_drugs.tga"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/FRG_Developing_new_drugs.tga"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/FRG_Developing_new_drugs.tga"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_goal_FRG_Public_medical_insurance_shine"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_Public_medical_insurance.tga"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/FRG_Public_medical_insurance.tga"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/FRG_Public_medical_insurance.tga"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_goal_FRG_sun_shine"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_sun.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/FRG_sun.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/FRG_sun.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_goal_FRG_Establish_a_sanatorium_for_disabled_soldiers_shine"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_Establish_a_sanatorium_for_disabled_soldiers.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/FRG_Establish_a_sanatorium_for_disabled_soldiers.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/FRG_Establish_a_sanatorium_for_disabled_soldiers.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_goal_FRG_midnight_shine"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_midnight.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/FRG_midnight.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/FRG_midnight.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_goal_FRG_moon_shine"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_moon.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/FRG_moon.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/FRG_moon.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_goal_FRG_Murder_Maze_shine"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_Murder_Maze.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/FRG_Murder_Maze.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/FRG_Murder_Maze.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_goal_FRG_Randomly_draw_kills_shine"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_Randomly_draw_kills.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/FRG_Randomly_draw_kills.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/FRG_Randomly_draw_kills.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_goal_FRG_Ri_Ming_shine"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_Ri_Ming.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/FRG_Ri_Ming.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/FRG_Ri_Ming.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_goal_FRG_Science_popularization_for_disease_prevention_shine"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_Science_popularization_for_disease_prevention.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/FRG_Science_popularization_for_disease_prevention.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/FRG_Science_popularization_for_disease_prevention.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_goal_FRG_shine_forever_like_the_sun_and_the_moon_shine"
+		texturefile = "gfx/interface/goals/KXX_FRG/GFX_goal_FRG_shine_forever_like_the_sun_and_the_moon.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/GFX_goal_FRG_shine_forever_like_the_sun_and_the_moon.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/GFX_goal_FRG_shine_forever_like_the_sun_and_the_moon.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_goal_FRG_The_grand_opening_of_the_circus_shine"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_The_grand_opening_of_the_circus.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/FRG_The_grand_opening_of_the_circus.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/FRG_The_grand_opening_of_the_circus.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+
+	spriteType = {
+		name = "GFX_goal_FRG_Opening_up_drug_trafficking_routes_shine"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_Opening_up_drug_trafficking_routes.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/FRG_Opening_up_drug_trafficking_routes.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/FRG_Opening_up_drug_trafficking_routes.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_goal_FRG_Pornography_gambling_and_drugs_shine"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_Pornography_gambling_and_drugs.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/FRG_Pornography_gambling_and_drugs.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/FRG_Pornography_gambling_and_drugs.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_goal_FRG_the_capital_of_gambling_shine"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_the_capital_of_gambling.tga"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/FRG_the_capital_of_gambling.tga"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/FRG_the_capital_of_gambling.tga"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_goal_FRG_the_french_connection_shine"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_the_french_connection.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/FRG_the_french_connection.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/FRG_the_french_connection.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+
+	spriteType = {
+		name = "GFX_goal_FRG_sea_breeze_shine"
+		texturefile = "gfx/interface/goals/KXX_FRG/FRG_sea_breeze.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/FRG_sea_breeze.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/KXX_FRG/FRG_sea_breeze.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+
+
+
 
 
 

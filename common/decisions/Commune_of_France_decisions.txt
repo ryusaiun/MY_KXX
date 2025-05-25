@@ -227,7 +227,7 @@ FRA_world_revolution_category = {
 		days_remove = 30
 
 		ai_will_do = {
-			factor = 6
+			factor = 0
 		}
 
 		remove_effect = {
@@ -256,7 +256,7 @@ FRA_world_revolution_category = {
 		days_remove = 30
 
 		ai_will_do = {
-			factor = 6
+			factor = 0
 		}
 
 		remove_effect = {
@@ -288,7 +288,7 @@ FRA_world_revolution_category = {
 			factor = 6
 			modifier = {
 				factor = 0
-				date < 1939.5.1
+				date < 1943.5.1
 			}
 		}
 

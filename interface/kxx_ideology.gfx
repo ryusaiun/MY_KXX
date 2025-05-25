@@ -208,7 +208,19 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_ideology_radsoc_neo_socialism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/radsoc_neo_socialism_group.png"
-	}	
+	}
+	spriteType = {
+		name = "GFX_ideology_right_jacobinism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/right_jacobinism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_neo_dirigisme_technocratique_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/neo_dirigisme_technocratique_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_paternalistic_reactionaryism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/paternalistic_reactionaryism_group.png"
+	}		
 	##毛主义衍生
 	spriteType = {
 		name = "GFX_ideology_farleft_maoism_subtype"
@@ -272,22 +284,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideologies/subideologies/marxism_leninism_banderaism.png"
 	}		
 	spriteType = {
-		name = "GFX_ideology_socdem_hartmannism_subtype"
-		texturefile = "gfx/interface/ideologies/subideologies/socdem_hartmannism.png"
-	}
-	spriteType = {
-		name = "GFX_ideology_hartmannism_subtype"
-		texturefile = "gfx/interface/ideologies/subideologies/hartmannism.png"
-	}
-	spriteType = {
-		name = "GFX_ideology_paternal_koishism_subtype"
-		texturefile = "gfx/interface/ideologies/subideologies/paternal_koishism.png"
-	}
-	spriteType = {
-		name = "GFX_ideology_socdem_paternal_koishism_subtype"
-		texturefile = "gfx/interface/ideologies/subideologies/socdem_paternal_koishism.png"
-	}
-	spriteType = {
 		name = "GFX_ideology_genshitism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/genshitism.png"
 	}
@@ -335,18 +331,5 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_ideology_surrealist_eroticism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/surrealist_eroticism_subtype.png"
-	}
-	#fx
-	spriteType = {
-		name = "GFX_ideology_pataut_metaxism_subtype"
-		texturefile = "gfx/interface/ideologies/subideologies/metaxism_pataut.png"
-	}
-	spriteType = {
-		name = "GFX_ideology_venizelism_subtype"
-		texturefile = "gfx/interface/ideologies/subideologies/venizelism_group.png"
-	}
-	spriteType = {
-		name = "GFX_ideology_mercourism_subtype"
-		texturefile = "gfx/interface/ideologies/subideologies/mercourism_group.png"
 	}
 }

@@ -1,0 +1,415 @@
+﻿### Templates
+### Territorial Army Infantry Division
+
+division_template = {
+	name = "解放运动精锐师"
+	division_names_group = JER_INF_02
+	regiments = {
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 0 y = 2 }
+		militia = { x = 1 y = 0 }
+		militia = { x = 1 y = 1 }
+		militia = { x = 1 y = 2 }
+		militia = { x = 2 y = 0 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+}
+division_template = {
+	name = "民族国海军陆战队"
+	division_names_group = JER_INF_03
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		artillery_brigade = { x = 2 y = 1 }
+		artillery_brigade = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
+}
+### Land Units
+units = {
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 769
+		division_template = "解放运动精锐师"
+		start_experience_factor = 0.6
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 769
+		division_template = "解放运动精锐师"
+		start_experience_factor = 0.6
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 769
+		division_template = "解放运动精锐师"
+		start_experience_factor = 0.6
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 769
+		division_template = "解放运动精锐师"
+		start_experience_factor = 0.6
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 769
+		division_template = "解放运动精锐师"
+		start_experience_factor = 0.6
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 769
+		division_template = "解放运动精锐师"
+		start_experience_factor = 0.6
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 769
+		division_template = "解放运动精锐师"
+		start_experience_factor = 0.6
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 769
+		division_template = "解放运动精锐师"
+		start_experience_factor = 0.6
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 769
+		division_template = "解放运动精锐师"
+		start_experience_factor = 0.6
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 769
+		division_template = "解放运动精锐师"
+		start_experience_factor = 0.6
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 769
+		division_template = "解放运动精锐师"
+		start_experience_factor = 0.6
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 769
+		division_template = "解放运动精锐师"
+		start_experience_factor = 0.6
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 769
+		division_template = "解放运动精锐师"
+		start_experience_factor = 0.6
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 769
+		division_template = "解放运动精锐师"
+		start_experience_factor = 0.6
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 769
+		division_template = "解放运动精锐师"
+		start_experience_factor = 0.6
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 769
+		division_template = "解放运动精锐师"
+		start_experience_factor = 0.6
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 769
+		division_template = "解放运动精锐师"
+		start_experience_factor = 0.6
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 769
+		division_template = "解放运动精锐师"
+		start_experience_factor = 0.6
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 769
+		division_template = "解放运动精锐师"
+		start_experience_factor = 0.6
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 769
+		division_template = "解放运动精锐师"
+		start_experience_factor = 0.6
+	}
+	#Sankt Polten
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 769
+		division_template = "民族国海军陆战队"
+		start_experience_factor = 0.6
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 769
+		division_template = "民族国海军陆战队"
+		start_experience_factor = 0.6
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 769
+		division_template = "民族国海军陆战队"
+		start_experience_factor = 0.6
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 769
+		division_template = "民族国海军陆战队"
+		start_experience_factor = 0.6
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 769
+		division_template = "民族国海军陆战队"
+		start_experience_factor = 0.6
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 769
+		division_template = "民族国海军陆战队"
+		start_experience_factor = 0.6
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 769
+		division_template = "民族国海军陆战队"
+		start_experience_factor = 0.6
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 769
+		division_template = "民族国海军陆战队"
+		start_experience_factor = 0.6
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 769
+		division_template = "民族国海军陆战队"
+		start_experience_factor = 0.6
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 769
+		division_template = "民族国海军陆战队"
+		start_experience_factor = 0.6
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 769
+		division_template = "民族国海军陆战队"
+		start_experience_factor = 0.6
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 769
+		division_template = "民族国海军陆战队"
+		start_experience_factor = 0.6
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 769
+		division_template = "民族国海军陆战队"
+		start_experience_factor = 0.6
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 769
+		division_template = "民族国海军陆战队"
+		start_experience_factor = 0.6
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 769
+		division_template = "民族国海军陆战队"
+		start_experience_factor = 0.6
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 769
+		division_template = "民族国海军陆战队"
+		start_experience_factor = 0.6
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 769
+		division_template = "民族国海军陆战队"
+		start_experience_factor = 0.6
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 769
+		division_template = "民族国海军陆战队"
+		start_experience_factor = 0.6
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 769
+		division_template = "民族国海军陆战队"
+		start_experience_factor = 0.6
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 769
+		division_template = "民族国海军陆战队"
+		start_experience_factor = 0.6
+	}
+	
+	
+}

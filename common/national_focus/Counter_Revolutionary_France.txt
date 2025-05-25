@@ -1,0 +1,8367 @@
+focus_tree = {
+	id = french_empire_2
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = FRG
+		}
+	}
+	continuous_focus_position = {
+    	x = 10000
+   	 	y = 10000
+  	}
+	###开局战时线
+	focus = {
+		id = FRG_quarrel_between_brothers
+		icon = GFX_goal_FRG_France_First
+		x = 5
+		y = 0
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			
+		}
+		prerequisite = {
+			
+		}
+		completion_reward = {
+			army_experience = 75
+			add_command_power = 75
+			add_doctrine_cost_reduction = {
+				name = FRA_integrate_the_corps_francs
+				cost_reduction = 1.5
+				uses = 5
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_Uniting_the_Anti_Red_Armed_Forces
+		icon = GFX_goal_FRG_Premitive_Purges
+		x = -1
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_quarrel_between_brothers
+		available = {
+
+		}
+		prerequisite = {
+			focus = FRG_quarrel_between_brothers
+		}
+		completion_reward = {
+			custom_effect_tooltip = FRG_mafia_tooltip
+			hidden_effect = {
+				add_manpower = 100000
+				division_template = {
+					name = "黑手党打手"
+					division_names_group = BOS_CRO_ARMY_00
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+
+					}
+					support = {
+						recon = { x = 0 y = 0 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"黑手党打手\" division_template = \"黑手党打手\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = FRG
+					}
+					create_unit = {
+						division = "name = \"黑手党打手\" division_template = \"黑手党打手\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = FRG
+					}
+					create_unit = {
+						division = "name = \"黑手党打手\" division_template = \"黑手党打手\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = FRG
+					}
+					create_unit = {
+						division = "name = \"黑手党打手\" division_template = \"黑手党打手\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = FRG
+					}
+					create_unit = {
+						division = "name = \"黑手党打手\" division_template = \"黑手党打手\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = FRG
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_Secret_contacts_with_Algiers
+		icon = GFX_goal_FRG_fate_of_africa
+		x = 1
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_quarrel_between_brothers
+		available = {
+
+		}
+		prerequisite = {
+			focus = FRG_quarrel_between_brothers
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 15000
+				producer = NFA
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 15000
+				producer = NFA
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 5000
+				producer = NFA
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 2000
+				producer = NFA
+			}
+		}
+	}
+
+
+	focus = {
+		id = FRG_win
+		icon = GFX_goal_NFA_army_prestige
+		x = 0
+		y = 2
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_quarrel_between_brothers
+		available = {
+
+		}
+		prerequisite = {
+			focus = FRG_Uniting_the_Anti_Red_Armed_Forces
+		}
+		prerequisite = {
+			focus = FRG_Secret_contacts_with_Algiers
+		}
+		completion_reward = {
+
+			add_ideas = FRG_desperate_attempt  #孤注一掷
+		}
+	}
+
+	focus = {
+		id = FRG_Pacifying_entrepreneurs
+		icon = GFX_RUS_Support_Small_Business
+		x = -2
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_quarrel_between_brothers
+		available = {
+
+		}
+		prerequisite = {
+			focus = FRG_win
+		}
+
+		completion_reward = {
+			add_political_power = 150
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+
+		}
+	}
+
+	focus = {
+		id = FRG_Rebuild_the_plant
+		icon = GFX_RUS_Money_For_Industrialization
+		x = 0
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_quarrel_between_brothers
+		available = {
+
+		}
+		prerequisite = {
+			focus = FRG_win
+		}
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_economic_recovery
+		icon = GFX_goal_generic_destruction_civil_war
+		x = 2
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_quarrel_between_brothers
+		available = {
+
+		}
+		prerequisite = {
+			focus = FRG_win
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = export_focus
+				add_idea = limited_exports
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_Ban_all_radicals
+		icon = GFX_NEE_syndie_crackdown
+		x = -1
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_quarrel_between_brothers
+		available = {
+
+		}
+		prerequisite = {
+			focus = FRG_Pacifying_entrepreneurs
+		}
+		prerequisite = {
+			focus = FRG_Rebuild_the_plant
+		}
+		prerequisite = {
+			focus = FRG_economic_recovery
+		}
+
+		completion_reward = {
+			set_party_name = { ideology = totalist long_name = FRG_DIE_party_long name = FRG_DIE_party }
+			set_party_name = { ideology = syndicalist long_name = FRG_DIE_party_long name = FRG_DIE_party }
+			set_party_name = { ideology = radical_socialist long_name = FRG_DIE_party_long name = FRG_DIE_party }
+			set_party_name = { ideology = social_democrat long_name = FRG_DIE_party_long name = FRG_DIE_party }
+		}
+	}
+
+	focus = {
+		id = FRG_The_heart_of_France_is_throbbing
+		icon = GFX_GER_kickstart_our_heart
+		x = 1
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_quarrel_between_brothers
+		available = {
+
+		}
+		prerequisite = {
+			focus = FRG_Pacifying_entrepreneurs
+		}
+		prerequisite = {
+			focus = FRG_Rebuild_the_plant
+		}
+		prerequisite = {
+			focus = FRG_economic_recovery
+		}
+
+		completion_reward = {
+			add_ideas = {  #法兰西之心在悸动
+				FRG_A_Beating_Heart_For_France_1
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_Make_the_tricolour_proud
+		icon = GFX_goal_FRG_Fourth_Republic
+		x = 0
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_quarrel_between_brothers
+		available = {
+			NOT = {
+				country_exists = FRA
+			}
+		}
+		prerequisite = {
+			focus = FRG_Ban_all_radicals
+		}
+		prerequisite = {
+			focus = FRG_The_heart_of_France_is_throbbing
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FRG_Make_the_tricolour_proud_tooltip
+			set_cosmetic_tag = FRG_Revival
+			hidden_effect = {
+                set_country_flag = after_civil_war
+                FRG = {
+                    add_state_core = 15
+                    add_state_core = 983
+                    add_state_core = 14
+                    add_state_core = 30
+                    add_state_core = 33
+                    add_state_core = 23
+                    add_state_core = 25
+                    add_state_core = 19
+                    add_state_core = 984
+                    add_state_core = 31
+                    add_state_core = 817
+                    add_state_core = 22
+                    add_state_core = 21
+                    add_state_core = 763
+                    add_state_core = 26
+					add_state_core = 27
+					add_state_core = 18
+					add_state_core = 16
+					add_state_core = 24
+					add_state_core = 17
+					add_state_core = 980
+					add_state_core = 785
+					add_state_core = 779
+					add_state_core = 28
+					add_state_core = 943
+					add_state_core = 1315
+                }
+			}
+		}
+	}
+
+	###雷米线
+	focus = {
+		id = FRG_recover_one_homeland
+		icon = GFX_goal_NFA_Action_francaise
+		x = 20
+		y = 0
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			has_country_flag = after_civil_war
+		}
+		prerequisite = {
+			
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = FRG_Abolition_of_the_parliamentary_system
+		icon = GFX_goal_DEI_focus_disband_volksraad
+		x = 0
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_recover_one_homeland
+		available = {
+
+		}
+		prerequisite = {
+			focus = FRG_recover_one_homeland
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = social_liberal
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = market_liberal
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = social_conservative
+				popularity = -0.05
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_Emphasis_on_regional_autonomy
+		icon = GFX_goal_NGR_native_rights
+		x = -2
+		y = 2
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_recover_one_homeland
+		available = {
+
+		}
+		prerequisite = {
+			focus = FRG_Abolition_of_the_parliamentary_system
+		}
+		completion_reward = {
+			add_ideas = FRA_regionalism
+		}
+	}
+
+	focus = {
+		id = FRG_kill_Jewish_entrepreneurs
+		icon = GFX_goals_FRA_bulaxilahe_03
+		x = 0
+		y = 2
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_recover_one_homeland
+		available = {
+
+		}
+		prerequisite = {
+			focus = FRG_Abolition_of_the_parliamentary_system
+		}
+		completion_reward = {
+			add_manpower = -350
+		}
+	}
+
+	focus = {
+		id = FRG_Cooperation_with_the_Church
+		icon = GFX_HUN_role_of_the_church
+		x = 2
+		y = 2
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_recover_one_homeland
+		available = {
+
+		}
+		prerequisite = {
+			focus = FRG_Abolition_of_the_parliamentary_system
+		}
+		completion_reward = {
+			add_ideas = PDL_claustrales
+		}
+	}
+
+	focus = {
+		id = FRG_Insurmountable_class
+		icon = GFX_goal_NFA_protective_inequality
+		x = -3
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_recover_one_homeland
+		available = {
+
+		}
+		prerequisite = {
+			focus = FRG_Emphasis_on_regional_autonomy
+		}
+		completion_reward = {
+			add_ideas = NFA_righting_theirs_wrongs
+		}
+	}
+
+	focus = {
+		id = FRG_Decentralised_reconstruction
+		icon = GFX_goal_FRA_streamlined_bureaucracies
+		x = 0
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_recover_one_homeland
+		available = {
+
+		}
+		prerequisite = {
+			focus = FRG_kill_Jewish_entrepreneurs
+		}
+		completion_reward = {
+			add_ideas = NFA_decentralised_reconstruction
+		}
+	}
+
+	focus = {
+		id = FRG_Promoting_classical_concepts
+		icon = GFX_goal_NFA_3000000IQ_inspiration
+		x = 3
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_recover_one_homeland
+		available = {
+
+		}
+		prerequisite = {
+			focus = FRG_Cooperation_with_the_Church
+		}
+		completion_reward = {
+			add_ideas = NFA_traditionalist_culture_2
+		}
+	}
+
+	focus = {
+		id = FRG_Increased_investment_in_agriculture
+		icon = GFX_goal_CSA_agricultural_revolution
+		x = -2
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_recover_one_homeland
+		available = {
+
+		}
+		prerequisite = {
+			focus = FRG_Insurmountable_class
+		}
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_Economy_of_national_corporations
+		icon = GFX_goal_NFA_Royal_Corporatism
+		x = 0
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_recover_one_homeland
+		available = {
+
+		}
+		prerequisite = {
+			focus = FRG_Decentralised_reconstruction
+		}
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_Preservation_of_local_culture
+		icon = GFX_goal_NFA_power_to_provinces
+		x = 2
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_recover_one_homeland
+		available = {
+
+		}
+		prerequisite = {
+			focus = FRG_Promoting_classical_concepts
+		}
+		completion_reward = {
+			add_ideas = NFA_local_cultures_reaffirmed
+		}
+	}
+
+	focus = {
+		id = FRG_Morath_ideas_shine_through
+		icon = GFX_goal_NFA_Promote_Maurrasisme
+		x = 0
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_recover_one_homeland
+		available = {
+
+		}
+		prerequisite = {
+			focus = FRG_Increased_investment_in_agriculture
+		}
+		prerequisite = {
+			focus = FRG_Economy_of_national_corporations
+		}
+		prerequisite = {
+			focus = FRG_Preservation_of_local_culture
+		}
+		completion_reward = {
+			add_ideas = NFA_maurrasisme_3
+		}
+	}
+
+	focus = {
+		id = FRG_Crossroads_of_Destiny
+		icon = GFX_goal_generic_stable_government
+		x = 0
+		y = 6
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_recover_one_homeland
+		available = {
+			has_country_flag = Remy_alive
+		}
+		prerequisite = {
+
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_Stick_to_the_path_of_Maurice
+		icon = GFX_goal_NFA_maurras_holds_on
+		x = -3
+		y = 7
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_recover_one_homeland
+		available = {
+
+		}
+		prerequisite = {
+			focus = FRG_Crossroads_of_Destiny
+		}
+		mutually_exclusive = {
+			focus = FRG_Following_de_Gaulle_lead
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NFA_maurrasisme_3
+				add_idea = NFA_maurrasisme_4
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_Following_de_Gaulle_lead
+		icon = GFX_goal_NFA_de_gaulle_govt
+		x = 3
+		y = 7
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_recover_one_homeland
+		available = {
+
+		}
+		prerequisite = {
+			focus = FRG_Crossroads_of_Destiny
+		}
+		mutually_exclusive = {
+			focus = FRG_Stick_to_the_path_of_Maurice
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NFA_maurrasisme_3
+				add_idea = NFA_gaullist_dominance
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_crush_totalitarians
+		icon = GFX_goal_FRA_lumpen_appeals
+		x = -5
+		y = 8
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_recover_one_homeland
+		available = {
+
+		}
+		prerequisite = {
+			focus = FRG_Stick_to_the_path_of_Maurice
+		}
+		completion_reward = {
+			add_manpower = -4350
+			add_stability = -0.2
+		}
+	}
+
+	focus = {
+		id = FRG_crown_a_monarch
+		icon = GFX_goal_NFA_la_restauration
+		x = -3
+		y = 8
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_recover_one_homeland
+		available = {
+
+		}
+		prerequisite = {
+			focus = FRG_Stick_to_the_path_of_Maurice
+		}
+		completion_reward = {
+			custom_effect_tooltip = FRG_Jean_III_tooltip
+			add_political_power = 50
+			set_cosmetic_tag = NFK
+			hidden_effect = {
+				create_country_leader = {
+					name = "让三世"  # Jean III
+					desc = "POLITICS_JEAN_III_DESC"
+					picture = "gfx/leaders/NFA/Portrait_NFA_Jean_dOrleans.png"
+					expire = "1.1.1"
+					ideology = maurrassism_subtype
+					traits = {
+					  NFA_Old_King
+					}
+				}
+				create_country_leader = {
+					name = "让三世"  # Jean III
+					desc = "POLITICS_JEAN_III_DESC"
+					picture = "gfx/leaders/NFA/Portrait_NFA_Jean_dOrleans.png"
+					expire = "1.1.1"
+					ideology = junta_subtype
+					traits = {
+					  NFA_Old_King
+					}
+				}
+				create_country_leader = {
+					name = "让三世"  # Jean III
+					desc = "POLITICS_JEAN_III_DESC"
+					picture = "gfx/leaders/NFA/Portrait_NFA_Jean_dOrleans.png"
+					expire = "1.1.1"
+					ideology = authdem_junta_subtype
+					traits = {
+					  NFA_Old_King
+					}
+				}
+				create_field_marshal = {
+					name = "亨利·奥尔良"  # Henri d'Orléans
+					portrait_path = "gfx/leaders/NFA/Portrait_NFA_Henri_dOrleans.png"
+					traits = {
+					  politically_connected
+					}
+					skill = 1
+					attack_skill = 1
+					defense_skill = 1
+					planning_skill = 1
+					logistics_skill = 1
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_purge_the_army
+		icon = GFX_goal_NFA_cdg_army_purge
+		x = -1
+		y = 8
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_recover_one_homeland
+		available = {
+
+		}
+		prerequisite = {
+			focus = FRG_Stick_to_the_path_of_Maurice
+		}
+		completion_reward = {
+			add_manpower = -4350
+			add_war_support = -0.2
+		}
+	}
+
+	focus = {
+		id = FRG_Ending_Secularisation
+		icon = GFX_goal_generic_imprison_people
+		x = -4
+		y = 9
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_recover_one_homeland
+		available = {
+
+		}
+		prerequisite = {
+			focus = FRG_crush_totalitarians
+		}
+		prerequisite = {
+			focus = FRG_crown_a_monarch
+		}
+		prerequisite = {
+			focus = FRG_purge_the_army
+		}
+		completion_reward = {
+			add_political_power = 100
+			army_experience = 75
+			add_manpower = 3500
+		}
+	}
+
+	focus = {
+		id = FRG_decentralisation
+		icon = GFX_goal_NFA_Decentralize_France
+		x = -2
+		y = 9
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_recover_one_homeland
+		available = {
+
+		}
+		prerequisite = {
+			focus = FRG_crush_totalitarians
+		}
+		prerequisite = {
+			focus = FRG_crown_a_monarch
+		}
+		prerequisite = {
+			focus = FRG_purge_the_army
+		}
+		completion_reward = {
+			add_ideas = NFA_regional_autonomy2
+		}
+	}
+
+	focus = {
+		id = FRG_Organic_France
+		icon = GFX_goal_NFA_Organic_France
+		x = -3
+		y = 10
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_recover_one_homeland
+		available = {
+
+		}
+		prerequisite = {
+			focus = FRG_Ending_Secularisation
+		}
+		prerequisite = {
+			focus = FRG_decentralisation
+		}
+		completion_reward = {
+			add_ideas = FRG_organic_republic
+		}
+	}
+
+	focus = {
+		id = FRG_Clearance_officers
+		icon = GFX_goal_HOL_ban_paramilitary
+		x = 1
+		y = 8
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_recover_one_homeland
+		available = {
+
+		}
+		prerequisite = {
+			focus = FRG_Following_de_Gaulle_lead
+		}
+		completion_reward = {
+			add_manpower = -5350
+			add_war_support = -0.3
+		}
+	}
+
+	focus = {
+		id = FRG_Ending_regional_autonomy
+		icon = GFX_oppose_radicals
+		x = 3
+		y = 8
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_recover_one_homeland
+		available = {
+
+		}
+		prerequisite = {
+			focus = FRG_Following_de_Gaulle_lead
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NFA_decentralised_reconstruction
+				add_idea= NFA_centralised_economy2
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_Curbing_radicalisation
+		icon = GFX_goal_WCC_silence_critics
+		x = 5
+		y = 8
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_recover_one_homeland
+		available = {
+
+		}
+		prerequisite = {
+			focus = FRG_Following_de_Gaulle_lead
+		}
+		completion_reward = {
+			add_manpower = -7350
+			add_stability = -0.15
+		}
+	}
+
+	focus = {
+		id = FRG_Centralisation_of_power
+		icon = GFX_goal_TEX_to_the_victor
+		x = 2
+		y = 9
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_recover_one_homeland
+		available = {
+
+		}
+		prerequisite = {
+			focus = FRG_Clearance_officers
+		}
+		prerequisite = {
+			focus = FRG_Ending_regional_autonomy
+		}
+		prerequisite = {
+			focus = FRG_Curbing_radicalisation
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRA_regionalism
+				add_idea = NFA_new_centralisation
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_Guaranteed_employment_rate
+		icon = GFX_goal_NFA_guide_growth
+		x = 4
+		y = 9
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_recover_one_homeland
+		available = {
+
+		}
+		prerequisite = {
+			focus = FRG_Clearance_officers
+		}
+		prerequisite = {
+			focus = FRG_Ending_regional_autonomy
+		}
+		prerequisite = {
+			focus = FRG_Curbing_radicalisation
+		}
+		completion_reward = {
+			add_ideas = NFA_a_responsible_market
+		}
+	}
+
+	focus = {
+		id = FRG_Splendid_France
+		icon = GFX_goal_NFA_liberal_era
+		x = 3
+		y = 10
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_recover_one_homeland
+		available = {
+
+		}
+		prerequisite = {
+			focus = FRG_Centralisation_of_power
+		}
+		prerequisite = {
+			focus = FRG_Guaranteed_employment_rate
+		}
+		completion_reward = {
+			add_ideas = FRG_theory_milieu
+		}
+	}
+
+	###雷米继承人线
+	focus = {
+		id = FRG_Remy_die
+		icon = GFX_goal_NFA_La_Mort_Maitre
+		x = 20
+		y = 12
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			has_country_flag = Remy_die
+		}
+		prerequisite = {
+			
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_Fable_win
+		icon = GFX_goal_NFA_new_chivalric_elite
+		x = -12
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			has_country_leader = {
+				ruling_only = yes
+				name = "阿尔弗雷德·法布尔·卢斯"
+			}
+		}
+		prerequisite = {
+			focus = FRG_Remy_die
+		}
+		completion_reward = {
+			add_political_power = 100
+			set_cosmetic_tag = FRG_Fabre_Luce
+			create_country_leader = {
+				name = "阿尔弗雷德·法布尔·卢斯"
+				desc = ""
+				picture = "gfx/leaders/FRG/Portrait_FRG_Alfred_Fabre_Luce.png"
+				expire = "1965.1.1"
+				ideology = natpop_volkisch_communitarianism_subtype
+				traits = { FRG_Anti_German }
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_Mobilize_women_and_children
+		icon = GFX_DKB_Welfare_Cost
+		x = -13
+		y = 2
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_Fable_win
+		}
+		completion_reward = {
+			add_ideas = FRG_jiatingfunu
+		}
+	}
+
+	focus = {
+		id = FRG_centralized_management
+		icon = GFX_goal_COR_industrial_security_act
+		x = -11
+		y = 2
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_Fable_win
+		}
+		completion_reward = {
+			add_ideas = ENG_militarized_industry_idea
+		}
+	}
+
+	focus = {
+		id = FRG_Ideological_fanaticism
+		icon = GFX_goal_TEX_referendum_voting
+		x = -14
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_Mobilize_women_and_children
+		}
+		completion_reward = {
+			add_ideas = extensive_conscription
+			add_ideas = FRG_lol_fucking_conscript_everyone
+
+		}
+	}
+
+	focus = {
+		id = FRG_The_necessity_of_class_struggle
+		icon = GFX_goal_TEX_people_yes
+		x = -12
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_Mobilize_women_and_children
+		}
+		prerequisite = {
+			focus = FRG_centralized_management
+		}
+		completion_reward = {
+			add_ideas = FRG_Class_Struggle
+		}
+	}
+
+	focus = {
+		id = FRG_Expand_the_militia_organization
+		icon = GFX_CAL_military_lobby
+		x = -10
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_centralized_management
+		}
+		completion_reward = {
+			custom_effect_tooltip = FRG_Expand_the_militia_organization_tooltip
+			hidden_effect = {
+				21 = {
+					create_unit = {
+						division = "name = \"准民兵组织\" division_template = \"解放运动精锐师\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = FRG
+					}
+					create_unit = {
+						division = "name = \"准民兵组织\" division_template = \"解放运动精锐师\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = FRG
+					}
+					create_unit = {
+						division = "name = \"准民兵组织\" division_template = \"解放运动精锐师\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = FRG
+					}
+					create_unit = {
+						division = "name = \"准民兵组织\" division_template = \"解放运动精锐师\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = FRG
+					}
+					create_unit = {
+						division = "name = \"准民兵组织\" division_template = \"解放运动精锐师\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = FRG
+					}
+					create_unit = {
+						division = "name = \"准民兵组织\" division_template = \"解放运动精锐师\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = FRG
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_National_Throat
+		icon = GFX_goal_TEX_media_propaganda
+		x = -13
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_Ideological_fanaticism
+		}
+		prerequisite = {
+			focus = FRG_The_necessity_of_class_struggle
+		}
+		completion_reward = {
+			add_ideas = FRG_media_regulation_act_idea
+		}
+	}
+
+	focus = {
+		id = FRG_Technocratic_hegemony
+		icon = GFX_goal_TEX_honest_gov
+		x = -11
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_Expand_the_militia_organization
+		}
+		prerequisite = {
+			focus = FRG_The_necessity_of_class_struggle
+		}
+		completion_reward = {
+			add_ideas = FRG_Technocratic_hegemony
+		}
+	}
+
+	focus = {
+		id = FRG_Joan_of_Arc_Legacy
+		icon = GFX_goal_NFA_The_cult
+		x = -12
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_National_Throat
+		}
+		prerequisite = {
+			focus = FRG_Technocratic_hegemony
+		}
+		completion_reward = {
+			set_rule = {
+				can_generate_female_aces = yes
+			}
+			add_ideas = FRG_mJoan_of_Arc_Legacy
+		}
+	}
+
+	focus = {
+		id = FRG_The_future_vision_of_the_nation
+		icon = GFX_goal_NFA_Youth_Devotion
+		x = -12
+		y = 6
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_Joan_of_Arc_Legacy
+		}
+		completion_reward = {
+			custom_effect_tooltip = FRG_The_future_vision_of_the_nation_tooltip
+			hidden_effect = {
+
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_Mahieu_win
+		icon = GFX_goal_COR_protocols_of_zion
+		x = 0
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			has_country_leader = {
+				ruling_only = yes
+				name = "雅克·德·马希厄"
+			}
+		}
+		prerequisite = {
+			focus = FRG_Remy_die
+		}
+		completion_reward = {
+			add_political_power = 100
+			set_cosmetic_tag = FRG_Mahieu
+			create_country_leader = {
+				name = "雅克·德·马希厄"
+				desc = ""
+				picture = "gfx/leaders/FRG/Portrait_FRG_Jacques_de_Mahieu.png"
+				expire = "1965.1.1"
+				ideology = eugenicsism_subtype
+				traits = { FRG_SPECIAL }
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_Scientific_Race_Committee
+		icon = GFX_goal_great_science
+		x = -1
+		y = 2
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_Mahieu_win
+		}
+		completion_reward = {
+			add_ideas = FRG_zhongzukexueweiyuanhui
+		}
+	}
+
+	focus = {
+		id = FRG_Ideological_indoctrination
+		icon = GFX_goal_big_news
+		x = 1
+		y = 2
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_Mahieu_win
+		}
+		completion_reward = {
+			add_ideas = COR_mass_propaganda_idea
+		}
+	}
+
+	focus = {
+		id = FRG_Extensive_intelligence_testing
+		icon = GFX_USA_I_Will_Not_Promise_The_Moon
+		x = -2
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_Scientific_Race_Committee
+		}
+		completion_reward = {
+			add_ideas = FRG_survival_of_the_fittest_1
+		}
+	}
+
+	focus = {
+		id = FRG_Oppose_intermarriage_among_immigrants
+		icon = GFX_goal_COR_Jim_Crow_focus
+		x = 0
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_Scientific_Race_Committee
+		}
+		prerequisite = {
+			focus = FRG_Ideological_indoctrination
+		}
+		completion_reward = {
+			add_ideas = FRG_Genetic_Fertility_Permit
+		}
+	}
+
+	focus = {
+		id = FRG_Non_mandatory_sterilization
+		icon = GFX_goal_COR_family_programs
+		x = 2
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_Ideological_indoctrination
+		}
+		completion_reward = {
+			add_ideas = FRG_Non_mandatory_sterilization
+		}
+	}
+
+	focus = {
+		id = FRG_Low_cost_drugs
+		icon = FAUD_DROOOGS
+		x = -1
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_Extensive_intelligence_testing
+		}
+		prerequisite = {
+			focus = FRG_Oppose_intermarriage_among_immigrants
+		}
+		completion_reward = {
+			add_ideas = FRG_Manipulate_the_brain
+		}
+	}
+
+	focus = {
+		id = FRG_Defective_goods
+		icon = GFX_goal_TEX_retail_tax
+		x = 1
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_Non_mandatory_sterilization
+		}
+		prerequisite = {
+			focus = FRG_Oppose_intermarriage_among_immigrants
+		}
+		completion_reward = {
+			add_ideas = FRG_Affordable_and_cost_effective_food
+		}
+	}
+
+	focus = {
+		id = FRG_quarantine
+		icon = GFX_goal_COR_Black_Laws
+		x = 0
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_Low_cost_drugs
+		}
+		prerequisite = {
+			focus = FRG_Defective_goods
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRG_survival_of_the_fittest_1
+				add_idea = FRG_survival_of_the_fittest_2
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_Perfect_Utopia
+		icon = GFX_goal_FRG_Perfect_Utopia
+		x = 0
+		y = 6
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_quarantine
+		}
+		completion_reward = {
+			custom_effect_tooltip = FRG_Perfect_Utopia_tooltip
+			hidden_effect = {
+				remove_ideas = FRG_Manipulate_the_brain
+				remove_ideas = FRG_Non_mandatory_sterilization
+				remove_ideas = FRG_zhongzukexueweiyuanhui
+				swap_ideas = {
+					remove_idea = FRG_survival_of_the_fittest_2
+					add_idea = FRG_survival_of_the_fittest_3
+				}
+				set_cosmetic_tag = FRG_New_Eden
+			}
+			
+		}
+	}
+
+	focus = {
+		id = FRG_Chanel_win
+		icon = GFX_CAL_celebrity_endorcements
+		x = -6
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			has_country_leader = {
+				ruling_only = yes
+				name = "加布里埃·香奈儿"
+			}
+		}
+		prerequisite = {
+			focus = FRG_Remy_die
+		}
+		completion_reward = {
+			add_political_power = 100
+			set_cosmetic_tag = FRG_CHANEL
+			set_politics = {
+				ruling_party = market_liberal
+				elections_allowed = no
+			}
+			create_country_leader = {
+				name = "加布里埃·香奈儿"
+				desc = ""
+				picture = "gfx/leaders/FRG/Portrait_FRG_Gabrielle_Bonheur_Chanel.png"
+				expire = "1965.1.1"
+				ideology = free_market_capitalist_subtype
+				traits = { FRG_CEO }
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_Establish_a_business_alliance
+		icon = GFX_goal_TEX_coop_plan
+		x = -7
+		y = 2
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_Chanel_win
+		}
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_Supporting_the_Service_Economy
+		icon = GFX_goal_CAL_prosperity
+		x = -5
+		y = 2
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_Chanel_win
+		}
+		completion_reward = {
+			add_ideas = FRG_Supporting_the_Service_Economy_1
+		}
+	}
+
+	focus = {
+		id = FRG_Devote_oneself_to_France
+		icon = GFX_goal_NFA_Third_Republic_Triumphant
+		x = -8
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_Establish_a_business_alliance
+		}
+		completion_reward = {
+			add_ideas = NFA_world_war_vets
+		}
+	}
+
+	focus = {
+		id = FRG_Expand_the_spy_organization
+		icon = GFX_goal_TEX_universal_education
+		x = -6
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_Establish_a_business_alliance
+		}
+		prerequisite = {
+			focus = FRG_Supporting_the_Service_Economy
+		}
+		completion_reward = {
+			create_intelligence_agency = {
+				name = "嘉柏丽尔之眼"
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_Relief_and_privatization
+		icon = GFX_NEE_Labor_Committee
+		x = -4
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_Supporting_the_Service_Economy
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRG_Supporting_the_Service_Economy_1
+				add_idea = FRG_Supporting_the_Service_Economy_2
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_Enhance_Chanel_influence
+		icon = GFX_goal_generic_banking_legislation
+		x = -7
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_Devote_oneself_to_France
+		}
+		prerequisite = {
+			focus = FRG_Expand_the_spy_organization
+		}
+		completion_reward = {
+			add_ideas = FRG_personal_charisma
+		}
+	}
+
+	focus = {
+		id = FRG_Acquiring_small_and_medium_enterprises
+		icon = GFX_CAL_national_independents
+		x = -5
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_Relief_and_privatization
+		}
+		prerequisite = {
+			focus = FRG_Expand_the_spy_organization
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRG_Supporting_the_Service_Economy_2
+				add_idea = FRG_Supporting_the_Service_Economy_3
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_Enterprises_support_the_country
+		icon = GFX_CAL_renovate_california
+		x = -6
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_Enhance_Chanel_influence
+		}
+		prerequisite = {
+			focus = FRG_Acquiring_small_and_medium_enterprises
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRG_Supporting_the_Service_Economy_3
+				add_idea = FRG_Supporting_the_Service_Economy_4
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_But_the_state_is_born_for_enterprises
+		icon = GFX_GRU_CORPORATE_MEGACORP
+		x = -6
+		y = 6
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_Enterprises_support_the_country
+		}
+		completion_reward = {
+			custom_effect_tooltip = FRG_But_the_state_is_born_for_enterprises_tooltip
+			hidden_effect = {
+				swap_ideas = {
+					remove_idea = FRG_Supporting_the_Service_Economy_4
+					add_idea = FRG_Supporting_the_Service_Economy_5
+				}
+				add_research_slot = 1
+				set_cosmetic_tag = FRG_CHANEL_2
+				set_politics = {
+					ruling_party = paternal_autocrat
+					elections_allowed = no
+				}
+				create_country_leader = {
+					name = "加布里埃·香奈儿"
+					desc = ""
+					picture = "gfx/leaders/FRG/Portrait_FRG_Gabrielle_Bonheur_Chanel.png"
+					expire = "1965.1.1"
+					ideology = corporatocracy_subtype
+					traits = { FRG_CEO }
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_Chack_win
+		icon = GFX_goal_NFA_military_supremacy
+		x = 6
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			has_country_leader = {
+				ruling_only = yes
+				name = "保罗·查克"
+			}
+		}
+		prerequisite = {
+			focus = FRG_Remy_die
+		}
+		completion_reward = {
+			add_political_power = 100
+			set_cosmetic_tag = FRG_Paul_Chack
+			set_politics = {
+				ruling_party = paternal_autocrat
+				elections_allowed = no
+			}
+			create_country_leader = {
+				name = "保罗·查克"
+				desc = ""
+				picture = "gfx/leaders/FRG/Portrait_FRA_Paul_Chack.png"
+				expire = "1965.1.1"
+				ideology = revolution_nationale_subtype
+				traits = {  }
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_personality_cult
+		icon = GFX_goal_NFA_Culty_cult_cult
+		x = 5
+		y = 2
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_Chack_win
+		}
+		completion_reward = {
+			add_country_leader_trait = France_god
+		}
+	}
+
+	focus = {
+		id = FRG_Above_the_parliament
+		icon = GFX_focus_generic_authoritarian_government
+		x = 7
+		y = 2
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_Chack_win
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = social_liberal
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = social_democrat
+				popularity = -0.1
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_The_military_is_the_country
+		icon = GFX_goal_NFA_Chantiers_de_la_jeunesse
+		x = 4
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_personality_cult
+		}
+		completion_reward = {
+			add_ideas = FRG_Carolingian_Legacy
+		}
+	}
+
+	focus = {
+		id = FRG_The_Spirit_of_France
+		icon = GFX_goal_NFA_french_traditions
+		x = 6
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_personality_cult
+		}
+		prerequisite = {
+			focus = FRG_Above_the_parliament
+		}
+		completion_reward = {
+			add_ideas = FRG_New_French_Man
+		}
+	}
+
+	focus = {
+		id = FRG_Revenge_Passion
+		icon = GFX_goal_NFA_Kill_Rats
+		x = 8
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_Above_the_parliament
+		}
+		completion_reward = {
+			add_ideas = FRG_Bitter_Revanchism
+		}
+	}
+
+	focus = {
+		id = FRG_Make_capitalists_obedient
+		icon = GFX_goal_RUS_crush_capitalists
+		x = 5
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_The_military_is_the_country
+		}
+		prerequisite = {
+			focus = FRG_The_Spirit_of_France
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = market_liberal
+				popularity = -0.05
+			}
+			add_manpower = -569
+		}
+	}
+
+	focus = {
+		id = FRG_Prepare_military_factories
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 7
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_Revenge_Passion		
+		}
+		prerequisite = {
+			focus = FRG_The_Spirit_of_France
+		}
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_Hunting_eagles
+		icon = GFX_goal_FRA_jacobin_nationalism
+		x = 6
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_Make_capitalists_obedient		
+		}
+		prerequisite = {
+			focus = FRG_Prepare_military_factories
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRG_Bitter_Revanchism
+				add_idea = FRG_Bitter_Revanchism_2
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_France_is_reborn_in_the_flames_of_fire
+		icon = GFX_goal_NFA_national_recovery
+		x = 6
+		y = 6
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_Hunting_eagles		
+		}
+		completion_reward = {
+			custom_effect_tooltip = FRG_France_is_reborn_in_the_flames_of_fire_tooltip
+			hidden_effect = {
+				add_ideas = FRG_New_French_State
+				set_cosmetic_tag = FRG_Paul_Chack_2
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_Brasillach_win
+		icon = GFX_goal_ARZ_Sword
+		x = 12
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			has_country_leader = {
+				ruling_only = yes
+				name = "罗伯特·布拉希拉赫"
+			}
+		}
+		prerequisite = {
+			focus = FRG_Remy_die
+		}
+		completion_reward = {
+			add_political_power = 100
+			set_cosmetic_tag = FRG_Brasillach
+		}
+	}
+
+	focus = {
+		id = FRG_Intimidating_sympathizers_with_Jews
+		icon = GFX_goal_FRA_slay_bourgeois_decadence
+		x = 11
+		y = 2
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_Brasillach_win
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = social_liberal
+				popularity = -0.05
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_Conspiracy_begins_to_plan
+		icon = GFX_goal_FRA_glory_of_war_2
+		x = 13
+		y = 2
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_Brasillach_win
+		}
+		completion_reward = {
+			16 = { set_demilitarized_zone = yes }
+		}
+	}
+
+	focus = {
+		id = FRG_Find_some_young_men
+		icon = GFX_goal_army_guy_2
+		x = 10
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			has_completed_focus = FRG_Refurbish_old_inventory
+		}
+		prerequisite = {
+			focus = FRG_Intimidating_sympathizers_with_Jews
+		}
+		completion_reward = {
+			custom_effect_tooltip = FRG_Find_some_young_men_tooltip
+			hidden_effect = {
+				21 = {
+					create_unit = {
+						division = "name = \"清理人员\" division_template = \"解放运动精锐师\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = FRG
+					}
+					create_unit = {
+						division = "name = \"清理人员\" division_template = \"解放运动精锐师\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = FRG
+					}
+					create_unit = {
+						division = "name = \"清理人员\" division_template = \"解放运动精锐师\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = FRG
+					}
+					create_unit = {
+						division = "name = \"清理人员\" division_template = \"解放运动精锐师\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = FRG
+					}
+					create_unit = {
+						division = "name = \"清理人员\" division_template = \"解放运动精锐师\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = FRG
+					}
+					create_unit = {
+						division = "name = \"清理人员\" division_template = \"解放运动精锐师\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = FRG
+					}
+					create_unit = {
+						division = "name = \"清理人员\" division_template = \"解放运动精锐师\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = FRG
+					}
+					create_unit = {
+						division = "name = \"清理人员\" division_template = \"解放运动精锐师\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = FRG
+					}
+					create_unit = {
+						division = "name = \"清理人员\" division_template = \"解放运动精锐师\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = FRG
+					}
+					create_unit = {
+						division = "name = \"清理人员\" division_template = \"解放运动精锐师\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = FRG
+					}
+				}
+			}
+
+		}
+	}
+
+	focus = {
+		id = FRG_Get_France_ready
+		icon = GFX_goal_generic_execution
+		x = 12
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			has_completed_focus = FRG_Find_some_young_men
+			has_completed_focus = FRG_Conspiracy_begins_to_plan
+		}
+		prerequisite = {
+			focus = FRG_Intimidating_sympathizers_with_Jews
+		}
+		prerequisite = {
+			focus = FRG_Conspiracy_begins_to_plan
+		}
+		completion_reward = {
+			16  = {
+				add_dynamic_modifier = { modifier = famine_serious_FRA days = 60}
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_Refurbish_old_inventory
+		icon = GFX_goal_generic_shipyard
+		x = 14
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			has_completed_focus = FRG_Conspiracy_begins_to_plan
+		}
+		prerequisite = {
+			focus = FRG_Conspiracy_begins_to_plan
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 10000
+				producer = NFA
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_The_concentration_camp_is_not_enough
+		icon = GFX_UBR_auschwitz
+		x = 11
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_Find_some_young_men
+		}
+		prerequisite = {
+			focus = FRG_Get_France_ready
+		}
+		completion_reward = {
+			add_ideas = FRG_lager
+		}
+	}
+
+	focus = {
+		id = FRG_Crystals_in_Blood_Water
+		icon = GFX_goal_COR_liberal
+		x = 13
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_Find_some_young_men
+		}
+		prerequisite = {
+			focus = FRG_Refurbish_old_inventory
+		}
+		completion_reward = {
+			add_ideas = FRG_Blood_Water
+		}
+	}
+
+	focus = {
+		id = FRG_Paris_overnight
+		icon = GFX_goal_LUX_Ties_with_Paris
+		x = 12
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			divisions_in_state = {
+				size > 10
+				state = 16
+			}
+		}
+		prerequisite = {
+			focus = FRG_The_concentration_camp_is_not_enough
+		}
+		prerequisite = {
+			focus = FRG_Crystals_in_Blood_Water
+		}
+		completion_reward = {
+			custom_effect_tooltip = FRG_Paris_overnight_tooltip
+			hidden_effect = {
+				add_manpower = -558136
+				16 = { set_demilitarized_zone = no }
+			}
+			
+		}
+	}
+
+	focus = {
+		id = FRG_Fuck_STAR_OF_DAVID
+		icon = GFX_goals_FRA_bulaxilahe_03
+		x = 12
+		y = 6
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Remy_die
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_Paris_overnight
+		}
+		completion_reward = {
+			custom_effect_tooltip = FRG_Fuck_STAR_OF_DAVID_tooltip
+			hidden_effect = {
+				every_country = {
+					FRG = {
+						create_wargoal = {
+							type = puppet_wargoal_focus
+							target = PREV
+						}
+					}	
+				}
+				every_state = {
+					add_core_of = FRG
+				}
+				create_country_leader = {
+					name = "摩洛克"
+					desc = ""
+					picture = "gfx/leaders/FRG/Portrait_FRG_Robert_Brasillach_2.png"
+					expire = "1965.1.1"
+					ideology = ultranationalism_proto_subtype
+					traits = { Valley_of_the_Sons_of_Hinnom }
+				}
+				set_cosmetic_tag = FRG_Promised_land
+			}
+		}
+	}
+
+
+	###选举线
+	focus = {
+		id = FRG_Reconstruction_of_the_Republic
+		icon = GFX_goal_UK_ban_unions
+		x = 54
+		y = 8
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			has_country_flag = FRG_totalist_tip
+		}
+		prerequisite = {
+			
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = FRG_kill_Remy
+		icon = GFX_goal_ALB_Reaction_Fire
+		x = -1
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Reconstruction_of_the_Republic
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Reconstruction_of_the_Republic
+		}
+		completion_reward = {
+			add_manpower = -4206
+			add_popularity = {
+				ideology = national_populist
+				popularity = -0.1
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_Clean_up
+		icon = GFX_goal_POL_Rebuilding_Krakow
+		x = 1
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Reconstruction_of_the_Republic
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Reconstruction_of_the_Republic
+		}
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_Call_for_elections
+		icon = GFX_goal_KIV_socialist_democracy
+		x = 0
+		y = 2
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Reconstruction_of_the_Republic
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Clean_up
+		}
+		prerequisite = {
+			focus = FRG_kill_Remy
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_Vidal_win
+		icon = GFX_goals_FRA_eusure_retire_army
+		x = -8
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Reconstruction_of_the_Republic
+		available = {
+			has_country_leader = {
+				ruling_only = yes
+				name = "加斯东·维达尔"
+			}
+		}
+		prerequisite = {
+			focus = FRG_Call_for_elections
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = FRG_Tessier_win
+		icon = GFX_goal_CZE_respective_church
+		x = 0
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Reconstruction_of_the_Republic
+		available = {
+			has_country_leader = {
+				ruling_only = yes
+				name = "加斯东·泰西耶"
+			}
+		}
+		prerequisite = {
+			focus = FRG_Call_for_elections
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = FRG_Sabiyani_win
+		icon = GFX_goal_FRA_national_jacobin
+		x = 8
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Reconstruction_of_the_Republic
+		available = {
+			has_country_leader = {
+				ruling_only = yes
+				name = "西蒙·萨比亚尼"
+			}
+		}
+		prerequisite = {
+			focus = FRG_Call_for_elections
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = FRG_Workers_Constitution
+		icon = GFX_socialist_constitution
+		x = -10
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Reconstruction_of_the_Republic
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Vidal_win
+		}
+		completion_reward = {
+			add_ideas = FRA_peoples_constitution
+		}
+	}
+
+	focus = {
+		id = FRG_Remember_Civil_War
+		icon = GFX_goal_FRA_sacrificial_apotheosis
+		x = -8
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Reconstruction_of_the_Republic
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Vidal_win
+		}
+		completion_reward = {
+			army_experience = 100
+			air_experience = 100
+			navy_experience = 100
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 2
+				uses = 4
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_Comprehensive_nationalization_of_factories
+		icon = GFX_goal_CSA_dictatorship_of_proletariat
+		x = -6
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Reconstruction_of_the_Republic
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Vidal_win
+		}
+		completion_reward = {
+			add_ideas = ENG_militarized_industry_idea
+		}
+	}
+
+	focus = {
+		id = FRG_Strike_against_the_Church
+		icon = GFX_goal_MEX_clergy_in_chains
+		x = -11
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Reconstruction_of_the_Republic
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Workers_Constitution
+		}
+		completion_reward = {
+			add_ideas = FRA_anti_clericalism
+		}
+	}
+
+	focus = {
+		id = FRG_Fortified_Lorraine_Region
+		icon = GFX_goal_generic_construct_military
+		x = -9
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Reconstruction_of_the_Republic
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Remember_Civil_War
+		}
+		completion_reward = {
+			785 = {
+				add_building_construction = {
+					type = bunker
+					province = 11642
+					level = 5
+				}
+				add_building_construction = {
+					type = bunker
+					province = 5291
+					level = 5
+				}
+				add_building_construction = {
+					type = bunker
+					province = 6545
+					level = 5
+				}
+				add_building_construction = {
+					type = bunker
+					province = 9472
+					level = 5
+				}
+				add_building_construction = {
+					type = bunker
+					province = 3560
+					level = 5
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_Zero_tolerance_for_populist_elements
+		icon = GFX_goal_purge_opposition
+		x = -7
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Reconstruction_of_the_Republic
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Remember_Civil_War
+		}
+		completion_reward = {
+			add_manpower = -2589
+		}
+	}
+
+	focus = {
+		id = FRG_Syndicalist_economy
+		icon = GFX_goal_FRA_agro_industrial_federation
+		x = -5
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Reconstruction_of_the_Republic
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Comprehensive_nationalization_of_factories
+		}
+		completion_reward = {
+			add_ideas = FRA_cooperative_development
+		}
+	}
+
+	focus = {
+		id = FRG_Education_for_All
+		icon = GFX_goal_CRO_education_number_one
+		x = -10
+		y = 6
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Reconstruction_of_the_Republic
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Strike_against_the_Church
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = FRG_Blaming_against_Germany
+		icon = GFX_SOV_No_Capital
+		x = -8
+		y = 6
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Reconstruction_of_the_Republic
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Fortified_Lorraine_Region
+		}
+		prerequisite = {
+			focus = FRG_Zero_tolerance_for_populist_elements
+		}
+		completion_reward = {
+			add_ideas = FRG_Bitter_Revanchism_2
+		}
+	}
+
+	focus = {
+		id = FRG_Agricultural_Assistance_Fund
+		icon = GFX_RUS_gorgprosper
+		x = -6
+		y = 6
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Reconstruction_of_the_Republic
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Syndicalist_economy
+		}
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_A_strong_judicial_system
+		icon = GFX_goals_FRA_cut_off_department
+		x = -9
+		y = 7
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Reconstruction_of_the_Republic
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Education_for_All
+		}
+		prerequisite = {
+			focus = FRG_Blaming_against_Germany
+		}
+		prerequisite = {
+			focus = FRG_Agricultural_Assistance_Fund
+		}
+		completion_reward = {
+			add_ideas = FRA_fuck_bureaucrats
+		}
+	}
+
+	focus = {
+		id = FRG_Consolidate_left-wing_unity
+		icon = GFX_goal_NIC_Victory_Social_Democracy
+		x = -7
+		y = 7
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Reconstruction_of_the_Republic
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Education_for_All
+		}
+		prerequisite = {
+			focus = FRG_Blaming_against_Germany
+		}
+		prerequisite = {
+			focus = FRG_Agricultural_Assistance_Fund
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = radical_socialist
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = syndicalist
+				popularity = 0.1
+			}
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = FRG_Travail
+		icon = GFX_goal_FRG_Travail
+		x = -8
+		y = 8
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Reconstruction_of_the_Republic
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_A_strong_judicial_system
+		}
+		prerequisite = {
+			focus = FRG_Consolidate_left-wing_unity
+		}
+		completion_reward = {
+			add_ideas = FRG_Travail_idea
+		}
+	}
+
+	focus = {
+		id = FRG_Trade_unions_under_Christianity
+		icon = GFX_goal_NFA_cargolic_unions
+		x = -2
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Reconstruction_of_the_Republic
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Tessier_win
+		}
+		completion_reward = {
+			add_ideas = FRA_chiristian_union
+		}
+	}
+
+	focus = {
+		id = FRG_Assistance_to_social_security
+		icon = GFX_goal_workers_rights
+		x = 0
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Reconstruction_of_the_Republic
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Tessier_win
+		}
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_reassure_the_people
+		icon = GFX_ITA_christbol
+		x = 2
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Reconstruction_of_the_Republic
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Tessier_win
+		}
+		completion_reward = {
+			add_ideas = FRA_peoples_godfather
+		}
+	}
+
+	focus = {
+		id = FRG_Expansion_of_the_seminary
+		icon = GFX_goal_COR_University_System_of_America
+		x = -3
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Reconstruction_of_the_Republic
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Trade_unions_under_Christianity
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = FRG_Support_for_needy_workers
+		icon = GFX_ITA_poor
+		x = -1
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Reconstruction_of_the_Republic
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Assistance_to_social_security
+		}
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_Supporting_farmers
+		icon = GFX_RUS_Peasant_Councils
+		x = 1
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Reconstruction_of_the_Republic
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Assistance_to_social_security
+		}
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_Church_Planting_Fund
+		icon = GFX_goal_CZE_rural_education
+		x = 3
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Reconstruction_of_the_Republic
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_reassure_the_people
+		}
+		completion_reward = {
+			add_ideas = FRG_Church_Fund
+		}
+	}
+
+	focus = {
+		id = FRG_Church_InDepth_Education
+		icon = GFX_goal_POL_Land_Of_Your_Youth
+		x = -2
+		y = 6
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Reconstruction_of_the_Republic
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Expansion_of_the_seminary
+		}
+		completion_reward = {
+			add_ideas = FRG_Church_Education		
+		}
+	}
+
+	focus = {
+		id = FRG_Agricultural_mechanisation
+		icon = GFX_goal_FRA_farm_outreach
+		x = 0
+		y = 6
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Reconstruction_of_the_Republic
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Support_for_needy_workers
+		}
+		prerequisite = {
+			focus = FRG_Supporting_farmers
+		}
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 6
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 6
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_Reaffirmation_of_family_relations
+		icon = GFX_goal_generic_happy_workers
+		x = 2
+		y = 6
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Reconstruction_of_the_Republic
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Church_Planting_Fund
+		}
+		completion_reward = {
+			add_ideas = FRG_family_relations
+		}
+	}
+
+	focus = {
+		id = FRG_Kingdom_of_Heaven
+		icon = GFX_goals_FRA_FRA_land_of_lord
+		x = -1
+		y = 7
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Reconstruction_of_the_Republic
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Church_InDepth_Education
+		}
+		prerequisite = {
+			focus = FRG_Agricultural_mechanisation
+		}
+		prerequisite = {
+			focus = FRG_Reaffirmation_of_family_relations
+		}
+		completion_reward = {
+			add_ideas = FRA_oh_jesus
+		}
+	}
+
+	focus = {
+		id = FRG_Defence_of_human_rights
+		icon = GFX_goals_FRA_fight_for_heaven
+		x = 1
+		y = 7
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Reconstruction_of_the_Republic
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Church_InDepth_Education
+		}
+		prerequisite = {
+			focus = FRG_Agricultural_mechanisation
+		}
+		prerequisite = {
+			focus = FRG_Reaffirmation_of_family_relations
+		}
+		completion_reward = {
+			add_ideas = FRA_civil_right
+		}
+	}
+
+	focus = {
+		id = FRG_Famille
+		icon = GFX_goal_FRG_Famille
+		x = 0
+		y = 8
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Reconstruction_of_the_Republic
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Kingdom_of_Heaven
+		}
+		prerequisite = {
+			focus = FRG_Defence_of_human_rights
+		}
+		completion_reward = {
+			add_ideas = FRG_Famille_idea
+		}
+	}
+
+	focus = {
+		id = FRG_Destroy_the_bourgeoisie
+		icon = GFX_BBR_overthrow_capital
+		x = 6
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Reconstruction_of_the_Republic
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Sabiyani_win
+		}
+		completion_reward = {
+			add_manpower = -30000
+		}
+	}
+
+	focus = {
+		id = FRG_Radical_Revolution_Eternal
+		icon = GFX_goal_CSA_lead_american_revolution
+		x = 8
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Reconstruction_of_the_Republic
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Sabiyani_win
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = totalist
+				popularity = 0.075
+			}
+			add_stability = 0.1
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = FRG_Expansion_of_industrial_metropolitan_areas
+		icon = GFX_RUS_The_Industry_Needs_Men
+		x = 10
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Reconstruction_of_the_Republic
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Sabiyani_win
+		}
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_enlighten_the_masses
+		icon = GFX_goal_FRA_national_liberation
+		x = 5
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Reconstruction_of_the_Republic
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Destroy_the_bourgeoisie
+		}
+		completion_reward = {
+			add_ideas = FRA_educated_workers_idea
+		}
+	}
+
+	focus = {
+		id = FRG_Search_for_neo-Gileadists
+		icon = GFX_goal_FRA_comite_de_salut_publique
+		x = 7
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Reconstruction_of_the_Republic
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Radical_Revolution_Eternal
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = totalist
+				popularity = 0.3
+			}
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = -0.15
+			}
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = -0.15
+			}
+			add_popularity = {
+				ideology = social_democrat
+				popularity = -0.15
+			}
+			add_popularity = {
+				ideology = social_liberal
+				popularity = -0.15
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_arm_the_people
+		icon = GFX_goal_reform_socialist_army
+		x = 9
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Reconstruction_of_the_Republic
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Radical_Revolution_Eternal
+		}
+		completion_reward = {
+			add_ideas = FRA_guardia_rossa_dummy
+		}
+	}
+
+	focus = {
+		id = FRG_rapid_industrialisation
+		icon = GFX_goal_CSA_industrial_unionism
+		x = 11
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Reconstruction_of_the_Republic
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Expansion_of_industrial_metropolitan_areas
+		}
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_Jacobins_lead_everything
+		icon = GFX_goal_CSA_lead_american_revolution
+		x = 6
+		y = 6
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Reconstruction_of_the_Republic
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_enlighten_the_masses
+		}
+		completion_reward = {
+			add_war_support = 0.2
+			add_command_power = 150
+		}
+	}
+
+	focus = {
+		id = FRG_Advancing_military_development
+		icon = GFX_goal_NFA_Verdun_memories
+		x = 8
+		y = 6
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Reconstruction_of_the_Republic
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Search_for_neo-Gileadists
+		}
+		prerequisite = {
+			focus = FRG_arm_the_people
+		}
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.75
+				uses = 3
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_Capitalism_under_state_control
+		icon = GFX_goal_generic_happy_dollar_bag
+		x = 10
+		y = 6
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Reconstruction_of_the_Republic
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_rapid_industrialisation
+		}
+		completion_reward = {
+			add_ideas = FRA_state_capitalism
+		}
+	}
+
+	focus = {
+		id = FRG_rearmament
+		icon = GFX_goal_FRA_jacobin_nationalism
+		x = 7
+		y = 7
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Reconstruction_of_the_Republic
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Jacobins_lead_everything
+		}
+		prerequisite = {
+			focus = FRG_Advancing_military_development
+		}
+		prerequisite = {
+			focus = FRG_Capitalism_under_state_control
+		}
+		completion_reward = {
+			add_ideas = FRA_to_war_idea
+		}
+	}
+
+	focus = {
+		id = FRG_Marxism_with_French_characteristics
+		icon = GFX_goal_FRA_jacobin_cgt
+		x = 9
+		y = 7
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Reconstruction_of_the_Republic
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Jacobins_lead_everything
+		}
+		prerequisite = {
+			focus = FRG_Advancing_military_development
+		}
+		prerequisite = {
+			focus = FRG_Capitalism_under_state_control
+		}
+		completion_reward = {
+			add_ideas = French_Revanchism_idea2
+			add_political_power = 200
+			add_stability = 0.3
+		}
+	}
+
+	focus = {
+		id = FRG_Patrie
+		icon = GFX_goal_FRG_Patrie
+		x = 8
+		y = 8
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Reconstruction_of_the_Republic
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_rearmament
+		}
+		prerequisite = {
+			focus = FRG_Marxism_with_French_characteristics
+		}
+		completion_reward = {
+			add_ideas = FRG_Patrie_idea
+		}
+	}
+
+	focus = {
+		id = FRG_Beats_Dictator_Severely
+		icon = GFX_goal_MEX_grant_them_none
+		x = 54
+		y = 18
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			has_country_flag = FRG_syndicalist_tip
+		}
+		prerequisite = {
+			
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = FRG_kill_Remy_s
+		icon = GFX_goal_ALB_Reaction_Fire
+		x = -1
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Beats_Dictator_Severely
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Beats_Dictator_Severely
+		}
+		completion_reward = {
+			add_manpower = -4206
+			add_popularity = {
+				ideology = national_populist
+				popularity = -0.1
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_Clean_up_s
+		icon = GFX_goal_POL_Rebuilding_Krakow
+		x = 1
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Beats_Dictator_Severely
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Beats_Dictator_Severely
+		}
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_Call_for_elections_s
+		icon = GFX_goal_KIV_socialist_democracy
+		x = 0
+		y = 2
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Beats_Dictator_Severely
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Clean_up_s
+		}
+		prerequisite = {
+			focus = FRG_kill_Remy_s
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_Gouin_win
+		icon = GFX_goals_FRA_liberal_socialism
+		x = -8
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Beats_Dictator_Severely
+		available = {
+			has_country_leader = {
+				ruling_only = yes
+				name = "菲利克斯·古安"
+			}
+		}
+		prerequisite = {
+			focus = FRG_Call_for_elections_s
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = FRG_crush_radicalism
+		icon = GFX_goals_FRA_oppose_radicalism
+		x = -10
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Beats_Dictator_Severely
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Gouin_win
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = radical_socialist
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = totalist
+				popularity = -0.1
+			}
+			add_political_power = 100
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = FRG_french_social_democracy
+		icon = GFX_goal_NEE_Maintain_Eco_Socialism
+		x = -8
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Beats_Dictator_Severely
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Gouin_win
+		}
+		completion_reward = {
+			add_ideas = FRA_orthodox_socdem
+		}
+	}
+
+	focus = {
+		id = FRG_political_democracy
+		icon = GFX_goal_generic_socialist_democracy
+		x = -6
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Beats_Dictator_Severely
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Gouin_win
+		}
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.1
+			add_war_support = 0.1
+			add_popularity = {
+				ideology = radical_socialist
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = syndicalist
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.1
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_civil_rights_protection
+		icon = GFX_goal_BRG_Moderate_Unions
+		x = -11
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Beats_Dictator_Severely
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_crush_radicalism
+		}
+		completion_reward = {
+			add_ideas = FRA_civil_rights_protection
+		}
+	}
+
+	focus = {
+		id = FRG_expand_welfare
+		icon = GFX_DKB_Welfare_All
+		x = -9
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Beats_Dictator_Severely
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_french_social_democracy
+		}
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_less_working_hours
+		icon = GFX_CAL_workers_compensation_act
+		x = -7
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Beats_Dictator_Severely
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_french_social_democracy
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRA_orthodox_socdem
+				add_idea = FRA_orthodox_socdem2
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_incorporate_liberalism
+		icon = GFX_goal_NFA_Fourth_Republic
+		x = -5
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Beats_Dictator_Severely
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_political_democracy
+		}
+		completion_reward = {
+			add_socdem_to_coalition = yes
+			add_soclib_to_coalition = yes
+			add_marlib_to_coalition = yes
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = market_liberal
+				popularity = 0.1
+			}
+			add_political_power = 100
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = FRG_egoism
+		icon = GFX_goal_FIU_self_management
+		x = -10
+		y = 6
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Beats_Dictator_Severely
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_civil_rights_protection
+		}
+		completion_reward = {
+			add_ideas = FRA_shining_liberty
+		}
+	}
+
+	focus = {
+		id = FRG_bread_and_roses
+		icon = GFX_goal_NFA_Socialist_Republic
+		x = -8
+		y = 6
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Beats_Dictator_Severely
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_expand_welfare
+		}
+		prerequisite = {
+			focus = FRG_less_working_hours
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRA_orthodox_socdem2
+				add_idea = FRA_orthodox_socdem3
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_government_business
+		icon = GFX_goal_NFA_Work_With_Local_Businesses
+		x = -6
+		y = 6
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Beats_Dictator_Severely
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_incorporate_liberalism
+		}
+		completion_reward = {
+			add_ideas = FRA_government_business
+		}
+	}
+
+	focus = {
+		id = FRG_popular_art
+		icon = GFX_UKR_Modern_Art
+		x = -9
+		y = 7
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Beats_Dictator_Severely
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_egoism
+		}
+		prerequisite = {
+			focus = FRG_bread_and_roses
+		}
+		prerequisite = {
+			focus = FRG_government_business
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = FRG_welfare_state
+		icon = GFX_RUS_Welfare_State
+		x = -7
+		y = 7
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Beats_Dictator_Severely
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_egoism
+		}
+		prerequisite = {
+			focus = FRG_bread_and_roses
+		}
+		prerequisite = {
+			focus = FRG_government_business
+		}
+		completion_reward = {
+			add_ideas = FRA_welfare_state
+		}
+	}
+
+	focus = {
+		id = FRG_liberty
+		icon = GFX_goal_FRA_liberty
+		x = -8
+		y = 8
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Beats_Dictator_Severely
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_popular_art
+		}
+		prerequisite = {
+			focus = FRG_welfare_state
+		}
+		completion_reward = {
+			add_ideas = FRA_liberte
+		}
+	}
+
+	focus = {
+		id = FRG_Guerin_win
+		icon = GFX_goals_FRA_guerin
+		x = 0
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Beats_Dictator_Severely
+		available = {
+			has_country_leader = {
+				ruling_only = yes
+				name = "达尼埃尔·介朗"
+			}
+		}
+		prerequisite = {
+			focus = FRG_Call_for_elections_s
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = FRG_cooperate_with_jacobins
+		icon = GFX_goal_FRA_jacobin_cgt
+		x = -2
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Beats_Dictator_Severely
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Guerin_win
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = totalist
+				popularity = 0.1
+			}
+			add_tot_to_coalition = yes
+			add_manpower = 100000
+			add_war_support = 0.1
+			add_ideas = FRA_natjac_support
+		}
+	}
+
+	focus = {
+		id = FRG_land_of_people
+		icon = GFX_goal_FRA_anarchy_communes
+		x = 0
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Beats_Dictator_Severely
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Guerin_win
+		}
+		completion_reward = {
+			every_owned_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_anti_charvinism
+		icon = GFX_goal_AUS_destroy_nationalism
+		x = 2
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Beats_Dictator_Severely
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Guerin_win
+		}
+		completion_reward = {
+			add_ideas = FRA_anti_charvinism
+		}
+	}
+
+	focus = {
+		id = FRG_commune_cooperation
+		icon = GFX_RUS_Promote_Cooperation
+		x = -3
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Beats_Dictator_Severely
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_cooperate_with_jacobins
+		}
+		completion_reward = {
+			add_ideas = FRA_platformism1
+		}
+	}
+
+	focus = {
+		id = FRG_free_soviet
+		icon = GFX_RUS_Support_Region_Sovietization
+		x = -1
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Beats_Dictator_Severely
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_land_of_people
+		}
+		completion_reward = {
+			add_ideas = FRA_free_soviet
+			add_synd_to_coalition = yes
+		}
+	}
+
+	focus = {
+		id = FRG_self_revolution
+		icon = GFX_goal_anarcho_communism
+		x = 1
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Beats_Dictator_Severely
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_land_of_people
+		}
+		completion_reward = {
+			add_ideas = FRA_self_revolution
+		}
+	}
+
+	focus = {
+		id = FRG_reform_millitia
+		icon = GFX_SOV_anarchist_militia
+		x = 3
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Beats_Dictator_Severely
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_anti_charvinism
+		}
+		completion_reward = {
+			add_manpower = 100000
+			add_command_power = 50
+			army_experience = 50
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 3500
+				producer = FRA
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_collective_decisions
+		icon = GFX_goal_FRA_communal_statistical_commission
+		x = -2
+		y = 6
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Beats_Dictator_Severely
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_commune_cooperation
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRA_platformism1
+				add_idea = FRA_platformism3
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_same_theory
+		icon = GFX_goal_CSA_centralist_reorganization
+		x = 0
+		y = 6
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Beats_Dictator_Severely
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_free_soviet
+		}
+		prerequisite = {
+			focus = FRG_self_revolution
+		}
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.75
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_same_tactics
+		icon = GFX_goal_POL_Defensive_Tactics
+		x = 2
+		y = 6
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Beats_Dictator_Severely
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_reform_millitia
+		}
+		completion_reward = {
+			add_ideas = FRA_new_red_army3
+		}
+	}
+
+	focus = {
+		id = FRG_believe_revo
+		icon = GFX_goal_AUS_crimson_danube
+		x = -1
+		y = 7
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Beats_Dictator_Severely
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_collective_decisions
+		}
+		prerequisite = {
+			focus = FRG_same_theory
+		}
+		prerequisite = {
+			focus = FRG_same_tactics
+		}
+		completion_reward = {
+			add_ideas = FRA_believe_revo
+		}
+	}
+
+	focus = {
+		id = FRG_true_anarchism
+		icon = GFX_FAUD_PROMOTE_ANARCHISM
+		x = 1
+		y = 7
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Beats_Dictator_Severely
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_collective_decisions
+		}
+		prerequisite = {
+			focus = FRG_same_theory
+		}
+		prerequisite = {
+			focus = FRG_same_tactics
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRA_platformism3
+				add_idea = FRA_platformism4
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_equality
+		icon = GFX_goal_FRA_equality
+		x = 0
+		y = 8
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Beats_Dictator_Severely
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_true_anarchism
+		}
+		prerequisite = {
+			focus = FRG_believe_revo
+		}
+		completion_reward = {
+			add_ideas = FRA_egalite
+		}
+	}
+
+
+	focus = {
+		id = FRG_Frenay_win
+		icon = GFX_goals_FRA_liberal_syndicalism
+		x = 8
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Beats_Dictator_Severely
+		available = {
+			has_country_leader = {
+				ruling_only = yes
+				name = "亨利·弗勒奈"
+			}
+		}
+		prerequisite = {
+			focus = FRG_Call_for_elections_s
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = FRG_oppose_totalism
+		icon = GFX_goal_HOL_crackdown_totalist
+		x = 6
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Beats_Dictator_Severely
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Frenay_win
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = totalist
+				popularity = -0.2
+			}
+			add_popularity = {
+				ideology = syndicalist
+				popularity = 0.2
+			}
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = FRG_cooperative_development
+		icon = GFX_goal_CSA_coop_clubs
+		x = 8
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Beats_Dictator_Severely
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Frenay_win
+		}
+		completion_reward = {
+			add_ideas = FRA_cooperative_development
+		}
+	}
+
+	focus = {
+		id = FRG_justice_socialism
+		icon = GFX_DKB_Trial
+		x = 10
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Beats_Dictator_Severely
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Frenay_win
+		}
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 100
+			add_popularity = {
+				ideology = syndicalist
+				popularity = 0.1
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_workers_culture
+		icon = GFX_goal_POL_Polish_Culture
+		x = 5
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Beats_Dictator_Severely
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_oppose_totalism
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = FRG_speech_freedom
+		icon = GFX_goal_CSA_protect_freedom_of_speech
+		x = 7
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Beats_Dictator_Severely
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_cooperative_development
+		}
+		completion_reward = {
+			add_ideas = FRA_syndical_free1
+		}
+	}
+
+	focus = {
+		id = FRG_moderate_liberalization
+		icon = GFX_goal_generic_enforce_labor_regulation
+		x = 9
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Beats_Dictator_Severely
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_cooperative_development
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = market_liberal
+				popularity = 0.1
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_cultural_multiplism
+		icon = GFX_NEE_cultural_liberalism
+		x = 11
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Beats_Dictator_Severely
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_justice_socialism
+		}
+		completion_reward = {
+			add_ideas = FRA_cultural_multiplism
+		}
+	}
+
+	focus = {
+		id = FRG_new_thoughts
+		icon = GFX_goal_AUS_big_brain
+		x = 6
+		y = 6
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Beats_Dictator_Severely
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_workers_culture
+		}
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.1
+			add_war_support = 0.1
+			add_popularity = {
+				ideology = syndicalist
+				popularity = 0.1
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_neosyndicalism
+		icon = GFX_goal_HON_Empower_Syndicalist_Federation
+		x = 8
+		y = 6
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Beats_Dictator_Severely
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_speech_freedom
+		}
+		prerequisite = {
+			focus = FRG_moderate_liberalization
+		}
+		completion_reward = {
+			add_ideas = FRA_neosyndicalism
+		}
+	}
+
+	focus = {
+		id = FRG_defend_communal_democracy
+		icon = GFX_goal_CSA_industrial_democracy
+		x = 10
+		y = 6
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Beats_Dictator_Severely
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_cultural_multiplism
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRA_syndical_free1
+				add_idea = FRA_syndical_free2
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_beacon_of_socialism
+		icon = GFX_goal_COR_No_Revolution_No_Reaction
+		x = 7
+		y = 7
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Beats_Dictator_Severely
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_new_thoughts
+		}
+		prerequisite = {
+			focus = FRG_neosyndicalism
+		}
+		prerequisite = {
+			focus = FRG_defend_communal_democracy
+		}
+		completion_reward = {
+			add_ideas = FRA_beacon_of_socialism
+		}
+	}
+
+	focus = {
+		id = FRG_for_freedom
+		icon = GFX_goal_autonomism
+		x = 9
+		y = 7
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Beats_Dictator_Severely
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_neosyndicalism
+		}
+		prerequisite = {
+			focus = FRG_new_thoughts
+		}
+		prerequisite = {
+			focus = FRG_defend_communal_democracy
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRA_syndical_free2
+				add_idea = FRA_syndical_free4
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_Fraternite
+		icon = GFX_goal_FRA_Fraternite
+		x = 8
+		y = 8
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Beats_Dictator_Severely
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_beacon_of_socialism
+		}
+		prerequisite = {
+			focus = FRG_for_freedom
+		}
+		completion_reward = {
+			add_ideas = FRA_fraternite
+		}
+	}
+
+
+	###黑帮线
+
+	focus = {
+		id = FRG_La_scoumoune
+		icon = GFX_goal_CSA_Spread_Propaganda_Caponeist_Deed
+		x = 89
+		y = 13
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			has_country_flag = Rocca_coup
+		}
+		prerequisite = {
+			
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = FRG_Law_enforcement_agencies_under_surveillance
+		icon = GFX_goal_CSA_emergency_powers
+		x = 0
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		relative_position_id = FRG_La_scoumoune
+		prerequisite = {
+			focus = FRG_La_scoumoune
+		}
+		completion_reward = {
+			add_stability = -0.12
+			add_political_power = 150
+		}
+	}
+
+	focus = {
+		id = FRG_Squeeze_out_the_rich
+		icon = GFX_RUS_Say_No_To_Capitalism
+		x = -2
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		relative_position_id = FRG_La_scoumoune
+		prerequisite = {
+			focus = FRG_La_scoumoune
+		}
+		completion_reward = {
+			add_manpower = -3336
+			add_stability = 0.1
+
+		}
+	}
+
+	focus = {
+		id = FRG_Contact_the_British_Mafia
+		icon = GFX_BBR_collective_management
+		x = 2
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		relative_position_id = FRG_La_scoumoune
+		prerequisite = {
+			focus = FRG_La_scoumoune
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+                target = ENG
+                modifier = large_increase
+        	}
+		}
+	}
+
+	focus = {
+		id = FRG_Managing_the_black_market_economy
+		icon = GFX_goal_CSA_underground_economy
+		x = -1
+		y = 2
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		relative_position_id = FRG_La_scoumoune
+		prerequisite = {
+			focus = FRG_Squeeze_out_the_rich
+		}
+		prerequisite = {
+			focus = FRG_Law_enforcement_agencies_under_surveillance
+		}
+		completion_reward = {
+			add_ideas = FRG_economic_policy_idea
+		}
+	}
+
+	focus = {
+		id = FRG_A_church_supported_by_gangs
+		icon = GFX_goal_CSA_church
+		x = 1
+		y = 2
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		relative_position_id = FRG_La_scoumoune
+		prerequisite = {
+			focus = FRG_Contact_the_British_Mafia
+		}
+		prerequisite = {
+			focus = FRG_Law_enforcement_agencies_under_surveillance
+		}
+		completion_reward = {
+			add_ideas = CSA_Church_Support
+		}
+	}
+
+	focus = {
+		id = FRG_Poor_people_feeding_facilities
+		icon = GFX_goal_CSA_public_kitchens
+		x = -2
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		relative_position_id = FRG_La_scoumoune
+		prerequisite = {
+			focus = FRG_Managing_the_black_market_economy
+		}
+		completion_reward = {
+			add_ideas = FRG_Poor_people_feeding_facilities_idea
+		}
+	}
+
+	focus = {
+		id = FRG_Wine_smuggling
+		icon = GFX_goal_CSA_curing_social_ills
+		x = 0
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		relative_position_id = FRG_La_scoumoune
+		prerequisite = {
+			focus = FRG_Managing_the_black_market_economy
+		}
+		prerequisite = {
+			focus = FRG_A_church_supported_by_gangs
+		}
+		completion_reward = {
+			add_ideas = FRG_Wine_smuggling_idea
+		}
+	}
+
+	focus = {
+		id = FRG_Control_prices
+		icon = GFX_goal_CSA_department_of_production
+		x = 2
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		relative_position_id = FRG_La_scoumoune
+		prerequisite = {
+			focus = FRG_A_church_supported_by_gangs
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRG_economic_policy_idea
+				add_idea = FRG_economic_policy_idea_2
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_robbing_the_rich
+		icon = GFX_goal_CSA_squeeze_elites
+		x = -1
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		relative_position_id = FRG_La_scoumoune
+		prerequisite = {
+			focus = FRG_Poor_people_feeding_facilities
+		}
+		prerequisite = {
+			focus = FRG_Wine_smuggling
+		}
+		completion_reward = {
+			add_ideas = FRG_robbing_the_rich_idea
+		}
+	}
+
+	focus = {
+		id = FRG_Assisting_the_Poor
+		icon = GFX_goal_CSA_soup_kitchens
+		x = 1
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			has_completed_focus = FRG_robbing_the_rich
+		}
+		relative_position_id = FRG_La_scoumoune
+		prerequisite = {
+			focus = FRG_Control_prices
+		}
+		prerequisite = {
+			focus = FRG_Wine_smuggling
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRG_robbing_the_rich_idea
+				add_idea = FRG_robbing_the_rich_idea_2
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_Robin_Hood_of_France
+		icon = GFX_goal_FOP_Fiefdom_Patagonias_Red_Robin_Hood
+		x = 0
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		relative_position_id = FRG_La_scoumoune
+		prerequisite = {
+			focus = FRG_robbing_the_rich
+		}
+		prerequisite = {
+			focus = FRG_Assisting_the_Poor
+		}
+		completion_reward = {
+			add_country_leader_trait = FRG_Robin
+		}
+	}
+
+	focus = {
+		id = FRG_La_Rocca_die
+		icon = GFX_goal_CSA_Bloody_Ballad_Scarface_Comes_To_End
+		x = 89
+		y = 20
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			has_country_flag = Rocca_die
+		}
+		prerequisite = {
+			
+		}
+		completion_reward = {
+			custom_effect_tooltip = unlock_focuses
+		}
+	}
+
+	focus = {
+		id = FRG_Notify_boss
+		icon = GFX_goal_NYC_Diminish_Influence_Organized_Crime
+		x = -1
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_La_Rocca_die
+		}
+		completion_reward = {
+			add_stability = -0.1
+			add_political_power = 50
+			add_war_support = 0.1
+		}
+	}
+
+	focus = {
+		id = FRG_Salute_to_Rocca
+		icon = GFX_goal_generic_officer
+		x = 1
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_La_Rocca_die
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_Unione_Corse
+		icon = GFX_goal_NYC_Unite_Five_Families
+		x = 0
+		y = 2
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Notify_boss
+		}
+		prerequisite = {
+			focus = FRG_Salute_to_Rocca
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_Francisci_win
+		icon = GFX_goal_AUS_big_brain
+		x = 0
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+			has_country_leader = {
+				ruling_only = yes
+				name = "马塞尔·弗朗西西"
+			}
+			always = no
+		}
+		prerequisite = {
+			focus = FRG_Unione_Corse
+		}
+		completion_reward = {
+			add_political_power = 100
+			custom_effect_tooltip = unlock_focuses
+		}
+	}
+
+	focus = {
+		id = FRG_Money_laundering_informatization
+		icon = GFX_goal_NYC_mobster_multiculturalism
+		x = 0
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Francisci_win
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_Connecting_with_foreign_clients
+		icon = GFX_goal_NYC_Gabagool
+		x = 0
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Money_laundering_informatization
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_catch_sbtripping
+		icon = GFX_goal_FRA_popular_combat_front
+		x = 0
+		y = 6
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Connecting_with_foreign_clients
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_Hidden_behind_the_scenes
+		icon = GFX_goal_COR_black_chamber
+		x = 0
+		y = 7
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_catch_sbtripping
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_Resting_in_the_Money_Laundering_Paradise
+		icon = GFX_goal_NYC_living_gangster_paradise
+		x = 0
+		y = 8
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Hidden_behind_the_scenes
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_Guerini
+		icon = GFX_goal_COR_Invisible_Empire
+		x = -3
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+			always = no
+		}
+		prerequisite = {
+			focus = FRG_Unione_Corse
+		}
+		completion_reward = {
+			custom_effect_tooltip = unlock_focuses
+		}
+	}
+
+	focus = {
+		id = FRG_Fuck_Carbone
+		icon = GFX_goal_NYC_Kill_Mob
+		x = -3
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Guerini
+		}
+		completion_reward = {
+			add_manpower = -348
+		}
+	}
+
+	focus = {
+		id = FRG_Guerini_win
+		icon = GFX_goal_CSA_collectivist_military
+		x = -4
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+			has_country_leader = {
+				ruling_only = yes
+				name = "安托万·盖里尼"
+			}
+			always = no
+		}
+		prerequisite = {
+			focus = FRG_Fuck_Carbone
+		}
+		completion_reward = {
+			custom_effect_tooltip = unlock_focuses
+		}
+	}
+
+	focus = {
+		id = FRG_Defferre_win
+		icon = GFX_goal_generic_authoritarian_government
+		x = -2
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+			has_country_leader = {
+				ruling_only = yes
+				name = "加斯顿·德弗雷"
+			}
+			always = no
+		}
+		prerequisite = {
+			focus = FRG_Fuck_Carbone
+		}
+		completion_reward = {
+			custom_effect_tooltip = unlock_focuses
+		}
+	}
+
+	focus = {
+		id = FRG_Police_and_bandits_are_inseparable
+		icon = GFX_goal_SRI_made_men_uniform
+		x = -4
+		y = 6
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Guerini_win
+		}
+		completion_reward = {
+			add_ideas = FRG_Protection_fee_1
+		}
+	}
+
+	focus = {
+		id = FRG_PS
+		icon = GFX_goal_MEX_Pink_Roses
+		x = -2
+		y = 6
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Defferre_win
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_Expand_arms_trade
+		icon = GFX_goal_USA_arsenal_of_democracy
+		x = -4
+		y = 7
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Police_and_bandits_are_inseparable
+		}
+		completion_reward = {
+			add_ideas = FRG_Expand_arms_trade_idea
+		}
+	}
+
+	focus = {
+		id = FRG_Comprehensive_monitoring_by_secret_police
+		icon = GFX_goal_CSA_Intelligence_New_Commodity
+		x = -2
+		y = 7
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_PS
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_formal_democracy
+		icon = GFX_goal_DOM_Call_Special_Election
+		x = -2
+		y = 8
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Comprehensive_monitoring_by_secret_police
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_The_Godfather_of_France
+		icon = GFX_goal_SRI_new_generation_dons
+		x = -4
+		y = 8
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Expand_arms_trade
+		}
+		completion_reward = {
+			add_country_leader_trait = FRG_mafia
+		}
+	}
+
+	focus = {
+		id = FRG_Carbone
+		icon = GFX_NEE_fight_the_mob
+		x = -7
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+			always = no
+		}
+		prerequisite = {
+			focus = FRG_Unione_Corse
+		}
+		completion_reward = {
+			custom_effect_tooltip = unlock_focuses
+		}
+	}
+
+	focus = {
+		id = FRG_the_french_connection
+		icon = GFX_goal_FRG_the_french_connection		
+		x = -7
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Carbone
+		}
+		completion_reward = {
+			add_ideas = FRG_the_french_connection_idea
+		}
+	}
+
+	focus = {
+		id = FRG_Spirito_win
+		icon = GFX_goal_TEX_Spread_Pendergasts_Gambling_Addiction
+		x = -8
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+			has_country_leader = {
+				ruling_only = yes
+				name = " 弗朗索瓦·斯皮里托"
+			}
+			always = no
+		}
+		prerequisite = {
+			focus = FRG_the_french_connection
+		}
+		completion_reward = {
+			custom_effect_tooltip = unlock_focuses
+		}
+	}
+
+	focus = {
+		id = FRG_Carbone_win
+		icon = GFX_goal_agrarian_soldiers
+		x = -6
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+			has_country_leader = {
+				ruling_only = yes
+				name = " 保罗·卡邦"
+			}
+			always = no
+		}
+		prerequisite = {
+			focus = FRG_the_french_connection
+		}
+		completion_reward = {
+			custom_effect_tooltip = unlock_focuses
+		}
+	}
+
+	focus = {
+		id = FRG_Pornography_gambling_and_drugs
+		icon = GFX_goal_FRG_Pornography_gambling_and_drugs
+		x = -8
+		y = 6
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Spirito_win
+		}
+		completion_reward = {
+			add_ideas = FRG_Pornography_gambling_and_drugs_idea
+		}
+	}
+
+	focus = {
+		id = FRG_the_capital_of_gambling
+		icon = GFX_goal_FRG_the_capital_of_gambling
+		x = -8
+		y = 7
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Pornography_gambling_and_drugs
+		}
+		completion_reward = {
+			21 = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_Opening_up_drug_trafficking_routes
+		icon = GFX_goal_FRG_Opening_up_drug_trafficking_routes
+		x = -6
+		y = 6
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Carbone_win
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRG_the_french_connection_idea
+				add_idea = FRG_the_french_connection_idea_1
+			}
+		}
+	}
+
+	focus= {
+		id = FRG_Extracting_highpurity_heroin
+		icon = GFX_LEC_Afghan_Opium
+		x = -6
+		y = 7
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Opening_up_drug_trafficking_routes
+		}
+		completion_reward = {
+			add_ideas = FRG_Extracting_highpurity_heroin_idea
+		}
+	}
+
+	focus= {
+		id = FRG_The_gamble_on_the_fate_of_France
+		icon = GFX_goal_CAL_prosperity
+		x = -8
+		y = 8
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_the_capital_of_gambling
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRG_Pornography_gambling_and_drugs_idea
+				add_idea = FRG_Pornography_gambling_and_drugs_idea_1
+			}
+		}
+	}
+
+	focus= {
+		id = FRG_Like_a_dream_or_a_fantasy
+		icon = GFX_CAL_reefer_madness
+		x = -6
+		y = 8
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Extracting_highpurity_heroin
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRG_Extracting_highpurity_heroin_idea
+				add_idea = FRG_Extracting_highpurity_heroin_idea_1
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_sea_breeze
+		icon = GFX_goal_FRG_sea_breeze
+		x = -11
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+			always = no
+		}
+		prerequisite = {
+			focus = FRG_Unione_Corse
+		}
+		completion_reward = {
+			custom_effect_tooltip = unlock_focuses
+		}
+	}
+
+	focus = {
+		id = FRG_Expulsion_of_Algerians
+		icon = GFX_goal_backstab
+		x = -11
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_sea_breeze
+		}
+		completion_reward = {
+			add_manpower = -32336
+			add_stability = 0.2
+			add_war_support = 0.2
+		}
+	}
+	focus = {
+		id = FRG_Imbert_win
+		icon = GFX_goal_COR_White_Caps
+		x = -12
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+			has_country_leader = {
+				ruling_only = yes
+				name = "雅克·英伯特"
+			}
+			always = no
+		}
+		prerequisite = {
+			focus = FRG_Expulsion_of_Algerians
+		}
+		completion_reward = {
+			custom_effect_tooltip = unlock_focuses
+		}
+	}
+
+	focus = {
+		id = FRG_getout
+		icon = GFX_goal_TEX_Providing_Jobs_People
+		x = -12
+		y = 6
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Imbert_win
+		}
+		completion_reward = {
+			add_ideas = FRG_getout_idea
+		}
+	}
+
+	focus = {
+		id = FRG_Throwing_people_of_color_into_factories
+		icon = GFX_CAL_national_unions
+		x = -12
+		y = 7
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_getout
+		}
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_Gangster_populism
+		icon = GFX_goal_CSA_Mobster_Populism_All_Americans
+		x = -12
+		y = 8
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Throwing_people_of_color_into_factories
+		}
+		completion_reward = {
+			add_ideas = CSA_mobster_populism_idea
+		}
+	}
+
+	focus = {
+		id = FRG_Renucci_win
+		icon = GFX_goal_COR_riches_of_africa
+		x = -10
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+			has_country_leader = {
+				ruling_only = yes
+				name = " 约瑟夫·雷努奇"
+			}
+			always = no
+		}
+		prerequisite = {
+			focus = FRG_Expulsion_of_Algerians
+		}
+		completion_reward = {
+			custom_effect_tooltip = unlock_focuses
+		}
+	}
+
+	focus = {
+		id = FRG_Awaken_the_public
+		icon = GFX_goal_TEX_universal_education
+		x = -10
+		y = 6
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Renucci_win
+		}
+		completion_reward = {
+			add_ideas = FRG_Awaken_the_public_idea
+		}
+	}
+
+	focus = {
+		id = FRG_Secretly_funding_human_traffickers
+		icon = GFX_goal_PAN_expand_product
+		x = -10
+		y = 7
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Awaken_the_public
+		}
+		completion_reward = {
+			add_stability = -0.2
+			add_manpower = -7516
+		}
+	}
+
+	focus = {
+		id = FRG_triangular_trade
+		icon = GFX_goal_KIV_pan_africa
+		x = -10
+		y = 8
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Secretly_funding_human_traffickers
+		}
+		completion_reward = {
+			USA = {
+				add_ideas = FRG_triangular_trade_idea_1
+			}
+			CSA = {
+				add_ideas = FRG_triangular_trade_idea_1
+			}
+			COR = {
+				add_ideas = FRG_triangular_trade_idea_1
+			}
+			CAL = {
+				add_ideas = FRG_triangular_trade_idea_1
+			}
+			NEE = {
+				add_ideas = FRG_triangular_trade_idea_1
+			}
+			WCC = {
+				add_ideas = FRG_triangular_trade_idea_1
+			}
+			NFA = {
+				add_ideas = FRG_triangular_trade_idea_1
+			}
+			SIC = {
+				add_ideas = FRG_triangular_trade_idea_1
+			}
+			MOR = {
+				add_ideas = FRG_triangular_trade_idea_1
+			}
+			IRE = {
+				add_ideas = FRG_triangular_trade_idea_1
+			}
+			ARG = {
+				add_ideas = FRG_triangular_trade_idea_1
+			}
+			add_ideas = FRG_triangular_trade_idea
+		}
+	}
+
+	focus = {
+		id = FRG_Loutrel
+		icon = GFX_UKR_Work_With_Makhnovtsy
+		x = 3
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+			always = no
+		}
+		prerequisite = {
+			focus = FRG_Unione_Corse
+		}
+		completion_reward = {
+			custom_effect_tooltip = unlock_focuses
+		}
+	}
+
+	focus = {
+		id = FRG_Crime_first
+		icon = GFX_goal_SRI_establish_new_syndicates_north
+		x = 3
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Loutrel
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_Loutrel_win
+		icon = GFX_goal_SRI_set_stone_sealed_blood
+		x = 2
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+			has_country_leader = {
+				ruling_only = yes
+				name = "皮埃尔·卢特尔"
+			}
+			always = no
+		}
+		prerequisite = {
+			focus = FRG_Crime_first
+		}
+		completion_reward = {
+			custom_effect_tooltip = unlock_focuses
+		}
+	}
+
+	focus = {
+		id = FRG_Focus_on_smuggling_tobacco
+		icon = GFX_CAL_rich_taxation
+		x = 2
+		y = 6
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Loutrel_win
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_Introduce_slot_machines_to_bars
+		icon = GFX_goal_TEX_reveal_the_treachery
+		x = 2
+		y = 7
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Focus_on_smuggling_tobacco
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_The_City_of_Crime_is_Shining
+		icon = GFX_goal_NYC_criminal_empire
+		x = 2
+		y = 8
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Introduce_slot_machines_to_bars
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_Buisson_win
+		icon = GFX_goal_SRI_liquidate_northern_law_order
+		x = 4
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+			has_country_leader = {
+				ruling_only = yes
+				name = "埃米尔·比松"
+			}
+			always = no
+		}
+		prerequisite = {
+			focus = FRG_Crime_first
+		}
+		completion_reward = {
+			custom_effect_tooltip = unlock_focuses
+		}
+	}
+
+	focus = {
+		id = FRG_Wooing_the_police
+		icon = GFX_goal_NYC_get_cops_on_our_side
+		x = 4
+		y = 6
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Buisson_win
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_The_Mafia_Army
+		icon = GFX_goal_SRI_mafiusu_mercenaries
+		x = 4
+		y = 7
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Wooing_the_police
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_Pure_country_of_gangsters
+		icon = GFX_goal_NYC_pure_gangster_state
+		x = 4
+		y = 8
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_The_Mafia_Army
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_anarchy
+		icon = GFX_goal_WHR_Black_Banner_Engulfs_Nation
+		x = 7
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+			always = no
+		}
+		prerequisite = {
+			focus = FRG_Unione_Corse
+		}
+		completion_reward = {
+			custom_effect_tooltip = unlock_focuses
+		}
+	}
+
+	focus = {
+		id = FRG_Revenge_of_the_anarchy
+		icon = GFX_goal_WHR_Groups_Revolutionary_Actives
+		x = 7
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_anarchy
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_Monier_win
+		icon = GFX_goal_WHR_Terror_Without_Motive
+		x = 6
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+			has_country_leader = {
+				ruling_only = yes
+				name = "艾蒂安·莫尼耶"
+			}
+			always = no
+		}
+		prerequisite = {
+			focus = FRG_Revenge_of_the_anarchy
+		}
+		completion_reward = {
+			custom_effect_tooltip = unlock_focuses
+		}
+	}
+
+	focus = {
+		id = FRG_Oppose_the_Church
+		icon = GFX_BRY_Destroy_Churches
+		x = 6
+		y = 6
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Monier_win
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_Abolish_artifacts
+		icon = GFX_goal_WHR_Dethroning_False_Idols
+		x = 6
+		y = 7
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Oppose_the_Church
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_i_am_anarchy
+		icon = GFX_goal_FRA_Anarchist_Mobilization_Techniques
+		x = 6
+		y = 8
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Abolish_artifacts
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_Rimbault_win
+		icon = GFX_SOV_anarchists
+		x = 8
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+			has_country_leader = {
+				ruling_only = yes
+				name = "路易·兰博"
+			}
+			always = no
+		}
+		prerequisite = {
+			focus = FRG_Revenge_of_the_anarchy
+		}
+		completion_reward = {
+			custom_effect_tooltip = unlock_focuses
+		}
+	}
+
+	focus = {
+		id = FRG_Get_rid_of_the_bank
+		icon = GFX_goal_WHR_Immolate_Monetary_System
+		x = 8
+		y = 6
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Rimbault_win
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_Promote_local_communes
+		icon = GFX_goal_WHR_Fair_Division_Labour
+		x = 8
+		y = 7
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Get_rid_of_the_bank
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_Never_disappoint_Machino_wish
+		icon = GFX_goal_WHR_Anarchy_Above_All_Borders
+		x = 8
+		y = 8
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Promote_local_communes
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_Marcantoni
+		icon = GFX_CAL_media_blackout
+		x = 11
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+			always = no
+		}
+		prerequisite = {
+			focus = FRG_Unione_Corse
+		}
+		completion_reward = {
+			custom_effect_tooltip = unlock_focuses
+		}
+	}
+
+	focus = {
+		id = FRG_Utilize_the_celebrity_effect
+		icon = GFX_CAL_celebrity_endorcements
+		x = 11
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Marcantoni
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_Delon_win
+		icon = GFX_CAL_hollywood_glamour
+		x = 10
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_Utilize_the_celebrity_effect
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_Shoot_a_heroic_film
+		icon = GFX_WCC_Bring_back_the_Good_road_campaign
+		x = 10
+		y = 6
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Delon_win
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_Gang_harmless_theory
+		icon = GFX_goal_NYC_New_York_New_Deal
+		x = 10
+		y = 7
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Shoot_a_heroic_film
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_Dream_Paris
+		icon = GFX_goal_CAL_Pacific_Dream
+		x = 10
+		y = 8
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Gang_harmless_theory
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_Marcantoni_win
+		icon = GFX_CAL_reward_success
+		x = 12
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+			has_completed_focus = FRG_Delon_win
+			has_country_leader = {
+				ruling_only = yes
+				name = "弗朗索瓦·马尔坎托尼"
+			}
+			always = no
+		}
+		prerequisite = {
+			focus = FRG_Utilize_the_celebrity_effect
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_Penetrating_into_the_entertainment_industry
+		icon = GFX_goal_CAL_council
+		x = 12
+		y = 6
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Marcantoni_win
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_Massive_collection_of_protection_fees
+		icon = GFX_goal_USA_price_control
+		x = 12
+		y = 7
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Penetrating_into_the_entertainment_industry
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_The_Paris_Dream
+		icon = GFX_CAL_renovate_california
+		x = 12
+		y = 8
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Massive_collection_of_protection_fees
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_The_Future_of_the_French_CriminalEmpire
+		icon = GFX_goal_CSA_oldallies
+		x = 0
+		y = 9
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_La_Rocca_die
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Resting_in_the_Money_Laundering_Paradise
+			focus = FRG_Gangster_populism
+			focus = FRG_triangular_trade
+			focus = FRG_The_gamble_on_the_fate_of_France
+			focus = FRG_Like_a_dream_or_a_fantasy
+			focus = FRG_The_Godfather_of_France
+			focus = FRG_formal_democracy
+			focus = FRG_The_City_of_Crime_is_Shining
+			focus = FRG_Pure_country_of_gangsters
+			focus = FRG_i_am_anarchy
+			focus = FRG_Never_disappoint_Machino_wish
+			focus = FRG_Dream_Paris
+			focus = FRG_The_Paris_Dream
+		}
+		completion_reward = {
+		}
+	}
+
+
+	###警察和？线
+	focus = {
+		id = FRG_Tom_and_Jerry
+		icon = GFX_goal_NYC_Support_NYPD
+		x = 78
+		y = 13
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			always = no
+		}
+		prerequisite = {
+			has_country_flag = Tom_and_Jerry
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_The_Gallic_Rooster_stabilizes_the_situation
+		icon = GFX_goal_NYC_institute_curfew
+		x = -4
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			has_country_flag = FRG_cop
+		}
+		relative_position_id = FRG_Tom_and_Jerry
+		prerequisite = {
+			focus = FRG_Tom_and_Jerry
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_Chiappe_win
+		icon = GFX_goal_NYC_embrace_corruption
+		x = -6
+		y = 2
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			has_country_leader = {
+				ruling_only = yes
+				name = "让·齐亚普"
+			}
+		}
+		mutually_exclusive = {
+			focus = FRG_Borniche_win
+		}
+		relative_position_id = FRG_Tom_and_Jerry
+		prerequisite = {
+			focus = FRG_The_Gallic_Rooster_stabilizes_the_situation
+		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = authoritarian_democrat
+				elections_allowed = no
+			}
+			create_country_leader = {
+				name = "让·齐亚普"
+				desc = ""
+				picture = "gfx/leaders/FRG/Portrait_FRG_Jean_Chiappe.png"
+				expire = "1965.1.1"
+				ideology = police_state_subtype
+				traits = { FRG_police_1 }
+			}
+			set_cosmetic_tag = FRG_police
+		}
+	}
+
+	focus = {
+		id = FRG_Silence_the_strikers
+		icon = GFX_goal_NYC_Harass_Siphon_Italian_Businesses
+		x = -7
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+
+		}
+		relative_position_id = FRG_Tom_and_Jerry
+		prerequisite = {
+			focus = FRG_Chiappe_win
+		}
+		completion_reward = {
+			add_ideas = FRG_stop
+		}
+	}
+
+	focus = {
+		id = FRG_Collect_legal_protection_fees
+		icon = GFX_goal_NYC_Puppet_Democracy
+		x = -7
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+
+		}
+		relative_position_id = FRG_Tom_and_Jerry
+		prerequisite = {
+			focus = FRG_Silence_the_strikers
+		}
+		completion_reward = {
+			add_ideas = FRG_Protection_fee_1
+		}
+	}
+
+	focus = {
+		id = FRG_black_and_white_alternately
+		icon = GFX_goal_NYC_Use_Police
+		x = -7
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+
+		}
+		relative_position_id = FRG_Tom_and_Jerry
+		prerequisite = {
+			focus = FRG_Collect_legal_protection_fees
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRG_Protection_fee_1
+				add_idea = FRG_Protection_fee_2
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_Borniche_win
+		icon = GFX_goal_NYC_eliminate_corruption
+		x = -2
+		y = 2
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			has_country_leader = {
+				ruling_only = yes
+				name = "罗杰·博尼切"
+			}
+		}
+		mutually_exclusive = {
+			focus = FRG_Chiappe_win
+		}
+		relative_position_id = FRG_Tom_and_Jerry
+		prerequisite = {
+			focus = FRG_The_Gallic_Rooster_stabilizes_the_situation
+		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = social_democrat
+				elections_allowed = no
+			}
+			create_country_leader = {
+				name = "罗杰·博尼切"
+				desc = ""
+				picture = "gfx/leaders/FRG/Portrait_FRG_Roger_Borniche.png"
+				expire = "1965.1.1"
+				ideology = socdem_democratic_socialism_subtype
+				traits = { FRG_police_2 }
+			}
+			set_cosmetic_tag = FRG_police
+		}
+	}
+
+	focus = {
+		id = FRG_Nighttime_curfew
+		icon = GFX_goal_NYC_Fighting_From_Rooftops
+		x = -1
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+
+		}
+		relative_position_id = FRG_Tom_and_Jerry
+		prerequisite = {
+			focus = FRG_Borniche_win
+		}
+		completion_reward = {
+			add_ideas = FRG_Nighttime_curfew_idea
+		}
+	}
+
+	focus = {
+		id = FRG_combat_crime
+		icon = GFX_goal_NYC_Combat_Police_Corruption
+		x = -1
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+
+		}
+		relative_position_id = FRG_Tom_and_Jerry
+		prerequisite = {
+			focus = FRG_Nighttime_curfew
+		}
+		completion_reward = {
+			add_ideas = FRG_combat_crime_idea
+		}
+	}
+
+	focus = {
+		id = FRG_Reforming_the_judicial_system
+		icon = GFX_goal_CSA_power_to_the_people
+		x = -1
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+
+		}
+		relative_position_id = FRG_Tom_and_Jerry
+		prerequisite = {
+			focus = FRG_combat_crime
+		}
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.2
+			add_war_support = 0.2
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.15
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_Militarization_of_Police_Force
+		icon = GFX_goal_NYC_cops_beating_down_on_hippie_scum_at_the_1968_democratic_national_convention
+		x = -4
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+
+		}
+		relative_position_id = FRG_Tom_and_Jerry
+		prerequisite = {
+			focus = FRG_Chiappe_win
+			focus = FRG_Borniche_win
+		}
+		completion_reward = {
+			add_ideas = FRG_Militarization_of_Police_Force_idea_1
+		}
+	}
+
+	focus = {
+		id = FRG_Expand_the_treasury
+		icon = GFX_goal_the_rich_get_richer
+		x = -5
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+
+		}
+		relative_position_id = FRG_Tom_and_Jerry
+		prerequisite = {
+			focus = FRG_Militarization_of_Police_Force
+		}
+		completion_reward = {
+			add_ideas = FRG_Expand_the_treasury_idea
+		}
+	}
+
+	focus = {
+		id = FRG_Ensure_public_safety
+		icon = GFX_goal_PAR_help_suffering
+		x = -3
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+
+		}
+		relative_position_id = FRG_Tom_and_Jerry
+		prerequisite = {
+			focus = FRG_Militarization_of_Police_Force
+		}
+		completion_reward = {
+			add_stability = 0.2
+		}
+	}
+
+	focus = {
+		id = FRG_Develop_new_equipment
+		icon = GFX_CAL_military_lobby
+		x = -4
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+
+		}
+		relative_position_id = FRG_Tom_and_Jerry
+		prerequisite = {
+			focus = FRG_Expand_the_treasury
+			focus = FRG_Ensure_public_safety
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRG_Militarization_of_Police_Force_idea_1
+				add_idea = FRG_Militarization_of_Police_Force_idea_2
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_Order_and_Peace
+		icon = GFX_goal_NYC_Free_City
+		x = -4
+		y = 6
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+
+		}
+		relative_position_id = FRG_Tom_and_Jerry
+		prerequisite = {
+			focus = FRG_black_and_white_alternately
+			focus = FRG_Reforming_the_judicial_system
+		}
+		prerequisite = {
+			focus = FRG_Develop_new_equipment
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_country_leader = {
+						ruling_only = yes
+						name = "让·齐亚普"
+					}
+				}
+				add_ideas = FRG_Order_idea
+			}
+			if = {
+				limit = {
+					has_country_leader = {
+						ruling_only = yes
+						name = "罗杰·博尼切"
+					}
+				}
+				add_ideas = FRG_peace_idea
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_The_grand_opening_of_the_circus
+		icon = GFX_goal_FRG_The_grand_opening_of_the_circus
+		x = 4
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			has_country_flag = FRG_Petiot
+		}
+		relative_position_id = FRG_Tom_and_Jerry
+		prerequisite = {
+			focus = FRG_Tom_and_Jerry
+		}
+		completion_reward = {
+			create_country_leader = {
+				name = "马塞尔·珀蒂奥"
+				desc = ""
+				picture = "gfx/leaders/FRG/Portrait_FRG_Marcel_Petiot.png"
+				expire = "1965.1.1"
+				ideology = lovecraftianism_subtype
+				traits = { FRG_Baphomet }
+			}
+			set_cosmetic_tag = FRG_Collingwood
+		}
+	}
+
+	focus = {
+		id = FRG_Ri_Ming
+		icon = GFX_goal_FRG_Ri_Ming
+		x = 3
+		y = 2
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+
+		}
+		relative_position_id = FRG_Tom_and_Jerry
+		prerequisite = {
+			focus = FRG_The_grand_opening_of_the_circus
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_midnight
+		icon = GFX_goal_FRG_midnight
+		x = 5
+		y = 2
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			
+		}
+		relative_position_id = FRG_Tom_and_Jerry
+		prerequisite = {
+			focus = FRG_The_grand_opening_of_the_circus
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_Public_medical_insurance
+		icon = GFX_goal_FRG_Public_medical_insurance
+		x = 2
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			
+		}
+		relative_position_id = FRG_Tom_and_Jerry
+		prerequisite = {
+			focus = FRG_Ri_Ming
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_Establish_a_sanatorium_for_disabled_soldiers
+		icon = GFX_goal_FRG_Establish_a_sanatorium_for_disabled_soldiers
+		x = 4
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			
+		}
+		relative_position_id = FRG_Tom_and_Jerry
+		prerequisite = {
+			focus = FRG_Ri_Ming
+		}
+		prerequisite = {
+			focus = FRG_midnight
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_Murder_Maze
+		icon = GFX_goal_FRG_Murder_Maze
+		x = 6
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			
+		}
+		relative_position_id = FRG_Tom_and_Jerry
+		prerequisite = {
+			focus = FRG_midnight
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_Science_popularization_for_disease_prevention
+		icon = GFX_goal_FRG_Science_popularization_for_disease_prevention
+		x = 3
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			
+		}
+		relative_position_id = FRG_Tom_and_Jerry
+		prerequisite = {
+			focus = FRG_Public_medical_insurance
+		}
+		prerequisite = {
+			focus = FRG_Establish_a_sanatorium_for_disabled_soldiers
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_Randomly_draw_kills
+		icon = GFX_goal_FRG_Randomly_draw_kills
+		x = 5
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			
+		}
+		relative_position_id = FRG_Tom_and_Jerry
+		prerequisite = {
+			focus = FRG_Murder_Maze
+		}
+		prerequisite = {
+			focus = FRG_Establish_a_sanatorium_for_disabled_soldiers
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_sun
+		icon = GFX_goal_FRG_sun
+		x = 2
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			
+		}
+		relative_position_id = FRG_Tom_and_Jerry
+		prerequisite = {
+			focus = FRG_Science_popularization_for_disease_prevention
+		}
+		prerequisite = {
+			
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_Developing_new_drugs
+		icon = GFX_goal_FRG_Developing_new_drugs
+		x = 4
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			
+		}
+		relative_position_id = FRG_Tom_and_Jerry
+		prerequisite = {
+			focus = FRG_Science_popularization_for_disease_prevention
+		}
+		prerequisite = {
+			focus = FRG_Randomly_draw_kills
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_moon
+		icon = GFX_goal_FRG_moon
+		x = 6
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			
+		}
+		relative_position_id = FRG_Tom_and_Jerry
+		prerequisite = {
+			focus = FRG_Randomly_draw_kills
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_shine_forever_like_the_sun_and_the_moon
+		icon = GFX_goal_FRG_shine_forever_like_the_sun_and_the_moon
+		x = 4
+		y = 6
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			
+		}
+		relative_position_id = FRG_Tom_and_Jerry
+		prerequisite = {
+			focus = FRG_sun
+		}
+		prerequisite = {
+			focus = FRG_Developing_new_drugs
+		}
+		prerequisite = {
+			focus = FRG_moon
+		}
+		completion_reward = {
+		}
+	}
+
+
+	###安保国家线
+	focus = {
+		id = FRG_Appearing_from_the_shadow
+		icon = GFX_goal_FRG_Appearing_from_the_shadow
+		x = 38
+		y = 13
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			has_country_leader = {
+				ruling_only = yes
+				name = "克拉拉·克内希特"
+			}
+		}
+		prerequisite = {
+			
+		}
+		completion_reward = {
+			set_cosmetic_tag = FRG_Clara_Knecht
+			create_country_leader = {
+				name = "克拉拉·克内希特"
+				desc = ""
+				picture = "gfx/leaders/FRG/Portrait_FRG_Clara_Knecht.png"
+				expire = "1965.1.1"
+				ideology = spectral_state_subtype
+				traits = { FRG_shadow }
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_Build_a_high_wall
+		icon = GFX_goal_BAN_none_beyond
+		x = -2
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		relative_position_id = FRG_Appearing_from_the_shadow
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+		}
+		prerequisite = {
+			focus = FRG_Appearing_from_the_shadow
+		}
+		completion_reward = {
+			add_ideas = FRG_Build_a_high_wall_idea
+		}
+	}
+
+	focus = {
+		id = FRG_shadow_government
+		icon = GFX_goal_shadow_government
+		x = 0
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		relative_position_id = FRG_Appearing_from_the_shadow
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_Appearing_from_the_shadow
+		}
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = FRG_Get_rid_of_foolish_Chanel_supporters
+		icon = GFX_goal_GEO_oppressive_violence
+		x = 2
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		relative_position_id = FRG_Appearing_from_the_shadow
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_Appearing_from_the_shadow
+		}
+		completion_reward = {
+			add_manpower = -35412
+			add_popularity = {
+				ideology = market_liberal
+				popularity = -0.2
+			}
+
+		}
+	}
+
+	focus = {
+		id = FRG_Reorganize_law_enforcement_agencies
+		icon = GFX_goal_generic_army_high_command
+		x = -1
+		y = 2
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		relative_position_id = FRG_Appearing_from_the_shadow
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_Build_a_high_wall
+		}
+		prerequisite = {
+			focus = FRG_shadow_government
+		}
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = FRA_integrate_the_corps_francs
+				cost_reduction = 0.75
+				uses = 4
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_Expand_the_Intelligence_Department
+		icon = GFX_GRU_higher_education_grants-4039
+		x = 1
+		y = 2
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		relative_position_id = FRG_Appearing_from_the_shadow
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_Get_rid_of_foolish_Chanel_supporters
+		}
+		prerequisite = {
+			focus = FRG_shadow_government
+		}
+		completion_reward = {
+			add_ideas = FRG_Expand_the_Intelligence_Department_idea
+		}
+	}
+
+	focus = {
+		id = FRG_I_been_keeping
+		icon = GFX_goal_CSA_Nationwide_Panopticon
+		x = 0
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		relative_position_id = FRG_Appearing_from_the_shadow
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_Reorganize_law_enforcement_agencies
+		}
+		prerequisite = {
+			focus = FRG_Expand_the_Intelligence_Department
+		}
+		completion_reward = {
+			add_ideas = FRG_Shadow_Governments_idea_1
+		}
+	}
+
+	focus = {
+		id = FRG_Shadow_Governments
+		icon = GFX_goal_FRG_Shadow_Governments
+		x = 0
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		relative_position_id = FRG_Appearing_from_the_shadow
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_I_been_keeping
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRG_Shadow_Governments_idea_1
+				add_idea = FRG_Shadow_Governments_idea_2
+			}
+		}
+	}
+
+	focus = {
+		id = FRG_Roses_bloom_in_France
+		icon = GFX_goal_FRG_Roses_bloom_in_France
+		x = 96
+		y = 13
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		available = {
+			has_country_leader = {
+				ruling_only = yes
+				name = "约瑟夫·迪·马布罗"
+			}
+		}
+		prerequisite = {
+			
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_Religious_donations
+		icon = GFX_HUN_bethlen_machine
+		x = -2
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Roses_bloom_in_France
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_Roses_bloom_in_France
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_Christian_mysticism
+		icon = GFX_goal_NEE_Support_Christian_Morality
+		x = 0
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Roses_bloom_in_France
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_Roses_bloom_in_France
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_The_Legacy_of_the_Intangible_Academy
+		icon = GFX_NEE_ivy_league
+		x = 2
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Roses_bloom_in_France
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_Roses_bloom_in_France
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_The_mystery_of_manipulating_immortality
+		icon = GFX_goal_NEE_supernatural
+		x = -1
+		y = 2
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Roses_bloom_in_France
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_Religious_donations
+		}
+		prerequisite = {
+			focus = FRG_Christian_mysticism
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRG_The_baptism_of_fire
+		icon = GFX_goal_NEE_Expand_Myth
+		x = 1
+		y = 2
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Roses_bloom_in_France
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_The_Legacy_of_the_Intangible_Academy
+		}
+		prerequisite = {
+			focus = FRG_Christian_mysticism
+		}
+		completion_reward = {
+			set_country_flag = Mambro_first_phase
+		}
+	}
+
+	focus = {
+		id = FRG_Purification_ceremony
+		icon = GFX_goal_FRG_Purification_ceremony
+		x = 0
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Roses_bloom_in_France
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_The_mystery_of_manipulating_immortality
+		}
+		prerequisite = {
+			focus = FRG_The_baptism_of_fire
+		}
+		completion_reward = {
+			clr_country_flag = Mambro_first_phase
+			set_country_flag = Mambro_second_phase
+		}
+	}
+
+	focus = {
+		id = FRG_A_Call_from_Deep_Space
+		dynamic = yes
+		icon = {
+			trigger = {
+				NOT = {
+					has_country_flag = Mambro_first_phase
+					has_country_flag = Mambro_second_phase
+				}
+			}
+			value = GFX_goal_FRG_A_Call_from_Deep_Space
+		}
+		icon = {
+			trigger = {
+				has_country_flag = Mambro_first_phase
+			}
+			value = GFX_goal_FRG_A_Call_from_Deep_Space_2
+		}
+		icon = {
+			trigger = {
+				has_country_flag = Mambro_second_phase
+			}
+			value = GFX_goal_NEE_Face_Oblivion
+		}
+		x = 0
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		relative_position_id = FRG_Roses_bloom_in_France
+		available = {
+			
+		}
+		prerequisite = {
+			focus = FRG_Purification_ceremony
+		}
+		completion_reward = {
+		}
+	}
+
+}

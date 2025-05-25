@@ -1573,7 +1573,7 @@ country_event = {
         	name = "让·齐罗姆斯基"  # Jean Zyromski
         	picture = "gfx/leaders/FRP/Portrait_France_Jean_Zyromski.png"
         	expire = "1.1.1"
-        	ideology = syndicalist_subtype
+        	ideology = centralized_syndicalism_subtype
         	traits = {}
       	}
       create_country_leader = {
@@ -1927,7 +1927,7 @@ country_event = {
 				desc = "POLITICS_DANIEL_GUERIN_DESC"
 				picture = "gfx/leaders/FRA/Portrait_France_Daniel_Guerin.png"
 				expire = "1.1.1"
-				ideology = totalist_subtype
+				ideology = internationalism_subtype
 			}
 		remove_ideas_with_trait = head_of_government
 		add_ideas = FRA_Daniel_Guerin_hog_rso
@@ -1938,6 +1938,7 @@ country_event = {
 			popularity = 0.20
 		}
 		add_tot_to_coalition = yes
+		set_country_flag = ANAR_GUERIN
 		set_global_flag = anarchiste_majority_1936
 		custom_effect_tooltip = "New Communal Elections will take place every 5 years!"
 
@@ -1992,6 +1993,7 @@ country_event = {
 			ideology = radical_socialist
 			popularity = 0.20
 		}
+		set_country_flag = ANAR_FAURE
 		set_global_flag = anarchiste_majority_1936
 		custom_effect_tooltip = "New Communal Elections will take place every 5 years!"
 
@@ -2005,7 +2007,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = comfrance.17.c #Picqueray
+		name = comfrance.17.c #Besnard
 		meta_effect = {
 			text = {
 				set_politics = {
@@ -2018,20 +2020,20 @@ country_event = {
 			CURRENT_DATE = "[?global.date.GetDateStringNoHour]"
 		}
 		create_country_leader = {
-			name = "迈·皮克雷"
-			picture = "gfx/leaders/FRA/Portrait_France_May_Picqueray.png"
+			name = "皮埃尔·贝斯纳德"
+			picture = "gfx/leaders/FRA/Portrait_FRA_Pierre_Besnard.png"
 			expire = "1.1.1"
-			ideology = radsoc_socialist_feminism_subtype
+			ideology = radsoc_anarcho_syndicalist_subtype
 		}
 		create_country_leader = {
-			name = "迈·皮克雷"
-			picture = "gfx/leaders/FRA/Portrait_France_May_Picqueray.png"
+			name = "皮埃尔·贝斯纳德"
+			picture = "gfx/leaders/FRA/Portrait_FRA_Pierre_Besnard.png"
 			expire = "1.1.1"
-			ideology = feminist_syndicalist_subtype
+			ideology = anarcho_syndicalist_subtype
 		}
 		create_country_leader = {
-			name = "迈·皮克雷"
-			picture = "gfx/leaders/FRA/Portrait_France_May_Picqueray.png"
+			name = "皮埃尔·贝斯纳德"
+			picture = "gfx/leaders/FRA/Portrait_FRA_Pierre_Besnard.png"
 			expire = "1.1.1"
 			ideology = totalist_subtype
 		}
@@ -2045,6 +2047,7 @@ country_event = {
 		}
 		add_synd_to_coalition = yes
 		set_global_flag = anarchiste_majority_1936
+		set_country_flag = ANAR_BESNARD
 		custom_effect_tooltip = "New Communal Elections will take place every 5 years!"
 
 		hidden_effect = {

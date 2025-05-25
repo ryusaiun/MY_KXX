@@ -11,6 +11,13 @@ country_event = {
 
 	option = { 
 		name = kxxfrance.1.a
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 50
+				FRA  = { is_ai = no }
+			}
+		}
 		FRA = {
 			annex_country = { 
 				target = BEL  
@@ -23,12 +30,11 @@ country_event = {
 	}
 	option = { 
 		name = kxxfrance.1.b
-		FRA = {
-			annex_country = { 
-				target = BEL  
-			}
-			annex_country = { 
-				target = WLL  
+		ai_chance = {
+			factor = 95
+			modifier = {
+				factor = 50
+				FRA  = { is_ai = no }
 			}
 		}
 	}
@@ -3054,6 +3060,9 @@ country_event = {
 
 option = { 
 	name =  kxxfrance.1.a
+	ai_chance = {
+		factor = 5
+	}
 	FRA = {
 		annex_country = { target = HOL  }
 	}
@@ -3073,10 +3082,13 @@ option = {
 }	
 option = { 
 	name =  kxxfrance.1.b
-	FRA = {
-		country_event = kxxfrance.34
+	ai_chance = {
+		factor = 95
+		modifier = {
+			factor = 50
+			FRA  = { is_ai = no }
+		}
 	}
-	
 }	
 }
 country_event = {

@@ -593,6 +593,10 @@ spriteTypes = {
 		name = "GFX_goals_FRA_start_privatization"
 		texturefile = "gfx/interface/goals/KXX_COF/FRA_start_privatization.png"
 	}
+	SpriteType = {
+		name = "GFX_goals_FRA_Pierre_Besnard_goal"
+		texturefile = "gfx/interface/goals/KXX_COF/FRA_Pierre_Besnard_goal.png"
+	}
 	###subideologies
 	SpriteType = {
 		name = "GFX_ideology_national_collectivist_subtype"

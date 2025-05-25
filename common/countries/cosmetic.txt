@@ -6177,6 +6177,10 @@ FRA_acephale = {
 	color = rgb { 99 33 66 }
 	color_ui = rgb { 99 33 66 }
 }
+FRA_CNT_fed_larp = {
+    color = rgb { 240 0 0 }
+	color_ui = rgb { 240 0 0 }
+}
 #################
 ### 成立新国家 ###
 #################
@@ -8742,4 +8746,8 @@ ROE_Dongbei2 = {
 ROE_Dongbei3 = {
     color = rgb { 181 0 0 }
 	color_ui = rgb { 181 0 0 }
+}
+LRE_GrandEst = {
+	color = rgb { 30 84 183 }
+	color_ui = rgb { 35 101 222 }
 }
