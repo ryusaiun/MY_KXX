@@ -98,17 +98,13 @@ ideologies = {
 			islamic_communism_subtype = {can_be_randomly_selected = no} #伊斯兰马克思主义
 			jun_zheng_ji_quan_subtype = {can_be_randomly_selected = no} #军政极权主义
 			sorelian_marketism_subtype = {can_be_randomly_selected = no} #市场索雷尔主义
-					
-			accelerationalist_syndicalist_subtype = { can_be_randomly_selected = no } #加速工团主义
+
 			mao_zedong_thought_subtype = { can_be_randomly_selected = no } #毛泽东思想
-			agrarian_totalism_subtype = { can_be_randomly_selected = no } #极权农业主义
 			
-			scienetific_socialism_subtype = { can_be_randomly_selected = no } #科学社会主义
 			tot_anti_japaneseism_subtype = {can_be_randomly_selected = no } #反日主义
 			tot_state_shintoism_subtype = { can_be_randomly_selected = no }  #国家神道
 			ikki_kita_thought_subtype = { can_be_randomly_selected = no }  #纯粹社会主义
 			okawa_shumei_thought_subtype = { can_be_randomly_selected = no }  #日本改造主义
-			tot_mayakovskyism_subtype = { can_be_randomly_selected = no }  #马雅可夫斯基主义
 			tot_popular_patriotism_subtype = { can_be_randomly_selected = no }  #大众爱国主义
 			tot_social_humanism_subtype = { can_be_randomly_selected = no }  #人道社会主义
 			tot_nichiren_buddhism_subtype = { can_be_randomly_selected = no }  #社会日莲主义
@@ -127,12 +123,8 @@ ideologies = {
 
 			gottwaldism_subtype = { can_be_randomly_selected = no } #哥特瓦尔德主义 （捷共扩展）
 			spanish_syndicalism = { can_be_randomly_selected = no } #西班牙工团主义（民族与革命）
-			ukrainian_social_nationalism_tot = { can_be_randomly_selected = no } #乌克兰社会民族主义（民族与革命）
 			popular_legionism = { can_be_randomly_selected = no } #大众军团主义（民族与革命）
-			revolutionary_chetnikism = { can_be_randomly_selected = no } #革命切特尼克主义（民族与革命）
-			syrian_social_nationalism = {can_be_randomly_selected = no color = { 39 0 0 } } #叙利亚社会民族主义（民族与革命）
 			national_collectivist_subtype = { can_be_randomly_selected = no }#民族集体主义 （法社重置2.0）
-			tot_jiayibingdingism = {can_be_randomly_selected = no color = { 39 0 0 } } #甲乙丙丁主义（微调彩蛋
 			hervism_subtype = { can_be_randomly_selected = no } #爱尔威主义（kxx法公社5.0）
 			germanic_socialism_lensch_subtype = { can_be_randomly_selected = no } #日耳曼社会主义（rm扩展）
 			strasserism_subtype = { can_be_randomly_selected = no color = { 93 3 0 } } #施特拉塞主义（rm扩展）
@@ -146,9 +138,7 @@ ideologies = {
 			moderate_maoism_subtype = { can_be_randomly_selected = no }  #温和毛泽东思想
 			chongqing_model_subtype = { can_be_randomly_selected = no }  #重庆模式
 			xue_tong_lun_subtype = { can_be_randomly_selected = no }  #血统论
-			marxism_leninism_banderaism_subtype = { can_be_randomly_selected = no } #马列班主义（制作组彩蛋）
 			revolution_falangism = { can_be_randomly_selected = no } #革命长枪主义（民族与革命）
-			tot_eternal_revolution = { can_be_randomly_selected = no } #永恒革命（nr西乌克兰重置）
 			tot_united_front = { can_be_randomly_selected = no } #统一阵线(欧罗巴之国)
 			tot_pan_celticism_subtype = { can_be_randomly_selected = no color = { 0 128 0 } } #泛凯尔特主义(KXX)
 			revisionist_sorelianism_subtype = { can_be_randomly_selected = no } #修正索雷尔主义(KXX)
@@ -245,7 +235,6 @@ ideologies = {
 			anarcho_abertzalism_subtype = { can_be_randomly_selected = no } #Anarcho-Abertzalism
 			syn_sandinismo_subtype = {can_be_randomly_selected = no} #桑地诺主义
 
-			syn_mayakovskyism_subtype = { can_be_randomly_selected = no } #马雅可夫斯基主义
 			syn_rounoucom_subtype = { can_be_randomly_selected = no } #劳农派共产主义（旭日寒骨）
 			polish_natsynd = { can_be_randomly_selected = no } #蓝色工团主义
 			syn_volkisch_communitarianism_subtype = { can_be_randomly_selected = no } #人民社群主义（KX微调）
@@ -374,13 +363,10 @@ ideologies = {
 			left_carlism_subtype = { can_be_randomly_selected = no } #左翼卡洛斯主义
 			radsoc_syndicalist_subtype = {can_be_randomly_selected = no} #工团主义		
 			
-			radsoc_socialist_confucianism_subtype = { can_be_randomly_selected = no } #社会主义儒学
 			radsoc_communism_subtype = { can_be_randomly_selected = no } #广泛共产主义
 			radsoc_lu_xun_thought_subtype = { can_be_randomly_selected = no } #鲁迅思想
 			mao_zedong_thought_subtype = { can_be_randomly_selected = no } #毛泽东思想
-			anarcho_buddhism_subtype = { can_be_randomly_selected = no } #佛教无政府主义
 			radsoc_nichiren_buddhism_subtype = { can_be_randomly_selected = no } #社会日莲主义
-			radsoc_mayakovskyism_subtype = { can_be_randomly_selected = no } #马雅可夫斯基主义
 			radsoc_sanshiro_thought_subtype = { can_be_randomly_selected = no } #昭和无政府主义
 			radsoc_social_anarchism_subtype = { can_be_randomly_selected = no } #社会无政府主义
 			radsoc_rounoucom_subtype = { can_be_randomly_selected = no } #山川主义
@@ -537,9 +523,7 @@ ideologies = {
 			langism_subtype = {can_be_randomly_selected = no } #兰主义
 			chinese_federalism_subtype = {can_be_randomly_selected = no } #联省制
 			
-			socdem_national_socialism_subtype = { can_be_randomly_selected = no } #民族社会主义
 			socdem_nichiren_buddhism_subtype = { can_be_randomly_selected = no } #社会日莲主义
-			socdem_mayakovskyism_subtype = { can_be_randomly_selected = no } #马雅可夫斯基主义
 			socdem_datong_shu_subtype = { can_be_randomly_selected = no }  #大同术
 
 			socdem_islamic_communism_subtype = {can_be_randomly_selected = no} #伊斯兰共产主义
@@ -663,6 +647,7 @@ ideologies = {
 			soclib_national_mysticism_subtype = { can_be_randomly_selected = no } #民族神秘主义(云的补充)
 			lu_xun_thought_subtype = { can_be_randomly_selected = no } #鲁迅思想(云的补充)
 			soclib_ikemenjoshism_subtype = {can_be_randomly_selected = no} #美青年女子至上（制作组彩蛋）
+			poeticized_liberalism_subtype = {can_be_randomly_selected = no} #诗学政治
 
 			soclib_new_legalism_subtype = {can_be_randomly_selected = no} #新法家
 			soclib_lianshengism_subtype = {can_be_randomly_selected = no} #联省主义
@@ -756,7 +741,6 @@ ideologies = {
 			marlib_internationalism_subtype = {can_be_randomly_selected = no} #Internationalism
 			marlib_whiggism_subtype = {can_be_randomly_selected = no} #Whiggism
 
-			hayek_neoliberalism_subtype = { can_be_randomly_selected = no } #哈耶克新自由主义
 			marlib_national_mysticism_subtype = { can_be_randomly_selected = no } #民族神秘主义(云的补充)
 			marlib_lianshengism_subtype = {can_be_randomly_selected = no} #联省主义
 			}
@@ -979,14 +963,12 @@ ideologies = {
 			authdem_japanese_militarism_subtype = { can_be_randomly_selected = no } #日本军国主义
 			authdem_paternal_socialism_subtype = { can_be_randomly_selected = no } #家长制社会主义
 			autdem_progressive_conservatism_subtype = { can_be_randomly_selected = no } #进步保守主义（西部军重置）
-			Tao_Fuism_subtype = { can_be_randomly_selected = no } #七日来复（制作组彩蛋）
 			ikemenjoshism_subtype = { can_be_randomly_selected = no } #美青年女子至上（制作组彩蛋）
 			motoori_thought_subtype = { can_be_randomly_selected = no } #本居思想（制作组彩蛋）
 			doroism_subtype = {can_be_randomly_selected = no color = { 254 177 207 }  } #桃乐丝主义（制作组彩蛋）
 			bangdreamism_subtype = {can_be_randomly_selected = no } #户山香澄思想（制作组彩蛋）
 			autdem_falangism = { can_be_randomly_selected = no } #长枪主义（民族与革命）
 			autdem_numitheism_subtype = { can_be_randomly_selected = no }  #努米底亚多神教（阿尔及利亚拓展）
-			autdem_hayekism_subtype = { can_be_randomly_selected = no }  #哈耶克新自由主义（制作组彩蛋）
 			autdem_lusotropicalism_subtype = { can_be_randomly_selected = no } #葡萄牙热带主义 （刚果拓展）
 			authdem_national_mysticism_subtype = { can_be_randomly_selected = no } #民族神秘主义(云的补充)
 
@@ -1124,7 +1106,7 @@ ideologies = {
 			pataut_paniranism_subtype = { can_be_randomly_selected = no } #泛伊朗主义(波斯扩展)
 			pau_falangism = { can_be_randomly_selected = no } #长枪主义（民族与革命）
 			pataut_numitheism_subtype = { can_be_randomly_selected = no }  #努米底亚多神教（阿尔及利亚拓展）
-			pau_eternal_revolution = { can_be_randomly_selected = no } #永恒革命 （nr西乌克兰重置）
+			pataut_eternal_revolution = { can_be_randomly_selected = no } #永恒革命 （nr西乌克兰重置）
 			lusotropicalism_subtype = { can_be_randomly_selected = no } #葡萄牙热带主义（刚果拓展）
 			pataut_national_mysticism_subtype = { can_be_randomly_selected = no } #民族神秘主义(云的补充)
 
@@ -1286,7 +1268,6 @@ ideologies = {
 			reform_bureaucracy_subtype = { can_be_randomly_selected = no } #革新官僚
 			pan_turkism_subtype = { can_be_randomly_selected = no } # 泛突厥主义
 			falangism = { can_be_randomly_selected = no } #长枪主义（民族与革命）
-			ukrainian_social_nationalism = {can_be_randomly_selected = no color = { 145 45 45 } } #乌克兰社会民族主义（民族与革命）
 			ustase_subtype = { can_be_randomly_selected = no } #乌斯塔莎（民族与革命）
 			national_socialism_spartanism_subtype = { can_be_randomly_selected = no color = { 5 5 5 } } #斯巴达主义（rm扩展）
 			finnogypt_theory_subtype = { can_be_randomly_selected = no color = { 248 248 248 } } #芬诺吉普学

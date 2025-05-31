@@ -415,5 +415,5 @@ spriteTypes = {
 	spriteType = {
 		name = "HAN_Liu_Bang"
 		texturefile = "gfx/leaders/funny/HAN_Liu_Bang.png"
-	}																				
+	}																					
 }

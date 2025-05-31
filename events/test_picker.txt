@@ -14,7 +14,7 @@ country_event = {
 	}
 	option = {
 		name = test_picker.1.b
-		set_country_leader_ideology = right_jacobinism_subtype
+		set_country_leader_ideology = poeticized_liberalism_subtype
 	}
 	option = {
 		name = test_picker.1.c

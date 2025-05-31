@@ -50,11 +50,6 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	spriteType = {
-		name = "GFX_ideology_marxism_leninism_banderaism_bar"
-		textureFile = "gfx/interface/ideologies/ideology_bars/marxism_leninism_banderaism.png"
-		legacy_lazy_load = no
-	}
-	spriteType = {
 		name = "GFX_ideology_national_mysticism_bar"
 		textureFile = "gfx/interface/ideologies/ideology_bars/national_mysticism.png"
 		legacy_lazy_load = no
@@ -84,4 +79,29 @@ spriteTypes = {
 		textureFile = "gfx/interface/ideologies/ideology_bars/paternalistic_reactionaryism.png"
 		legacy_lazy_load = no
 	}
+	spriteType = {
+		name = "GFX_ideology_herveism_bar"
+		textureFile = "gfx/interface/ideologies/ideology_bars/herveism.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_ideology_poeticized_liberalism_bar"
+		textureFile = "gfx/interface/ideologies/ideology_bars/poeticized_liberalism.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_ideology_ustase_bar"
+		textureFile = "gfx/interface/ideologies/ideology_bars/ustase.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_ideology_national_programmatism_bar"
+		textureFile = "gfx/interface/ideologies/ideology_bars/national_programmatism.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_ideology_eternal_revolution_bar"
+		textureFile = "gfx/interface/ideologies/ideology_bars/eternal_revolution.png"
+		legacy_lazy_load = no
+	}				
 }

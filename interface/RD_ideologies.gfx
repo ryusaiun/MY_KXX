@@ -9,15 +9,6 @@ spriteTypes = {
 	name = "GFX_ideology_mao_zedong_thought_subtype"
 	texturefile = "gfx/interface/ideologies/subideologies/mao_zedong_thought.png"
 	}
-	SpriteType = {
-	name = "GFX_ideology_radsoc_socialist_confucianism_subtype"
-	texturefile = "gfx/interface/ideologies/subideologies/Confucius Socialism.png"
-	}
-	
-	SpriteType = {
-	name = "GFX_ideology_agrarian_totalism_subtype"
-	texturefile = "gfx/interface/ideologies/subideologies/agrarian_totalism.png"
-	}
 
 	SpriteType = {
 	name = "GFX_ideology_lu_xun_thought_subtype"
@@ -38,17 +29,7 @@ spriteTypes = {
 	name = "GFX_ideology_socdem_social_buddhism_subtype"
 	texturefile = "gfx/interface/ideologies/subideologies/Socialist_Buddhism.png"
 	}
-		
-	SpriteType = {
-	name = "GFX_ideology_accelerationalist_syndicalist_subtype"
-	texturefile = "gfx/interface/ideologies/subideologies/accelerationalist_syndicalist_group.png"
-	}
 
-	SpriteType = {
-	name = "GFX_ideology_scienetific_socialism_subtype"
-	texturefile = "gfx/interface/ideologies/subideologies/Scientific_Socialism.png"
-	}
-	
 	SpriteType = {
 	name = "GFX_ideology_tot_anti_japaneseism_subtype"
 	texturefile = "gfx/interface/ideologies/subideologies/anti_japaneseism.png"
@@ -63,35 +44,10 @@ spriteTypes = {
 	name = "GFX_ideology_authdem_anarchism_subtype"
 	texturefile = "gfx/interface/ideologies/subideologies/anarcho_individualism.png"
 	}
-	
-	SpriteType = {
-	name = "GFX_ideology_anarcho_buddhism_subtype"
-	texturefile = "gfx/interface/ideologies/subideologies/anarcho_buddhism.png"
-	}
-	
+
 	SpriteType = {
 	name = "GFX_ideology_patau_chiangism_subtype"
 	texturefile = "gfx/interface/ideologies/subideologies/patau_chiangism.png"
-	}
-	SpriteType = {
-	name = "GFX_ideology_tot_mayakovskyism_subtype"
-	texturefile = "gfx/interface/ideologies/subideologies/tot_mayakovskyism.png"
-	}
-	SpriteType = {
-	name = "GFX_ideology_syn_mayakovskyism_subtype"
-	texturefile = "gfx/interface/ideologies/subideologies/tot_mayakovskyism.png"
-	}
-	SpriteType = {
-	name = "GFX_ideology_radsoc_mayakovskyism_subtype"
-	texturefile = "gfx/interface/ideologies/subideologies/tot_mayakovskyism.png"
-	}
-	SpriteType = {
-	name = "GFX_ideology_socdem_mayakovskyism_subtype"
-	texturefile = "gfx/interface/ideologies/subideologies/socdem_mayakovskyism.png"
-	}
-	SpriteType = {
-	name = "GFX_ideology_socdem_national_socialism_subtype"
-	texturefile = "gfx/interface/ideologies/subideologies/socdem_national_socialism.png"
 	}
 	
 	

@@ -52,14 +52,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_ideology_nihonyudaya_shugi_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/nihonyudaya_shugi.png"
-	}
-	spriteType = {
-		name = "GFX_ideology_autdem_hayekism_subtype"
-		texturefile = "gfx/interface/ideologies/subideologies/autdem_hayekism.png"
-	}
-	spriteType = {
-		name = "GFX_ideology_hayek_neoliberalism_subtype"
-		texturefile = "gfx/interface/ideologies/subideologies/hayek_neoliberalism.png"
 	}		
 	spriteType = {
 		name = "GFX_ideology_natpop_goebbels_subtype"
@@ -67,19 +59,19 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_ideology_radsoc_united_front"
-		texturefile = "gfx/interface/ideologies/uobeu/radsoc_einheitsfront.png"
+		texturefile = "gfx/interface/ideologies/subideologies/radsoc_einheitsfront.png"
 	}
 	spriteType = {
 		name = "GFX_ideology_tot_united_front"
-		texturefile = "gfx/interface/ideologies/uobeu/tot_einheitsfront.png"
+		texturefile = "gfx/interface/ideologies/subideologies/tot_einheitsfront.png"
 	}
 	spriteType = {
 		name = "GFX_ideology_syn_united_front"
-		texturefile = "gfx/interface/ideologies/uobeu/radsoc_einheitsfront.png"
+		texturefile = "gfx/interface/ideologies/subideologies/radsoc_einheitsfront.png"
 	}
 	spriteType = {
 		name = "GFX_ideology_socdem_united_front"
-		texturefile = "gfx/interface/ideologies/uobeu/radsoc_einheitsfront.png"
+		texturefile = "gfx/interface/ideologies/subideologies/radsoc_einheitsfront.png"
 	}
 	spriteType = {
 		name = "GFX_ideology_socdem_algerian_socialism_subtype"
@@ -248,10 +240,6 @@ spriteTypes = {
 	}
 	##制作组彩蛋
 	spriteType = {
-		name = "GFX_ideology_Tao_Fuism_subtype"
-		texturefile = "gfx/interface/ideologies/subideologies/Tao_Fuism.png"
-	}
-	spriteType = {
 		name = "GFX_ideology_ikemenjoshism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/ikemenjoshism.png"
 	}
@@ -280,10 +268,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideologies/subideologies/byronism.png"
 	}
 	spriteType = {
-		name = "GFX_ideology_marxism_leninism_banderaism_subtype"
-		texturefile = "gfx/interface/ideologies/subideologies/marxism_leninism_banderaism.png"
-	}		
-	spriteType = {
 		name = "GFX_ideology_genshitism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/genshitism.png"
 	}
@@ -309,12 +293,16 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_ideology_orphism_subtype"
-		texturefile = "gfx/interface/ideologies/subideologies/orphism.png"
+		texturefile = "gfx/interface/ideologies/subideologies/orphism_group.png"
 	}
 	spriteType = {
 		name = "GFX_ideology_mantetsu_system_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/mantetsu_system.png"
-	}	
+	}
+	spriteType = {
+		name = "GFX_ideology_poeticized_liberalism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/poeticized_liberalism_group.png"
+	}		
 	#赤潮
 	spriteType = {
 		name = "GFX_ideology_natpop_futurism_subtype"
@@ -332,4 +320,91 @@ spriteTypes = {
 		name = "GFX_ideology_surrealist_eroticism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/surrealist_eroticism_subtype.png"
 	}
+	#民族与革命
+	SpriteType = {
+		name = "GFX_ideology_military_anarchism"
+		texturefile = "gfx/interface/ideologies/subideologies/military_anarchism.png"
+	}
+	SpriteType = {
+		name = "GFX_ideology_radsoc_social_anarchism"
+		texturefile = "gfx/interface/ideologies/subideologies/radsoc_social_anarchism.png"
+	}
+	SpriteType = {
+		name = "GFX_ideology_individualist_anarchism"
+		texturefile = "gfx/interface/ideologies/subideologies/individualist_anarchism.png"
+	}
+	SpriteType = {
+		name = "GFX_ideology_anarcho_market_socialism"
+		texturefile = "gfx/interface/ideologies/subideologies/anarcho_market_socialism.png"
+	}
+	SpriteType = {
+		name = "GFX_ideology_falangism"
+		texturefile = "gfx/interface/ideologies/subideologies/falangism_group.png"			
+	}
+	spriteType = {
+		name = "GFX_ideology_pau_falangism"
+		texturefile = "gfx/interface/ideologies/subideologies/pau_falangism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_revolution_falangism"
+		texturefile = "gfx/interface/ideologies/subideologies/revolution_falangism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_autdem_falangism"
+		texturefile = "gfx/interface/ideologies/subideologies/autdem_falangism.png"
+	}	
+	SpriteType = {
+		name = "GFX_ideology_classical_progressivism"
+		texturefile = "gfx/interface/ideologies/subideologies/classical_progressivism.png"
+	}
+	SpriteType = {
+		name = "GFX_ideology_spanish_syndicalism"
+		texturefile = "gfx/interface/ideologies/subideologies/spanish_syndicalism.png"
+	}
+	SpriteType = {
+		name = "GFX_ideology_popular_legionism"
+		texturefile = "gfx/interface/ideologies/subideologies/popular_legionism.png"			
+	}
+	spriteType = {
+		name = "GFX_ideology_ustase_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/ustase_subtype.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_regenerationism"
+		texturefile = "gfx/interface/ideologies/subideologies/regenerationism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_national_programmatism"
+		texturefile = "gfx/interface/ideologies/subideologies/national_programmatism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_pataut_eternal_revolution"
+		texturefile = "gfx/interface/ideologies/subideologies/pataut_eternal_revolution.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_transhumanism"
+		texturefile = "gfx/interface/ideologies/subideologies/transhumanism_group.png"
+	}
+	#欧罗巴
+	spriteType = {
+		name = "GFX_ideology_tot_francism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/tot_francism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_radsoc_sansepolcrismo"
+		texturefile = "gfx/interface/ideologies/subideologies/radsocsansepolcrismo.png"
+	}
+
+ 	spriteType = {
+		name = "GFX_ideology_tot_euro_mosleyism"
+		texturefile = "gfx/interface/ideologies/subideologies/tot_neo_mosleyism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_tot_sansepolcrismo"
+		texturefile = "gfx/interface/ideologies/subideologies/sansepolcrismo.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_ingsoc_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/ingsoc.png"
+	}			
 }

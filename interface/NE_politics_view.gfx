@@ -426,30 +426,7 @@ spriteTypes = {
 
 	### SubIdeologies ###
 	
-	spriteType = {
-		name = "GFX_ideology_radsoc_brownism"
-		texturefile = "gfx/interface/ideologies/uobeu/brownism.png"
-	}
 
-	spriteType = {
-		name = "GFX_ideology_radsoc_nasserism"
-		texturefile = "gfx/interface/ideologies/uobeu/nasserism_group.png"
-	}
-
-	spriteType = {
-		name = "GFX_ideology_tot_francism_subtype"
-		texturefile = "gfx/interface/ideologies/uobeu/tot_francism.png"
-	}
-
-	spriteType = {
-		name = "GFX_ideology_radsoc_sansepolcrismo"
-		texturefile = "gfx/interface/ideologies/uobeu/radsocsansepolcrismo.png"
-	}
-
- 	spriteType = {
-		name = "GFX_ideology_tot_euro_mosleyism"
-		texturefile = "gfx/interface/ideologies/uobeu/tot_neo_mosleyism.png"
-	}
 
 	spriteType = {
 		name = "GFX_ideology_radsoc_reformed_germanism"
@@ -466,28 +443,18 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideologies/uobeu/gothism.png"
 	}
 
-	spriteType = {
-		name = "GFX_ideology_tot_sansepolcrismo"
-		texturefile = "gfx/interface/ideologies/uobeu/sansepolcrismo.png"
-	}
+
 
 	spriteType = {
 		name = "GFX_ideology_tot_reformed_germanism"
 		texturefile = "gfx/interface/ideologies/uobeu/tot_reformed_germanism.png"
 	}
 
-	spriteType = {
-		name = "GFX_ideology_ingsoc_subtype"
-		texturefile = "gfx/interface/ideologies/uobeu/ingsoc.png"
-	}
+
 
 	spriteType = {
 		name = "GFX_ideology_goebbelism_subtype"
 		texturefile = "gfx/interface/ideologies/uobeu/goebbelsthirdstage.png"
-	}
-	spriteType = {
-		name = "GFX_ideology_national_communism_subtype"
-		texturefile = "gfx/interface/ideologies/uobeu/national_communism.png"
 	}
 	
 	spriteType = {

@@ -20,11 +20,6 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	spriteType = {
-		name = "GFX_ideology_mayakovskyism_bar"
-		textureFile = "gfx/interface/ideologies/ideology_bars/rd/mayakovskyism.png"
-		legacy_lazy_load = no
-	}
-	spriteType = {
 		name = "GFX_ideology_revolutuionary_agarianism_bar"
 		textureFile = "gfx/interface/ideologies/ideology_bars/rd/revolutuionary_agarianism.png"
 		legacy_lazy_load = no
@@ -47,11 +42,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_ideology_antijapan_bar"
 		textureFile = "gfx/interface/ideologies/ideology_bars/rd/antijapan.png"
-		legacy_lazy_load = no
-	}
-	spriteType = {
-		name = "GFX_ideology_anarcho_buddhism_bar"
-		textureFile = "gfx/interface/ideologies/ideology_bars/rd/anarcho_buddhism.png"
 		legacy_lazy_load = no
 	}
 	spriteType = {

@@ -414,54 +414,54 @@ spriteTypes = {
 	#阿尔蒂路线
 	SpriteType = {
 		name = "GFX_Focus_COMFRA1"
-		texturefile = "gfx/interface/focus/Focus_COMFRA1.png"			
+		texturefile = "gfx/interface/goals/NR/Focus_COMFRA1.png"			
 	}
 	SpriteType = {
 		name = "GFX_Focus_COMFRA2"
-		texturefile = "gfx/interface/focus/Focus_COMFRA2.png"			
+		texturefile = "gfx/interface/goals/NR/Focus_COMFRA2.png"			
 	}
 	SpriteType = {
 		name = "GFX_Focus_COMFRA3"
-		texturefile = "gfx/interface/focus/Focus_COMFRA3.png"			
+		texturefile = "gfx/interface/goals/NR/Focus_COMFRA3.png"			
 	}
 	SpriteType = {
 		name = "GFX_Focus_COMFRA4"
-		texturefile = "gfx/interface/focus/Focus_COMFRA4.png"			
+		texturefile = "gfx/interface/goals/NR/Focus_COMFRA4.png"			
 	}
 	SpriteType = {
 		name = "GFX_Focus_COMFRA5"
-		texturefile = "gfx/interface/focus/Focus_COMFRA5.png"			
+		texturefile = "gfx/interface/goals/NR/Focus_COMFRA5.png"			
 	}
 	SpriteType = {
 		name = "GFX_Focus_COMFRA6"
-		texturefile = "gfx/interface/focus/Focus_COMFRA6.png"			
+		texturefile = "gfx/interface/goals/NR/Focus_COMFRA6.png"			
 	}
 	SpriteType = {
 		name = "GFX_Focus_COMFRA7"
-		texturefile = "gfx/interface/focus/Focus_COMFRA7.png"			
+		texturefile = "gfx/interface/goals/NR/Focus_COMFRA7.png"			
 	}
 	SpriteType = {
 		name = "GFX_Focus_COMFRA8"
-		texturefile = "gfx/interface/focus/Focus_COMFRA8.png"			
+		texturefile = "gfx/interface/goals/NR/Focus_COMFRA8.png"			
 	}
 	SpriteType = {
 		name = "GFX_Focus_COMFRA9"
-		texturefile = "gfx/interface/focus/Focus_COMFRA9.png"			
+		texturefile = "gfx/interface/goals/NR/Focus_COMFRA9.png"			
 	}
 	SpriteType = {
 		name = "GFX_Focus_COMFRA10"
-		texturefile = "gfx/interface/focus/Focus_COMFRA10.png"			
+		texturefile = "gfx/interface/goals/NR/Focus_COMFRA10.png"			
 	}
 	SpriteType = {
 		name = "GFX_Focus_COMFRA11"
-		texturefile = "gfx/interface/focus/Focus_COMFRA11.png"			
+		texturefile = "gfx/interface/goals/NR/Focus_COMFRA11.png"			
 	}
 	SpriteType = {
 		name = "GFX_Focus_COMFRA1_shine"
-		texturefile = "gfx/interface/focus/Focus_COMFRA1.png"
+		texturefile = "gfx/interface/goals/NR/Focus_COMFRA1.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/focus/Focus_COMFRA1.png"
+			animationmaskfile = "gfx/interface/goals/NR/Focus_COMFRA1.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -474,7 +474,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/focus/Focus_COMFRA1.png"
+			animationmaskfile = "gfx/interface/goals/NR/Focus_COMFRA1.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -489,10 +489,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_Focus_COMFRA2_shine"
-		texturefile = "gfx/interface/focus/Focus_COMFRA2.png"
+		texturefile = "gfx/interface/goals/NR/Focus_COMFRA2.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/focus/Focus_COMFRA2.png"
+			animationmaskfile = "gfx/interface/goals/NR/Focus_COMFRA2.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -505,7 +505,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/focus/Focus_COMFRA2.png"
+			animationmaskfile = "gfx/interface/goals/NR/Focus_COMFRA2.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -520,10 +520,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_Focus_COMFRA3_shine"
-		texturefile = "gfx/interface/focus/Focus_COMFRA3.png"
+		texturefile = "gfx/interface/goals/NR/Focus_COMFRA3.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/focus/Focus_COMFRA3.png"
+			animationmaskfile = "gfx/interface/goals/NR/Focus_COMFRA3.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -536,7 +536,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/focus/Focus_COMFRA3.png"
+			animationmaskfile = "gfx/interface/goals/NR/Focus_COMFRA3.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -551,10 +551,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_Focus_COMFRA4_shine"
-		texturefile = "gfx/interface/focus/Focus_COMFRA4.png"
+		texturefile = "gfx/interface/goals/NR/Focus_COMFRA4.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/focus/Focus_COMFRA4.png"
+			animationmaskfile = "gfx/interface/goals/NR/Focus_COMFRA4.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -567,7 +567,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/focus/Focus_COMFRA4.png"
+			animationmaskfile = "gfx/interface/goals/NR/Focus_COMFRA4.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -582,10 +582,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_Focus_COMFRA5_shine"
-		texturefile = "gfx/interface/focus/Focus_COMFRA5.png"
+		texturefile = "gfx/interface/goals/NR/Focus_COMFRA5.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/focus/Focus_COMFRA5.png"
+			animationmaskfile = "gfx/interface/goals/NR/Focus_COMFRA5.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -598,7 +598,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/focus/Focus_COMFRA5.png"
+			animationmaskfile = "gfx/interface/goals/NR/Focus_COMFRA5.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -613,10 +613,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_Focus_COMFRA6_shine"
-		texturefile = "gfx/interface/focus/Focus_COMFRA6.png"
+		texturefile = "gfx/interface/goals/NR/Focus_COMFRA6.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/focus/Focus_COMFRA6.png"
+			animationmaskfile = "gfx/interface/goals/NR/Focus_COMFRA6.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -629,7 +629,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/focus/Focus_COMFRA6.png"
+			animationmaskfile = "gfx/interface/goals/NR/Focus_COMFRA6.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -644,10 +644,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_Focus_COMFRA7_shine"
-		texturefile = "gfx/interface/focus/Focus_COMFRA7.png"
+		texturefile = "gfx/interface/goals/NR/Focus_COMFRA7.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/focus/Focus_COMFRA7.png"
+			animationmaskfile = "gfx/interface/goals/NR/Focus_COMFRA7.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -660,7 +660,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/focus/Focus_COMFRA7.png"
+			animationmaskfile = "gfx/interface/goals/NR/Focus_COMFRA7.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -675,10 +675,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_Focus_COMFRA8_shine"
-		texturefile = "gfx/interface/focus/Focus_COMFRA8.png"
+		texturefile = "gfx/interface/goals/NR/Focus_COMFRA8.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/focus/Focus_COMFRA8.png"
+			animationmaskfile = "gfx/interface/goals/NR/Focus_COMFRA8.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -691,7 +691,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/focus/Focus_COMFRA8.png"
+			animationmaskfile = "gfx/interface/goals/NR/Focus_COMFRA8.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -706,10 +706,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_Focus_COMFRA9_shine"
-		texturefile = "gfx/interface/focus/Focus_COMFRA9.png"
+		texturefile = "gfx/interface/goals/NR/Focus_COMFRA9.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/focus/Focus_COMFRA9.png"
+			animationmaskfile = "gfx/interface/goals/NR/Focus_COMFRA9.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -722,7 +722,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/focus/Focus_COMFRA9.png"
+			animationmaskfile = "gfx/interface/goals/NR/Focus_COMFRA9.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -737,10 +737,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_Focus_COMFRA10_shine"
-		texturefile = "gfx/interface/focus/Focus_COMFRA10.png"
+		texturefile = "gfx/interface/goals/NR/Focus_COMFRA10.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/focus/Focus_COMFRA10.png"
+			animationmaskfile = "gfx/interface/goals/NR/Focus_COMFRA10.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -753,7 +753,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/focus/Focus_COMFRA10.png"
+			animationmaskfile = "gfx/interface/goals/NR/Focus_COMFRA10.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -768,10 +768,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_Focus_COMFRA11_shine"
-		texturefile = "gfx/interface/focus/Focus_COMFRA11.png"
+		texturefile = "gfx/interface/goals/NR/Focus_COMFRA11.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/focus/Focus_COMFRA11.png"
+			animationmaskfile = "gfx/interface/goals/NR/Focus_COMFRA11.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -784,7 +784,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/focus/Focus_COMFRA11.png"
+			animationmaskfile = "gfx/interface/goals/NR/Focus_COMFRA11.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
