@@ -188,7 +188,7 @@ create_country_leader = {
 	name = "加斯东·维达尔"  # Gaston Vidal
 	picture = "gfx/leaders/FRA/Portrait_FRA_Gaston_Vidal.png"
 	expire = "1.1.1"
-	ideology = authdem_paternal_socialism_subtype
+	ideology = social_nationalism_subtype
 }
 
 create_country_leader = {	

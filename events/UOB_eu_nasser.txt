@@ -85,7 +85,7 @@ country_event = { # Ba'athists gather the support
 			desc = "POLITICS_NASSER_DESC"
 			picture = "gfx/leaders/EGY/Portrait_EGY_Gamel_Abdel_Nasser.png"
 			expire = "1965.1.1"
-			ideology = radsoc_nasserism
+			ideology = islamic_socialism_subtype
 			traits = {
 		
 			}

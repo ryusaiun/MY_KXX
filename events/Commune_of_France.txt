@@ -2138,6 +2138,7 @@ country_event = {
 		remove_ideas_with_trait = security_minister
 		add_ideas = FRA_Adrien_Tixier_sec_syn
 		set_global_flag = FRA_no_majority_1936
+		mark_focus_tree_layout_dirty = yes
 		custom_effect_tooltip = "New Communal Elections will take place every 5 years!"
 
 		hidden_effect = {
@@ -2206,7 +2207,7 @@ country_event = {
 		remove_ideas_with_trait = security_minister
 		add_ideas = FRA_Marceau_Pivert_sec_syn
 		set_global_flag = FRA_no_majority_1936
-		
+		mark_focus_tree_layout_dirty = yes
 
 		hidden_effect = {
 			random_other_country = {
@@ -2222,7 +2223,7 @@ country_event = {
 	option = {
 		name = comfrance.20.c #Moderates
 		ai_chance = {
-			factor = 10
+			factor = 20
 		}
 		meta_effect = {
 			text = {
@@ -2269,6 +2270,7 @@ country_event = {
 		remove_ideas_with_trait = security_minister
 		add_ideas = FRA_Sebastien_Faure_sec_rso
 		set_global_flag = FRA_no_majority_1936
+		mark_focus_tree_layout_dirty = yes
 		custom_effect_tooltip = "New Communal Elections will take place every 5 years!"
 
 		hidden_effect = {
@@ -2288,7 +2290,7 @@ country_event = {
 			is_ai = yes
 		}
 		ai_chance = {
-			factor = 20
+			factor = 10
 		}
 		set_politics = {
 			ruling_party = totalist
@@ -2337,7 +2339,7 @@ country_event = {
 			is_ai = yes
 		}
 		ai_chance = {
-			factor = 20
+			factor = 10
 		}
 		set_party_name = {
 			ideology = totalist
@@ -2399,7 +2401,7 @@ country_event = {
 	option = {
 		name = comfrance.20.g #里贝斯
 		ai_chance = {
-			factor = 0
+			factor = 10
 		}
 		meta_effect = {
 			text = {
@@ -6537,52 +6539,6 @@ country_event = {
 	}
 }
 	
-country_event = {
-	id = comfrance.905
-	immediate = {log = "[GetDateText]: [Root.GetName]: event comfrance.905"}
-	title = comfrance.905.t
-	desc = comfrance.905.d
-	picture = GFX_news_event_FRA_deat_control
-
-	is_triggered_only = yes
-	
-	option = {
-		name = comfrance.905.a 
-		
-		hidden_effect = {	
-			
-			create_country_leader = {
-				name = "马塞尔·戴亚"
-				desc = "POLITICS_MARCEL_DEAT_DESC"
-				picture = "gfx/leaders/FRA/Portrait_France_Marcel_Deat.png"
-				expire = "1965.1.1"
-				ideology = neo_socialism_subtype
-			}
-			add_stability = -0.1
-			remove_ideas_with_trait = head_of_government
-			add_ideas = FRA_Rene_Belin_hog_tot
-			remove_ideas_with_trait = foreign_minister
-			add_ideas = FRA_Pierre_Drieu_La_Rochelle_for_tot
-			remove_ideas_with_trait = economy_minister
-			add_ideas = FRA_Jacques_Doriot_eco_tot
-			remove_ideas_with_trait = security_minister
-			add_ideas = FRA_Henri_Barbe_sec_tot
-			add_popularity = {
-			  ideology = totalist
-			   popularity = 0.20
-		 	}
-			set_party_name = {
-			  ideology = totalist
-			  long_name = FRA_vanguard
-			  name = FRA_vanguard
-			}	 
-			country_event = {
-				id = comfrance.929
-				days = 10
-			}	 
-		}
-	}
-}
 
 country_event = {
 	id = comfrance.906
@@ -7072,7 +7028,7 @@ country_event = {
 		remove_ideas_with_trait = foreign_minister
 		remove_ideas_with_trait = economy_minister
 		remove_ideas_with_trait = security_minister
-			set_cosmetic_tag = FRA_Makhno
+		set_cosmetic_tag = FRA_free_territory
 
 		16 = {
 			damage_building = {
@@ -7184,14 +7140,16 @@ country_event = {
 		complete_national_focus = FRA_sorels_jacobin_saver
 		set_country_flag = Yun_FRA_sorejaco_flag
 		add_stability = 0.12
-		hidden_effect = {	
-			country_event = {
-				id = comfranceeu.1
-				days = 5
-			}
-			set_politics = {
-				ruling_party = totalist
-				elections_allowed = no
+		hidden_effect = {
+			FRA = {
+				country_event = {
+					id = comfranceeu.1
+					days = 5
+				}
+				set_politics = {
+					ruling_party = totalist
+					elections_allowed = no
+				}
 			}
 		}
 		
@@ -7549,6 +7507,7 @@ country_event = {
 			name = FRA_deat_start
 		}
 		set_country_flag = Yun_FRA_deat_visible_flag
+		mark_focus_tree_layout_dirty = yes
 		set_cosmetic_tag = FRA_Deat	 
 		hidden_effect = {	
 			remove_ideas_with_trait = head_of_government
@@ -9788,6 +9747,23 @@ country_event = { #anarchist leader
 			long_name = FRA_cgt_anarchist_long
 			name = FRA_cgt_anarchist
 		}
+		set_country_flag = ANAR_GUERIN
+		if = {
+			limit = { 
+				NOT = {
+					has_completed_focus = FRA_guerin_faction
+				}
+			}
+			complete_national_focus = FRA_guerin_faction
+		}
+		if = {
+			limit = { 
+				NOT = {
+					has_completed_focus = FRA_anarchist_cgt
+				}
+			}
+			complete_national_focus = FRA_anarchist_cgt
+		}				
 		custom_effect_tooltip = "New Communal Elections will take place every 5 years!"
 	}
 	

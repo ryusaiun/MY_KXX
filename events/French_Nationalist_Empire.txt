@@ -42,7 +42,6 @@ country_event = {
 			OCC = { transfer_state = 984 }
 			OCC = { transfer_state = 31 }
 			OCC = { transfer_state = 19 }
-			OCC = { transfer_state = 22 }
 			OCC = { transfer_state = 1334 }
 			BRI = { transfer_state = 983 }
 			BRI = { transfer_state = 14 }

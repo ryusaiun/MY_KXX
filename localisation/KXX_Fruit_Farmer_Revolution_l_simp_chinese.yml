@@ -127,9 +127,9 @@
  DOB_ADJ:0 "勃艮第"
  DOB_DEF:0 "勃艮第"
 
- PRO:0 "普罗旺斯-阿尔卑斯"
- PRO_ADJ:0 "普罗旺斯-阿尔卑斯"
- PRO_DEF:0 "普罗旺斯-阿尔卑斯"
+ PRO:0 "普罗旺斯"
+ PRO_ADJ:0 "普罗旺斯"
+ PRO_DEF:0 "普罗旺斯"
 
  PDL:0 "卢瓦尔河地区"
  PDL_ADJ:0 "卢瓦尔河地区"
@@ -178,5 +178,5 @@
  FruitFarmerRevolution.8.a:0 "我们必须迅速采取行动"
  FruitFarmerRevolution.8.b:0 "为果农之繁荣（切换至香槟）"
  FruitFarmerRevolution.8.c:0 "勃艮第不会屈服！（切换至勃艮第）"
- FruitFarmerRevolution.8.e:0 "普罗旺斯在怒吼...（切换至普罗旺斯-阿尔卑斯）"
+ FruitFarmerRevolution.8.e:0 "普罗旺斯在怒吼...（切换至普罗旺斯）"
  FruitFarmerRevolution.8.f:0 "旺代之镰将重现于世（切换至卢瓦尔河地区）"

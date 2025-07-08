@@ -1,18 +1,12 @@
 KXX_uses_leader_gui = {
 	OR = {
-		AND = {
-			tag = GRU
-			has_country_flag = GRU_GOEBB_GORING_VISIBLE
-			NOT = {
-				has_country_flag = GRU_pm_is_hos
-			}
-		}
-
-		GRU_has_leader_GUI = yes
 		has_country_flag = KXX_LEADER_GUI_VISIBLE
 	}
 	NOT = {
-		has_country_flag = KXX_LEADER_GUI_NOT_VISIBLE
+		OR = {
+			has_country_flag = KXX_LEADER_GUI_NOT_VISIBLE
+			is_subject = yes
+		}
 	}
 }
 
@@ -21,14 +15,32 @@ KXX_uses_double_leader_gui = {
 		has_country_flag = KXX_DOUBLE_LEADER_GUI_VISIBLE
 		has_idea_with_trait = land_marshal_of_liv_ord
 	}
+	NOT = {
+		OR = {
+			has_country_flag = KXX_DOUBLE_LEADER_GUI_NOT_VISIBLE
+			is_subject = yes
+		}
+	}
 }
 
 KXX_uses_third_leader_gui = {
 	has_country_flag = KXX_third_LEADER_GUI_VISIBLE
+	NOT = {
+		OR = {
+			has_country_flag = KXX_third_LEADER_GUI_NOT_VISIBLE
+			is_subject = yes
+		}
+	}
 }
 
 KXX_uses_gru_leader_gui = {
 	has_country_flag = KXX_gru_LEADER_GUI_VISIBLE
+	NOT = {
+		OR = {
+			has_country_flag = KXX_gru_LEADER_GUI_NOT_VISIBLE
+			is_subject = yes
+		}
+	}
 }
 
 KXX_LEADER_GUI_USES_CUSTOM_TITLE = {
@@ -39,15 +51,6 @@ KXX_LEADER_GUI_USES_CUSTOM_TITLE = {
 	}
 }
 
-### GRU
-GRU_has_leader_GUI = {
-	OR = {
-		has_country_flag = GRU_GOEBB_ROEM_VISIBLE
-		has_country_flag = GRU_GOEBB_HIMMLER_VISIBLE
-		has_country_flag = GRU_GOEBB_SPEER_VISIBLE
-		has_country_flag = GRU_LIEBK_ROSA_VISIBLE
-	}
-}
 GGB_has_leader_GUI = {
 	has_country_leader = { character = GRU_Oswald_Mosley ruling_only = yes }
 }
@@ -60,3 +63,4 @@ ITT_has_leader_GUI = {
 		has_country_leader = { character = GRU_Benito_Mussolini ruling_only = yes }
 	}
 }
+

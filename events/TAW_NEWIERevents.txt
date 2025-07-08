@@ -126,3 +126,613 @@ country_event = {
 		name = newIreland.2.dc
 	}
 }
+
+country_event = {
+	id = newIreland.3 #社会主义民主
+	title = newIreland.3.t
+	desc = newIreland.3.d
+	picture = GFX_engwar.1
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = newIreland.3.a		
+    increase_ruling_party_popularity_by_25 = yes
+	}
+    option = { 
+		name = newIreland.3.b
+     country_event = {
+		id = newIreland.4
+		days = 90
+	 }
+	}
+}
+country_event = {
+	id = newIreland.4 #选举
+	title = newIreland.4.t
+	desc = newIreland.4.d
+	picture = GFX_engwar.1
+	
+	is_triggered_only = yes
+	
+	option = { #totalist
+		name = newIreland.4.a		
+		set_politics = { ruling_party = totalist } 
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.1
+		}
+		custom_effect_tooltip = "选举将每四年举行一次！"
+		hidden_effect = {
+			country_event = {
+				id = newIreland.4
+				days = 1460
+			}
+		}
+	}
+    option = { #syndicalist
+		name = newIreland.4.b
+		set_politics = { ruling_party = syndicalist } 
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.1
+		}
+		custom_effect_tooltip = "选举将每四年举行一次！"
+		hidden_effect = {
+			country_event = {
+				id = newIreland.4
+				days = 1460
+			}
+		}
+	}
+	option = { #radsoc
+		name = newIreland.4.c
+		set_politics = { ruling_party = radical_socialist } 
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.1
+		}
+		custom_effect_tooltip = "选举将每四年举行一次！"
+		hidden_effect = {
+			country_event = {
+				id = newIreland.4
+				days = 1460
+			}
+		}
+	}
+	option = { #socdem
+		name = newIreland.4.e
+		set_politics = { ruling_party = social_democrat } 
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.1
+		}
+		custom_effect_tooltip = "选举将每四年举行一次！"
+		hidden_effect = {
+			country_event = {
+				id = newIreland.4
+				days = 1460
+			}
+		}
+	}
+}
+country_event = {
+	id = newIreland.5 #social credit coup king
+	title = newIreland.5.t
+	desc = newIreland.5.d
+	picture = GFX_report_event_IRE_raymond_o_brien
+	fire_only_once = yes
+	trigger = {
+		tag = IRE
+		has_country_flag = IRE_O_Brien_Coup
+	}
+	
+	option = { #get out
+		name = newIreland.5.a		
+		add_stability = 0.1
+	}
+    option = { #oh no
+		name = newIreland.5.b
+		set_politics = { ruling_party = radical_socialist } 
+		set_party_name = {
+			name = "爱尔兰社会信用党"
+			long_name = "爱尔兰社会信用党"
+			ideology = radical_socialist
+		}
+		create_country_leader = {
+			name = "莫德·贡娜"
+			picture = "gfx/leaders/IRE/Portrait_Ireland_Maud_Gonne.png"
+			expire = "1.1.1"
+			traits = {
+				esoterism_supporter
+				Irish_Joan_of_Arc
+			}
+			ideology = radsoc_social_credit_subtype
+		}
+		set_cosmetic_tag = IRE_SOCCRED
+		remove_all_ministers = yes
+		add_ideas = IRE_Denis_Ireland_hog_rso
+		add_ideas = IRE_William_Butler_Yeats_for_rso
+		add_ideas = IRE_James_Lennon_eco_rso
+		add_ideas = IRE_Oliver_Flanagan_sec_rso
+		set_country_flag = IRE_SOCCRED_win
+		hidden_effect = {
+			set_party_name = {
+				name = IRE_social_democrat_party2
+				long_name = IRE_social_democrat_party2_long
+				ideology = social_democrat
+			}
+			create_country_leader = {
+				name = "William X. O'Brien"
+				desc = "POLITICS_WILLIAM_X_OBRIEN_DESC"
+				picture = "gfx/leaders/IRE/Portrait_Ireland_William_X_O'Brien.png"
+				expire = "1.1.1"
+				ideology = socdem_radical_progressivism_subtype
+			}
+			set_country_flag = soc_dems_are_socialists
+			set_country_flag = IRE_labour_occupies_socdem_slot
+		}		
+	}
+	
+}
+country_event = {
+	id = newIreland.6 #social credit coup king
+	title = newIreland.6.t
+	desc = newIreland.6.d
+	picture = GFX_report_event_IRE_raymond_o_brien
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { #get out
+		name = newIreland.6.a		
+		add_stability = 0.1
+	}
+    option = { #oh no
+		name = newIreland.6.b
+		every_state = {
+            limit = {
+                is_core_of = CAN
+            }
+            IRE = { 
+                add_state_core = PREV 
+            }
+        }
+        create_wargoal = {
+            type = annex_everything
+            target = CAN
+        }
+        every_state = {
+            limit = {
+                is_core_of = ENG
+            }
+            IRE = { 
+                add_state_core = PREV 
+            }
+        }
+        create_wargoal = {
+            type = annex_everything
+            target = ENG
+        }
+        every_state = {
+            limit = {
+                is_core_of = USA
+            }
+            IRE = { 
+                add_state_core = PREV 
+            }
+        }
+        create_wargoal = {
+            type = annex_everything
+            target = USA
+        }
+        every_state = {
+            limit = {
+                is_core_of = CSA
+            }
+            IRE = { 
+                add_state_core = PREV 
+            }
+        }
+        create_wargoal = {
+            type = annex_everything
+            target = CSA
+        }
+        every_state = {
+            limit = {
+                is_core_of = TEX
+            }
+            IRE = { 
+                add_state_core = PREV 
+            }
+        }
+        create_wargoal = {
+            type = annex_everything
+            target = TEX
+        }
+        every_state = {
+            limit = {
+                is_core_of = COR
+            }
+            IRE = { 
+                add_state_core = PREV 
+            }
+        }
+        create_wargoal = {
+            type = annex_everything
+            target = COR
+        }
+        every_state = {
+            limit = {
+                is_core_of = WCC
+            }
+            IRE = { 
+                add_state_core = PREV 
+            }
+        }
+        create_wargoal = {
+            type = annex_everything
+            target = WCC
+        }
+        every_state = {
+            limit = {
+                is_core_of = CAL
+            }
+            IRE = { 
+                add_state_core = PREV 
+            }
+        }
+        create_wargoal = {
+            type = annex_everything
+            target = CAL
+        }
+        every_state = {
+            limit = {
+                is_core_of = NYC
+            }
+			IRE = { 
+                add_state_core = PREV 
+            }
+        }
+        create_wargoal = {
+            type = annex_everything
+            target = NYC
+        }
+        every_state = {
+            limit = {
+                is_core_of = NEE
+            }
+            IRE = { 
+                add_state_core = PREV 
+            }
+        }
+        create_wargoal = {
+            type = annex_everything
+            target = NEE
+        }
+        every_state = {
+            limit = {
+                is_core_of = TXS
+            }
+            IRE = { 
+                add_state_core = PREV 
+            }
+        }
+        create_wargoal = {
+            type = annex_everything
+            target = TXS
+        }
+        every_state = {
+            limit = {
+                is_core_of = ALA
+            }
+            IRE = { 
+                add_state_core = PREV 
+            }
+        }
+        create_wargoal = {
+            type = annex_everything
+            target = ALA
+        }
+        every_state = {
+            limit = {
+                is_core_of = BBR
+            }
+            IRE = { 
+                add_state_core = PREV 
+            }
+        }
+        create_wargoal = {
+            type = annex_everything
+            target = BBR
+        }
+        every_state = {
+            limit = {
+                is_core_of = AST
+            }
+            IRE = { 
+                add_state_core = PREV 
+            }
+        }
+        create_wargoal = {
+            type = annex_everything
+            target = AST
+        }
+        every_state = {
+            limit = {
+                is_core_of = CAF
+            }
+            IRE = { 
+                add_state_core = PREV 
+            }
+        }
+        create_wargoal = {
+            type = annex_everything
+            target = CAF
+        }
+        set_cosmetic_tag = IRE_SOCCRED_anglo
+	}
+	option = { #election
+		name = newIreland.6.c	
+		add_stability = 0.1
+        country_event = newIreland.7
+	}
+}
+
+country_event = {
+	id = newIreland.7 #选举
+	title = newIreland.7.t
+	desc = newIreland.7.d
+	
+	is_triggered_only = yes
+	
+	option = { #totalist
+		name = newIreland.7.a
+		meta_effect = {
+			text = {
+				set_politics = {
+					ruling_party = radical_socialist
+					last_election = "[CURRENT_DATE]"
+					election_frequency = 48
+					elections_allowed = yes
+				}
+			}
+			CURRENT_DATE = "[?global.date.GetDateStringNoHour]"
+		}		
+		if = {
+			limit = {
+				has_country_leader = {
+					name = "莫德·贡娜"
+					ruling_only = yes
+				}
+			}
+			create_country_leader = {
+				name = "丹尼斯·爱尔兰"
+				picture = "gfx/leaders/IRE/Portrait_Ireland_Denis_Liddell_Ireland.png"
+				expire = "1.1.1"
+				traits = {
+					ENG_Humble_Protector_Trait
+				}
+				ideology = radsoc_social_credit_subtype
+			}						
+		}
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.1
+		}
+		custom_effect_tooltip = "选举将每四年举行一次！"
+		hidden_effect = {
+			if = {
+				limit = { 
+					NOT = {
+						has_country_flag = maud_democracy
+					}
+				}
+				set_country_flag = maud_democracy
+			}			
+			country_event = {
+				id = newIreland.7
+				days = 1460
+			}
+		}
+	}
+ 	option = { #totalist
+		name = newIreland.7.b
+		meta_effect = {
+			text = {
+				set_politics = {
+					ruling_party = totalist
+					last_election = "[CURRENT_DATE]"
+					election_frequency = 48
+					elections_allowed = yes
+				}
+			}
+			CURRENT_DATE = "[?global.date.GetDateStringNoHour]"
+		}		
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.1
+		}
+		custom_effect_tooltip = "选举将每四年举行一次！"
+		hidden_effect = {
+			if = {
+				limit = { 
+					NOT = {
+						has_country_flag = maud_democracy
+					}
+				}
+				set_country_flag = maud_democracy
+			}
+			country_event = {
+				id = newIreland.7
+				days = 1460
+			}
+		}
+	}   
+	option = { #socdem
+		name = newIreland.7.c
+		meta_effect = {
+			text = {
+				set_politics = {
+					ruling_party = social_democrat
+					last_election = "[CURRENT_DATE]"
+					election_frequency = 48
+					elections_allowed = yes
+				}
+			}
+			CURRENT_DATE = "[?global.date.GetDateStringNoHour]"
+		}
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.1
+		}
+		custom_effect_tooltip = "选举将每四年举行一次！"
+		hidden_effect = {
+			if = {
+				limit = { 
+					NOT = {
+						has_country_flag = maud_democracy
+					}
+				}
+				set_country_flag = maud_democracy
+			}
+			country_event = {
+				id = newIreland.7
+				days = 1460
+			}
+		}
+	}
+
+	option = { #yeats
+		name = newIreland.7.e
+		trigger = {
+			NOT = {
+				has_country_flag = maud_democracy
+			}
+		}
+		set_politics = { ruling_party = paternal_autocrat } 
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.3
+		}
+		set_party_name = {
+			name = "叶芝党羽"
+			long_name = "叶芝党羽"
+			ideology = paternal_autocrat
+		}		
+		create_country_leader = {
+			name = "威廉·巴特勒·叶芝"
+			picture = "gfx/leaders/IRE/Portrait_Ireland_William_Butler_Yeats.png"
+			expire = "1.1.1"
+			traits = {
+				esoterism_supporter
+			}
+			ideology = paternal_autocrat_subtype
+		}
+		hidden_effect = {
+			country_event = {
+				id = newIreland.8
+				days = 3
+			}
+		}
+	}    
+}
+
+country_event = {
+	id = newIreland.8 #叶芝的道路
+	title = newIreland.8.t
+	desc = newIreland.8.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { 
+		name = newIreland.8.a
+		set_cosmetic_tag = IRE_Hibernia_sun
+		create_country_leader = {
+			name = "威廉·巴特勒·叶芝"
+			picture = "gfx/leaders/IRE/Portrait_Ireland_William_Butler_Yeats2.png"
+			expire = "1.1.1"
+			traits = {
+				esoterism_supporter
+			}
+			ideology = occultism_subtype
+		}		
+		set_country_leader_ideology = pataut_occultism_subtype
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.2
+		}
+		add_popularity = {
+			ideology = national_populist
+			popularity = 0.2
+		}		
+		set_party_name = {
+			name = "都柏林赫尔墨斯兄弟会"
+			long_name = "都柏林赫尔墨斯兄弟会"
+			ideology = paternal_autocrat
+		}
+		set_party_name = {
+			name = "都柏林赫尔墨斯兄弟会"
+			long_name = "都柏林赫尔墨斯兄弟会"
+			ideology = national_populist
+		}		
+	}
+    option = { 
+		name = newIreland.8.b
+		set_cosmetic_tag = IRE_Hibernia_sun
+		set_politics = { ruling_party = totalist } 
+		create_country_leader = {
+			name = "威廉·巴特勒·叶芝"
+			picture = "gfx/leaders/IRE/Portrait_Ireland_William_Butler_Yeats.png"
+			expire = "1.1.1"
+			traits = {
+				esoterism_supporter
+			}
+			ideology = left_occultism_subtype
+		}				
+		create_country_leader = {
+			name = "威廉·巴特勒·叶芝"
+			picture = "gfx/leaders/IRE/Portrait_Ireland_William_Butler_Yeats.png"
+			expire = "1.1.1"
+			traits = {
+				esoterism_supporter
+			}
+			ideology = pataut_occultism_subtype
+		}		
+		create_country_leader = {
+			name = "威廉·巴特勒·叶芝"
+			picture = "gfx/leaders/IRE/Portrait_Ireland_William_Butler_Yeats2.png"
+			expire = "1.1.1"
+			traits = {
+				esoterism_supporter
+			}
+			ideology = occultism_subtype
+		}
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.5
+		}			
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.2
+		}
+		add_popularity = {
+			ideology = national_populist
+			popularity = 0.2
+		}
+		set_party_name = {
+			name = "都柏林赫尔墨斯兄弟会"
+			long_name = "都柏林赫尔墨斯兄弟会"
+			ideology = totalist
+		}				
+		set_party_name = {
+			name = "都柏林赫尔墨斯兄弟会"
+			long_name = "都柏林赫尔墨斯兄弟会"
+			ideology = paternal_autocrat
+		}
+		set_party_name = {
+			name = "都柏林赫尔墨斯兄弟会"
+			long_name = "都柏林赫尔墨斯兄弟会"
+			ideology = national_populist
+		}		
+	}
+}

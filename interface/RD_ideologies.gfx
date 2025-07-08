@@ -1,14 +1,5 @@
 spriteTypes = {	
 
-	SpriteType = {
-	name = "GFX_ideology_socialism_with_chinese_characteristics_group"
-	texturefile = "gfx/interface/ideologies/socialism_with_chinese_characteristics_group.png"
-	}
-	
-	SpriteType = {
-	name = "GFX_ideology_mao_zedong_thought_subtype"
-	texturefile = "gfx/interface/ideologies/subideologies/mao_zedong_thought.png"
-	}
 
 	SpriteType = {
 	name = "GFX_ideology_lu_xun_thought_subtype"
@@ -34,15 +25,14 @@ spriteTypes = {
 	name = "GFX_ideology_tot_anti_japaneseism_subtype"
 	texturefile = "gfx/interface/ideologies/subideologies/anti_japaneseism.png"
 	}
+	SpriteType = {
+	name = "GFX_ideology_natpop_anti_japaneseism_subtype"
+	texturefile = "gfx/interface/ideologies/subideologies/natpop_anti_japaneseism.png"
+	}	
 	
 	SpriteType = {
 	name = "GFX_ideology_national_marxist_subtype"
 	texturefile = "gfx/interface/ideologies/subideologies/national_marxist_group.png"
-	}
-	
-	SpriteType = {
-	name = "GFX_ideology_authdem_anarchism_subtype"
-	texturefile = "gfx/interface/ideologies/subideologies/anarcho_individualism.png"
 	}
 
 	SpriteType = {
@@ -65,17 +55,7 @@ spriteTypes = {
 	name = "GFX_ideology_natpop_turanism_subtype"
 	texturefile = "gfx/interface/ideologies/subideologies/natpop_turanism.png"
 	}
-	
-	SpriteType = {
-	name = "GFX_ideology_tot_social_humanism_subtype"
-	texturefile = "gfx/interface/ideologies/subideologies/tot_social_humanism.png"
-	}
-	
-	SpriteType = {
-	name = "GFX_ideology_tot_datong_shu_subtype"
-	texturefile = "gfx/interface/ideologies/subideologies/radsoc_datong_shu_thought.png"
-	}
-	
+
 	SpriteType = {
 	name = "GFX_ideology_radsoc_datong_shu_subtype"
 	texturefile = "gfx/interface/ideologies/subideologies/radsoc_datong_shu_thought.png"

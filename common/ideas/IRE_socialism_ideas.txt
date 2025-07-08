@@ -1,0 +1,749 @@
+	# Socialists
+	 	# Shared National Spirits
+		# Saor Éire
+ 		# Irish Syndicalist Party
+ 		# Progressive Labour Party
+ideas = {
+	###########################
+	# Politics - Socialists   #
+	###########################
+	# Shared National Spirits #
+	###########################
+	country = {
+		IRE_new_republicanism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_defence_base" }
+			picture = IRE_irish_republicanism
+			modifier = {
+				political_power_gain = 0.25
+				stability_factor = 0.1
+				war_stability_factor = 0.2
+				war_support_factor = 0.1
+				party_popularity_stability_factor = 0.2
+				radical_socialist_drift = 0.02
+			}
+		}
+		IRE_catholic_socialism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_defence_base" }
+			picture = IRE_christian_ireland_idea
+			modifier = {
+				political_power_cost = -0.15
+				research_speed_factor = 0.15
+			}
+		}
+		IRE_soccred_economy = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_defence_base" }
+			picture = CAN_soccred_idea
+			modifier = {
+				global_building_slots_factor = 0.2
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.15
+
+			}
+		}
+		IRE_soccred_economy2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_defence_base" }
+			picture = CAN_soccred_idea
+			modifier = {
+				global_building_slots_factor = 0.2
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.15
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+			
+			}
+		}
+		IRE_soccred_economy3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_defence_base" }
+			picture = CAN_soccred_idea
+			modifier = {
+				global_building_slots_factor = 0.2
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.15
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
+				consumer_goods_factor = -0.15
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+			}
+		}
+		IRE_daughter_of_ireland = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_defence_base" }
+			picture = UoB_women_soldiers
+			modifier = {
+				conscription = 0.01
+				conscription_factor = 0.15
+				attrition = -0.15
+			}
+			
+		}
+		IRE_anti_anglos = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_defence_base" }
+			picture = IRE_english_crackdown_idea
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+
+			}
+			targeted_modifier = {
+				tag = CAN
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		
+		}
+		IRE_soccred_justice = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_defence_base" }
+			picture = republican_justice_2
+			modifier = {
+				political_power_factor = 0.15
+				radical_socialist_drift = 0.05
+				totalist_drift = 0.02
+				social_democrat_drift = 0.01
+				local_resources_factor = 0.1
+				mobilization_speed = 0.15
+				compliance_growth = 0.1
+				resistance_target = -0.1
+			}
+		}
+		IRE_economic_democracy = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_defence_base" }
+			picture = TUS_recovering_syndies_economy
+			modifier = {
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
+				trade_opinion_factor = 0.2
+			}
+		}
+		IRE_ENG_sabdorge = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_defence_base" }
+			picture = IRE_defence_starry_plough
+			modifier = {
+				army_attack_factor = -0.2
+				army_defence_factor = -0.2
+				supply_consumption_factor = 0.1
+				army_org_factor = -0.25
+				army_morale_factor = -0.25
+				army_speed_factor = -0.1
+			}
+		}
+		IRE_irish_hegemony = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_defence_base" }
+			picture = IRE_defence_starry_plough
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				supply_consumption_factor = -0.1
+				army_speed_factor = 0.1
+			}
+		}
+		IRE_volunteers = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_defence_base" }
+			picture = advisors_ireland
+			modifier = {
+				send_volunteer_size = 4
+				send_volunteer_divisions_required = -0.5
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+			}
+		}
+		IRE_defence_base = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_defence_base" }
+			name = IRE_defence_idea
+			picture = IRE_defence
+			modifier = {
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				defensive_war_stability_factor = 0.1
+				ai_focus_aggressive_factor = -0.5
+			}
+		}
+		IRE_german_eco_dominance_base = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_german_eco_dominance_base" }
+			name = IRE_german_eco_dominance_light
+			picture = LIB_ger_bailout
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+				consumer_goods_factor = 0.04
+				political_power_gain = -0.10
+			}
+		}
+        The_troubles_caused_by_the_uprising_sailors = {
+            removal_cost = 0
+            picture = GFX_idea_The_troubles_caused_by_the_uprising_sailors
+            modifier = {
+	             stability_weekly = -0.01
+                  navy_org = -30
+                  navy_screen_attack_factor = -0.1
+	             navy_screen_defence_factor = -0.1
+	             navy_capital_ship_attack_factor = -0.2
+               }
+        }		
+		IRE_church_base_idea = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea IRE_church_base_idea"
+				set_variable = { IRE_church_idea = token:IRE_church_base_idea }
+			}
+			name = IRE_church_base_idea
+			picture = SHX_christian_statism
+			modifier = {
+				stability_factor = 0.02
+				political_power_factor = -0.15
+			}
+		}
+		IRE_ulster_privileges_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_ulster_privileges_idea" }
+			name = IRE_ulster_privileges
+			picture = IRE_loyalist_assertiveness
+		}
+		IRE_disproportionate_loyalist_representation = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_disproportionate_loyalist_representation" }
+			picture = generic_constitutional_guarantees
+			modifier = {
+				political_power_gain = 0.05
+				stability_factor = -0.05
+			}
+		}
+		IRE_low_legitimacy = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_low_legitimacy" }
+			picture = tur_etatism_bonus
+			modifier = {
+				stability_factor = -0.15
+			}
+		}
+		IRE_anti_socialist_agitation_0 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_anti_socialist_agitation_0" }
+			name = IRE_anti_socialist_agitation
+			picture = chi_war_of_resistance
+			modifier = {
+				stability_factor = -0.8
+				command_power_gain = -0.8
+			}
+		}
+		IRE_anti_socialist_agitation_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_anti_socialist_agitation_1" }
+			name = IRE_anti_socialist_agitation
+			picture = chi_war_of_resistance
+			modifier = {
+				stability_factor = -0.7
+				command_power_gain = -0.7
+			}
+		}
+		IRE_anti_socialist_agitation_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_anti_socialist_agitation_2" }
+			name = IRE_anti_socialist_agitation
+			picture = chi_war_of_resistance
+			modifier = {
+				stability_factor = -0.6
+				command_power_gain = -0.6
+			}
+		}
+		IRE_anti_socialist_agitation_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_anti_socialist_agitation_3" }
+			name = IRE_anti_socialist_agitation
+			picture = chi_war_of_resistance2
+			modifier = {
+				stability_factor = -0.5
+				command_power_gain = -0.5
+			}
+		}
+		IRE_anti_socialist_agitation_4 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_anti_socialist_agitation_4" }
+			name = IRE_anti_socialist_agitation
+			picture = chi_war_of_resistance2
+			modifier = {
+				stability_factor = -0.4
+				command_power_gain = -0.4
+			}
+		}
+		IRE_anti_socialist_agitation_5 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_anti_socialist_agitation_5" }
+			name = IRE_anti_socialist_agitation
+			picture = chi_war_of_resistance2
+			modifier = {
+				stability_factor = -0.3
+				command_power_gain = -0.3
+			}
+		}
+		IRE_anti_socialist_agitation_6 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_anti_socialist_agitation_6" }
+			picture = chi_war_of_resistance3
+			on_add = {
+				if = {
+					limit = { has_country_flag = IRE_govt_se }
+					hidden_effect = {
+						country_event = ireland.3550
+					}
+				}
+			}
+			modifier = {
+				stability_factor = -0.2
+				command_power_gain = -0.2
+			}
+			on_remove = {
+				hidden_effect = {
+					if = {
+						limit = { has_country_flag = IRE_govt_se }
+						if = {
+							limit = { check_variable = { IRE_soc_tyranny > 1 } }
+							set_country_flag = IRE_syndies_chosen
+						}
+						else = { set_country_flag = IRE_totalists_chosen }
+					}
+					country_event = ireland.3600
+				}
+			}
+		}
+		IRE_consolidate_power = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_consolidate_power" }
+			picture = TUS_syndie_economy
+			modifier = {
+				political_power_factor = 0.2
+			}
+		}
+		IRE_needs_of_many_idea_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_needs_of_many_idea_1" }
+			picture = FIN_socialist_welfare
+			name = IRE_needs_of_many_idea
+			modifier = {
+				monthly_population = 0.2
+				political_power_gain = -0.2
+				stability_weekly = 0.003
+			}
+			on_remove = {
+				log = "[GetDateText]: [Root.GetName]: remove idea IRE_needs_of_many_idea_1"
+				add_timed_idea = {
+					idea = IRE_needs_of_many_idea_2
+					days = 365
+				}
+			}
+		}
+		IRE_needs_of_many_idea_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_needs_of_many_idea_2" }
+			picture = FIN_socialist_welfare
+			name = IRE_needs_of_many_idea
+			modifier = {
+				monthly_population = 0.2
+				political_power_gain = -0.2
+				stability_weekly = 0.001
+			}
+			on_remove = {
+				log = "[GetDateText]: [Root.GetName]: remove idea IRE_needs_of_many_idea_3"
+				add_ideas = IRE_needs_of_many_idea_3
+			}
+		}
+		IRE_needs_of_many_idea_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_needs_of_many_idea_3" }
+			picture = FIN_socialist_welfare
+			name = IRE_needs_of_many_idea
+			modifier = {
+				monthly_population = 0.2
+				political_power_gain = -0.2
+				stability_factor = 0.05
+			}
+		}
+
+	##############################
+	# Saor Éire National Spirits #
+	##############################
+
+		IRE_church_se_idea = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea IRE_church_se_idea"
+				set_variable = { IRE_church_idea = token:IRE_church_se_idea }
+			}
+			picture = IRE_secular
+			modifier = {
+				stability_factor = -0.1
+				army_morale_factor = 0.1
+				army_org_factor = 0.1
+			}
+		}
+		IRE_defence_totalist = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_defence_totalist" }
+			picture = IRE_defence
+			modifier = {
+				stability_factor = -0.1
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.15
+				defensive_war_stability_factor = 0.1
+				army_attack_factor = 0.05
+			}
+		}
+		IRE_defence_totalist_starry_plough = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_defence_totalist_starry_plough" }
+			picture = IRE_defence_starry_plough
+			name = IRE_defence_totalist
+			modifier = {
+				stability_factor = -0.1
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.15
+				defensive_war_stability_factor = 0.1
+				army_attack_factor = 0.05
+			}
+		}
+		IRE_defence_peoples_totalist = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_defence_peoples_totalist" }
+			picture = IRE_defence
+			name = IRE_defence_totalist
+			modifier = {
+				stability_factor = -0.1
+				army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.2
+				defensive_war_stability_factor = 0.1
+				army_attack_factor = 0.05
+			}
+		}
+		IRE_defence_peoples_totalist_starry_plough = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_defence_peoples_totalist_starry_plough" }
+			picture = IRE_defence_starry_plough
+			name = IRE_defence_totalist
+			modifier = {
+				stability_factor = -0.1
+				army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.2
+				defensive_war_stability_factor = 0.1
+				army_attack_factor = 0.05
+			}
+		}
+		IRE_land_for_people_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_land_for_people_idea" }
+			picture = POL_looming_peasants_strike
+			modifier = {
+				stability_factor = -0.05
+				global_building_slots_factor = 0.1
+			}
+		}
+		IRE_agrarian_party_state = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_agrarian_party_state" }
+			picture = generic_totalist_revolution
+			modifier = {
+				totalist_drift = 0.05
+				stability_factor = 0.1
+			}
+		}
+		IRE_trade_union_centralisation = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_trade_union_centralisation" }
+			picture = ICE_general_strike
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+			}
+		}
+		IRE_reorganised_ICA = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_reorganised_ICA" }
+			picture = FIN_socialist_welfare
+			modifier = {
+				stability_factor = -0.05
+				conscription = 0.02
+				command_power_gain = 0.25
+				experience_gain_army = 0.05
+			}
+		}
+		IRE_red_trinity_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_agrarian_party_state" }
+			name = IRE_red_trinity_idea
+			picture = SPR_international_brigades
+			modifier = {
+				totalist_drift = 0.1
+				stability_factor = 0.1
+				political_power_factor = 0.15
+				conscription = 0.04
+				command_power_gain = 0.5
+				experience_gain_army = 0.1
+				production_speed_arms_factory_factor = 0.2
+			}
+		}
+		IRE_red_trinity_idea_old_oppressor = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_red_trinity_idea_old_oppressor" }
+			name = IRE_red_trinity_idea
+			picture = SPR_international_brigades
+			modifier = {
+				totalist_drift = 0.1
+				stability_factor = 0.1
+				political_power_factor = 0.15
+				conscription = 0.04
+				command_power_gain = 0.5
+				experience_gain_army = 0.1
+				production_speed_arms_factory_factor = 0.2
+				conscription_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = ENT
+				attack_bonus_against = 0.15
+			}
+		}
+		IRE_red_trinity_idea_new_foe = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_red_trinity_idea_new_foe" }
+			name = IRE_red_trinity_idea
+			picture = SPR_international_brigades
+			modifier = {
+				totalist_drift = 0.1
+				stability_factor = 0.1
+				political_power_factor = 0.15
+				conscription = 0.04
+				command_power_gain = 0.5
+				experience_gain_army = 0.1
+				production_speed_arms_factory_factor = 0.2
+				conscription_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = 0.15
+			}
+		}
+
+	############################################
+	# Irish Syndicalist Party National Spirits #
+	############################################
+
+		IRE_church_isp_idea = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea IRE_church_isp_idea"
+				set_variable = { IRE_church_idea = token:IRE_church_isp_idea }
+			}
+			picture = SHX_christian_statism
+			modifier = {
+				political_power_factor = -0.05
+				stability_factor = 0.1
+			}
+		}
+		IRE_breakneck_industrialisation_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_breakneck_industrialisation_idea" }
+			picture = NORDIC_industry_communist
+			modifier = {
+				cic_construction_boost = 0.1
+				conversion_cost_civ_to_mil_factor = -0.3
+				industrial_capacity_factory = 0.1
+			}
+		}
+		IRE_urbanisation_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_urbanisation_idea" }
+			picture = ast_all_in
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				line_change_production_efficiency_factor = 0.05
+			}
+		}
+		IRE_connolly_legacy_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_connolly_legacy_idea" }
+			picture = generic_syndicalist_manpower
+			modifier = {
+				conscription = 0.01
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		IRE_ituc_primacy = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_ituc_primacy" }
+			picture = generic_syndicalist_worker
+			modifier = {
+				stability_factor = 0.15
+				political_power_gain = 0.15
+				production_factory_max_efficiency_factor = 0.1
+				consumer_goods_factor = 0.1
+			}
+		}
+		IRE_syndicalist_final_idea_ent = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_syndicalist_final_idea_ent" }
+			name = IRE_syndicalist_final_idea
+			picture = IRE_ISP_idea
+			modifier = {
+				stability_factor = 0.15
+				political_power_gain = 0.15
+				conscription = 0.01
+				production_factory_max_efficiency_factor = 0.2
+				consumer_goods_factor = 0.05
+				conscription_factor = 0.1
+				monthly_population = -0.1
+				conversion_cost_civ_to_mil_factor = -0.3
+				industrial_capacity_factory = 0.2
+				production_speed_buildings_factor = 0.1
+				line_change_production_efficiency_factor = 0.05
+				cic_construction_boost = 0.1
+			}
+			targeted_modifier = {
+				tag = ENT
+				attack_bonus_against = 0.15
+			}
+		}
+		IRE_syndicalist_final_idea_ger = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_syndicalist_final_idea_ger" }
+			name = IRE_syndicalist_final_idea
+			picture = IRE_ISP_idea
+			modifier = {
+				stability_factor = 0.15
+				political_power_gain = 0.15
+				conscription = 0.01
+				production_factory_max_efficiency_factor = 0.2
+				consumer_goods_factor = 0.05
+				conscription_factor = 0.1
+				monthly_population = -0.1
+				conversion_cost_civ_to_mil_factor = -0.3
+				industrial_capacity_factory = 0.2
+				production_speed_buildings_factor = 0.1
+				line_change_production_efficiency_factor = 0.05
+				cic_construction_boost = 0.1
+			}
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = 0.15
+			}
+		}
+		IRE_old_oppressor_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_old_oppressor_idea" }
+			picture = FIN_british_threat
+			modifier = {
+				conscription_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = ENT
+				attack_bonus_against = 0.15
+			}
+		}
+		IRE_new_foe_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_new_foe_idea" }
+			picture = attack_idea_icon_GER
+			modifier = {
+				conscription_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = 0.15
+			}
+		}
+		IRE_slaves_of_slaves_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_slaves_of_slaves_idea" }
+			picture = UoB_women_soldiers
+			modifier = {
+				monthly_population = -0.1
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.1
+			}
+		}
+
+	#############################################
+	# Progressive Labour Party National Spirits #
+	#############################################
+
+		IRE_church_plp_idea = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea IRE_church_plp_idea"
+				set_variable = { IRE_church_idea = token:IRE_church_plp_idea }
+			}
+			picture = IRE_catholic
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = 0.05
+			}
+		}
+		IRE_meitheal = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_meitheal" }
+			picture = por_iberian_workers_united
+			modifier = {
+				global_building_slots_factor = 0.2
+				consumer_goods_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				line_change_production_efficiency_factor = 0.05
+			}
+		}
+		IRE_workplace_democracy_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_meitheal" }
+			picture = HOL_workplace_democracy
+			modifier = {
+				political_power_gain = -0.1
+				production_factory_start_efficiency_factor = 0.05
+				stability_factor = 0.1
+			}
+		}
+		IRE_plp_old_guard_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_plp_old_guard_idea" }
+			name = IRE_lab_plp_idea
+			picture = IRE_PLP_idea
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+				research_speed_factor = 0.1
+				conscription = 0.0075
+				political_power_gain = 0.2
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		IRE_plp_final_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_plp_final_idea" }
+			picture = IRE_PLP_idea
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.2
+				research_speed_factor = 0.1
+				conscription = 0.0075
+				political_power_gain = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_start_efficiency_factor = 0.05
+				stability_factor = 0.1
+				global_building_slots_factor = 0.2
+				consumer_goods_factor = 0.1
+				line_change_production_efficiency_factor = 0.05
+			}
+		}
+		IRE_defence_radsoc = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_defence_radsoc" }
+			name = IRE_defence_idea
+			picture = IRE_defence
+			modifier = {
+				political_power_gain = -0.1
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.15
+				conscription_factor = 0.15
+				defensive_war_stability_factor = 0.1
+				ai_focus_aggressive_factor = -0.5
+			}
+		}
+		IRE_defence_radsoc_starry_plough = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_defence_radsoc_starry_plough" }
+			name = IRE_defence_idea
+			picture = IRE_defence_starry_plough
+			modifier = {
+				political_power_gain = -0.1
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.15
+				conscription_factor = 0.15
+				defensive_war_stability_factor = 0.1
+				ai_focus_aggressive_factor = -0.5
+			}
+		}
+		IRE_defence_peoples_radsoc = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_defence_peoples_radsoc" }
+			name = IRE_defence_idea
+			picture = IRE_defence
+			modifier = {
+				political_power_gain = -0.1
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.2
+				conscription_factor = 0.15
+				defensive_war_stability_factor = 0.1
+				ai_focus_aggressive_factor = -0.5
+			}
+		}
+		IRE_defence_peoples_radsoc_starry_plough = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_defence_peoples_radsoc_starry_plough" }
+			name = IRE_defence_idea
+			picture = IRE_defence_starry_plough
+			modifier = {
+				political_power_gain = -0.1
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.2
+				conscription_factor = 0.15
+				defensive_war_stability_factor = 0.1
+				ai_focus_aggressive_factor = -0.5
+			}
+		}
+	}	
+}
+

@@ -957,3 +957,235 @@ COF_bucard_rouge_charlemagne_plan = {
 		}
 	}
 }
+
+FRA_nation_city_collective_decision = {
+	FRA_Plan_Voisin_decision = {
+		icon = factories
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 1900
+		available = {
+		}
+		visible = {
+		}
+		fire_only_once = yes
+		days_remove = 1825
+		remove_effect = {
+			add_offsite_building = { type = industrial_complex level = 30 }
+			add_offsite_building = { type = arms_factory level = 30 }			
+			16 = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+				}
+				add_equipment_to_stockpile = {
+					type = train_equipment
+					amount = 2000
+				}
+				add_dynamic_modifier = { modifier = Paris_Plan_Voisin }					
+			}
+		}
+	}
+	FRA_Claude_et_Duval_decision = {
+		icon = factories
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 1000
+		available = {
+		}
+		visible = {
+		}
+		fire_only_once = no
+		days_remove = 365
+		remove_effect = {
+			add_offsite_building = { type = industrial_complex level = 10 }
+			add_offsite_building = { type = arms_factory level = 10 }
+			random_owned_state = {
+				limit = { arms_factory > 0 }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build=yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build=yes
+				}				
+			}
+		}
+	}
+	FRA_Unite_d_Habitation_decision = {
+		icon = factories
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 1000
+		available = {
+		}
+		visible = {
+		}
+		fire_only_once = no
+		days_remove = 365
+		remove_effect = {
+			every_core_state = {
+				display_individual_scopes = yes
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					FRA_is_autoroute_state = yes
+					NOT = { state = 16 }
+				}
+				increase_state_category_by_one_level = yes
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}				
+			}			
+		}
+	}
+	FRA_Ville_Radieuse_decision = {
+		icon = factories
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 1000
+		available = {
+		}
+		visible = {
+		}
+		fire_only_once = no
+		days_remove = 365
+		remove_effect = {
+			random_state = {
+				limit = {
+					controller = { tag = ROOT }
+					state_population > 500000
+				}
+				add_dynamic_modifier = { modifier = city_of_light }
+			}
+		}
+	}
+	FRA_Headquarters_decision = {
+		icon = factories
+		ai_will_do = {
+			factor = 100
+		}
+		cost =  1900
+		available = {
+			OR = {
+				has_idea = FRA_pure_race2
+				has_idea = FRA_geometry_hyigene_purity
+				has_idea = FRA_order_strong_ration
+			}
+		}
+		visible = {
+		}
+		fire_only_once = yes
+		days_remove = 365
+		remove_effect = {
+			set_global_flag = Purism_Headquarters_Rising
+			24 = {
+				add_dynamic_modifier = { modifier = FRA_purism_headquarters }
+				add_extra_state_shared_building_slots = 5
+				set_victory_points = {
+					province = 454
+					value = 20
+				}
+			}
+		}
+	}
+	FRA_Chandigarh_decision = {
+		icon = factories
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 1900
+		available = {
+			country_exists = BHC
+			440 = { is_owned_by = BHC }
+			NOT = {
+				country_exists = DEH
+			}
+		}
+		visible = { 
+			has_global_flag = Purism_Headquarters_Rising
+		}
+		fire_only_once = yes
+		days_remove = 1825
+		complete_effect = {
+			hidden_effect  = {
+				country_event = {
+					id = COF_tech.79
+					days = 15
+				}				
+			}
+		}		
+		remove_effect = {
+			set_province_name = { id = 10729 name = "昌迪加尔"}	
+			set_victory_points = {
+				province = 10729
+				value = 30
+			}
+			BHC = {
+				add_stability = 0.2
+				add_war_support = 0.2
+				add_command_power = 50
+				add_political_power = 200			
+				set_capital = {
+					state = 440
+				}
+				add_offsite_building = { type = industrial_complex level = 100 }
+				add_offsite_building = { type = arms_factory level = 100 }	
+			}
+			440 = { 
+				add_dynamic_modifier = { modifier = FRA_city_of_lights } 
+				increase_state_category_by_two_levels = yes
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}				
+			}
+			add_resource = {
+				type = oil
+				amount = 2
+				state = 440
+			}
+			add_resource = {
+				type = steel
+				amount = 23
+				state = 440
+			}
+			add_resource = {
+				type = steel
+				amount = 17
+				state = 440
+			}			
+		}
+	}
+	FRA_Zhongshan_Shi_decision = {
+		icon = factories
+		ai_will_do = {
+			factor = 100
+		}
+		cost =  1000
+		available = {
+			always = no
+		}
+		visible = {
+			has_global_flag = Purism_Headquarters_Rising
+		}
+		fire_only_once = yes
+		days_remove = 1
+		remove_effect = {
+		}
+	}							
+}

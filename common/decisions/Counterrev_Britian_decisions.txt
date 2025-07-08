@@ -14840,7 +14840,7 @@ BRG_pick_a_king = {
 				name = "本居小鈴"
 				picture = "gfx/leaders/KOR/Portrait_KXX_Motoori_Kosuzu.png"
 				expire = "1965.1.1"
-				ideology = motoori_thought_subtype
+				ideology = doroism_subtype
 				traits = { BRG_the_New_King }
 			}
 			create_country_leader = {

@@ -1,6 +1,30 @@
 spriteTypes = {
 	
 	### SubIdeologies ###
+	SpriteType = {
+		name = "GFX_ideology_tot_marxist_humanism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/tot_marxist_humanism_group.png"
+	}
+	SpriteType = {
+		name = "GFX_ideology_marxist_humanism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/marxist_humanism_group.png"
+	}	
+	SpriteType = {
+		name = "GFX_ideology_mao_zedong_thought_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/mao_zedong_thought.png"
+	}
+	SpriteType = {
+		name = "GFX_ideology_radsoc_mao_zedong_thought_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/radsoc_mao_zedong_thought.png"
+	}	
+	SpriteType = {
+		name = "GFX_ideology_tot_socialism_with_chinese_characteristics_subtype"
+		texturefile = "gfx/interface/ideologies/tot_socialism_with_chinese_characteristics_group.png"
+	}
+	SpriteType = {
+		name = "GFX_ideology_socialism_with_chinese_characteristics_subtype"
+		texturefile = "gfx/interface/ideologies/socialism_with_chinese_characteristics_group.png"
+	}	
 	spriteType = {
 		name = "GFX_ideology_germanic_socialism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/germanic_socialism_group.png"
@@ -38,8 +62,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideologies/subideologies/tot_maurrasism.png"
 	}
 	spriteType = {
-		name = "GFX_ideology_natpop_sorelism_subtype"
-		texturefile = "gfx/interface/ideologies/subideologies/natpop_sorelism.png"
+		name = "GFX_ideology_faisceau_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/faisceau_group.png"
 	}
 	spriteType = {
 		name = "GFX_ideology_radsoc_possibilism_subtype"
@@ -71,7 +95,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_ideology_socdem_united_front"
-		texturefile = "gfx/interface/ideologies/subideologies/radsoc_einheitsfront.png"
+		texturefile = "gfx/interface/ideologies/subideologies/socdem_einheitsfront.png"
 	}
 	spriteType = {
 		name = "GFX_ideology_socdem_algerian_socialism_subtype"
@@ -114,12 +138,20 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideologies/subideologies/ultranationalism.png"
 	}
 	spriteType = {
+		name = "GFX_ideology_social_gaullism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/social_gaullism_group.png"
+	}	
+	spriteType = {
 		name = "GFX_ideology_left_occultism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/left_occultism.png"
 	}
 	spriteType = {
 		name = "GFX_ideology_radsoc_left_occultism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/radsoc_left_occultism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_socdem_left_occultism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/socdem_left_occultism.png"
 	}	
 	spriteType = {
 		name = "GFX_ideology_tot_pan_celticism_subtype"
@@ -149,6 +181,34 @@ spriteTypes = {
 		name = "GFX_ideology_monarcho_syndicalism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/monarcho_syndicalism_subtype.png"
 	}
+	spriteType = {
+		name = "GFX_ideology_transhumanism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/transhumanism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_tot_left_conservatism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/tot_left_conservatism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_left_conservatism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/left_conservatism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_syn_left_conservatism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/left_conservatism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_bureaucratic_socialism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/bureaucratic_socialism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_radsoc_bureaucratic_socialism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/radsoc_bureaucratic_socialism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_syn_bureaucratic_socialism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/radsoc_bureaucratic_socialism_group.png"
+	}		
 	spriteType = {
 		name = "GFX_ideology_national_mysticism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/national_mysticism_group.png"
@@ -234,10 +294,6 @@ spriteTypes = {
 		name = "GFX_ideology_xue_tong_lun_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/xue_tong_lun.png"
 	}
-	spriteType = {
-		name = "GFX_ideology_dengism_subtype"
-		texturefile = "gfx/interface/ideologies/subideologies/dengism.png"
-	}
 	##制作组彩蛋
 	spriteType = {
 		name = "GFX_ideology_ikemenjoshism_subtype"
@@ -248,10 +304,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideologies/subideologies/soclib_ikemenjoshism.png"
 	}
 	spriteType = {
-		name = "GFX_ideology_motoori_thought_subtype"
-		texturefile = "gfx/interface/ideologies/subideologies/motoori_thought.png"
-	}
-	spriteType = {
 		name = "GFX_ideology_doroism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/doroism.png"
 	}
@@ -259,6 +311,10 @@ spriteTypes = {
 		name = "GFX_ideology_bangdreamism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/bangdreamism.png"
 	}
+	spriteType = {
+		name = "GFX_ideology_hegemony_gihrenism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/hegemony_gihrenism.png"
+	}			
 	spriteType = {
 		name = "GFX_ideology_radsoc_byronism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/radsoc_byronism.png"
@@ -302,6 +358,34 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_ideology_poeticized_liberalism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/poeticized_liberalism_group.png"
+	}	
+	spriteType = {
+		name = "GFX_ideology_radsoc_hellenism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/radsoc_hellenism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_socdem_hellenism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/socdem_hellenism_group.png"
+	}		
+	spriteType = {
+		name = "GFX_ideology_hellenism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/hellenism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_pataut_ethnic_hellenism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/pataut_ethnic_hellenism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_occult_ethnic_hellenism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/occult_ethnic_hellenism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_ethnic_hellenism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/ethnic_hellenism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_anarcho_individualism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/anarcho_individualism_group.png"
 	}		
 	#赤潮
 	spriteType = {
@@ -374,6 +458,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideologies/subideologies/regenerationism.png"
 	}
 	spriteType = {
+		name = "GFX_ideology_tot_regenerationism"
+		texturefile = "gfx/interface/ideologies/subideologies/tot_regenerationism.png"
+	}	
+	spriteType = {
 		name = "GFX_ideology_national_programmatism"
 		texturefile = "gfx/interface/ideologies/subideologies/national_programmatism.png"
 	}
@@ -385,6 +473,14 @@ spriteTypes = {
 		name = "GFX_ideology_transhumanism"
 		texturefile = "gfx/interface/ideologies/subideologies/transhumanism_group.png"
 	}
+	spriteType = {
+		name = "GFX_ideology_tot_dystopian_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/tot_dystopian_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_natpop_dystopian_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/natpop_dystopian_group.png"
+	}		
 	#欧罗巴
 	spriteType = {
 		name = "GFX_ideology_tot_francism_subtype"
@@ -406,5 +502,9 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_ideology_ingsoc_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/ingsoc.png"
-	}			
+	}
+	spriteType = {
+		name = "GFX_ideology_left_militarism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/left_militarism_group.png"
+	}		
 }

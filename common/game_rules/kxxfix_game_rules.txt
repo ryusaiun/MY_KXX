@@ -206,4 +206,3 @@ CZE_gottwald_rules= {
 		allow_achievements = yes
 	}
 }
-

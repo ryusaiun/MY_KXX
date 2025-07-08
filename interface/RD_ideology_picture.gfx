@@ -40,16 +40,6 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	spriteType = {
-		name = "GFX_ideology_antijapan_bar"
-		textureFile = "gfx/interface/ideologies/ideology_bars/rd/antijapan.png"
-		legacy_lazy_load = no
-	}
-	spriteType = {
-		name = "GFX_ideology_datong_shu_bar"
-		textureFile = "gfx/interface/ideologies/ideology_bars/rd/datong_shu.png"
-		legacy_lazy_load = no
-	}
-	spriteType = {
 		name = "GFX_ideology_deng_bar"
 		textureFile = "gfx/interface/ideologies/ideology_bars/rd/deng.png"
 		legacy_lazy_load = no

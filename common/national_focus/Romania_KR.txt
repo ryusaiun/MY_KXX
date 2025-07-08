@@ -7168,7 +7168,7 @@ focus_tree = {
 		completion_reward={
 		add_political_power = 120
 		add_stability = 0.1
-		create_faction = 共产主义国际革命联盟
+		create_faction = "共产主义国际革命联盟"
 		}
 	}
 	focus={
@@ -8071,14 +8071,15 @@ focus_tree = {
 		search_filters={
 		}
 		completion_reward={
-		swap_ideas={
-				remove_idea=ROM_National_Revolution_1
-				add_idea=ROM_National_Revolution_2
-			}
-		create_wargoal = { target = SER type = annex_everything }
-		create_wargoal = { target = BUL type = annex_everything }
-		create_wargoal = { target = ALB type = annex_everything }
-		create_wargoal = { target = GRE type = annex_everything }
+			set_cosmetic_tag = ROM_WEM_REP
+			swap_ideas={
+					remove_idea=ROM_National_Revolution_1
+					add_idea=ROM_National_Revolution_2
+				}
+			create_wargoal = { target = SER type = annex_everything }
+			create_wargoal = { target = BUL type = annex_everything }
+			create_wargoal = { target = ALB type = annex_everything }
+			create_wargoal = { target = GRE type = annex_everything }
 		}
 	}
 }

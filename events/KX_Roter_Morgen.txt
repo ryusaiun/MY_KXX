@@ -3300,7 +3300,7 @@ country_event = { #
 						name = GRU_ldr_Vyacheslav_Molotov
 						picture = "gfx/leaders/SOV/Portrait_SOV_Vyacheslav_Molotov.png"
 						expire = "1.1.1"
-						ideology = nazbol_subtype
+						ideology = molotovism_subtype
 					}
 					set_politics = {
 						ruling_party = totalist

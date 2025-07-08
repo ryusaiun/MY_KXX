@@ -1,0 +1,40 @@
+
+dont_research_mobile_warfare_if_choice_made = {
+	OR = {
+		AND = {
+			tag = SWE
+				OR = {
+			has_completed_focus = SWE_olof_plan
+			has_completed_focus = SWE_jung_plan
+			
+			}
+		}
+	}
+}
+
+dont_research_superior_firepower_if_choice_made = {
+	OR = {
+
+		AND = {
+			tag = SWE
+			has_completed_focus = SWE_archies_plan
+		}
+	}
+}
+
+dont_research_grand_battleplan_if_choice_made = {
+	OR = {
+		AND = {
+			tag = SWE
+			has_completed_focus = SWE_archies_plan
+		}
+	}
+}
+
+never_research_mass_assault = {
+	OR = {
+		tag = SWE
+	}
+}
+
+
