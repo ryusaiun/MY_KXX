@@ -15,6 +15,7 @@ focus_tree = {
 		x = 5
 		y = 0
 		cost = 2
+		ai_will_do = { factor = 20 }
 		available = {
 			is_subject = no
 		}
@@ -38,7 +39,8 @@ focus_tree = {
 		x = 5
 		y = 1
 		cost = 5
-                prerequisite = {
+		ai_will_do = { factor = 20 }
+        prerequisite = {
 			focus = FLS_START
 		}
 		available = {
@@ -96,7 +98,8 @@ focus_tree = {
 		x = 4
 		y = 3
 		cost = 5
-                prerequisite = {
+		ai_will_do = { factor = 20 }
+        prerequisite = {
 			focus = FLS_NAVAL_DICTATORSHIP
 		}
 		available = {
@@ -119,7 +122,8 @@ focus_tree = {
 		x = 6
 		y = 3
 		cost = 5
-                prerequisite = {
+		ai_will_do = { factor = 20 }
+        prerequisite = {
 			focus = FLS_NAVAL_DICTATORSHIP
 		}
 		available = {
@@ -142,10 +146,11 @@ focus_tree = {
 		x = 5
 		y = 4
 		cost = 5
-                prerequisite = {
+		ai_will_do = { factor = 20 }
+        prerequisite = {
 			focus = FLS_EMBRACE_THE_OLD
 		}
-                prerequisite = {
+        prerequisite = {
 			focus = FLS_FIVE_PRINCIPLES_OF_RULE
 		}
 		available = {
@@ -169,7 +174,8 @@ focus_tree = {
 		x = 5
 		y = 5
 		cost = 5
-                prerequisite = {
+		ai_will_do = { factor = 20 }
+        prerequisite = {
 			focus = FLS_OF_WHERE_WE_NEED_TO
 		}
 		available = {
@@ -206,9 +212,10 @@ focus_tree = {
 		x = 11
 		y = 0
 		cost = 5
+		ai_will_do = { factor = 20 }
 		available = {
 			is_subject = no
-                        has_completed_focus = FLS_OF_WHERE_WE_NEED_TO
+            has_completed_focus = FLS_OF_WHERE_WE_NEED_TO
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FLS_THE_FIRST_CONQUEST"
@@ -409,6 +416,7 @@ focus_tree = {
 		x = 8
 		y = 6
 		cost = 5
+		ai_will_do = { factor = 20 }
 		available = {
 			is_subject = no
 		}
@@ -463,10 +471,11 @@ focus_tree = {
 		x = 7
 		y = 7
 		cost = 5
+		ai_will_do = { factor = 20 }
 		available = {
 			is_subject = no
 		}
-                prerequisite = {
+        prerequisite = {
 			focus = FLS_IMPROVE_SHEEP_MARKET
 		}
 		completion_reward = {
@@ -497,10 +506,11 @@ focus_tree = {
 		x = 9
 		y = 7
 		cost = 5
+		ai_will_do = { factor = 20 }
 		available = {
 			is_subject = no
 		}
-                prerequisite = {
+        prerequisite = {
 			focus = FLS_IMPROVE_SHEEP_MARKET
 		}
 		completion_reward = {
@@ -527,6 +537,7 @@ focus_tree = {
 		x = 8
 		y = 8
 		cost = 5
+		ai_will_do = { factor = 20 }
 		available = {
 			is_subject = no
 		}

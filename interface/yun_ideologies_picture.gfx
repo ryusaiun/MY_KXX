@@ -1,5 +1,41 @@
 spriteTypes = {
 	spriteType = {
+		name = "GFX_report_event_tot_yun_generic1"
+		texturefile = "gfx/event_pictures/KXSIP/tot_yun_generic1.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_tot_yun_generic2"
+		texturefile = "gfx/event_pictures/KXSIP/tot_yun_generic2.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_tot_yun_generic3"
+		texturefile = "gfx/event_pictures/KXSIP/tot_yun_generic3.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_tot_yun_euro1"
+		texturefile = "gfx/event_pictures/KXSIP/tot_yun_euro1.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_tot_yun_euro2"
+		texturefile = "gfx/event_pictures/KXSIP/tot_yun_euro2.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_tot_yun_fra1"
+		texturefile = "gfx/event_pictures/KXSIP/tot_yun_fra1.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_tot_yun_fra2"
+		texturefile = "gfx/event_pictures/KXSIP/tot_yun_fra2.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_tot_yun_esa1"
+		texturefile = "gfx/event_pictures/KXSIP/tot_yun_esa1.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_tot_yun_esa2"
+		texturefile = "gfx/event_pictures/KXSIP/tot_yun_esa2.png"
+	}		
+	spriteType = {
 		name = "GFX_ideology_left_occultism_bar"
 		textureFile = "gfx/interface/ideologies/ideology_bars/left_occultism.png"
 		legacy_lazy_load = no
@@ -145,6 +181,11 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	spriteType = {
+		name = "GFX_ideology_nihonism_bar"
+		texturefile = "gfx/interface/ideologies/ideology_bars/nihonism.png"
+		legacy_lazy_load = no
+	}	
+	spriteType = {
 		name = "GFX_ideology_surrealism_bar"
 		textureFile = "gfx/interface/ideologies/ideology_bars/surrealism.png"
 		legacy_lazy_load = no
@@ -160,13 +201,48 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	spriteType = {
-		name = "GFX_ideology_hegemony_gihrenism_bar"
-		texturefile = "gfx/interface/ideologies/ideology_bars/gihrenism.png"
-		legacy_lazy_load = no
-	}
-	spriteType = {
 		name = "GFX_ideology_dystopian_bar"
 		texturefile = "gfx/interface/ideologies/ideology_bars/technological_dystopian.png"
 		legacy_lazy_load = no
 	}			
+	spriteType = {
+		name = "GFX_ideology_left_leaning_legionarism_bar"
+		texturefile = "gfx/interface/ideologies/ideology_bars/left_leaning_legionarism.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_ideology_esoteric_marxism_bar"
+		texturefile = "gfx/interface/ideologies/ideology_bars/esoteric_marxism.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_ideology_united_front_bar"
+		texturefile = "gfx/interface/ideologies/ideology_bars/united_front.png"
+		legacy_lazy_load = no
+	}	
+	spriteType = {
+		name = "GFX_ideology_monarcho_syndicalism_bar"
+		texturefile = "gfx/interface/ideologies/ideology_bars/monarcho_syndicalism.png"
+		legacy_lazy_load = no
+	}	
+	spriteType = {
+		name = "GFX_ideology_national_bolshevism_bar"
+		texturefile = "gfx/interface/ideologies/ideology_bars/national_bolshevism.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_ideology_bureaucratic_socialism_bar"
+		texturefile = "gfx/interface/ideologies/ideology_bars/bureaucratic_socialism.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_ideology_left_conservatism_bar"
+		texturefile = "gfx/interface/ideologies/ideology_bars/left_conservatism.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_ideology_marxist_humanism_bar"
+		texturefile = "gfx/interface/ideologies/ideology_bars/marxist_humanism.png"
+		legacy_lazy_load = no
+	}
 }

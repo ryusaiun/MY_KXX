@@ -334,7 +334,79 @@ country_event = {
 		set_country_leader_ideology = humanisme_integral_subtype
 	}
 	option = {
+		name = soccon_picker.9.g
+		set_country_leader_ideology = soccon_tridemism_subtype
+	}
+	option = {
 		name = soccon_picker.9.h
+		country_event = soccon_picker.10
+	}
+}
+
+country_event = {
+	id = soccon_picker.10
+	title = soccon_picker.10.t 
+	desc = soccon_picker.10.d 
+	picture = GFX_report_event_soccon10
+
+	is_triggered_only = yes
+	
+	option = {
+		name = soccon_picker.10.a
+		set_country_leader_ideology = soccon_liberal_conservative_subtype
+	}
+	option = {
+		name = soccon_picker.10.b
+		set_country_leader_ideology = soccon_right_georgism_subtype
+	}
+	option = {
+		name = soccon_picker.10.c
+		set_country_leader_ideology = noucentisme_subtype
+	}
+	option = {
+		name = soccon_picker.10.e
+		set_country_leader_ideology = iberian_federalism_subtype
+	}
+	option = {
+		name = soccon_picker.10.f
+		set_country_leader_ideology = soccon_maurism_subtype
+	}
+	option = {
+		name = soccon_picker.10.g
+		set_country_leader_ideology = soccon_populist_dixiecrat_subtype
+	}
+	option = {
+		name = soccon_picker.10.h
+		country_event = soccon_picker.11
+	}
+}
+
+country_event = {
+	id = soccon_picker.11
+	title = soccon_picker.11.t 
+	desc = soccon_picker.11.d 
+	picture = GFX_report_event_soccon11
+
+	is_triggered_only = yes
+	
+	option = {
+		name = soccon_picker.11.a
+		set_country_leader_ideology = soccon_popular_patriotism_subtype
+	}
+	option = {
+		name = soccon_picker.11.b
+		set_country_leader_ideology = herrerismo_subtype
+	}
+	option = {
+		name = soccon_picker.11.c
+		set_country_leader_ideology = conservative_feminism_subtype
+	}
+	option = {
+		name = soccon_picker.11.e
+		set_country_leader_ideology = soccon_chosid_nyi_subtype 
+	}
+	option = {
+		name = soccon_picker.11.h
 		country_event = soccon_picker.1
 	}
 }

@@ -2,6 +2,30 @@ spriteTypes = {
 	
 	### SubIdeologies ###
 	SpriteType = {
+		name = "GFX_ideology_provisional_government_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/provisional_government_group.png"
+	}
+	SpriteType = {
+		name = "GFX_ideology_transitional_government_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/transitional_government_group.png"
+	}	
+	SpriteType = {
+		name = "GFX_ideology_esoteric_marxism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/esoteric_marxism_group.png"
+	}
+	SpriteType = {
+		name = "GFX_ideology_natpop_esoteric_marxism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/natpop_esoteric_marxism_group.png"
+	}
+	SpriteType = {
+		name = "GFX_ideology_right_totalism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/right_totalism_group.png"
+	}	
+	SpriteType = {
+		name = "GFX_ideology_social_national_populism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/social_national_populism_group.png"
+	}	
+	SpriteType = {
 		name = "GFX_ideology_tot_marxist_humanism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/tot_marxist_humanism_group.png"
 	}
@@ -19,11 +43,11 @@ spriteTypes = {
 	}	
 	SpriteType = {
 		name = "GFX_ideology_tot_socialism_with_chinese_characteristics_subtype"
-		texturefile = "gfx/interface/ideologies/tot_socialism_with_chinese_characteristics_group.png"
+		texturefile = "gfx/interface/ideologies/subideologies/tot_socialism_with_chinese_characteristics_group.png"
 	}
 	SpriteType = {
 		name = "GFX_ideology_socialism_with_chinese_characteristics_subtype"
-		texturefile = "gfx/interface/ideologies/socialism_with_chinese_characteristics_group.png"
+		texturefile = "gfx/interface/ideologies/subideologies/socialism_with_chinese_characteristics_group.png"
 	}	
 	spriteType = {
 		name = "GFX_ideology_germanic_socialism_subtype"
@@ -272,7 +296,23 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_ideology_paternalistic_reactionaryism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/paternalistic_reactionaryism_group.png"
-	}		
+	}	
+	spriteType = {
+		name = "GFX_ideology_jp_constitutional_conservatism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/jp_constitutional_conservatism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_marlib_jp_constitutional_liberalism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/marlib_jp_constitutional_liberalism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_pataut_nihonism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/pataut_nihonism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_nihonism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/nihonism_group.png"
+	}					
 	##毛主义衍生
 	spriteType = {
 		name = "GFX_ideology_farleft_maoism_subtype"
@@ -311,10 +351,6 @@ spriteTypes = {
 		name = "GFX_ideology_bangdreamism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/bangdreamism.png"
 	}
-	spriteType = {
-		name = "GFX_ideology_hegemony_gihrenism_subtype"
-		texturefile = "gfx/interface/ideologies/subideologies/hegemony_gihrenism.png"
-	}			
 	spriteType = {
 		name = "GFX_ideology_radsoc_byronism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/radsoc_byronism.png"
@@ -446,8 +482,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideologies/subideologies/spanish_syndicalism.png"
 	}
 	SpriteType = {
-		name = "GFX_ideology_popular_legionism"
-		texturefile = "gfx/interface/ideologies/subideologies/popular_legionism.png"			
+		name = "GFX_ideology_left_leaning_legionarism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/left_leaning_legionarism_group.png"			
 	}
 	spriteType = {
 		name = "GFX_ideology_ustase_subtype"

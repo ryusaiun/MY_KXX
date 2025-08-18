@@ -28508,10 +28508,6 @@ focus = {
 		}		
 		completion_reward = {
 			add_political_power = 100
-			hidden_effect = {
-				id = kxxfrance.26
-				days = 7
-			}
 		}
 	}
 	focus = {
@@ -31835,6 +31831,12 @@ focus = {
 			remove_ideas = FRA_EEC
 			add_ideas = FRA_EUROPE
 			set_cosmetic_tag = FRA_PANEUROPE
+			every_state = {
+				limit = { 
+					is_on_continent = europe
+				}
+				add_core_of = ROOT
+			}			
 		}
 	}
 	focus = {

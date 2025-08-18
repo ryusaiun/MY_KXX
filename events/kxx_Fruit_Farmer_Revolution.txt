@@ -24,7 +24,24 @@ country_event = {  #白粉病大流行
 			days = 180
 		}
 		hidden_effect = {
-			country_event = { id = FruitFarmerRevolution.2 days = 365 }
+			if = {
+				limit = { 
+					OR = {
+						has_country_leader = {
+							ruling_only = yes
+							name = "奥古斯特·德·里贝斯"
+						}	
+						has_country_leader = {
+							ruling_only = yes
+							name = "雅克·多里奥"
+						}										
+					}
+				}
+				add_stability = -0.15
+			}
+			else = {
+				country_event = { id = FruitFarmerRevolution.2 days = 365 }	
+			}
 		}
 	}
 }
@@ -197,10 +214,19 @@ country_event = {   #普瓦图农民骚动
          
 
 	option = {
+		trigger = {
+			NOT = {
+				has_country_leader = {
+					ruling_only = yes
+					name = "亨利·多尔热"
+				}				
+			}
+		}
 		name = FruitFarmerRevolution.7.a
 		ai_chance = {
 			factor = 90
 		}  
+		set_global_flag = FRA_Farmer_Chaos_Start
 		if = {
 			limit = {
 				has_country_flag = DOB_safe
@@ -240,6 +266,21 @@ country_event = {   #普瓦图农民骚动
 				country_event = { id = FruitFarmerRevolution.8 days = 30 }
 			}
 		} 
+	}
+
+	option = {
+		trigger = {
+			has_country_leader = {
+				ruling_only = yes
+				name = "亨利·多尔热"
+			}
+		}
+		name = FruitFarmerRevolution.7.b
+		remove_ideas = FRA_The_supply_of_wine_is_obstructed_2
+		add_timed_idea = {
+			idea = FRA_The_supply_of_wine_is_obstructed_3
+			days = 365
+		}
 	}
 }
 
@@ -5508,5 +5549,232 @@ country_event = {   #第二次果农革命
 			}
 		}
 		PDL = { change_tag_from = FRA } 
+	}
+}
+
+country_event = {  #第二次果农革命胜利(公社限时决议)
+	id = FruitFarmerRevolution.12
+	title = FruitFarmerRevolution.12.t
+	desc = FruitFarmerRevolution.12.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+         
+	option = {
+		name = FruitFarmerRevolution.12.a
+		set_country_flag = Yun_FRA_deat_visible_flag
+		complete_national_focus = FRA_peasant_front
+		mark_focus_tree_layout_dirty = yes
+		create_country_leader = {
+			name = "亨利·多尔热"
+			picture = "gfx/leaders/FRA/Portrait_FRA_Henri_Dorgeres.png"
+			expire = "1.1.1"
+			traits = { protector_of_farmers }
+			ideology = agrarian_socialism_subtype
+		}
+		set_politics = {
+			ruling_party = radical_socialist
+		}
+		CHP = {
+			country_event = FruitFarmerRevolution.14
+			if = {
+				limit = { 
+					country_exists = DOB
+				}
+				annex_country = {
+					target = DOB
+				}
+				add_state_core = 27		
+			}
+			else = {
+				transfer_state = 27
+				add_state_core = 27
+			}
+		}
+		PDL = {
+			country_event = FruitFarmerRevolution.14
+			transfer_state = 30
+			add_state_core = 30
+		}
+		if = {
+			limit = { 
+				country_exists = PRO
+			}
+			PRO = {
+				country_event = FruitFarmerRevolution.14
+				transfer_state = 32
+				transfer_state = 735
+				add_state_core = 32
+				add_state_core = 735			
+			}
+		}
+	}
+}
+
+country_event = {  #第二次果农革命胜利(主动战胜)
+	id = FruitFarmerRevolution.13
+	title = FruitFarmerRevolution.13.t
+	desc = FruitFarmerRevolution.13.d
+
+	trigger = {
+		tag = FRA
+		NOT = {
+			has_global_flag = FRA_Farmer_Win
+		}
+		OR = {
+			CHP = {
+				controls_state = 16
+			}
+			any_country = {
+				is_ally_with = CHP
+				controls_state = 16
+			}			
+		}
+	}
+
+	fire_only_once = yes
+         
+	option = {
+		name = FruitFarmerRevolution.13.a
+		clr_global_flag = FRA_Farmer_Chaos_Start
+		if = {
+			limit = {
+				NOT = {
+					country_exists = PRO
+				}
+			}
+			white_peace = CHP
+			remove_ideas = FRA_Fruit_Farmer_Revolution	
+			remove_ideas = FRA_The_supply_of_wine_is_obstructed_2
+		}
+		if = {
+			limit = {
+				country_exists = PRO
+			}
+			white_peace = CHP
+			PRO = { transfer_state = 762 }
+			PRO = { add_state_core = 762 }
+			remove_ideas = FRA_Fruit_Farmer_Revolution	
+			remove_ideas = FRA_The_supply_of_wine_is_obstructed_2
+		}		
+		set_global_flag = FRA_Farmer_Win
+		set_country_flag = Yun_FRA_deat_visible_flag
+		complete_national_focus = FRA_peasant_front
+		mark_focus_tree_layout_dirty = yes
+		create_country_leader = {
+			name = "亨利·多尔热"
+			picture = "gfx/leaders/FRA/Portrait_FRA_Henri_Dorgeres.png"
+			expire = "1.1.1"
+			traits = { protector_of_farmers }
+			ideology = agrarian_socialism_subtype
+		}
+		set_politics = {
+			ruling_party = radical_socialist
+		}
+		CHP = {
+			dismantle_faction = yes
+			country_event = FruitFarmerRevolution.14
+			if = {
+				limit = { 
+					country_exists = DOB
+				}
+				annex_country = {
+					target = DOB
+				}
+				add_state_core = 27		
+			}
+			else = {
+				transfer_state = 27
+				add_state_core = 27
+			}
+		}
+		PDL = {
+			country_event = FruitFarmerRevolution.14
+			transfer_state = 30
+			add_state_core = 30
+		}
+		if = {
+			limit = { 
+				country_exists = PRO
+			}
+			PRO = {
+				country_event = FruitFarmerRevolution.14
+				transfer_state = 32
+				transfer_state = 735
+				add_state_core = 32
+				add_state_core = 735			
+			}
+		}
+	}
+}
+
+country_event = {  #各怀鬼胎
+	id = FruitFarmerRevolution.14
+	title = FruitFarmerRevolution.14.t
+	desc = FruitFarmerRevolution.14.d
+
+	is_triggered_only = yes
+         
+	option = {
+		name = FruitFarmerRevolution.14.a
+		add_ideas = FRA_Fruit_Farmer_Autonomy_idea
+		add_timed_idea = {
+			idea = FRA_Fruit_Farmer_Autonomy_Tax
+			days = 400
+		}
+		if = {
+			limit = {
+				tag = CHP
+			}
+			CHP = {
+				get_current_government_type = yes
+				set_cosmetic_tag = CHP_autonomy
+			}	
+			FRA = {
+				set_autonomy = {
+					target = CHP
+					autonomous_state = autonomous_territory
+				}					
+			}
+			CHP = {
+				restore_previous_government_type = yes
+			}			
+		}
+		if = {
+			limit = {
+				tag = PDL
+			}
+			PDL = {
+				get_current_government_type = yes
+				set_cosmetic_tag = PDL_autonomy
+			}	
+			FRA = {
+				set_autonomy = {
+					target = PDL
+					autonomous_state = autonomous_territory
+				}					
+			}
+			PDL = {
+				restore_previous_government_type = yes
+			}			
+		}	
+		if = {
+			limit = {
+				tag = PRO
+			}
+			PRO = {
+				get_current_government_type = yes
+				set_cosmetic_tag = PRO_autonomy
+			}	
+			FRA = {
+				set_autonomy = {
+					target = PRO
+					autonomous_state = autonomous_territory
+				}					
+			}
+			PRO = {
+				restore_previous_government_type = yes
+			}			
+		}			
 	}
 }

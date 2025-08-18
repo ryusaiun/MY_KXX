@@ -485,7 +485,8 @@ formable_nations_mod_category = {
 			else = {
 			    set_cosmetic_tag = FORM_GDE
 				}							
-			add_stability = 0.2			   			
+			add_ideas = GER_united_grossdeutschland
+			add_stability = 0.2			
 			custom_effect_tooltip = core_land
 			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available 
 			random_country = {
@@ -1572,8 +1573,6 @@ formable_nations_mod_category = {
 							180 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 							181 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 							795 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
-							697 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
-							698 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 					}
 					custom_trigger_tooltip = {
 						tooltip = sardinia_requirement_tooltip
@@ -1689,10 +1688,18 @@ formable_nations_mod_category = {
 				state = 180
 				state = 181
 				state = 795
-				state = 697
-				state = 698
 				state = 114
 				state = 1002
+				state = 1334
+				state = 1339
+				state = 1344
+				state = 1338
+				state = 1340
+				state = 1341
+				state = 1342
+				state = 1337
+				state = 1336
+				state = 1343
 			}
 		}			
 		icon = formable_nations_latin_union
@@ -1750,6 +1757,7 @@ formable_nations_mod_category = {
 					days = 3
 				}
 			}	
+			add_ideas = latin_unity
 			add_stability = 0.2
 			779 = { add_core_of = ROOT }
 			28 = { add_core_of = ROOT } 
@@ -1806,6 +1814,24 @@ formable_nations_mod_category = {
 				       transfer_state_to = ROOT }
 				290 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
+				1339 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1344 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1338 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1340 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1341 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1342 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1337 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1336 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1343 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }					   
 				#Portugal
 				112 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
@@ -1933,7 +1959,9 @@ formable_nations_mod_category = {
 				983 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
 				980 = { add_core_of = ROOT 
-				       transfer_state_to = ROOT }
+					   transfer_state_to = ROOT }
+				1334 = { add_core_of = ROOT 
+					   transfer_state_to = ROOT }	   
 				#romania
 				81 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
@@ -1976,38 +2004,7 @@ formable_nations_mod_category = {
 				713 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
 				789	= { add_core_of = ROOT 
-				       transfer_state_to = ROOT }	
-				#得克萨斯州
-				1166 = { add_core_of = ROOT }
-				833 = { add_core_of = ROOT }
-				375 = { add_core_of = ROOT }
-				#新墨西哥州
-				1161 = { add_core_of = ROOT }
-				1096 = { add_core_of = ROOT }
-				376 = { add_core_of = ROOT }	
-				#亚利桑那
-				377 = { add_core_of = ROOT }
-				#犹他
-				380 = { add_core_of = ROOT }
-				1174 = { add_core_of = ROOT }
-				1175 = { add_core_of = ROOT }
-				#内华达
-				1165 = { add_core_of = ROOT }
-				379 = { add_core_of = ROOT }
-				#加州
-				378 = { add_core_of = ROOT }
-				829 = { add_core_of = ROOT }
-				797 = { add_core_of = ROOT }
-				798 = { add_core_of = ROOT }
-				every_state = {
-					limit = {
-						OR = {
-						is_on_continent = south_america
-						is_on_continent = central_america
-						}
-					}
-					add_core_of = ROOT
-				}					   		
+				       transfer_state_to = ROOT }					   					   		
 			}
 		}
 	}
@@ -3240,6 +3237,9 @@ formable_nations_mod_category = {
  			    #朝鲜
 			    525 = { add_claim_by = ROOT }
 			    527 = { add_claim_by = ROOT }
+				1347 = { add_claim_by = ROOT }
+				1345 = { add_claim_by = ROOT }
+				1346 = { add_claim_by = ROOT }
 			    #越南
 			    857 = { add_claim_by = ROOT }
 			    671 = { add_claim_by = ROOT }
@@ -3270,7 +3270,6 @@ formable_nations_mod_category = {
 			    585 = { add_claim_by = ROOT }
 			    712 = { add_claim_by = ROOT }
 			    1203 = { add_claim_by = ROOT }
-			    1212 = { add_claim_by = ROOT }
 				861 = { add_claim_by = ROOT }
 			    #元明北方
 			    40 = { add_claim_by = ROOT }
@@ -3781,6 +3780,7 @@ formable_nations_mod_category = {
 							735 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 							762 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 							1 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+							1334 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 					}	
 					
 					custom_trigger_tooltip = {
@@ -3928,12 +3928,14 @@ formable_nations_mod_category = {
 				state = 162
 				state = 157
 				state = 1005
-				state = 764				
+				state = 764	
+				state = 1334			
 			}
 		}				
 		icon = formable_nations_frankish_empire
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_FRK
+			add_ideas = legacy_of_francia
 			add_stability = 0.2
 			set_victory_points = {
 				province = 9522
@@ -4041,6 +4043,8 @@ formable_nations_mod_category = {
 				       transfer_state_to = ROOT }
 				1 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
+				1334 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }	   
 				#flander-wallonia
 				6 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
@@ -4408,6 +4412,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_austria_hungary
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_AUH
+			add_ideas = habsburg_industrial_dominance
 			add_stability = 0.2
 			set_capital = { state = 1137 }
 			custom_effect_tooltip = core_land
@@ -4842,6 +4847,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_commonwealth
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_PLC
+			add_ideas = cavalry_traditions
 			add_stability = 0.2
 			set_capital = { state = 10 }
 			custom_effect_tooltip = core_land
@@ -5307,6 +5313,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_hre
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_HRE
+			add_ideas = holy_imperial_army
 			add_stability = 0.2
 			set_victory_points = {
 				province = 9522
@@ -5605,6 +5612,15 @@ formable_nations_mod_category = {
 							290 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 							697 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 							178 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+							1339 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+							1344 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+							1338 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+							1340 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+							1341 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+							1342 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+							1337 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+							1336 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+							1343 = { is_owned_and_controlled_by_ROOT_or_subject = yes }						
 					}
 					custom_trigger_tooltip = {
 						tooltip = portugal_requirement_tooltip
@@ -5648,6 +5664,15 @@ formable_nations_mod_category = {
 				state = 290
 				state = 697
 				state = 178
+				state = 1339
+				state = 1344
+				state = 1338
+				state = 1340
+				state = 1341
+				state = 1342
+				state = 1337
+				state = 1336
+				state = 1343			
 				#葡萄牙
 				state = 179
 				state = 112
@@ -5658,6 +5683,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_iberia
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_IBE
+			add_ideas = secure_gibraltar
 			add_stability = 0.2
 			set_capital = { state = 41 }
 			984 = { add_claim_by = ROOT }
@@ -5713,6 +5739,24 @@ formable_nations_mod_category = {
 				       transfer_state_to = ROOT }
 				178 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
+				1339 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1344 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1338 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1340 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1341 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1342 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1337 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1336 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1343 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }					   
 				#portugal
 				179 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
@@ -5860,6 +5904,7 @@ formable_nations_mod_category = {
 			1327 = { add_core_of = ROOT }
 			216 = { add_core_of = ROOT }
 			set_cosmetic_tag = FORM_SCA
+			add_ideas = nordic_arsenal
 			add_stability = 0.2
 			set_capital = { state = 110 }
 			custom_effect_tooltip = core_land
@@ -6330,6 +6375,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_maghreb
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_MAG
+			add_ideas = colonial_grudges
 			add_stability = 0.2
 			custom_effect_tooltip = core_land
 			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available
@@ -6585,6 +6631,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_pan_arab
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_ARB
+			add_ideas = desert_warfare_expertise
 			add_stability = 0.2
 			set_capital = { state = 754 }
 			custom_effect_tooltip = core_land
@@ -6768,7 +6815,7 @@ formable_nations_mod_category = {
 			OR = { 
 				has_global_flag = no_limit
 				original_tag = CZE
-				original_tag = ``O
+				original_tag = SVK
 			}
 			NOT = { has_global_flag = modern_country }
 		}
@@ -6869,6 +6916,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_great_moravia
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_GMO
+			add_ideas = invest_in_prague
 			THIS = {
 				country_event = {
 					id = moravaishexp.1
@@ -7048,6 +7096,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_transcaucasia
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_CAU
+			add_ideas = oil_for_everyone
 			add_stability = 0.2
 			set_capital = { state = 231 }
 			custom_effect_tooltip = core_land
@@ -7168,6 +7217,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_benelux
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_BEN
+			add_ideas = defend_the_lowlands
 			THIS = {
 				country_event = {
 					id = beneluxexp.1
@@ -7272,6 +7322,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_baltic
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_BAL
+			add_ideas = teutonic_order_legacy
 			THIS = {
 				country_event = {
 					id = balticexp.1
@@ -7387,6 +7438,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_central_america
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_CEN
+			add_ideas = guerrilla_warfare_expert
 			add_stability = 0.2
 			custom_effect_tooltip = core_land
 			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available
@@ -7570,6 +7622,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_hungarian_kingdom
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_HUK
+			add_ideas = legacy_of_dual_monarchy
 			add_stability = 0.2
 			custom_effect_tooltip = core_land
 			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available
@@ -7722,7 +7775,6 @@ formable_nations_mod_category = {
 						208 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 						195 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 						1328 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
-						1227 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 						216 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 						1274 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 						215 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
@@ -7826,7 +7878,6 @@ formable_nations_mod_category = {
 				state = 208
 				state = 195
 				state = 1328
-				state = 1227
 				state = 216
 				state = 1274
 				state = 215
@@ -7882,6 +7933,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_kievan_rus
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_KIE
+			add_ideas = slavic_unity
 			add_stability = 0.2
 			set_capital = { state = 202 }
 			custom_effect_tooltip = core_land
@@ -8262,6 +8314,7 @@ formable_nations_mod_category = {
 			else = {
 			    set_cosmetic_tag = BUL_empire
 				}	
+			add_ideas = expand_budapest_industry	
 			add_stability = 0.2
 			custom_effect_tooltip = core_land
 			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available
@@ -8415,6 +8468,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_gran_colombia
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_GCO
+			add_ideas = elite_andean_guerrillas
 			add_stability = 0.2
 			set_capital = { state = 306 }
 			custom_effect_tooltip = core_land
@@ -8690,6 +8744,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_balkan
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_BAK
+			add_ideas = pan_balkan_militarization
 			add_stability = 0.2
 			custom_effect_tooltip = core_land
 			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available
@@ -8866,8 +8921,6 @@ formable_nations_mod_category = {
 				#ottoman empire
 				341 = { add_core_of = ROOT }
 				773 = { add_core_of = ROOT }
-				1225 = { add_core_of = ROOT }
-
 			}
 		}
 	}
@@ -9033,6 +9086,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_poland_hungary
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_POH
+			add_ideas = a_crown_reunited
 			THIS = {
 				country_event = {
 					id = polhunexp.1
@@ -9168,6 +9222,482 @@ formable_nations_mod_category = {
 			}
 		}
 	}
+	formable_nations_poland_sweden = {
+	
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 50
+				has_global_flag = ai_enable
+			}
+		}
+		
+		cost = 0  days_re_enable = 0
+		
+		visible = {
+			NOT = { has_country_flag = unform_available }
+			NOT = { has_global_flag = hide_formable_nations }
+			OR = { 
+				has_global_flag = no_limit
+				original_tag = POL
+				original_tag = SWE
+			}
+		}
+		available = {
+			OR = {
+				AND = {
+					OR = { is_subject = no has_global_flag = puppets_allowed }
+					AND = {
+						10 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+						96 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+						206 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+						91 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+						202 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+						1091 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+						840 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+						141 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+					}					
+				}
+				AND = {
+					is_ai = no
+					has_global_flag = debug_mode
+				}
+			}
+			custom_trigger_tooltip = { tooltip = not_already_existing_tt NOT = { any_country = { has_cosmetic_tag = FORM_PSW } } }
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				#波兰-立陶宛
+				state = 997
+				state = 93
+				state = 792
+				state = 1228
+				state = 1244
+				state = 201
+				state = 199
+				state = 1245
+				state = 198
+				state = 791
+				state = 1241
+				state = 1240
+				state = 1233
+				state = 226
+				state = 203
+				state = 1237
+				state = 202
+				state = 1238
+				state = 259
+				state = 1243
+				state = 225
+				state = 1242
+				state = 193
+				state = 1230
+				state = 241
+				state = 190
+				state = 1091
+				state = 12
+				state = 188
+				state = 5
+				state = 777
+				state = 776
+				state = 86
+				state = 755
+				state = 242
+				state = 243
+				state = 224
+				state = 880
+				state = 1287
+				state = 191
+				state = 88
+				state = 1314
+				state = 1125
+				state = 1319
+				state = 1126
+				state = 1127
+				state = 89
+				state = 80
+				state = 1140
+				state = 91
+				state = 1124
+				state = 10
+				state = 90
+				state = 87
+				state = 98
+				state = 92
+				state = 1088
+				state = 97
+				state = 1148
+				state = 94
+				state = 96
+				state = 655
+				state = 11
+				state = 189
+				state = 1329
+				state = 207
+				state = 1295
+				state = 206
+				state = 95
+				state = 204
+				state = 194
+				state = 1087
+				state = 1294
+				state = 1124
+				state = 88
+				state = 1314
+				state = 1125
+				state = 1127
+				state = 1319
+				state = 91
+				state = 1126
+				state = 89
+				state = 1140
+				state = 80
+				#瑞典
+				state = 124
+				state = 138
+				state = 139
+				state = 140
+				state = 141
+				state = 38
+				state = 778
+				state = 666
+				state = 960
+				state = 909
+				state = 908
+				#芬兰
+				state = 148
+				state = 150
+				state = 149
+				state = 111
+				state = 146
+				state = 145
+				state = 147
+				state = 844
+				state = 863
+				state = 840
+				state = 864
+				state = 1326
+				state = 865
+				state = 1325
+				state = 1324
+				#丹麦-挪威
+				state = 37
+				state = 99
+				state = 337
+				state = 110
+				state = 142
+				state = 143
+				state = 144
+				state = 937
+				state = 936
+				state = 1147
+				state = 1146
+				#东部补充
+				state = 13
+				state = 1288
+				state = 1291
+				state = 209	
+				state = 210
+				state = 1290
+				state = 1289
+				state = 208
+				state = 263
+				state = 244
+				state = 1328
+				state = 195
+				state = 1327
+				state = 216
+				state = 215
+				state = 1274
+				state = 213
+				state = 722
+				state = 100	
+				state = 101
+				state = 926
+				state = 782	
+				state = 722
+				state = 213
+				state = 215
+				state = 1274
+				state = 1327
+				state = 216				
+			}
+		}		
+		icon = GFX_decision_formable_nations_vasa
+		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
+			set_cosmetic_tag = FORM_PSW
+			add_stability = 0.2
+			custom_effect_tooltip = core_land
+			country_event = polsweexp.1
+			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available
+				#波兰-立陶宛
+				997 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				93 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				792 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				1228 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				1244 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				201 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				199 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				1245 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				198 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				791 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				1241 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				1240 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				1233 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				226 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				203 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				1237 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				202 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				1238 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				259 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				1243 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				225 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				1242 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				193 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				1230 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				241 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				190 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				1091 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				12 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				188 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				5 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				777 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				776 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				86 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				755 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				242 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				243 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				224 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				880 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				1287 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				191 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				88 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				1314 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				1125 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				1319 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				1126 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				1127 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				89 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				80 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				1140 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				91 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				1124 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				10 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				90 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				87 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				98 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				92 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				1088 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				97 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				1148 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				94 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				96 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				655 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				11 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				189 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				1329 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				207 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				1295 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				206 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				95 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				204 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				194 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				1087 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				1294 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				1124 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				88 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				1314 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				1125 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				1127 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				1319 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				91 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				1126 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				89 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				1140 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				80 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				#瑞典
+				124 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				138 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				139 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				140 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				141 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				38 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				778 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				666 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				960 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				909 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				908 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				#芬兰
+				148 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				150 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				149 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				111 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				146 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				145 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				147 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				844 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				863 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				840 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				864 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				1326 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				865 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				1325 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				1324 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				#丹麦-挪威
+				37 = { add_core_of = ROOT }
+				99 = { add_core_of = ROOT }
+				337 = { add_core_of = ROOT }
+				110 = { add_core_of = ROOT }
+				142 = { add_core_of = ROOT }
+				143 = { add_core_of = ROOT }
+				144 = { add_core_of = ROOT }
+				937 = { add_core_of = ROOT }
+				936 = { add_core_of = ROOT }
+				1147 = { add_core_of = ROOT }
+				1146 = { add_core_of = ROOT }
+				#东部补充
+				13 = { add_core_of = ROOT 
+						transfer_state_to = ROOT }
+				1288 = { add_core_of = ROOT }
+				1291 = { add_core_of = ROOT }
+				209 = { add_core_of = ROOT }
+				210 = { add_core_of = ROOT }	
+				1290 = { add_core_of = ROOT }
+				1289 = { add_core_of = ROOT }
+				208 = { add_core_of = ROOT }
+				263 = { add_core_of = ROOT }
+				244 = { add_core_of = ROOT }
+				1328 = { add_core_of = ROOT }
+				195 = { add_core_of = ROOT }
+				1327 = { add_core_of = ROOT }
+				216 = { add_core_of = ROOT }
+				215 = { add_core_of = ROOT }
+				1274 = { add_core_of = ROOT }
+				213 = { add_core_of = ROOT }
+				722 = { add_core_of = ROOT }
+				100 = { add_core_of = ROOT }	
+				101 = { add_core_of = ROOT }
+				926 = { add_core_of = ROOT }
+				782 = { add_core_of = ROOT }	
+				722 = { add_core_of = ROOT }
+				213 = { add_core_of = ROOT }
+				215 = { add_core_of = ROOT }
+				1274 = { add_core_of = ROOT }
+				1327 = { add_core_of = ROOT }
+				216 = { add_core_of = ROOT }
+			}
+		}
+	}	
 	formable_nations_angevin_empire = {
 	
 		ai_will_do = { factor = 0 }
@@ -9201,6 +9731,7 @@ formable_nations_mod_category = {
 						25 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 						19 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 						23 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+						1225 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 					}
 					custom_trigger_tooltip = {
 						tooltip = angevin_england_requirement_tooltip
@@ -9250,12 +9781,14 @@ formable_nations_mod_category = {
 				state = 130
 				state = 132
 				state = 131
-				state = 113			
+				state = 113
+				state = 1225		
 			}
 		}
 		icon = formable_nations_angevin_empire
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_ANE
+			add_ideas = the_royal_fleet
 			add_stability = 0.2
 			custom_effect_tooltip = core_land
 			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available
@@ -9373,7 +9906,9 @@ formable_nations_mod_category = {
 				120 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
 				938 = { add_core_of = ROOT 
-				       transfer_state_to = ROOT }						   																	
+				       transfer_state_to = ROOT }	
+				1225 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }	   					   																	
 			}
 		}
 	}
@@ -9456,7 +9991,6 @@ formable_nations_mod_category = {
 				state = 355
 				state = 1001
 				state = 187
-				state = 1225
 				state = 341
 				state = 773
 				state = 340
@@ -9552,6 +10086,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_macedonian_empire
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_MAC
+			add_ideas = continue_alexanders_conquests
 			add_stability = 0.2
 			set_capital = { state = 731 }
 			custom_effect_tooltip = core_land
@@ -9590,8 +10125,6 @@ formable_nations_mod_category = {
 				1001 = { add_claim_by = ROOT 
 				       transfer_state_to = ROOT }
 				187 = { add_core_of = ROOT 
-				       transfer_state_to = ROOT }
-				1225 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
 				341 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
@@ -9962,6 +10495,8 @@ formable_nations_mod_category = {
 					OR = { is_subject = no has_global_flag = puppets_allowed }
 					
 					AND = {
+						754 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+						679 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 						104 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 						1097 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 						105 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
@@ -10046,7 +10581,6 @@ formable_nations_mod_category = {
 					custom_trigger_tooltip = {
 						tooltip = ottoman_requirement_tooltip
 							187 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
-							1225 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 							341 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 							773 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 							340 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
@@ -10080,6 +10614,9 @@ formable_nations_mod_category = {
 							291 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 							812 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 							450 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+							355 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+							1001 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+							1213 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 					}
 				}
 				AND = {
@@ -10159,7 +10696,6 @@ formable_nations_mod_category = {
 				state = 1320
 				
 				state = 187
-				state = 1225
 				state = 341
 				state = 773
 				state = 340
@@ -10192,19 +10728,26 @@ formable_nations_mod_category = {
 				state = 349
 				state = 291
 				state = 812
-				state = 450			
+				state = 450	
+				state = 754
+				state = 679
+				state = 355
+				state = 1001
+				state = 1213
+				state = 907
+				state = 993
+				state = 658		
 			}
 		}
 		icon = formable_nations_ottomans
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_OTT
+			add_ideas = revitalize_constantinople
 			add_stability = 0.2
 			custom_effect_tooltip = core_land
 			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available
 				#ottoman
 				187 = { add_core_of = ROOT 
-				       transfer_state_to = ROOT }
-				1225 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
 				341 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
@@ -10272,6 +10815,16 @@ formable_nations_mod_category = {
 				       transfer_state_to = ROOT }
 				450 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
+				754 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				679 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				355 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1001 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1213 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }			   
 				#crete
 				182 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
@@ -10417,9 +10970,19 @@ formable_nations_mod_category = {
 				       transfer_state_to = ROOT }
 				659 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }	
-				#内志	   
+				#海湾阿拉伯   
 				656 = { add_core_of = ROOT 
-				       transfer_state_to = ROOT }		
+				       transfer_state_to = ROOT }	
+				907 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				993 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				658 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				347 = { add_core_of = ROOT }
+				#的黎波里塔尼亚	
+				448 = { add_core_of = ROOT }
+				273 = { add_core_of = ROOT }			   	
 				#乌克兰
 				192 = { add_core_of = ROOT }
 				1232 = { add_core_of = ROOT }
@@ -10445,7 +11008,7 @@ formable_nations_mod_category = {
 				1080 = { add_core_of = ROOT }
 				1190 = { add_core_of = ROOT }
 				#山地			
-				1187 = { add_core_of = ROOT }	
+				1187 = { add_core_of = ROOT }
 			}
 		}
 	}
@@ -10630,7 +11193,10 @@ formable_nations_mod_category = {
 				state = 72				
 				state = 756				
 				state = 527				
-				state = 525				
+				state = 525	
+				state = 1347
+				state = 1345
+				state = 1346			
 				state = 408				
 				state = 1246				
 				state = 409				
@@ -10904,6 +11470,12 @@ formable_nations_mod_category = {
 					   transfer_state_to = ROOT }
 				525 = { add_core_of = ROOT 
 					   transfer_state_to = ROOT }
+				1347 = { add_core_of = ROOT 
+					   transfer_state_to = ROOT }
+				1345 = { add_core_of = ROOT 
+					   transfer_state_to = ROOT }
+				1346 = { add_core_of = ROOT 
+					   transfer_state_to = ROOT }			
 				408 = { add_core_of = ROOT 
 					   transfer_state_to = ROOT }
 				1246 = { add_core_of = ROOT 
@@ -11346,7 +11918,7 @@ formable_nations_mod_category = {
 			NOT = { has_country_flag = unform_available }
 			NOT = { has_global_flag = hide_formable_nations }
 			OR = {				
-				original_tag = TRK
+				original_tag = UZB
 				has_global_flag = no_limit				
 			}
 		}
@@ -11824,6 +12396,12 @@ formable_nations_mod_category = {
 			527 = { add_core_of = ROOT 
 				   transfer_state_to = ROOT }
 			525 = { add_core_of = ROOT 
+				   transfer_state_to = ROOT }
+			1347 = { add_core_of = ROOT 
+				   transfer_state_to = ROOT }
+			1345 = { add_core_of = ROOT 
+				   transfer_state_to = ROOT }
+			1346 = { add_core_of = ROOT 
 				   transfer_state_to = ROOT }
 			408 = { add_core_of = ROOT 
 				   transfer_state_to = ROOT }
@@ -12390,6 +12968,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_mughals
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_MUG
+			add_ideas = legacy_of_akbar_the_great
 			add_stability = 0.2
 			set_capital = { state = 439 }
 			custom_effect_tooltip = core_land
@@ -12553,7 +13132,6 @@ formable_nations_mod_category = {
 						340 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 						342 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 						339 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
-						1225 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 						183 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 						164 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 						187 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
@@ -12569,7 +13147,6 @@ formable_nations_mod_category = {
 						452 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 						444 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 						443 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
-						1212 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 						1203 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 						1278 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 						585 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
@@ -12636,15 +13213,15 @@ formable_nations_mod_category = {
 							1302 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 							1300 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 							1301 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
-							1081 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 							1267 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+							1081 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 					}
 					custom_trigger_tooltip = {
 						tooltip = georgia_requirement_tooltip
 							231 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 							1082 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
-							1181 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
-							1081 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+							1188 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+							1080 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 							1190 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 					}
 					custom_trigger_tooltip = {
@@ -12709,7 +13286,6 @@ formable_nations_mod_category = {
 				state = 340
 				state = 342
 				state = 339
-				state = 1225
 				state = 183
 				state = 164
 				state = 187
@@ -12725,7 +13301,6 @@ formable_nations_mod_category = {
 				state = 452
 				state = 444
 				state = 443
-				state = 1212
 				state = 1203
 				state = 1278
 				state = 585
@@ -12781,14 +13356,14 @@ formable_nations_mod_category = {
 				state = 1302
 				state = 1300
 				state = 1301
-				state = 1081
 				state = 1267
+				state = 1081
 				
 				state = 231
 				state = 1082
-				state = 1181
-				state = 1081
 				state = 1190
+				state = 1188
+				state = 1080				
 				
 				state = 663
 				state = 451
@@ -12807,12 +13382,13 @@ formable_nations_mod_category = {
 				
 				state = 455
 				state = 552
-				state = 1035
+				state = 1035	
 			}
 		}		
 		icon = formable_nations_persian_empire
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_PEE
+			add_ideas = silk_road_revival
 			add_stability = 0.2
 			custom_effect_tooltip = core_land
 			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available
@@ -12905,8 +13481,6 @@ formable_nations_mod_category = {
 				342 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
 				339 = { add_core_of = ROOT 
-				       transfer_state_to = ROOT }
-				1225 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
 				183 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
@@ -13027,8 +13601,6 @@ formable_nations_mod_category = {
 				405 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
 				#alash autonomy
-				1212 = { add_core_of = ROOT 
-				       transfer_state_to = ROOT }
 				1203 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
 				#kokand
@@ -13170,6 +13742,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_north_sea_empire
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_NSE
+			add_ideas = reestablish_the_jomsvikings
 			add_stability = 0.2
 			custom_effect_tooltip = core_land
 			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available
@@ -13305,6 +13878,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_inca_empire
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_INC
+			add_ideas = rebuild_the_qhapaq_nan
 			add_stability = 0.2
 			set_capital = { state = 494 }
 			custom_effect_tooltip = core_land
@@ -13368,6 +13942,7 @@ formable_nations_mod_category = {
 			OR = {
 				original_tag = ALO
 				original_tag = KHI
+				original_tag = UZB
 				original_tag = KYR
 				original_tag = TRK
 				original_tag = ETS
@@ -13470,7 +14045,6 @@ formable_nations_mod_category = {
 							#土耳其
 							184 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 							187 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
-							1225 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 							341 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 							773 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 							340 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
@@ -13629,7 +14203,6 @@ formable_nations_mod_category = {
 							#土耳其
 							state = 184
 							state = 187
-							state = 1225
 							state = 341
 							state = 773
 							state = 340
@@ -13785,7 +14358,8 @@ formable_nations_mod_category = {
 				}													
 			else = {
 			    set_cosmetic_tag = FORM_TRN
-				}	 							
+				}	 
+			add_ideas = a_united_turan								
 			add_stability = 0.2
 			custom_effect_tooltip = core_land
 			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available
@@ -13899,8 +14473,6 @@ formable_nations_mod_category = {
 				184 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
 				187 = { add_core_of = ROOT 
-				       transfer_state_to = ROOT }
-				1225 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
 				341 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
@@ -14109,6 +14681,7 @@ formable_nations_mod_category = {
 			OR = {
 				original_tag = ALO
 				original_tag = KHI
+				original_tag = UZB
 				original_tag = KYR
 				original_tag = TRK
 				original_tag = ETS
@@ -14157,7 +14730,9 @@ formable_nations_mod_category = {
 							590 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 							589 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 							810 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
-							404 = { is_owned_and_controlled_by_ROOT_or_subject = yes }	
+							404 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+							583 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+							588 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 					}
 				}
 				AND = {
@@ -14201,6 +14776,8 @@ formable_nations_mod_category = {
 							state = 589
 							state = 810
 							state = 404
+							state = 583
+							state = 588
 			}
 		}		
 		icon = formable_nations_turkestan
@@ -14419,6 +14996,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_indochina
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_ICH
+			add_ideas = jungle_warfare_specialization
 			add_stability = 0.2
 			set_capital = { state = 289 }
 			custom_effect_tooltip = core_land
@@ -14585,6 +15163,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_greater_tibet
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_BOD
+			add_ideas = under_the_dalai_lama
 			add_stability = 0.2
 			custom_effect_tooltip = core_land
 			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available
@@ -14746,6 +15325,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_greater_yugoslavia
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_YUG
+			add_ideas = iron_fist_of_the_balkans
 			add_stability = 0.2
 			custom_effect_tooltip = core_land
 			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available
@@ -14983,6 +15563,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_hispaniola
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_HIS
+			add_ideas = pearl_of_the_caribbean
 			add_stability = 0.2
 			set_capital = { state = 318 }
 			custom_effect_tooltip = core_land
@@ -15079,6 +15660,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_peru_bolivia
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_PRB
+			add_ideas = create_an_andean_empire
 			add_stability = 0.2
 			custom_effect_tooltip = core_land
 			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available
@@ -15213,6 +15795,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_caribbean
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_CAB
+			add_ideas = the_grand_caribbean_fleet
 			add_stability = 0.2
 			set_capital = { state = 318 }
 			custom_effect_tooltip = core_land
@@ -15319,6 +15902,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_australasia
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_AAS
+			add_ideas = pacific_industrial_hub
 			add_stability = 0.2
 			custom_effect_tooltip = core_land
 			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available
@@ -15661,6 +16245,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_golden_circle
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_GOL
+			add_ideas = widespread_plantation_economy
 			add_stability = 0.2
 			set_capital = { state = 315 }
 			custom_effect_tooltip = core_land
@@ -16035,6 +16620,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_greater_canada
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_GCA
+			add_ideas = the_hudson_bay_company
 			add_stability = 0.2
 			custom_effect_tooltip = core_land
 			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available
@@ -16369,6 +16955,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_visegrad
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_VIS
+			add_ideas = central_european_unity
 			add_stability = 0.2
 			set_capital = { state = 155 }
 			set_victory_points = {
@@ -16637,6 +17224,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_la_plata
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_LPL
+			add_ideas = a_southern_agricultural_giant
 			add_stability = 0.2
 			set_capital = { state = 278 }
 			custom_effect_tooltip = core_land
@@ -16768,12 +17356,14 @@ formable_nations_mod_category = {
 				state = 113
 				state = 119
 				state = 134
-				state = 135			
+				state = 135	
+				state = 1225		
 			}
 		}		
 		icon = formable_nations_celtic_union
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_CEL
+			add_ideas = united_against_the_monarchy
 			add_stability = 0.2
 			custom_effect_tooltip = core_land
 			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available
@@ -16803,6 +17393,8 @@ formable_nations_mod_category = {
 				       transfer_state_to = ROOT }
 				938 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
+				1225 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }	   
 				#france
 				14 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
@@ -16890,6 +17482,7 @@ formable_nations_mod_category = {
 				state = 134
 				state = 113
 				state = 135
+				state = 1225
 				#伊比利亚
 				state = 1313
 				state = 165
@@ -16917,6 +17510,15 @@ formable_nations_mod_category = {
 				state = 181
 				state = 112
 				state = 179
+				state = 1339
+				state = 1344
+				state = 1338
+				state = 1340
+				state = 1341
+				state = 1342
+				state = 1337
+				state = 1336
+				state = 1343			
 				#法国
 				state = 15
 				state = 16
@@ -16945,6 +17547,7 @@ formable_nations_mod_category = {
 				state = 779
 				state = 28
 				state = 27
+				state = 1334
 				#匈牙利
 				state = 1112
 				state = 84
@@ -17091,7 +17694,6 @@ formable_nations_mod_category = {
 				state = 1222
 				#部分土耳其
 				state = 341
-				state = 1225
 				state = 773
 				state = 340
 				state = 343
@@ -17159,6 +17761,8 @@ formable_nations_mod_category = {
 				       transfer_state_to = ROOT }
 				135 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
+				1225 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }	   
 				#伊比利亚
 				1313 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
@@ -17212,6 +17816,24 @@ formable_nations_mod_category = {
 				       transfer_state_to = ROOT }
 				179 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
+				1339 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1344 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1338 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1340 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1341 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1342 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1337 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1336 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1343 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }				   
 				#法国
 				1 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }					
@@ -17269,6 +17891,8 @@ formable_nations_mod_category = {
 				       transfer_state_to = ROOT }
 				27 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
+				1334 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }	   
 				#匈牙利
 				1112 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
@@ -17549,8 +18173,6 @@ formable_nations_mod_category = {
 				#部分土耳其
 				341 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
-				1225 = { add_core_of = ROOT 
-				       transfer_state_to = ROOT }
 				773 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
 				340 = { add_core_of = ROOT 
@@ -17661,6 +18283,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_alpine_federation
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_ALP
+			add_ideas = a_fort_on_every_mountain
 			add_stability = 0.2
 			838 = { add_claim_by = ROOT }
 			1100 = { add_claim_by = ROOT }
@@ -17797,6 +18420,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_greater_serbia
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_GSE
+			add_ideas = memories_of_ww1
 			add_stability = 0.2
 			custom_effect_tooltip = core_land
 			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available
@@ -17994,6 +18618,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_greater_lithuania
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_GLI
+			add_ideas = heart_of_the_baltic
 			add_stability = 0.2
 			custom_effect_tooltip = core_land
 			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available
@@ -18207,6 +18832,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_chile_argentina
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_CHG
+			add_ideas = from_pacific_to_atlantic
 			add_stability = 0.2
 			set_capital = { state = 278 }
 			custom_effect_tooltip = core_land
@@ -18331,6 +18957,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_assyria
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_ASS
+			add_ideas = mesopotamian_resurgence
 			add_stability = 0.2
 			custom_effect_tooltip = core_land
 			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available
@@ -18778,6 +19405,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_carpathia
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_CAP
+			add_ideas = a_patchwork_of_people
 			add_stability = 0.2
 			custom_effect_tooltip = core_land
 			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available
@@ -19078,7 +19706,9 @@ formable_nations_mod_category = {
 					is_core_of = KYR
 					is_claimed_by = KYR
 					is_core_of = KHI
-					is_claimed_by = KHI		
+					is_claimed_by = KHI	
+					is_core_of = UZB
+					is_claimed_by = UZB					
 					is_core_of = ARM
 					is_claimed_by = ARM
 					is_core_of = GEO
@@ -19167,8 +19797,6 @@ formable_nations_mod_category = {
 				        transfer_state_to = ROOT }
 				183 = { add_core_of = ROOT
 				        transfer_state_to = ROOT }
-				1225 = { add_core_of = ROOT
-				        transfer_state_to = ROOT }
 				341 = { add_core_of = ROOT
 				        transfer_state_to = ROOT }
 				773 = { add_core_of = ROOT
@@ -19255,11 +19883,13 @@ formable_nations_mod_category = {
 				state = 136 
 				state = 120 
 				state = 938 
+				state = 1225
 			}
 		} 				
 		icon = formable_nations_great_britain
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_BRI
+			add_ideas = a_fortress_on_an_isle
 			add_stability = 0.2
 			custom_effect_tooltip = core_land
 			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available
@@ -19306,7 +19936,9 @@ formable_nations_mod_category = {
 				120 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
 				938 = { add_core_of = ROOT 
-				       transfer_state_to = ROOT }										
+				       transfer_state_to = ROOT }
+				1225 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }	   										
 			}
 		}
 	}
@@ -19796,6 +20428,7 @@ formable_nations_mod_category = {
 			    set_cosmetic_tag = FORM_RUE
 				add_stability = 0.2
 				}	
+			add_ideas = russian_military_machine	
 			set_victory_points = {
 				province = 1630
 				value = 15
@@ -22822,26 +23455,8 @@ formable_nations_mod_category = {
 					OR = { is_subject = no has_global_flag = puppets_allowed }
 					
 					AND = {
-						460 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
-						459 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
-						805 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
-						513 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
-						1 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
-						290 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
-						1318 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
-						118 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
-						169 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
-						173 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
-						168 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
-						167 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
-						175 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
-						795 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
-						170 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
-						179 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 						41 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
-						166 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
-						177 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
-						448 = { is_owned_and_controlled_by_ROOT_or_subject = yes }		
+						719 = { is_owned_and_controlled_by_ROOT_or_subject = yes }						
 					}
 					custom_trigger_tooltip = {
 						tooltip = tunisia_requirement_tooltip
@@ -22893,12 +23508,19 @@ formable_nations_mod_category = {
 				state = 461
 				state = 462
 				state = 114
-				state = 1002			
+				state = 1002
+				state = 1336
+				state = 1337
+				state = 1340
+				state = 1341
+				state = 1342
+				state = 1343		
 			}
 		}		
 		icon = formable_nations_carthage
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_CAR
+			add_ideas = punic_naval_heritage
 			add_stability = 0.2
 			custom_effect_tooltip = core_land
 			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available
@@ -22958,6 +23580,18 @@ formable_nations_mod_category = {
 				       transfer_state_to = ROOT }
 				177 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
+				1336 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1337 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1340 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1341 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1342 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1343 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }				   
 				#ottoman empire
 				448 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }		
@@ -23103,6 +23737,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_east_africa
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_EAF
+			add_ideas = the_horn_of_africa
 			add_stability = 0.2
 			custom_effect_tooltip = core_land
 			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available
@@ -23531,6 +24166,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_sahel
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_SAH
+			add_ideas = expand_trans_saharan_trade
 			add_stability = 0.2
 			custom_effect_tooltip = core_land
 			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available
@@ -23930,6 +24566,10 @@ formable_nations_mod_category = {
 				state = 463
 				state = 629
 				state = 365
+				state = 1350
+				state = 1349
+				state = 1348
+				state = 1273
 				#britian
 				state = 123
 				state = 127
@@ -23949,6 +24589,7 @@ formable_nations_mod_category = {
 				state = 120
 				state = 938	
 				state = 1315
+				state = 1225
 				#canada
 				state = 465
 				state = 464
@@ -23998,6 +24639,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_anglosphere
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_AGL
+			add_ideas = anglo_saxon_unity
 			add_stability = 0.2
 			custom_effect_tooltip = core_land
 			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available
@@ -24168,6 +24810,14 @@ formable_nations_mod_category = {
 				       transfer_state_to = ROOT }
 				365 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
+	            1350 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+                1349 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+                1348 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+                1273 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }				   
 				#britian
 				123 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
@@ -24203,8 +24853,10 @@ formable_nations_mod_category = {
 				       transfer_state_to = ROOT }
 				938 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }	
-				1315 = { add_core_of = ROOT 
+				1225 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
+				696 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }	   	   
 				#canada
 				465 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
@@ -24321,6 +24973,9 @@ formable_nations_mod_category = {
 						tooltip = korea_requirement_tooltip
 						525 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 						527 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+						1347 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+						1345 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+						1346 = { is_owned_and_controlled_by_ROOT_or_subject = yes }					
 					}
 				}
 				AND = {
@@ -24336,12 +24991,16 @@ formable_nations_mod_category = {
 				state = 716
 				state = 525
 				state = 527
-				state = 745		
+				state = 745
+				state = 1347
+				state = 1345
+				state = 1346		
 			}
 		}		
 		icon = formable_nations_greater_korea
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_GGY
+			add_ideas = the_spirit_of_goryeo
 			add_stability = 0.2
 			715 = { add_claim_by = ROOT }
 			885 = { add_claim_by = ROOT }
@@ -24355,6 +25014,12 @@ formable_nations_mod_category = {
 				525 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
 				527 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1345 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1346 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1347 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
 				#fengtian
 				328 = { add_core_of = ROOT 
@@ -24464,6 +25129,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_guyanas
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_GUY
+			add_ideas = anti_colonial_sentiments
 			add_stability = 0.2
 			set_capital = 687
 			custom_effect_tooltip = core_land
@@ -24680,6 +25346,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_andes
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_AND
+			add_ideas = exploit_andes_natural_resources
 			add_stability = 0.2
 			set_capital = 303
 			custom_effect_tooltip = core_land
@@ -24884,6 +25551,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_zapadoslavia
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_ZAP
+			add_ideas = in_the_heart_of_europe
 			add_stability = 0.2
 			set_capital = { state = 1129 }
 			custom_effect_tooltip = core_land
@@ -25019,7 +25687,6 @@ formable_nations_mod_category = {
 						183 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 						187 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 						164 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
-						1225 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 						773 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 						680 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 						350 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
@@ -25121,7 +25788,6 @@ formable_nations_mod_category = {
 				state = 183
 				state = 187
 				state = 164
-				state = 1225
 				state = 773
 				state = 680
 				state = 350
@@ -25184,6 +25850,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_byzantium
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_BYZ
+			add_ideas = memories_of_a_roman_empire
 			add_stability = 0.2
 			set_capital = { state = 797 }
 			custom_effect_tooltip = core_land
@@ -25233,8 +25900,6 @@ formable_nations_mod_category = {
 				187 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
 				164 = { add_core_of = ROOT 
-				       transfer_state_to = ROOT }
-				1225 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
 				773 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
@@ -25576,6 +26241,7 @@ formable_nations_mod_category = {
 				state = 35
 				state = 978
 				state = 979
+				state = 1225
 				state = 127
 				state = 123
 				state = 126
@@ -25599,7 +26265,16 @@ formable_nations_mod_category = {
 				state = 458
 				state = 665
 				state = 1
-				state = 448				
+				state = 448	
+				state = 1339
+				state = 1344
+				state = 1338
+				state = 1340
+				state = 1341
+				state = 1342
+				state = 1337
+				state = 1336
+				state = 1343						
 				
 				state = 759
 				state = 160
@@ -25705,6 +26380,7 @@ formable_nations_mod_category = {
 				state = 760
 				state = 943		
 				
+				state = 1334
 				state = 14
 				state = 15
 				state = 16
@@ -25736,10 +26412,35 @@ formable_nations_mod_category = {
 		icon = formable_nations_west_rome
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_WRO
+			add_ideas = rome_marches_once_against
 			add_stability = 0.2
 			set_capital = { state = 2 }
 			custom_effect_tooltip = core_land
 			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available
+				if = {
+					limit = { 
+						country_exists = ENG
+							OR = {
+								121 = { is_core_of = ROOT }
+								121 = { is_claimed_by = ROOT }
+							}						
+					}
+					annex_country = { target = ENG }
+					133 = { add_core_of = SCT
+							transfer_state_to = SCT }
+					121 = { add_core_of = SCT
+							transfer_state_to = SCT }
+					136 = { add_core_of = SCT
+							transfer_state_to = SCT }
+					120 = { add_core_of = SCT
+							transfer_state_to = SCT }
+					938 = { add_core_of = SCT
+							transfer_state_to = SCT }
+					set_autonomy = {
+						target = SCT
+						autonomous_state = autonomous_territory
+					}							
+				}
 				#Spain
 				118 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
@@ -25787,6 +26488,24 @@ formable_nations_mod_category = {
 				       transfer_state_to = ROOT }
 				290 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
+				1339 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1344 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1338 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1340 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1341 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1342 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1337 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1336 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1343 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }				   
 				#Portugal
 				112 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
@@ -25850,6 +26569,8 @@ formable_nations_mod_category = {
 				1149 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
 				#France
+				1334 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
 				14 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
 				15 = { add_core_of = ROOT 
@@ -25972,6 +26693,8 @@ formable_nations_mod_category = {
 				29 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
 				#britain
+				1225 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
 				127 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
 				123 = { add_core_of = ROOT 
@@ -26163,7 +26886,6 @@ formable_nations_mod_category = {
 						183 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 						187 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 						164 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
-						1225 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 						773 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 						680 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 						350 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
@@ -26415,7 +27137,6 @@ formable_nations_mod_category = {
 				state = 183
 				state = 187
 				state = 164
-				state = 1225
 				state = 773
 				state = 680
 				state = 350
@@ -26592,15 +27313,90 @@ formable_nations_mod_category = {
 				state = 984
 				state = 983
 				state = 980
+				state = 1225
+				state = 1334
+				state = 1339
+				state = 1344
+				state = 1338
+				state = 1340
+				state = 1341
+				state = 1342
+				state = 1337
+				state = 1336
+				state = 1343				
 			}
 		}		
 		icon = formable_nations_roman_empire
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_ROE
+			add_ideas = the_greatest_empire_reborn
 			add_stability = 0.2
 			custom_effect_tooltip = core_land
 			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available
+				if = {
+					limit = { 
+						country_exists = ENG
+							OR = {
+								121 = { is_core_of = ROOT }
+								121 = { is_claimed_by = ROOT }
+							}						
+					}
+					annex_country = { target = ENG }
+					133 = { add_core_of = SCT
+							transfer_state_to = SCT }
+					121 = { add_core_of = SCT
+							transfer_state_to = SCT }
+					136 = { add_core_of = SCT
+							transfer_state_to = SCT }
+					120 = { add_core_of = SCT
+							transfer_state_to = SCT }
+					938 = { add_core_of = SCT
+							transfer_state_to = SCT }
+					set_autonomy = {
+						target = SCT
+						autonomous_state = autonomous_territory
+					}							
+				}
+				if = {
+					limit = { 
+						NOT = {
+							country_exists = SUD
+							OR = {
+								551 = { is_core_of = ROOT }
+								551 = { is_claimed_by = ROOT }
+							}
+						}
+					}
+					551 = { transfer_state_to = SUD }
+					1010 = { transfer_state_to = SUD }
+					862 = { transfer_state_to = SUD }
+					549 = { transfer_state_to = SUD }
+					1011 = { transfer_state_to = SUD }
+					1007 = { transfer_state_to = SUD }
+					set_autonomy = {
+						target = SUD
+						autonomous_state = autonomous_territory
+					}
+				}		
 				#spain
+				1339 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1344 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1338 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1340 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1341 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1342 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1337 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1336 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1343 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }				
 				118 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
 				41 = { add_core_of = ROOT 
@@ -26710,6 +27506,8 @@ formable_nations_mod_category = {
 				1149 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
 				#France
+				1334 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
 				14 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
 				15 = { add_core_of = ROOT 
@@ -26838,6 +27636,8 @@ formable_nations_mod_category = {
 				29 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
 				#britain
+				1225 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
 				127 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
 				123 = { add_core_of = ROOT 
@@ -26908,6 +27708,10 @@ formable_nations_mod_category = {
 				       transfer_state_to = ROOT }
 				784 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
+				45 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				875 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }					   
 				#malta
 				116 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
@@ -26975,8 +27779,6 @@ formable_nations_mod_category = {
 				       transfer_state_to = ROOT }
 				164 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
-				1225 = { add_core_of = ROOT 
-				       transfer_state_to = ROOT }
 				773 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
 				680 = { add_core_of = ROOT 
@@ -27000,7 +27802,15 @@ formable_nations_mod_category = {
 				450 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
 				1001 = { add_core_of = ROOT 
-				       transfer_state_to = ROOT }					   
+				       transfer_state_to = ROOT }
+				354 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1000 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				352 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }	
+				350 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }		   
 				#Bulgaria
 				48 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
@@ -27090,6 +27900,22 @@ formable_nations_mod_category = {
 				137 = { add_core_of = ROOT } 
 				1220 = { add_core_of = ROOT } 
 				1221 = { add_core_of = ROOT } 
+				1082 = { add_core_of = ROOT } 
+				#南撒哈拉
+				1318 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				462 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				513 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				514 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				273 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1009 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				552 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
 			}
 		}
 	}
@@ -27267,6 +28093,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_khazer
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_KHA
+			add_ideas = steppe_legacy
 			add_stability = 0.2
 			set_province_name = { id = 9753 name = "Atil"}
 			set_capital = { state = 236 }
@@ -27491,6 +28318,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_aksum
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_AKS
+			add_ideas = african_trade_hub
 			add_stability = 0.2
 			set_capital = { state = 923 }
 			custom_effect_tooltip = core_land
@@ -28954,6 +29782,9 @@ formable_nations_mod_category = {
 				526 = { add_claim_by = ROOT }
 				525 = { add_claim_by = ROOT }
 				527 = { add_claim_by = ROOT }
+				1345 = { add_claim_by = ROOT }
+				1346 = { add_claim_by = ROOT }
+				1347 = { add_claim_by = ROOT }
 				#burma
 				701 = { add_claim_by = ROOT }
 				72 = { add_claim_by = ROOT }
@@ -29132,11 +29963,20 @@ formable_nations_mod_category = {
 						537 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 						645 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 						648 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+						1351 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+						1352 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+						1353 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+						1354 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+						1355 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+						1356 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 					}
 					custom_trigger_tooltip = {
 						tooltip = korea_requirement_tooltip
 						525 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 						527 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+						1345 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+						1346 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+						1347 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 					}
 				}
 				AND = {
@@ -29257,9 +30097,18 @@ formable_nations_mod_category = {
 				state = 537
 				state = 645
 				state = 648
+				state = 1351
+				state = 1352
+				state = 1353
+				state = 1354
+				state = 1355
+				state = 1356				
 				
 				state = 525
 				state = 527
+				state = 1345
+				state = 1346
+				state = 1347
 			}
 		}			
 		icon = formable_nations_dadongya
@@ -29537,6 +30386,18 @@ formable_nations_mod_category = {
 				       transfer_state_to = ROOT }
 				648 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
+				1351 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1352 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1353 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1354 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1355 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1356 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }					   
 				#vietnam				
 				857 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
@@ -29553,13 +30414,18 @@ formable_nations_mod_category = {
 				       transfer_state_to = ROOT }
 				527 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
+				1345 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1346 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1347 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }					   
 				#transamur
                 1246 = { add_core_of = ROOT }
 				409 = { add_core_of = ROOT }
 				560 = { add_core_of = ROOT }
 				561 = { add_core_of = ROOT }
 				657 = { add_core_of = ROOT }
-				408 = { add_core_of = ROOT }
 				#alash
                 404 = { add_core_of = ROOT }
                 589 = { add_core_of = ROOT }
@@ -29744,9 +30610,18 @@ formable_nations_mod_category = {
 						537 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 						645 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 						648 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+						1351 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+						1352 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+						1353 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+						1354 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+						1355 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+						1356 = { is_owned_and_controlled_by_ROOT_or_subject = yes }						
 						#korea
 						525 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 						527 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+						1345 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+						1346 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+						1347 = { is_owned_and_controlled_by_ROOT_or_subject = yes }						
 						#喜马拉雅
 						323 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 						324 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
@@ -29968,9 +30843,18 @@ formable_nations_mod_category = {
 				state = 537
 				state = 645
 				state = 648
+				state = 1351
+				state = 1352
+				state = 1353
+				state = 1354
+				state = 1355
+				state = 1356				
 				
 				state = 525
 				state = 527
+				state = 1347
+				state = 1345
+				state = 1346
 				
 				state = 323
 				state = 324
@@ -30327,11 +31211,29 @@ formable_nations_mod_category = {
 				       transfer_state_to = ROOT }
 				648 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
+				1351 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1352 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1353 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1354 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1355 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1356 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }					   
 				#korea
 				525 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
 				527 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
+				1347 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1345 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1346 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }					   
 				#kokand
                 281 = { add_core_of = ROOT }
 				422 = { add_core_of = ROOT }
@@ -30611,7 +31513,6 @@ formable_nations_mod_category = {
 							184 = { is_owned_and_controlled_by_ROOT_or_subject = yes }	
 							182 = { is_owned_and_controlled_by_ROOT_or_subject = yes }	
 							187 = { is_owned_and_controlled_by_ROOT_or_subject = yes }	
-							1225 = { is_owned_and_controlled_by_ROOT_or_subject = yes }	
 							341 = { is_owned_and_controlled_by_ROOT_or_subject = yes }	
 							773 = { is_owned_and_controlled_by_ROOT_or_subject = yes }	
 							340 = { is_owned_and_controlled_by_ROOT_or_subject = yes }	
@@ -30649,7 +31550,6 @@ formable_nations_mod_category = {
 				state = 184	
 				state = 182	
 				state = 187	
-				state = 1225	
 				state = 341	
 				state = 773	
 				state = 340	
@@ -30671,6 +31571,37 @@ formable_nations_mod_category = {
 			add_stability = 0.2
 			custom_effect_tooltip = core_land
 			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available
+				if = {
+					limit = {
+						country_exists = ARM
+					}
+					354 = { add_core_of = ARM
+							transfer_state_to = ARM }
+					1213 = { add_core_of = ARM 
+							transfer_state_to = ARM }
+					1000 = { add_core_of = ARM 
+							transfer_state_to = ARM }
+					1001 = { add_core_of = ARM 
+							transfer_state_to = ARM }
+					350 = { add_core_of = ARM 
+							transfer_state_to = ARM }
+					352 = { add_core_of = ARM 
+							transfer_state_to = ARM }
+				}
+				else = {
+					354 = { add_core_of = ROOT 
+							transfer_state_to = ROOT }
+					1213 = { add_core_of = ROOT 
+							transfer_state_to = ROOT }
+					1000 = { add_core_of = ROOT 
+							transfer_state_to = ROOT }
+					1001 = { add_core_of = ROOT 
+							transfer_state_to = ROOT }	
+					350 = { add_core_of = ROOT 
+							transfer_state_to = ROOT }
+					352 = { add_core_of = ROOT 
+							transfer_state_to = ROOT }												
+				}			
 				#greece
 				939 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
@@ -30701,8 +31632,6 @@ formable_nations_mod_category = {
 				182 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
 				187 = { add_core_of = ROOT 
-				       transfer_state_to = ROOT }
-				1225 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
 				341 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
@@ -31463,6 +32392,9 @@ formable_nations_mod_category = {
 						tooltip = korea_requirement_tooltip
 						525 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 						527 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+						1345 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+						1346 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+						1347 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 					}
 				}
 				AND = {
@@ -31523,6 +32455,9 @@ formable_nations_mod_category = {
 				       transfer_state_to = ROOT }
 				527 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
+				1345
+				1346
+				1347
 				#fengtian
 				328 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
@@ -31957,6 +32892,8 @@ formable_nations_mod_category = {
 				#北朝鲜	   
 				527	= { add_core_of = ROOT 
 					   transfer_state_to = ROOT }
+				1347 = { add_core_of = ROOT 
+					   transfer_state_to = ROOT }
 			}
 		}
 	}	
@@ -32152,6 +33089,11 @@ formable_nations_mod_category = {
 				transfer_state_to = ROOT
 		}
 		every_state = {
+				limit = { is_core_of = UZB }
+				add_core_of = ROOT
+				transfer_state_to = ROOT
+		}		
+		every_state = {
 				limit = { is_core_of = KOK }
 				add_core_of = ROOT
 				transfer_state_to = ROOT
@@ -32288,6 +33230,12 @@ formable_nations_mod_category = {
 						537 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 						645 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 						648 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+						1351 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+						1352 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+						1353 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+						1354 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+						1355 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
+						1356 = { is_owned_and_controlled_by_ROOT_or_subject = yes }
 					}
 				}
 				AND = {
@@ -32335,6 +33283,18 @@ formable_nations_mod_category = {
 				       transfer_state_to = ROOT }
 				648 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
+				1351 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1352 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1353 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1354 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1355 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1356 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }	   
 			create_country_leader = {
 				name = "Mr.C.B."
 				picture = "gfx/leaders/IMJ/MRCB_comaribbon.png"
@@ -32479,6 +33439,18 @@ formable_nations_mod_category = {
 				       transfer_state_to = ROOT }
 				648 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
+				1351 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1352 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1353 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1354 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1355 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1356 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }					   
 			create_country_leader = {
 				name = "Fuji Kiseki"
 				picture = "gfx/leaders/IMJ/fuji_kiseki_Eriko.png"
@@ -32627,6 +33599,18 @@ formable_nations_mod_category = {
 				       transfer_state_to = ROOT }
 				648 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
+				1351 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1352 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1353 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1354 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1355 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1356 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }					   
 			create_country_leader = {
 				name = "Nikaidou Saki"
 				picture = "gfx/leaders/IMJ/Saki_Nikaido.png"
@@ -32774,6 +33758,18 @@ formable_nations_mod_category = {
 				       transfer_state_to = ROOT }
 				648 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
+				1351 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1352 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1353 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1354 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1355 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1356 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }					   
 			create_country_leader = {
 				name = "Tanino Gimlet"
 				picture = "gfx/leaders/IMJ/Tanino_Gimlet_ca4i.png"
@@ -32971,6 +33967,18 @@ formable_nations_mod_category = {
 				       transfer_state_to = ROOT }
 				648 = { add_core_of = ROOT 
 				       transfer_state_to = ROOT }
+				1351 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1352 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1353 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1354 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1355 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }
+				1356 = { add_core_of = ROOT 
+				       transfer_state_to = ROOT }					   
 			set_party_name = {
 				ideology = totalist
 				name = "大社破坏运动"
@@ -33563,7 +34571,9 @@ formable_nations_mod_category = {
 						is_core_of = KYR
 						is_claimed_by = KYR
 						is_core_of = KHI
-						is_claimed_by = KHI		
+						is_claimed_by = KHI	
+						is_core_of = UZB
+						is_claimed_by = UZB							
 						is_core_of = ARM
 						is_claimed_by = ARM
 						is_core_of = GEO

@@ -10,19 +10,30 @@ country_event = {
 	
 	option = {
 		name = test_picker.1.a
-		set_country_leader_ideology = natpop_based_subtype
+		set_power_balance = { 
+			id = ALG_amazigs_arabs_bop
+			left_side = ALG_Loyal_to_Arabia
+			right_side = ALG_Amazig_rises
+			set_default = yes
+		}
 	}
 	option = {
 		name = test_picker.1.b
-		set_country_leader_ideology = bureaucratic_socialism_subtype
+		add_power_balance_value = {
+			id = ALG_amazigs_arabs_bop
+			value = -0.2
+		}
 	}
 	option = {
 		name = test_picker.1.c
-		set_country_leader_ideology = hegemony_gihrenism_subtype
+		add_power_balance_value = {
+			id = ALG_amazigs_arabs_bop
+			value = 0.2
+		}
 	}
 	option = {
 		name = test_picker.1.e
-		set_country_leader_ideology = orphism_subtype
+		set_country_leader_ideology = natpop_esoteric_marxism_subtype
 	}
 	option = {
 		name = test_picker.1.f

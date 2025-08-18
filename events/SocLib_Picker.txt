@@ -339,6 +339,112 @@ country_event = {
 	}
 	option = {
 		name = soclib_picker.9.h
+		country_event = soclib_picker.10
+	}
+}
+
+country_event = {
+	id = soclib_picker.10
+	title = soclib_picker.10.t 
+	desc = soclib_picker.10.d 
+	picture = GFX_report_event_soclib10
+
+	is_triggered_only = yes
+	
+	option = {
+		name = soclib_picker.10.a
+		set_country_leader_ideology = jindyworobak_subtype
+	}
+	option = {
+		name = soclib_picker.10.b
+		set_country_leader_ideology = soclib_aboriginal_garveyism_subtype
+	}
+	option = {
+		name = soclib_picker.10.c
+		set_country_leader_ideology = soclib_chinese_federalism_subtype
+	}
+	option = {
+		name = soclib_picker.10.e
+		set_country_leader_ideology = managerial_technicracy_subtype
+	}
+	option = {
+		name = soclib_picker.10.f
+		set_country_leader_ideology = soclib_blasquismo_subtype
+	}
+	option = {
+		name = soclib_picker.10.g
+		set_country_leader_ideology = lerrouxismo_subtype
+	}
+	option = {
+		name = soclib_picker.10.h
+		country_event = soclib_picker.11
+	}
+}
+
+country_event = {
+	id = soclib_picker.11
+	title = soclib_picker.11.t 
+	desc = soclib_picker.11.d 
+	picture = GFX_report_event_soclib11
+
+	is_triggered_only = yes
+	
+	option = {
+		name = soclib_picker.11.a
+		set_country_leader_ideology = soclib_sicilianism_subtype
+	}
+	option = {
+		name = soclib_picker.11.b
+		set_country_leader_ideology = soclib_liberal_feminism_subtype 
+	}
+	option = {
+		name = soclib_picker.11.c
+		set_country_leader_ideology = soclib_liberal_conservative_subtype
+	}
+	option = {
+		name = soclib_picker.11.e
+		set_country_leader_ideology = soclib_normal_dixiecrat_subtype
+	}
+	option = {
+		name = soclib_picker.11.f
+		set_country_leader_ideology = socialist_federalism_subtype
+	}
+	option = {
+		name = soclib_picker.11.g
+		set_country_leader_ideology = soclib_georgism_subtype
+	}
+	option = {
+		name = soclib_picker.11.h
+		country_event = soclib_picker.12
+	}
+}
+
+country_event = {
+	id = soclib_picker.12
+	title = soclib_picker.12.t 
+	desc = soclib_picker.12.d 
+	picture = GFX_report_event_soclib12
+
+	is_triggered_only = yes
+	
+	option = {
+		name = soclib_picker.12.a
+		set_country_leader_ideology = community_movement_subtype
+	}
+	option = {
+		name = soclib_picker.12.b
+		set_country_leader_ideology = laurentism_subtype
+	}
+	option = {
+		name = soclib_picker.12.c
+		set_country_leader_ideology = soclib_oligarchy_subtype
+	}
+	option = {
+		name = soclib_picker.12.e
+		set_country_leader_ideology = venizelism_subtype
+	}
+	option = {
+		name = soclib_picker.12.h
 		country_event = soclib_picker.1
 	}
 }

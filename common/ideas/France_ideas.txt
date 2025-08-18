@@ -1,148 +1,149 @@
 ##############
 # Commune of France
 ##############
-hidden_ideas = {
-	FRA_af_hidden_motor_production_bonus = { #adds equipment_bonus not allowed in dynmod
-		on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_af_hidden_motor_production_bonus" }
-		name = FRA_armee_federale_modifier
-		picture = advisors_france #same as the dynmod
-		allowed = { always = no }
-		equipment_bonus = { #if you edit this, update FRA_motor_production_bonus to match
-			motorized_equipment = {
-				build_cost_ic = -0.1
-				instant = yes
-			}
-			mechanized_equipment = {
-				build_cost_ic = -0.1
-				instant = yes
-			}
-			armored_car_equipment = {
-				build_cost_ic = -0.1
-				reliability = 0.05
-				instant = yes
-			}
-		}
-	}
-	FRA_af_hidden_motor_production_bonus_no_lar = { #adds equipment_bonus not allowed in dynmod
-		on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_af_hidden_motor_production_bonus_no_lar" }
-		name = FRA_armee_federale_modifier
-		picture = advisors_france #same as the dynmod
-		allowed = { always = no }
-		equipment_bonus = { #if you edit this, update FRA_motor_production_bonus_no_lar to match
-			motorized_equipment = {
-				build_cost_ic = -0.1
-				instant = yes
-			}
-			mechanized_equipment = {
-				build_cost_ic = -0.1
-				instant = yes
-			}
-		}
-	}
-	FRA_af_hidden_support_production_bonus = { #adds equipment_bonus not allowed in dynmod
-		on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_af_hidden_motor_production_bonus_no_lar" }
-		name = FRA_armee_federale_modifier
-		picture = advisors_france #same as the dynmod
-		allowed = { always = no }
-		equipment_bonus = { #if you edit this, update FRA_support_production_bonus to match
-			support_equipment = {
-				build_cost_ic = -0.15
-				instant = yes
-			}
-		}
-	}
-	FRA_af_hidden_artillery_production_bonus = { #adds equipment_bonus not allowed in dynmod
-		on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_af_hidden_artillery_production_bonus" }
-		name = FRA_armee_federale_modifier
-		picture = advisors_france #same as the dynmod
-		allowed = { always = no }
-		equipment_bonus = { #if you edit this, update FRA_artillery_production_bonus to match
-			mio_cat_eq_all_artillery = {
-				build_cost_ic = -0.1
-				instant = yes
-			}
-		}
-	}
-	FRA_af_hidden_armour_defence_bonus = { #adds equipment_bonus not allowed in dynmod
-		on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_af_hidden_armour_defence_bonus" }
-		name = FRA_armee_federale_modifier
-		picture = advisors_france #same as the dynmod
-		allowed = { always = no }
-		equipment_bonus = { #if you edit this, update FRA_armour_defence_bonus to match
-			armor = {
-				defense = 0.05
-				instant = yes
-			}
-		}
-	}
-	FRA_af_hidden_armour_breakthrough_bonus = { #adds equipment_bonus not allowed in dynmod
-		on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_af_hidden_armour_breakthrough_bonus" }
-		name = FRA_armee_federale_modifier
-		picture = advisors_france #same as the dynmod
-		allowed = { always = no }
-		equipment_bonus = { #if you edit this, update FRA_armour_breakthrough_bonus to match
-			armor = {
-				breakthrough = 0.05
-				instant = yes
-			}
-		}
-	}
-	FRA_af_hidden_armour_production_bonus = { #adds equipment_bonus not allowed in dynmod
-		on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_af_hidden_armour_production_bonus" }
-		name = FRA_armee_federale_modifier
-		picture = advisors_france #same as the dynmod
-		allowed = { always = no }
-		equipment_bonus = { #if you edit this, update FRA_armour_production_bonus to match
-			armor = {
-				reliability = 0.05
-				build_cost_ic = -0.05
-				instant = yes
-			}
-		}
-	}
 
-	FRA_aap_hidden_aircraft_production_bonus = { #adds equipment_bonus not allowed in dynmod
-		on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_aap_hidden_aircraft_production_bonus" }
-		name = FRA_armee_de_lair_populaire_modifier
-		picture = generic_air_fighter #same as the dynmod
-		allowed = { always = no }
-		equipment_bonus = { #if you edit this, update FRA_aircraft_production_bonus to match
-			mio_cat_eq_all_aircraft = {
-				build_cost_ic = -0.05
-				instant = yes
-			}
-		}
-	}
 
-	FRA_mf_hidden_capital_ship_production_bonus = {
-		on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_mf_hidden_capital_ship_production_bonus" }
-		name = FRA_marine_federale_modifier
-		picture = AUS_naval_efficiency_idea #same as the dynmod
-		allowed = { always = no }
-		equipment_bonus = { #if you edit this, update FRA_capital_ship_production_bonus to match
-			capital_ship = {
-				build_cost_ic = -0.1
-				instant = yes
-			}
-		}
-	}
-	FRA_mf_hidden_screen_ship_production_bonus = { #adds equipment_bonus not allowed in dynmod
-		on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_mf_hidden_capital_ship_production_bonus" }
-		name = FRA_marine_federale_modifier
-		picture = AUS_naval_efficiency_idea #same as the dynmod
-		allowed = { always = no }
-		equipment_bonus = { #if you edit this, update FRA_screen_ship_production_bonus to match
-			screen_ship = {
-				naval_speed = 0.05
-				build_cost_ic = -0.05
-				instant = yes
-			}
-		}
-	}
-}
 
 ideas = {
+	hidden_ideas = {
+		FRA_af_hidden_motor_production_bonus = { #adds equipment_bonus not allowed in dynmod
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_af_hidden_motor_production_bonus" }
+			name = FRA_armee_federale_modifier
+			picture = advisors_france #same as the dynmod
+			allowed = { always = no }
+			equipment_bonus = { #if you edit this, update FRA_motor_production_bonus to match
+				motorized_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				mechanized_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				armored_car_equipment = {
+					build_cost_ic = -0.1
+					reliability = 0.05
+					instant = yes
+				}
+			}
+		}
+    	FRA_af_hidden_motor_production_bonus_no_lar = { #adds equipment_bonus not allowed in dynmod
+    	    on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_af_hidden_motor_production_bonus_no_lar" }
+    	    name = FRA_armee_federale_modifier
+    	    picture = advisors_france #same as the dynmod
+    	    allowed = { always = no }
+    	    equipment_bonus = { #if you edit this, update FRA_motor_production_bonus_no_lar to match
+    	        motorized_equipment = {
+    	            build_cost_ic = -0.1
+    	            instant = yes
+    	        }
+    	        mechanized_equipment = {
+    	            build_cost_ic = -0.1
+    	            instant = yes
+    	        }
+    	    }
+    	}
+    	FRA_af_hidden_support_production_bonus = { #adds equipment_bonus not allowed in dynmod
+    	    on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_af_hidden_motor_production_bonus_no_lar" }
+    	    name = FRA_armee_federale_modifier
+    	    picture = advisors_france #same as the dynmod
+    	    allowed = { always = no }
+    	    equipment_bonus = { #if you edit this, update FRA_support_production_bonus to match
+    	        support_equipment = {
+    	            build_cost_ic = -0.15
+    	            instant = yes
+    	        }
+    	    }
+    	}
+    	FRA_af_hidden_artillery_production_bonus = { #adds equipment_bonus not allowed in dynmod
+    	    on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_af_hidden_artillery_production_bonus" }
+    	    name = FRA_armee_federale_modifier
+    	    picture = advisors_france #same as the dynmod
+    	    allowed = { always = no }
+    	    equipment_bonus = { #if you edit this, update FRA_artillery_production_bonus to match
+    	        mio_cat_eq_all_artillery = {
+    	            build_cost_ic = -0.1
+    	            instant = yes
+    	        }
+    	    }
+    	}
+    	FRA_af_hidden_armour_defence_bonus = { #adds equipment_bonus not allowed in dynmod
+    	    on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_af_hidden_armour_defence_bonus" }
+    	    name = FRA_armee_federale_modifier
+    	    picture = advisors_france #same as the dynmod
+    	    allowed = { always = no }
+    	    equipment_bonus = { #if you edit this, update FRA_armour_defence_bonus to match
+    	        armor = {
+    	            defense = 0.05
+    	            instant = yes
+    	        }
+    	    }
+    	}
+    	FRA_af_hidden_armour_breakthrough_bonus = { #adds equipment_bonus not allowed in dynmod
+    	    on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_af_hidden_armour_breakthrough_bonus" }
+    	    name = FRA_armee_federale_modifier
+    	    picture = advisors_france #same as the dynmod
+    	    allowed = { always = no }
+    	    equipment_bonus = { #if you edit this, update FRA_armour_breakthrough_bonus to match
+    	        armor = {
+    	            breakthrough = 0.05
+    	            instant = yes
+    	        }
+    	    }
+    	}
+    	FRA_af_hidden_armour_production_bonus = { #adds equipment_bonus not allowed in dynmod
+    	    on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_af_hidden_armour_production_bonus" }
+    	    name = FRA_armee_federale_modifier
+    	    picture = advisors_france #same as the dynmod
+    	    allowed = { always = no }
+    	    equipment_bonus = { #if you edit this, update FRA_armour_production_bonus to match
+    	        armor = {
+    	            reliability = 0.05
+    	            build_cost_ic = -0.05
+    	            instant = yes
+    	        }
+    	    }
+    	}
 
+    	FRA_aap_hidden_aircraft_production_bonus = { #adds equipment_bonus not allowed in dynmod
+    	    on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_aap_hidden_aircraft_production_bonus" }
+    	    name = FRA_armee_de_lair_populaire_modifier
+    	    picture = generic_air_fighter #same as the dynmod
+    	    allowed = { always = no }
+    	    equipment_bonus = { #if you edit this, update FRA_aircraft_production_bonus to match
+    	        mio_cat_eq_all_aircraft = {
+    	            build_cost_ic = -0.05
+    	            instant = yes
+    	        }
+    	    }
+    	}
+
+    	FRA_mf_hidden_capital_ship_production_bonus = {
+    	    on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_mf_hidden_capital_ship_production_bonus" }
+    	    name = FRA_marine_federale_modifier
+    	    picture = AUS_naval_efficiency_idea #same as the dynmod
+    	    allowed = { always = no }
+    	    equipment_bonus = { #if you edit this, update FRA_capital_ship_production_bonus to match
+    	        capital_ship = {
+    	            build_cost_ic = -0.1
+    	            instant = yes
+    	        }
+    	    }
+    	}
+    	FRA_mf_hidden_screen_ship_production_bonus = { #adds equipment_bonus not allowed in dynmod
+    	    on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_mf_hidden_capital_ship_production_bonus" }
+    	    name = FRA_marine_federale_modifier
+    	    picture = AUS_naval_efficiency_idea #same as the dynmod
+    	    allowed = { always = no }
+    	    equipment_bonus = { #if you edit this, update FRA_screen_ship_production_bonus to match
+    	        screen_ship = {
+    	            naval_speed = 0.05
+    	            build_cost_ic = -0.05
+    	            instant = yes
+    	        }
+    	    }
+    	}
+	}	
 	country = {
 		FRA_legione_proletaria_dummy = { #used only for focus tooltip
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SRI_legione_proletaria_dummy" }

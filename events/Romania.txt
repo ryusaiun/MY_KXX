@@ -35,7 +35,7 @@ country_event = {
 			name = "米哈伊·斯特雷斯库"
 			picture = "gfx/leaders/ROM/Mihai_Strescu.jpg"
 			expire = "1.1.1"
-			ideology = popular_legionism
+			ideology = left_leaning_legionarism_subtype
 		}
 		remove_ideas_with_trait = head_of_government
 		add_ideas = ROM_Horia_Sima_hog_npo

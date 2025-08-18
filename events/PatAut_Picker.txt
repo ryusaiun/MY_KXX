@@ -482,7 +482,117 @@ country_event = {
 		set_country_leader_ideology = poujadisme_subtype
 	}
 	option = {
+		name = pataut_picker.13.f
+		set_country_leader_ideology = pataut_tridemism_subtype 
+	}
+	option = {
+		name = pataut_picker.13.g
+		set_country_leader_ideology = pataut_security_state_subtype  
+	}
+	option = {
 		name = pataut_picker.13.h
+		country_event = pataut_picker.14
+	}
+}
+
+country_event = {
+	id = pataut_picker.14
+	title = pataut_picker.14.t 
+	desc = pataut_picker.14.d 
+	picture = GFX_report_event_pataut14
+
+	is_triggered_only = yes
+	
+	option = {
+		name = pataut_picker.14.a
+		set_country_leader_ideology = pataut_synarchism_subtype
+	}
+	option = {
+		name = pataut_picker.14.b
+		set_country_leader_ideology = pataut_maurism_subtype
+	}
+	option = {
+		name = pataut_picker.14.c
+		set_country_leader_ideology = integrism_subtype
+	}
+	option = {
+		name = pataut_picker.14.e
+		set_country_leader_ideology = pataut_maurrassism_subtype
+	}
+	option = {
+		name = pataut_picker.14.f
+		set_country_leader_ideology = pataut_toryism_subtype 
+	}
+	option = {
+		name = pataut_picker.14.g
+		set_country_leader_ideology = pataut_agrarianism_subtype  
+	}
+	option = {
+		name = pataut_picker.14.h
+		country_event = pataut_picker.15
+	}
+}
+
+country_event = {
+	id = pataut_picker.15
+	title = pataut_picker.15.t 
+	desc = pataut_picker.15.d 
+	picture = GFX_report_event_pataut15
+
+	is_triggered_only = yes
+	
+	option = {
+		name = pataut_picker.15.a
+		set_country_leader_ideology = pataut_iberian_federalism_subtype 
+	}
+	option = {
+		name = pataut_picker.15.b
+		set_country_leader_ideology = pataut_solidarism_subtype  
+	}
+	option = {
+		name = pataut_picker.15.c
+		set_country_leader_ideology = terrismo_subtype   
+	}
+	option = {
+		name = pataut_picker.15.e
+		set_country_leader_ideology = nuevo_ideal_nacional_subtype   
+	}
+	option = {
+		name = pataut_picker.15.f
+		set_country_leader_ideology = pataut_conservative_feminism_subtype   
+	}
+	option = {
+		name = pataut_picker.15.g
+		set_country_leader_ideology = duplessism_subtype   
+	}
+	option = {
+		name = pataut_picker.15.h
+		country_event = pataut_picker.16
+	}
+}
+
+country_event = {
+	id = pataut_picker.16
+	title = pataut_picker.16.t 
+	desc = pataut_picker.16.d 
+	picture = GFX_report_event_pataut16
+
+	is_triggered_only = yes
+	
+	option = {
+		name = pataut_picker.16.a
+		set_country_leader_ideology = chosid_nyi_subtype  
+	}
+	option = {
+		name = pataut_picker.16.b
+		set_country_leader_ideology = metaxism_subtype   
+	}
+	option = {
+		name = pataut_picker.16.c
+		set_country_leader_ideology = yan_xishan_thought_subtype    
+	}
+	option = {
+		name = pataut_picker.16.h
 		country_event = pataut_picker.1
 	}
 }

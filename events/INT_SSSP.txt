@@ -1,0 +1,131 @@
+﻿
+add_namespace = SSSP
+
+country_event = { #曼查克沼泽的传闻
+	id = SSSP.1
+	title = SSSP.1.t 
+	desc = SSSP.1.d 
+
+	is_triggered_only = yes
+	
+	option = {
+		name = SSSP.1.a
+	}
+
+	option = {
+		name = SSSP.1.b
+		country_event = {
+			id = SSSP.2
+			days = 30
+		}	
+	}
+
+}
+
+country_event = { #到达巴吞鲁日
+	id = SSSP.2
+	title = SSSP.2.t 
+	desc = SSSP.2.d 
+
+	is_triggered_only = yes
+	
+	option = {
+		name = SSSP.2.a
+		country_event = {
+			id = SSSP.3
+			days = 7
+		}
+	}
+
+}
+
+country_event = { #路线标记
+	id = SSSP.3
+	title = SSSP.3.t 
+	desc = SSSP.3.d 
+
+	is_triggered_only = yes
+	
+	option = {
+		name = SSSP.3.a
+		country_event = {
+			id = SSSP.4
+			days = 7
+		}
+	}
+	
+}
+
+country_event = { #疑似巫毒教祭祀仪式的记录
+	id = SSSP.4
+	title = SSSP.4.t 
+	desc = SSSP.4.d 
+
+	is_triggered_only = yes
+	
+	option = {
+		name = SSSP.4.a
+		country_event = SSSP.5
+	}
+	
+}
+
+country_event = { #疑似巫毒教祭祀仪式的记录2
+	id = SSSP.5
+	title = SSSP.5.t 
+	desc = SSSP.5.d 
+
+	is_triggered_only = yes
+	
+	option = {
+		name = SSSP.5.a
+		country_event = SSSP.6
+	}
+	
+}
+
+country_event = { #补充报告
+	id = SSSP.6
+	title = SSSP.6.t 
+	desc = SSSP.6.d 
+
+	is_triggered_only = yes
+	
+	option = {
+		name = SSSP.6.a
+		country_event = SSSP.7
+	}
+
+	option = {
+		name = SSSP.6.a
+		country_event = SSSP.8
+	}
+	
+}
+
+country_event = { #补充报告2
+	id = SSSP.7
+	title = SSSP.7.t 
+	desc = SSSP.7.d 
+
+	is_triggered_only = yes
+	
+	option = {
+		name = SSSP.7.a
+		country_event = SSSP.8
+	}
+	
+}
+
+country_event = { #报告归档
+	id = SSSP.8
+	title = SSSP.8.t 
+	desc = SSSP.8.d 
+
+	is_triggered_only = yes
+	
+	option = {
+		name = SSSP.8.a
+	}
+	
+}

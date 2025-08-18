@@ -15,10 +15,18 @@ operations = {
 
 		cancel_trigger = {
 			NOT = { country_exists = CHP }
+			NOT = {
+				has_global_flag = FRA_Farmer_Win
+			}
 		}
 
 		timeout_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision timeout PLX_surviving_german_invasion_ger"
+			country_event = FruitFarmerRevolution.12
+			clr_global_flag = FRA_Farmer_Chaos_Start
+			CHP = {
+				dismantle_faction = yes
+			}
 			if = {
 				limit = {
 					NOT = {
@@ -46,11 +54,70 @@ operations = {
 			log = "[GetDateText]: [Root.GetName]: Decision PLX_surviving_german_invasion_ger"
 			remove_ideas = FRA_Fruit_Farmer_Revolution	
 			remove_ideas = FRA_The_supply_of_wine_is_obstructed_2
+			clr_global_flag = FRA_Farmer_Chaos_Start
 		}
 
 		ai_will_do = {
 			factor = 100
 		}
 	}	
-
+	FRA_End_Farmer_Revolution = {
+		icon = generic_construction
+		visible = {
+			has_global_flag = FRA_Farmer_Chaos_Start
+			tag = FRA
+		}
+		available = {
+			NOT = {
+				country_exists = CHP
+			}
+			NOT = {
+				country_exists = PDL
+			}
+			NOT = {
+				country_exists = PRO
+			}				
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}		
+		cost = 150
+		days_remove = 14
+		remove_effect = {
+			remove_ideas = FRA_Fruit_Farmer_Revolution
+			remove_ideas = FRA_The_supply_of_wine_is_obstructed_2
+			clr_global_flag = FRA_Farmer_Chaos_Start
+			set_country_flag = FRA_Control_Rural_Chaos
+			add_timed_idea = {
+				idea = FRA_Fruit_Farmer_Revolution2
+				days = 120
+			}
+		}		
+	}
+	FRA_End_Farmer_Revolution2 = {
+		icon = generic_construction
+		visible = {
+			has_country_flag = FRA_Control_Rural_Chaos
+			tag = FRA
+		}
+		available = {
+			NOT = {
+				has_idea = FRA_Fruit_Farmer_Revolution2
+			}			
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}		
+		cost = 150
+		days_remove = 30
+		remove_effect = {
+			clr_country_flag = FRA_Control_Rural_Chaos
+			add_ideas = FRA_Fruit_Farmer_Revolution3
+			hidden_effect = {
+				remove_ideas = FRA_Fruit_Farmer_Revolution
+			}
+		}
+	}	
 }

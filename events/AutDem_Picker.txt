@@ -410,7 +410,71 @@ country_event = {
 		set_country_leader_ideology = authdem_poujadisme_subtype
 	}
 	option = {
+		name = autdem_picker.11.g
+		set_country_leader_ideology = rejuvenated_prussianism_subtype
+	}
+	option = {
 		name = autdem_picker.11.h
+		country_event = autdem_picker.12
+	}
+}
+
+country_event = {
+	id = autdem_picker.12
+	title = autdem_picker.12.t 
+	desc = autdem_picker.12.d 
+	picture = GFX_report_event_autdem12
+
+	is_triggered_only = yes
+	
+	option = {
+		name = autdem_picker.12.a
+		set_country_leader_ideology = authdem_noucentisme_subtype
+	}
+	option = {
+		name = autdem_picker.12.b
+		set_country_leader_ideology = maurism_subtype
+	}
+	option = {
+		name = autdem_picker.12.c
+		set_country_leader_ideology = authdem_solidarism_subtype
+	}
+	option = {
+		name = autdem_picker.12.e
+		set_country_leader_ideology = authdem_iberian_federalism_subtype
+	}
+	option = {
+		name = autdem_picker.12.f
+		set_country_leader_ideology = authdem_red_tinted_autocracy_subtype
+	}
+	option = {
+		name = autdem_picker.12.g
+		set_country_leader_ideology = peronism_subtype
+	}
+	option = {
+		name = autdem_picker.12.h
+		country_event = autdem_picker.13
+	}
+}
+
+country_event = {
+	id = autdem_picker.13
+	title = autdem_picker.13.t 
+	desc = autdem_picker.13.d 
+	picture = GFX_report_event_autdem13
+
+	is_triggered_only = yes
+	
+	option = {
+		name = autdem_picker.13.a
+		set_country_leader_ideology = authdem_conservative_feminism_subtype 
+	}
+	option = {
+		name = autdem_picker.13.b
+		set_country_leader_ideology = authdem_chosid_nyi_subtype  
+	}
+	option = {
+		name = autdem_picker.13.h
 		country_event = autdem_picker.1
 	}
 }

@@ -486,7 +486,41 @@ country_event = {
 		set_country_leader_ideology = langism_subtype
 	}
 	option = {
+		name = socdem_picker.13.g
+		set_country_leader_ideology = chinese_federalism_subtype
+	}
+	option = {
 		name = socdem_picker.13.h
+		country_event = socdem_picker.14
+	}
+}
+
+country_event = {
+	id = socdem_picker.14
+	title = socdem_picker.14.t 
+	desc = socdem_picker.14.d 
+	picture = GFX_report_event_socdem14
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = socdem_picker.14.a
+		set_country_leader_ideology = socdem_normal_dixiecrat_subtype
+	}
+	option = {
+		name = socdem_picker.14.b
+		set_country_leader_ideology = socdem_iberian_federalism_subtype 
+	}
+	option = {
+		name = socdem_picker.14.c
+		set_country_leader_ideology = socdem_paneuropeanism_subtype 
+	}
+	option = {
+		name = socdem_picker.14.e
+		set_country_leader_ideology = herrerismo_subtype 
+	}
+	option = {
+		name = socdem_picker.14.h
 		country_event = socdem_picker.1
 	}
 }

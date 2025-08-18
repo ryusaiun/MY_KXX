@@ -658,10 +658,6 @@ characters = {
 		portraits = { civilian = { large = "gfx/leaders/GRU/Portrait_HYP_sevn.png" } }
 		country_leader = {
 			expire = "1.1.1"
-			ideology = natpop_goebbels3_subtype
-		}
-		country_leader = {
-			expire = "1.1.1"
 			ideology = germanic_socialism_subtype
 		}
 	}

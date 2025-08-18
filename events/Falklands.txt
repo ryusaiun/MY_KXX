@@ -304,7 +304,11 @@ country_event = {
 
 	option = {
 		name = FLS.5.a
+		ai_chance = {
+			base = 8
+		}
 		add_ideas = FLS_military_universal_idea
+		remove_ideas = yun_skull_army		
 		declare_war_on = {
 			target = ARG
 			type = annex_everything
@@ -388,6 +392,35 @@ country_event = {
 			add_core_of = ROOT
 		}
 	}
+	option = {
+		name = FLS.5.a
+		ai_chance = {
+			base = 92
+		}
+		random_list = {
+			40 = {
+				ARG = {
+					annex_country = {
+						target = FLS
+					}
+				}
+			}
+			40 = {
+				FOP = {
+					annex_country = {
+						target = FLS
+					}
+				}
+			}
+			20 = {
+				CAN = {
+					annex_country = {
+						target = FLS
+					}
+				}
+			}			
+		}
+	}
 }
 
 country_event = {
@@ -456,12 +489,29 @@ country_event = {
             owns_state = 278
         }
 		NOT = {
-			country_exists = CHL
+			has_country_flag = FLS_ARG_Formed 
 		}
 	}
-	
+	immediate = {
+		set_country_flag = FLS_ARG_Formed
+		if = {
+			limit = { 
+				ARG = {
+					is_ai = yes
+				}
+			}	
+			FLS = {
+				annex_country = {
+					target = ARG
+				}
+			}
+		}			
+	}
 	option = {
 		name = FLS.7.a
+		ai_chance = {
+			base = 20
+		}
 		FLS = {
 			set_capital = {
 				state = 278
@@ -473,6 +523,9 @@ country_event = {
 
 	option = {
 		name = FLS.7.b
+		ai_chance = {
+			base = 80
+		}
 		FLS = {
 			set_capital = {
 				state = 278

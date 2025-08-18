@@ -474,5 +474,9 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_decision_formable_nations_dazhili"
 		texturefile = "gfx/interface/decisions/decision_formable_nations_dazhili.tga"
-	}						
+	}
+	spriteType = {
+		name = "GFX_decision_formable_nations_vasa"
+		texturefile = "gfx/interface/decisions/decision_formable_nations_vasa.tga"
+	}		
 }

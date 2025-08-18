@@ -117,11 +117,18 @@
  FRA_The_supply_of_wine_is_obstructed_1:0 "葡萄酒供应链受阻"
  FRA_The_supply_of_wine_is_obstructed_2:0 "葡萄酒受到毁灭性打击"
  FRA_The_supply_of_wine_is_obstructed_3:0 "重建葡萄园"
+ FRA_Fruit_Farmer_Revolution2:0 "农民暴动的余波"
+ FRA_Fruit_Farmer_Revolution3:0 "完全掌控农村"
+ FRA_Fruit_Farmer_Autonomy_idea:0 "农业自治区"
+ FRA_Fruit_Farmer_Autonomy_Tax:0 "自治区三年免税"
 
  #国家命名
  CHP:0 "香槟"
  CHP_ADJ:0 "香槟"
  CHP_DEF:0 "香槟"
+ CHP_autonomy:0 "香槟-勃艮第自治区"
+ CHP_autonomy_ADJ:0 "香槟-勃艮第"
+ CHP_autonomy_DEF:0 "香槟-勃艮第"
 
  DOB:0 "勃艮第"
  DOB_ADJ:0 "勃艮第"
@@ -130,10 +137,16 @@
  PRO:0 "普罗旺斯"
  PRO_ADJ:0 "普罗旺斯"
  PRO_DEF:0 "普罗旺斯"
+ PRO_autonomy:0 "普罗旺斯-阿尔卑斯自治区"
+ PRO_autonomy_ADJ:0 "普罗旺斯-阿尔卑斯"
+ PRO_autonomy_DEF:0 "普罗旺斯-阿尔卑斯"
 
  PDL:0 "卢瓦尔河地区"
  PDL_ADJ:0 "卢瓦尔河地区"
  PDL_DEF:0 "卢瓦尔河地区"
+ PDL_autonomy:0 "卢瓦尔河-布列塔尼自治区"
+ PDL_autonomy_ADJ:0 "卢瓦尔河-布列塔尼"
+ PDL_autonomy_DEF:0 "卢瓦尔河-布列塔尼"
 
  #注释
  FruitFarmerRevolution_1_tooltip:0 "§R我们只能寄希望于古安的计划可以挽回农民们的信心§!"
@@ -147,6 +160,10 @@
  #决议
  FRA_surviving_Farmer_Revolution:0 "镇压农民暴动"
  FRA_surviving_Farmer_Revolution_desc:0 "我们必须迅速采取行动，如果不能尽快镇压，我们的国内形势将迫使我们屈服。"
+ FRA_End_Farmer_Revolution:0 "收拾农民暴动残局"
+ FRA_End_Farmer_Revolution_desc:0 "果农暴动的闹剧结束了，我们的政府要将手伸入农村深处，还有许多事情等着我们去做……"
+ FRA_End_Farmer_Revolution2:0 "掌握农村"
+ FRA_End_Farmer_Revolution2_desc:0 "农村的闹剧该结束了！他们必须要听从中央的话！"
 
  #事件
  FruitFarmerRevolution.1.t:0 "波尔多霜霉病大流行"
@@ -171,8 +188,9 @@
  FruitFarmerRevolution.6.a:0 "这帮小资也配上桌了？"
  FruitFarmerRevolution.6.b:0 "苦什么都不能苦经济"
  FruitFarmerRevolution.7.t:0 "普瓦图的骚动"
- FruitFarmerRevolution.7.d:0 "普瓦图的农民们愤慨巴黎当局对于受灾果农的补偿太少，为了声援他们而举行了农民示威。普瓦图地方当局在劝说未果后迫不得己与农民们动起手来，现场有7位农民，2名警察受伤"
+ FruitFarmerRevolution.7.d:0 "普瓦图的农民们愤慨巴黎当局对于受灾果农的补偿太少，为了声援他们而举行了农民示威。普瓦图地方当局在劝说未果后迫不得己与农民们动起手来，现场有7位农民，2名警察受伤。"
  FruitFarmerRevolution.7.a:0 "情况还能更遭吗？"
+ FruitFarmerRevolution.7.b:0 "多尔热同志的话是对的，我们现在立刻行动安抚农民，处罚那些倒卖者！"
  FruitFarmerRevolution.8.t:0 "第二次果农革命"
  FruitFarmerRevolution.8.d:0 "葡萄根瘤蚜不仅摧毁了法兰西引以为傲的葡萄酒产业，同时也使得果农们对法国当局的信任跌入冰点：来自巴黎的军队亲手将葡萄园焚毁而法国当局没有任何赔偿，酒水经销商并没有因为这场灾难而宽容果农们，反而是拿着合同信誓旦旦的上法庭告他们违约。再层层重压之下，果农们迫不得已拿起了武器，而法兰西将再次体会农民的怒火。"
  FruitFarmerRevolution.8.a:0 "我们必须迅速采取行动"
@@ -180,3 +198,12 @@
  FruitFarmerRevolution.8.c:0 "勃艮第不会屈服！（切换至勃艮第）"
  FruitFarmerRevolution.8.e:0 "普罗旺斯在怒吼...（切换至普罗旺斯）"
  FruitFarmerRevolution.8.f:0 "旺代之镰将重现于世（切换至卢瓦尔河地区）"
+ FruitFarmerRevolution.12.t:0 "第二次果农革命胜利"
+ FruitFarmerRevolution.12.d:0 "经过三个月的对峙，果农们的怒火烧尽了巴黎政府的傲慢，当局被迫低下了头。谈判桌上，焚毁葡萄园的赔偿、对酒水经销商的严惩已是定局；更让巴黎颜面扫地的是，革命地区不仅赢得了更高的自治权，更斩获了三年免税的喘息之机。\n这一连串的退让将巴黎政府的威望砸得粉碎，农民阵线的领导者亨利·多尔热，因其在处理葡萄酒问题时的先见之明，被狂热的民众推举至神坛。革命的浪潮自然将他送上了权力的巅峰，顺理成章地接管了千疮百孔的政府。\n田园的欢歌似乎将要响起。未来几年，农民脚下的土地无疑会肥沃许多，灶膛里的火苗想必也能旺上几分。然而，当葡萄藤的灰烬滋养着麦田时，烟囱林立的城市里，工人们的明天呢？"
+ FruitFarmerRevolution.12.a:0 "完蛋了……"
+ FruitFarmerRevolution.13.t:0 "第二次果农革命胜利"
+ FruitFarmerRevolution.13.d:0 "令所有人都惊讶的是，农民联军攻入了巴黎。果农们的怒火烧尽了巴黎政府的傲慢，当局被迫低下了头。谈判桌上，焚毁葡萄园的赔偿、对酒水经销商的严惩已是定局；更让巴黎颜面扫地的是，革命地区不仅赢得了更高的自治权，更斩获了三年免税的喘息之机。\n这一连串的退让将巴黎政府的威望砸得粉碎，农民阵线的领导者亨利·多尔热，因其在处理葡萄酒问题时的先见之明，被狂热的民众推举至神坛。革命的浪潮自然将他送上了权力的巅峰，顺理成章地接管了千疮百孔的政府。\n田园的欢歌似乎将要响起。未来几年，农民脚下的土地无疑会肥沃许多，灶膛里的火苗想必也能旺上几分。然而，当葡萄藤的灰烬滋养着麦田时，烟囱林立的城市里，工人们的明天呢？"
+ FruitFarmerRevolution.13.a:0 "丢人现眼……"
+ FruitFarmerRevolution.14.t:0 "第二次果农革命胜利"
+ FruitFarmerRevolution.14.d:0 "经过三个月的对峙，果农们的怒火烧尽了巴黎政府的傲慢，当局被迫低下了头。谈判桌上，焚毁葡萄园的赔偿、对酒水经销商的严惩已是定局；更让巴黎颜面扫地的是，革命地区不仅赢得了更高的自治权，更斩获了三年免税的喘息之机。\n这一连串的退让将巴黎政府的威望砸得粉碎，农民阵线的领导者亨利·多尔热，因其在处理葡萄酒问题时的先见之明，被狂热的民众推举至神坛。革命的浪潮自然将他送上了权力的巅峰，顺理成章地接管了千疮百孔的政府。\n自治区设置的最终方案各方已经达成一致，很快就会落实到位。多尔热承诺巴黎的资金将会帮助这些地区渡过葡萄园被毁灭的难关，也许明年就会迎来一个丰收年。另外，香槟的伯纳德·鲍米耶向新自治区代表分发了一份新的提案，试图将新自治区置于一个独立于巴黎的大型委员会管辖下，各地区领导人对此意见不一，暂时搁置再议。但无论如何，在历经王权、共和国和公社的打压后，法国农民终于做了一次主人。"
+ FruitFarmerRevolution.14.a:0 "自治万岁！农民万岁！"

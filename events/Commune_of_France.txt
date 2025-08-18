@@ -7155,33 +7155,6 @@ country_event = {
 		
 	}
 
-	option = { 
-		name = comfrance.919.e
-		ai_chance = {
-			factor = 10
-		}
-		create_country_leader = {
-			name = "莱昂·儒奥"
-			desc = "POLITICS_LEON_JOUHAUX_DESC"
-			picture = "gfx/leaders/FRA/Portrait_France_Leon_Jouhaux.png"
-			expire = "1.1.1"
-			ideology = syndicalist_subtype
-			traits = {}
-		}
-		set_politics = {
-			ruling_party = syndicalist
-			elections_allowed = no
-		}
-		add_stability = 0.12
-		remove_ideas = FRA_black_guard_insurgency_idea
-		hidden_effect = {
-			country_event = {
-				id = comfrance.1006
-				days = 30
-			}
-		}
-	}
-
 }
 
 
@@ -8510,14 +8483,30 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
+		ai_chance = {
+			factor = 85
+		}		
 		name = comfrance.968.a
 		add_stability = 0.1
 	}
 	option = {
 		name = comfrance.968.b
 		ai_chance = {
-			factor = 0
+			factor = 10
 		}
+		every_country = {
+			limit = {
+				NOT = {
+					tag = FRA
+				}				
+				OR = {
+					is_subject_of = FRA
+					is_in_faction_with = FRA
+				}				
+				is_on_continent = europe
+			}			
+			country_event = kxxfrance.4
+		}		
 		every_state = {
 			limit = {
 				is_on_continent = europe
@@ -8531,8 +8520,20 @@ country_event = {
 	option = {
 		name = comfrance.968.c
 		ai_chance = {
-			factor = 0
+			factor = 5
 		}
+		every_country = {
+			limit = {
+				NOT = {
+					tag = FRA
+				}
+				OR = {
+					is_subject_of = FRA
+					is_in_faction_with = FRA
+				}
+			}			
+			country_event = kxxfrance.4
+		}		
 		every_state = {
 			FRA = {
 				add_state_core = PREV 
@@ -8552,13 +8553,29 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
+		ai_chance = {
+			factor = 85
+		}		
 		name = comfrance.968.a
 		add_stability = 0.1
 	}
 	option = {
 		name = comfrance.968.b
 		ai_chance = {
-			factor = 0
+			factor = 10
+		}
+		every_country = {
+			limit = {
+				NOT = {
+					tag = FRA
+				}				
+				OR = {
+					is_subject_of = FRA
+					is_in_faction_with = FRA
+				}				
+				is_on_continent = europe
+			}			
+			country_event = kxxfrance.4
 		}
 		every_state = {
 			limit = {
@@ -8577,7 +8594,8 @@ country_event = {
 				
 			}
 			set_cosmetic_tag = FRA_redjac_europe
-		}else_if = {
+		}
+		else_if = {
 			limit = {
 				OR = {
 					has_completed_focus = FRA_new_jacobin
@@ -8586,17 +8604,28 @@ country_event = {
 				
 			}
 			set_cosmetic_tag = FRA_natjac_europe
-		}else = {
+		}
+		else = {
 			set_cosmetic_tag = FRA_modjac_europe
 		}
-
-		
 	}
 	option = {
 		name = comfrance.968.c
 		ai_chance = {
-			factor = 0
+			factor = 5
 		}
+		every_country = {
+			limit = {
+				NOT = {
+					tag = FRA
+				}				
+				OR = {
+					is_subject_of = FRA
+					is_in_faction_with = FRA
+				}
+			}			
+			country_event = kxxfrance.4
+		}		
 		every_state = {
 			FRA = {
 				add_state_core = PREV 
@@ -8607,12 +8636,14 @@ country_event = {
 				has_completed_focus = FRA_lenin_legacy
 			}
 			set_cosmetic_tag = FRA_redjac_world
-		}else_if = {
+		}
+		else_if = {
 			limit = {
 				has_completed_focus = FRA_new_jacobin
 			}
 			set_cosmetic_tag = FRA_natjac_world
-		}else = {
+		}
+		else = {
 			set_cosmetic_tag = FRA_modjac_world
 		}
 	}

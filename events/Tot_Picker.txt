@@ -516,6 +516,18 @@ country_event = {
 		set_country_leader_ideology = left_boulangism_subtype
 	}
 	option = {
+		name = tot_picker.14.e
+		set_country_leader_ideology = council_communism_subtype
+	}
+	option = {
+		name = tot_picker.14.f
+		set_country_leader_ideology = zinovievism_subtype
+	}
+	option = {
+		name = tot_picker.14.g
+		set_country_leader_ideology = peasant_charterism_subtype 
+	}
+	option = {
 		name = tot_picker.14.h
 		country_event = tot_picker.1
 	}

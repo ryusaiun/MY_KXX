@@ -478,6 +478,157 @@ yun_debug_decisions = {
 			country_event = natpop_picker.1
 		}
 	}	
+	expand_tot_picker = {
+		icon = GFX_decision_freedom
+		allowed = { always = yes }
+		visible = { 
+			has_government = totalist
+		    has_country_flag = unhiden_kxsip 
+			}		
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			country_event = unideology.1
+		}
+	}
+	expand_syn_picker = {
+		icon = GFX_decision_freedom
+		allowed = { always = no }
+		visible = { 
+			has_government = syndicalist
+			has_country_flag = unhiden_kxsip
+			}		
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+		}
+	}
+	expand_radsoc_picker = {
+		icon = GFX_decision_freedom
+		allowed = { always = no }
+		visible = { 
+			has_government = radical_socialist
+			has_country_flag = unhiden_kxsip
+			}		
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+		}
+	}
+	expand_socdem_picker = {
+		icon = GFX_decision_freedom
+		allowed = { always = no }
+		visible = { 
+			has_government = social_democrat
+			has_country_flag = unhiden_kxsip
+			}
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+		}
+	}
+	expand_soclib_picker = {
+		icon = GFX_decision_freedom
+		allowed = { always = no }
+		visible = { 
+			has_government = social_liberal
+			has_country_flag = unhiden_kxsip
+			}
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+		}
+	}
+	expand_marlib_picker = {
+		icon = GFX_decision_freedom
+		allowed = { always = no }
+		visible = { 
+			has_government = market_liberal
+			has_country_flag = unhiden_kxsip
+			}
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+		}
+	}
+	expand_soccon_picker = {
+		icon = GFX_decision_freedom
+		allowed = { always = no }
+		visible = { 
+			has_government = social_conservative
+			has_country_flag = unhiden_kxsip
+			}
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+		}
+	}
+	expand_autdem_picker = {
+		icon = GFX_decision_freedom
+		allowed = { always = no }
+		visible = { 
+			has_government = authoritarian_democrat
+			has_country_flag = unhiden_kxsip
+			}
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+		}
+	}
+	expand_pataut_picker = {
+		icon = GFX_decision_freedom
+		allowed = { always = no }
+		visible = { 
+			has_government = paternal_autocrat
+			has_country_flag = unhiden_kxsip
+			}
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+		}
+	}
+	expand_natpop_picker = {
+		icon = GFX_decision_freedom
+		allowed = { always = no }
+		visible = { 
+			has_government = national_populist
+			has_country_flag = unhiden_kxsip
+			}
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+		}
+	}	
     disable_elections = {
 	    icon = GFX_decision_decision_election
 		allowed = { always = yes }

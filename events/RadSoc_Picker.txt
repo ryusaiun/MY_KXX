@@ -508,7 +508,61 @@ country_event = {
 		set_country_leader_ideology = radsoc_clientelism_subtype
 	}
 	option = {
+		name = radsoc_picker.14.b
+		set_country_leader_ideology = radsoc_paternal_socialism_subtype
+	}
+	option = {
+		name = radsoc_picker.14.c
+		set_country_leader_ideology = radsoc_yellow_syndicalism_subtype
+	}
+	option = {
+		name = radsoc_picker.14.e
+		set_country_leader_ideology = left_carlism_subtype
+	}
+	option = {
+		name = radsoc_picker.14.f
+		set_country_leader_ideology = radsoc_syndicalist_subtype
+	}
+	option = {
+		name = radsoc_picker.14.g
+		set_country_leader_ideology = radsoc_jeffersonianism_subtype
+	}
+	option = {
 		name = radsoc_picker.14.h
+		country_event = radsoc_picker.15
+	}
+}
+
+country_event = {
+	id = radsoc_picker.15
+	title = radsoc_picker.15.t 
+	desc = radsoc_picker.15.d 
+	picture = GFX_report_event_radsoc15
+
+	is_triggered_only = yes
+	
+	option = {
+		name = radsoc_picker.15.a
+		set_country_leader_ideology = radsoc_kritarchy_subtype
+	}
+	option = {
+		name = radsoc_picker.15.b
+		set_country_leader_ideology = laborismo_esperantista_subtype
+	}
+	option = {
+		name = radsoc_picker.15.c
+		set_country_leader_ideology = radsoc_council_communism_subtype 
+	}
+	option = {
+		name = radsoc_picker.15.e
+		set_country_leader_ideology = matswanism_subtype 
+	}
+	option = {
+		name = radsoc_picker.15.f
+		set_country_leader_ideology = francoism_subtype 
+	}
+	option = {
+		name = radsoc_picker.15.h
 		country_event = radsoc_picker.1
 	}
 }

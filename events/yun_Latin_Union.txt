@@ -5,6 +5,7 @@ add_namespace = moravaishexp
 add_namespace = balticexp
 add_namespace = beneluxexp
 add_namespace = polhunexp
+add_namespace = polsweexp
 
 country_event = { 
 	id = unitedlatin.1
@@ -867,3 +868,56 @@ country_event = {
 
 }
 
+country_event = { 
+	id = polsweexp.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event polsweexp.1" }
+	title = polsweexp.1.t
+	desc = polsweexp.1.d
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = polsweexp.1.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+
+	option = {
+		name = polsweexp.1.b
+		ai_chance = {
+			factor = 0
+		}
+		country_event = polsweexp.2
+	}
+}
+
+country_event = { 
+	id = polsweexp.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event polsweexp.2" }
+	title = polsweexp.2.t
+	desc = polsweexp.2.d
+	picture = GFX_report_event_POL_SWE_flag
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = polsweexp.2.a
+		set_cosmetic_tag = FORM_PSW_alt
+	}
+
+	option = {
+		name = polsweexp.2.b
+		set_cosmetic_tag = FORM_PSW_POL
+	}
+
+	option = {
+		name = polsweexp.2.c
+		set_cosmetic_tag = FORM_PSW_SWE
+	}	
+
+	option = {
+		name = polsweexp.2.e
+	}
+
+}

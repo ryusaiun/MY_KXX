@@ -1,0 +1,411 @@
+﻿
+add_namespace = unideology
+add_namespace = tot_unideology
+add_namespace = tot_unideology_euro
+add_namespace = tot_unideology_esa
+add_namespace = tot_unideology_fra
+
+country_event = {#极权主义
+	id = unideology.1
+	title = unideology.1.t 
+	desc = unideology.1.d 
+
+	is_triggered_only = yes
+	
+	option = {
+		name = unideology.1.a
+		country_event = tot_unideology.1		
+	}
+	option = {
+		name = unideology.1.b
+		country_event = tot_unideology_euro.1
+	}
+	option = {
+		name = unideology.1.c
+		country_event = tot_unideology_fra.1
+	}
+	option = {
+		name = unideology.1.e
+		country_event = tot_unideology_esa.1
+	}	
+	option = {
+		name = unideology.1.f
+	}
+	option = {
+		name = unideology.1.g
+	}	
+}
+
+
+country_event = {
+	id = tot_unideology.1
+	title = tot_unideology.1.t 
+	desc = tot_unideology.1.d 
+	picture = GFX_report_event_tot_yun_generic1
+
+	is_triggered_only = yes
+	
+	option = {
+		name = tot_unideology.1.a
+		set_country_leader_ideology = tot_united_front
+		custom_effect_tooltip = tot_united_front_desc	
+	}
+	option = {
+		name = tot_unideology.1.b
+		set_country_leader_ideology = ultranational_bolshevism_subtype
+		custom_effect_tooltip = ultranational_bolshevism_subtype_desc
+	}
+	option = {
+		name = tot_unideology.1.c
+		set_country_leader_ideology = tot_marxist_humanism_subtype
+		custom_effect_tooltip = tot_marxist_humanism_subtype_desc
+	}
+	option = {
+		name = tot_unideology.1.e
+		set_country_leader_ideology = tot_left_conservatism_subtype
+		custom_effect_tooltip = tot_left_conservatism_subtype_desc
+	}
+	option = {
+		name = tot_unideology.1.f
+		set_country_leader_ideology = bureaucratic_socialism_subtype
+		custom_effect_tooltip = bureaucratic_socialism_subtype_desc
+	}
+	option = {
+		name = tot_unideology.1.g
+		set_country_leader_ideology = tot_popular_patriotism_subtype
+		custom_effect_tooltip = tot_popular_patriotism_subtype_desc
+	}
+	option = {
+		name = tot_unideology.1.h
+		country_event = tot_unideology.2
+	}
+}
+
+country_event = {
+	id = tot_unideology.2
+	title = tot_unideology.2.t 
+	desc = tot_unideology.2.d 
+	picture = GFX_report_event_tot_yun_generic2	
+
+	is_triggered_only = yes
+	
+	option = {
+		name = tot_unideology.2.a
+		set_country_leader_ideology = left_militarism_subtype
+		custom_effect_tooltip = left_militarism_subtype_desc
+	}
+	option = {
+		name = tot_unideology.2.b
+		set_country_leader_ideology = left_leaning_legionarism_subtype
+		custom_effect_tooltip = left_leaning_legionarism_subtype_desc
+	}
+	option = {
+		name = tot_unideology.2.c
+		set_country_leader_ideology = monarcho_syndicalism_subtype
+		custom_effect_tooltip = monarcho_syndicalism_subtype_desc	
+	}
+	option = {
+		name = tot_unideology.2.e
+		set_country_leader_ideology = tot_national_mysticism_subtype
+		custom_effect_tooltip = tot_national_mysticism_subtype_desc		
+	}
+	option = {
+		name = tot_unideology.2.f
+		set_country_leader_ideology = left_occultism_subtype
+		custom_effect_tooltip = left_occultism_subtype_desc	
+	}
+	option = {
+		name = tot_unideology.2.g
+		set_country_leader_ideology = esoteric_marxism_subtype
+		custom_effect_tooltip = esoteric_marxism_subtype_desc	
+	}
+	option = {
+		name = tot_unideology.2.h
+		country_event = tot_unideology.3
+	}	
+
+}
+
+country_event = {
+	id = tot_unideology.3
+	title = tot_unideology.3.t 
+	desc = tot_unideology.3.d 
+	picture = GFX_report_event_tot_yun_generic3
+
+	is_triggered_only = yes
+	
+	option = {
+		name = tot_unideology.3.a
+		set_country_leader_ideology = right_totalism_subtype
+		custom_effect_tooltip = right_totalism_subtype_desc
+	}
+	option = {
+		name = tot_unideology.3.b
+		set_country_leader_ideology = transhumanism_subtype
+		custom_effect_tooltip = transhumanism_subtype_desc 
+	}
+	option = {
+		name = tot_unideology.3.c
+		set_country_leader_ideology = tot_dystopian_subtype
+		custom_effect_tooltip = tot_dystopian_subtype_desc
+	}
+	option = {
+		name = tot_unideology.3.e
+	}
+	option = {
+		name = tot_unideology.3.f
+	}
+	option = {
+		name = tot_unideology.3.g
+	}
+	option = {
+		name = tot_unideology.3.h
+		country_event = unideology.1
+	}	
+			
+}
+
+country_event = {
+	id = tot_unideology_euro.1
+	title = tot_unideology_euro.1.t 
+	desc = tot_unideology_euro.1.d 
+	picture = GFX_report_event_tot_yun_euro1
+
+	is_triggered_only = yes
+	
+	option = {
+		name = tot_unideology_euro.1.a
+		set_country_leader_ideology = ingsoc_subtype
+		custom_effect_tooltip = ingsoc_subtype_desc
+	}
+	option = {
+		name = tot_unideology_euro.1.b
+		set_country_leader_ideology = tot_sansepolcrismo
+		custom_effect_tooltip = tot_sansepolcrismo_desc
+	}
+	option = {
+		name = tot_unideology_euro.1.c
+		set_country_leader_ideology = tot_euro_mosleyism
+		custom_effect_tooltip = tot_euro_mosleyism_desc
+	}
+	option = {
+		name = tot_unideology_euro.1.e
+		set_country_leader_ideology = gottwaldism_subtype
+		custom_effect_tooltip = gottwaldism_subtype_desc
+	}
+	option = {
+		name = tot_unideology_euro.1.f
+		set_country_leader_ideology = spanish_syndicalism
+		custom_effect_tooltip = spanish_syndicalism_desc
+	}
+	option = {
+		name = tot_unideology_euro.1.g
+		set_country_leader_ideology = revolution_falangism
+		custom_effect_tooltip = revolution_falangism_desc
+	}
+	option = {
+		name = tot_unideology_euro.1.h
+		country_event = tot_unideology_euro.2
+	}
+}
+
+country_event = {
+	id = tot_unideology_euro.2
+	title = tot_unideology_euro.2.t 
+	desc = tot_unideology_euro.2.d 
+	picture = GFX_report_event_tot_yun_euro2
+
+	is_triggered_only = yes
+	
+	option = {
+		name = tot_unideology_euro.2.a
+		set_country_leader_ideology = germanic_socialism_lensch_subtype
+		custom_effect_tooltip = germanic_socialism_lensch_subtype_desc
+	}
+	option = {
+		name = tot_unideology_euro.2.b
+		set_country_leader_ideology = strasserism_subtype
+		custom_effect_tooltip = strasserism_desc
+	}
+	option = {
+		name = tot_unideology_euro.2.c
+		set_country_leader_ideology = natpop_goebbels2_subtype
+		custom_effect_tooltip = natpop_goebbels2_desc
+	}
+	option = {
+		name = tot_unideology_euro.2.e		
+	}
+	option = {
+		name = tot_unideology_euro.2.f	
+	}
+	option = {
+		name = tot_unideology_euro.2.g	
+	}
+	option = {
+		name = tot_unideology_euro.2.h
+		country_event = unideology.1
+	}	
+
+}
+
+country_event = {
+	id = tot_unideology_fra.1
+	title = tot_unideology_fra.1.t 
+	desc = tot_unideology_fra.1.d 
+	picture = GFX_report_event_tot_yun_fra1
+
+	is_triggered_only = yes
+	
+	option = {
+		name = tot_unideology_fra.1.a
+		set_country_leader_ideology = tot_francism_subtype
+		custom_effect_tooltip = tot_francism_subtype_desc
+	}
+	option = {
+		name = tot_unideology_fra.1.b
+		set_country_leader_ideology = national_collectivist_subtype
+		custom_effect_tooltip = national_collectivist_subtype_desc
+	}
+	option = {
+		name = tot_unideology_fra.1.c
+		set_country_leader_ideology = hervism_subtype
+		custom_effect_tooltip = hervism_subtype_desc
+	}
+	option = {
+		name = tot_unideology_fra.1.e
+		set_country_leader_ideology = tot_maurrasism_subtype
+		custom_effect_tooltip = tot_maurrasism_subtype_desc
+	}
+	option = {
+		name = tot_unideology_fra.1.f
+		set_country_leader_ideology = tot_pan_celticism_subtype
+		custom_effect_tooltip = tot_pan_celticism_subtype_desc
+	}
+	option = {
+		name = tot_unideology_fra.1.g
+		set_country_leader_ideology = revisionist_sorelianism_subtype
+		custom_effect_tooltip = revisionist_sorelianism_subtype_desc
+	}
+	option = {
+		name = tot_unideology_fra.1.h
+		country_event = tot_unideology_fra.2
+	}
+}
+
+country_event = {
+	id = tot_unideology_fra.2
+	title = tot_unideology_fra.2.t 
+	desc = tot_unideology_fra.2.d 
+	picture = GFX_report_event_tot_yun_fra2
+
+	is_triggered_only = yes
+	
+	option = {
+		name = tot_unideology_fra.2.a
+		set_country_leader_ideology = millitarist_sorelianism_subtype
+		custom_effect_tooltip = millitarist_sorelianism_subtype_desc
+	}
+	option = {
+		name = tot_unideology_fra.2.b
+		set_country_leader_ideology = sorelian_bolshevism_subtype	
+		custom_effect_tooltip = sorelian_bolshevism_subtype_desc
+	}
+	option = {
+		name = tot_unideology_fra.2.c
+		set_country_leader_ideology = neo_dirigisme_technocratique_subtype
+		custom_effect_tooltip = neo_dirigisme_technocratique_subtype_desc
+	}
+	option = {
+		name = tot_unideology_fra.2.e		
+	}
+	option = {
+		name = tot_unideology_fra.2.f	
+	}
+	option = {
+		name = tot_unideology_fra.2.g	
+	}
+	option = {
+		name = tot_unideology_fra.2.h
+		country_event = unideology.1
+	}
+}
+
+country_event = {
+	id = tot_unideology_esa.1
+	title = tot_unideology_esa.1.t 
+	desc = tot_unideology_esa.1.d 
+	picture = GFX_report_event_tot_yun_esa1
+
+	is_triggered_only = yes
+	
+	option = {
+		name = tot_unideology_esa.1.a
+		set_country_leader_ideology = mao_zedong_thought_subtype
+		custom_effect_tooltip = mao_zedong_thought_subtype_desc
+	}
+	option = {
+		name = tot_unideology_esa.1.b
+		set_country_leader_ideology = farleft_maoism_subtype
+		custom_effect_tooltip = farleft_maoism_subtype_desc
+	}
+	option = {
+		name = tot_unideology_esa.1.c
+		set_country_leader_ideology = tot_socialism_with_chinese_characteristics_subtype
+		custom_effect_tooltip = tot_socialism_with_chinese_characteristics_subtype_desc
+	}
+	option = {
+		name = tot_unideology_esa.1.e
+		set_country_leader_ideology = red_guard_subtype
+		custom_effect_tooltip = red_guard_subtype_desc
+	}
+	option = {
+		name = tot_unideology_esa.1.f
+		set_country_leader_ideology = moderate_maoism_subtype
+		custom_effect_tooltip = moderate_maoism_subtype_desc		
+	}
+	option = {
+		name = tot_unideology_esa.1.g
+		set_country_leader_ideology = chongqing_model_subtype
+		custom_effect_tooltip = chongqing_model_subtype_desc		
+	}
+	option = {
+		name = tot_unideology_esa.1.h
+		country_event = tot_unideology_esa.2
+	}
+}
+
+country_event = {
+	id = tot_unideology_esa.2
+	title = tot_unideology_esa.2.t 
+	desc = tot_unideology_esa.2.d 
+	picture = GFX_report_event_tot_yun_esa2
+
+	is_triggered_only = yes
+	
+	option = {
+		name = tot_unideology_esa.2.a
+		set_country_leader_ideology = xue_tong_lun_subtype
+		custom_effect_tooltip = xue_tong_lun_subtype_desc
+	}
+	option = {
+		name = tot_unideology_esa.2.b
+		set_country_leader_ideology = tot_anti_japaneseism_subtype
+		custom_effect_tooltip = tot_anti_japaneseism_subtype_desc
+	}
+	option = {
+		name = tot_unideology_esa.2.c
+	}
+	option = {
+		name = tot_unideology_esa.2.e		
+	}
+	option = {
+		name = tot_unideology_esa.2.f	
+	}
+	option = {
+		name = tot_unideology_esa.2.g	
+	}
+	option = {
+		name = tot_unideology_esa.2.h
+		country_event = unideology.1
+	}
+}

@@ -5971,26 +5971,6 @@ AUS_kommission = {
 	color = rgb { 142 142 128 }
 	color_ui = rgb { 142 142 128 }
 }
-FRA_syndieeurope = {
-	color = rgb { 200 0 0 }
-	color_ui = rgb { 255 0 0 }
-}
-FRA_gamelineurope = {
-	color = rgb { 0 0 200 }
-	color_ui = rgb { 0 0 200 }
-}
-FRA_makhneurope = {
-	color = rgb { 0 0 0 }
-	color_ui = rgb { 0 0 0 }
-}
-PAL_canaan = {
-	color = rgb { 140 0 140 }
-	color_ui = rgb { 140 0 140 }
-}
-PAP_christendom = {
-	color = rgb { 255 255 255 }
-	color_ui = rgb { 255 255 255 }
-}
 ###泛欧主义的胜利
 AUS_EUF = {
 	color = rgb { 0 50 151 }
@@ -6123,7 +6103,164 @@ FLN_FOP_euro = {
 	color = rgb { 122 0 0 }
 	color_ui = rgb { 0 0 0 }
 }
-###法公社重置5.0
+###############
+###法公社重置###
+###############
+
+#社会主义民主选举
+FRA_CNT_fed_larp = {
+    color = rgb { 240 0 0 }
+	color_ui = rgb { 240 0 0 }
+}
+FRA_Frangleterre = {
+	color = rgb { 126 53 117 }
+	color_ui = rgb { 126 53 117 }
+}
+FRA_Frangleterre_federation = {
+	color = rgb { 126 53 117 }
+	color_ui = rgb { 126 53 117 }
+}
+FRA_yellowsyndie = {
+	color = rgb { 216 166 0 }
+	color_ui = rgb { 216 166 0 }
+}
+FRA_socdem_republic = {
+	color = rgb { 43 78 178 }
+	color_ui = rgb { 43 78 178 }
+}
+FRA_left_boulanger = {
+	color = rgb { 27 52 179 }
+	color_ui = rgb { 27 52 179 }
+}
+FRA_Marchais = {
+	color = rgb { 175 13 0 }
+	color_ui = rgb { 175 13 0 }
+}
+FRA_eurocommie = {
+	color = rgb { 175 13 0 }
+	color_ui = rgb { 175 13 0 }
+}
+#无政府主义者
+FRA_free_territory = {
+	color = rgb { 23 22 22 }
+	color_ui = rgb { 23 22 22 }
+}
+FRA_makhneurope = {
+	color = rgb { 0 0 0 }
+	color_ui = rgb { 0 0 0 }
+}
+#雅各宾
+FRA_Jacobin = {
+	color = rgb { 175 13 0 }
+	color_ui = rgb { 175 13 0 }
+}
+FRA_natjac_europe = {
+	color = rgb { 175 13 0 }
+	color_ui = rgb { 175 13 0 }
+}
+FRA_natjac_world = {
+	color = rgb { 175 13 0 }
+	color_ui = rgb { 175 13 0 }
+}
+FRA_Lenin = {
+	color = rgb { 175 13 0 }
+	color_ui = rgb { 175 13 0 }
+}
+FRA_redjac_europe = {
+	color = rgb { 175 13 0 }
+	color_ui = rgb { 175 13 0 }
+}
+FRA_redjac_world = {
+	color = rgb { 175 13 0 }
+	color_ui = rgb { 175 13 0 }
+}
+FRA_modjac_europe = {
+	color = rgb { 175 13 0 }
+	color_ui = rgb { 175 13 0 }
+}
+FRA_modjac_world = {
+	color = rgb { 175 13 0 }
+	color_ui = rgb { 175 13 0 }
+}
+#索雷尔派
+FRA_Arthuys = {
+	color = rgb { 4 5 109 }
+	color_ui = rgb { 4 5 109 }
+}
+FRA_Lagardelle = {
+	color = rgb { 23 58 160 }
+	color_ui = rgb { 23 58 160 }
+}
+FRA_Lagardelle_LON = {
+	color = rgb { 23 58 160 }
+	color_ui = rgb { 23 58 160 }
+}
+FRA_orthodox = {
+	color = rgb { 10 48 105 }
+	color_ui = rgb { 10 48 105 }
+}
+FRA_Vanguard = {
+	color = rgb { 146 21 21 }
+	color_ui = rgb { 146 21 21 }
+}
+FRA_Ultranatsynd = {
+	color = rgb { 0 37 85 }
+	color_ui = rgb { 0 37 85 }
+}
+FRA_bucard_FGL = {
+	color = rgb { 0 37 85 }
+	color_ui = rgb { 0 37 85 }
+}
+FRA_bucard_FRK = {
+	color = rgb { 0 37 85 }
+	color_ui = rgb { 0 37 85 }
+}
+FRA_bucard_LAU = {
+	color = rgb { 114 47 55 }
+	color_ui = rgb { 114 47 55 }
+}
+FRA_Sorel_Capetiens = {
+	color = rgb { 138 28 33 }
+	color_ui = rgb { 138 28 33 }
+}
+FRA_Sorel_Capitiens_Frankish = {
+	color = rgb { 138 28 33 }
+	color_ui = rgb { 138 28 33 }
+}
+FRA_Wokerempire = {
+	color = rgb { 0 37 85 }
+	color_ui = rgb { 0 37 85 }
+}
+FRA_natcol = {
+	color = rgb { 23 58 160 }
+	color_ui = rgb { 23 58 160 }
+}
+FRA_europe_natcol = {
+	color = rgb { 23 58 160 }
+	color_ui = rgb { 23 58 160 }
+}
+FRA_Sorel_EU = {
+	color = rgb { 208 0 0 }
+	color_ui = rgb { 208 0 0 }
+}
+#杂项
+FRA_syndieeurope = {
+	color = rgb { 200 0 0 }
+	color_ui = rgb { 255 0 0 }
+}
+FRA_gamelineurope = {
+	color = rgb { 0 0 200 }
+	color_ui = rgb { 0 0 200 }
+}
+FRA_PANEUROPE = {
+	color = rgb { 175 13 0 }
+	color_ui = rgb { 175 13 0 }
+}
+#戴亚及选举杂项
+FRA_Deat_Europe = {
+	color = rgb { 0 37 85 }
+	color_ui = rgb { 0 37 85 }
+}
 FRA_dorgeres = {
 	color = rgb { 34 139 34 }
 	color_ui = rgb { 34 139 34 }
@@ -6140,58 +6277,6 @@ FRA_herve_europe = {
 	color = rgb { 139 0 0 }
 	color_ui = rgb { 139 0 0 }
 }
-FRA_rednap = {
-	color = rgb { 20 40 150 }
-	color_ui = rgb { 20 40 150 }
-}
-FRAITA_rednap = {
-	color = rgb { 0 79 163 }
-	color_ui = rgb { 0 79 163 }
-}
-FRA_christsoc = {
-	color = rgb { 222 27 27 }
-	color_ui = rgb { 222 27 27 }
-}
-FRA_christ_universal = {
-	color = rgb { 222 27 27 }
-	color_ui = rgb { 222 27 27 }
-}
-FRA_saint_peter = {
-	color = rgb { 222 27 27 }
-	color_ui = rgb { 222 27 27 }
-}
-FRA_christcom = {
-	color = rgb { 192 14 15 }
-	color_ui = rgb { 192 14 15 }
-}
-FRA_christrep = {
-	color = rgb { 5 55 165 }
-	color_ui = rgb { 5 55 165 }
-}
-FRA_christanarchy = {
-	color = rgb { 97 74 74 }
-	color_ui = rgb { 97 74 74 }
-}
-FRA_fellowship = {
-	color = rgb { 10 54 175 }
-	color_ui = rgb { 10 54 175 }
-}
-FRA_fellowship_universal = {
-	color = rgb { 247 247 212 }
-	color_ui = rgb { 247 247 212 }
-}
-FRA_ambelain = {
-	color = rgb { 49 47 165 }
-	color_ui = rgb { 49 47 165 }
-}
-FRA_bahaisoc = {
-	color = rgb { 0 111 255 }
-	color_ui = rgb { 0 111 255 }
-}
-FRA_bahaisoc_universal = {
-	color = rgb { 248 212 105 }
-	color_ui = rgb { 248 212 105 }
-}
 FRA_celt = {
 	color = rgb { 90 137 0 }
 	color_ui = rgb { 90 137 0 }
@@ -6200,21 +6285,38 @@ FRA_celt_slav_union = {
 	color = rgb { 113 23 23 }
 	color_ui = rgb { 113 23 23 }
 }
-FRA_Arthuys = {
-	color = rgb { 4 5 109 }
-	color_ui = rgb { 4 5 109 }
+FRA_atheist = {
+	color = rgb { 175 13 0 }
+	color_ui = rgb { 175 13 0 }
 }
-FRA_Lagardelle = {
-	color = rgb { 23 58 160 }
-	color_ui = rgb { 23 58 160 }
+FRA_atheist_europe = {
+	color = rgb { 175 13 0 }
+	color_ui = rgb { 175 13 0 }
 }
-FRA_Lagardelle_LON = {
-	color = rgb { 23 58 160 }
-	color_ui = rgb { 23 58 160 }
+FRA_atheist_world = {
+	color = rgb { 175 13 0 }
+	color_ui = rgb { 175 13 0 }
 }
+FRA_Possibiliste = {
+    color = rgb { 0 35 149 }
+	color_ui = rgb { 0 35 149}
+}
+FRA_radical_Possibiliste = {
+    color = rgb { 207 9 34 }
+    color_ui = rgb { 207 9 34 }
+}
+#拿破仑相关
 FRA_consulat = {
 	color = rgb { 0 51 128 }
 	color_ui = rgb { 0 51 128 }
+}
+FRA_rednap = {
+	color = rgb { 20 40 150 }
+	color_ui = rgb { 20 40 150 }
+}
+FRAITA_rednap = {
+	color = rgb { 0 79 163 }
+	color_ui = rgb { 0 79 163 }
 }
 FRA_rednap_United = {
 	color = rgb { 0 51 128 }
@@ -6256,90 +6358,48 @@ FRA_rednap_use2 = {
     color = rgb { 0 0 255 }
 	color_ui = rgb { 0 0 255 }
 }
-FRA_Frangleterre = {
-	color = rgb { 126 53 117 }
-	color_ui = rgb { 126 53 117 }
+#西蒙娜相关
+FRA_christsoc = {
+	color = rgb { 222 27 27 }
+	color_ui = rgb { 222 27 27 }
 }
-FRA_Frangleterre_federation = {
-	color = rgb { 126 53 117 }
-	color_ui = rgb { 126 53 117 }
+FRA_christ_universal = {
+	color = rgb { 222 27 27 }
+	color_ui = rgb { 222 27 27 }
 }
-FRA_yellowsyndie = {
-	color = rgb { 216 166 0 }
-	color_ui = rgb { 216 166 0 }
+FRA_saint_peter = {
+	color = rgb { 222 27 27 }
+	color_ui = rgb { 222 27 27 }
 }
-FRA_socdem_republic = {
-	color = rgb { 43 78 178 }
-	color_ui = rgb { 43 78 178 }
+FRA_christcom = {
+	color = rgb { 192 14 15 }
+	color_ui = rgb { 192 14 15 }
 }
-FRA_Possibiliste = {
-    color = rgb { 0 35 149 }
-	color_ui = rgb { 0 35 149}
+FRA_christrep = {
+	color = rgb { 5 55 165 }
+	color_ui = rgb { 5 55 165 }
 }
-FRA_radical_Possibiliste = {
-    color = rgb { 207 9 34 }
-    color_ui = rgb { 207 9 34 }
+FRA_christanarchy = {
+	color = rgb { 97 74 74 }
+	color_ui = rgb { 97 74 74 }
 }
-FRA_radical_Possibiliste2 = {
-    color = rgb { 194 30 86 }
-	color_ui = rgb { 194 30 86 }
+FRA_fellowship_universal = {
+	color = rgb { 247 247 212 }
+	color_ui = rgb { 247 247 212 }
 }
-FRA_radical_Possibiliste3 = {
-    color = rgb { 0 35 149 }
-	color_ui = rgb { 0 35 149}
+FRA_ambelain = {
+	color = rgb { 49 47 165 }
+	color_ui = rgb { 49 47 165 }
 }
-FRA_left_boulanger = {
-	color = rgb { 27 52 179 }
-	color_ui = rgb { 27 52 179 }
+FRA_bahaisoc = {
+	color = rgb { 0 111 255 }
+	color_ui = rgb { 0 111 255 }
 }
-FRA_orthodox = {
-	color = rgb { 10 48 105 }
-	color_ui = rgb { 10 48 105 }
+FRA_bahaisoc_universal = {
+	color = rgb { 248 212 105 }
+	color_ui = rgb { 248 212 105 }
 }
-FRA_Ultranatsynd = {
-	color = rgb { 0 37 85 }
-	color_ui = rgb { 0 37 85 }
-}
-FRA_bucard_FGL = {
-	color = rgb { 0 37 85 }
-	color_ui = rgb { 0 37 85 }
-}
-FRA_bucard_FRK = {
-	color = rgb { 0 37 85 }
-	color_ui = rgb { 0 37 85 }
-}
-FRA_bucard_LAU = {
-	color = rgb { 114 47 55 }
-	color_ui = rgb { 114 47 55 }
-}
-FRA_Sorel_Capetiens = {
-	color = rgb { 138 28 33 }
-	color_ui = rgb { 138 28 33 }
-}
-FRA_Sorel_Capitiens_Frankish = {
-	color = rgb { 138 28 33 }
-	color_ui = rgb { 138 28 33 }
-}
-FRA_Wokerempire = {
-	color = rgb { 0 37 85 }
-	color_ui = rgb { 0 37 85 }
-}
-FRA_Sorelian = {
-	color = rgb { 10 54 175 }
-	color_ui = rgb { 10 54 175 }
-}
-FRA_natcol = {
-	color = rgb { 23 58 160 }
-	color_ui = rgb { 23 58 160 }
-}
-FRA_revisionist_sorelianists = {
-	color = rgb { 10 54 175 }
-	color_ui = rgb { 10 54 175 }
-}
-FRA_Sorel_EU = {
-	color = rgb { 208 0 0 }
-	color_ui = rgb { 208 0 0 }
-}
+#超现实主义团体
 FRA_Breton = {
 	color = rgb { 0 18 93 }
 	color_ui = rgb { 0 18 93 }
@@ -6348,10 +6408,7 @@ FRA_acephale = {
 	color = rgb { 99 33 66 }
 	color_ui = rgb { 99 33 66 }
 }
-FRA_CNT_fed_larp = {
-    color = rgb { 240 0 0 }
-	color_ui = rgb { 240 0 0 }
-}
+#共治运动
 FRA_sansimon = {
 	color = rgb { 98 67 132 }
 	color_ui = rgb { 98 67 132 }
@@ -6360,9 +6417,13 @@ FRA_sansimon_europe = {
 	color = rgb { 98 67 132 }
 	color_ui = rgb { 98 67 132 }
 }
-FRA_technocracy = {
-	color = rgb { 27 52 179 }
-	color_ui = rgb { 27 52 179 }
+FRA_burhnamite = {
+	color = rgb { 208 0 0 }
+	color_ui = rgb { 208 0 0 }
+}
+FRA_burhnamite_larp = {
+	color = rgb { 208 0 0 }
+	color_ui = rgb { 208 0 0 }
 }
 FRA_corbusier = {
 	color = rgb { 71 60 139 }
@@ -6371,10 +6432,6 @@ FRA_corbusier = {
 FRA_corb_larp = {
 	color = rgb { 71 60 139 }
 	color_ui = rgb { 71 60 139 }
-}
-FRA_utopian = {
-	color = rgb { 60 84 139 }
-	color_ui = rgb { 60 84 139 }
 }
 FRA_utopian_larp = {
 	color = rgb { 60 84 139 }
@@ -6388,9 +6445,9 @@ FRA_transhumanism_larp = {
 	color = rgb { 0 18 93 }
 	color_ui = rgb { 0 18 93 }
 }
-FRA_free_territory = {
-	color = rgb { 23 22 22 }
-	color_ui = rgb { 23 22 22 }
+FRA_SSSP = {
+	color = rgb { 175 13 0 }
+	color_ui = rgb { 175 13 0 }
 }
 #################
 ### 成立新国家 ###
@@ -8406,6 +8463,22 @@ FORM_HLY = {
 	color = rgb { 93 104 199 }
 	color_ui = rgb { 93 104 199 }
 }
+FORM_PSW = {
+	color = rgb { 50 90 140 }
+	color_ui = rgb { 50 90 140 }
+}
+FORM_PSW_POL = {
+	color = rgb { 150 30 30 }
+	color_ui = rgb { 150 30 30 }
+}
+FORM_PSW_SWE = {
+	color = rgb { 115 0 153 }
+	color_ui = rgb { 115 0 153 }
+}
+FORM_PSW_alt = {
+	color = rgb { 50 90 140 }
+	color_ui = rgb { 50 90 140 }
+}
 ###傻卵二次元
 DHY = {
 	color = rgb { 195 23 5 }
@@ -8582,8 +8655,8 @@ ALG_anarchism = {
 	color_ui = rgb { 30 30 30 }
 }
 ALG_anarchy = {
-	color = rgb { 0 0 0 }
-	color_ui = rgb { 0 0 0 }
+	color = rgb { 46 32 0 }
+	color_ui = rgb { 46 32 0 }
 }
 ALG_Kabylia = {
 	color = rgb { 242 206 1 }
@@ -8912,126 +8985,6 @@ HJL_FNG = {
 HJL_ZHL = {
 	color = rgb { 8 99 156 }
 	color_ui = rgb { 8 99 156 }
-}
-###日照瑞典
-SWE_elmo_empire = {
-	color = rgb { 36 0 110 }
-	color_ui = rgb { 36 0 110 }
-}
-
-SWE_elmo_empire2 = {
-	color = rgb { 36 0 110 }
-	color_ui = rgb { 36 0 110 }
-}
-
-SWE_elmo_empire3 = {
-	color = rgb { 36 0 110 }
-	color_ui = rgb { 36 0 110 }
-}
-
-SWE_EMP_1 = {
-	color = rgb { 0 40 104 }
-	color_ui = rgb { 0 40 104 }
-}
-
-SWE_EMP_2 = {
-	color = rgb { 0 40 104 }
-	color_ui = rgb { 0 40 104 }
-}
-
-SWE_NDR_radsoc = {
-	color = rgb { 200 0 85 }
-	color_ui = rgb { 200 0 85 }
-}
-
-SWE_NDR_synd = {
-	color = rgb { 190 0 64 }
-	color_ui = rgb { 190 0 64 }
-}
-
-SWE_NDR_flyg = {
-	color = rgb { 130 12 40 }
-	color_ui = rgb { 130 12 40 }
-}
-
-SWE_NDR_commie = {
-	color = rgb { 180 10 25 }
-	color_ui = rgb { 180 10 25 }
-}
-
-SWE_NDR_natsoc = {
-	color = rgb { 111 8 20 }
-	color_ui = rgb { 111 8 20 }
-}
-
-SWE_SCA_radsoc = {
-	color = rgb { 190 0 64 }
-	color_ui = rgb { 190 0 64 }
-}
-
-SWE_SCA_synd = {
-	color = rgb { 190 0 64 }
-	color_ui = rgb { 190 0 64 }
-}
-
-SWE_SCA_flyg = {
-	color = rgb { 150 10 30 }
-	color_ui = rgb { 150 10 30 }
-}
-
-SWE_SCA_commie = {
-	color = rgb { 180 10 30 }
-	color_ui = rgb { 180 10 30 }
-}
-
-SWE_SCA_natsoc = {
-	color = rgb { 124 8 30 }
-	color_ui = rgb { 124 8 30 }
-}
-
-SWE_sven_lind = {
-	color = rgb { 124 8 30 }
-	color_ui = rgb { 124 8 30 }
-}
-
-SWE_natsynd = {
-	color = rgb { 150 10 30 }
-	color_ui = rgb { 150 10 30 }
-}
-
-SWE_linderot = {
-	color = rgb { 180 10 30 }
-	color_ui = rgb { 180 10 30 }
-}
-
-SWE_syndies = {
-	color = rgb { 166 6 68 }
-	color_ui = rgb { 168 1 68 }
-}
-
-SWE_radsoc = {
-	color = rgb { 168 1 68 }
-	color_ui = rgb { 168 1 68 }
-}
-
-SWE_king_mil = {
-	color = rgb { 0 60 140 }
-	color_ui = rgb { 0 60 140 }
-}
-
-SWE_mil = {
-	color = rgb { 0 40 104 }
-	color_ui = rgb { 0 40 104 }
-}
-
-SWE_natpop_mil = {
-	color = rgb { 0 40 104 }
-	color_ui = rgb { 0 40 104 }
-}
-
-SWE_mil_bagge = {
-	color = rgb { 0 80 160 }
-	color_ui = rgb { 0 80 160 }
 }
 ###4月13日作业
 AG_KTRN = {

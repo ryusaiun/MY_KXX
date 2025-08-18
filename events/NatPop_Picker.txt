@@ -633,7 +633,75 @@ country_event = {
 		set_country_leader_ideology = natpop_humanisme_integral_subtype
 	}
 	option = {
+		name = natpop_picker.17.f
+		set_country_leader_ideology = natpop_tridemism_subtype
+	}
+	option = {
+		name = natpop_picker.17.g
+		set_country_leader_ideology = natpop_integrism_subtype
+	}
+	option = {
 		name = natpop_picker.17.h
+		country_event = natpop_picker.18
+	}
+}
+
+country_event = {
+	id = natpop_picker.18
+	title = natpop_picker.18.t 
+	desc = natpop_picker.18.d 
+	picture = GFX_report_event_natpop18
+
+	is_triggered_only = yes
+
+    option = {
+		name = natpop_picker.18.a
+		set_country_leader_ideology = liberating_nationalism_subtype
+	}
+    option = {
+		name = natpop_picker.18.b
+		set_country_leader_ideology = natpop_conservative_feminism_subtype 
+	}
+    option = {
+		name = natpop_picker.18.c
+		set_country_leader_ideology = nacionalismo_subtype 
+	}
+	option = {
+		name = natpop_picker.18.e
+		set_country_leader_ideology = natpop_chosid_nyi_subtype  
+	}
+	option = {
+		name = natpop_picker.18.f
+		set_country_leader_ideology = natpop_national_conservative_subtype  
+	}
+	option = {
+		name = natpop_picker.18.g
+		set_country_leader_ideology = natpop_tribal_councilism_subtype  
+	}
+	option = {
+		name = natpop_picker.18.h
+		country_event = natpop_picker.19
+	}
+}
+
+country_event = {
+	id = natpop_picker.19
+	title = natpop_picker.19.t 
+	desc = natpop_picker.19.d 
+	picture = GFX_report_event_natpop19
+
+	is_triggered_only = yes
+
+    option = {
+		name = natpop_picker.19.a
+		set_country_leader_ideology = shintaisei_subtype 
+	}
+    option = {
+		name = natpop_picker.19.b
+		set_country_leader_ideology = consistent_way_subtype  
+	}
+	option = {
+		name = natpop_picker.19.h
 		country_event = natpop_picker.1
 	}
 }

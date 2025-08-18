@@ -284,7 +284,79 @@ country_event = {
 		set_country_leader_ideology = syn_kotahitanga_subtype 
 	}
 	option = {
+		name = syn_picker.8.c
+		set_country_leader_ideology = aboriginal_garveyism_subtype 
+	}
+	option = {
+		name = syn_picker.8.e
+		set_country_leader_ideology = syn_gandhism_subtype 
+	}
+	option = {
+		name = syn_picker.8.f
+		set_country_leader_ideology = syn_anarcho_communism_subtype 
+	}
+	option = {
+		name = syn_picker.8.g
+		set_country_leader_ideology = libertarian_possibilism_subtype 
+	}
+	option = {
 		name = syn_picker.8.h
+		country_event = syn_picker.9
+	}
+}
+
+country_event = {
+	id = syn_picker.9
+	title = syn_picker.9.t 
+	desc = syn_picker.9.d 
+	picture = GFX_report_event_syn9
+
+	is_triggered_only = yes
+	
+	option = {
+		name = syn_picker.9.a
+		set_country_leader_ideology = anarcho_abertzalism_subtype 
+	}
+	option = {
+		name = syn_picker.9.b
+		set_country_leader_ideology = syn_sandinismo_subtype 
+	}
+	option = {
+		name = syn_picker.9.c
+		set_country_leader_ideology = syn_utopian_technocracy_subtype
+	}
+	option = {
+		name = syn_picker.9.e
+		set_country_leader_ideology = syn_broad_communism_subtype 
+	}
+	option = {
+		name = syn_picker.9.f
+		set_country_leader_ideology = syn_popcom_subtype 
+	}
+	option = {
+		name = syn_picker.9.g
+		set_country_leader_ideology = syn_council_communism_subtype 
+	}
+	option = {
+		name = syn_picker.9.h
+		country_event = syn_picker.10
+	}
+}
+
+country_event = {
+	id = syn_picker.10
+	title = syn_picker.10.t 
+	desc = syn_picker.10.d 
+	picture = GFX_report_event_syn10
+
+	is_triggered_only = yes
+	
+	option = {
+		name = syn_picker.10.a
+		set_country_leader_ideology = syn_matswanism_subtype  
+	}
+	option = {
+		name = syn_picker.10.h
 		country_event = syn_picker.1
 	}
 }

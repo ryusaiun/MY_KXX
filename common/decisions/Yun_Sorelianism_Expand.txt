@@ -1189,3 +1189,21 @@ FRA_nation_city_collective_decision = {
 		}
 	}							
 }
+FRA_SSSP_decision = {
+	SSSP_Man_Chuck_Swamp = {
+		icon = SACW_long_union
+		ai_will_do = {
+			factor = 0
+		}
+		cost =  0
+		available = {
+			country_exists = TEX
+		}
+		visible = {
+			country_exists = TEX
+		}
+		complete_effect = {
+			country_event = SSSP.1
+		}
+	}
+}

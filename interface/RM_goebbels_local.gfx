@@ -16,10 +16,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideologies/subideologies/goebb_ideology_burg.png"
 	}
 	spriteType = {
-		name = "GFX_ideology_natpop_goebbels3_subtype"
-		texturefile = "gfx/interface/ideologies/subideologies/goebbels_ideology_group3.dds"
-	}
-	spriteType = {
 		name = "GFX_ideology_national_socialism_spartanism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/national_socialism_spartanism_subtype.dds"
 	}
