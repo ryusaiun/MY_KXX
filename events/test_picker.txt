@@ -33,11 +33,11 @@ country_event = {
 	}
 	option = {
 		name = test_picker.1.e
-		set_country_leader_ideology = natpop_esoteric_marxism_subtype
+		set_country_leader_ideology = socdem_burnhamite_thought_subtype
 	}
 	option = {
 		name = test_picker.1.f
-		set_country_leader_ideology = tot_maurrasism_subtype
+		set_country_leader_ideology = buddhist_anarchism_subtype
 	}
 }
 

@@ -222,49 +222,106 @@ add_ideas = {
 
 }
 
+
+set_popularities = {
+	totalist = 5
+	radical_socialist = 5
+	syndicalist = 5
+	social_democrat = 10
+	social_liberal = 20
+	market_liberal = 5
+	social_conservative = 10
+	authoritarian_democrat = 10
+	paternal_autocrat = 15
+	national_populist = 15
+}
+
 set_politics = {
 	ruling_party = social_liberal
-	last_election = "1932.5.9"
+	last_election = "1932.2.20"
 	election_frequency = 48
 	elections_allowed = yes
 }
 
-set_popularities = {
-	totalist = 0
-	radical_socialist = 5
-	syndicalist = 0
-	social_democrat = 25
-	social_liberal = 30
-	market_liberal = 30
-	social_conservative = 10
-	authoritarian_democrat = 0
-	paternal_autocrat = 0
-	national_populist = 0
-}
+add_tot_to_coalition = yes
+add_synd_to_coalition = yes
+add_radsoc_to_coalition = yes
+add_socdem_to_coalition = yes
+add_marlib_to_coalition = yes
+add_soccon_to_coalition = yes
+add_authdem_to_coalition = yes
+add_pataut_to_coalition = yes
+add_natpop_to_coalition = yes
 
-set_politics = {
-	ruling_party = social_liberal
-	last_election = "1895.5.25"
-	election_frequency = 48
-	elections_allowed = no
-}
-
-
-
-
-create_country_leader = {
-	name = "Satsuki Nakayama"
-	desc = ""
-	picture = "gfx/leaders/IMJ/Kamen_Rider_Naki.png"
-	expire = "1965.1.1"
-	ideology = soclib_ikemenjoshism_subtype
-}
 create_country_leader = {
 	name = "Tianyun Haiqing"
 	desc = ""
 	picture = "gfx/leaders/IMJ/Sonko.png"
 	expire = "1965.1.1"
 	ideology = tot_bahai_universalism_subtype
+}
+create_country_leader = {
+	name = "Tianyun Haiqing"
+	desc = ""
+	picture = "gfx/leaders/IMJ/Sonko.png"
+	expire = "1965.1.1"
+	ideology = libertarian_possibilism_subtype
+}
+create_country_leader = {
+	name = "Dehya"
+	desc = ""
+	picture = "gfx/leaders/IMJ/dehya.png"
+	expire = "1965.1.1"
+	ideology = illegalism_subtype
+}
+create_country_leader = {
+	name = "Tianyun Haiqing"
+	desc = ""
+	picture = "gfx/leaders/IMJ/Sonko.png"
+	expire = "1965.1.1"
+	ideology = socdem_national_progressivism_subtype
+}
+create_country_leader = {
+	name = "MR.C.B"
+	desc = ""
+	picture = "gfx/leaders/IMJ/MRCB.png"
+	expire = "1965.1.1"
+	ideology = soclib_ikemenjoshism_subtype
+}
+create_country_leader = {
+	name = "Asakura Toru"
+	desc = ""
+	picture = "gfx/leaders/IMJ/asakura_toru.png"
+	expire = "1965.1.1"
+	ideology = liberal_feminism_subtype
+}
+create_country_leader = {
+	name = "Ange Katrina"
+	desc = ""
+	picture = "gfx/leaders/IMJ/Ange_Katrina.png"
+	expire = "1965.1.1"
+	ideology = soccon_spiritualism_subtype
+}
+create_country_leader = {
+	name = "Wei Yue"
+	desc = ""
+	picture = "gfx/leaders/IMJ/weiyue.png"
+	expire = "1965.1.1"
+	ideology = ikemenjoshism_subtype
+}
+create_country_leader = {
+	name = "Fuji Kiseiki"
+	desc = ""
+	picture = "gfx/leaders/IMJ/fuji_kiseiki.png"
+	expire = "1965.1.1"
+	ideology = pataut_controlled_democracy_subtype
+}
+create_country_leader = {
+	name = "Satsuki Nakayama"
+	desc = ""
+	picture = "gfx/leaders/IMJ/Kamen_Rider_Naki.png"
+	expire = "1965.1.1"
+	ideology = natpop_dystopian_subtype
 }
 
 create_field_marshal = {

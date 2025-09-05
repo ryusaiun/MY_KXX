@@ -2,6 +2,70 @@ spriteTypes = {
 	
 	### SubIdeologies ###
 	SpriteType = {
+		name = "GFX_ideology_radsoc_sssp_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/radsoc_sssp_group.png"
+	}
+	SpriteType = {
+		name = "GFX_ideology_syn_sssp_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/radsoc_sssp_group.png"
+	}	
+	SpriteType = {
+		name = "GFX_ideology_tot_sssp_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/tot_sssp_group.png"
+	}
+	SpriteType = {
+		name = "GFX_ideology_generic_sssp_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/generic_sssp_group.png"
+	}
+	SpriteType = {
+		name = "GFX_ideology_buddhist_anarchism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/buddhist_anarchism_group.png"
+	}
+	SpriteType = {
+		name = "GFX_ideology_controlled_democracy_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/controlled_democracy_group.png"
+	}
+	SpriteType = {
+		name = "GFX_ideology_pataut_controlled_democracy_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/pataut_controlled_democracy_group.png"
+	}
+	SpriteType = {
+		name = "GFX_ideology_natpop_controlled_democracy_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/natpop_controlled_democracy_group.png"
+	}
+	SpriteType = {
+		name = "GFX_ideology_tot_controlled_democracy_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/tot_controlled_democracy_group.png"
+	}
+	SpriteType = {
+		name = "GFX_ideology_jihad_legionarism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/jihad_legionarism_group.png"
+	}
+	SpriteType = {
+		name = "GFX_ideology_pataut_jihad_legionarism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/pataut_jihad_legionarism_group.png"
+	}
+	SpriteType = {
+		name = "GFX_ideology_vedas_socialism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/vedas_socialism_group.png"
+	}
+	SpriteType = {
+		name = "GFX_ideology_zhanguoce_pai_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/zhanguoce_pai_group.png"
+	}
+	SpriteType = {
+		name = "GFX_ideology_socdem_islamic_philosophy_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/socdem_islamic_philosophy_group.png"
+	}
+	SpriteType = {
+		name = "GFX_ideology_soclib_islamic_philosophy_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/soclib_islamic_philosophy_group.png"
+	}
+	SpriteType = {
+		name = "GFX_ideology_socdem_burnhamite_thought_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/socdem_burnhamite_thought_group.png"
+	}										
+	SpriteType = {
 		name = "GFX_ideology_provisional_government_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/provisional_government_group.png"
 	}
@@ -9,6 +73,10 @@ spriteTypes = {
 		name = "GFX_ideology_transitional_government_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/transitional_government_group.png"
 	}	
+	SpriteType = {
+		name = "GFX_ideology_radsoc_boer_nationalism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/radsoc_boer_nationalism_group.png"
+	}		
 	SpriteType = {
 		name = "GFX_ideology_esoteric_marxism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/esoteric_marxism_group.png"

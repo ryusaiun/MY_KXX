@@ -245,4 +245,39 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideologies/ideology_bars/marxist_humanism.png"
 		legacy_lazy_load = no
 	}
+	spriteType = {
+		name = "GFX_ideology_SSSP_bar"
+		texturefile = "gfx/interface/ideologies/ideology_bars/SSSP.png"
+		legacy_lazy_load = no
+	}	
+	spriteType = {
+		name = "GFX_ideology_controlled_democracy_bar"
+		texturefile = "gfx/interface/ideologies/ideology_bars/controlled_democracy.png"
+		legacy_lazy_load = no
+	}	
+	spriteType = {
+		name = "GFX_ideology_zhanguoce_pai_bar"
+		texturefile = "gfx/interface/ideologies/ideology_bars/zhanguoce_pai.png"
+		legacy_lazy_load = no
+	}	
+	spriteType = {
+		name = "GFX_ideology_moderate_burnhamite_thought_bar"
+		texturefile = "gfx/interface/ideologies/ideology_bars/moderate_burnhamite_thought.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_ideology_jihad_legionarism_bar"
+		texturefile = "gfx/interface/ideologies/ideology_bars/jihad_legionarism.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_ideology_islamic_philosophy_bar"
+		texturefile = "gfx/interface/ideologies/ideology_bars/islamic_philosophy.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_ideology_buddhist_anarchism_bar"
+		texturefile = "gfx/interface/ideologies/ideology_bars/buddhist_anarchism.png"
+		legacy_lazy_load = no
+	}			
 }
