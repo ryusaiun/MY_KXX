@@ -8364,4 +8364,1382 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = FRG_Our_beautiful_land #我们美丽的土地
+		icon = GFX_goal_NFA_Greater_France
+		x = 20
+		y = 20
+		cost = 3
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = FRG_kill_Normandy #斩落狮头
+		icon = GFX_goal_FRG_roar_again
+		relative_position_id = FRG_Our_beautiful_land
+		x = -3
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 20
+		}
+		prerequisite = {
+			focus = FRG_Our_beautiful_land
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = FRG_kill_Brittany #剥落貂皮
+		icon = GFX_goal_FRG_Strike_Brittany
+		relative_position_id = FRG_Our_beautiful_land
+		x = 1
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 20
+		}
+		prerequisite = {
+			focus = FRG_Our_beautiful_land
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = FRG_kill_Lorraine #终结虚假之国
+		icon = GFX_goal_BAN_no_assets
+		relative_position_id = FRG_Our_beautiful_land
+		x = -1
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 20
+		}
+		prerequisite = {
+			focus = FRG_Our_beautiful_land
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = FRG_kill_Occitania #熔铸十字
+		icon = GFX_goal_FRG_kill_Occitània
+		relative_position_id = FRG_Our_beautiful_land
+		x = 3
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 20
+		}
+		prerequisite = {
+			focus = FRG_Our_beautiful_land
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = FRG_kill_Alsace #洗清阿尔萨斯之罪孽
+		icon = GFX_goal_ALB_New_Hardline_Methods
+		relative_position_id = FRG_Our_beautiful_land
+		x = -2
+		y = 2
+		cost = 3
+		ai_will_do = {
+			factor = 20
+		}
+		prerequisite = {
+			focus = FRG_Our_beautiful_land
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = FRG_kill_Channel_Islands #横扫恶魔巢穴
+		icon = GFX_goal_FRG_EXTREME_TRAIN
+		relative_position_id = FRG_Our_beautiful_land
+		x = 2
+		y = 2
+		cost = 3
+		ai_will_do = {
+			factor = 20
+		}
+		prerequisite = {
+			focus = FRG_Our_beautiful_land
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = FRG_world #雄鸡将醒
+		icon = GFX_goal_NFA_pays_reel
+		relative_position_id = FRG_Our_beautiful_land
+		x = 0
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 20
+		}
+		prerequisite = {
+			focus = FRG_kill_Channel_Islands
+		}
+		prerequisite = {
+			focus = FRG_kill_Alsace
+		}
+		prerequisite = {
+			focus = FRG_kill_Occitania
+		}
+		prerequisite = {
+			focus = FRG_kill_Lorraine
+		}
+		prerequisite = {
+			focus = FRG_kill_Brittany
+		}
+		prerequisite = {
+			focus = FRG_kill_Normandy
+		}
+		completion_reward = {
+			
+		}
+	}	
+
+	focus = {
+		id = FRG_place_in_the_world #我们在世界中的位置
+		icon = GFX_goal_generic_world_diplomacy
+		relative_position_id = FRG_world
+		x = 0
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 20
+		}
+		custom_trigger_tooltip = {
+			has_completed_focus = FRG_Crossroads_of_Destiny
+			has_completed_focus = FRG_Remy_die
+		}
+		prerequisite = {
+			focus = FRG_world
+		}
+		completion_reward = {
+			country_event = frg.100
+		}
+	}
+
+	focus = {
+		id = FRG_be_independent #独立自主
+		icon = GFX_goal_NFA_Galvanize_Officer_Corp
+		relative_position_id = FRG_place_in_the_world
+		mutually_exclusive = {
+			focus = FRG_internationale
+			focus = FRG_be_english
+			focus = FRG_ally_russia
+		}
+		x = -1
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 20
+		}
+		prerequisite = {
+			focus = FRG_place_in_the_world
+		}
+		completion_reward = {
+			custom_effect_tooltip = unlock_focuses
+		}
+	}
+
+	focus = {
+		id = FRG_AUTARKY #自给自足
+		icon = GFX_goal_generic_autarky
+		relative_position_id = FRG_place_in_the_world
+		x = -1
+		y = 2
+		cost = 3
+		ai_will_do = {
+			factor = 20
+		}
+		prerequisite = {
+			focus = FRG_be_independent
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = FRG_improve_manufactures #投资先进制造业
+		icon = GFX_goal_FRA_Modernize_Militia_Arsenal
+		relative_position_id = FRG_place_in_the_world
+		x = -1
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 20
+		}
+		prerequisite = {
+			focus = FRG_AUTARKY
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = FRG_nuclear_weapons #重启居里计划
+		icon = GFX_goal_generic_atom_uranium
+		relative_position_id = FRG_place_in_the_world
+		x = -1
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 20
+		}
+		prerequisite = {
+			focus = FRG_improve_manufactures
+		} 
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = FRG_be_english #忠于英王
+		icon = GFX_goal_british_monarchy
+		relative_position_id = FRG_place_in_the_world
+		x = 1
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 20
+		}
+		mutually_exclusive = {
+			focus = FRG_internationale
+			focus = FRG_be_independent
+			focus = FRG_ally_russia
+		}
+		prerequisite = {
+			focus = FRG_place_in_the_world
+		}
+		completion_reward = {
+			custom_effect_tooltip = unlock_focuses
+		}
+	}
+
+	focus = {
+		id = FRG_Advisor_from_Canada #来自加拿大的顾问
+		icon = GFX_goal_canada
+		relative_position_id = FRG_place_in_the_world
+		x = 1
+		y = 2
+		cost = 3
+		ai_will_do = {
+			factor = 20
+		}
+		prerequisite = {
+			focus = FRG_be_english
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = FRG_Reciprocal_tariff_policy #互惠关税政策
+		icon = GFX_goal_generic_financial_markets
+		relative_position_id = FRG_place_in_the_world
+		x = 1
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 20
+		}
+		prerequisite = {
+			focus = FRG_Advisor_from_Canada
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = FRG_air_training_plan #联合航空训练计划
+		icon = GFX_goal_CAN_Imperial_Air_Training_Plan
+		relative_position_id = FRG_place_in_the_world
+		x = 1
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 20
+		}
+		prerequisite = {
+			focus = FRG_Advisor_from_Canada
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = FRG_internationale #重组第三国际
+		icon = GFX_goal_AUS_central_committee
+		relative_position_id = FRG_place_in_the_world
+		x = -3
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 20
+		}
+		mutually_exclusive = {
+			focus = FRG_be_english
+			focus = FRG_be_independent
+			focus = FRG_ally_russia
+		}
+		prerequisite = {
+			focus = FRG_place_in_the_world
+		}
+		completion_reward = {
+			custom_effect_tooltip = unlock_focuses
+		}
+	}
+
+	focus = {
+		id = FRG_Establish_a_joint_command_center #组建联合指挥部
+		icon = GFX_goal_generic_solidarity
+		relative_position_id = FRG_place_in_the_world
+		x = -3
+		y = 2
+		cost = 3
+		ai_will_do = {
+			factor = 20
+		}
+		prerequisite = {
+			focus = FRG_internationale
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = FRG_fruit_of_cooperation #共享科研之成果
+		icon = GFX_goal_AUS_community_to_stand
+		relative_position_id = FRG_place_in_the_world
+		x = -3
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 20
+		}
+		prerequisite = {
+			focus = FRG_Establish_a_joint_command_center
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = FRG_home_fires #守护万家灯火
+		icon = GFX_goal_AUS_All_For_Family
+		relative_position_id = FRG_place_in_the_world
+		x = -3
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 20
+		}
+		prerequisite = {
+			focus = FRG_fruit_of_cooperation
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = FRG_ally_russia #与熊同行
+		icon = GFX_goal_russia
+		relative_position_id = FRG_place_in_the_world
+		x = 3
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 20
+		}
+		mutually_exclusive = {
+			focus = FRG_be_english
+			focus = FRG_be_independent
+			focus = FRG_internationale
+		}
+		prerequisite = {
+			focus = FRG_place_in_the_world
+		}
+		completion_reward = {
+			custom_effect_tooltip = unlock_focuses
+		}
+	}
+
+	focus = {
+		id = FRG_Attracting_Investors #吸引投资者
+		icon = GFX_goal_CAL_money
+		relative_position_id = FRG_place_in_the_world
+		x = 3
+		y = 2
+		cost = 3
+		ai_will_do = {
+			factor = 20
+		}
+		prerequisite = {
+			focus = FRG_ally_russia
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = FRG_Armour_Modernisation #俄式装甲设计
+		icon = GFX_goal_POL_light_tanks
+		relative_position_id = FRG_place_in_the_world
+		x = 3
+		y = 3
+		cost = 3
+		ai_will_do = {
+			factor = 20
+		}
+		prerequisite = {
+			focus = FRG_Attracting_Investors
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = FRG_ORT_System #引入新型滤波器
+		icon = GFX_RUS_ORT_System
+		relative_position_id = FRG_place_in_the_world
+		x = 3
+		y = 4
+		cost = 3
+		ai_will_do = {
+			factor = 20
+		}
+		prerequisite = {
+			focus = FRG_Armour_Modernisation
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = FRG_Materialism_is_corrupt #物质主义是腐朽的
+		icon = GFX_goal_AUS_Propagate_Unabhangige_Gewerkschaft
+		relative_position_id = FRG_place_in_the_world
+		x = -2
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 20
+		}
+		mutually_exclusive = {
+			focus = FRG_Trade_unionism_is_barbaric
+		}
+		prerequisite = {
+			focus = FRG_home_fires
+			focus = FRG_nuclear_weapons
+			focus = FRG_air_training_plan
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = FRG_Trade_unionism_is_barbaric #社会主义是野蛮的
+		icon = GFX_goal_NOR_secret_police
+		relative_position_id = FRG_place_in_the_world
+		x = 2
+		y = 5
+		cost = 3
+		ai_will_do = {
+			factor = 20
+		}
+		mutually_exclusive = {
+			focus = FRG_Materialism_is_corrupt
+		} 
+		prerequisite = {
+			focus = FRG_ORT_System
+			focus = FRG_air_training_plan
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = FRG_comrades #环视欧洲
+		dynamic = yes
+		icon = {
+			trigger = {
+				has_socialist_government = yes
+			}
+			value = GFX_goal_communist_world_revolution
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_goal_BRG_Look_East
+		}
+		relative_position_id = FRG_world
+		x = -7
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 20
+		}
+		prerequisite = {
+			focus = FRG_world
+		}
+		completion_reward = {
+			custom_effect_tooltip = FRG_europe_tooltip_8
+			unlock_decision_tooltip = FRG_invite_ser
+		if = {
+			custom_effect_tooltip = tooltip_white_line
+			limit = { NOT = { has_global_flag = balkan_war_ended } }
+			add_relation_modifier = {
+				target = SER
+				modifier = volunteer_limit_plus_one
+			    }
+		    }
+		}
+	}
+
+	focus = {
+		id = FRG_lowlands #瞄准低地
+		dynamic = yes
+		icon = {
+			trigger = {
+				has_socialist_government = yes
+			}
+			value = GFX_goal_HOL_baerle_talks
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_goal_HOL_crush_belgium
+		}
+		cost = 3
+		relative_position_id = FRG_comrades
+		x = -2
+		y = 1
+		ai_will_do = {
+			factor = 20
+		}
+		prerequisite = {
+			focus = FRG_comrades
+		}
+		
+		available = {
+			activate_targeted_decision = { target = HOL decision = FRG_invite_hol }
+		}
+	}
+
+	focus = {
+		id = FRG_italy #平定亚平宁
+		dynamic = yes
+		icon = {
+			trigger = {
+				has_socialist_government = yes
+			}
+			value = GFX_SRI_fascist_italy
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_goal_CZE_attack_italy
+		}
+		cost = 3
+		relative_position_id = FRG_comrades
+		x = 2
+		y = 1
+		ai_will_do = {
+			factor = 20
+		}
+		prerequisite = {
+			focus = FRG_comrades
+		}
+		
+		available = {
+			
+		}
+	}
+
+	focus = {
+		id = FRG_romandy #声索罗曼迪
+		dynamic = yes
+		icon = {
+			trigger = {
+				has_socialist_government = yes
+			}
+			value = GFX_goal_NFA_Romandie_Francaise
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_BAY_DESTROY_SWITZERLAND
+		}
+		cost = 3
+		relative_position_id = FRG_comrades
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 20
+		}
+		prerequisite = {
+			focus = FRG_comrades
+		}
+		
+		available = {
+			
+		}
+	}
+
+	focus = {
+		id = FRG_iberian #征服伊比利亚
+		dynamic = yes
+		icon = {
+			trigger = {
+				has_socialist_government = yes
+			}
+			value = GFX_goal_CSA_iberian_revolution
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_goal_FRA_liberate_Iberia
+		}
+		cost = 3
+		relative_position_id = FRG_comrades
+		x = 1
+		y = 2
+		ai_will_do = {
+			factor = 20
+		}
+		prerequisite = {
+			focus = FRG_comrades
+		}
+		available = {
+			
+		}
+	}
+
+	focus = {
+		id = FRG_Britain #征服不列颠
+		dynamic = yes
+		icon = {
+			trigger = {
+				has_socialist_government = yes
+			}
+			value = GFX_goal_ENG_new_britain
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_goal_IRE_crush_uob
+		}
+		cost = 3
+		relative_position_id = FRG_comrades
+		x = -1
+		y = 2
+		ai_will_do = {
+			factor = 20
+		}
+		prerequisite = {
+			focus = FRG_comrades
+		}
+		available = {
+			
+		}
+	}
+
+	focus = {
+		id = FRG_Germany #撕碎雄鹰
+		dynamic = yes
+		icon = {
+			trigger = {
+				has_socialist_government = yes
+			}
+			value = GFX_NATFRA_rightfullborders
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_goal_FRA_germanophobia
+		}
+		cost = 3
+		relative_position_id = FRG_comrades
+		x = 0
+		y = 3
+		ai_will_do = {
+			factor = 20
+		}
+		prerequisite = {
+			focus = FRG_romandy
+		}
+		prerequisite = {
+			focus = FRG_italy
+		}
+		prerequisite = {
+			focus = FRG_lowlands
+		}
+		prerequisite = {
+			focus = FRG_iberian
+		}
+		prerequisite = {
+			focus = FRG_Britain
+		}
+		
+		available = {
+			
+		}
+	}
+
+	focus = {
+		id = FRG_habsburgs #摧毁哈布斯堡
+		dynamic = yes
+		icon = {
+			trigger = {
+				has_socialist_government = yes
+			}
+			value = GFX_goal_AUS_crimson_danube
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_BAY_SKEWER_AUSTRIA
+		}
+		cost = 3
+		relative_position_id = FRG_comrades
+		x = 0
+		y = 4
+		ai_will_do = {
+			factor = 20
+		}
+		prerequisite = {
+			focus = FRG_Germany
+		}
+		available = {
+			
+		}
+	}
+
+	focus = {
+		id = FRG_Eastern_Europe #踏平东欧
+		icon = GFX_goal_POL_Raise_Gwardia_Ludowa
+		cost = 3
+		relative_position_id = FRG_comrades
+		x = -2
+		y = 4
+		ai_will_do = {
+			factor = 20
+		}
+		prerequisite = {
+			focus = FRG_Germany
+		}
+		available = {
+			
+		}
+	}
+
+	focus = {
+		id = FRG_Balkans #熄灭巴尔干火药桶
+		dynamic = yes
+		icon = {
+			trigger = {
+				has_socialist_government = yes
+			}
+			value = GFX_goal_MNT_yugoslav_supremacism
+
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_focus_rus_balkans
+		}
+		cost = 3
+		relative_position_id = FRG_comrades
+		x = 2
+		y = 4
+		ai_will_do = {
+			factor = 20
+		}
+		prerequisite = {
+			focus = FRG_Germany
+		}
+		available = {
+			
+		}
+	}
+
+
+	focus = {
+		id = FRG_french_might #法兰西的新秩序
+		dynamic = yes
+		icon = {
+			trigger = {
+				has_socialist_government = yes
+			}
+			value = GFX_goal_ALB_Red_Flag
+
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_goal_NFA_France_Aux_Francais
+		}
+		cost = 3
+		relative_position_id = FRG_comrades
+		x = 0
+		y = 5
+		ai_will_do = {
+			factor = 20
+		}
+		prerequisite = {
+			focus = FRG_Balkans
+		}
+		prerequisite = {
+			focus = FRG_Eastern_Europe
+		}
+		prerequisite = {
+			focus = FRG_habsburgs
+		}
+		available = {
+			
+		}
+	}
+
+	focus = {
+		id = FRG_european #奏响欧洲欢乐颂
+		dynamic = yes
+		icon = {
+			trigger = {
+				has_socialist_government = yes
+			}
+			value = GFX_goal_ALB_Communist_Internationalism
+
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_goal_Focus_FRA_Propose_European_Commonwealth
+		}
+		cost = 3
+		relative_position_id = FRG_comrades
+		x = -1
+		y = 6
+		ai_will_do = {
+			factor = 20
+		}
+		mutually_exclusive = {
+			focus = FRG_european_state
+		}
+		prerequisite = {
+			focus = FRG_french_might
+		}
+		available = {
+			
+		}
+	}
+
+	focus = {
+		id = FRG_european_state #欧罗巴团结一致
+		dynamic = yes
+		icon = {
+			trigger = {
+				has_socialist_government = yes
+			}
+			value = GFX_goal_INT_paneuropa
+
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_goal_Focus_FRA_Continental_System
+		}
+		cost = 3
+		relative_position_id = FRG_comrades
+		x = 1
+		y = 6
+		ai_will_do = {
+			factor = 20
+		}
+		mutually_exclusive = {
+			focus = FRG_european
+		}
+		prerequisite = {
+			focus = FRG_french_might
+		}
+		available = {
+			
+		}
+	}
+
+	focus = {
+		id = FRG_colony #法兰西帝国主义
+		dynamic = yes
+		icon = {
+			trigger = {
+				has_socialist_government = yes
+			}
+			value = GFX_goal_FRA_World_Revolution
+
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_goal_NFA_Integrate_Far_Right_Leagues
+		}
+		cost = 3
+		relative_position_id = FRG_world
+		x = 7
+		y = 1
+		ai_will_do = {
+			factor = 20
+		}
+		prerequisite = {
+			focus = FRG_world
+		}
+		available = {
+			
+		}
+	}
+
+	focus = {
+		id = FRG_africa #深入黑暗之心
+		dynamic = yes
+		icon = {
+			trigger = {
+				has_socialist_government = yes
+			}
+			value = GFX_goal_CEA_liberate_equatorial_africa
+
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_goal_GAB_africanist_revolution
+		}
+		cost = 3
+		relative_position_id = FRG_colony
+		x = -2
+		y = 1
+		ai_will_do = {
+			factor = 20
+		}
+		prerequisite = {
+			focus = FRG_colony
+		}
+		available = {
+			
+		}
+	}
+
+
+	focus = {
+		id = FRG_rus #驯服巨熊
+		dynamic = yes
+		icon = {
+			trigger = {
+				has_socialist_government = yes
+			}
+			value = GFX_UKR_Smash_Russian_Imperialism
+
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_focus_attack_RUS
+		}
+		cost = 3
+		relative_position_id = FRG_colony
+		x = -1
+		y = 2
+		ai_will_do = {
+			factor = 20
+		}
+		prerequisite = {
+			focus = FRG_colony
+		}
+		available = {
+			
+		}
+	}
+
+	focus = {
+		id = FRG_ottoman #踏平阿拉伯
+		dynamic = yes
+		icon = {
+			trigger = {
+				has_socialist_government = yes
+			}
+			value = GFX_goal_OTT_Dawn_Ottoman_Constitutionalism
+
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_goal_Unite_Arabia
+		}
+		cost = 3
+		relative_position_id = FRG_colony
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 20
+		}
+		prerequisite = {
+			focus = FRG_colony
+		}
+		available = {
+			
+		}
+	}
+
+	focus = {
+		id = FRG_Afghanistan #征服帝国坟场
+		dynamic = yes
+		icon = {
+			trigger = {
+				has_socialist_government = yes
+			}
+			value = GFX_goal_AFG_Maintain_Pashtun_Dominance
+
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_goal_AFG_ottoman_railway
+		}
+		cost = 3
+		relative_position_id = FRG_colony
+		x = 2
+		y = 1
+		ai_will_do = {
+			factor = 20
+		}
+		prerequisite = {
+			focus = FRG_colony
+		}
+		available = {
+			
+		}
+	}
+
+	focus = {
+		id = FRG_India #踹开南亚大门
+		dynamic = yes
+		icon = {
+			trigger = {
+				has_socialist_government = yes
+			}
+			value = GFX_goal_AFG_Towards_Indian_Unification
+
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_PRF_new_india
+		}
+		cost = 3
+		relative_position_id = FRG_colony
+		x = 1
+		y = 2
+		ai_will_do = {
+			factor = 20
+		}
+		prerequisite = {
+			focus = FRG_colony
+		}
+		available = {
+			
+		}
+	}
+
+	focus = {
+		id = FRG_china #擒拿东方巨龙
+		dynamic = yes
+		icon = {
+			trigger = {
+				has_socialist_government = yes
+			}
+			value = GFX_goal_chi_one_china_policy_KMT
+
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_goal_QIE_zhili_unite_china
+		}
+		cost = 3
+		relative_position_id = FRG_colony
+		x = 0
+		y = 3
+		ai_will_do = {
+			factor = 20
+		}
+		prerequisite = {
+			focus = FRG_rus
+		}
+		prerequisite = {
+			focus = FRG_India
+		}
+		prerequisite = {
+			focus = FRG_Afghanistan
+		}
+		prerequisite = {
+			focus = FRG_ottoman
+		}
+		prerequisite = {
+			focus = FRG_africa
+		}
+		available = {
+			
+		}
+	} 
+ 
+	focus = {
+		id = FRG_japan #射日
+		dynamic = yes
+		icon = {
+			trigger = {
+				has_socialist_government = yes
+			}
+			value = GFX_goal_RUS_japan
+
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_goal_RUS_japan
+		}
+		cost = 3
+		relative_position_id = FRG_colony
+		x = -2
+		y = 4
+		ai_will_do = {
+			factor = 20
+		}
+		prerequisite = {
+			focus = FRG_china
+		}
+		available = {
+			
+		}
+	}
+
+	focus = {
+		id = FRG_Indochina #重归印度支那
+		dynamic = yes
+		icon = {
+			trigger = {
+				has_socialist_government = yes
+			}
+			value = GFX_INC_Indochina_Internationale_Outpost
+
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_goal_NFA_Our_Men_Hanoi
+		}
+		cost = 3
+		relative_position_id = FRG_colony
+		x = 2
+		y = 4
+		ai_will_do = {
+			factor = 20
+		}
+		prerequisite = {
+			focus = FRG_china
+		}
+		available = {
+			
+		}
+	}
+
+	focus = {
+		id = FRG_America #迈向新大陆
+		dynamic = yes
+		icon = {
+			trigger = {
+				has_socialist_government = yes
+			}
+			value = GFX_goal_USA_stop_southern_syndicalism
+
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_goal_TEX_americanist_doctrine
+		}
+		cost = 3
+		relative_position_id = FRG_colony
+		x = 0
+		y = 4
+		ai_will_do = {
+			factor = 20
+		}
+		prerequisite = {
+			focus = FRG_china
+		}
+		available = {
+			
+		}
+	}
+
+	focus = {
+		id = FRG_ally #毁灭协约国残余
+		dynamic = yes
+		icon = {
+			trigger = {
+				has_socialist_government = yes
+			}
+			value = GFX_goal_NFL_liberation_of_canada
+
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_NEE_entente_support
+		}
+		cost = 3
+		relative_position_id = FRG_colony
+		x = -1
+		y = 5
+		ai_will_do = {
+			factor = 20
+		}
+		prerequisite = {
+			focus = FRG_china
+		}
+		available = {
+			
+		}
+	}
+
+	focus = {
+		id = FRG_La_Plata #称霸南美
+		dynamic = yes
+		icon = {
+			trigger = {
+				has_socialist_government = yes
+			}
+			value = GFX_goal_CSA_red_brazil
+
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_focus_por_recover_latin_america
+		}
+		cost = 3
+		relative_position_id = FRG_colony
+		x = 1
+		y = 5
+		ai_will_do = {
+			factor = 20
+		}
+		prerequisite = {
+			focus = FRG_china
+		}
+		available = {
+			
+		}
+	}
+
+	focus = {
+		id = FRG_global_system #重返阳光下的土地
+		dynamic = yes
+		icon = {
+			trigger = {
+				has_socialist_government = yes
+			}
+			value = GFX_goal_CSA_true_revolutionary_alliance
+
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_goal_NFA_Colonial_Riches
+		}
+		cost = 3
+		relative_position_id = FRG_colony
+		x = 0
+		y = 6
+		ai_will_do = {
+			factor = 20
+		}
+		prerequisite = {
+			focus = FRG_Indochina
+		}
+		prerequisite = {
+			focus = FRG_America
+		}
+		prerequisite = {
+			focus = FRG_japan
+		}
+		prerequisite = {
+			focus = FRG_La_Plata
+		}
+		prerequisite = {
+			focus = FRG_ally
+		}
+		available = {
+			
+		}
+	}	
+
 }
